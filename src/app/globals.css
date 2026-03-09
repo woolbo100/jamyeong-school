@@ -6,10 +6,180 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #000000;
+  --color-foreground: #ededed;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .animate-spin-slow-slow {
+    animation: spin 20s linear infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 15s linear infinite;
+  }
+
+  .animate-spin-medium {
+    animation: spin 10s linear infinite;
+  }
+}
+
+/* Cosmic FX Animations */
+@keyframes nebula-drift {
+  0% {
+    transform: translate(-2%, -2%) scale(1);
+  }
+
+  50% {
+    transform: translate(2%, 2%) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-2%, -2%) scale(1);
+  }
+}
+
+@keyframes meteor {
+  0% {
+    transform: translate(250%, -100%) rotate(-45deg);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0.4;
+  }
+
+  20% {
+    transform: translate(-100%, 250%) rotate(-45deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-100%, 250%) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(1.1);
+  }
+}
+
+.animate-nebula {
+  animation: nebula-drift 22s ease-in-out infinite;
+}
+
+.animate-meteor {
+  animation: meteor 8s linear infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+/* 3D Orbit Animations */
+@keyframes orbit-rotate-3d-1 {
+  0% {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(60deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbit-rotate-3d-2 {
+  0% {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(120deg);
+  }
+
+  100% {
+    transform: rotateX(60deg) rotateY(360deg) rotateZ(480deg);
+  }
+}
+
+@keyframes orbit-rotate-3d-3 {
+  0% {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(240deg);
+  }
+
+  100% {
+    transform: rotateX(60deg) rotateY(360deg) rotateZ(600deg);
+  }
+}
+
+.animate-orbit-3d-1 {
+  animation: orbit-rotate-3d-1 25s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.animate-orbit-3d-2 {
+  animation: orbit-rotate-3d-2 32s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.animate-orbit-3d-3 {
+  animation: orbit-rotate-3d-3 40s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translate(2rem, -0.5rem) scale(1);
+  }
+
+  50% {
+    transform: translate(2.5rem, 0.5rem) scale(1.03);
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-nebula,
+  .animate-meteor,
+  .animate-twinkle {
+    animation: none !important;
+    opacity: 0.15 !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
