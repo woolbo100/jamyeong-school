@@ -215,6 +215,7 @@ export default function AboutPage() {
                     <span>구글 공인 교육자 (Google Certified Educator) 인증</span>
                   </li>
                   <li className="flex items-start gap-3">
+                    <span className="text-antiqueGold">✔</span> 
                     <span>국제디지털콘텐츠협회 지국장</span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -227,7 +228,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-antiqueGold">✔</span> 
-                    <span>300명 이상의 수강생과 1,000건 이상의 코칭 프로젝트 진행</span>
+                    <span>1,000명 이상의 수강생과 3,000건 이상의 코칭 프로젝트 진행</span>
                   </li>
                 </ul>
               </div>
