@@ -27,13 +27,13 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black pb-32">
-      <section className="mx-auto max-w-4xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-16">
         {/* Blog Header Info */}
         <div className="mb-12 text-center text-white">
           <p className="text-sm uppercase tracking-[0.3em] text-amber-300/80 mb-4">
             {post.category}
           </p>
-          <h1 className="text-3xl font-semibold leading-tight md:text-5xl mb-6">
+          <h1 className="text-3xl font-semibold leading-tight md:text-5xl mb-6 max-w-4xl mx-auto">
             {post.title}
           </h1>
           <p className="text-sm text-white/50">{post.date}</p>
@@ -41,8 +41,8 @@ export default async function BlogDetailPage({ params }: Props) {
 
         {/* Thumbnail Image - Unified Width */}
         {post.coverImage && (
-          <div className="mb-10 overflow-hidden rounded-[28px] border border-white/10 w-full shadow-2xl">
-            <div className="relative aspect-[16/8] w-full">
+          <div className="mb-10 overflow-hidden rounded-[40px] border border-white/10 w-full shadow-2xl">
+            <div className="relative aspect-[21/9] w-full">
               <Image
                 src={post.coverImage}
                 alt={post.title}
@@ -55,11 +55,13 @@ export default async function BlogDetailPage({ params }: Props) {
         )}
 
         {/* Article Body - Unified Width */}
-        <article className="rounded-[32px] bg-white px-8 py-12 md:px-16 md:py-20 text-zinc-900 shadow-2xl w-full">
-          <div
-            className="prose prose-zinc max-w-none prose-headings:mt-12 prose-headings:text-zinc-900 prose-p:leading-8 prose-p:text-zinc-700 prose-li:text-zinc-700 prose-headings:font-semibold"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
+        <article className="rounded-[40px] bg-white px-8 py-12 md:px-16 md:py-24 text-zinc-900 shadow-2xl w-full">
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="prose prose-zinc lg:prose-xl max-w-none prose-headings:mt-12 prose-headings:text-zinc-900 prose-p:leading-8 prose-p:text-zinc-700 prose-li:text-zinc-700 prose-headings:font-bold prose-headings:italic"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
+          </div>
         </article>
 
         {/* CTA Section - Unified Width */}
