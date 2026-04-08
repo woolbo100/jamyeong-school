@@ -202,16 +202,19 @@ export default function AboutPage() {
               
               <div className="space-y-6 mb-12">
                 <p className="text-white/80 font-light leading-relaxed">
-                  자명심리문화연구소 대표이자 한국디지털마인드코칭협회 회장으로 활동하며, 
+                  자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 
                   단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
                 </p>
                 <ul className="space-y-3 text-white/60 text-sm font-light">
+                  <li className="flex items-start gap-3 text-antiqueGold/90 font-medium">
+                    <span className="text-antiqueGold">✔</span> 
+                    <span>자명심리문화연구소 / 한국디지털마인드코칭협회 / 이끌림출판사 대표</span>
+                  </li>
                   <li className="flex items-start gap-3">
                     <span className="text-antiqueGold">✔</span> 
                     <span>구글 공인 교육자 (Google Certified Educator) 인증</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-antiqueGold">✔</span> 
                     <span>국제디지털콘텐츠협회 지국장</span>
                   </li>
                   <li className="flex items-start gap-3">
