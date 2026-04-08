@@ -174,7 +174,7 @@ export default function AboutPage() {
               <div className="absolute -inset-4 bg-antiqueGold/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10 aspect-[4/5] md:aspect-[3/4]">
                 <Image
-                  src="/images/about/instructor.png"
+                  src="/images/about/instructor.jpg"
                   alt="자명쌤 백진선 프로필"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
