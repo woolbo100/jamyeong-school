@@ -201,9 +201,8 @@ export default function AboutPage() {
               <p className="text-white/40 font-light mb-8 italic">AI × 심리 × 인문학을 결합한 교육 전문가</p>
               
               <div className="space-y-6 mb-12">
-                <p className="text-white/80 font-light leading-relaxed">
-                  자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 
-                  단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
+                <p className="text-white/80 font-light leading-relaxed break-keep">
+                  자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
                 </p>
                 <ul className="space-y-3 text-white/60 text-sm font-light">
                   <li className="flex items-start gap-3 text-antiqueGold/90 font-medium">
