@@ -24,11 +24,11 @@ export default function Home() {
 function Elements() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const items = [
-    { title: "흙 (Earth)", desc: "안정과 풍요를 위한 기반 다지기", bg: "/images/elements/earth.png" },
-    { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기", bg: "/images/elements/fire.png" },
-    { title: "공기 (Air)", desc: "자유로운 사고와 소통의 길 열기", bg: "/images/elements/air.png" },
-    { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기", bg: "/images/elements/water.png" },
-    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png" },
+    { title: "흙 (Earth)", desc: "안정과 풍요를 위한 기반 다지기", bg: "/images/elements/earth.png", color: "border-earth" },
+    { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기", bg: "/images/elements/fire.png", color: "border-fire" },
+    { title: "공기 (Air)", desc: "자유로운 사고와 소통의 길 열기", bg: "/images/elements/air.png", color: "border-air" },
+    { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기", bg: "/images/elements/water.png", color: "border-water" },
+    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png", color: "border-white" },
   ];
 
   return (
@@ -48,7 +48,7 @@ function Elements() {
                 type="button"
                 onClick={() => setActiveIndex(i)}
                 className={`w-full group relative rounded-2xl bg-white/5 backdrop-blur-md border aspect-[3/4] p-4 flex flex-col justify-end text-left overflow-hidden transition-all duration-300 ease-out transform-gpu text-white 
-                  ${isActive ? 'border-[#8A6A3F]/70 -translate-y-1 scale-[1.01]' : 'border-white/10 hover:border-[#8A6A3F]/50 hover:-translate-y-1 hover:scale-[1.01]'}`}
+                  ${isActive ? `${it.color}/70 -translate-y-1 scale-[1.01]` : `border-white/10 hover:${it.color}/50 hover:-translate-y-1 hover:scale-[1.01]`}`}
               >
                 {/* Background Image Layer */}
                 <div className="absolute inset-0 z-0">
