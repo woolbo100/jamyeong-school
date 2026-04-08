@@ -28,7 +28,7 @@ function Elements() {
     { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기", bg: "/images/elements/fire.png", color: "border-fire" },
     { title: "공기 (Air)", desc: "자유로운 사고와 소통의 길 열기", bg: "/images/elements/air.png", color: "border-air" },
     { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기", bg: "/images/elements/water.png", color: "border-water" },
-    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png", color: "border-white" },
+    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png", color: "border-ether" },
   ];
 
   return (

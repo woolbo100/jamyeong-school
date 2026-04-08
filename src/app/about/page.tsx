@@ -149,8 +149,8 @@ export default function AboutPage() {
                 name: "풍요 마인드",
                 symbol: "✨",
                 desc: "확장 / 에너지",
-                color: "text-white",
-                borderColor: "border-white",
+                color: "text-ether",
+                borderColor: "border-ether",
               },
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>

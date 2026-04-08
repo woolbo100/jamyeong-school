@@ -373,7 +373,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
-                                <span className="mr-3 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">✨</span>
+                                <span className="mr-3 bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">✨</span>
                                 제5원소 — 풍요마인드
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -398,11 +398,11 @@ export default function CoursesPage() {
                                 <div className="p-6 rounded-2xl bg-[#a855f7]/5 border border-[#a855f7]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div>
-                                            <h4 className="text-[#ec4899] text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
+                                            <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
                                             <p className="text-white/80 text-sm">멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-[#a855f7]/30 pt-4 md:pt-0 md:pl-6">
-                                            <h4 className="text-[#ec4899] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
                                             <p className="text-white/90 text-sm font-medium">강사/멘토로서 성장하며 <br />사회적 영향력을 확장합니다.</p>
                                         </div>
                                     </div>
@@ -435,7 +435,7 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative backdrop-blur-md">
-                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
+                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
                                         <div className="absolute -inset-6 border border-[#a855f7]/20 rounded-full animate-pulse"></div>
                                     </div>
                                     <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-lg">Infinite Light</p>
