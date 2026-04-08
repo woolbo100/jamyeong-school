@@ -93,6 +93,15 @@ export default function CoursesPage() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="mt-10">
+                                <Link
+                                    href="/courses/earth"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-earth/30 text-earth hover:text-white transition-all duration-500"
+                                >
+                                    <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                                    <span className="absolute inset-0 bg-earth/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                </Link>
+                            </div>
                         </Reveal>
                     </div>
                     <div className="order-1 lg:order-2">
@@ -159,6 +168,15 @@ export default function CoursesPage() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="mt-10">
+                                <Link
+                                    href="/courses/fire"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-fire/30 text-fire hover:text-white transition-all duration-500"
+                                >
+                                    <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                                    <span className="absolute inset-0 bg-fire/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                </Link>
+                            </div>
                         </Reveal>
                     </div>
                 </section>
@@ -202,6 +220,15 @@ export default function CoursesPage() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="mt-10">
+                                <Link
+                                    href="/courses/metal"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-air/30 text-air hover:text-white transition-all duration-500"
+                                >
+                                    <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                                    <span className="absolute inset-0 bg-air/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                </Link>
                             </div>
                         </Reveal>
                     </div>
@@ -269,6 +296,15 @@ export default function CoursesPage() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="mt-10">
+                                <Link
+                                    href="/courses/water"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-water/30 text-water hover:text-white transition-all duration-500"
+                                >
+                                    <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                                    <span className="absolute inset-0 bg-water/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                </Link>
+                            </div>
                         </Reveal>
                     </div>
                 </section>
@@ -280,7 +316,7 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-ether mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">✨ 에테르 — 마음을 빛내다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">✨ 제5원소 — 풍요마인드</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     이제는 나를 넘어 타인을 성장시키는 리더의 단계입니다. <br />
@@ -312,6 +348,15 @@ export default function CoursesPage() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="mt-10">
+                                <Link
+                                    href="/courses/abundance"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-white/30 text-white hover:bg-white/10 transition-all duration-500"
+                                >
+                                    <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                                    <span className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                </Link>
                             </div>
                         </Reveal>
                     </div>
