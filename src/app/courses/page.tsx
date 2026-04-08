@@ -411,10 +411,10 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/abundance"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-white/30 text-white hover:bg-white/10 transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#a855f7]/30 text-[#a855f7] hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
-                                    <span className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                    <span className="absolute inset-0 bg-[#a855f7]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                                 </Link>
                             </div>
                         </Reveal>
