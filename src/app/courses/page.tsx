@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 export default function CoursesPage() {
@@ -106,12 +107,25 @@ export default function CoursesPage() {
                     </div>
                     <div className="order-1 lg:order-2">
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_50px_-12px_rgba(168,148,122,0.35),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-earth/20 to-transparent flex items-center justify-center border border-earth/20 relative">
-                                    <div className="text-earth text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌱</div>
-                                    <div className="absolute inset-0 border border-dashed border-earth/30 rounded-full animate-[spin_30s_linear_infinite]"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.55)]">
+                                {/* Background Image */}
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="/images/elements/earth.png"
+                                        alt="Earth Element"
+                                        fill
+                                        className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/40" />
                                 </div>
-                                <p className="mt-10 font-display text-earth tracking-[0.3em] text-sm font-bold uppercase">Rooting Program</p>
+
+                                <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+                                    <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-earth/20 to-transparent flex items-center justify-center border border-earth/20 relative backdrop-blur-md">
+                                        <div className="text-earth text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌱</div>
+                                        <div className="absolute inset-0 border border-dashed border-earth/30 rounded-full animate-[spin_30s_linear_infinite]"></div>
+                                    </div>
+                                    <p className="mt-10 font-display text-earth tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Rooting Program</p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -120,12 +134,25 @@ export default function CoursesPage() {
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_50px_-12px_rgba(255,95,95,0.35),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-fire/20 to-transparent flex items-center justify-center border border-fire/20 relative">
-                                    <div className="text-fire text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🔥</div>
-                                    <div className="absolute inset-3 border border-fire/30 rounded-full"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.55)]">
+                                {/* Background Image */}
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="/images/elements/fire.png"
+                                        alt="Fire Element"
+                                        fill
+                                        className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/40" />
                                 </div>
-                                <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold uppercase">Heart Art Program</p>
+
+                                <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+                                    <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-fire/20 to-transparent flex items-center justify-center border border-fire/20 relative backdrop-blur-md">
+                                        <div className="text-fire text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🔥</div>
+                                        <div className="absolute inset-3 border border-fire/30 rounded-full"></div>
+                                    </div>
+                                    <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Heart Art Program</p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -237,12 +264,25 @@ export default function CoursesPage() {
                     </div>
                     <div className="order-1 lg:order-2">
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(253,230,138,0.1),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#fde68a]/30 hover:shadow-[0_0_50px_-12px_rgba(253,230,138,0.3),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-[#fde68a]/20 to-transparent flex items-center justify-center border border-[#fde68a]/20 relative">
-                                    <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#f5d0fe] to-[#fde68a] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(253,230,138,0.4)]">🌬️</div>
-                                    <div className="absolute inset-0 rounded-full border-t border-[#fde68a]/50 animate-[spin_6s_linear_infinite]"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.55)]">
+                                {/* Background Image */}
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="/images/elements/metal.png"
+                                        alt="Metal Element"
+                                        fill
+                                        className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/40" />
                                 </div>
-                                <p className="mt-10 font-display text-[#fde68a] tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity">Flow Program</p>
+
+                                <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+                                    <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-[#fde68a]/20 to-transparent flex items-center justify-center border border-[#fde68a]/20 relative backdrop-blur-md">
+                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#f5d0fe] to-[#fde68a] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(253,230,138,0.4)]">🌬️</div>
+                                        <div className="absolute inset-0 rounded-full border-t border-[#fde68a]/50 animate-[spin_6s_linear_infinite]"></div>
+                                    </div>
+                                    <p className="mt-10 font-display text-[#fde68a] tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg">Flow Program</p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -252,12 +292,25 @@ export default function CoursesPage() {
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_50px_-12px_rgba(137,207,240,0.35),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-water/20 to-transparent flex items-center justify-center border border-water/20 relative overflow-hidden">
-                                    <div className="text-water text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">💧</div>
-                                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-water/20 blur-xl"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.55)]">
+                                {/* Background Image */}
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="/images/elements/water.png"
+                                        alt="Water Element"
+                                        fill
+                                        className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/40" />
                                 </div>
-                                <p className="mt-10 font-display text-water tracking-[0.3em] text-sm font-bold uppercase">Wisdom Stream</p>
+
+                                <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+                                    <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-water/20 to-transparent flex items-center justify-center border border-water/20 relative overflow-hidden backdrop-blur-md">
+                                        <div className="text-water text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">💧</div>
+                                        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-water/20 blur-xl"></div>
+                                    </div>
+                                    <p className="mt-10 font-display text-water tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Wisdom Stream</p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -368,12 +421,25 @@ export default function CoursesPage() {
                     </div>
                     <div className="order-1 lg:order-2">
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(168,85,247,0.15),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#a855f7]/40 hover:shadow-[0_0_60px_-12px_rgba(168,85,247,0.5),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative">
-                                    <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
-                                    <div className="absolute -inset-6 border border-[#a855f7]/20 rounded-full animate-pulse"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 shadow-[0_60px_55px_rgba(0,0,0,0.55)]">
+                                {/* Background Image */}
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src="/images/elements/ether.png"
+                                        alt="Ether Element"
+                                        fill
+                                        className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-colors duration-500 group-hover:bg-black/40" />
                                 </div>
-                                <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase opacity-60 group-hover:opacity-100 transition-opacity">Infinite Light</p>
+
+                                <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+                                    <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative backdrop-blur-md">
+                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
+                                        <div className="absolute -inset-6 border border-[#a855f7]/20 rounded-full animate-pulse"></div>
+                                    </div>
+                                    <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-lg">Infinite Light</p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
