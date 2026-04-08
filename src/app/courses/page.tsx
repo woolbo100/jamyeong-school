@@ -14,9 +14,9 @@ export default function CoursesPage() {
                         </span>
                     </Reveal>
                     <Reveal delayMs={200}>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight tracking-tight text-white uppercase italic">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight text-white uppercase italic">
                             자명스쿨 <br />
-                            <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block px-8 py-2">
                                 5원소 커리큘럼
                             </span>
                         </h1>
@@ -41,13 +41,13 @@ export default function CoursesPage() {
                                 마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하는 구조입니다.
                             </p>
                             <div className="flex justify-center items-center gap-4 md:gap-8 text-3xl md:text-5xl">
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="토">🌱</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="흙">🌱</span>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="화">🔥</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="불">🔥</span>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="금">🌬️</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="공기">🌬️</span>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="수">💧</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="물">💧</span>
                                 <span className="text-white/20 text-xl">→</span>
                                 <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="에테르">✨</span>
                             </div>
@@ -60,7 +60,7 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-earth mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Foundation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌱 토 — 마음을 심다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌱 흙 — 마음을 심다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     모든 변화의 시작은 나를 아는 것에서 시작됩니다. <br />
@@ -161,7 +161,7 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-fire mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Passion & Transformation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🔥 화 — 마음을 그리다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🔥 불 — 마음을 그리다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     억눌린 감정은 표현될 때 치유되고 창작으로 확장됩니다. <br />
@@ -216,7 +216,7 @@ export default function CoursesPage() {
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
                                 <span className="mr-3 bg-gradient-to-br from-[#f5d0fe] to-[#fde68a] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(253,230,138,0.3)]">🌬️</span>
-                                금 — 마음을 나누다
+                                공기 — 마음을 나누다
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
@@ -268,8 +268,8 @@ export default function CoursesPage() {
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">
                                     <Image
-                                        src="/images/elements/metal.png"
-                                        alt="Metal Element"
+                                        src="/images/elements/air.png"
+                                        alt="Air Element"
                                         fill
                                         className="object-cover transition-all duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110"
                                     />
@@ -319,7 +319,7 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-water mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Intuition</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">💧 수 — 마음을 채우다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">💧 물 — 마음을 채우다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     가치는 반드시 수익으로 연결되어야 지속됩니다. <br />

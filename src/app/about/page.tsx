@@ -113,7 +113,7 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-5">
             {[
               {
-                id: "토",
+                id: "흙",
                 name: "마음을 심다",
                 symbol: "🌱",
                 desc: "자기 이해 / 무의식 정리",
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 borderColor: "border-earth",
               },
               {
-                id: "화",
+                id: "불",
                 name: "마음을 그리다",
                 symbol: "🔥",
                 desc: "AI 아트 / 감성 표현",
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 borderColor: "border-fire",
               },
               {
-                id: "금",
+                id: "공기",
                 name: "마음을 나누다",
                 symbol: "🌬️",
                 desc: "브랜딩 / 콘텐츠 제작",
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 borderColor: "border-air",
               },
               {
-                id: "수",
+                id: "물",
                 name: "마음을 채우다",
                 symbol: "💧",
                 desc: "수익화 / 자동화",

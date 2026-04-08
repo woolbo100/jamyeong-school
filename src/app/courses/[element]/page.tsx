@@ -29,7 +29,7 @@ const elementData: Record<ElementType, ElementData> = {
   earth: {
     slug: "earth",
     symbol: "🌱",
-    name: "토",
+    name: "흙",
     lectureName: "마음을 심다",
     tagline: "내면의 뿌리를 세우는 자기이해 클래스",
     color: "text-earth",
@@ -63,7 +63,7 @@ const elementData: Record<ElementType, ElementData> = {
   fire: {
     slug: "fire",
     symbol: "🔥",
-    name: "화",
+    name: "불",
     lectureName: "마음을 그리다",
     tagline: "AI로 감정과 상상을 시각화하는 아트 클래스",
     color: "text-fire",
@@ -97,7 +97,7 @@ const elementData: Record<ElementType, ElementData> = {
   metal: {
     slug: "metal",
     symbol: "🌬️",
-    name: "금",
+    name: "공기",
     lectureName: "마음을 나누다",
     tagline: "콘텐츠와 메시지로 나를 표현하는 브랜딩 클래스",
     color: "text-air",
@@ -131,7 +131,7 @@ const elementData: Record<ElementType, ElementData> = {
   water: {
     slug: "water",
     symbol: "💧",
-    name: "수",
+    name: "물",
     lectureName: "마음을 채우다",
     tagline: "지식과 콘텐츠를 수익으로 연결하는 클래스",
     color: "text-water",
