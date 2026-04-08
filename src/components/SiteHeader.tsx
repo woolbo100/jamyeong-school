@@ -51,6 +51,9 @@ export default function SiteHeader() {
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/courses">
           강의소개
         </Link>
+        <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/blog">
+          블로그
+        </Link>
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/contact">
           문의하기
         </Link>
