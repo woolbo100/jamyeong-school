@@ -3,8 +3,9 @@ title: "AI 그림책은 왜 세계관 설계가 먼저일까"
 date: "2026-04-08"
 category: "AI 창작"
 excerpt: "AI 그림책은 이미지를 만드는 기술보다 먼저, 이야기의 정체성과 세계관을 설계하는 일이 중요합니다."
-coverImage: "/images/blog/ai-picturebook-world.jpg"
+coverImage: "/images/blog/ai-picturebook-world.png"
 tags: ["AI 그림책", "세계관", "출판"]
+featured: true
 ---
 
 # AI 그림책은 왜 세계관 설계가 먼저일까

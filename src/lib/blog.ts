@@ -14,6 +14,7 @@ export type BlogPostMeta = {
   excerpt: string;
   coverImage?: string;
   tags?: string[];
+  featured?: boolean;
 };
 
 export type BlogPost = BlogPostMeta & {
@@ -42,6 +43,7 @@ export function getAllPosts(): BlogPostMeta[] {
       excerpt: data.excerpt ?? "",
       coverImage: data.coverImage ?? "",
       tags: data.tags ?? [],
+      featured: data.featured ?? false,
     };
   });
 
@@ -65,10 +67,23 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
     excerpt: data.excerpt ?? "",
     coverImage: data.coverImage ?? "",
     tags: data.tags ?? [],
+    featured: data.featured ?? false,
     contentHtml,
   };
 }
 
 export function getAllSlugs(): string[] {
   return getMarkdownFiles().map((fileName) => fileName.replace(/\.md$/, ""));
+}
+
+export function getAllCategories(): string[] {
+  const posts = getAllPosts();
+  const categories = posts.map((post) => post.category).filter(Boolean);
+  return ["전체", ...Array.from(new Set(categories))];
+}
+
+export function getPostsByCategory(category: string): BlogPostMeta[] {
+  const posts = getAllPosts();
+  if (!category || category === "전체") return posts;
+  return posts.filter((post) => post.category === category);
 }
