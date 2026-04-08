@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 
@@ -23,11 +24,11 @@ export default function Home() {
 function Elements() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const items = [
-    { title: "흙 (Earth)", desc: "안정과 풍요를 위한 기반 다지기" },
-    { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기" },
-    { title: "바람 (Air)", desc: "자유로운 사고와 소통의 길 열기" },
-    { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기" },
-    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기" },
+    { title: "흙 (Earth)", desc: "안정과 풍요를 위한 기반 다지기", bg: "/images/elements/earth.png" },
+    { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기", bg: "/images/elements/fire.png" },
+    { title: "바람 (Air)", desc: "자유로운 사고와 소통의 길 열기", bg: "/images/elements/metal.png" },
+    { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기", bg: "/images/elements/water.png" },
+    { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png" },
   ];
 
   return (
@@ -49,18 +50,29 @@ function Elements() {
                 className={`w-full group relative rounded-2xl bg-white/5 backdrop-blur-md border aspect-[3/4] p-4 flex flex-col justify-end text-left overflow-hidden transition-all duration-300 ease-out transform-gpu text-white 
                   ${isActive ? 'border-[#8A6A3F]/70 -translate-y-1 scale-[1.01]' : 'border-white/10 hover:border-[#8A6A3F]/50 hover:-translate-y-1 hover:scale-[1.01]'}`}
               >
+                {/* Background Image Layer */}
+                <div className="absolute inset-0 z-0">
+                  <Image 
+                    src={it.bg} 
+                    alt={it.title}
+                    fill 
+                    className="object-cover transition-transform duration-700 opacity-60 group-hover:opacity-80 group-hover:scale-110" 
+                  />
+                  <div className={`absolute inset-0 bg-black/60 transition-colors duration-500 ${isActive ? 'bg-black/40' : 'group-hover:bg-black/40'}`} />
+                </div>
+
                 {/* Top Highlight Line */}
-                <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+                <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent transition-opacity duration-500 z-20 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
 
                 <div
-                  className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                  className={`absolute inset-0 transition-opacity duration-300 pointer-events-none z-10 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
                   style={{
                     background: 'radial-gradient(600px circle at 50% 40%, rgba(214,198,168,0.18), transparent 55%)',
                   }}
                 />
-                <div className="relative z-10">
-                  <div className={`font-bold transition-colors duration-300 ${isActive ? 'text-[#D6C6A8]' : 'text-white'}`}>{it.title}</div>
-                  <div className="text-white/70 text-sm mt-1">{it.desc}</div>
+                <div className="relative z-20">
+                  <div className={`font-bold transition-colors duration-300 ${isActive ? 'text-[#D6C6A8]' : 'text-white'} drop-shadow-lg`}>{it.title}</div>
+                  <div className="text-white/70 text-sm mt-1 drop-shadow-md">{it.desc}</div>
                 </div>
               </button>
             </Reveal>
