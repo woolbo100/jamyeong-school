@@ -313,10 +313,13 @@ export default function CoursesPage() {
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1">
                         <Reveal>
-                            <div className="flex items-center space-x-3 text-ether mb-6">
+                            <div className="flex items-center space-x-3 text-[#a855f7] mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">✨ 제5원소 — 풍요마인드</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
+                                <span className="mr-3 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">✨</span>
+                                제5원소 — 풍요마인드
+                            </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     이제는 나를 넘어 타인을 성장시키는 리더의 단계입니다. <br />
@@ -327,23 +330,23 @@ export default function CoursesPage() {
                             <div className="mt-12 space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
                                     </div>
                                 </div>
 
-                                <div className="p-6 rounded-2xl bg-ether/10 border border-ether/20">
+                                <div className="p-6 rounded-2xl bg-[#a855f7]/5 border border-[#a855f7]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div>
-                                            <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
+                                            <h4 className="text-[#ec4899] text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
                                             <p className="text-white/80 text-sm">멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
                                         </div>
-                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-ether/30 pt-4 md:pt-0 md:pl-6">
-                                            <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-[#a855f7]/30 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-[#ec4899] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
                                             <p className="text-white/90 text-sm font-medium">강사/멘토로서 성장하며 <br />사회적 영향력을 확장합니다.</p>
                                         </div>
                                     </div>
@@ -362,12 +365,12 @@ export default function CoursesPage() {
                     </div>
                     <div className="order-1 lg:order-2">
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_60px_-12px_rgba(157,80,187,0.45),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/20 relative">
-                                    <div className="text-white text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">✨</div>
-                                    <div className="absolute -inset-6 border border-white/5 rounded-full"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(168,85,247,0.15),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#a855f7]/40 hover:shadow-[0_0_60px_-12px_rgba(168,85,247,0.5),0_18px_55px_rgba(0,0,0,0.55)]">
+                                <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative">
+                                    <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] to-[#ec4899] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
+                                    <div className="absolute -inset-6 border border-[#a855f7]/20 rounded-full animate-pulse"></div>
                                 </div>
-                                <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase">Infinite Light</p>
+                                <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase opacity-60 group-hover:opacity-100 transition-opacity">Infinite Light</p>
                             </div>
                         </Reveal>
                     </div>
