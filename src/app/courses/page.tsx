@@ -184,10 +184,13 @@ export default function CoursesPage() {
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1">
                         <Reveal>
-                            <div className="flex items-center space-x-3 text-air mb-6">
+                            <div className="flex items-center space-x-3 text-[#fde68a] mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Connection</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌬️ 금 — 마음을 나누다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
+                                <span className="mr-3 bg-gradient-to-br from-[#f5d0fe] to-[#fde68a] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(253,230,138,0.3)]">🌬️</span>
+                                금 — 마음을 나누다
+                            </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     나의 경험과 통찰은 전달될 때 비로소 진정한 가치가 됩니다. <br />
@@ -198,24 +201,24 @@ export default function CoursesPage() {
                             <div className="mt-12 space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <h4 className="text-[#fde68a] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <h4 className="text-[#fde68a] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
                                     </div>
                                 </div>
 
-                                <div className="p-6 rounded-2xl bg-air/5 border border-air/10">
+                                <div className="p-6 rounded-2xl bg-[#fde68a]/5 border border-[#fde68a]/10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div>
-                                            <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
+                                            <h4 className="text-[#fde68a] text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
                                             <p className="text-white/80 text-sm">지식창업 마스터 클래스 • 1인 비즈니스 과정</p>
-                                            <p className="text-air/80 text-xs mt-1 font-medium">자격증: 캔바/AI브랜딩 마스터 강사</p>
+                                            <p className="text-[#fde68a]/80 text-xs mt-1 font-medium">자격증: 캔바/AI브랜딩 마스터 강사</p>
                                         </div>
-                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-air/20 pt-4 md:pt-0 md:pl-6">
-                                            <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-[#fde68a]/20 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-[#fde68a] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
                                             <p className="text-white/90 text-sm font-medium">실행 가능한 강의를 제작하고 <br />강력한 콘텐츠 영향력을 형성합니다.</p>
                                         </div>
                                     </div>
@@ -224,22 +227,22 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/metal"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-air/30 text-air hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#fde68a]/30 text-[#fde68a] hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
-                                    <span className="absolute inset-0 bg-air/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                    <span className="absolute inset-0 bg-[#fde68a]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                                 </Link>
                             </div>
                         </Reveal>
                     </div>
                     <div className="order-1 lg:order-2">
                         <Reveal>
-                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_50px_-12px_rgba(168,200,235,0.35),0_18px_55px_rgba(0,0,0,0.55)]">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-air/20 to-transparent flex items-center justify-center border border-air/20 relative">
-                                    <div className="text-air text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌬️</div>
-                                    <div className="absolute inset-0 rounded-full border-t border-air/50 animate-[spin_4s_linear_infinite]"></div>
+                            <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(253,230,138,0.1),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#fde68a]/30 hover:shadow-[0_0_50px_-12px_rgba(253,230,138,0.3),0_18px_55px_rgba(0,0,0,0.55)]">
+                                <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-[#fde68a]/20 to-transparent flex items-center justify-center border border-[#fde68a]/20 relative">
+                                    <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#f5d0fe] to-[#fde68a] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(253,230,138,0.4)]">🌬️</div>
+                                    <div className="absolute inset-0 rounded-full border-t border-[#fde68a]/50 animate-[spin_6s_linear_infinite]"></div>
                                 </div>
-                                <p className="mt-10 font-display text-air tracking-[0.3em] text-sm font-bold uppercase">Flow Program</p>
+                                <p className="mt-10 font-display text-[#fde68a] tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity">Flow Program</p>
                             </div>
                         </Reveal>
                     </div>
