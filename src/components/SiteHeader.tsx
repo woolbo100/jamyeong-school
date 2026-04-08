@@ -57,15 +57,6 @@ export default function SiteHeader() {
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/contact">
           문의하기
         </Link>
-        <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/reviews">
-          강의후기
-        </Link>
-        <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/my">
-          내강의실
-        </Link>
-        <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/shop">
-          온라인샵
-        </Link>
       </nav>
 
       <div className="flex items-center space-x-4 md:space-x-6">
