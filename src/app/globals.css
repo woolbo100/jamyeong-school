@@ -5,11 +5,28 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: #000000;
   --color-foreground: #ededed;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Colors from tailwind.config.ts */
+  --color-true-black: #000000;
+  --color-soft-black: #0b0b10;
+  --color-champagne-gold: #d6c6a8;
+  --color-metal-gold: #c9b37e;
+  --color-antique-gold: #b08d57;
+
+  /* Curriculum Elements */
+  --color-earth: #a8947a;
+  --color-fire: #ff5f5f;
+  --color-air: #a8c8eb;
+  --color-water: #89cff0;
+  --color-ether: #9d50bb;
+
+  /* Custom Fonts */
+  --font-display: "Cinzel", serif;
 }
 
 @layer utilities {

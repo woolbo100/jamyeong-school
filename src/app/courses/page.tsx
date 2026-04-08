@@ -14,16 +14,16 @@ export default function CoursesPage() {
                     </Reveal>
                     <Reveal delayMs={200}>
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight tracking-tight text-white uppercase italic">
-                            5원소 <br />
+                            자명스쿨 <br />
                             <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                                커리큘럼 개요
+                                5원소 커리큘럼
                             </span>
                         </h1>
                     </Reveal>
                     <Reveal delayMs={400}>
                         <p className="text-lg md:text-xl text-white/50 font-light leading-relaxed max-w-2xl mx-auto">
-                            흙, 불, 바람, 물, 에테르의 고대 지혜를 통해 <br />
-                            내면의 우주를 조화롭게 가꾸는 혁신적인 교육 시스템입니다.
+                            마음공부부터 수익화, 그리고 리더십까지 <br />
+                            단계별로 성장하는 통합 교육 시스템
                         </p>
                     </Reveal>
                 </div>
@@ -31,26 +31,67 @@ export default function CoursesPage() {
             </header>
 
             <main className="max-w-7xl mx-auto px-6 lg:px-8 py-24 space-y-32 lg:space-y-64">
-                {/* Earth Section */}
+                {/* Growth Flow Summary */}
+                <section className="text-center mb-20 lg:mb-40">
+                    <Reveal>
+                        <div className="max-w-4xl mx-auto p-12 rounded-[2.5rem] border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+                            <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12">
+                                자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br className="hidden md:block" />
+                                마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하는 구조입니다.
+                            </p>
+                            <div className="flex justify-center items-center gap-4 md:gap-8 text-3xl md:text-5xl">
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="토">🌱</span>
+                                <span className="text-white/20 text-xl">→</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="화">🔥</span>
+                                <span className="text-white/20 text-xl">→</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="금">🌬️</span>
+                                <span className="text-white/20 text-xl">→</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="수">💧</span>
+                                <span className="text-white/20 text-xl">→</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="에테르">✨</span>
+                            </div>
+                        </div>
+                    </Reveal>
+                </section>
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1">
                         <Reveal>
                             <div className="flex items-center space-x-3 text-earth mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Foundation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">흙: 마음 심기 (Mind Planting)</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌱 토 — 마음을 심다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
-                                    &quot;뿌리 내리기 프로그램&quot;은 의식을 지면에 단단히 고정하는 데 집중합니다.
-                                    하늘에 닿기 전, 우리는 먼저 육체적, 정신적 현재에 깊이 뿌리를 내려야 합니다.
+                                    모든 변화의 시작은 나를 아는 것에서 시작됩니다. <br />
+                                    의식을 지면에 단단히 고정하고 내면의 뿌리를 내리는 단계입니다.
                                 </p>
                             </div>
-                            <div className="mt-10 flex flex-wrap gap-4">
-                                {["안정감", "마음챙김", "가치관 정립"].map((tag) => (
-                                    <span key={tag} className="px-5 py-2 rounded-full border border-earth/20 bg-earth/5 text-earth text-sm font-medium">
-                                        {tag}
-                                    </span>
-                                ))}
+
+                            <div className="mt-12 space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">자기 인식 • 무의식 정화 • 정체성 확립</p>
+                                    </div>
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">자기 탐색 질문 생성 • 에세이 및 브랜드 문장 정리 • 출판 기획 보조</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-6 rounded-2xl bg-earth/5 border border-earth/10">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
+                                            <p className="text-white/80 text-sm">그림책/에세이 출판 강의 • 브랜딩 기초 과정</p>
+                                            <p className="text-earth/80 text-xs mt-1 font-medium">자격증: 감성출판지도사</p>
+                                        </div>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-earth/20 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <p className="text-white/90 text-sm font-medium">나를 명확히 이해하고 <br />브랜드 방향을 확립합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -61,13 +102,12 @@ export default function CoursesPage() {
                                     <div className="text-earth text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌱</div>
                                     <div className="absolute inset-0 border border-dashed border-earth/30 rounded-full animate-[spin_30s_linear_infinite]"></div>
                                 </div>
-                                <p className="mt-10 font-display text-earth tracking-[0.3em] text-sm font-bold">ROOTING PROGRAM</p>
+                                <p className="mt-10 font-display text-earth tracking-[0.3em] text-sm font-bold uppercase">Rooting Program</p>
                             </div>
                         </Reveal>
                     </div>
                 </section>
 
-                {/* Fire Section */}
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
                         <Reveal>
@@ -76,7 +116,7 @@ export default function CoursesPage() {
                                     <div className="text-fire text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🔥</div>
                                     <div className="absolute inset-3 border border-fire/30 rounded-full"></div>
                                 </div>
-                                <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold">HEART ART PROGRAM</p>
+                                <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold uppercase">Heart Art Program</p>
                             </div>
                         </Reveal>
                     </div>
@@ -85,44 +125,83 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-fire mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Passion & Transformation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">불: 마음 그리기 (Mind Drawing)</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🔥 화 — 마음을 그리다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
-                                    &quot;하트 아트 프로그램&quot;은 내면의 창조적 불꽃을 깨웁니다.
-                                    의식적인 창조를 통해 감정의 뜨거움을 표현하고, 낡은 자아를 태워 보냄으로써 변화를 이끌어냅니다.
+                                    억눌린 감정은 표현될 때 치유되고 창작으로 확장됩니다. <br />
+                                    내면의 불꽃을 깨워 창조적 창작물로 시각화하는 단계입니다.
                                 </p>
                             </div>
-                            <div className="mt-10 flex flex-wrap gap-4">
-                                {["자기표현", "창의성", "실행력"].map((tag) => (
-                                    <span key={tag} className="px-5 py-2 rounded-full border border-fire/20 bg-fire/5 text-fire text-sm font-medium">
-                                        {tag}
-                                    </span>
-                                ))}
+
+                            <div className="mt-12 space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">감정 표현 • 내면 치유 • 세계관 형성</p>
+                                    </div>
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">AI 이미지 생성 • 감정 기반 아트 제작 • 세계관 시각화</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-6 rounded-2xl bg-fire/5 border border-fire/10">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
+                                            <p className="text-white/80 text-sm">AI 아티스트 올인원 클래스</p>
+                                            <p className="text-fire/80 text-xs mt-1 font-medium">자격증: AI 아트테라피 지도사</p>
+                                        </div>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-fire/20 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <p className="text-white/90 text-sm font-medium">감정을 창의적으로 표현하고 <br />AI 창작 역량을 확보합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
                 </section>
 
-                {/* Air Section */}
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1">
                         <Reveal>
                             <div className="flex items-center space-x-3 text-air mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Connection</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">바람: 마음 나누기 (Mind Sharing)</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌬️ 금 — 마음을 나누다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
-                                    &quot;흐름 프로그램&quot;은 보이지 않는 연결의 기술을 가르칩니다.
-                                    소통과 공감, 그리고 만물에 닿는 부드러운 산들바람처럼 유연한 사고의 움직임을 탐구합니다.
+                                    나의 경험과 통찰은 전달될 때 비로소 진정한 가치가 됩니다. <br />
+                                    지혜를 구조화하여 세상과 소통하고 나만의 브랜드를 구축하는 단계입니다.
                                 </p>
                             </div>
-                            <div className="mt-10 flex flex-wrap gap-4">
-                                {["자비심", "통합", "지성"].map((tag) => (
-                                    <span key={tag} className="px-5 py-2 rounded-full border border-air/20 bg-air/5 text-air text-sm font-medium">
-                                        {tag}
-                                    </span>
-                                ))}
+
+                            <div className="mt-12 space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
+                                    </div>
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-6 rounded-2xl bg-air/5 border border-air/10">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
+                                            <p className="text-white/80 text-sm">지식창업 마스터 클래스 • 1인 비즈니스 과정</p>
+                                            <p className="text-air/80 text-xs mt-1 font-medium">자격증: 캔바/AI브랜딩 마스터 강사</p>
+                                        </div>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-air/20 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-air text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <p className="text-white/90 text-sm font-medium">실행 가능한 강의를 제작하고 <br />강력한 콘텐츠 영향력을 형성합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -130,10 +209,10 @@ export default function CoursesPage() {
                         <Reveal>
                             <div className="element-card relative group overflow-hidden rounded-[2.5rem] p-12 flex flex-col items-center justify-center aspect-square transition-all duration-700 hover:-translate-y-4 backdrop-blur-xl border border-white/10 bg-gradient-to-b from-white/[0.08] via-white/[0.04] to-black/40 after:content-[''] after:absolute after:inset-0 after:rounded-[inherit] after:bg-[radial-gradient(900px_240px_at_50%_0%,rgba(214,198,168,0.18),transparent_60%)] after:opacity-100 after:pointer-events-none hover:border-[#D6C6A8]/30 hover:shadow-[0_0_50px_-12px_rgba(168,200,235,0.35),0_18px_55px_rgba(0,0,0,0.55)]">
                                 <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-air/20 to-transparent flex items-center justify-center border border-air/20 relative">
-                                    <div className="text-air text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌪️</div>
+                                    <div className="text-air text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌬️</div>
                                     <div className="absolute inset-0 rounded-full border-t border-air/50 animate-[spin_4s_linear_infinite]"></div>
                                 </div>
-                                <p className="mt-10 font-display text-air tracking-[0.3em] text-sm font-bold">FLOW PROGRAM</p>
+                                <p className="mt-10 font-display text-air tracking-[0.3em] text-sm font-bold uppercase">Flow Program</p>
                             </div>
                         </Reveal>
                     </div>
@@ -148,7 +227,7 @@ export default function CoursesPage() {
                                     <div className="text-water text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">💧</div>
                                     <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-water/20 blur-xl"></div>
                                 </div>
-                                <p className="mt-10 font-display text-water tracking-[0.3em] text-sm font-bold">WISDOM STREAM</p>
+                                <p className="mt-10 font-display text-water tracking-[0.3em] text-sm font-bold uppercase">Wisdom Stream</p>
                             </div>
                         </Reveal>
                     </div>
@@ -157,19 +236,38 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-water mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Intuition</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">물: 마음 채우기 (Mind Filling)</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">💧 수 — 마음을 채우다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
-                                    &quot;지혜의 샘&quot; 과정은 스스로를 비워내는 그릇이 되는 법을 배웁니다.
-                                    감정의 몸을 정화하고, 에고가 비워진 자리에 직관의 깊은 물이 차오르게 합니다.
+                                    가치는 반드시 수익으로 연결되어야 지속됩니다. <br />
+                                    풍요로운 마음을 현실의 결실로 변환하여 시스템을 구축하는 단계입니다.
                                 </p>
                             </div>
-                            <div className="mt-10 flex flex-wrap gap-4">
-                                {["성찰", "명료함", "수용성"].map((tag) => (
-                                    <span key={tag} className="px-5 py-2 rounded-full border border-water/20 bg-water/5 text-water text-sm font-medium">
-                                        {tag}
-                                    </span>
-                                ))}
+
+                            <div className="mt-12 space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">결핍 → 풍요 전환 • 가치와 수익 연결</p>
+                                    </div>
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-6 rounded-2xl bg-water/5 border border-water/10">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
+                                            <p className="text-white/80 text-sm">수익화 마스터 클래스 • 서비스 런칭 과정</p>
+                                        </div>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-water/20 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <p className="text-white/90 text-sm font-medium">실제 수익을 창출하고 <br />디지털 자산 시스템을 완성합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -182,19 +280,38 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-ether mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">에테르: 마음 밝히기 (Mind Shining)</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">✨ 에테르 — 마음을 빛내다</h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
-                                    &quot;무한한 빛 프로그램&quot;은 모든 원소의 최종적인 통합을 의미합니다.
-                                    모든 원소가 탄생하는 공(空)의 공간이자, 다시 돌아가게 될 근원의 빛을 상징합니다.
+                                    이제는 나를 넘어 타인을 성장시키는 리더의 단계입니다. <br />
+                                    모든 원소를 통합하여 빛을 나누고 지속 가능한 선순환 구조를 형성합니다.
                                 </p>
                             </div>
-                            <div className="mt-10 flex flex-wrap gap-4">
-                                {["초월", "영성", "본질"].map((tag) => (
-                                    <span key={tag} className="px-5 py-2 rounded-full border border-ether/30 bg-ether/10 text-ether text-sm font-medium">
-                                        {tag}
-                                    </span>
-                                ))}
+
+                            <div className="mt-12 space-y-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
+                                    </div>
+                                    <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+                                        <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <p className="text-white/70 text-sm leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-6 rounded-2xl bg-ether/10 border border-ether/20">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
+                                            <p className="text-white/80 text-sm">멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
+                                        </div>
+                                        <div className="md:text-right border-t md:border-t-0 md:border-l border-ether/30 pt-4 md:pt-0 md:pl-6">
+                                            <h4 className="text-ether text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
+                                            <p className="text-white/90 text-sm font-medium">강사/멘토로서 성장하며 <br />사회적 영향력을 확장합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
@@ -217,17 +334,18 @@ export default function CoursesPage() {
                 <div className="max-w-4xl mx-auto text-center">
                     <Reveal>
                         <h3 className="text-3xl md:text-5xl font-display mb-12 leading-tight text-white uppercase italic">
-                            당신의 원소 여정을 <br /> 시작할 준비가 되셨나요?
+                            자명스쿨은 AI를 배우는 곳이 아니라 <br />
+                            마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
                         </h3>
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                             <button className="group relative overflow-visible h-16 w-full sm:w-64 px-8 text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]">
-                                <span className="relative z-10">수강 신청하기</span>
+                                <span className="relative z-10">프로그램 안내 받기</span>
                                 <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
                                 <span className="absolute -inset-[1px] ring-1 ring-[#8A6A3F]/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
                             </button>
 
-                            <button className="h-16 w-full sm:w-64 px-8 text-sm font-bold uppercase tracking-widest rounded-full border border-white/20 text-white hover:bg-white/5 transition-all duration-300">
-                                강의 계획서 다운로드
+                            <button className="h-16 w-full sm:w-64 px-8 text-sm font-bold uppercase tracking-widest rounded-full border border-white/20 text-white hover:bg-white/5 transition-all duration-300 uppercase tracking-[0.2em]">
+                                무료 특강 신청
                             </button>
                         </div>
                     </Reveal>
