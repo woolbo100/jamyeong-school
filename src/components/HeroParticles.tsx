@@ -20,74 +20,85 @@ const HeroParticles: React.FC = () => {
 
         let animationFrameId: number;
         let particles: Particle[] = [];
-        let mouse = { x: -2000, y: -2000 };
+        let mouse = { x: -2000, y: -2000, radius: 150 };
 
         class Particle {
             x: number;
             y: number;
-            originX: number;
-            originY: number;
             vx: number;
             vy: number;
             size: number;
+            baseSize: number;
             alpha: number;
 
             constructor(w: number, h: number) {
                 this.x = Math.random() * w;
                 this.y = Math.random() * h;
-                this.originX = this.x;
-                this.originY = this.y;
-                // Very slow natural float
+                // Extremely slow drift speed for premium feel
                 this.vx = (Math.random() - 0.5) * 0.15;
                 this.vy = (Math.random() - 0.5) * 0.15;
-                // Small size for "premium" feel
-                this.size = Math.random() * 1.2 + 0.6;
-                this.alpha = Math.random() * 0.4 + 0.15;
+                this.baseSize = Math.random() * 1.5 + 0.8;
+                this.size = this.baseSize;
+                this.alpha = Math.random() * 0.5 + 0.3; // Increased visibility
             }
 
             update(w: number, h: number) {
-                // 1. Natural floating movement
-                this.originX += this.vx;
-                this.originY += this.vy;
+                this.x += this.vx;
+                this.y += this.vy;
 
                 // Screen wrapping
-                if (this.originX < -20) this.originX = w + 20;
-                if (this.originX > w + 20) this.originX = -20;
-                if (this.originY < -20) this.originY = h + 20;
-                if (this.originY > h + 20) this.originY = -20;
+                if (this.x < -20) this.x = w + 20;
+                if (this.x > w + 20) this.x = -20;
+                if (this.y < -20) this.y = h + 20;
+                if (this.y > h + 20) this.y = -20;
 
-                // 2. Mouse Interaction (Subtle follow/avoid)
-                const dx = mouse.x - this.originX;
-                const dy = mouse.y - this.originY;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                
-                let targetX = this.originX;
-                let targetY = this.originY;
+                // Mouse interaction: Subtle repulsion/scaling
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
 
-                // Particles react within 200px
-                if (dist < 200) {
-                    const force = (200 - dist) / 200;
-                    // Move slightly towards/away (strength: 0.05)
-                    // Restricting peak displacement to ~8px as requested
-                    targetX -= dx * force * 0.05;
-                    targetY -= dy * force * 0.05;
+                if (distance < mouse.radius) {
+                    const force = (mouse.radius - distance) / mouse.radius;
+                    const angle = Math.atan2(dy, dx);
+                    this.x -= Math.cos(angle) * force * 1.2;
+                    this.y -= Math.sin(angle) * force * 1.2;
+                    this.size = this.baseSize * 1.3;
+                } else {
+                    this.size = this.baseSize;
                 }
-
-                // 3. Smooth Easing (Lerp) to target position
-                // This ensures natural return when mouse moves away
-                this.x += (targetX - this.x) * 0.08;
-                this.y += (targetY - this.y) * 0.08;
             }
 
             draw() {
                 if (!ctx) return;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                // Champagne Gold: D6C6A8
                 ctx.fillStyle = `rgba(214, 198, 168, ${this.alpha})`;
                 ctx.fill();
             }
         }
+
+        const drawLines = () => {
+            if (!ctx) return;
+            const maxDistance = 150;
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < maxDistance) {
+                        const opacity = (1 - distance / maxDistance) * 0.25;
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(214, 198, 168, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        };
 
         const init = () => {
             const container = canvas.parentElement;
@@ -96,7 +107,6 @@ const HeroParticles: React.FC = () => {
             const w = container.clientWidth;
             const h = container.clientHeight;
             
-            // Set canvas size with dpr check for sharpness
             const dpr = window.devicePixelRatio || 1;
             canvas.width = w * dpr;
             canvas.height = h * dpr;
@@ -104,22 +114,28 @@ const HeroParticles: React.FC = () => {
             canvas.style.height = `${h}px`;
             ctx.scale(dpr, dpr);
             
-            // Desktop: 35 particles, Mobile: 15 particles
-            const count = w < 768 ? 15 : 35;
+            // Adjusted density for constellation effect
+            const count = Math.floor((w * h) / 15000);
+            const clampedCount = w < 768 ? Math.min(count, 20) : Math.min(count, 45);
+            
             particles = [];
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i < clampedCount; i++) {
                 particles.push(new Particle(w, h));
             }
         };
 
         const animate = () => {
             if (!ctx) return;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const w = canvas.width / (window.devicePixelRatio || 1);
+            const h = canvas.height / (window.devicePixelRatio || 1);
+            
+            ctx.clearRect(0, 0, w, h);
             
             particles.forEach(p => {
-                p.update(canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
+                p.update(w, h);
                 p.draw();
             });
+            drawLines();
             
             animationFrameId = requestAnimationFrame(animate);
         };
@@ -150,7 +166,7 @@ const HeroParticles: React.FC = () => {
     return (
         <canvas 
             ref={canvasRef} 
-            className="absolute inset-0 z-0 pointer-events-none opacity-50 select-none grayscale-[0.2]" 
+            className="absolute inset-0 z-0 pointer-events-none opacity-70 select-none" 
             aria-hidden="true"
         />
     );
