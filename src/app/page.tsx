@@ -146,10 +146,10 @@ function CommunityBanner() {
 function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
-    { title: "불(Fire) - 열정과 창조의 불꽃 피우기", price: "₩ 120,000" },
     { title: "흙(Earth) - 안정과 풍요를 위한 기반 다지기", price: "₩ 120,000" },
+    { title: "불(Fire) - 열정과 창조의 불꽃 피우기", price: "₩ 120,000" },
+    { title: "공기(Air) - 세상과 지혜를 나누기", price: "₩ 120,000" },
     { title: "물(Water) - 감성의 흐름을 이해하고 정화하기", price: "₩ 120,000" },
-    { title: "에테르(Aether) - 영적 성장과 우주적 연결", price: "₩ 180,000" },
   ];
 
   return (
@@ -208,6 +208,55 @@ function FeaturedLectures() {
           );
         })}
       </div>
+
+      {/* 가로형 에테르(Aether) 배너 */}
+      <div className="mt-10">
+        <Reveal delayMs={480}>
+          <button
+            type="button"
+            onClick={() => setActiveIndex(4)}
+            className={`w-full group relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border text-left transition-all duration-300 ease-out transform-gpu text-white 
+              ${activeIndex === 4 ? 'border-[#8A6A3F]/70 -translate-y-1 scale-[1.01]' : 'border-white/10 hover:border-[#8A6A3F]/50 hover:-translate-y-1 hover:scale-[1.01]'}`}
+          >
+            {/* Top Highlight Line */}
+            <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent transition-opacity duration-500 z-20 ${activeIndex === 4 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+            <div
+              className={`absolute inset-0 transition-opacity duration-300 pointer-events-none z-0 ${activeIndex === 4 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+              style={{
+                background: 'radial-gradient(800px circle at 50% 50%, rgba(214,198,168,0.18), transparent 60%)',
+              }}
+            />
+            
+            <div className="relative z-10 w-full flex flex-col md:flex-row">
+              {/* 이미지 영역 */}
+              <div className="h-64 sm:h-72 md:h-auto md:w-5/12 lg:w-1/2 bg-black/30 w-full" />
+              
+              {/* 콘텐츠 영역 */}
+              <div className="p-8 lg:p-12 md:w-7/12 lg:w-1/2 flex flex-col justify-center">
+                <h3 className={`font-bold text-xl lg:text-2xl transition-colors duration-300 ${activeIndex === 4 ? 'text-[#D6C6A8]' : 'text-white'}`}>에테르(Aether) - 영적 성장과 우주적 연결</h3>
+                <div className="mt-4 text-white text-2xl lg:text-3xl font-bold">₩ 180,000</div>
+                <div className="mt-8 md:max-w-xs">
+                  <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
+                    {/* External Aura Glow */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
+                      style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
+                    />
+                    {/* Sharp Ring Highlight */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
+                    />
+                    <span className="relative z-10">강의 구매하기</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+        </Reveal>
+      </div>
     </section>
   );
 }
@@ -258,7 +307,7 @@ function FaqAndContact() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <Reveal>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">자주 묻는 질문</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">자주 묻는 질문</h2>
             <p className="mt-4 text-white/70">궁금한 점이 있으신가요? 먼저 확인해보세요.</p>
 
             <div className="mt-8 space-y-4">
@@ -282,7 +331,7 @@ function FaqAndContact() {
 
         <Reveal delayMs={200}>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">문의하기</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">문의하기</h2>
             <p className="mt-4 text-white/70">
               더 궁금한 점이 있거나 제안할 내용이 있다면 언제든지 연락주세요.
             </p>

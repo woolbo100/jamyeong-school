@@ -96,14 +96,14 @@ const elementData: Record<ElementType, ElementData> = {
   },
   metal: {
     slug: "metal",
-    symbol: "🌬️",
+    symbol: "🌀",
     name: "공기",
     lectureName: "마음을 나누다",
     tagline: "콘텐츠와 메시지로 나를 표현하는 브랜딩 클래스",
     color: "text-air",
     borderColor: "border-air",
     bgColor: "bg-air/10",
-    auraColor: "rgba(168, 200, 235, 0.2)",
+    auraColor: "rgba(214, 198, 168, 0.2)",
     recommends: [
       "나만의 지혜를 세상에 알리고 싶은 분",
       "전자책이나 강의를 만들고 싶은 분",

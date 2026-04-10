@@ -45,7 +45,7 @@ export default function CoursesPage() {
                                 <span className="text-white/20 text-xl">→</span>
                                 <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="불">🔥</span>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="공기">🌬️</span>
+                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="공기">🌀</span>
                                 <span className="text-white/20 text-xl">→</span>
                                 <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="물">💧</span>
                                 <span className="text-white/20 text-xl">→</span>
@@ -215,7 +215,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Connection</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
-                                <span className="mr-3 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(214,198,168,0.4)]">🌬️</span>
+                                <span className="mr-3 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(214,198,168,0.4)]">🌀</span>
                                 공기 — 마음을 나누다
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -228,11 +228,11 @@ export default function CoursesPage() {
                             <div className="mt-12 space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-slate-300 text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
+                                        <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                                        <h4 className="text-slate-300 text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
+                                        <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
                                         <p className="text-white/70 text-sm leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
                                     </div>
                                 </div>
@@ -254,10 +254,10 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/metal"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-slate-400/30 text-slate-300 hover:text-[#D6C6A8] transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#D6C6A8]/30 text-slate-200 hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
-                                    <span className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                    <span className="absolute inset-0 bg-[#D6C6A8]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                                 </Link>
                             </div>
                         </Reveal>
@@ -278,10 +278,10 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-[#D6C6A8]/20 to-transparent flex items-center justify-center border border-[#D6C6A8]/20 relative backdrop-blur-md">
-                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(214,198,168,0.4)]">🌬️</div>
+                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(214,198,168,0.4)]">🌀</div>
                                         <div className="absolute inset-0 rounded-full border-t border-[#D6C6A8]/50 animate-[spin_6s_linear_infinite]"></div>
                                     </div>
-                                    <p className="mt-10 font-display text-slate-300 tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg">Flow Program</p>
+                                    <p className="mt-10 font-display text-[#D6C6A8] tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg">Flow Program</p>
                                 </div>
                             </div>
                         </Reveal>

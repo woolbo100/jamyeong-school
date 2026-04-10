@@ -81,9 +81,9 @@ export default function AboutPage() {
             },
           ].map((item, idx) => (
             <Reveal key={idx} delayMs={idx * 200}>
-              <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 transition-colors duration-500 text-center">
-                <div className="text-5xl mb-6">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-4 text-white">{item.title}</h3>
+              <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
+                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-antiqueGold transition-colors duration-300">{item.title}</h3>
                 <p className="text-white/60 leading-relaxed">{item.desc}</p>
               </div>
             </Reveal>
@@ -154,11 +154,13 @@ export default function AboutPage() {
               },
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>
-                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/20 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 group text-center h-full flex flex-col items-center`}>
-                  <div className={`text-2xl font-display mb-4 ${element.color} opacity-70`}>{element.id}</div>
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">{element.symbol}</div>
-                  <h4 className="text-lg font-bold mb-2">{element.name}</h4>
-                  <p className="text-xs text-white/40 leading-relaxed">{element.desc}</p>
+                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/20 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id === '에테르' ? 'ether/40' : 'antiqueGold/30'} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
+                  <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.id}</div>
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500 group-hover:drop-shadow-[0_0_15px_rgba(var(--color-bg),0.3)]">{element.symbol}</div>
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
+                  <p className="text-xs text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{element.desc}</p>
+                  {/* Subtle Glow Background */}
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id === '에테르' ? 'ether' : 'antiqueGold'} to-transparent`} />
                 </div>
               </Reveal>
             ))}
@@ -170,17 +172,17 @@ export default function AboutPage() {
       <section className="py-32 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-antiqueGold/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <div className="relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10 aspect-[4/5] md:aspect-[3/4]">
+            <div className="relative group perspective-1000">
+              <div className="absolute -inset-4 bg-antiqueGold/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-1000"></div>
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10 aspect-[4/5] md:aspect-[3/4] transition-all duration-700 group-hover:translate-y-[-8px] group-hover:shadow-[0_45px_100px_rgba(0,0,0,0.6)]">
                 <Image
                   src="/images/about/instructor.jpg"
                   alt="자명쌤 백진선 프로필"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-110"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-softBlack border border-white/10 rounded-3xl p-6 hidden md:flex flex-col justify-center">
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-softBlack/80 backdrop-blur-xl border border-white/10 rounded-3xl p-6 hidden md:flex flex-col justify-center transition-all duration-500 group-hover:translate-y-[-4px] group-hover:border-antiqueGold/30 group-hover:shadow-2xl">
                 <span className="text-antiqueGold font-display text-4xl mb-2 italic">Vision</span>
                 <p className="text-white/60 text-xs leading-relaxed">
                   마음을 콘텐츠로 바꾸는 <br />
@@ -262,9 +264,9 @@ export default function AboutPage() {
                 "새로운 삶의 방향을 찾고 있는 분",
                 "디지털 도구를 가치 있게 쓰고 싶은 분",
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                  <span className="text-antiqueGold text-lg leading-none">●</span>
-                  <span className="text-white/80 font-light">{item}</span>
+                <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] hover:border-white/15 hover:translate-x-1.5 transition-all duration-300 group cursor-default">
+                  <span className="text-antiqueGold text-lg leading-none group-hover:scale-150 transition-transform">●</span>
+                  <span className="text-white/80 font-light group-hover:text-white transition-colors">{item}</span>
                 </div>
               ))}
             </div>
@@ -290,10 +292,10 @@ export default function AboutPage() {
             { title: "삶의 자신감", desc: "도구에 매몰되지 않는 주체적 변화" },
           ].map((item, idx) => (
             <Reveal key={idx} delayMs={idx * 150} slideFrom="bottom">
-              <div className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:-translate-y-2 transition-transform duration-500 h-full flex flex-col justify-center text-center">
-                <div className="text-3xl mb-4 font-display text-antiqueGold/40">{idx + 1}</div>
-                <h4 className="text-lg font-bold mb-3">{item.title}</h4>
-                <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+              <div className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:-translate-y-1.5 hover:scale-[1.01] hover:bg-white/[0.06] hover:border-antiqueGold/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-500 h-full flex flex-col justify-center text-center group">
+                <div className="text-3xl mb-4 font-display text-antiqueGold/40 group-hover:text-antiqueGold/70 transition-colors">{idx + 1}</div>
+                <h4 className="text-lg font-bold mb-3 group-hover:text-white transition-colors">{item.title}</h4>
+                <p className="text-white/50 text-xs leading-relaxed group-hover:text-white/70 transition-colors">{item.desc}</p>
               </div>
             </Reveal>
           ))}
