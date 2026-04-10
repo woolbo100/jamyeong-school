@@ -47,9 +47,9 @@ export default function AboutPage() {
 
       {/* Hero to Philosophy Divider */}
       <Reveal>
-        <div className="w-full flex justify-center relative z-20 -mt-10 mb-8 opacity-70">
-          <div className="w-2/3 max-w-3xl h-px bg-gradient-to-r from-transparent via-antiqueGold/60 to-transparent"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rotate-45 border border-antiqueGold bg-softBlack shadow-[0_0_10px_rgba(184,155,106,0.3)]"></div>
+        <div className="w-full flex flex-col items-center justify-center relative z-20 -mt-10 mb-8 opacity-80">
+          <div className="w-px h-32 bg-gradient-to-b from-transparent via-[#B89B6A]/80 to-transparent"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 border border-[#B89B6A] bg-[#0b0b10] shadow-[0_0_15px_rgba(184,155,106,0.5)]"></div>
         </div>
       </Reveal>
 
