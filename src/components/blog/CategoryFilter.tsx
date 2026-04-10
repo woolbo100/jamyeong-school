@@ -22,7 +22,7 @@ export default function CategoryFilter({
             onClick={() => onChange(category)}
             className={`rounded-full px-4 py-2 text-sm transition ${
               active
-                ? "border border-amber-300/40 bg-amber-300/10 text-amber-200"
+                ? "border border-[#B89B6A]/40 bg-[#B89B6A]/10 text-[#D6C6A8]"
                 : "border border-white/10 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
             }`}
           >

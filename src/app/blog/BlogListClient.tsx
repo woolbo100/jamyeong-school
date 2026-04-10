@@ -26,7 +26,7 @@ export default function BlogListClient({
     <main className="min-h-screen bg-black text-white">
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-amber-300/80">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#B89B6A]/80">
             Jamyeong Journal
           </p>
           <h1 className="text-4xl font-semibold md:text-5xl">자명스쿨 블로그</h1>
@@ -46,7 +46,7 @@ export default function BlogListClient({
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/5 transition duration-300 hover:border-amber-300/40 hover:bg-white/10"
+              className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/5 transition duration-300 hover:border-[#B89B6A]/40 hover:bg-white/10"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
@@ -60,13 +60,13 @@ export default function BlogListClient({
 
               <div className="p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
-                  <p className="rounded-full bg-white/10 px-3 py-1 text-xs text-amber-200/90">
+                  <p className="rounded-full bg-white/10 px-3 py-1 text-xs text-[#D6C6A8]/90">
                     {post.category}
                   </p>
                   <p className="text-xs text-white/40">{post.date}</p>
                 </div>
 
-                <h2 className="text-2xl font-semibold leading-snug transition group-hover:text-amber-200">
+                <h2 className="text-2xl font-semibold leading-snug transition group-hover:text-[#D6C6A8]">
                   {post.title}
                 </h2>
 

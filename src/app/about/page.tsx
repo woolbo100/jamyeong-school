@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { Brain, Palette, Rocket } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -67,22 +68,22 @@ export default function AboutPage() {
             {
               title: "마음을 구조화하는 힘",
               desc: "추상적인 감정과 무의식을 구체적인 이야기의 틀로 정제합니다.",
-              icon: "🧠",
+              icon: <Brain className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
             {
               title: "감정을 콘텐츠로 바꾸는 힘",
               desc: "내면의 에너지를 AI라는 도구를 통해 세상에 없는 작품으로 창조합니다.",
-              icon: "🎨",
+              icon: <Palette className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
             {
               title: "AI로 표현하고 확장하는 힘",
               desc: "기술을 넘어 나만의 브랜드를 구축하고 영향력을 확장해 나갑니다.",
-              icon: "🚀",
+              icon: <Rocket className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
           ].map((item, idx) => (
             <Reveal key={idx} delayMs={idx * 200}>
               <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+                <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-4 text-white group-hover:text-antiqueGold transition-colors duration-300">{item.title}</h3>
                 <p className="text-white/60 leading-relaxed">{item.desc}</p>
               </div>
@@ -113,54 +114,63 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-5">
             {[
               {
-                id: "흙",
+                id: "earth",
+                label: "흙",
                 name: "마음을 심다",
-                symbol: "🌱",
+                image: "/images/icons/icon-earth.png",
                 desc: "자기 이해 / 무의식 정리",
                 color: "text-earth",
                 borderColor: "border-earth",
               },
               {
-                id: "불",
+                id: "fire",
+                label: "불",
                 name: "마음을 그리다",
-                symbol: "🔥",
+                image: "/images/icons/icon-fire.png",
                 desc: "AI 아트 / 감성 표현",
                 color: "text-fire",
                 borderColor: "border-fire",
               },
               {
-                id: "공기",
+                id: "air",
+                label: "공기",
                 name: "마음을 나누다",
-                symbol: "🌬️",
+                image: "/images/icons/icon-air.png",
                 desc: "브랜딩 / 콘텐츠 제작",
                 color: "text-air",
                 borderColor: "border-air",
               },
               {
-                id: "물",
+                id: "water",
+                label: "물",
                 name: "마음을 채우다",
-                symbol: "💧",
+                image: "/images/icons/icon-water.png",
                 desc: "수익화 / 자동화",
                 color: "text-water",
                 borderColor: "border-water",
               },
               {
-                id: "에테르",
+                id: "ether",
+                label: "에테르",
                 name: "풍요 마인드",
-                symbol: "✨",
+                image: "/images/icons/icon-ether.png",
                 desc: "확장 / 에너지",
                 color: "text-ether",
                 borderColor: "border-ether",
               },
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>
-                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/20 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id === '에테르' ? 'ether/40' : 'antiqueGold/30'} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
-                  <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.id}</div>
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500 group-hover:drop-shadow-[0_0_15px_rgba(var(--color-bg),0.3)]">{element.symbol}</div>
+                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/20 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id === 'ether' ? 'ether/40' : 'antiqueGold/30'} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
+                  <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.label}</div>
+                  
+                  <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-500 drop-shadow-md">
+                    <Image src={element.image} alt={element.label} fill className="object-contain" />
+                  </div>
+                  
                   <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
                   <p className="text-xs text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{element.desc}</p>
                   {/* Subtle Glow Background */}
-                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id === '에테르' ? 'ether' : 'antiqueGold'} to-transparent`} />
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id === 'ether' ? 'ether' : 'antiqueGold'} to-transparent`} />
                 </div>
               </Reveal>
             ))}

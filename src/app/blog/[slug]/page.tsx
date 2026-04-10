@@ -30,7 +30,7 @@ export default async function BlogDetailPage({ params }: Props) {
       <section className="mx-auto max-w-6xl px-6 py-16">
         {/* Blog Header Info */}
         <div className="mb-12 text-center text-white">
-          <p className="text-sm uppercase tracking-[0.3em] text-amber-300/80 mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#B89B6A]/80 mb-4">
             {post.category}
           </p>
           <h1 className="text-3xl font-semibold leading-tight md:text-5xl mb-6 max-w-4xl mx-auto">
@@ -65,8 +65,8 @@ export default async function BlogDetailPage({ params }: Props) {
         </article>
 
         {/* CTA Section - Unified Width */}
-        <div className="mt-10 rounded-[28px] border border-amber-300/20 bg-white/5 p-10 md:p-14 text-center text-white w-full">
-          <p className="text-sm uppercase tracking-[0.25em] text-amber-300/80">
+        <div className="mt-10 rounded-[28px] border border-[#B89B6A]/20 bg-white/5 p-10 md:p-14 text-center text-white w-full">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#B89B6A]/80">
             Jamyeong School
           </p>
           <h2 className="mt-4 text-2xl md:text-3xl font-semibold">
@@ -78,9 +78,14 @@ export default async function BlogDetailPage({ params }: Props) {
           </p>
           <Link
             href="/courses"
-            className="mt-8 inline-flex rounded-full bg-amber-300 px-8 py-4 text-sm font-bold text-black transition hover:bg-amber-400 hover:scale-105 duration-300 shadow-lg"
+            className="group relative overflow-visible mt-8 inline-flex items-center justify-center h-14 px-10 text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
           >
-            강의 보러가기
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
+              style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
+            />
+            <span className="relative z-10">강의 보러가기</span>
           </Link>
         </div>
 
@@ -93,7 +98,7 @@ export default async function BlogDetailPage({ params }: Props) {
                 <Link
                   key={item.slug}
                   href={`/blog/${item.slug}`}
-                  className="group overflow-hidden rounded-[24px] border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-amber-300/30 hover:bg-white/10"
+                  className="group overflow-hidden rounded-[24px] border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#B89B6A]/30 hover:bg-white/10"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden">
                     <Image
@@ -104,10 +109,10 @@ export default async function BlogDetailPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-6">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-amber-300/80">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#B89B6A]/80">
                       {item.category}
                     </p>
-                    <h4 className="mt-3 text-lg font-semibold leading-snug group-hover:text-amber-200 transition-colors">
+                    <h4 className="mt-3 text-lg font-semibold leading-snug group-hover:text-[#D6C6A8] transition-colors">
                       {item.title}
                     </h4>
                   </div>
@@ -119,7 +124,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
         {/* Back to list */}
         <div className="mt-16 text-center">
-          <Link href="/blog" className="text-white/40 hover:text-amber-300 text-sm transition-colors">
+          <Link href="/blog" className="text-white/40 hover:text-[#B89B6A] text-sm transition-colors">
             ← 목록으로 돌아가기
           </Link>
         </div>
