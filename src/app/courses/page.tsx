@@ -479,7 +479,7 @@ export default function CoursesPage() {
             <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
                 <div className="max-w-4xl mx-auto text-center">
                     <Reveal>
-                        <h1 className="text-3xl md:text-5xl font-display text-white mb-12 leading-tight italic">
+                        <h1 className="text-2xl md:text-4xl font-display text-white mb-12 leading-tight italic break-keep px-4">
                             자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
                             마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
                         </h1>
