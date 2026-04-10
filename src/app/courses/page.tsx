@@ -40,16 +40,26 @@ export default function CoursesPage() {
                                 자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br className="hidden md:block" />
                                 마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하는 구조입니다.
                             </p>
-                            <div className="flex justify-center items-center gap-4 md:gap-8 text-3xl md:text-5xl">
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="흙">🌱</span>
+                            <div className="flex justify-center items-center gap-4 md:gap-10">
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="흙">
+                                    <Image src="/images/icon/earth.png" alt="흙" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                </div>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="불">🔥</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="불">
+                                    <Image src="/images/icon/fire.png" alt="불" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                </div>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="공기">🌀</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="공기">
+                                    <Image src="/images/icon/air.png" alt="공기" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                </div>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="물">💧</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="물">
+                                    <Image src="/images/icon/water.png" alt="물" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                </div>
                                 <span className="text-white/20 text-xl">→</span>
-                                <span className="hover:scale-125 transition-transform duration-500 cursor-default" title="에테르">✨</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="에테르">
+                                    <Image src="/images/icon/ether.png" alt="에테르" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                </div>
                             </div>
                         </div>
                     </Reveal>
@@ -60,7 +70,10 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-earth mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Foundation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🌱 흙 — 마음을 심다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
+                                <Image src="/images/icon/earth.png" alt="Earth" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <span>흙 — 마음을 심다</span>
+                            </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     모든 변화의 시작은 나를 아는 것에서 시작됩니다. <br />
@@ -121,7 +134,9 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-earth/20 to-transparent flex items-center justify-center border border-earth/20 relative backdrop-blur-md">
-                                        <div className="text-earth text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🌱</div>
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
+                                            <Image src="/images/icon/earth.png" alt="Earth Icon" fill className="object-contain" />
+                                        </div>
                                         <div className="absolute inset-0 border border-dashed border-earth/30 rounded-full animate-[spin_30s_linear_infinite]"></div>
                                     </div>
                                     <p className="mt-10 font-display text-earth tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Rooting Program</p>
@@ -148,7 +163,9 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-fire/20 to-transparent flex items-center justify-center border border-fire/20 relative backdrop-blur-md">
-                                        <div className="text-fire text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">🔥</div>
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
+                                            <Image src="/images/icon/fire.png" alt="Fire Icon" fill className="object-contain" />
+                                        </div>
                                         <div className="absolute inset-3 border border-fire/30 rounded-full"></div>
                                     </div>
                                     <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Heart Art Program</p>
@@ -161,7 +178,10 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-fire mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Passion & Transformation</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">🔥 불 — 마음을 그리다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
+                                <Image src="/images/icon/fire.png" alt="Fire" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <span>불 — 마음을 그리다</span>
+                            </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     억눌린 감정은 표현될 때 치유되고 창작으로 확장됩니다. <br />
@@ -214,9 +234,9 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-[#D6C6A8] mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Connection</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
-                                <span className="mr-3 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(214,198,168,0.4)]">🌀</span>
-                                공기 — 마음을 나누다
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
+                                <Image src="/images/icon/air.png" alt="Air" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <span>공기 — 마음을 나누다</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
@@ -278,7 +298,9 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-[#D6C6A8]/20 to-transparent flex items-center justify-center border border-[#D6C6A8]/20 relative backdrop-blur-md">
-                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-slate-200 via-white to-[#D6C6A8] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(214,198,168,0.4)]">🌀</div>
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
+                                            <Image src="/images/icon/air.png" alt="Air Icon" fill className="object-contain" />
+                                        </div>
                                         <div className="absolute inset-0 rounded-full border-t border-[#D6C6A8]/50 animate-[spin_6s_linear_infinite]"></div>
                                     </div>
                                     <p className="mt-10 font-display text-[#D6C6A8] tracking-[0.3em] text-sm font-bold uppercase opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg">Flow Program</p>
@@ -306,7 +328,9 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-water/20 to-transparent flex items-center justify-center border border-water/20 relative overflow-hidden backdrop-blur-md">
-                                        <div className="text-water text-7xl font-light opacity-80 group-hover:scale-110 transition-transform duration-700">💧</div>
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
+                                            <Image src="/images/icon/water.png" alt="Water Icon" fill className="object-contain" />
+                                        </div>
                                         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-water/20 blur-xl"></div>
                                     </div>
                                     <p className="mt-10 font-display text-water tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Wisdom Stream</p>
@@ -319,7 +343,10 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-water mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Intuition</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">💧 물 — 마음을 채우다</h2>
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
+                                <Image src="/images/icon/water.png" alt="Water" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <span>물 — 마음을 채우다</span>
+                            </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
                                     가치는 반드시 수익으로 연결되어야 지속됩니다. <br />
@@ -372,9 +399,9 @@ export default function CoursesPage() {
                             <div className="flex items-center space-x-3 text-[#a855f7] mb-6">
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white">
-                                <span className="mr-3 bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">✨</span>
-                                제5원소 — 풍요마인드
+                            <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
+                                <Image src="/images/icon/ether.png" alt="Ether" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <span>제5원소 — 풍요마인드</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
                                 <p>
@@ -435,7 +462,9 @@ export default function CoursesPage() {
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
                                     <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative backdrop-blur-md">
-                                        <div className="text-7xl group-hover:scale-110 transition-transform duration-700 bg-gradient-to-br from-[#a855f7] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">✨</div>
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
+                                            <Image src="/images/icon/ether.png" alt="Ether Icon" fill className="object-contain" />
+                                        </div>
                                         <div className="absolute -inset-6 border border-[#a855f7]/20 rounded-full animate-pulse"></div>
                                     </div>
                                     <p className="mt-10 font-display text-white tracking-[0.4em] text-sm font-bold uppercase opacity-60 group-hover:opacity-100 transition-opacity drop-shadow-lg">Infinite Light</p>
