@@ -37,8 +37,9 @@ export default function CoursesPage() {
                     <Reveal>
                         <div className="max-w-4xl mx-auto p-12 rounded-[2.5rem] border border-white/10 bg-white/[0.02] backdrop-blur-sm">
                             <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12">
-                                자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br className="hidden md:block" />
-                                마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하는 구조입니다.
+                                자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
+                                마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고 <br />
+                                함께 성장하는 구조입니다.
                             </p>
                             <div className="flex justify-center items-center gap-4 md:gap-12">
                                 <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="흙">
