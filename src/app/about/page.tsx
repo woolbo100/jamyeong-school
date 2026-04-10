@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import HeroParticles from "@/components/HeroParticles";
 import { Brain, Palette, Rocket } from "lucide-react";
 
 export default function AboutPage() {
@@ -8,6 +9,7 @@ export default function AboutPage() {
     <div className="bg-trueBlack min-h-screen font-sans selection:bg-antiqueGold/30 text-white">
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <HeroParticles />
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
             <span className="group relative inline-block border border-antiqueGold/40 bg-antiqueGold/5 rounded-full px-6 py-2 text-antiqueGold font-display mx-auto text-sm md:text-base tracking-[0.2em] mb-8 uppercase shadow-sm cursor-default transition-all duration-300 hover:border-antiqueGold/60">

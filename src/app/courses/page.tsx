@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import HeroParticles from "@/components/HeroParticles";
 
 export default function CoursesPage() {
     return (
         <div className="bg-trueBlack min-h-screen font-sans selection:bg-antiqueGold/30">
             {/* Hero Header */}
             <header className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 text-center overflow-hidden">
+                <HeroParticles />
                 <div className="relative z-10 max-w-4xl mx-auto">
                     <Reveal>
                         <span className="inline-block text-earth font-display text-sm tracking-[0.4em] mb-6 uppercase opacity-80">
