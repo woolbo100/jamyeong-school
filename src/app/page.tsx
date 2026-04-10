@@ -146,10 +146,10 @@ function CommunityBanner() {
 function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
-    { title: "흙(Earth) - 안정과 풍요를 위한 기반 다지기", price: "₩ 120,000" },
-    { title: "불(Fire) - 열정과 창조의 불꽃 피우기", price: "₩ 120,000" },
-    { title: "공기(Air) - 세상과 지혜를 나누기", price: "₩ 120,000" },
-    { title: "물(Water) - 감성의 흐름을 이해하고 정화하기", price: "₩ 120,000" },
+    { title: "흙(Earth) - 안정과 풍요를 위한 기반 다지기", price: "₩ 120,000", image: "/images/main/earth.png" },
+    { title: "불(Fire) - 열정과 창조의 불꽃 피우기", price: "₩ 120,000", image: "/images/main/fire.png" },
+    { title: "공기(Air) - 세상과 지혜를 나누기", price: "₩ 120,000", image: "/images/main/air.png" },
+    { title: "물(Water) - 감성의 흐름을 이해하고 정화하기", price: "₩ 120,000", image: "/images/main/water.png" },
   ];
 
   return (
@@ -181,7 +181,9 @@ function FeaturedLectures() {
                   }}
                 />
                 <div className="relative z-10 w-full">
-                  <div className="h-72 bg-black/30 w-full" />
+                  <div className="relative w-full aspect-video bg-black/30 overflow-hidden">
+                    <Image src={c.image} alt={c.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+                  </div>
                   <div className="p-8">
                     <h3 className={`font-bold text-lg transition-colors duration-300 ${isActive ? 'text-[#D6C6A8]' : 'text-white'}`}>{c.title}</h3>
                     <div className="mt-4 text-white text-2xl font-bold">{c.price}</div>
@@ -228,15 +230,17 @@ function FeaturedLectures() {
               }}
             />
             
-            <div className="relative z-10 w-full flex flex-col md:flex-row">
+            <div className="relative z-10 w-full flex flex-col md:flex-row md:min-h-[340px] lg:min-h-[380px]">
               {/* 이미지 영역 */}
-              <div className="h-64 sm:h-72 md:h-auto md:w-5/12 lg:w-1/2 bg-black/30 w-full" />
+              <div className="relative h-64 sm:h-72 md:h-auto md:w-5/12 lg:w-1/2 bg-black/30 w-full overflow-hidden">
+                <Image src="/images/main/ether.png" alt="에테르(Aether)" fill className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+              </div>
               
               {/* 콘텐츠 영역 */}
               <div className="p-8 lg:p-12 md:w-7/12 lg:w-1/2 flex flex-col justify-center">
                 <h3 className={`font-bold text-xl lg:text-2xl transition-colors duration-300 ${activeIndex === 4 ? 'text-[#D6C6A8]' : 'text-white'}`}>에테르(Aether) - 영적 성장과 우주적 연결</h3>
                 <div className="mt-4 text-white text-2xl lg:text-3xl font-bold">₩ 180,000</div>
-                <div className="mt-8 md:max-w-xs">
+                <div className="mt-8 w-full">
                   <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
                     {/* External Aura Glow */}
                     <span
