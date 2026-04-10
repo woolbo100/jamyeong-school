@@ -22,7 +22,7 @@ export default function ContactPage() {
           </Reveal>
           
           <Reveal delayMs={200}>
-            <h1 className="text-5xl md:text-7xl font-display mb-12 leading-tight tracking-tight uppercase italic bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block">
+            <h1 className="text-5xl md:text-7xl font-display mb-12 leading-tight tracking-tight uppercase italic bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2 pr-4">
               문의하기
             </h1>
           </Reveal>
