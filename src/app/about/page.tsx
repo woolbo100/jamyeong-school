@@ -154,7 +154,7 @@ export default function AboutPage() {
               },
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>
-                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/20 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id === 'ether' ? 'ether/40' : 'antiqueGold/30'} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
+                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/30 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id}/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
                   <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.label}</div>
                   
                   <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-500 drop-shadow-md">
@@ -164,7 +164,7 @@ export default function AboutPage() {
                   <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
                   <p className="text-xs text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{element.desc}</p>
                   {/* Subtle Glow Background */}
-                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id === 'ether' ? 'ether' : 'antiqueGold'} to-transparent`} />
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id} to-transparent`} />
                 </div>
               </Reveal>
             ))}
