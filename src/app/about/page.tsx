@@ -10,27 +10,21 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
-            <span className="inline-block text-antiqueGold font-display text-sm tracking-[0.4em] mb-6 uppercase opacity-80">
-              About Jamyeong School
+            <span className="inline-block text-antiqueGold font-display text-sm tracking-[0.4em] mb-6 uppercase opacity-80 decoration-antiqueGold/30 underline underline-offset-8">
+              한국디지털마인드코칭협회 승인
             </span>
           </Reveal>
           <Reveal delayMs={200}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight tracking-tight uppercase italic">
-              자명스쿨 <br />
-              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block px-8 py-2">
-                소개
+              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2">
+                자명스쿨 소개
               </span>
             </h1>
           </Reveal>
           <Reveal delayMs={400}>
-            <div className="space-y-4 max-w-2xl mx-auto">
-              <p className="text-xl md:text-2xl text-white/90 font-medium leading-tight">
-                AI로 마음을 그리고 <br />
-                삶을 변화시키는 교육
-              </p>
-              <p className="text-lg text-white/50 font-light leading-relaxed">
-                마음을 이해하고, 콘텐츠로 표현하고, <br className="hidden md:block" />
-                수익으로 연결하는 곳
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
+                AI로 마음을 이해하고 콘텐츠로 표현하며 삶을 변화시키는 교육을 합니다.
               </p>
             </div>
           </Reveal>
