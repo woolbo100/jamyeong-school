@@ -479,10 +479,10 @@ export default function CoursesPage() {
             <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
                 <div className="max-w-4xl mx-auto text-center">
                     <Reveal>
-                        <h3 className="text-3xl md:text-5xl font-display mb-12 leading-tight text-white uppercase italic">
-                            자명스쿨은 AI를 배우는 곳이 아니라 <br />
+                        <h1 className="text-2xl md:text-4xl font-display text-white mb-12 leading-tight">
+                            자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
                             마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
-                        </h3>
+                        </h1>
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                             <button className="group relative overflow-visible h-16 w-full sm:w-64 px-8 text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]">
                                 <span className="relative z-10">프로그램 안내 받기</span>
