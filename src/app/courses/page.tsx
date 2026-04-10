@@ -460,7 +460,7 @@ export default function CoursesPage() {
                                 </div>
 
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
-                                    <div className="w-56 h-56 rounded-full bg-white/5 flex items-center justify-center border border-white/10 relative backdrop-blur-md">
+                                    <div className="w-56 h-56 rounded-full bg-gradient-to-tr from-ether/20 to-transparent flex items-center justify-center border border-ether/20 relative backdrop-blur-md">
                                         <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
                                             <Image src="/images/icon/ether.png" alt="Ether Icon" fill className="object-contain" />
                                         </div>
