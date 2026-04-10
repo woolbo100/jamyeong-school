@@ -10,14 +10,17 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
-            <span className="inline-block text-antiqueGold font-display text-sm tracking-[0.4em] mb-6 uppercase opacity-80 decoration-antiqueGold/30 underline underline-offset-8">
+            <span className="inline-block border border-antiqueGold/40 bg-antiqueGold/5 rounded-full px-6 py-2 text-antiqueGold font-display mx-auto text-base md:text-lg tracking-[0.2em] mb-8 uppercase shadow-sm">
               한국디지털마인드코칭협회 승인
             </span>
           </Reveal>
           <Reveal delayMs={200}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight tracking-tight uppercase italic">
-              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2">
-                자명스쿨 소개
+              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2 pr-2">
+                자명스쿨
+              </span>
+              <span className="text-white inline-block py-2 pr-4 ml-2">
+                소개
               </span>
             </h1>
           </Reveal>
