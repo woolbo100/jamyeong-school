@@ -314,7 +314,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Final CTA Section */}
-      <section className="py-32 px-6 bg-gradient-to-b from-transparent to-softBlack border-t border-white/5">
+      <section className="py-32 px-6 bg-white/[0.02] border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <h3 className="text-4xl md:text-6xl font-display mb-12 leading-tight tracking-tight italic uppercase">
