@@ -166,7 +166,6 @@ export default function CoursesPage() {
                                         <div className="relative w-32 h-32 md:w-40 md:h-40 group-hover:scale-110 transition-transform duration-700 brightness-110">
                                             <Image src="/images/icon/fire.png" alt="Fire Icon" fill className="object-contain" />
                                         </div>
-                                        <div className="absolute inset-3 border border-fire/30 rounded-full"></div>
                                     </div>
                                     <p className="mt-10 font-display text-fire tracking-[0.3em] text-sm font-bold uppercase drop-shadow-lg">Heart Art Program</p>
                                 </div>
