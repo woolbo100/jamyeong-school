@@ -298,7 +298,7 @@ export default function AboutPage() {
             <Reveal key={idx} delayMs={idx * 150} slideFrom="bottom">
               <div className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:-translate-y-1.5 hover:scale-[1.01] hover:bg-white/[0.06] hover:border-antiqueGold/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-500 h-full flex flex-col justify-center text-center group">
                 <div className="text-3xl mb-4 font-display text-antiqueGold/40 group-hover:text-antiqueGold/70 transition-colors">{idx + 1}</div>
-                <h4 className="text-lg font-bold mb-3 group-hover:text-white transition-colors">{item.title}</h4>
+                <h4 className="text-lg font-bold mb-3 text-antiqueGold group-hover:text-white transition-colors">{item.title}</h4>
                 <p className="text-white/50 text-xs leading-relaxed group-hover:text-white/70 transition-colors">{item.desc}</p>
               </div>
             </Reveal>
