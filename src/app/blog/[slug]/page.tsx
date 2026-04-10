@@ -72,7 +72,7 @@ export default async function BlogDetailPage({ params }: Props) {
           <h2 className="mt-4 text-2xl md:text-3xl font-semibold">
             이 글이 도움이 되었다면 관련 강의도 함께 살펴보세요
           </h2>
-          <p className="mt-4 text-white/70 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+          <p className="mt-4 text-white/70 max-w-2xl mx-auto leading-relaxed text-base md:text-xl italic">
             자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
             마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
           </p>

@@ -36,10 +36,9 @@ export default function CoursesPage() {
                 <section className="text-center mb-20 lg:mb-40">
                     <Reveal>
                         <div className="max-w-4xl mx-auto p-12 rounded-[2.5rem] border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-                            <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-12 tracking-tight">
+                            <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12 tracking-tight italic">
                                 자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
-                                마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고 <br />
-                                함께 성장하는 구조입니다.
+                                마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
                             </p>
                             <div className="flex justify-center items-center gap-2 md:gap-6">
                                 <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="흙">
@@ -479,7 +478,7 @@ export default function CoursesPage() {
             <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
                 <div className="max-w-4xl mx-auto text-center">
                     <Reveal>
-                        <h1 className="text-2xl md:text-4xl font-display text-white mb-12 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-display text-white mb-12 leading-tight italic">
                             자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
                             마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
                         </h1>
