@@ -68,23 +68,23 @@ export default function AboutPage() {
             {
               title: "마음을 구조화하는 힘",
               desc: "추상적인 감정과 무의식을 구체적인 이야기의 틀로 정제합니다.",
-              icon: <Brain className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+              icon: <Brain className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
             {
               title: "감정을 콘텐츠로 바꾸는 힘",
               desc: "내면의 에너지를 AI라는 도구를 통해 세상에 없는 작품으로 창조합니다.",
-              icon: <Palette className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+              icon: <Palette className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
             {
               title: "AI로 표현하고 확장하는 힘",
               desc: "기술을 넘어 나만의 브랜드를 구축하고 영향력을 확장해 나갑니다.",
-              icon: <Rocket className="w-12 h-12 text-antiqueGold drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+              icon: <Rocket className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
             },
           ].map((item, idx) => (
             <Reveal key={idx} delayMs={idx * 200}>
               <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
                 <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-4 text-antiqueGold transition-colors duration-300">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-[#B89B6A] transition-colors duration-300">{item.title}</h3>
                 <p className="text-white/60 leading-relaxed">{item.desc}</p>
               </div>
             </Reveal>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 id: "earth",
                 label: "흙",
                 name: "마음을 심다",
-                image: "/images/icons/icon-earth.png",
+                image: "/images/main/earth.png",
                 desc: "자기 이해 / 무의식 정리",
                 color: "text-earth",
                 borderColor: "border-earth",
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 id: "fire",
                 label: "불",
                 name: "마음을 그리다",
-                image: "/images/icons/icon-fire.jpg",
+                image: "/images/main/fire.png",
                 desc: "AI 아트 / 감성 표현",
                 color: "text-fire",
                 borderColor: "border-fire",
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 id: "air",
                 label: "공기",
                 name: "마음을 나누다",
-                image: "/images/icons/icon-air.jpg",
+                image: "/images/main/air.png",
                 desc: "브랜딩 / 콘텐츠 제작",
                 color: "text-air",
                 borderColor: "border-air",
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 id: "water",
                 label: "물",
                 name: "마음을 채우다",
-                image: "/images/icons/icon-water.jpg",
+                image: "/images/main/water.png",
                 desc: "수익화 / 자동화",
                 color: "text-water",
                 borderColor: "border-water",
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 id: "ether",
                 label: "에테르",
                 name: "마음을 비추다",
-                image: "/images/icons/icon-ether.jpg",
+                image: "/images/main/ether.png",
                 desc: "풍요 마인드 / 리더쉽",
                 color: "text-ether",
                 borderColor: "border-ether",
