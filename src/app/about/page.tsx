@@ -114,7 +114,9 @@ export default function AboutPage() {
                 image: "/images/icon/earth.png",
                 desc: "자기 이해 / 무의식 정리",
                 color: "text-earth",
-                borderColor: "border-earth",
+                borderClass: "border-earth/30",
+                hoverBorderClass: "hover:border-earth/50",
+                glowClass: "via-earth",
               },
               {
                 id: "fire",
@@ -123,7 +125,9 @@ export default function AboutPage() {
                 image: "/images/icon/fire.png",
                 desc: "AI 아트 / 감성 표현",
                 color: "text-fire",
-                borderColor: "border-fire",
+                borderClass: "border-fire/30",
+                hoverBorderClass: "hover:border-fire/50",
+                glowClass: "via-fire",
               },
               {
                 id: "air",
@@ -132,7 +136,9 @@ export default function AboutPage() {
                 image: "/images/icon/air.png",
                 desc: "브랜딩 / 콘텐츠 제작",
                 color: "text-air",
-                borderColor: "border-air",
+                borderClass: "border-air/30",
+                hoverBorderClass: "hover:border-air/50",
+                glowClass: "via-air",
               },
               {
                 id: "water",
@@ -141,7 +147,9 @@ export default function AboutPage() {
                 image: "/images/icon/water.png",
                 desc: "수익화 / 자동화",
                 color: "text-water",
-                borderColor: "border-water",
+                borderClass: "border-water/30",
+                hoverBorderClass: "hover:border-water/50",
+                glowClass: "via-water",
               },
               {
                 id: "ether",
@@ -150,11 +158,13 @@ export default function AboutPage() {
                 image: "/images/icon/ether.png",
                 desc: "풍요 마인드 / 리더쉽",
                 color: "text-ether",
-                borderColor: "border-ether",
+                borderClass: "border-ether/30",
+                hoverBorderClass: "hover:border-ether/50",
+                glowClass: "via-ether",
               },
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>
-                <div className={`p-8 rounded-[2rem] border ${element.borderColor}/30 bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] hover:border-${element.id}/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
+                <div className={`p-8 rounded-[2rem] border ${element.borderClass} bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] ${element.hoverBorderClass} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
                   <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.label}</div>
                   
                   <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-500 drop-shadow-md">
@@ -164,7 +174,7 @@ export default function AboutPage() {
                   <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
                   <p className="text-xs text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{element.desc}</p>
                   {/* Subtle Glow Background */}
-                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent via-${element.id} to-transparent`} />
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent ${element.glowClass} to-transparent`} />
                 </div>
               </Reveal>
             ))}
