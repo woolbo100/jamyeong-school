@@ -10,8 +10,10 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
-            <span className="inline-block border border-antiqueGold/40 bg-antiqueGold/5 rounded-full px-6 py-2 text-antiqueGold font-display mx-auto text-base md:text-lg tracking-[0.2em] mb-8 uppercase shadow-sm">
-              한국디지털마인드코칭협회 승인
+            <span className="group relative inline-block border border-antiqueGold/40 bg-antiqueGold/5 rounded-full px-6 py-2 text-antiqueGold font-display mx-auto text-sm md:text-base tracking-[0.2em] mb-8 uppercase shadow-sm cursor-default transition-all duration-300 hover:border-antiqueGold/60">
+              <span className="relative z-10">한국디지털마인드코칭협회 승인</span>
+              {/* Golden Aura Glow */}
+              <span className="absolute -inset-1 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-lg group-hover:opacity-30 transition-opacity duration-500 rounded-full" />
             </span>
           </Reveal>
           <Reveal delayMs={200}>
