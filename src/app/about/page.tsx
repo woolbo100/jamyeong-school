@@ -43,8 +43,15 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-antiqueGold/40 to-transparent"></div>
       </section>
+
+      {/* Hero to Philosophy Divider */}
+      <Reveal>
+        <div className="w-full flex justify-center relative z-20 -mt-10 mb-8 opacity-70">
+          <div className="w-2/3 max-w-3xl h-px bg-gradient-to-r from-transparent via-antiqueGold/60 to-transparent"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rotate-45 border border-antiqueGold bg-softBlack shadow-[0_0_10px_rgba(184,155,106,0.3)]"></div>
+        </div>
+      </Reveal>
 
       {/* 2. Philosophy Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
