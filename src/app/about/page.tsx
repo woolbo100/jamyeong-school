@@ -152,9 +152,9 @@ export default function AboutPage() {
               {
                 id: "ether",
                 label: "에테르",
-                name: "풍요 마인드",
+                name: "마음을 비추다",
                 image: "/images/icons/icon-ether.jpg",
-                desc: "확장 / 에너지",
+                desc: "풍요 마인드 / 리더쉽",
                 color: "text-ether",
                 borderColor: "border-ether",
               },
