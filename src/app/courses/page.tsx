@@ -40,25 +40,25 @@ export default function CoursesPage() {
                                 자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br className="hidden md:block" />
                                 마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하는 구조입니다.
                             </p>
-                            <div className="flex justify-center items-center gap-4 md:gap-10">
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="흙">
-                                    <Image src="/images/icon/earth.png" alt="흙" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                            <div className="flex justify-center items-center gap-4 md:gap-12">
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="흙">
+                                    <Image src="/images/icon/earth.png" alt="흙" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
                                 </div>
-                                <span className="text-white/20 text-xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="불">
-                                    <Image src="/images/icon/fire.png" alt="불" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="불">
+                                    <Image src="/images/icon/fire.png" alt="불" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
                                 </div>
-                                <span className="text-white/20 text-xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="공기">
-                                    <Image src="/images/icon/air.png" alt="공기" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="공기">
+                                    <Image src="/images/icon/air.png" alt="공기" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
                                 </div>
-                                <span className="text-white/20 text-xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="물">
-                                    <Image src="/images/icon/water.png" alt="물" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="물">
+                                    <Image src="/images/icon/water.png" alt="물" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
                                 </div>
-                                <span className="text-white/20 text-xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default" title="에테르">
-                                    <Image src="/images/icon/ether.png" alt="에테르" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
+                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="에테르">
+                                    <Image src="/images/icon/ether.png" alt="에테르" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
                                 </div>
                             </div>
                         </div>
