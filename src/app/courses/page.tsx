@@ -71,7 +71,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Foundation</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
-                                <Image src="/images/icon/earth.png" alt="Earth" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <Image src="/images/icon/earth.png" alt="Earth" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                                 <span>흙 — 마음을 심다</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -178,7 +178,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Passion & Transformation</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
-                                <Image src="/images/icon/fire.png" alt="Fire" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <Image src="/images/icon/fire.png" alt="Fire" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                                 <span>불 — 마음을 그리다</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -234,7 +234,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Connection</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
-                                <Image src="/images/icon/air.png" alt="Air" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <Image src="/images/icon/air.png" alt="Air" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                                 <span>공기 — 마음을 나누다</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -343,7 +343,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Intuition</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
-                                <Image src="/images/icon/water.png" alt="Water" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <Image src="/images/icon/water.png" alt="Water" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                                 <span>물 — 마음을 채우다</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
@@ -399,7 +399,7 @@ export default function CoursesPage() {
                                 <span className="font-display tracking-[0.3em] text-xs uppercase">Enlightenment</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-display mb-8 text-white flex items-center gap-3">
-                                <Image src="/images/icon/ether.png" alt="Ether" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+                                <Image src="/images/icon/ether.png" alt="Ether" width={64} height={64} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                                 <span>제5원소 — 풍요마인드</span>
                             </h2>
                             <div className="space-y-6 text-white/60 leading-relaxed text-lg font-light">
