@@ -84,7 +84,7 @@ export default function AboutPage() {
             <Reveal key={idx} delayMs={idx * 200}>
               <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
                 <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-antiqueGold transition-colors duration-300">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-antiqueGold transition-colors duration-300">{item.title}</h3>
                 <p className="text-white/60 leading-relaxed">{item.desc}</p>
               </div>
             </Reveal>
