@@ -322,7 +322,7 @@ function Testimonials() {
         <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, i) => (
             <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative rounded-[28px] border border-[rgba(184,155,106,0.14)] bg-[rgba(16,16,18,0.98)] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.02)] transition-all duration-300 ease-out transform-gpu hover:-translate-y-[4px] hover:scale-[1.015] hover:border-[rgba(184,155,106,0.30)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_20px_rgba(184,155,106,0.12)] flex flex-col h-full min-h-[340px]">
+              <div className="group relative rounded-[28px] border border-[rgba(184,155,106,0.14)] bg-[rgba(22,20,18,0.98)] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.02)] transition-all duration-300 ease-out transform-gpu hover:-translate-y-[4px] hover:scale-[1.015] hover:border-[rgba(184,155,106,0.30)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_20px_rgba(184,155,106,0.12)] flex flex-col h-full min-h-[340px]">
                 {/* Stars with subtle shimmer */}
                 <div className="flex items-center gap-1.5 light-sweep-container w-fit rounded-full px-2 py-0.5">
                   {[...Array(5)].map((_, index) => (
