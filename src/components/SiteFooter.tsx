@@ -35,7 +35,7 @@ export default function SiteFooter() {
                 <span className="text-zinc-500 font-light text-xl">|</span>
                 <span className="text-xl font-bold text-zinc-400 tracking-tight">Jamyeong School</span>
               </div>
-              <p className="text-zinc-500 text-sm md:text-base font-light">
+              <p className="text-zinc-400 text-sm md:text-base font-normal">
                 AI와 마음공부를 연결하는 미래형 교육 플랫폼
               </p>
             </div>
