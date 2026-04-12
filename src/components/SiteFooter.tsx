@@ -4,16 +4,7 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-    <footer className="relative bg-[#0b0b10] pt-24 pb-12 overflow-hidden">
-      {/* 1. Premium Divider: ———— ✦ ———— */}
-      <div className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="flex items-center gap-6 opacity-40">
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#B89B6A] to-transparent" />
-          <span className="text-[#B89B6A] text-xs tracking-[0.3em] font-light">✦</span>
-          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#B89B6A] to-transparent" />
-        </div>
-      </div>
-
+    <footer className="relative bg-[#0b0b10] pt-20 pb-12 overflow-hidden border-t border-[#B89B6A]/30">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-20">
           {/* Brand Identity Section */}
