@@ -317,6 +317,39 @@ function Testimonials() {
           </div>
         </Reveal>
 
+        {/* Performance Case Cards Grid (3x2) */}
+        <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((item, i) => (
+            <Reveal key={i} delayMs={i * 100}>
+              <div className="group relative bg-zinc-900 p-6 rounded-2xl border border-white/5 shadow-lg transition-all duration-[400ms] ease-premium transform-gpu hover:-translate-y-1 hover:scale-[1.015] hover:border-[#D4AF37]/30 hover:shadow-[0_20px_50px_-12px_rgba(212,175,55,0.18)] flex flex-col h-full min-h-[320px] aurora-subtle">
+                {/* Stars with subtle shimmer */}
+                <div className="flex gap-1 mb-5 light-sweep-container w-fit rounded-full px-2 py-0.5">
+                  {[...Array(5)].map((_, index) => (
+                    <Star key={index} size={15} fill="#D4AF37" className="text-[#D4AF37] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
+                  ))}
+                  <div className="light-sweep-overlay" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-white leading-tight line-clamp-1 transition-colors group-hover:text-white/95">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-zinc-300 leading-relaxed mb-8 line-clamp-3">
+                  {item.desc}
+                </p>
+
+                {/* Footer Info */}
+                <div className="mt-auto">
+                  <p className="text-xs text-zinc-500 font-medium tracking-wide">
+                    {item.user}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
