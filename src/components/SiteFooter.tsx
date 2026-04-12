@@ -26,12 +26,12 @@ export default function SiteFooter() {
           {/* Brand Identity Section */}
           <div className="flex flex-col space-y-8">
             <div className="space-y-4">
-              <p className="text-xl md:text-2xl font-medium text-zinc-100 leading-relaxed tracking-tight">
+              <p className="text-lg md:text-[1.375rem] font-medium text-zinc-100 leading-relaxed tracking-tight">
                 마음을 이해하고 표현하고<br />
                 세상의 빛이 되는 교육
               </p>
               <div className="flex items-baseline gap-3">
-                <h2 className="text-3xl font-black text-white tracking-tighter">자명스쿨</h2>
+                <h2 className="text-3xl font-black tracking-tighter bg-gradient-to-b from-[#E6C99B] via-[#B89B6A] to-[#8A6D3B] bg-clip-text text-transparent">자명스쿨</h2>
                 <span className="text-zinc-500 font-light text-xl">|</span>
                 <span className="text-xl font-bold text-zinc-400 tracking-tight">Jamyeong School</span>
               </div>
