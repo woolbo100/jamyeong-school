@@ -575,19 +575,6 @@ function FaqAndContact() {
                   </button>
                 </form>
 
-                <div className="mt-10 pt-10 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <div className="flex flex-col items-center sm:items-start">
-                    <span className="text-[10px] text-zinc-600 uppercase font-bold tracking-widest mb-1">SNS 채널</span>
-                    <div className="flex items-center gap-4">
-                      <a href="#" className="text-zinc-400 hover:text-[#B89B6A] transition-colors text-sm font-medium">유튜브</a>
-                      <a href="#" className="text-zinc-400 hover:text-[#B89B6A] transition-colors text-sm font-medium">오픈채팅</a>
-                    </div>
-                  </div>
-                  <div className="text-center sm:text-right">
-                    <span className="text-[10px] text-zinc-600 uppercase font-bold tracking-widest block mb-1">Direct Call</span>
-                    <span className="text-zinc-300 font-bold">02-543-7052</span>
-                  </div>
-                </div>
               </div>
             )}
           </div>
