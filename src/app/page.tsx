@@ -301,7 +301,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-black text-white relative overflow-hidden">
+    <section className="pt-24 pb-32 lg:pb-48 bg-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B89B6A]/10 blur-[120px] rounded-full" />
