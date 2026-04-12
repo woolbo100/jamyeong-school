@@ -10,8 +10,8 @@ export default function SiteFooter() {
         background: `
           radial-gradient(
             ellipse at top,
-            rgba(212,175,55,0.05),
-            transparent 70%
+            rgba(212,175,55,0.04),
+            transparent 65%
           ),
           linear-gradient(
             180deg,
