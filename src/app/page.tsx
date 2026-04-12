@@ -265,6 +265,7 @@ function FeaturedLectures() {
     </section>
   );
 }
+
 function Testimonials() {
   const testimonials = [
     {
@@ -321,28 +322,28 @@ function Testimonials() {
         <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, i) => (
             <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative bg-zinc-900 p-6 rounded-2xl border border-white/5 shadow-lg transition-all duration-[400ms] ease-premium transform-gpu hover:-translate-y-1 hover:scale-[1.015] hover:border-[#D4AF37]/30 hover:shadow-[0_20px_50px_-12px_rgba(212,175,55,0.18)] flex flex-col h-full min-h-[320px] aurora-subtle">
+              <div className="group relative rounded-[28px] border border-[rgba(212,175,55,0.14)] bg-[linear-gradient(180deg,rgba(20,20,24,0.92)_0%,rgba(14,14,18,0.96)_100%)] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.03)] transition-all duration-300 ease-out transform-gpu hover:-translate-y-[4px] hover:scale-[1.015] hover:border-[rgba(212,175,55,0.22)] hover:shadow-[0_14px_36px_rgba(0,0,0,0.42),0_0_0_1px_rgba(212,175,55,0.10)] flex flex-col h-full min-h-[340px]">
                 {/* Stars with subtle shimmer */}
-                <div className="flex gap-1 mb-5 light-sweep-container w-fit rounded-full px-2 py-0.5">
+                <div className="flex items-center gap-1.5 light-sweep-container w-fit rounded-full px-2 py-0.5">
                   {[...Array(5)].map((_, index) => (
-                    <Star key={index} size={15} fill="#D4AF37" className="text-[#D4AF37] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
+                    <Star key={index} size={18} fill="#D4AF37" className="text-[#D4AF37] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
                   ))}
                   <div className="light-sweep-overlay" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-white leading-tight line-clamp-1 transition-colors group-hover:text-white/95">
+                <h3 className="mt-4 text-[1.6rem] leading-[1.35] font-bold tracking-[-0.02em] text-white line-clamp-2 transition-colors group-hover:text-white/95">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-zinc-300 leading-relaxed mb-8 line-clamp-3">
+                <p className="mt-4 text-[1rem] leading-[1.75] text-zinc-300">
                   {item.desc}
                 </p>
 
                 {/* Footer Info */}
                 <div className="mt-auto">
-                  <p className="text-xs text-zinc-500 font-medium tracking-wide">
+                  <p className="mt-8 text-[0.92rem] text-zinc-400 font-medium tracking-wide">
                     {item.user}
                   </p>
                 </div>
@@ -354,6 +355,7 @@ function Testimonials() {
     </section>
   );
 }
+
 function FaqAndContact() {
   return (
     <section className="bg-trueBlack py-20 lg:py-28">
@@ -449,4 +451,3 @@ function FaqAndContact() {
     </section>
   );
 }
-
