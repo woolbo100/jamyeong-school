@@ -147,7 +147,6 @@ function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
     { title: "흙(Earth) - 마음을 정화하고 풍요를 위한 기반 다지기", price: "마음을 심다 : 내 경험을 한 권의 '감성북'으로 출판하기", image: "/images/main/earth.png" },
-    { title: "공기(Air) - 나의 경험과 지식을 세상과 나누고 소통하기", price: "₩ 120,000", image: "/images/main/air.png" },
     { title: "물(Water) - 내 안에 흐르는 풍요의 물결로 마음을 채우기", price: "₩ 120,000", image: "/images/main/water.png" },
   ];
 
