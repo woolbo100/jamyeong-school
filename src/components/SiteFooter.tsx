@@ -56,7 +56,7 @@ export default function SiteFooter() {
 
             {/* Policy */}
             <div className="flex flex-col space-y-6">
-              <h3 className="text-xs font-bold text-zinc-600 uppercase tracking-[0.2em]">Policy</h3>
+              <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em]">Policy</h3>
               <ul className="flex flex-col space-y-4">
                 <li><Link href="/terms" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">서비스 약관</Link></li>
                 <li><Link href="/privacy" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">개인정보처리방침</Link></li>
@@ -73,7 +73,7 @@ export default function SiteFooter() {
                     buzasun@naver.com
                   </a>
                 </div>
-                <p className="text-xs text-zinc-500 leading-relaxed font-light">
+                <p className="text-xs text-zinc-400 leading-relaxed font-normal">
                   문의는 영업일 기준<br />
                   순차적으로 답변 드립니다.
                 </p>
