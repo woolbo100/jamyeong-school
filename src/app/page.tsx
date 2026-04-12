@@ -311,7 +311,7 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="px-4 md:px-8 mb-16 lg:mb-20 text-center flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
               실질적인 <span className="text-[#B89B6A]">성과</span> 사례
             </h2>
             <div className="mt-4 h-1 w-20 bg-[#B89B6A]/50 rounded-full mx-auto" />
