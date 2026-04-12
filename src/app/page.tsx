@@ -147,6 +147,9 @@ function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
     { title: "흙(Earth) - 마음을 정화하고 풍요를 위한 기반 다지기", price: "마음을 심다 : 내 경험을 한 권의 '감성북'으로 출판하기", image: "/images/main/earth.png" },
+    { title: "불(Fire) - 열정과 창조의 불꽃으로 마음을 표현하기", price: "마음을 그리다 : AI로 나만의 아트테라피 작품 제작", image: "/images/main/fire.png" },
+    { title: "공기(Air) - 나의 경험과 지식을 세상과 나누고 소통하기", price: "마음을 나누다 : 브랜드 지식창업 마스터 클래스", image: "/images/main/air.png" },
+    { title: "물(Water) - 내 안에 흐르는 풍요의 물결로 마음을 채우기", price: "마음을 채우다 : 1인 비지니스 올인원 클래스", image: "/images/main/water.png" },
   ];
 
   return (
@@ -236,6 +239,7 @@ function FeaturedLectures() {
               {/* 콘텐츠 영역 */}
               <div className="p-8 lg:p-12 md:w-7/12 lg:w-1/2 flex flex-col justify-center">
                 <h3 className={`font-bold text-xl lg:text-2xl transition-colors duration-300 ${activeIndex === 4 ? 'text-[#D6C6A8]' : 'text-white'}`}>에테르(Aether) - 풍요마인드와 리더쉽 확장으로 스스로 빛나기</h3>
+                <div className="mt-4 text-white text-2xl lg:text-3xl font-bold">마음을 빛내다 : 풍요마인드& 강사, 리더 인증 과정</div>
                 <div className="mt-8 w-full">
                   <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
                     {/* External Aura Glow */}
