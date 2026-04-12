@@ -265,36 +265,109 @@ function FeaturedLectures() {
   );
 }
 function Testimonials() {
+  const testimonialsData = [
+    {
+      type: "40대, 1인 창업 준비생",
+      summary: "전문 지식을 담은 전자책 정식 출판",
+      problem: "10년 직장 생활 경력이 있으나 상품화 방법을 몰라 성과 없는 포스팅만 반복함.",
+      change: "내 경험을 큐레이션하고 타겟 고객이 원하는 핵심 가치를 정의하는 법을 배움.",
+      result: "총 50페이지 분량의 PDF 전자책 완성 및 크몽 등 채널에서 1차 판매 완료."
+    },
+    {
+      type: "30대, 경력 단절 여성",
+      summary: "AI 아트테라피 기술 활용 굿즈 브랜드 런칭",
+      problem: "디자인 비전공자로서 독창적인 콘텐츠를 만드는 데 한계를 느끼고 정체됨.",
+      change: "AI 도구와 심리 치유 기법을 결합하여 고유한 아트워크 생성 프로세스를 구축함.",
+      result: "엽서, 포스터 등 굿즈 10종 제작 완료 및 네이버 스마트스토어 공식 입점."
+    },
+    {
+      type: "20대, 프리랜서 강사",
+      summary: "오프라인 강의를 온라인 자동화 시스템으로 전환",
+      problem: "직접 출강해야만 수익이 발생하는 구조로 인해 시간적/수익적 임계점에 도달함.",
+      change: "지식을 단계별 커리큘럼으로 구조화하고 VOD 강의 시스템 구축 전략을 적용함.",
+      result: "12차시 온라인 강의 완성 및 자동 결제 시스템을 통한 고정 패시브 인컴 창출."
+    },
+    {
+      type: "50대, 퇴직 예정자",
+      summary: "리더십 인증 강사 수료 및 외부 출강 확정",
+      problem: "퇴직 후의 사회적 역할에 대한 불안감과 전문성 재정의의 돌파구가 필요했음.",
+      change: "풍요 마인드셋을 내면화하고 현대 실무에 적합한 리더십 코칭 기법을 체득함.",
+      result: "자명스쿨 리더십 인증 수료 후 지역 커뮤니티 및 기업체 3곳 출강 계약 체결."
+    },
+    {
+      type: "30대, 직장인 부업가",
+      summary: "수익화 전략 적용 후 첫 유료 서비스 런칭",
+      problem: "이론 공부에만 치중하여 실제 시장에 내놓을 나만의 유료 상품이 부재했음.",
+      change: "올인원 클래스의 실행 중심 프로세스에 따라 최소 기능 제품(MVP)을 설계함.",
+      result: "첫 유료 코칭 서비스 런칭 한 달 만에 실제 유료 수강생 5명 확보 및 수익 증명."
+    },
+    {
+      type: "40대, 중소기업 관리자",
+      summary: "사내 소통 개선 및 전담 교육 프로그램 개발",
+      problem: "팀원 간의 일방적인 지시와 소통 부재로 인해 조직의 성과가 하락하던 상황.",
+      change: "공감 기반의 브랜드 커뮤니케이션 기술을 사내 인사 및 조직 관리에 대입함.",
+      result: "팀 만족도 40% 향상 및 신입 사원 전담 온보딩 매뉴얼 제작 및 사내 교육 시행."
+    }
+  ];
+
   return (
-    <section className="bg-softBlack py-20 lg:py-28">
+    <section className="bg-softBlack py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <Reveal>
-          <h2 className="text-center text-3xl md:text-4xl font-bold text-white">
-            수강생들이 증명하는 변화
-          </h2>
-          <p className="text-center mt-4 text-white/70">
-            자명스쿨과 함께한 분들의 진솔한 이야기를 만나보세요.
-          </p>
+          <div className="text-center mb-16 lg:mb-24">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              실제 <span className="text-[#D6C6A8]">성과</span>로 증명하는 변화
+            </h2>
+            <div className="mt-4 flex justify-center">
+              <div className="h-1 w-20 bg-[#8A6A3F]/50 rounded-full" />
+            </div>
+            <p className="mt-6 text-white/50 text-lg lg:text-xl font-light">
+              단순한 만족을 넘어 실질적인 결과로 증명된 자명스쿨의 성공 사례들입니다.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonialsData.map((t, i) => (
             <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative rounded-xl bg-white/5 backdrop-blur-md p-6 text-white/90 border border-white/10 transition-all duration-300 hover:border-[#8A6A3F]/50 hover:-translate-y-1">
-                {/* Top Highlight Line */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="text-[#B89B6A]">★★★★★</div>
-                <p className="mt-4 text-white/80 leading-relaxed font-light">
-                  “강의를 통해 삶의 흐름이 바뀌었습니다. 나를 더 깊이 이해하게 되었어요.”
-                </p>
-                <div className="mt-6 border-t border-white/10 pt-4 flex items-center justify-between">
-                  <div>
-                    <div className="font-bold text-white group-hover:text-[#D6C6A8] transition-colors">수강생 {i}</div>
-                    <div className="text-sm text-white/50">카테고리명</div>
+              <div className="group relative flex flex-col h-full rounded-2xl bg-white/5 backdrop-blur-sm p-6 lg:p-8 border border-white/10 transition-all duration-500 hover:border-[#8A6A3F]/50 hover:bg-white/[0.07] hover:-translate-y-2">
+                {/* Accent line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Result Summary (Top Highlight) */}
+                <div className="mb-6">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#8A6A3F]/20 border border-[#8A6A3F]/30 text-[#D6C6A8] text-xs font-bold mb-4">
+                    FINAL RESULT
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                    <span className="text-[10px] text-[#B89B6A] font-bold">JM</span>
+                  <h3 className="text-xl font-bold text-white leading-tight group-hover:text-[#D6C6A8] transition-colors duration-300">
+                    "{t.summary}"
+                  </h3>
+                </div>
+
+                {/* Content Sections */}
+                <div className="space-y-5 flex-grow mb-8 font-light leading-relaxed">
+                  <div>
+                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">PROB</span>
+                    <p className="text-white/60 text-sm">{t.problem}</p>
+                  </div>
+                  <div className="pl-4 border-l border-[#8A6A3F]/30">
+                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">CHANGE</span>
+                    <p className="text-white/80 text-sm italic">{t.change}</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">RESULT</span>
+                    <p className="text-white font-medium text-sm">{t.result}</p>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                  <div className="flex flex-col">
+                    <span className="text-xs text-white/40 mb-1">수강생 정보</span>
+                    <span className="text-sm font-bold text-white/90">{t.type}</span>
+                  </div>
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#B89B6A]/20 to-transparent border border-[#8A6A3F]/20 flex items-center justify-center">
+                    <span className="text-[10px] text-[#D6C6A8] font-bold">JM</span>
                   </div>
                 </div>
               </div>
