@@ -186,6 +186,7 @@ function FeaturedLectures() {
                   </div>
                   <div className="p-8">
                     <h3 className={`font-bold text-lg transition-colors duration-300 ${isActive ? 'text-[#D6C6A8]' : 'text-white'}`}>{c.title}</h3>
+                    <div className="mt-4 text-[#D6C6A8] text-2xl font-bold">{c.price}</div>
                     <div className="mt-6">
                       <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
                         {/* External Aura Glow */}
@@ -238,7 +239,7 @@ function FeaturedLectures() {
               {/* 콘텐츠 영역 */}
               <div className="p-8 lg:p-12 md:w-7/12 lg:w-1/2 flex flex-col justify-center">
                 <h3 className={`font-bold text-lg transition-colors duration-300 ${activeIndex === 4 ? 'text-[#D6C6A8]' : 'text-white'}`}>에테르(Aether) - 풍요마인드와 리더쉽 확장으로 스스로 빛나기</h3>
-                <div className="mt-4 text-white text-2xl font-bold">마음을 빛내다 : 풍요마인드& 강사, 리더 인증 과정</div>
+                <div className="mt-4 text-[#D6C6A8] text-2xl font-bold">마음을 빛내다 : 풍요마인드& 강사, 리더 인증 과정</div>
                 <div className="mt-8 w-full">
                   <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
                     {/* External Aura Glow */}
