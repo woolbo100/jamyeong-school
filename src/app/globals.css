@@ -25,6 +25,13 @@
   --color-air: #cbd5e1;
   --color-water: #89cff0;
   --color-ether: #9d50bb;
+  
+  /* Blog Category Colors */
+  --color-mind-structure: #8B5E3C;
+  --color-mind-expression: #FF6B6B;
+  --color-knowledge-content: #C0C0C0;
+  --color-monetization-system: #4FC3F7;
+  --color-abundance-expansion: #D4AF37;
 
   /* Custom Fonts */
   --font-display: "Cinzel", serif;
@@ -184,6 +191,17 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Category Glow Effects */
+.hover-glow-mind-structure:hover { box-shadow: 0 0 15px rgba(139, 94, 60, 0.4); border-color: rgba(139, 94, 60, 0.6); }
+.hover-glow-mind-expression:hover { box-shadow: 0 0 15px rgba(255, 107, 107, 0.4); border-color: rgba(255, 107, 107, 0.6); }
+.hover-glow-knowledge-content:hover { box-shadow: 0 0 15px rgba(192, 192, 192, 0.4); border-color: rgba(192, 192, 192, 0.6); }
+.hover-glow-monetization-system:hover { box-shadow: 0 0 15px rgba(79, 195, 247, 0.4); border-color: rgba(79, 195, 247, 0.6); }
+.hover-glow-abundance-expansion:hover { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); border-color: rgba(212, 175, 55, 0.6); }
+
+.category-badge {
+  @apply rounded-full px-3 py-1 text-xs font-medium border border-white/10 transition-all duration-300;
 }
 
 .perspective-1000 {

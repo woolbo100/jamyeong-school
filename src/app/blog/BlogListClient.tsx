@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import CategoryFilter from "@/components/blog/CategoryFilter";
+import { blogCategories } from "@/constants/blog";
 import type { BlogPostMeta } from "@/lib/blog";
 
 type Props = {
@@ -60,8 +61,15 @@ export default function BlogListClient({
 
               <div className="p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
-                  <p className="rounded-full bg-white/10 px-3 py-1 text-xs text-[#D6C6A8]/90">
-                    {post.category}
+                  <p 
+                    className="category-badge"
+                    style={{
+                      borderColor: blogCategories.find(c => c.slug === post.category)?.color + '40',
+                      color: blogCategories.find(c => c.slug === post.category)?.color,
+                      backgroundColor: blogCategories.find(c => c.slug === post.category)?.color + '10'
+                    }}
+                  >
+                    {blogCategories.find((c) => c.slug === post.category)?.name || post.category}
                   </p>
                   <p className="text-xs text-white/40">{post.date}</p>
                 </div>

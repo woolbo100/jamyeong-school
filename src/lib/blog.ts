@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { blogCategories } from "@/constants/blog";
 
 const postsDirectory = path.join(process.cwd(), "content/blog");
 
@@ -26,6 +27,33 @@ function getMarkdownFiles(): string[] {
   return fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
 }
 
+export function getCategoryByTitle(title: string): string {
+  if (title.includes("반복") || title.includes("패턴") || title.includes("이유")) {
+    return "mind-structure";
+  }
+  if (title.includes("표현") || title.includes("그림") || title.includes("스토리")) {
+    return "mind-expression";
+  }
+  if (title.includes("콘텐츠") || title.includes("강의") || title.includes("글쓰기")) {
+    return "knowledge-content";
+  }
+  if (title.includes("수익") || title.includes("돈") || title.includes("자동화")) {
+    return "monetization-system";
+  }
+  if (title.includes("풍요") || title.includes("에너지") || title.includes("성장")) {
+    return "abundance-expansion";
+  }
+  return "mind-structure";
+}
+
+function normalizeCategory(category: string, title: string): string {
+  const validSlugs = blogCategories.map((c) => c.slug);
+  if (validSlugs.includes(category)) {
+    return category;
+  }
+  return getCategoryByTitle(title);
+}
+
 export function getAllPosts(): BlogPostMeta[] {
   const fileNames = getMarkdownFiles();
 
@@ -39,7 +67,7 @@ export function getAllPosts(): BlogPostMeta[] {
       slug,
       title: data.title ?? "",
       date: data.date ?? "",
-      category: data.category ?? "",
+      category: normalizeCategory(data.category ?? "", data.title ?? ""),
       excerpt: data.excerpt ?? "",
       coverImage: data.coverImage ?? "",
       tags: data.tags ?? [],
@@ -63,7 +91,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
     slug,
     title: data.title ?? "",
     date: data.date ?? "",
-    category: data.category ?? "",
+    category: normalizeCategory(data.category ?? "", data.title ?? ""),
     excerpt: data.excerpt ?? "",
     coverImage: data.coverImage ?? "",
     tags: data.tags ?? [],
@@ -77,9 +105,7 @@ export function getAllSlugs(): string[] {
 }
 
 export function getAllCategories(): string[] {
-  const posts = getAllPosts();
-  const categories = posts.map((post) => post.category).filter(Boolean);
-  return ["전체", ...Array.from(new Set(categories))];
+  return ["전체", ...blogCategories.map((c) => c.slug)];
 }
 
 export function getPostsByCategory(category: string): BlogPostMeta[] {

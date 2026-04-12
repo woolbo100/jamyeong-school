@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, getAllSlugs, getPostBySlug } from "@/lib/blog";
+import { blogCategories } from "@/constants/blog";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -30,8 +31,15 @@ export default async function BlogDetailPage({ params }: Props) {
       <section className="mx-auto max-w-6xl px-6 py-16">
         {/* Blog Header Info */}
         <div className="mb-12 text-center text-white">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#B89B6A]/80 mb-4">
-            {post.category}
+          <p 
+            className="inline-block rounded-full border px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] mb-6"
+            style={{
+              borderColor: blogCategories.find(c => c.slug === post.category)?.color + '30',
+              color: blogCategories.find(c => c.slug === post.category)?.color,
+              backgroundColor: blogCategories.find(c => c.slug === post.category)?.color + '10'
+            }}
+          >
+            {blogCategories.find(c => c.slug === post.category)?.name || post.category}
           </p>
           <h1 className="text-3xl font-semibold leading-tight md:text-5xl mb-6 max-w-4xl mx-auto">
             {post.title}
@@ -109,8 +117,11 @@ export default async function BlogDetailPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-6">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#B89B6A]/80">
-                      {item.category}
+                    <p 
+                      className="text-[10px] font-medium uppercase tracking-[0.2em]"
+                      style={{ color: blogCategories.find(c => c.slug === item.category)?.color }}
+                    >
+                      {blogCategories.find(c => c.slug === item.category)?.name || item.category}
                     </p>
                     <h4 className="mt-3 text-lg font-semibold leading-snug group-hover:text-[#D6C6A8] transition-colors">
                       {item.title}
