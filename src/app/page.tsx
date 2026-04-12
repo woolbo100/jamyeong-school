@@ -374,8 +374,7 @@ function FaqAndContact() {
     email: '',
     type: '강의 문의',
     course: '',
-    message: '',
-    replyMethod: ''
+    message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -551,16 +550,6 @@ function FaqAndContact() {
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">답변 희망 방식 (선택)</label>
-                    <input 
-                      name="replyMethod"
-                      value={formData.replyMethod}
-                      onChange={handleChange}
-                      placeholder="전화, 문자, 이메일 등"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
-                    />
-                  </div>
 
                   <button
                     type="submit"
