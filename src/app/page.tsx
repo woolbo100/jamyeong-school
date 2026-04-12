@@ -341,9 +341,16 @@ function Testimonials() {
                   {item.desc}
                 </p>
 
+                {/* Decorative Gold Divider */}
+                <div className="mt-8 flex items-center gap-4 opacity-40">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#B89B6A] to-transparent" />
+                  <span className="text-[#B89B6A] text-[10px] tracking-widest scale-150">✦</span>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#B89B6A] to-transparent" />
+                </div>
+
                 {/* Footer Info */}
-                <div className="mt-auto">
-                  <p className="mt-8 text-[0.92rem] text-zinc-400 font-medium tracking-wide">
+                <div className="mt-6">
+                  <p className="text-[0.92rem] text-zinc-400 font-medium tracking-wide">
                     {item.user}
                   </p>
                 </div>
