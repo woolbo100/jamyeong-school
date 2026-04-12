@@ -25,7 +25,7 @@ function Elements() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const items = [
     { title: "흙 (Earth)", desc: "마음을 정화하고 풍요를 위한 기반 다지기", bg: "/images/elements/earth.png", color: "border-earth" },
-    { title: "불 (Fire)", desc: "열정과 창조의 불꽃 피우기", bg: "/images/elements/fire.png", color: "border-fire" },
+    { title: "불 (Fire)", desc: "열정과 창조의 불꽃으로 마음을 표현하기", bg: "/images/elements/fire.png", color: "border-fire" },
     { title: "공기 (Air)", desc: "자유로운 사고와 소통의 길 열기", bg: "/images/elements/air.png", color: "border-air" },
     { title: "물 (Water)", desc: "감성의 흐름을 이해하고 정화하기", bg: "/images/elements/water.png", color: "border-water" },
     { title: "에테르 (Aether)", desc: "영적 성장과 우주적 연결 탐구하기", bg: "/images/elements/ether.png", color: "border-ether" },
@@ -147,7 +147,7 @@ function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
     { title: "흙(Earth) - 마음을 정화하고 풍요를 위한 기반 다지기", price: "₩ 120,000", image: "/images/main/earth.png" },
-    { title: "불(Fire) - 열정과 창조의 불꽃 피우기", price: "₩ 120,000", image: "/images/main/fire.png" },
+    { title: "불(Fire) - 열정과 창조의 불꽃으로 마음을 표현하기", price: "₩ 120,000", image: "/images/main/fire.png" },
     { title: "공기(Air) - 세상과 지혜를 나누기", price: "₩ 120,000", image: "/images/main/air.png" },
     { title: "물(Water) - 감성의 흐름을 이해하고 정화하기", price: "₩ 120,000", image: "/images/main/water.png" },
   ];
