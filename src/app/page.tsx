@@ -304,7 +304,7 @@ function Testimonials() {
     <section className="py-24 bg-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D6C6A8]/10 blur-[120px] rounded-full" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B89B6A]/10 blur-[120px] rounded-full" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8A6A3F]/10 blur-[120px] rounded-full" />
       </div>
 
@@ -312,9 +312,9 @@ function Testimonials() {
         <Reveal>
           <div className="px-4 md:px-8 mb-16 lg:mb-20 text-center flex flex-col items-center">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              실질적인 <span className="text-[#D4AF37]">성과</span> 사례
+              실질적인 <span className="text-[#B89B6A]">성과</span> 사례
             </h2>
-            <div className="mt-4 h-1 w-20 bg-[#D4AF37]/50 rounded-full mx-auto" />
+            <div className="mt-4 h-1 w-20 bg-[#B89B6A]/50 rounded-full mx-auto" />
           </div>
         </Reveal>
 
@@ -322,11 +322,11 @@ function Testimonials() {
         <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, i) => (
             <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative rounded-[28px] border border-[rgba(212,175,55,0.14)] bg-[linear-gradient(180deg,rgba(20,20,24,0.92)_0%,rgba(14,14,18,0.96)_100%)] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.03)] transition-all duration-300 ease-out transform-gpu hover:-translate-y-[4px] hover:scale-[1.015] hover:border-[rgba(212,175,55,0.22)] hover:shadow-[0_14px_36px_rgba(0,0,0,0.42),0_0_0_1px_rgba(212,175,55,0.10)] flex flex-col h-full min-h-[340px]">
+              <div className="group relative rounded-[28px] border border-[rgba(184,155,106,0.14)] bg-[linear-gradient(180deg,rgba(20,20,24,0.92)_0%,rgba(14,14,18,0.96)_100%)] p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.03)] transition-all duration-300 ease-out transform-gpu hover:-translate-y-[4px] hover:scale-[1.015] hover:border-[rgba(184,155,106,0.22)] hover:shadow-[0_14px_36px_rgba(0,0,0,0.42),0_0_0_1px_rgba(184,155,106,0.10)] flex flex-col h-full min-h-[340px]">
                 {/* Stars with subtle shimmer */}
                 <div className="flex items-center gap-1.5 light-sweep-container w-fit rounded-full px-2 py-0.5">
                   {[...Array(5)].map((_, index) => (
-                    <Star key={index} size={18} fill="#D4AF37" className="text-[#D4AF37] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
+                    <Star key={index} size={18} fill="#B89B6A" className="text-[#B89B6A] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
                   ))}
                   <div className="light-sweep-overlay" />
                 </div>
@@ -400,7 +400,7 @@ function FaqAndContact() {
               <div className="rounded-xl bg-white/5 border border-white/10 p-5">
                 <div className="text-white font-semibold">파트너십 / 강의 제안</div>
                 <a
-                  className="mt-1 block text-white/70 hover:text-[#8A6A3F] transition-colors"
+                  className="mt-1 block text-white/70 hover:text-[#B89B6A] transition-colors"
                   href="mailto:nobaseclass@gmail.com"
                 >
                   nobaseclass@gmail.com
