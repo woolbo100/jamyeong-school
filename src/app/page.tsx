@@ -326,7 +326,7 @@ function Testimonials() {
                 {/* Stars with subtle shimmer */}
                 <div className="flex items-center gap-1.5 light-sweep-container w-fit rounded-full px-2 py-0.5">
                   {[...Array(5)].map((_, index) => (
-                    <Star key={index} size={18} fill="#B89B6A" className="text-[#B89B6A] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
+                    <Star key={index} size={20} fill="#B89B6A" className="text-[#B89B6A] transition-all duration-300 group-hover:brightness-125" strokeWidth={0} />
                   ))}
                   <div className="light-sweep-overlay" />
                 </div>
