@@ -46,6 +46,18 @@
     animation: spin 15s linear infinite;
   }
 
+  .animate-spin-medium {
+    animation: spin 10s linear infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
 /* Cosmic FX Animations */
 @keyframes nebula-drift {
