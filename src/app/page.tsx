@@ -367,15 +367,39 @@ function Testimonials() {
 }
 
 function FaqAndContact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    contact: '',
+    email: '',
+    type: '강의 문의',
+    course: '',
+    message: '',
+    replyMethod: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate form submission
+    console.log("Form submitted:", formData);
+    setIsSubmitted(true);
+    // Reset form after a few seconds or stay at success state as requested
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   return (
-    <section className="bg-trueBlack py-20 lg:py-28">
+    <section className="bg-[#050505] py-20 lg:py-32 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <Reveal>
-          <div>
+          <div className="h-full flex flex-col">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">자주 묻는 질문</h2>
-            <p className="mt-4 text-white/70">자명스쿨 강의 신청부터 진행 방식까지, 자주 묻는 질문을 먼저 확인해보세요.</p>
+            <p className="mt-4 text-zinc-400">자명스쿨 강의 신청부터 진행 방식까지, 자주 묻는 질문을 먼저 확인해보세요.</p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-10 space-y-4 flex-grow">
               {[
                 {
                   q: "강의는 어떻게 신청하나요?",
@@ -403,9 +427,12 @@ function FaqAndContact() {
                 }
               ].map((item) => (
                 <div key={item.q} className="transition-all duration-300">
-                  <details className="rounded-lg bg-white/5 border border-white/10 p-4">
-                    <summary className="cursor-pointer text-white font-medium">{item.q}</summary>
-                    <p className="mt-3 text-white/70 text-sm whitespace-pre-wrap">
+                  <details className="group rounded-xl bg-white/5 border border-white/10 p-5 hover:bg-white/[0.08] transition-colors">
+                    <summary className="cursor-pointer text-zinc-200 font-medium list-none flex justify-between items-center group-open:text-[#B89B6A]">
+                      {item.q}
+                      <span className="text-xl transition-transform duration-300 group-open:rotate-180">↓</span>
+                    </summary>
+                    <p className="mt-4 text-zinc-400 text-sm leading-relaxed whitespace-pre-wrap border-t border-white/5 pt-4">
                       {item.a}
                     </p>
                   </details>
@@ -416,66 +443,153 @@ function FaqAndContact() {
         </Reveal>
 
         <Reveal delayMs={200}>
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">문의하기</h2>
-            <p className="mt-4 text-white/70">
-              더 궁금한 점이 있거나 제안할 내용이 있다면 언제든지 연락주세요.
-            </p>
-
-            <div className="mt-8 space-y-6">
-              <div className="rounded-xl bg-white/5 border border-white/10 p-5">
-                <div className="text-white font-semibold">전화 문의</div>
-                <div className="mt-1 text-white/70">02-543-7052</div>
-              </div>
-
-              <div className="rounded-xl bg-white/5 border border-white/10 p-5">
-                <div className="text-white font-semibold">파트너십 / 강의 제안</div>
-                <a
-                  className="mt-1 block text-white/70 hover:text-[#B89B6A] transition-colors"
-                  href="mailto:nobaseclass@gmail.com"
+          <div className="relative">
+            {isSubmitted ? (
+              <div className="h-full min-h-[500px] flex flex-col items-center justify-center text-center bg-white/5 border border-[#B89B6A]/30 rounded-[32px] p-8 backdrop-blur-sm">
+                <div className="w-16 h-16 bg-[#B89B6A]/20 rounded-full flex items-center justify-center mb-6">
+                  <Star fill="#B89B6A" className="text-[#B89B6A]" size={32} />
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-4">문의가 접수되었습니다.</h2>
+                <p className="text-zinc-400 leading-relaxed">
+                  남겨주신 소중한 내용을 확인한 후<br />
+                  순차적으로 답변드리겠습니다. 감사합니다.
+                </p>
+                <button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-8 text-sm text-[#B89B6A] hover:underline"
                 >
-                  nobaseclass@gmail.com
-                </a>
+                  새로운 문의 남기기
+                </button>
               </div>
-            </div>
+            ) : (
+              <div className="bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-md">
+                <h2 className="text-3xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block italic">문의하기</h2>
+                <p className="mt-4 text-zinc-400 leading-relaxed">
+                  자명스쿨 강의, 커리큘럼, 협업, 강연 관련 문의를 남겨주세요.<br />
+                  확인 후 순차적으로 답변드립니다.
+                </p>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <a
-                className="group relative overflow-visible rounded-xl h-12 flex items-center justify-center bg-white/10 text-white font-bold transition-all duration-300 ease-out transform-gpu hover:bg-white/15 hover:-translate-y-[1px]"
-                href="#"
-              >
-                {/* External Aura Glow */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
-                  style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
-                />
-                {/* Sharp Ring Highlight */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
-                />
-                <span className="relative z-10">유튜브 채널 바로가기</span>
-              </a>
-              <a
-                className="group relative overflow-visible rounded-xl h-12 flex items-center justify-center font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]"
-                href="#"
-              >
-                {/* External Aura Glow */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
-                  style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
-                />
-                {/* Sharp Ring Highlight */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
-                />
-                <span className="relative z-10">오픈채팅방 참여하기</span>
-              </a>
-              <div className="sm:col-span-2 text-center text-white/50 text-sm">참여코드: nobase000</div>
-            </div>
+                <form onSubmit={handleSubmit} className="mt-10 space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">이름 *</label>
+                      <input 
+                        required
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="성함을 입력해주세요"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">연락처 *</label>
+                      <input 
+                        required
+                        name="contact"
+                        value={formData.contact}
+                        onChange={handleChange}
+                        placeholder="010-0000-0000"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">이메일 *</label>
+                      <input 
+                        required
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="example@email.com"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">문의 유형 *</label>
+                      <select 
+                        required
+                        name="type"
+                        value={formData.type}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all appearance-none"
+                      >
+                        <option className="bg-zinc-900" value="강의 문의">강의 문의</option>
+                        <option className="bg-zinc-900" value="무료특강 문의">무료특강 문의</option>
+                        <option className="bg-zinc-900" value="수강 신청 문의">수강 신청 문의</option>
+                        <option className="bg-zinc-900" value="협업 / 제휴 문의">협업 / 제휴 문의</option>
+                        <option className="bg-zinc-900" value="강연 문의">강연 문의</option>
+                        <option className="bg-zinc-900" value="기타 문의">기타 문의</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">관심 과정 (선택)</label>
+                    <input 
+                      name="course"
+                      value={formData.course}
+                      onChange={handleChange}
+                      placeholder="관심 있는 과정을 입력해주세요"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">문의 내용 *</label>
+                    <textarea 
+                      required
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="문의하실 내용을 상세히 남겨주세요"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all resize-none"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">답변 희망 방식 (선택)</label>
+                    <input 
+                      name="replyMethod"
+                      value={formData.replyMethod}
+                      onChange={handleChange}
+                      placeholder="전화, 문자, 이메일 등"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl h-12 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-[#B89B6A]/50 focus:border-[#B89B6A]/50 transition-all"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="group relative overflow-visible w-full rounded-xl h-14 flex items-center justify-center font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px] active:scale-[0.98]"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
+                      style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
+                    />
+                    <span className="relative z-10">문의 남기기</span>
+                  </button>
+                </form>
+
+                <div className="mt-10 pt-10 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
+                  <div className="flex flex-col items-center sm:items-start">
+                    <span className="text-[10px] text-zinc-600 uppercase font-bold tracking-widest mb-1">SNS 채널</span>
+                    <div className="flex items-center gap-4">
+                      <a href="#" className="text-zinc-400 hover:text-[#B89B6A] transition-colors text-sm font-medium">유튜브</a>
+                      <a href="#" className="text-zinc-400 hover:text-[#B89B6A] transition-colors text-sm font-medium">오픈채팅</a>
+                    </div>
+                  </div>
+                  <div className="text-center sm:text-right">
+                    <span className="text-[10px] text-zinc-600 uppercase font-bold tracking-widest block mb-1">Direct Call</span>
+                    <span className="text-zinc-300 font-bold">02-543-7052</span>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </Reveal>
       </div>
