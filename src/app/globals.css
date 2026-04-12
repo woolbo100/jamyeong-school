@@ -46,10 +46,6 @@
     animation: spin 15s linear infinite;
   }
 
-  .animate-spin-medium {
-    animation: spin 10s linear infinite;
-  }
-}
 
 /* Cosmic FX Animations */
 @keyframes nebula-drift {

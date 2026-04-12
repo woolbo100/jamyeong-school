@@ -265,114 +265,94 @@ function FeaturedLectures() {
   );
 }
 function Testimonials() {
-  const testimonialsData = [
+  const testimonials = [
     {
-      type: "40대, 1인 창업 준비생",
-      summary: "전문 지식을 담은 전자책 정식 출판",
-      problem: "10년 직장 생활 경력이 있으나 상품화 방법을 몰라 성과 없는 포스팅만 반복함.",
-      change: "내 경험을 큐레이션하고 타겟 고객이 원하는 핵심 가치를 정의하는 법을 배움.",
-      result: "총 50페이지 분량의 PDF 전자책 완성 및 크몽 등 채널에서 1차 판매 완료."
+      title: "전자책 1권을 실제로 완성했습니다",
+      desc: "막연하게 시작했는데 구조를 배우고 나서 방향이 잡혔어요",
+      result: "전자책 출판 완료",
+      user: "40대 / 1인 창업 준비"
     },
     {
-      type: "30대, 경력 단절 여성",
-      summary: "AI 아트테라피 기술 활용 굿즈 브랜드 런칭",
-      problem: "디자인 비전공자로서 독창적인 콘텐츠를 만드는 데 한계를 느끼고 정체됨.",
-      change: "AI 도구와 심리 치유 기법을 결합하여 고유한 아트워크 생성 프로세스를 구축함.",
-      result: "엽서, 포스터 등 굿즈 10종 제작 완료 및 네이버 스마트스토어 공식 입점."
+      title: "내 콘텐츠로 첫 강의를 만들었습니다",
+      desc: "정리만 하던 지식을 강의로 바꿀 수 있게 되었어요",
+      result: "미니 강의 제작",
+      user: "30대 / 직장인"
     },
     {
-      type: "20대, 프리랜서 강사",
-      summary: "오프라인 강의를 온라인 자동화 시스템으로 전환",
-      problem: "직접 출강해야만 수익이 발생하는 구조로 인해 시간적/수익적 임계점에 도달함.",
-      change: "지식을 단계별 커리큘럼으로 구조화하고 VOD 강의 시스템 구축 전략을 적용함.",
-      result: "12차시 온라인 강의 완성 및 자동 결제 시스템을 통한 고정 패시브 인컴 창출."
+      title: "디지털 파일로 수익 흐름을 만들었습니다",
+      desc: "콘텐츠는 있었지만 돈이 안 됐는데 이제 구조가 생겼어요",
+      result: "반복 수익 구조 생성",
+      user: "40대 / 프리랜서"
     },
     {
-      type: "50대, 퇴직 예정자",
-      summary: "리더십 인증 강사 수료 및 외부 출강 확정",
-      problem: "퇴직 후의 사회적 역할에 대한 불안감과 전문성 재정의의 돌파구가 필요했음.",
-      change: "풍요 마인드셋을 내면화하고 현대 실무에 적합한 리더십 코칭 기법을 체득함.",
-      result: "자명스쿨 리더십 인증 수료 후 지역 커뮤니티 및 기업체 3곳 출강 계약 체결."
+      title: "디자인 없이 나만의 굿즈를 런칭했습니다",
+      desc: "AI 기술을 배우고 나니 아이디어가 바로 제품이 되었어요",
+      result: "굿즈 브랜드 입점 완료",
+      user: "30대 / 경력 단절 여성"
     },
     {
-      type: "30대, 직장인 부업가",
-      summary: "수익화 전략 적용 후 첫 유료 서비스 런칭",
-      problem: "이론 공부에만 치중하여 실제 시장에 내놓을 나만의 유료 상품이 부재했음.",
-      change: "올인원 클래스의 실행 중심 프로세스에 따라 최소 기능 제품(MVP)을 설계함.",
-      result: "첫 유료 코칭 서비스 런칭 한 달 만에 실제 유료 수강생 5명 확보 및 수익 증명."
+      title: "퇴직 전 리더십 인증 강사 자격을 땄습니다",
+      desc: "불안했던 미래가 전문성 있는 커리어로 확실해졌어요",
+      result: "인증 강사 수료 및 출강 확정",
+      user: "50대 / 퇴직 예정"
     },
     {
-      type: "40대, 중소기업 관리자",
-      summary: "사내 소통 개선 및 전담 교육 프로그램 개발",
-      problem: "팀원 간의 일방적인 지시와 소통 부재로 인해 조직의 성과가 하락하던 상황.",
-      change: "공감 기반의 브랜드 커뮤니케이션 기술을 사내 인사 및 조직 관리에 대입함.",
-      result: "팀 만족도 40% 향상 및 신입 사원 전담 온보딩 매뉴얼 제작 및 사내 교육 시행."
+      title: "첫 유료 코칭 서비스를 개시했습니다",
+      desc: "준비만 하던 단계에서 이제 실제 수익 창출로 이어졌어요",
+      result: "유료 수강생 5명 확보",
+      user: "20대 / 예비 창업자"
     }
   ];
 
   return (
-    <section className="bg-softBlack py-24 lg:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <section className="py-24 bg-black text-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D6C6A8]/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8A6A3F]/10 blur-[120px] rounded-full" />
+      </div>
+
+      <div className="max-w-7xl mx-auto">
         <Reveal>
-          <div className="text-center mb-16 lg:mb-24">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              실제 <span className="text-[#D6C6A8]">성과</span>로 증명하는 변화
+          <div className="px-4 md:px-8 mb-16 lg:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+              실제 <span className="text-[#D4AF37]">수강생</span> 변화
             </h2>
-            <div className="mt-4 flex justify-center">
-              <div className="h-1 w-20 bg-[#8A6A3F]/50 rounded-full" />
-            </div>
-            <p className="mt-6 text-white/50 text-lg lg:text-xl font-light">
-              단순한 만족을 넘어 실질적인 결과로 증명된 자명스쿨의 성공 사례들입니다.
-            </p>
+            <div className="mt-4 h-1 w-20 bg-[#D4AF37]/50 rounded-full" />
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonialsData.map((t, i) => (
-            <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative flex flex-col h-full rounded-2xl bg-white/5 backdrop-blur-sm p-6 lg:p-8 border border-white/10 transition-all duration-500 hover:border-[#8A6A3F]/50 hover:bg-white/[0.07] hover:-translate-y-2">
-                {/* Accent line */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Result Summary (Top Highlight) */}
-                <div className="mb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#8A6A3F]/20 border border-[#8A6A3F]/30 text-[#D6C6A8] text-xs font-bold mb-4">
-                    FINAL RESULT
-                  </div>
-                  <h3 className="text-xl font-bold text-white leading-tight group-hover:text-[#D6C6A8] transition-colors duration-300">
-                    "{t.summary}"
+        {/* Carousel Container */}
+        <div className="relative group">
+          <div className="flex overflow-x-auto gap-6 px-4 md:px-8 pb-12 pt-4 no-scrollbar scroll-smooth snap-x snap-mandatory">
+            {testimonials.map((item, i) => (
+              <Reveal key={i} delayMs={i * 100}>
+                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-[400px] bg-zinc-900 p-8 rounded-[2rem] border border-white/5 shadow-2zl transition-all duration-300 transform hover:scale-105 hover:border-[#D4AF37]/40 group/card snap-center flex flex-col h-[320px] md:h-[360px]">
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white leading-tight">
+                    {item.title}
                   </h3>
-                </div>
 
-                {/* Content Sections */}
-                <div className="space-y-5 flex-grow mb-8 font-light leading-relaxed">
-                  <div>
-                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">PROB</span>
-                    <p className="text-white/60 text-sm">{t.problem}</p>
-                  </div>
-                  <div className="pl-4 border-l border-[#8A6A3F]/30">
-                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">CHANGE</span>
-                    <p className="text-white/80 text-sm italic">{t.change}</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-[#D6C6A8]/60 font-bold tracking-widest uppercase block mb-1">RESULT</span>
-                    <p className="text-white font-medium text-sm">{t.result}</p>
-                  </div>
-                </div>
+                  <p className="text-sm md:text-base text-zinc-400 mb-8 leading-relaxed font-light">
+                    {item.desc}
+                  </p>
 
-                {/* Footer */}
-                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-xs text-white/40 mb-1">수강생 정보</span>
-                    <span className="text-sm font-bold text-white/90">{t.type}</span>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#B89B6A]/20 to-transparent border border-[#8A6A3F]/20 flex items-center justify-center">
-                    <span className="text-[10px] text-[#D6C6A8] font-bold">JM</span>
+                  <div className="mt-auto">
+                    <p className="text-[#D4AF37] font-semibold text-base md:text-lg mb-2">
+                      → 결과: {item.result}
+                    </p>
+
+                    <p className="text-xs text-zinc-500 font-medium tracking-wide">
+                      {item.user}
+                    </p>
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Fade markers for scroll indication */}
+          <div className="absolute top-0 right-0 h-full w-20 bg-gradient-to-l from-black via-transparent to-transparent pointer-events-none z-10 hidden lg:block" />
+          <div className="absolute top-0 left-0 h-full w-20 bg-gradient-to-r from-black via-transparent to-transparent pointer-events-none z-10 hidden lg:block" />
         </div>
       </div>
     </section>
