@@ -68,7 +68,7 @@ export default function SiteFooter() {
               <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em]">Contact</h3>
               <div className="flex flex-col space-y-4">
                 <div className="space-y-1">
-                  <p className="text-[10px] text-zinc-600 uppercase font-bold tracking-widest">파트너쉽 / 강의 제안</p>
+                  <p className="text-sm text-zinc-400 font-normal">파트너쉽 / 강의 제안</p>
                   <a href="mailto:buzasun@naver.com" className="text-sm text-zinc-300 hover:text-[#B89B6A] transition-colors font-medium">
                     buzasun@naver.com
                   </a>
