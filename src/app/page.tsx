@@ -322,37 +322,31 @@ function Testimonials() {
           </div>
         </Reveal>
 
-        {/* Carousel Container */}
-        <div className="relative group">
-          <div className="flex overflow-x-auto gap-6 px-4 md:px-8 pb-12 pt-4 no-scrollbar scroll-smooth snap-x snap-mandatory">
-            {testimonials.map((item, i) => (
-              <Reveal key={i} delayMs={i * 100}>
-                <div className="min-w-[280px] sm:min-w-[320px] md:min-w-[400px] bg-zinc-900 p-8 rounded-[2rem] border border-white/5 shadow-2zl transition-all duration-300 transform hover:scale-105 hover:border-[#D4AF37]/40 group/card snap-center flex flex-col h-[320px] md:h-[360px]">
-                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white leading-tight">
-                    {item.title}
-                  </h3>
+        {/* Testimonials Grid (3x2) */}
+        <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((item, i) => (
+            <Reveal key={i} delayMs={i * 100}>
+              <div className="group relative bg-zinc-900 p-8 rounded-[2rem] border border-white/5 shadow-2xl transition-all duration-300 transform hover:scale-105 hover:border-[#D4AF37]/40 flex flex-col h-full min-h-[320px]">
+                <h3 className="text-xl md:text-2xl font-bold mb-6 text-white leading-tight">
+                  {item.title}
+                </h3>
 
-                  <p className="text-sm md:text-base text-zinc-400 mb-8 leading-relaxed font-light">
-                    {item.desc}
+                <p className="text-sm md:text-base text-zinc-400 mb-8 leading-relaxed font-light">
+                  {item.desc}
+                </p>
+
+                <div className="mt-auto">
+                  <p className="text-[#D4AF37] font-semibold text-base md:text-lg mb-2">
+                    → 결과: {item.result}
                   </p>
 
-                  <div className="mt-auto">
-                    <p className="text-[#D4AF37] font-semibold text-base md:text-lg mb-2">
-                      → 결과: {item.result}
-                    </p>
-
-                    <p className="text-xs text-zinc-500 font-medium tracking-wide">
-                      {item.user}
-                    </p>
-                  </div>
+                  <p className="text-xs text-zinc-500 font-medium tracking-wide">
+                    {item.user}
+                  </p>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-
-          {/* Fade markers for scroll indication */}
-          <div className="absolute top-0 right-0 h-full w-20 bg-gradient-to-l from-black via-transparent to-transparent pointer-events-none z-10 hidden lg:block" />
-          <div className="absolute top-0 left-0 h-full w-20 bg-gradient-to-r from-black via-transparent to-transparent pointer-events-none z-10 hidden lg:block" />
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
