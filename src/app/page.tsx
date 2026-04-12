@@ -373,19 +373,40 @@ function FaqAndContact() {
         <Reveal>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">자주 묻는 질문</h2>
-            <p className="mt-4 text-white/70">궁금한 점이 있으신가요? 먼저 확인해보세요.</p>
+            <p className="mt-4 text-white/70">자명스쿨 강의 신청부터 진행 방식까지, 자주 묻는 질문을 먼저 확인해보세요.</p>
 
             <div className="mt-8 space-y-4">
               {[
-                "멤버십 가입시 월별로 결제가 되나요?",
-                "시청한 강의를 모두 확인하고 싶은데 어디서 확인할 수 있나요?",
-                "멤버십을 취소하고싶어요, 어떻게 하나요?",
-              ].map((q) => (
-                <div key={q} className="transition-all duration-300">
+                {
+                  q: "강의는 어떻게 신청하나요?",
+                  a: "사이트에서 원하는 강의 내용을 확인한 뒤 문의 또는 신청을 남기면, 자명스쿨 운영 방식에 따라 무료특강 또는 안내 절차를 먼저 도와드립니다."
+                },
+                {
+                  q: "무료특강은 누구나 참여할 수 있나요?",
+                  a: "무료특강은 자명스쿨의 강의 방향과 커리큘럼을 이해할 수 있도록 마련된 입문 과정입니다. 신청자에게 일정과 참여 방법을 별도로 안내드립니다."
+                },
+                {
+                  q: "무료특강을 들어야만 유료 강의를 신청할 수 있나요?",
+                  a: "기본적으로는 무료특강을 통해 강의 방향과 적합성을 먼저 확인한 뒤 유료 과정으로 안내드리고 있습니다. 과정에 따라 운영 방식은 달라질 수 있습니다."
+                },
+                {
+                  q: "유료 강의는 어떤 방식으로 진행되나요?",
+                  a: "초기 과정은 실시간 강의 중심으로 진행됩니다. 커리큘럼에 따라 강의, 실습, 질의응답이 함께 포함될 수 있습니다."
+                },
+                {
+                  q: "초보자도 수강할 수 있나요?",
+                  a: "네. 자명스쿨은 처음 시작하는 분도 흐름을 이해할 수 있도록 설계되어 있습니다. 다만 과정별로 권장 대상은 조금씩 다를 수 있습니다."
+                },
+                {
+                  q: "어떤 사람이 자명스쿨 강의에 잘 맞나요?",
+                  a: "자기이해를 바탕으로 콘텐츠, 강의, 브랜드, 수익화까지 연결하고 싶은 분께 적합합니다. 단순 툴 기능보다 방향과 구조를 함께 배우고 싶은 분께 특히 잘 맞습니다."
+                }
+              ].map((item) => (
+                <div key={item.q} className="transition-all duration-300">
                   <details className="rounded-lg bg-white/5 border border-white/10 p-4">
-                    <summary className="cursor-pointer text-white font-medium">{q}</summary>
-                    <p className="mt-3 text-white/70 text-sm">
-                      답변 영역(초기 더미). 추후 실제 정책/FAQ로 교체.
+                    <summary className="cursor-pointer text-white font-medium">{item.q}</summary>
+                    <p className="mt-3 text-white/70 text-sm whitespace-pre-wrap">
+                      {item.a}
                     </p>
                   </details>
                 </div>
