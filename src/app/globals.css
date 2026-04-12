@@ -233,6 +233,45 @@
   }
 }
 
+/* Premium Luxury Animations */
+@keyframes light-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-25deg);
+  }
+}
+
+.light-sweep-container {
+  @apply relative overflow-hidden;
+}
+
+.light-sweep-overlay {
+  @apply absolute inset-0 pointer-events-none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(214, 198, 168, 0.05) 45%,
+    rgba(214, 198, 168, 0.15) 50%,
+    rgba(214, 198, 168, 0.05) 55%,
+    transparent
+  );
+  animation: light-sweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.aurora-subtle {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(214, 198, 168, 0.04) 0%,
+    transparent 80%
+  );
+}
+
+.ease-premium {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

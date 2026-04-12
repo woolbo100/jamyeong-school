@@ -15,11 +15,11 @@ export default function Reveal({ children, className = '', delayMs = 0, slideFro
 
     const getInitialTransform = () => {
         switch (slideFrom) {
-            case 'right': return 'translate-x-8';
-            case 'left': return '-translate-x-8';
-            case 'top': return '-translate-y-8';
+            case 'right': return 'translate-x-6';
+            case 'left': return '-translate-x-6';
+            case 'top': return '-translate-y-6';
             case 'bottom':
-            default: return 'translate-y-8';
+            default: return 'translate-y-6';
         }
     };
 
@@ -27,10 +27,10 @@ export default function Reveal({ children, className = '', delayMs = 0, slideFro
         <div
             ref={ref}
             style={{ transitionDelay: `${delayMs}ms` }}
-            className={`transition-all duration-1000 ease-out transform-gpu 
+            className={`transition-all duration-[900ms] ease-premium transform-gpu 
         ${isInView
                     ? 'opacity-100 translate-y-0 translate-x-0 blur-0'
-                    : `opacity-0 ${getInitialTransform()} blur-[2px]`} 
+                    : `opacity-0 ${getInitialTransform()} blur-[6px]`} 
         ${className}`}
         >
             {children}
