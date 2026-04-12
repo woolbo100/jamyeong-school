@@ -332,7 +332,7 @@ function Testimonials() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-4 text-[1.6rem] leading-[1.35] font-bold tracking-[-0.02em] text-white line-clamp-2 transition-colors group-hover:text-white/95">
+                <h3 className="mt-4 text-[1.45rem] leading-[1.35] font-bold tracking-[-0.02em] text-white line-clamp-2 transition-colors group-hover:text-white/95">
                   {item.title}
                 </h3>
 
