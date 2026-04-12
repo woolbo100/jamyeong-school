@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Star } from "lucide-react";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 
@@ -268,39 +269,33 @@ function Testimonials() {
   const testimonials = [
     {
       title: "전문 지식을 담은 전자책 정식 출판",
-      story: "10년 넘게 직장 생활을 하며 쌓아온 경력은 많았지만, 정작 이를 어떻게 상품화해야 할지 몰라 성과 없는 포스팅만 반복하고 있었습니다. 자명스쿨에서 내 경험을 큐레이션하고 타겟 고객이 원하는 핵심 가치를 정의하는 법을 배운 끝에, 50페이지 분량의 전자책을 완성하여 크몽 등에서 실제 판매까지 성공했습니다.",
-      result: "전자책 출판 및 1차 판매 완료",
-      user: "40대 / 1인 창업 준비생"
+      desc: "직장 경력을 상품화하여 50페이지 분량의 전자책을 완성했습니다. 현재 크몽에서 실제 수익을 창출하며 전문가로서의 입지를 다지고 있습니다.",
+      user: "40대 · 1인 창업 준비"
     },
     {
-      title: "AI 기술을 활용한 나만의 굿즈 브랜드 런칭",
-      story: "디자인 비전공자로서 독창적인 콘텐츠를 만드는 데 높은 벽을 느껴 정체되어 있었습니다. 하지만 AI 도구와 심리 치유 기법을 결합한 자명스쿨만의 프로세스를 접하며 나만의 고유한 아트워크를 생성할 수 있게 되었습니다. 현재는 이를 활용한 엽서와 포스터 등 10여 종의 굿즈를 제작해 네이버 스마트스토어에 정식 입점까지 마쳤습니다.",
-      result: "굿즈 브랜드 런칭 및 입점 완료",
-      user: "30대 / 경력 단절 여성"
+      title: "AI 기술 활용 나만의 굿즈 브랜드 런칭",
+      desc: "비전공자임에도 AI와 심리 치유 기법을 결합해 독자적 아트워크를 생성했습니다. 10여 종의 굿즈를 제작해 네이버 스마트스토어 입점에 성공했습니다.",
+      user: "30대 · 경력 단절 여성"
     },
     {
-      title: "오프라인 강의를 온라인 자동화 시스템으로 전환",
-      story: "직접 발로 뛰며 강의를 나가야만 수익이 생기는 구조 때문에 시간과 수익 모두 한계에 부딪힌 상황이었습니다. 자명스쿨을 통해 나의 지식을 단계별 커리큘럼으로 구조화하고 온라인 자동화 시스템을 구축하는 전략을 배웠습니다. 덕분에 12차시 온라인 강의를 완성했고, 이제는 자동 결제 시스템을 통해 안정적인 패시브 인컴을 만들고 있습니다.",
-      result: "VOD 강의 자동화 수익 구조 구축",
-      user: "20대 / 프리랜서 강사"
+      title: "오프라인 강의를 온라인 자동화로 전환",
+      desc: "지식을 커리큘럼으로 구조화하여 12차시 VOD 강의를 제작했습니다. 자동 결제와 연동된 패시브 인컴 수익 구조를 안정적으로 구축했습니다.",
+      user: "20대 · 프리랜서 강사"
     },
     {
-      title: "리더십 인증 강사 수료 및 기업 출강 확정",
-      story: "퇴직을 앞두고 사회적 역할이 사라질지 모른다는 불안감과 내 전문성을 어떻게 재정의할지 고민이 깊었습니다. 자명스쿨에서 풍요 마인드셋을 내면화하고 현대 실무에 꼭 필요한 리더십 코칭 기법을 체득한 결과, 리더십 인증 과정을 당당히 수료했습니다. 현재는 지역 커뮤니티와 기업체 3곳에서 출강 계약을 체결하며 제2의 커리어를 시작했습니다.",
-      result: "기업 출강 계약 체결 및 강사 활동",
-      user: "50대 / 퇴직 예정자"
+      title: "리더십 인증 강사 수료 및 기업 출강 계약",
+      desc: "마인드셋 내면화와 코칭 기법을 체득해 리더십 인증 과정을 수료했습니다. 퇴직 후 지역 커뮤니티와 기업체 3곳에서 제2의 커리어를 시작했습니다.",
+      user: "50대 · 퇴직 예정자"
     },
     {
       title: "수익화 전략 적용 후 첫 유료 서비스 런칭",
-      story: "그동안 수많은 이론 공부를 해왔지만, 정작 시장에 내놓을 나만의 유료 상품은 하나도 없었습니다. 자명스쿨의 실행 중심 프로세스를 따라 최소 기능 제품(MVP)을 설계하며 실전 감각을 익혔습니다. 런칭 한 달 만에 실제 유료 수강생 5명을 확보하며, 책 속의 이론이 아닌 나만의 실질적인 수익 구조를 직접 증명해낼 수 있었습니다.",
-      result: "첫 유료 서비스 런칭 및 수익 고도화",
-      user: "30대 / 직장인 부업가"
+      desc: "실행 중심 프로세스를 통해 최소 기능 제품(MVP)을 설계하고 런칭했습니다. 한 달 만에 유료 수강생 5명을 확보하며 실질적인 수익 구조를 증명했습니다.",
+      user: "30대 · 직장인 부업가"
     },
     {
       title: "사내 소통 개선 및 전담 교육 프로그램 개발",
-      story: "조직 내에서 일방적인 지시와 소통 부재로 인해 팀 성과가 눈에 띄게 하락하며 관리자로서 고민이 많았습니다. 자명스쿨에서 배운 공감 기반의 브랜드 커뮤니케이션 기술을 사내 조직 관리에 대입해 보았습니다. 그 결과 팀 만족도가 40% 이상 향상되었고, 이제는 제가 직접 신입 사원을 위한 온보딩 매뉴얼과 교육 프로그램을 제작해 사내에서 운영 중입니다.",
-      result: "사내 전담 교육 프로그램 개발 및 성과",
-      user: "40대 / 중소기업 관리자"
+      desc: "브랜드 커뮤니케이션 기술을 조직 관리에 대입해 팀 만족도를 40% 향상시켰습니다. 신입 사원 전담 온보딩 프로그램 제작 및 사내 운영 성과를 냈습니다.",
+      user: "40대 · 중소기업 관리자"
     }
   ];
 
@@ -316,30 +311,36 @@ function Testimonials() {
         <Reveal>
           <div className="px-4 md:px-8 mb-16 lg:mb-20">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              실제 <span className="text-[#D4AF37]">수강생</span> 변화
+              실질적인 <span className="text-[#D4AF37]">성과</span> 사례
             </h2>
             <div className="mt-4 h-1 w-20 bg-[#D4AF37]/50 rounded-full" />
           </div>
         </Reveal>
 
-        {/* Testimonials Grid (3x2) */}
+        {/* Performance Case Cards Grid (3x2) */}
         <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, i) => (
             <Reveal key={i} delayMs={i * 100}>
-              <div className="group relative bg-zinc-900 p-8 rounded-[2rem] border border-white/5 shadow-2xl transition-all duration-300 transform hover:scale-105 hover:border-[#D4AF37]/40 flex flex-col h-full min-h-[350px]">
-                <h3 className="text-xl md:text-2xl font-bold mb-6 text-white leading-tight">
+              <div className="group relative bg-zinc-900 p-6 rounded-2xl border border-white/5 shadow-lg transition-all duration-300 transform hover:scale-[1.03] hover:border-[#D4AF37]/40 flex flex-col h-full min-h-[320px]">
+                {/* Stars */}
+                <div className="flex gap-1 mb-5">
+                  {[...Array(5)].map((_, index) => (
+                    <Star key={index} size={16} fill="#D4AF37" className="text-[#D4AF37]" strokeWidth={0} />
+                  ))}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-white leading-tight line-clamp-1">
                   {item.title}
                 </h3>
 
-                <blockquote className="text-sm md:text-base text-zinc-400 mb-8 leading-relaxed font-light italic">
-                  "{item.story}"
-                </blockquote>
+                {/* Description */}
+                <p className="text-sm text-zinc-300 leading-relaxed mb-8 line-clamp-3">
+                  {item.desc}
+                </p>
 
+                {/* Footer Info */}
                 <div className="mt-auto">
-                  <p className="text-[#D4AF37] font-semibold text-base md:text-lg mb-2">
-                    {item.result}
-                  </p>
-
                   <p className="text-xs text-zinc-500 font-medium tracking-wide">
                     {item.user}
                   </p>
