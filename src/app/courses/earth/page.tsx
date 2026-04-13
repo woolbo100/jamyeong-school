@@ -3,12 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import type { Metadata } from "next";
 
 export default function EarthCoursePage() {
   const curriculumData = [
     {
-      week: "1주차",
+      week: "1회차",
       title: "주제 및 스토리 기획",
       summary: "나의 스토리 주제찾기 & 동화책 스토리 짜기",
       details: [
@@ -17,10 +16,11 @@ export default function EarthCoursePage() {
         "AI 툴 기초 배우기",
         "컬러링북 이미지 제작",
         "나의 캐릭터 정하기"
-      ]
+      ],
+      result: "주제, 스토리 짜기"
     },
     {
-      week: "2주차",
+      week: "2회차",
       title: "그림책 이미지 제작",
       summary: "AI를 활용한 고퀄리티 그림책 이미지 생성",
       details: [
@@ -28,10 +28,11 @@ export default function EarthCoursePage() {
         "그림책 이미지 제작",
         "캐릭터 일관성 유지 기법",
         "다양한 배경 생성 및 다중 캐릭터 이미지"
-      ]
+      ],
+      result: "그림책 이미지"
     },
     {
-      week: "3주차",
+      week: "3회차",
       title: "편집 및 표지 완성",
       summary: "캔바(Canva)와 도구를 활용한 책 디자인 완성",
       details: [
@@ -40,10 +41,11 @@ export default function EarthCoursePage() {
         "종이책 표지 제작",
         "양쪽 이미지 연결법",
         "목업 표지 제작"
-      ]
+      ],
+      result: "편집, 표지 완성"
     },
     {
-      week: "4주차",
+      week: "4회차",
       title: "동화 영상 제작",
       summary: "움직이는 동화와 사운드 입히기",
       details: [
@@ -51,10 +53,11 @@ export default function EarthCoursePage() {
         "Suno AI 음악 제작",
         "목소리 TTS 생성",
         "캐릭터 립싱크 적용"
-      ]
+      ],
+      result: "동화 영상 제작"
     },
     {
-      week: "5주차",
+      week: "5회차",
       title: "아트, 굿즈, 전시",
       summary: "내 작품을 굿즈와 전시로 확장하기",
       details: [
@@ -62,10 +65,11 @@ export default function EarthCoursePage() {
         "캐릭터 굿즈 제작 및 사이트 등록",
         "아트 이미지 및 아트 영상 제작",
         "온라인 전시회 개최"
-      ]
+      ],
+      result: "아트, 굿즈, 전시"
     },
     {
-      week: "6주차",
+      week: "6회차",
       title: "책 등록 및 출판사 창업",
       summary: "작가 정식 데뷔 및 1인 출판사 설립",
       details: [
@@ -74,16 +78,20 @@ export default function EarthCoursePage() {
         "예술인 등록 신청",
         "네이버 인물 등록",
         "1인 출판사 창업 실무"
-      ]
+      ],
+      result: "책 등록, 출판사 창업"
     }
   ];
+
+  const part1 = curriculumData.slice(0, 3);
+  const part2 = curriculumData.slice(3, 6);
 
   return (
     <div className="bg-[#0B0B0D] min-h-screen text-white font-sans selection:bg-antiqueGold/30 overflow-x-hidden">
       
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
-        {/* Aura Background - Green & Brown Harmony */}
+        {/* Aura Background */}
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-10 pointer-events-none"
           style={{ backgroundColor: "#2D5A27" }}
@@ -209,7 +217,7 @@ export default function EarthCoursePage() {
         </div>
       </section>
 
-      {/* 3. 해결 제안 */}
+      {/* 3. 해결 제안 (아이콘으로 교체) */}
       <section className="py-24 px-6 bg-[#0B0B0D]">
         <div className="max-w-7xl mx-auto">
           <Reveal>
@@ -227,22 +235,24 @@ export default function EarthCoursePage() {
               { 
                 title: "나를 이해하는 힘", 
                 desc: "감정과 생각을 정리하고 내 상태를 정확히 인식",
-                icon: "👁️" 
+                icon: "/images/icon/ether.png" 
               },
               { 
                 title: "나의 이야기 발견", 
                 desc: "나만의 경험과 가치에서 콘텐츠의 씨앗 찾기",
-                icon: "🌱" 
+                icon: "/images/icon/fire.png" 
               },
               { 
                 title: "표현의 시작", 
                 desc: "글, 이미지, 콘텐츠로 나를 표현하는 첫 단계 완성",
-                icon: "✍️" 
+                icon: "/images/icon/air.png" 
               }
             ].map((card, i) => (
               <Reveal key={i} delayMs={i * 200}>
                 <div className="p-10 rounded-[2.5rem] bg-[#15161A] border border-[rgba(214,198,168,0.1)] h-full flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-500 hover:border-[#2D5A27]/30">
-                  <div className="text-5xl mb-8 group-hover:rotate-12 transition-transform">{card.icon}</div>
+                  <div className="relative w-16 h-16 mb-8 group-hover:rotate-12 transition-transform">
+                    <Image src={card.icon} alt={card.title} fill className="object-contain" />
+                  </div>
                   <h3 className="text-2xl font-bold mb-4 text-[#8B5E3C]">{card.title}</h3>
                   <div className="w-12 h-[1px] bg-[#8B5E3C]/30 mb-6"></div>
                   <p className="text-white/70 leading-relaxed text-lg font-light">
@@ -285,48 +295,129 @@ export default function EarthCoursePage() {
         </div>
       </section>
 
-      {/* 5. 상세 커리큘럼 - 이미지 기반 업데이트 */}
-      <section className="py-24 px-6 bg-[#0B0B0D]">
-        <div className="max-w-5xl mx-auto">
+      {/* 5. 상세 커리큘럼 - 프리미엄 고도화 */}
+      <section className="py-24 px-6 lg:py-32">
+        <div className="max-w-[1200px] mx-auto">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display mb-4 italic">아.그.작 6주 프로젝트</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#8B5E3C] to-[#2D5A27] mx-auto rounded-full"></div>
-            </div>
-          </Reveal>
+            <div className="relative p-8 md:p-16 rounded-[40px] border border-[rgba(212,175,55,0.12)] shadow-[0_18px_50px_rgba(0,0,0,0.35)] overflow-hidden"
+                 style={{ background: "linear-gradient(180deg, rgba(18,18,22,0.96) 0%, rgba(22,22,28,0.98) 100%)" }}>
+              
+              <div className="relative z-10 text-center mb-20">
+                <h2 className="text-4xl md:text-6xl font-display mb-8 tracking-tight italic">상세 커리큘럼</h2>
+                <div className="w-24 h-[1px] bg-antiqueGold/30 mx-auto mb-8"></div>
+                
+                <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                  6주 동안 <br className="md:hidden" />
+                  <span className="text-white font-medium">스토리, 이미지, 편집, 영상, 굿즈, 출판</span>까지 <br />
+                  단계적으로 완성해가는 실전형 과정입니다
+                </p>
 
-          <div className="space-y-8">
-            {curriculumData.map((item, i) => (
-              <Reveal key={i} delayMs={i * 100}>
-                <div className="group p-10 rounded-[2rem] bg-[#15161A] border border-white/5 hover:border-[#8B5E3C]/40 transition-all duration-500">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="flex-shrink-0">
-                      <div className="text-3xl font-display text-[#8B5E3C] font-bold tracking-widest mb-2">{item.week}</div>
-                      <div className="text-antiqueGold/60 text-sm font-medium uppercase tracking-tighter">{item.title}</div>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-2xl font-bold mb-6 text-white group-hover:text-antiqueGold transition-colors">{item.summary}</h4>
-                      <ul className="grid sm:grid-cols-2 gap-3">
-                        {item.details.map((detail, idx) => (
-                          <li key={idx} className="flex items-center gap-3 text-white/50 group-hover:text-white/70 transition-colors">
-                            <span className="text-[#2D5A27]">•</span>
-                            <span className="font-light">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                <div className="inline-flex items-center px-8 py-3 rounded-full bg-white/[0.03] border border-antiqueGold/10 backdrop-blur-sm">
+                  <span className="text-zinc-200 text-sm md:text-base tracking-widest font-light">
+                    실시간 챌린지형 과정 · 매주 과제 제출 · 정해진 일정에 따라 완성
+                  </span>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              </div>
 
-          <Reveal delayMs={500}>
-            <div className="mt-16 text-center p-12 bg-[#15161A]/50 rounded-[2rem] border border-white/5 italic">
-              <p className="text-xl text-white/40">
-                “이 과정은 단순 학습이 아니라 <br className="md:hidden" />
-                <span className="text-antiqueGold/60 font-medium">나의 삶을 재정렬하고 기록하는 여정</span>입니다”
-              </p>
+              {/* Part 1 */}
+              <div className="mb-24">
+                <div className="flex items-center gap-6 mb-12">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-antiqueGold/20"></div>
+                  <h3 className="text-2xl md:text-3xl font-display tracking-widest text-antiqueGold/80 px-4">
+                    Part 1. <span className="text-white/90">나의 이야기와 그림책 완성</span>
+                  </h3>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-antiqueGold/20"></div>
+                </div>
+
+                {/* 이미지 위주 배치 (1-3주 상단) */}
+                <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden mb-16 border border-white/5 shadow-2xl">
+                  <Image 
+                    src="/images/courses/earth/curriculum-journey.png" 
+                    alt="Creative Journey Workspace" 
+                    fill 
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(18,18,22,0.8)]"></div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+                  {part1.map((item, i) => (
+                    <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
+                      <div className="group relative p-10 rounded-[32px] border border-white/[0.06] hover:border-antiqueGold/20 transition-all duration-500 shadow-[0_10px_28px_rgba(0,0,0,0.28)] flex flex-col h-full"
+                           style={{ background: "linear-gradient(180deg, rgba(30,28,38,0.96) 0%, rgba(22,22,30,0.98) 100%)" }}>
+                        
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antiqueGold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        
+                        <div className="text-3xl font-display text-antiqueGold/60 font-bold mb-4 tracking-tighter">{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-6 text-white group-hover:text-antiqueGold transition-colors leading-tight">
+                          {item.summary}
+                        </h4>
+                        
+                        <ul className="space-y-4 mb-10 flex-1">
+                          {item.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-start gap-4 text-white/50 group-hover:text-white/70 transition-colors">
+                              <span className="text-antiqueGold/40 text-xs mt-2">•</span>
+                              <span className="text-[1.05rem] leading-[1.7] font-light">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="pt-6 border-t border-white/5 flex items-center justify-between">
+                          <span className="text-antiqueGold font-bold text-lg italic tracking-wide">
+                             {item.result}
+                          </span>
+                          <span className="text-antiqueGold/40 text-xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+
+              {/* Part 2 */}
+              <div>
+                <div className="flex items-center gap-6 mb-12">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-antiqueGold/20"></div>
+                  <h3 className="text-2xl md:text-3xl font-display tracking-widest text-antiqueGold/80 px-4">
+                    Part 2. <span className="text-white/90">영상·굿즈·출판까지 확장</span>
+                  </h3>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-antiqueGold/20"></div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+                  {part2.map((item, i) => (
+                    <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
+                      <div className="group relative p-10 rounded-[32px] border border-white/[0.06] hover:border-antiqueGold/20 transition-all duration-500 shadow-[0_10px_28px_rgba(0,0,0,0.28)] flex flex-col h-full"
+                           style={{ background: "linear-gradient(180deg, rgba(30,28,38,0.96) 0%, rgba(22,22,30,0.98) 100%)" }}>
+                        
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antiqueGold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        
+                        <div className="text-3xl font-display text-antiqueGold/60 font-bold mb-4 tracking-tighter">{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-6 text-white group-hover:text-antiqueGold transition-colors leading-tight">
+                          {item.summary}
+                        </h4>
+                        
+                        <ul className="space-y-4 mb-10 flex-1">
+                          {item.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-start gap-4 text-white/50 group-hover:text-white/70 transition-colors">
+                              <span className="text-antiqueGold/40 text-xs mt-2">•</span>
+                              <span className="text-[1.05rem] leading-[1.7] font-light">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="pt-6 border-t border-white/5 flex items-center justify-between">
+                          <span className="text-antiqueGold font-bold text-lg italic tracking-wide">
+                             {item.result}
+                          </span>
+                          <span className="text-antiqueGold/40 text-xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </Reveal>
         </div>
