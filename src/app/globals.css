@@ -33,6 +33,15 @@
   --color-monetization-system: #4FC3F7;
   --color-abundance-expansion: #D4AF37;
 
+  /* Jamyeong Premium Dark System */
+  --color-jamyeong-bg: #090909;
+  --color-jamyeong-surface: #14161A;
+  --color-jamyeong-gold: #D4AF37;
+  --color-jamyeong-gold-hover: #E6C25A;
+  --color-jamyeong-text-primary: #FFFFFF;
+  --color-jamyeong-text-secondary: #BFBFBF;
+  --color-jamyeong-green: #6B8F71;
+
   /* Custom Fonts */
   --font-display: "Cinzel", serif;
 }

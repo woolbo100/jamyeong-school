@@ -87,99 +87,98 @@ export default function EarthCoursePage() {
   const part2 = curriculumData.slice(3, 6);
 
   return (
-    <div className="bg-[#0B0B0D] min-h-screen text-white font-sans selection:bg-antiqueGold/30 overflow-x-hidden">
+    <div className="bg-[#090909] min-h-screen text-white font-sans selection:bg-antiqueGold/30 overflow-x-hidden">
       
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
-        {/* Aura Background */}
+        {/* Aura Background - Refined to Gold & Subtle Gray */}
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-10 pointer-events-none"
-          style={{ backgroundColor: "#2D5A27" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.07] pointer-events-none"
+          style={{ backgroundColor: "#D4AF37" }}
         ></div>
         <div 
-          className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] blur-[150px] opacity-10 pointer-events-none"
-          style={{ backgroundColor: "#8B5E3C" }}
+          className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] blur-[150px] opacity-[0.05] pointer-events-none"
+          style={{ backgroundColor: "#FFFFFF" }}
         ></div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-10">
               <div className="relative w-24 h-24 md:w-32 md:h-32 group">
                 <Image 
                   src="/images/icon/earth.png" 
                   alt="Earth Icon" 
                   fill 
-                  className="object-contain filter drop-shadow-[0_0_15px_rgba(168,148,122,0.4)] group-hover:scale-110 transition-transform duration-700" 
+                  className="object-contain filter drop-shadow-[0_0_20px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform duration-1000" 
                 />
               </div>
             </div>
-            <div className="text-[#a8947a] text-sm tracking-[0.4rem] mb-6 uppercase font-display opacity-80">
+            <div className="text-[#D4AF37] text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium">
               Earth Curriculum • 6 Weeks
             </div>
-            <h1 className="text-5xl md:text-8xl font-display mb-8 leading-tight tracking-tight italic">
-              마음을 <span className="text-antiqueGold">심다</span>
+            <h1 className="text-5xl md:text-8xl font-display mb-10 leading-tight tracking-tight italic">
+              마음을 <span className="text-[#D4AF37]">심다</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-3xl mx-auto mb-12">
-              나를 이해하고, 나의 이야기를 시작하는 첫 단계
+            <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto mb-16">
+              나를 이해하고, <span className="text-white font-medium">나의 이야기를 시작하는 첫 단계</span>
             </p>
           </Reveal>
 
           <Reveal delayMs={200}>
-            <div className="max-w-2xl mx-auto p-8 rounded-3xl bg-[#15161A] border border-[rgba(139,94,60,0.2)] mb-12 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-green-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <p className="relative z-10 text-lg md:text-xl text-white/70 leading-relaxed italic">
+            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-[#14161A] border border-white/[0.05] mb-16 relative overflow-hidden group shadow-2xl">
+              <div className="absolute inset-0 bg-jamyeong-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed italic">
                 “혼란스럽고 방향이 보이지 않을 때 <br />
                 가장 먼저 필요한 것은 <br className="hidden md:block" />
-                <span className="text-[#8B5E3C] font-semibold">‘무엇을 할까’</span>가 아니라 <br className="hidden md:block" />
-                <span className="text-[#8B5E3C] font-semibold">‘나는 누구인가’</span>를 아는 것입니다.”
+                <span className="text-white font-semibold">‘무엇을 할까’</span>가 아니라 <br className="hidden md:block" />
+                <span className="text-[#D4AF37] font-semibold">‘나는 누구인가’</span>를 아는 것입니다.”
               </p>
             </div>
           </Reveal>
 
           <Reveal delayMs={400}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-visible h-16 w-full sm:w-64 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
+                className="group relative h-16 w-full sm:w-72 flex items-center justify-center text-lg font-bold tracking-widest rounded-xl bg-[#D4AF37] text-black transition-all duration-300 transform-gpu hover:bg-[#E6C25A] hover:-translate-y-1 shadow-[0_10px_30px_rgba(212,175,55,0.2)]"
               >
-                <span className="relative z-10 font-bold">👉 강의 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+                <span className="relative z-10">강의 안내 받기</span>
               </a>
               <button
-                className="group flex items-center gap-3 text-white/40 hover:text-antiqueGold transition-colors duration-300 text-sm tracking-widest uppercase border-b border-white/10 pb-1"
+                className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#D4AF37] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
                 onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
               >
-                <span className="text-lg">📄</span> 강의 안내 PDF 보기
+                <span className="text-xl">📄</span> 강의 안내 PDF 보기
               </button>
             </div>
           </Reveal>
         </div>
 
-        <div className="max-w-6xl mx-auto mt-24 px-6">
+        <div className="max-w-6xl mx-auto mt-28 px-6">
           <Reveal delayMs={600} slideFrom="bottom">
-            <div className="relative aspect-[21/9] rounded-[2.5rem] overflow-hidden border border-[rgba(139,94,60,0.1)] shadow-2xl">
+            <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/[0.05] shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
               <Image 
                 src="/images/courses/earth/seeds-book.png" 
                 alt="Mystical Soil, Seeds and Picture Book" 
                 fill 
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-transparent to-transparent opacity-80"></div>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* 2. 문제 제기 */}
-      <section className="py-24 px-6 bg-[#0B0B0D]">
+      <section className="py-32 px-6 bg-[#090909]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
-              <h2 className="text-3xl md:text-5xl font-display mb-10 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight">
                 혹시 이런 고민을 <br />
-                <span className="text-[#8B5E3C]">하고 계신가요?</span>
+                <span className="text-[#D4AF37]">하고 계신가요?</span>
               </h2>
               <div className="space-y-6">
                 {[
@@ -188,49 +187,49 @@ export default function EarthCoursePage() {
                   "글을 쓰고 싶지만 무엇부터 시작해야 할지 모르겠습니다",
                   "내 이야기를 표현하고 싶은데 방법이 없습니다"
                 ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-4 p-6 rounded-2xl bg-[#15161A] border border-white/5 group hover:border-[rgba(45,90,39,0.3)] transition-all">
-                    <span className="text-[#2D5A27] text-xl">✦</span>
-                    <p className="text-white/80 text-lg font-light">{text}</p>
+                  <div key={i} className="flex items-center gap-5 p-7 rounded-2xl bg-[#14161A] border border-white/[0.03] group hover:border-[#D4AF37]/30 transition-all duration-500">
+                    <span className="text-[#6B8F71] text-2xl">✦</span>
+                    <p className="text-[#BFBFBF] text-xl font-light">{text}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-12 p-8 rounded-3xl bg-[#8B5E3C]/5 border border-[#8B5E3C]/20">
-                <p className="text-xl md:text-2xl italic leading-relaxed">
+              <div className="mt-14 p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/[0.05]">
+                <p className="text-xl md:text-2xl italic leading-relaxed text-[#BFBFBF]">
                   👉 그렇다면 지금 필요한 것은 <br />
-                  기술이 아니라 <span className="text-[#2D5A27] font-bold underline underline-offset-8">“내면 정리”</span>입니다
+                  기술이 아니라 <span className="text-[#D4AF37] font-bold underline underline-offset-8">“내면 정리”</span>입니다
                 </p>
               </div>
             </Reveal>
 
             <Reveal delayMs={400}>
-              <div className="relative aspect-square rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl group">
+              <div className="relative aspect-square rounded-[4rem] overflow-hidden border border-white/[0.05] shadow-2xl group">
                 <Image 
                   src="/images/courses/earth/problem.png" 
                   alt="Inner Reflection" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8B5E3C]/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
               </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* 3. 해결 제안 (아이콘으로 교체) */}
-      <section className="py-24 px-6 bg-[#0B0B0D]">
+      {/* 3. 해결 제안 */}
+      <section className="py-32 px-6 bg-[#090909]">
         <div className="max-w-7xl mx-auto">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display mb-6 text-white/90">이 강의는 이런 시작을 <br className="md:hidden" /> 만들어드립니다</h2>
-              <p className="text-xl text-white/60 font-light max-w-2xl mx-auto italic">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 이런 시작을 <br className="md:hidden" /> 만들어드립니다</h2>
+              <p className="text-xl text-[#BFBFBF] font-light max-w-2xl mx-auto italic">
                 나를 브랜드 그림책 작가로 거듭나게 하는 <br />
-                “아.그.작(아이디어 그림책 제작) 프로젝트”
+                <span className="text-[#D4AF37]">“아.그.작(아이디어 그림책 제작) 프로젝트”</span>
               </p>
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {[
               { 
                 title: "나를 이해하는 힘", 
@@ -249,13 +248,13 @@ export default function EarthCoursePage() {
               }
             ].map((card, i) => (
               <Reveal key={i} delayMs={i * 200}>
-                <div className="p-10 rounded-[2.5rem] bg-[#15161A] border border-[rgba(214,198,168,0.1)] h-full flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-500 hover:border-[#2D5A27]/30">
-                  <div className="relative w-16 h-16 mb-8 group-hover:rotate-12 transition-transform">
+                <div className="p-12 rounded-[3rem] bg-[#14161A] border border-white/[0.03] h-full flex flex-col items-center text-center group hover:-translate-y-3 transition-all duration-700 hover:border-[#D4AF37]/20">
+                  <div className="relative w-20 h-20 mb-10 group-hover:rotate-[15deg] transition-transform duration-700">
                     <Image src={card.icon} alt={card.title} fill className="object-contain" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-[#8B5E3C]">{card.title}</h3>
-                  <div className="w-12 h-[1px] bg-[#8B5E3C]/30 mb-6"></div>
-                  <p className="text-white/70 leading-relaxed text-lg font-light">
+                  <h3 className="text-2xl font-bold mb-5 text-white">{card.title}</h3>
+                  <div className="w-12 h-[1px] bg-[#D4AF37]/20 mb-8"></div>
+                  <p className="text-[#BFBFBF] leading-relaxed text-lg font-light">
                     → {card.desc}
                   </p>
                 </div>
@@ -266,28 +265,28 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 4. WHY */}
-      <section className="py-32 px-6 relative overflow-hidden bg-[#0F100D]">
-        <div className="absolute inset-0 bg-green-900/[0.03] pointer-events-none"></div>
+      <section className="py-40 px-6 relative overflow-hidden bg-[#0a0a0c]">
+        <div className="absolute inset-0 bg-[#D4AF37]/[0.02] pointer-events-none"></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
-            <span className="text-[#2D5A27] text-sm tracking-[0.3em] uppercase mb-6 block font-bold">The Era of AI & Expression</span>
-            <h2 className="text-4xl md:text-6xl font-display mb-12">왜 지금 ‘표현’이 중요한가</h2>
+            <span className="text-[#D4AF37] text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80">The Era of AI & Expression</span>
+            <h2 className="text-5xl md:text-7xl font-display mb-16 italic">왜 지금 <span className="text-[#D4AF37]">‘표현’</span>이 중요한가</h2>
             
-            <div className="space-y-10 text-xl md:text-2xl font-light text-white/80 leading-relaxed">
+            <div className="space-y-12 text-xl md:text-3xl font-light text-[#BFBFBF] leading-relaxed">
               <p>
                 AI 시대는 기술의 시대가 아니라 <br />
-                <span className="text-white font-bold text-3xl md:text-4xl">“표현의 시대”</span>입니다
+                <span className="text-white font-bold text-4xl md:text-5xl">“표현의 시대”</span>입니다
               </p>
-              <div className="w-1 h-12 bg-[#8B5E3C]/20 mx-auto"></div>
+              <div className="w-[1px] h-16 bg-[#D4AF37]/20 mx-auto"></div>
               <p>
                 아이디어는 있는데 <br />
                 표현하지 못하면 아무 일도 일어나지 않습니다
               </p>
-              <div className="p-8 rounded-3xl bg-[#15161A] border border-[rgba(45,90,39,0.2)] mt-12 text-center">
-                <p className="text-[#8B5E3C] font-medium mb-2">👉 AI는 도구일 뿐입니다</p>
-                <p className="text-[#8B5E3C] font-medium">👉 중요한 것은 당신의 이야기와 가치입니다</p>
+              <div className="p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.04] mt-16 text-center">
+                <p className="text-[#D4AF37]/80 font-medium mb-3">AI는 도구일 뿐입니다</p>
+                <p className="text-white font-medium">중요한 것은 당신의 <span className="text-[#D4AF37]">이야기</span>와 <span className="text-[#D4AF37]">가치</span>입니다</p>
               </div>
-              <p className="mt-12 text-lg text-white/60">
+              <p className="mt-16 text-lg text-white/40">
                 이 강의는 그 표현의 시작을 만들어드립니다
               </p>
             </div>
@@ -295,78 +294,75 @@ export default function EarthCoursePage() {
         </div>
       </section>
 
-      {/* 5. 상세 커리큘럼 - 프리미엄 고도화 */}
-      <section className="py-24 px-6 lg:py-32">
-        <div className="max-w-[1200px] mx-auto">
+      {/* 5. 상세 커리큘럼 */}
+      <section className="py-32 px-6 lg:py-40">
+        <div className="max-w-[1240px] mx-auto">
           <Reveal>
-            <div className="relative p-8 md:p-16 rounded-[40px] border border-[rgba(212,175,55,0.12)] shadow-[0_18px_50px_rgba(0,0,0,0.35)] overflow-hidden"
-                 style={{ background: "linear-gradient(180deg, rgba(18,18,22,0.96) 0%, rgba(22,22,28,0.98) 100%)" }}>
+            <div className="relative p-10 md:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
+                 style={{ background: "linear-gradient(180deg, rgba(20,22,26,0.98) 0%, rgba(9,9,9,1) 100%)" }}>
               
-              <div className="relative z-10 text-center mb-20">
-                <h2 className="text-4xl md:text-6xl font-display mb-8 tracking-tight italic">상세 커리큘럼</h2>
-                <div className="w-24 h-[1px] bg-antiqueGold/30 mx-auto mb-8"></div>
+              <div className="relative z-10 text-center mb-24">
+                <h2 className="text-5xl md:text-7xl font-display mb-10 tracking-tight italic">상세 커리큘럼</h2>
+                <div className="w-32 h-[1px] bg-[#D4AF37]/30 mx-auto mb-10"></div>
                 
-                <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                <p className="text-xl md:text-2xl text-[#BFBFBF] font-light max-w-2xl mx-auto leading-relaxed mb-12">
                   6주 동안 <br className="md:hidden" />
                   <span className="text-white font-medium">스토리, 이미지, 편집, 영상, 굿즈, 출판</span>까지 <br />
                   단계적으로 완성해가는 실전형 과정입니다
                 </p>
 
-                <div className="inline-flex items-center px-8 py-3 rounded-full bg-white/[0.03] border border-antiqueGold/10 backdrop-blur-sm">
-                  <span className="text-zinc-200 text-sm md:text-base tracking-widest font-light">
+                <div className="inline-flex items-center px-10 py-4 rounded-full bg-white/[0.02] border border-white/[0.05] backdrop-blur-md">
+                  <span className="text-[#BFBFBF] text-sm md:text-lg tracking-widest font-light">
                     실시간 챌린지형 과정 · 매주 과제 제출 · 정해진 일정에 따라 완성
                   </span>
                 </div>
               </div>
 
               {/* Part 1 */}
-              <div className="mb-24">
-                <div className="flex items-center gap-6 mb-12">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-antiqueGold/20"></div>
-                  <h3 className="text-2xl md:text-3xl font-display tracking-widest text-antiqueGold/80 px-4">
-                    Part 1. <span className="text-white/90">나의 이야기와 그림책 완성</span>
+              <div className="mb-32">
+                <div className="flex items-center gap-8 mb-16">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20"></div>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] text-[#D4AF37]/90 px-6 italic">
+                    Part 1. <span className="text-white font-normal">나의 이야기와 그림책 완성</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-antiqueGold/20"></div>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20"></div>
                 </div>
 
-                {/* 이미지 위주 배치 (1-3주 상단) */}
-                <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden mb-16 border border-white/5 shadow-2xl">
+                <div className="relative w-full aspect-[21/9] rounded-[2.5rem] overflow-hidden mb-20 border border-white/[0.05] shadow-2xl">
                   <Image 
                     src="/images/courses/earth/curriculum-journey.png" 
                     alt="Creative Journey Workspace" 
                     fill 
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(18,18,22,0.8)]"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-transparent to-transparent opacity-80"></div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part1.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-10 rounded-[32px] border border-white/[0.06] hover:border-antiqueGold/20 transition-all duration-500 shadow-[0_10px_28px_rgba(0,0,0,0.28)] flex flex-col h-full"
-                           style={{ background: "linear-gradient(180deg, rgba(30,28,38,0.96) 0%, rgba(22,22,30,0.98) 100%)" }}>
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-[#14161A]">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antiqueGold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        
-                        <div className="text-3xl font-display text-antiqueGold/60 font-bold mb-4 tracking-tighter">{item.week}</div>
-                        <h4 className="text-2xl font-bold mb-6 text-white group-hover:text-antiqueGold transition-colors leading-tight">
+                        <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[#D4AF37] transition-colors leading-tight">
                           {item.summary}
                         </h4>
                         
-                        <ul className="space-y-4 mb-10 flex-1">
+                        <ul className="space-y-5 mb-12 flex-1">
                           {item.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-4 text-white/50 group-hover:text-white/70 transition-colors">
-                              <span className="text-antiqueGold/40 text-xs mt-2">•</span>
-                              <span className="text-[1.05rem] leading-[1.7] font-light">{detail}</span>
+                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors">
+                              <span className="text-[#6B8F71] text-xs mt-2">✦</span>
+                              <span className="text-[1.1rem] leading-[1.8] font-light">{detail}</span>
                             </li>
                           ))}
                         </ul>
 
-                        <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                          <span className="text-antiqueGold font-bold text-lg italic tracking-wide">
+                        <div className="pt-8 border-t border-white/[0.05] flex items-center justify-between">
+                          <span className="text-[#D4AF37] font-bold text-xl italic tracking-wide">
                              {item.result}
                           </span>
-                          <span className="text-antiqueGold/40 text-xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+                          <span className="text-[#D4AF37]/30 text-2xl group-hover:translate-x-2 transition-transform duration-500">→</span>
                         </div>
                       </div>
                     </Reveal>
@@ -376,41 +372,39 @@ export default function EarthCoursePage() {
 
               {/* Part 2 */}
               <div>
-                <div className="flex items-center gap-6 mb-12">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-antiqueGold/20"></div>
-                  <h3 className="text-2xl md:text-3xl font-display tracking-widest text-antiqueGold/80 px-4">
-                    Part 2. <span className="text-white/90">영상·굿즈·출판까지 확장</span>
+                <div className="flex items-center gap-8 mb-16">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20"></div>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] text-[#D4AF37]/90 px-6 italic">
+                    Part 2. <span className="text-white font-normal">영상·굿즈·출판까지 확장</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-antiqueGold/20"></div>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20"></div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part2.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-10 rounded-[32px] border border-white/[0.06] hover:border-antiqueGold/20 transition-all duration-500 shadow-[0_10px_28px_rgba(0,0,0,0.28)] flex flex-col h-full"
-                           style={{ background: "linear-gradient(180deg, rgba(30,28,38,0.96) 0%, rgba(22,22,30,0.98) 100%)" }}>
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-[#14161A]">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antiqueGold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        
-                        <div className="text-3xl font-display text-antiqueGold/60 font-bold mb-4 tracking-tighter">{item.week}</div>
-                        <h4 className="text-2xl font-bold mb-6 text-white group-hover:text-antiqueGold transition-colors leading-tight">
+                        <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[#D4AF37] transition-colors leading-tight">
                           {item.summary}
                         </h4>
                         
-                        <ul className="space-y-4 mb-10 flex-1">
+                        <ul className="space-y-5 mb-12 flex-1">
                           {item.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-4 text-white/50 group-hover:text-white/70 transition-colors">
-                              <span className="text-antiqueGold/40 text-xs mt-2">•</span>
-                              <span className="text-[1.05rem] leading-[1.7] font-light">{detail}</span>
+                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors">
+                              <span className="text-[#6B8F71] text-xs mt-2">✦</span>
+                              <span className="text-[1.1rem] leading-[1.8] font-light">{detail}</span>
                             </li>
                           ))}
                         </ul>
 
-                        <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                          <span className="text-antiqueGold font-bold text-lg italic tracking-wide">
+                        <div className="pt-8 border-t border-white/[0.05] flex items-center justify-between">
+                          <span className="text-[#D4AF37] font-bold text-xl italic tracking-wide">
                              {item.result}
                           </span>
-                          <span className="text-antiqueGold/40 text-xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+                          <span className="text-[#D4AF37]/30 text-2xl group-hover:translate-x-2 transition-transform duration-500">→</span>
                         </div>
                       </div>
                     </Reveal>
@@ -424,34 +418,37 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 6. 결과 */}
-      <section className="py-24 px-6 relative">
+      <section className="py-32 px-6 bg-[#090909]">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display mb-6">이 강의를 듣고 나면</h2>
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-display mb-8">이 강의를 듣고 나면</h2>
+              <div className="w-20 h-[1px] bg-[#D4AF37]/20 mx-auto"></div>
             </div>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-10">
             {[
-              "나에 대한 이해가 명확해집니다",
-              "더 이상 흔들리지 않는 기준이 생깁니다",
-              "나만의 콘텐츠 방향이 보이기 시작합니다",
-              "글쓰기, 콘텐츠 제작의 출발점이 만들어집니다"
-            ].map((text, i) => (
+              { text: "나에 대한 이해가 명확해집니다", highlight: "명확한 이해" },
+              { text: "더 이상 흔들리지 않는 기준이 생깁니다", highlight: "단단한 기준" },
+              { text: "나만의 콘텐츠 방향이 보이기 시작합니다", highlight: "콘텐츠 방향" },
+              { text: "글쓰기, 콘텐츠 제작의 출발점이 만들어집니다", highlight: "표현의 시작" }
+            ].map((item, i) => (
               <Reveal key={i} delayMs={i * 150}>
-                <div className="p-8 rounded-2xl bg-[#15161A] border border-[rgba(214,198,168,0.05)] flex items-start gap-5 group hover:border-[#2D5A27]/20 transition-all">
-                  <span className="w-8 h-8 rounded-full bg-[#8B5E3C] text-white flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-[#2D5A27] transition-colors">✓</span>
-                  <p className="text-xl text-white/80 font-light leading-snug">{text}</p>
+                <div className="p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.02] flex items-start gap-6 group hover:border-[#D4AF37]/20 transition-all duration-500">
+                  <span className="w-10 h-10 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all">✓</span>
+                  <p className="text-2xl text-[#BFBFBF] font-light leading-snug">
+                    {item.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
           </div>
           
           <Reveal delayMs={600}>
-            <div className="mt-16 text-center">
-              <p className="text-3xl md:text-5xl font-display text-[#8B5E3C] italic">
-                “막막함 → 방향성”으로 바뀌는 경험
+            <div className="mt-24 text-center">
+              <p className="text-4xl md:text-6xl font-display text-[#D4AF37] italic tracking-tight">
+                “막막함 → <span className="text-white">확신</span>”으로 바뀌는 경험
               </p>
             </div>
           </Reveal>
@@ -459,34 +456,34 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 7. 확장 */}
-      <section className="py-32 px-6 bg-[#0B0B0D]">
+      <section className="py-40 px-6 bg-[#090909] border-t border-white/[0.03]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
             <Reveal>
-              <h2 className="text-4xl md:text-6xl font-display mb-10 leading-tight">이 과정은 <br /> <span className="text-[#2D5A27]">여기서 끝나지 않습니다</span></h2>
-              <div className="space-y-8 text-xl font-light text-white/70 leading-relaxed mb-12">
+              <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic">이 과정은 <br /> <span className="text-[#D4AF37]">시작일 뿐입니다</span></h2>
+              <div className="space-y-10 text-2xl font-light text-[#BFBFBF] leading-relaxed mb-16">
                 <p>브랜드 그림책 출판을 넘어,</p>
-                <div className="flex flex-wrap gap-4 mt-6">
+                <div className="flex flex-wrap gap-5 mt-10">
                   {["전자책 출판", "POD 종이책", "캐릭터 굿즈", "예술인 등록", "1인 출판사"].map((tag, i) => (
-                    <span key={i} className="px-6 py-2 rounded-full bg-white/[0.05] border border-white/10 text-white/80 text-base">
+                    <span key={i} className="px-8 py-3 rounded-xl bg-white/[0.03] border border-white/[0.07] text-[#D4AF37] text-lg font-medium">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-2xl text-white font-medium mt-10">👉 당신의 지혜가 수익과 영향력이 됩니다.</p>
-                <p>모든 시작은 <span className="text-[#8B5E3C] font-bold italic">“나를 아는 것”</span>에서 출발합니다.</p>
+                <p className="text-3xl text-white font-medium mt-14">👉 당신의 지혜가 <span className="text-[#D4AF37]">수익</span>과 <span className="text-[#D4AF37]">영향력</span>이 됩니다.</p>
+                <p>모든 시작은 <span className="text-white font-bold italic">“나를 아는 것”</span>에서 출발합니다.</p>
               </div>
             </Reveal>
 
             <Reveal delayMs={400}>
-              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-[rgba(139,94,60,0.2)] shadow-2xl">
+              <div className="relative aspect-[4/5] rounded-[4rem] overflow-hidden border border-white/[0.05] shadow-[0_40px_80px_rgba(0,0,0,0.7)]">
                 <Image 
                   src="/images/courses/earth/expansion.png" 
                   alt="Branding and Growth Expansion" 
                   fill 
-                  className="object-cover"
+                  className="object-cover scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0B0B0D] to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#090909] to-transparent"></div>
               </div>
             </Reveal>
           </div>
@@ -494,16 +491,16 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 8. 특별한 점 */}
-      <section className="py-32 px-6 bg-[#15161A]">
+      <section className="py-40 px-6 bg-[#14161A]">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-5xl font-display mb-4 italic text-white/90">이 강의가 특별한 이유</h2>
-              <div className="w-20 h-[2px] bg-[#8B5E3C] mx-auto"></div>
+            <div className="text-center mb-28">
+              <h2 className="text-4xl md:text-6xl font-display mb-6 italic text-white">이 강의가 특별한 이유</h2>
+              <div className="w-24 h-[1px] bg-[#D4AF37]/40 mx-auto"></div>
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
             {[
               { title: "실전 결과물 도출", desc: "단순 학습이 아닌 실제 출판과 연계된 1:1 결과물 완성" },
               { title: "AI 도입의 효율성", desc: "누구나 그림책 작가가 될 수 있는 최신 AI 도구 활용" },
@@ -511,11 +508,11 @@ export default function EarthCoursePage() {
               { title: "강력한 커뮤니티", desc: "자명스쿨의 네트워크를 통한 지속 가능한 성장 지원" }
             ].map((item, i) => (
               <Reveal key={i} delayMs={i * 150}>
-                <div className="flex gap-6">
-                  <div className="text-[#2D5A27] text-3xl font-bold italic">0{i+1}.</div>
+                <div className="flex gap-8 group">
+                  <div className="text-[#D4AF37] text-4xl font-display font-bold italic opacity-40 group-hover:opacity-100 transition-opacity">0{i+1}</div>
                   <div>
-                    <h4 className="text-2xl font-bold mb-3">{item.title}</h4>
-                    <p className="text-lg text-white/50 font-light leading-relaxed">{item.desc}</p>
+                    <h4 className="text-3xl font-bold mb-4 text-white group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
+                    <p className="text-xl text-[#BFBFBF] font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -523,10 +520,11 @@ export default function EarthCoursePage() {
           </div>
 
           <Reveal delayMs={800}>
-            <div className="mt-20 p-12 rounded-[3.5rem] bg-gradient-to-br from-[#8B5E3C]/10 to-[#2D5A27]/10 border border-[#8B5E3C]/20 text-center">
-              <p className="text-2xl md:text-4xl font-display italic leading-tight">
+            <div className="mt-32 p-16 rounded-[4rem] bg-gradient-to-br from-[#D4AF37]/10 to-transparent border border-[#D4AF37]/20 text-center relative overflow-hidden group">
+              <div className="absolute inset-0 bg-jamyeong-gold/5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000"></div>
+              <p className="relative z-10 text-3xl md:text-5xl font-display italic leading-tight">
                 “도구가 아니라 <br className="md:hidden" />
-                <span className="text-antiqueGold font-bold">사람 자체를 바꾸는 강의</span>입니다.”
+                <span className="text-[#D4AF37] font-bold">사람 자체를 바꾸는 강의</span>입니다.”
               </p>
             </div>
           </Reveal>
@@ -534,39 +532,36 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 9. CTA */}
-      <section className="py-40 px-6 text-center bg-[#0B0B0D] relative">
-         <div 
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#2D5A27]/5 to-transparent pointer-events-none"
-        ></div>
+      <section className="py-48 px-6 text-center bg-[#090909] relative overflow-hidden">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#D4AF37]/5 to-transparent pointer-events-none"></div>
         <div className="max-w-4xl mx-auto relative z-10">
           <Reveal>
-            <h2 className="text-3xl md:text-5xl font-display mb-10 leading-tight">
+            <h2 className="text-4xl md:text-7xl font-display mb-16 leading-tight italic">
               지금 필요한 것은 <br />
               더 많은 정보가 아니라 <br className="md:hidden" />
-              <span className="text-[#8B5E3C]">나를 이해하고 표현하는 시간</span>입니다.
+              <span className="text-[#D4AF37]">나를 이해하고 표현하는 시간</span>입니다.
             </h2>
           </Reveal>
 
           <Reveal delayMs={300}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-12">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mt-16">
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative overflow-visible h-20 w-full sm:w-80 px-8 flex items-center justify-center text-lg font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
+                className="group relative h-20 w-full sm:w-96 flex items-center justify-center text-2xl font-bold tracking-[0.2em] rounded-xl bg-[#D4AF37] text-black transition-all duration-300 transform-gpu hover:bg-[#E6C25A] hover:-translate-y-2 shadow-[0_20px_60px_rgba(212,175,55,0.3)]"
               >
-                <span className="relative z-10 font-bold italic">👉 강의 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
+                <span className="relative z-10 font-bold italic">강의 안내 받기</span>
               </a>
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 className="group flex flex-col items-center"
               >
-                <span className="text-white/40 group-hover:text-[#2D5A27] transition-colors duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1 mb-2">
+                <span className="text-[#BFBFBF] group-hover:text-[#D4AF37] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3">
                   문의하기
                 </span>
-                <span className="text-xs text-white/20 uppercase tracking-[0.3em]">Contact Us</span>
+                <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Contact Us</span>
               </a>
             </div>
           </Reveal>
@@ -574,7 +569,7 @@ export default function EarthCoursePage() {
           <Reveal delayMs={600}>
             <Link
               href="/courses"
-              className="inline-block mt-32 text-white/20 hover:text-[#8B5E3C] transition-colors duration-300 text-sm tracking-[0.5em] uppercase"
+              className="inline-block mt-40 text-white/20 hover:text-[#D4AF37] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
             >
               ← BACK TO COURSES
             </Link>
