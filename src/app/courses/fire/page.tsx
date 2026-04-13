@@ -83,7 +83,7 @@ export default function FireCoursePage() {
   const part1 = curriculumData.slice(0, 3);
   const part2 = curriculumData.slice(3, 6);
 
-  const GOLD = "#D4AF37";
+  const GOLD = "#A68253";
   const ORANGE = "#FF6A3D";
   const CARD_BG = "#14161A";
   const SUB_TEXT = "#BFBFBF";
@@ -91,83 +91,91 @@ export default function FireCoursePage() {
   return (
     <div className="bg-black min-h-screen text-white font-sans selection:bg-[#FF6A3D]/30 overflow-x-hidden">
       
-      {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
+      {/* 1. Hero Section (Earth Style Centered Top) */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
         {/* Glow Effects */}
         <div 
-          className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.15] pointer-events-none"
-          style={{ background: `radial-gradient(circle, ${ORANGE}, transparent 70%)` }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.08] pointer-events-none"
+          style={{ background: `radial-gradient(circle, ${GOLD}, transparent 70%)` }}
         ></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2 text-left">
-            <Reveal>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
-                <span className="text-[#D4AF37] text-sm tracking-[0.4rem] uppercase font-display font-medium">
-                  Fire Curriculum • 6 Weeks
-                </span>
-              </div>
-              <h1 className="text-5xl md:text-8xl font-display mb-10 leading-tight tracking-tight italic">
-                AI 아트 &<br />
-                <span style={{ color: GOLD }}>영상 창작 과정</span>
-              </h1>
-              <div className="space-y-6 mb-16">
-                <h2 className="text-3xl md:text-5xl font-light text-white leading-tight">
-                  당신의 감성이<br />
-                  <span className="font-bold underline underline-offset-8" style={{ textDecorationColor: ORANGE }}>작품이 되는 순간</span>
-                </h2>
-                <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-xl">
-                  이미지, 영상, 브랜드까지<br />
-                  <span className="text-white font-medium">AI로 표현하는 6주</span>
-                </p>
-                <div className="pt-4 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] inline-block">
-                  <p className="text-lg text-[#BFBFBF] italic leading-relaxed">
-                    단순한 기술 습득을 넘어 매력적인 콘텐츠를 설계하는<br />
-                    <span className="text-white font-medium">프로페셔널 아트 크리에이터 양성 과정</span>입니다
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-8">
-                <a
-                  href="https://pf.kakao.com/_IxguMn"
-                  target="_blank"
-                  className="group relative h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#D4AF37] to-[#FF6A3D] text-black shadow-2xl transition-all duration-300 hover:-translate-y-[2px]"
-                >
-                  <span className="relative z-10 font-bold italic">강의 안내 받기</span>
-                  <div className="absolute -inset-2 bg-gradient-to-br from-[#D4AF37] to-[#FF6A3D] opacity-0 blur-xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
-                </a>
-                <a 
-                  href="https://pf.kakao.com/_IxguMn"
-                  target="_blank"
-                  className="group flex items-center justify-center sm:justify-start gap-3 text-white/60 hover:text-white transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
-                >
-                  문의하기
-                </a>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Hero Image Unit */}
-          <div className="lg:w-1/2 w-full">
-            <Reveal delayMs={300} slideFrom="right">
-              <div className="relative aspect-[4/5] md:aspect-square rounded-[3rem] overflow-hidden border border-white/[0.1] shadow-[0_0_80px_rgba(255,106,61,0.15)] group">
+        <div className="relative z-10 max-w-5xl mx-auto text-center">
+          <Reveal>
+            {/* Top Icon Area */}
+            <div className="flex justify-center mb-10">
+              <div className="relative w-24 h-24 md:w-32 md:h-32 group">
                 <Image 
-                  src="/images/courses/fire/hero.png" 
-                  alt="Fire Hero Art" 
+                  src="/images/icon/fire.png" 
+                  alt="Fire Icon" 
                   fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-[2000ms]"
+                  className="object-contain filter drop-shadow-[0_0_20px_rgba(166,130,83,0.3)] group-hover:scale-110 transition-transform duration-1000" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-                
-                {/* Float Card Overlay */}
-                <div className="absolute bottom-10 left-10 p-6 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 max-w-[240px]">
-                  <p className="text-sm font-light text-white/80 italic">"도구를 넘어 당신의 감각을 깨울 시간"</p>
-                </div>
               </div>
-            </Reveal>
-          </div>
+            </div>
+
+            <div className={`text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium`} style={{ color: GOLD }}>
+              Fire Curriculum • 6 Weeks
+            </div>
+            
+            <h1 className="text-5xl md:text-8xl font-display mb-10 leading-tight tracking-tight italic">
+              AI 아트 & <span style={{ color: GOLD }}>영상 창작 과정</span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto mb-16">
+              당신의 감성이 <span className="text-white font-medium italic underline underline-offset-8" style={{ textDecorationColor: ORANGE }}>작품이 되는 순간</span>
+            </p>
+          </Reveal>
+
+          <Reveal delayMs={200}>
+            {/* Quote Box Style (Matched to Earth) */}
+            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(166,130,83,0.1)] mb-16 relative overflow-hidden group shadow-2xl">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ backgroundColor: `${GOLD}0D` }}></div>
+              <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed italic">
+                “단순한 기술 학습이 아니라 <br />
+                나의 감정을 시각화하고 <br className="hidden md:block" />
+                <span className="text-white font-semibold">‘매력적인 콘텐츠’</span>를 설계하는 <br className="hidden md:block" />
+                <span style={{ color: GOLD }} className="font-semibold">프로페셔널 크리에이터</span> 양성 과정입니다.”
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delayMs={400}>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
+              <a
+                href="https://pf.kakao.com/_IxguMn"
+                target="_blank"
+                className="group relative h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#A68253] to-[#8B5E3C] text-white shadow-2xl transition-all duration-300 hover:-translate-y-[2px]"
+              >
+                <span className="relative z-10 font-bold italic">강의 안내 받기</span>
+                <div className="absolute -inset-2 bg-gradient-to-br from-[#A68253] to-[#8B5E3C] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+              </a>
+              <a 
+                href="https://pf.kakao.com/_IxguMn"
+                target="_blank"
+                className="group flex flex-col items-center"
+              >
+                 <span className={`text-[#BFBFBF] hover:text-[${GOLD}] transition-all duration-300 text-base tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-1`} style={{ "--hover-color": GOLD } as any}>
+                  문의하기
+                </span>
+                <span className="text-[10px] text-white/20 uppercase tracking-[0.5em]">Reach Out</span>
+              </a>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Hero Visual Unit (Repositioned below the quote) */}
+        <div className="max-w-6xl mx-auto mt-28 px-6">
+          <Reveal delayMs={600} slideFrom="bottom">
+            <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/[0.05] shadow-[0_30px_60px_rgba(0,0,0,0.5)] group">
+              <Image 
+                src="/images/courses/fire/hero.png" 
+                alt="Fire Creative Artwork" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-[3000ms]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -191,8 +199,8 @@ export default function FireCoursePage() {
               "평범한 콘텐츠에서 벗어나고 싶습니다"
             ].map((text, i) => (
               <Reveal key={i} delayMs={i * 100}>
-                <div className="flex items-center gap-6 p-10 rounded-3xl bg-[#14161A] border border-white/[0.05] group transition-all duration-500 hover:border-[#D4AF37]/30 hover:-translate-y-1">
-                  <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+                <div className="flex items-center gap-6 p-10 rounded-3xl bg-[#14161A] border border-white/[0.05] group transition-all duration-500 hover:border-[#A68253]/30 hover:-translate-y-1">
+                  <div className="w-2 h-2 rounded-full bg-[#A68253]" />
                   <p className="text-[#BFBFBF] text-xl font-light group-hover:text-white transition-colors">{text}</p>
                 </div>
               </Reveal>
@@ -240,8 +248,8 @@ export default function FireCoursePage() {
               }
             ].map((card, i) => (
               <Reveal key={i} delayMs={i * 200}>
-                <div className="p-14 rounded-[3rem] bg-[#14161A] border border-white/[0.05] h-full flex flex-col items-center text-center group hover:-translate-y-4 transition-all duration-700 hover:border-[#D4AF37]/20 shadow-2xl relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="p-14 rounded-[3rem] bg-[#14161A] border border-white/[0.05] h-full flex flex-col items-center text-center group hover:-translate-y-4 transition-all duration-700 hover:border-[#A68253]/20 shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#A68253]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="text-6xl mb-12 group-hover:scale-110 transition-transform duration-700">{card.icon}</div>
                   <h3 className="text-2xl font-bold mb-6 text-white leading-tight">{card.title}</h3>
                   <div className="w-12 h-[1px] mb-8 bg-white/10" />
@@ -274,7 +282,7 @@ export default function FireCoursePage() {
                 결국 중요한 것은 <span className="text-white font-medium">당신의 감각</span>입니다
               </p>
               <div className="p-12 rounded-[4rem] bg-gradient-to-br from-[#14161A] to-black border border-white/[0.08] mt-20 relative group">
-                <div className="absolute inset-0 bg-[#D4AF37]/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="absolute inset-0 bg-[#A68253]/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 <p className="relative z-10 text-white text-3xl md:text-4xl leading-tight">
                   이 강의는<br />
                   그 <span style={{ color: GOLD }} className="font-bold underline underline-offset-8">감각을 깨우는 과정</span>입니다
@@ -290,7 +298,7 @@ export default function FireCoursePage() {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-center mb-24">
-              <div className="inline-block px-6 py-2 rounded-full border border-[#D4AF37]/30 text-[#D4AF37] text-xs tracking-widest uppercase mb-6">Exhibition Space</div>
+              <div className="inline-block px-6 py-2 rounded-full border border-[#A68253]/30 text-[#A68253] text-xs tracking-widest uppercase mb-6">Exhibition Space</div>
               <h2 className="text-5xl md:text-8xl font-display mb-8 text-white italic">The Gallery</h2>
               <p className="text-xl md:text-2xl text-[#BFBFBF] font-light max-w-2xl mx-auto italic leading-relaxed">
                 당신의 <span style={{ color: GOLD }} className="font-medium">작품</span>이 전시됩니다
@@ -308,7 +316,7 @@ export default function FireCoursePage() {
               <Reveal key={num} delayMs={num * 200}>
                 <div className="group relative">
                   {/* Frame Design */}
-                  <div className="relative aspect-[3/4] p-6 bg-[#0a0a0a] border border-white/5 shadow-2xl overflow-hidden transition-all duration-700 group-hover:border-[#D4AF37]/30">
+                  <div className="relative aspect-[3/4] p-6 bg-[#0a0a0a] border border-white/5 shadow-2xl overflow-hidden transition-all duration-700 group-hover:border-[#A68253]/30">
                     <div className="absolute inset-0 border-[20px] border-[#14161A]/50 pointer-events-none z-10" />
                     <div className="relative w-full h-full overflow-hidden">
                       <Image 
@@ -322,8 +330,8 @@ export default function FireCoursePage() {
                   </div>
                   {/* Caption */}
                   <div className="mt-8 text-center opacity-40 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-sm tracking-[0.3em] font-light uppercase text-[#D4AF37]">Creative Project #0{num}</p>
-                    <div className="h-[1px] w-8 bg-[#D4AF37]/40 mx-auto mt-2" />
+                    <p className="text-sm tracking-[0.3em] font-light uppercase text-[#A68253]">Creative Project #0{num}</p>
+                    <div className="h-[1px] w-8 bg-[#A68253]/40 mx-auto mt-2" />
                   </div>
                 </div>
               </Reveal>
@@ -337,11 +345,11 @@ export default function FireCoursePage() {
         <div className="max-w-[1240px] mx-auto">
           <Reveal>
             <div className="relative p-12 md:p-24 rounded-[4rem] border border-white/[0.05] shadow-[0_40px_120px_rgba(0,0,0,0.8)] overflow-hidden bg-[#0a0a0a]">
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4AF37]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#A68253]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
               
               <div className="relative z-10 text-center mb-28">
                 <h2 className="text-5xl md:text-8xl font-display mb-12 tracking-tight italic text-white">Curriculum</h2>
-                <div className="w-32 h-[1px] mx-auto mb-12 bg-[#D4AF37]/30" />
+                <div className="w-32 h-[1px] mx-auto mb-12 bg-[#A68253]/30" />
                 
                 <p className="text-xl md:text-3xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-16 italic">
                   이 6주 과정은<br />
@@ -359,18 +367,18 @@ export default function FireCoursePage() {
               {/* Part 1 */}
               <div className="mb-32">
                 <div className="flex items-center gap-8 mb-20">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20" />
-                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.3em] px-8 italic text-[#D4AF37]">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#A68253]/20" />
+                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.3em] px-8 italic text-[#A68253]">
                     Phase 1. <span className="text-white font-normal uppercase">Foundation</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20" />
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#A68253]/20" />
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part1.map((item, i) => (
                     <Reveal key={i} delayMs={i * 200} slideFrom="bottom">
-                      <div className="group relative p-12 rounded-[3rem] border border-white/[0.06] transition-all duration-700 h-full bg-[#14161A] hover:bg-[#1a1c22] hover:border-[#D4AF37]/30 hover:-translate-y-3 shadow-2xl">
-                        <div className="text-5xl font-display font-bold mb-8 tracking-tighter text-[#D4AF37]/20 group-hover:text-[#D4AF37]/40 transition-colors uppercase italic">{item.week}</div>
+                      <div className="group relative p-12 rounded-[3rem] border border-white/[0.06] transition-all duration-700 h-full bg-[#14161A] hover:bg-[#1a1c22] hover:border-[#A68253]/30 hover:-translate-y-3 shadow-2xl">
+                        <div className="text-5xl font-display font-bold mb-8 tracking-tighter text-[#A68253]/20 group-hover:text-[#A68253]/40 transition-colors uppercase italic">{item.week}</div>
                         <h4 className="text-2xl font-bold mb-10 text-white leading-tight">
                           {item.title}
                         </h4>
@@ -399,11 +407,11 @@ export default function FireCoursePage() {
               {/* Part 2 */}
               <div>
                 <div className="flex items-center gap-8 mb-20">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20" />
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#A68253]/20" />
                   <h3 className="text-2xl md:text-4xl font-display tracking-[0.3em] px-8 italic text-[#FF6A3D]">
                     Phase 2. <span className="text-white font-normal uppercase">Expansion</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20" />
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#A68253]/20" />
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
@@ -446,7 +454,7 @@ export default function FireCoursePage() {
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-7xl font-display mb-10 text-white italic">이 과정을 끝내면</h2>
-              <div className="w-20 h-[1px] bg-[#D4AF37]/30 mx-auto" />
+              <div className="w-20 h-[1px] bg-[#A68253]/30 mx-auto" />
             </div>
           </Reveal>
 
@@ -459,7 +467,7 @@ export default function FireCoursePage() {
               "AI 콘텐츠 강사"
             ].map((text, i) => (
               <Reveal key={i} delayMs={i * 100}>
-                <div className="p-8 rounded-2xl bg-[#14161A] border border-white/5 text-center group transition-all duration-300 hover:border-[#D4AF37]/40">
+                <div className="p-8 rounded-2xl bg-[#14161A] border border-white/5 text-center group transition-all duration-300 hover:border-[#A68253]/40">
                   <p className="text-2xl text-[#BFBFBF] font-light group-hover:text-white transition-colors">
                     ✔ {text}
                   </p>
@@ -529,7 +537,7 @@ export default function FireCoursePage() {
       {/* 9. CTA */}
       <section className="py-48 px-6 text-center bg-black relative overflow-hidden">
         {/* Cinematic Particles Backdrop (CSS Placeholder) */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#D4AF37 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#A68253 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <Reveal>
@@ -549,17 +557,17 @@ export default function FireCoursePage() {
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
-                className="group relative h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#D4AF37] to-[#FF6A3D] text-black shadow-[0_20px_60px_rgba(255,106,61,0.3)] transition-all duration-300 hover:-translate-y-2"
+                className="group relative h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#A68253] to-[#FF6A3D] text-black shadow-[0_20px_60px_rgba(255,106,61,0.3)] transition-all duration-300 hover:-translate-y-2"
               >
                 <span className="relative z-10 font-bold italic">강의 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#D4AF37] to-[#FF6A3D] opacity-0 blur-3xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
+                <span className="absolute -inset-2 bg-gradient-to-br from-[#A68253] to-[#FF6A3D] opacity-0 blur-3xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
               </a>
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 className="group flex flex-col items-center"
               >
-                <span className="text-white/40 group-hover:text-[#D4AF37] transition-all duration-300 text-xl tracking-[0.3em] uppercase border-b border-white/5 pb-1 mb-3">
+                <span className="text-white/40 group-hover:text-[#A68253] transition-all duration-300 text-xl tracking-[0.3em] uppercase border-b border-white/5 pb-1 mb-3">
                   문의하기
                 </span>
                 <span className="text-xs text-white/10 uppercase tracking-[0.6em]">Reach Out</span>
@@ -570,7 +578,7 @@ export default function FireCoursePage() {
           <Reveal delayMs={800}>
             <Link
               href="/courses"
-              className="inline-block mt-40 text-white/20 hover:text-[#D4AF37] transition-all duration-500 text-sm tracking-[0.5em] uppercase font-light"
+              className="inline-block mt-40 text-white/20 hover:text-[#A68253] transition-all duration-500 text-sm tracking-[0.5em] uppercase font-light"
             >
               ← Return To Collection
             </Link>
