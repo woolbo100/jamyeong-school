@@ -86,15 +86,18 @@ export default function EarthCoursePage() {
   const part1 = curriculumData.slice(0, 3);
   const part2 = curriculumData.slice(3, 6);
 
+  // New Premium Gold from the provided image
+  const PREMIUM_GOLD = "#A68253";
+
   return (
-    <div className="bg-[#090909] min-h-screen text-white font-sans selection:bg-antiqueGold/30 overflow-x-hidden">
+    <div className="bg-[#090909] min-h-screen text-white font-sans selection:bg-[#A68253]/30 overflow-x-hidden">
       
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
-        {/* Aura Background - Gold & Subtle Gray */}
+        {/* Aura Background - Updated to Refined Gold */}
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.07] pointer-events-none"
-          style={{ backgroundColor: "#D4AF37" }}
+          style={{ backgroundColor: PREMIUM_GOLD }}
         ></div>
         <div 
           className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] blur-[150px] opacity-[0.05] pointer-events-none"
@@ -109,15 +112,15 @@ export default function EarthCoursePage() {
                   src="/images/icon/earth.png" 
                   alt="Earth Icon" 
                   fill 
-                  className="object-contain filter drop-shadow-[0_0_20px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform duration-1000" 
+                  className="object-contain filter drop-shadow-[0_0_20px_rgba(166,130,83,0.3)] group-hover:scale-110 transition-transform duration-1000" 
                 />
               </div>
             </div>
-            <div className="text-[#D4AF37] text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium">
+            <div className={`text-[${PREMIUM_GOLD}] text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium`} style={{ color: PREMIUM_GOLD }}>
               Earth Curriculum • 6 Weeks
             </div>
             <h1 className="text-5xl md:text-8xl font-display mb-10 leading-tight tracking-tight italic">
-              마음을 <span className="text-[#D4AF37]">심다</span>
+              마음을 <span style={{ color: PREMIUM_GOLD }}>심다</span>
             </h1>
             <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto mb-16">
               나를 이해하고, <span className="text-white font-medium">나의 이야기를 시작하는 첫 단계</span>
@@ -125,19 +128,17 @@ export default function EarthCoursePage() {
           </Reveal>
 
           <Reveal delayMs={200}>
-            {/* Background changed to subtle gold feeling background tint */}
-            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.08)] mb-16 relative overflow-hidden group shadow-2xl">
-              <div className="absolute inset-0 bg-jamyeong-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(166,130,83,0.1)] mb-16 relative overflow-hidden group shadow-2xl">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ backgroundColor: `${PREMIUM_GOLD}0D` }}></div>
               <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed italic">
                 “혼란스럽고 방향이 보이지 않을 때 <br />
                 가장 먼저 필요한 것은 <br className="hidden md:block" />
                 <span className="text-white font-semibold">‘무엇을 할까’</span>가 아니라 <br className="hidden md:block" />
-                <span className="text-[#D4AF37] font-semibold">‘나는 누구인가’</span>를 아는 것입니다.”
+                <span style={{ color: PREMIUM_GOLD }} className="font-semibold">‘나는 누구인가’</span>를 아는 것입니다.”
               </p>
             </div>
           </Reveal>
 
-          {/* Reverting to previous premium rounded-full gradient buttons */}
           <Reveal delayMs={400}>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
               <a
@@ -150,10 +151,11 @@ export default function EarthCoursePage() {
                 <span className="absolute -inset-2 bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
               </a>
               <button
-                className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#D4AF37] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
+                className={`group flex items-center gap-3 text-[#BFBFBF] hover:text-[${PREMIUM_GOLD}] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1`}
+                style={{ "--hover-color": PREMIUM_GOLD } as any}
                 onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
               >
-                <span className="text-xl">📄</span> 강의 안내 PDF 보기
+                 <span className="text-xl">📄</span> 강의 안내 PDF 보기
               </button>
             </div>
           </Reveal>
@@ -181,7 +183,7 @@ export default function EarthCoursePage() {
             <Reveal>
               <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight text-white">
                 혹시 이런 고민을 <br />
-                <span className="text-[#D4AF37]">하고 계신가요?</span>
+                <span style={{ color: PREMIUM_GOLD }}>하고 계신가요?</span>
               </h2>
               <div className="space-y-6">
                 {[
@@ -190,7 +192,7 @@ export default function EarthCoursePage() {
                   "글을 쓰고 싶지만 무엇부터 시작해야 할지 모르겠습니다",
                   "내 이야기를 표현하고 싶은데 방법이 없습니다"
                 ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-5 p-7 rounded-2xl bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.05)] group hover:border-[#D4AF37]/30 transition-all duration-500">
+                  <div key={i} className="flex items-center gap-5 p-7 rounded-2xl bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-white/[0.03] group transition-all duration-500 hover:border-[rgba(166,130,83,0.3)]">
                     <span className="text-[#6B8F71] text-2xl">✦</span>
                     <p className="text-[#BFBFBF] text-xl font-light">{text}</p>
                   </div>
@@ -199,7 +201,7 @@ export default function EarthCoursePage() {
               <div className="mt-14 p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/[0.05]">
                 <p className="text-xl md:text-2xl italic leading-relaxed text-[#BFBFBF]">
                   👉 그렇다면 지금 필요한 것은 <br />
-                  기술이 아니라 <span className="text-[#D4AF37] font-bold underline underline-offset-8">“내면 정리”</span>입니다
+                  기술이 아니라 <span style={{ color: PREMIUM_GOLD }} className="font-bold underline underline-offset-8">“내면 정리”</span>입니다
                 </p>
               </div>
             </Reveal>
@@ -227,7 +229,7 @@ export default function EarthCoursePage() {
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 이런 시작을 <br className="md:hidden" /> 만들어드립니다</h2>
               <p className="text-xl text-[#BFBFBF] font-light max-w-2xl mx-auto italic">
                 나를 브랜드 그림책 작가로 거듭나게 하는 <br />
-                <span className="text-[#D4AF37]">“아.그.작(아이디어 그림책 제작) 프로젝트”</span>
+                <span style={{ color: PREMIUM_GOLD }}>“아.그.작(아이디어 그림책 제작) 프로젝트”</span>
               </p>
             </div>
           </Reveal>
@@ -251,13 +253,12 @@ export default function EarthCoursePage() {
               }
             ].map((card, i) => (
               <Reveal key={i} delayMs={i * 200}>
-                {/* Surface background updated to subtle gold feeling gradient */}
-                <div className="p-12 rounded-[3rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.06)] h-full flex flex-col items-center text-center group hover:-translate-y-3 transition-all duration-700 hover:border-[#D4AF37]/20">
+                <div className="p-12 rounded-[3rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-white/[0.03] h-full flex flex-col items-center text-center group hover:-translate-y-3 transition-all duration-700 hover:border-[rgba(166,130,83,0.2)]">
                   <div className="relative w-20 h-20 mb-10 group-hover:rotate-[15deg] transition-transform duration-700">
                     <Image src={card.icon} alt={card.title} fill className="object-contain" />
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-white">{card.title}</h3>
-                  <div className="w-12 h-[1px] bg-[#D4AF37]/20 mb-8"></div>
+                  <div className="w-12 h-[1px] mb-8" style={{ backgroundColor: `${PREMIUM_GOLD}33` }}></div>
                   <p className="text-[#BFBFBF] leading-relaxed text-lg font-light">
                     → {card.desc}
                   </p>
@@ -270,25 +271,25 @@ export default function EarthCoursePage() {
 
       {/* 4. WHY */}
       <section className="py-40 px-6 relative overflow-hidden bg-[#0a0a0c]">
-        <div className="absolute inset-0 bg-[#D4AF37]/[0.02] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundColor: PREMIUM_GOLD }}></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
-            <span className="text-[#D4AF37] text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80">The Era of AI & Expression</span>
-            <h2 className="text-5xl md:text-7xl font-display mb-16 italic text-white">왜 지금 <span className="text-[#D4AF37]">‘표현’</span>이 중요한가</h2>
+            <span style={{ color: PREMIUM_GOLD }} className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80">The Era of AI & Expression</span>
+            <h2 className="text-5xl md:text-7xl font-display mb-16 italic text-white">왜 지금 <span style={{ color: PREMIUM_GOLD }}>‘표현’</span>이 중요한가</h2>
             
             <div className="space-y-12 text-xl md:text-3xl font-light text-[#BFBFBF] leading-relaxed">
               <p>
                 AI 시대는 기술의 시대가 아니라 <br />
                 <span className="text-white font-bold text-4xl md:text-5xl">“표현의 시대”</span>입니다
               </p>
-              <div className="w-[1px] h-16 bg-[#D4AF37]/20 mx-auto"></div>
+              <div className="w-[1px] h-16 mx-auto" style={{ backgroundColor: `${PREMIUM_GOLD}33` }}></div>
               <p>
                 아이디어는 있는데 <br />
                 표현하지 못하면 아무 일도 일어나지 않습니다
               </p>
-              <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.08)] mt-16 text-center">
-                <p className="text-[#D4AF37]/80 font-medium mb-3">AI는 도구일 뿐입니다</p>
-                <p className="text-white font-medium">중요한 것은 당신의 <span className="text-[#D4AF37]">이야기</span>와 <span className="text-[#D4AF37]">가치</span>입니다</p>
+              <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-white/[0.04] mt-16 text-center shadow-lg">
+                <p style={{ color: `${PREMIUM_GOLD}CC` }} className="font-medium mb-3">AI는 도구일 뿐입니다</p>
+                <p className="text-white font-medium">중요한 것은 당신의 <span style={{ color: PREMIUM_GOLD }}>이야기</span>와 <span style={{ color: PREMIUM_GOLD }}>가치</span>입니다</p>
               </div>
               <p className="mt-16 text-lg text-white/40">
                 이 강의는 그 표현의 시작을 만들어드립니다
@@ -307,7 +308,7 @@ export default function EarthCoursePage() {
               
               <div className="relative z-10 text-center mb-24">
                 <h2 className="text-5xl md:text-7xl font-display mb-10 tracking-tight italic text-white">상세 커리큘럼</h2>
-                <div className="w-32 h-[1px] bg-[#D4AF37]/30 mx-auto mb-10"></div>
+                <div className="w-32 h-[1px] mx-auto mb-10" style={{ backgroundColor: `${PREMIUM_GOLD}4D` }}></div>
                 
                 <p className="text-xl md:text-2xl text-[#BFBFBF] font-light max-w-2xl mx-auto leading-relaxed mb-12">
                   6주 동안 <br className="md:hidden" />
@@ -325,11 +326,11 @@ export default function EarthCoursePage() {
               {/* Part 1 */}
               <div className="mb-32">
                 <div className="flex items-center gap-8 mb-16">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20"></div>
-                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] text-[#D4AF37]/90 px-6 italic">
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to right, transparent, ${PREMIUM_GOLD}33)` }}></div>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] px-6 italic" style={{ color: `${PREMIUM_GOLD}E6` }}>
                     Part 1. <span className="text-white font-normal">나의 이야기와 그림책 완성</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20"></div>
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to left, transparent, ${PREMIUM_GOLD}33)` }}></div>
                 </div>
 
                 <div className="relative w-full aspect-[21/9] rounded-[2.5rem] overflow-hidden mb-20 border border-white/[0.05] shadow-2xl">
@@ -345,28 +346,28 @@ export default function EarthCoursePage() {
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part1.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A]">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A] hover:border-[rgba(166,130,83,0.3)]">
+                        <div className="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: `linear-gradient(to right, transparent, ${PREMIUM_GOLD}33, transparent)` }}></div>
                         
-                        <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
-                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[#D4AF37] transition-colors leading-tight">
+                        <div className="text-4xl font-display font-bold mb-6 tracking-tighter" style={{ color: `${PREMIUM_GOLD}66` }}>{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[${PREMIUM_GOLD}] transition-colors leading-tight" style={{ "--hover-color": PREMIUM_GOLD } as any}>
                           {item.summary}
                         </h4>
                         
                         <ul className="space-y-5 mb-12 flex-1">
                           {item.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors">
+                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors text-[1.05rem]">
                               <span className="text-[#6B8F71] text-xs mt-2">✦</span>
-                              <span className="text-[1.1rem] leading-[1.8] font-light">{detail}</span>
+                              <span className="leading-[1.7] font-light">{detail}</span>
                             </li>
                           ))}
                         </ul>
 
                         <div className="pt-8 border-t border-white/[0.05] flex items-center justify-between">
-                          <span className="text-[#D4AF37] font-bold text-xl italic tracking-wide">
+                          <span className="font-bold text-xl italic tracking-wide" style={{ color: PREMIUM_GOLD }}>
                              {item.result}
                           </span>
-                          <span className="text-[#D4AF37]/30 text-2xl group-hover:translate-x-2 transition-transform duration-500">→</span>
+                          <span className="text-2xl group-hover:translate-x-2 transition-transform duration-500" style={{ color: `${PREMIUM_GOLD}4D` }}>→</span>
                         </div>
                       </div>
                     </Reveal>
@@ -377,38 +378,38 @@ export default function EarthCoursePage() {
               {/* Part 2 */}
               <div>
                 <div className="flex items-center gap-8 mb-16">
-                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]/20"></div>
-                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] text-[#D4AF37]/90 px-6 italic">
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to right, transparent, ${PREMIUM_GOLD}33)` }}></div>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-[0.2em] px-6 italic" style={{ color: `${PREMIUM_GOLD}E6` }}>
                     Part 2. <span className="text-white font-normal">영상·굿즈·출판까지 확장</span>
                   </h3>
-                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]/20"></div>
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to left, transparent, ${PREMIUM_GOLD}33)` }}></div>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part2.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A]">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A] hover:border-[rgba(166,130,83,0.3)]">
+                        <div className="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: `linear-gradient(to right, transparent, ${PREMIUM_GOLD}33, transparent)` }}></div>
                         
-                        <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
-                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[#D4AF37] transition-colors leading-tight">
+                        <div className="text-4xl font-display font-bold mb-6 tracking-tighter" style={{ color: `${PREMIUM_GOLD}66` }}>{item.week}</div>
+                        <h4 className="text-2xl font-bold mb-8 text-white group-hover:text-[${PREMIUM_GOLD}] transition-colors leading-tight" style={{ "--hover-color": PREMIUM_GOLD } as any}>
                           {item.summary}
                         </h4>
                         
                         <ul className="space-y-5 mb-12 flex-1">
                           {item.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors">
+                            <li key={idx} className="flex items-start gap-5 text-[#BFBFBF] group-hover:text-white transition-colors text-[1.05rem]">
                               <span className="text-[#6B8F71] text-xs mt-2">✦</span>
-                              <span className="text-[1.1rem] leading-[1.8] font-light">{detail}</span>
+                              <span className="leading-[1.7] font-light">{detail}</span>
                             </li>
                           ))}
                         </ul>
 
                         <div className="pt-8 border-t border-white/[0.05] flex items-center justify-between">
-                          <span className="text-[#D4AF37] font-bold text-xl italic tracking-wide">
+                          <span className="font-bold text-xl italic tracking-wide" style={{ color: PREMIUM_GOLD }}>
                              {item.result}
                           </span>
-                          <span className="text-[#D4AF37]/30 text-2xl group-hover:translate-x-2 transition-transform duration-500">→</span>
+                          <span className="text-2xl group-hover:translate-x-2 transition-transform duration-500" style={{ color: `${PREMIUM_GOLD}4D` }}>→</span>
                         </div>
                       </div>
                     </Reveal>
@@ -427,7 +428,7 @@ export default function EarthCoursePage() {
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의를 듣고 나면</h2>
-              <div className="w-20 h-[1px] bg-[#D4AF37]/20 mx-auto"></div>
+              <div className="w-20 h-[1px] mx-auto" style={{ backgroundColor: `${PREMIUM_GOLD}33` }}></div>
             </div>
           </Reveal>
 
@@ -439,8 +440,8 @@ export default function EarthCoursePage() {
               { text: "글쓰기, 콘텐츠 제작의 출발점이 만들어집니다", highlight: "표현의 시작" }
             ].map((item, i) => (
               <Reveal key={i} delayMs={i * 150}>
-                <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.04)] flex items-start gap-6 group hover:border-[#D4AF37]/20 transition-all duration-500">
-                  <span className="w-10 h-10 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all">✓</span>
+                <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-white/[0.02] flex items-start gap-6 group transition-all duration-500 hover:border-[rgba(166,130,83,0.2)]">
+                  <span className={`w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0 group-hover:text-black transition-all`} style={{ backgroundColor: `${PREMIUM_GOLD}1A`, color: PREMIUM_GOLD }}>✓</span>
                   <p className="text-2xl text-[#BFBFBF] font-light leading-snug">
                     {item.text}
                   </p>
@@ -451,7 +452,7 @@ export default function EarthCoursePage() {
           
           <Reveal delayMs={600}>
             <div className="mt-24 text-center">
-              <p className="text-4xl md:text-6xl font-display text-[#D4AF37] italic tracking-tight">
+              <p className="text-4xl md:text-6xl font-display italic tracking-tight" style={{ color: PREMIUM_GOLD }}>
                 “막막함 → <span className="text-white">확신</span>”으로 바뀌는 경험
               </p>
             </div>
@@ -464,17 +465,17 @@ export default function EarthCoursePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <Reveal>
-              <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic text-white">이 과정은 <br /> <span className="text-[#D4AF37]">시작일 뿐입니다</span></h2>
+              <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic text-white">이 과정은 <br /> <span style={{ color: PREMIUM_GOLD }}>시작일 뿐입니다</span></h2>
               <div className="space-y-10 text-2xl font-light text-[#BFBFBF] leading-relaxed mb-16">
                 <p>브랜드 그림책 출판을 넘어,</p>
                 <div className="flex flex-wrap gap-5 mt-10">
                   {["전자책 출판", "POD 종이책", "캐릭터 굿즈", "예술인 등록", "1인 출판사"].map((tag, i) => (
-                    <span key={i} className="px-8 py-3 rounded-xl bg-white/[0.03] border border-white/[0.07] text-[#D4AF37] text-lg font-medium">
+                    <span key={i} className="px-8 py-3 rounded-xl bg-white/[0.03] border border-white/[0.07] text-lg font-medium" style={{ color: PREMIUM_GOLD }}>
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-3xl text-white font-medium mt-14">👉 당신의 지혜가 <span className="text-[#D4AF37]">수익</span>과 <span className="text-[#D4AF37]">영향력</span>이 됩니다.</p>
+                <p className="text-3xl text-white font-medium mt-14">👉 당신의 지혜가 <span style={{ color: PREMIUM_GOLD }}>수익</span>과 <span style={{ color: PREMIUM_GOLD }}>영향력</span>이 됩니다.</p>
                 <p>모든 시작은 <span className="text-white font-bold italic">“나를 아는 것”</span>에서 출발합니다.</p>
               </div>
             </Reveal>
@@ -500,7 +501,7 @@ export default function EarthCoursePage() {
           <Reveal>
             <div className="text-center mb-28">
               <h2 className="text-4xl md:text-6xl font-display mb-6 italic text-white">이 강의가 특별한 이유</h2>
-              <div className="w-24 h-[1px] bg-[#D4AF37]/40 mx-auto"></div>
+              <div className="w-24 h-[1px] mx-auto" style={{ backgroundColor: `${PREMIUM_GOLD}66` }}></div>
             </div>
           </Reveal>
 
@@ -513,9 +514,9 @@ export default function EarthCoursePage() {
             ].map((item, i) => (
               <Reveal key={i} delayMs={i * 150}>
                 <div className="flex gap-8 group">
-                  <div className="text-[#D4AF37] text-4xl font-display font-bold italic opacity-40 group-hover:opacity-100 transition-opacity">0{i+1}</div>
+                  <div className="text-4xl font-display font-bold italic opacity-40 group-hover:opacity-100 transition-opacity" style={{ color: PREMIUM_GOLD }}>0{i+1}</div>
                   <div>
-                    <h4 className="text-3xl font-bold mb-4 text-white group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
+                    <h4 className="text-3xl font-bold mb-4 text-white group-hover:text-[${PREMIUM_GOLD}] transition-colors" style={{ "--hover-color": PREMIUM_GOLD } as any}>{item.title}</h4>
                     <p className="text-xl text-[#BFBFBF] font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -524,12 +525,11 @@ export default function EarthCoursePage() {
           </div>
 
           <Reveal delayMs={800}>
-            {/* Subtle gold highlight container */}
-            <div className="mt-32 p-16 rounded-[4rem] bg-gradient-to-br from-[#1c1914] to-transparent border border-[rgba(212,175,55,0.15)] text-center relative overflow-hidden group shadow-2xl">
-              <div className="absolute inset-0 bg-jamyeong-gold/5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000"></div>
+            <div className="mt-32 p-16 rounded-[4rem] bg-gradient-to-br from-[#1c1914] to-transparent border border-[rgba(166,130,83,0.15)] text-center relative overflow-hidden group shadow-2xl">
+              <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000" style={{ backgroundColor: `${PREMIUM_GOLD}0D` }}></div>
               <p className="relative z-10 text-3xl md:text-5xl font-display italic leading-tight text-white">
                 “도구가 아니라 <br className="md:hidden" />
-                <span className="text-[#D4AF37] font-bold">사람 자체를 바꾸는 강의</span>입니다.”
+                <span style={{ color: PREMIUM_GOLD }} className="font-bold">사람 자체를 바꾸는 강의</span>입니다.”
               </p>
             </div>
           </Reveal>
@@ -538,17 +538,16 @@ export default function EarthCoursePage() {
 
       {/* 9. CTA */}
       <section className="py-48 px-6 text-center bg-[#090909] relative overflow-hidden">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#D4AF37]/5 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#A682531A] to-transparent pointer-events-none"></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
             <h2 className="text-4xl md:text-7xl font-display mb-16 leading-tight italic text-white">
               지금 필요한 것은 <br />
               더 많은 정보가 아니라 <br className="md:hidden" />
-              <span className="text-[#D4AF37]">나를 이해하고 표현하는 시간</span>입니다.
+              <span style={{ color: PREMIUM_GOLD }}>나를 이해하고 표현하는 시간</span>입니다.
             </h2>
           </Reveal>
 
-          {/* Reverting to previous premium rounded-full gradient buttons */}
           <Reveal delayMs={300}>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mt-16">
               <a
@@ -565,7 +564,7 @@ export default function EarthCoursePage() {
                 target="_blank"
                 className="group flex flex-col items-center"
               >
-                <span className="text-[#BFBFBF] group-hover:text-[#D4AF37] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3">
+                <span className={`text-[#BFBFBF] hover:text-[${PREMIUM_GOLD}] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3`} style={{ "--hover-color": PREMIUM_GOLD } as any}>
                   문의하기
                 </span>
                 <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Contact Us</span>
@@ -576,7 +575,8 @@ export default function EarthCoursePage() {
           <Reveal delayMs={600}>
             <Link
               href="/courses"
-              className="inline-block mt-40 text-white/20 hover:text-[#D4AF37] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
+              className={`inline-block mt-40 text-white/20 hover:text-[${PREMIUM_GOLD}] transition-all duration-500 text-sm tracking-[0.6em] uppercase`}
+              style={{ "--hover-color": PREMIUM_GOLD } as any}
             >
               ← BACK TO COURSES
             </Link>
