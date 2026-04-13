@@ -71,7 +71,7 @@ export default function FireCoursePage() {
       title: "브랜드 확장 및 전시",
       summary: "굿즈 제작, 출판 그리고 온라인 전시회",
       details: [
-        "미드저니 이미지로 나만의 굿즈 만들기",
+        "미드저니 이미지으로 나만의 굿즈 만들기",
         "메타버스 온라인 전시 및 플레이리스트",
         "나의 작품 영상 SNS 홍보 마케팅",
         "완성 책 출판 등록 및 광고 소재 제작"
@@ -91,91 +91,114 @@ export default function FireCoursePage() {
   return (
     <div className="bg-black min-h-screen text-white font-sans selection:bg-[#FF6A3D]/30 overflow-x-hidden">
       
-      {/* 1. Hero Section (Earth Style Centered Top) */}
+      {/* 1. Hero Section (New Hybrid Layout) */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
         {/* Glow Effects */}
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.08] pointer-events-none"
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] blur-[150px] opacity-[0.05] pointer-events-none"
           style={{ background: `radial-gradient(circle, ${GOLD}, transparent 70%)` }}
         ></div>
         
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* VERY TOP: Icon & Title (Earth Style) */}
           <Reveal>
-            {/* Top Icon Area */}
-            <div className="flex justify-center mb-10">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 group">
-                <Image 
-                  src="/images/icon/fire.png" 
-                  alt="Fire Icon" 
-                  fill 
-                  className="object-contain filter drop-shadow-[0_0_20px_rgba(166,130,83,0.3)] group-hover:scale-110 transition-transform duration-1000" 
-                />
+            <div className="text-center mb-24 lg:mb-32">
+              <div className="flex justify-center mb-10">
+                <div className="relative w-20 h-20 md:w-28 md:h-28 group">
+                  <Image 
+                    src="/images/icon/fire.png" 
+                    alt="Fire Icon" 
+                    fill 
+                    className="object-contain filter drop-shadow-[0_0_20px_rgba(166,130,83,0.3)] group-hover:scale-110 transition-transform duration-1000" 
+                  />
+                </div>
               </div>
-            </div>
-
-            <div className={`text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium`} style={{ color: GOLD }}>
-              Fire Curriculum • 6 Weeks
-            </div>
-            
-            <h1 className="text-5xl md:text-8xl font-display mb-10 leading-tight tracking-tight italic">
-              AI 아트 & <span style={{ color: GOLD }}>영상 창작 과정</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto mb-16">
-              당신의 감성이 <span className="text-white font-medium italic underline underline-offset-8" style={{ textDecorationColor: ORANGE }}>작품이 되는 순간</span>
-            </p>
-          </Reveal>
-
-          <Reveal delayMs={200}>
-            {/* Quote Box Style (Matched to Earth) */}
-            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(166,130,83,0.1)] mb-16 relative overflow-hidden group shadow-2xl">
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ backgroundColor: `${GOLD}0D` }}></div>
-              <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed italic">
-                “단순한 기술 학습이 아니라 <br />
-                나의 감정을 시각화하고 <br className="hidden md:block" />
-                <span className="text-white font-semibold">‘매력적인 콘텐츠’</span>를 설계하는 <br className="hidden md:block" />
-                <span style={{ color: GOLD }} className="font-semibold">프로페셔널 크리에이터</span> 양성 과정입니다.”
+              <div className="text-sm tracking-[0.5rem] mb-8 uppercase font-display opacity-80" style={{ color: GOLD }}>
+                Fire Curriculum • 6 Weeks
+              </div>
+              <h1 className="text-6xl md:text-9xl font-display mb-10 leading-tight tracking-[0.05em] italic">
+                마음을 <span style={{ color: GOLD }}>그리다</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto">
+                매력적인 콘텐츠를 설계하는 <br className="md:hidden" />
+                <span className="text-white font-medium">프로페셔널 아트 크리에이터 양성 과정</span>
               </p>
+              <div className="w-24 h-[1px] bg-white/10 mx-auto mt-16" />
             </div>
           </Reveal>
 
-          <Reveal delayMs={400}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                className="group relative h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#A68253] to-[#8B5E3C] text-white shadow-2xl transition-all duration-300 hover:-translate-y-[2px]"
-              >
-                <span className="relative z-10 font-bold italic">강의 안내 받기</span>
-                <div className="absolute -inset-2 bg-gradient-to-br from-[#A68253] to-[#8B5E3C] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-              </a>
-              <a 
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                className="group flex flex-col items-center"
-              >
-                 <span className={`text-[#BFBFBF] hover:text-[${GOLD}] transition-all duration-300 text-base tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-1`} style={{ "--hover-color": GOLD } as any}>
-                  문의하기
-                </span>
-                <span className="text-[10px] text-white/20 uppercase tracking-[0.5em]">Reach Out</span>
-              </a>
-            </div>
-          </Reveal>
-        </div>
+          {/* MAIN HERO: Split Layout (The one you liked) */}
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+            <div className="lg:w-1/2 text-left">
+              <Reveal delayMs={300} slideFrom="left">
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="w-12 h-[1px]" style={{ background: `linear-gradient(to right, transparent, ${GOLD})` }}></div>
+                  <span className="text-sm tracking-[0.4rem] uppercase font-display font-medium" style={{ color: GOLD }}>
+                    Creator Training Program
+                  </span>
+                </div>
+                <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight tracking-tight italic">
+                  AI 아트 &<br />
+                  <span style={{ color: GOLD }}>영상 창작 과정</span>
+                </h2>
+                
+                <div className="space-y-8 mb-16">
+                  <h3 className="text-3xl md:text-5xl font-light text-white leading-tight">
+                    당신의 감성이<br />
+                    <span className="font-bold underline underline-offset-8" style={{ textDecorationColor: ORANGE }}>작품이 되는 순간</span>
+                  </h3>
+                  <p className="text-xl text-[#BFBFBF] font-light leading-relaxed max-w-xl">
+                    이미지 제작을 넘어 영상과 브랜드까지 연결되는<br />
+                    <span className="text-white font-medium">가장 감각적인 6주간의 프로젝트</span>
+                  </p>
+                </div>
 
-        {/* Hero Visual Unit (Repositioned below the quote) */}
-        <div className="max-w-6xl mx-auto mt-28 px-6">
-          <Reveal delayMs={600} slideFrom="bottom">
-            <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/[0.05] shadow-[0_30px_60px_rgba(0,0,0,0.5)] group">
-              <Image 
-                src="/images/courses/fire/hero.png" 
-                alt="Fire Creative Artwork" 
-                fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-[3000ms]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                <div className="flex flex-col sm:flex-row gap-8">
+                  <a
+                    href="https://pf.kakao.com/_IxguMn"
+                    target="_blank"
+                    className="group relative h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#A68253] to-[#8B5E3C] text-white shadow-2xl transition-all duration-300 hover:-translate-y-[2px]"
+                  >
+                    <span className="relative z-10 font-bold italic">강의 안내 받기</span>
+                    <div className="absolute -inset-2 bg-gradient-to-br from-[#A68253] to-[#8B5E3C] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+                  </a>
+                  <a 
+                    href="https://pf.kakao.com/_IxguMn"
+                    target="_blank"
+                    className="group flex flex-col items-center justify-center sm:items-start"
+                  >
+                    <span className="text-white/60 group-hover:text-white transition-all duration-300 text-sm tracking-widest uppercase border-b border-white/10 pb-1 mb-1">
+                      문의하기
+                    </span>
+                    <span className="text-[10px] text-white/20 uppercase tracking-[0.6em]">REACH OUT</span>
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* Hero Image Visual */}
+            <div className="lg:w-1/2 w-full">
+              <Reveal delayMs={500} slideFrom="right">
+                <div className="relative aspect-[4/5] md:aspect-square rounded-[3rem] overflow-hidden border border-white/[0.1] shadow-[0_0_100px_rgba(166,130,83,0.15)] group">
+                  <Image 
+                    src="/images/courses/fire/hero.png" 
+                    alt="Fire Professional Artwork" 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-[3000ms]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60"></div>
+                  
+                  {/* Floating Narrative Box */}
+                  <div className="absolute bottom-12 left-12 p-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-white/10 max-w-[280px]">
+                    <p className="text-sm font-light text-white/90 italic leading-relaxed">
+                      "도구를 배우는 단계에서 <br />
+                      전문가로 거듭나는 경험"
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -225,7 +248,7 @@ export default function FireCoursePage() {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-center mb-24">
-              <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 당신을 이렇세 바꿉니다</h2>
+              <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 당신을 이렇게 바꿉니다</h2>
             </div>
           </Reveal>
 
@@ -265,7 +288,7 @@ export default function FireCoursePage() {
 
       {/* 4. WHY Section */}
       <section className="py-40 px-6 relative overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,175,55,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(166,130,83,0.05),transparent_50%)]" />
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
             <span style={{ color: GOLD }} className="text-sm tracking-[0.5em] uppercase mb-10 block font-semibold">The Core Philosophy</span>
@@ -305,7 +328,7 @@ export default function FireCoursePage() {
               </p>
               <div className="w-24 h-[1px] bg-white/20 mx-auto mt-12 mb-12" />
               <p className="text-lg text-[#BFBFBF] font-light">
-                이 과정에서 만든 결과물은 단순한 연습이 아니라<br />
+                이 과정에서 만든 결과물을 단순한 연습이 아니라<br />
                 실제 작품이 됩니다
               </p>
             </div>
@@ -450,7 +473,7 @@ export default function FireCoursePage() {
 
       {/* 7. 결과 섹션 */}
       <section className="py-40 px-6 bg-black">
-        <div className="max-w-5xl mx-auto shadow-[0_0_100px_rgba(212,175,55,0.05)] rounded-[4rem] p-12 md:p-24 border border-white/5">
+        <div className="max-w-5xl mx-auto shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[4rem] p-12 md:p-24 border border-white/5">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-7xl font-display mb-10 text-white italic">이 과정을 끝내면</h2>
@@ -570,7 +593,7 @@ export default function FireCoursePage() {
                 <span className="text-white/40 group-hover:text-[#A68253] transition-all duration-300 text-xl tracking-[0.3em] uppercase border-b border-white/5 pb-1 mb-3">
                   문의하기
                 </span>
-                <span className="text-xs text-white/10 uppercase tracking-[0.6em]">Reach Out</span>
+                <span className="text-xs text-white/10 uppercase tracking-[0.6em]">REACH OUT</span>
               </a>
             </div>
           </Reveal>
