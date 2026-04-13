@@ -91,7 +91,7 @@ export default function EarthCoursePage() {
       
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
-        {/* Aura Background - Refined to Gold & Subtle Gray */}
+        {/* Aura Background - Gold & Subtle Gray */}
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.07] pointer-events-none"
           style={{ backgroundColor: "#D4AF37" }}
@@ -125,7 +125,8 @@ export default function EarthCoursePage() {
           </Reveal>
 
           <Reveal delayMs={200}>
-            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-[#14161A] border border-white/[0.05] mb-16 relative overflow-hidden group shadow-2xl">
+            {/* Background changed to subtle gold feeling background tint */}
+            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.08)] mb-16 relative overflow-hidden group shadow-2xl">
               <div className="absolute inset-0 bg-jamyeong-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed italic">
                 “혼란스럽고 방향이 보이지 않을 때 <br />
@@ -136,15 +137,17 @@ export default function EarthCoursePage() {
             </div>
           </Reveal>
 
+          {/* Reverting to previous premium rounded-full gradient buttons */}
           <Reveal delayMs={400}>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative h-16 w-full sm:w-72 flex items-center justify-center text-lg font-bold tracking-widest rounded-xl bg-[#D4AF37] text-black transition-all duration-300 transform-gpu hover:bg-[#E6C25A] hover:-translate-y-1 shadow-[0_10px_30px_rgba(212,175,55,0.2)]"
+                className="group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
               >
-                <span className="relative z-10">강의 안내 받기</span>
+                <span className="relative z-10 font-bold italic">👉 강의 안내 받기</span>
+                <span className="absolute -inset-2 bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
               </a>
               <button
                 className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#D4AF37] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
@@ -176,7 +179,7 @@ export default function EarthCoursePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
-              <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight text-white">
                 혹시 이런 고민을 <br />
                 <span className="text-[#D4AF37]">하고 계신가요?</span>
               </h2>
@@ -187,7 +190,7 @@ export default function EarthCoursePage() {
                   "글을 쓰고 싶지만 무엇부터 시작해야 할지 모르겠습니다",
                   "내 이야기를 표현하고 싶은데 방법이 없습니다"
                 ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-5 p-7 rounded-2xl bg-[#14161A] border border-white/[0.03] group hover:border-[#D4AF37]/30 transition-all duration-500">
+                  <div key={i} className="flex items-center gap-5 p-7 rounded-2xl bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.05)] group hover:border-[#D4AF37]/30 transition-all duration-500">
                     <span className="text-[#6B8F71] text-2xl">✦</span>
                     <p className="text-[#BFBFBF] text-xl font-light">{text}</p>
                   </div>
@@ -248,7 +251,8 @@ export default function EarthCoursePage() {
               }
             ].map((card, i) => (
               <Reveal key={i} delayMs={i * 200}>
-                <div className="p-12 rounded-[3rem] bg-[#14161A] border border-white/[0.03] h-full flex flex-col items-center text-center group hover:-translate-y-3 transition-all duration-700 hover:border-[#D4AF37]/20">
+                {/* Surface background updated to subtle gold feeling gradient */}
+                <div className="p-12 rounded-[3rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.06)] h-full flex flex-col items-center text-center group hover:-translate-y-3 transition-all duration-700 hover:border-[#D4AF37]/20">
                   <div className="relative w-20 h-20 mb-10 group-hover:rotate-[15deg] transition-transform duration-700">
                     <Image src={card.icon} alt={card.title} fill className="object-contain" />
                   </div>
@@ -270,7 +274,7 @@ export default function EarthCoursePage() {
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
             <span className="text-[#D4AF37] text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80">The Era of AI & Expression</span>
-            <h2 className="text-5xl md:text-7xl font-display mb-16 italic">왜 지금 <span className="text-[#D4AF37]">‘표현’</span>이 중요한가</h2>
+            <h2 className="text-5xl md:text-7xl font-display mb-16 italic text-white">왜 지금 <span className="text-[#D4AF37]">‘표현’</span>이 중요한가</h2>
             
             <div className="space-y-12 text-xl md:text-3xl font-light text-[#BFBFBF] leading-relaxed">
               <p>
@@ -282,7 +286,7 @@ export default function EarthCoursePage() {
                 아이디어는 있는데 <br />
                 표현하지 못하면 아무 일도 일어나지 않습니다
               </p>
-              <div className="p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.04] mt-16 text-center">
+              <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.08)] mt-16 text-center">
                 <p className="text-[#D4AF37]/80 font-medium mb-3">AI는 도구일 뿐입니다</p>
                 <p className="text-white font-medium">중요한 것은 당신의 <span className="text-[#D4AF37]">이야기</span>와 <span className="text-[#D4AF37]">가치</span>입니다</p>
               </div>
@@ -302,7 +306,7 @@ export default function EarthCoursePage() {
                  style={{ background: "linear-gradient(180deg, rgba(20,22,26,0.98) 0%, rgba(9,9,9,1) 100%)" }}>
               
               <div className="relative z-10 text-center mb-24">
-                <h2 className="text-5xl md:text-7xl font-display mb-10 tracking-tight italic">상세 커리큘럼</h2>
+                <h2 className="text-5xl md:text-7xl font-display mb-10 tracking-tight italic text-white">상세 커리큘럼</h2>
                 <div className="w-32 h-[1px] bg-[#D4AF37]/30 mx-auto mb-10"></div>
                 
                 <p className="text-xl md:text-2xl text-[#BFBFBF] font-light max-w-2xl mx-auto leading-relaxed mb-12">
@@ -341,7 +345,7 @@ export default function EarthCoursePage() {
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part1.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-[#14161A]">
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A]">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         
                         <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
@@ -383,7 +387,7 @@ export default function EarthCoursePage() {
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
                   {part2.map((item, i) => (
                     <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
-                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-[#14161A]">
+                      <div className="group relative p-12 rounded-[2.5rem] border border-white/[0.04] hover:border-[#D4AF37]/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#1c1914] to-[#14161A]">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         
                         <div className="text-4xl font-display text-[#D4AF37]/40 font-bold mb-6 tracking-tighter">{item.week}</div>
@@ -422,7 +426,7 @@ export default function EarthCoursePage() {
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-center mb-24">
-              <h2 className="text-4xl md:text-6xl font-display mb-8">이 강의를 듣고 나면</h2>
+              <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의를 듣고 나면</h2>
               <div className="w-20 h-[1px] bg-[#D4AF37]/20 mx-auto"></div>
             </div>
           </Reveal>
@@ -435,7 +439,7 @@ export default function EarthCoursePage() {
               { text: "글쓰기, 콘텐츠 제작의 출발점이 만들어집니다", highlight: "표현의 시작" }
             ].map((item, i) => (
               <Reveal key={i} delayMs={i * 150}>
-                <div className="p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.02] flex items-start gap-6 group hover:border-[#D4AF37]/20 transition-all duration-500">
+                <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#1c1914] to-[#14161A] border border-[rgba(212,175,55,0.04)] flex items-start gap-6 group hover:border-[#D4AF37]/20 transition-all duration-500">
                   <span className="w-10 h-10 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-[#D4AF37] group-hover:text-black transition-all">✓</span>
                   <p className="text-2xl text-[#BFBFBF] font-light leading-snug">
                     {item.text}
@@ -460,7 +464,7 @@ export default function EarthCoursePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <Reveal>
-              <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic">이 과정은 <br /> <span className="text-[#D4AF37]">시작일 뿐입니다</span></h2>
+              <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic text-white">이 과정은 <br /> <span className="text-[#D4AF37]">시작일 뿐입니다</span></h2>
               <div className="space-y-10 text-2xl font-light text-[#BFBFBF] leading-relaxed mb-16">
                 <p>브랜드 그림책 출판을 넘어,</p>
                 <div className="flex flex-wrap gap-5 mt-10">
@@ -491,7 +495,7 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 8. 특별한 점 */}
-      <section className="py-40 px-6 bg-[#14161A]">
+      <section className="py-40 px-6 bg-gradient-to-b from-[#14161A] to-[#090909]">
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="text-center mb-28">
@@ -520,9 +524,10 @@ export default function EarthCoursePage() {
           </div>
 
           <Reveal delayMs={800}>
-            <div className="mt-32 p-16 rounded-[4rem] bg-gradient-to-br from-[#D4AF37]/10 to-transparent border border-[#D4AF37]/20 text-center relative overflow-hidden group">
+            {/* Subtle gold highlight container */}
+            <div className="mt-32 p-16 rounded-[4rem] bg-gradient-to-br from-[#1c1914] to-transparent border border-[rgba(212,175,55,0.15)] text-center relative overflow-hidden group shadow-2xl">
               <div className="absolute inset-0 bg-jamyeong-gold/5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000"></div>
-              <p className="relative z-10 text-3xl md:text-5xl font-display italic leading-tight">
+              <p className="relative z-10 text-3xl md:text-5xl font-display italic leading-tight text-white">
                 “도구가 아니라 <br className="md:hidden" />
                 <span className="text-[#D4AF37] font-bold">사람 자체를 바꾸는 강의</span>입니다.”
               </p>
@@ -534,24 +539,26 @@ export default function EarthCoursePage() {
       {/* 9. CTA */}
       <section className="py-48 px-6 text-center bg-[#090909] relative overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#D4AF37]/5 to-transparent pointer-events-none"></div>
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
           <Reveal>
-            <h2 className="text-4xl md:text-7xl font-display mb-16 leading-tight italic">
+            <h2 className="text-4xl md:text-7xl font-display mb-16 leading-tight italic text-white">
               지금 필요한 것은 <br />
               더 많은 정보가 아니라 <br className="md:hidden" />
               <span className="text-[#D4AF37]">나를 이해하고 표현하는 시간</span>입니다.
             </h2>
           </Reveal>
 
+          {/* Reverting to previous premium rounded-full gradient buttons */}
           <Reveal delayMs={300}>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mt-16">
               <a
                 href="https://pf.kakao.com/_IxguMn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative h-20 w-full sm:w-96 flex items-center justify-center text-2xl font-bold tracking-[0.2em] rounded-xl bg-[#D4AF37] text-black transition-all duration-300 transform-gpu hover:bg-[#E6C25A] hover:-translate-y-2 shadow-[0_20px_60px_rgba(212,175,55,0.3)]"
+                className="group relative overflow-visible h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-2"
               >
-                <span className="relative z-10 font-bold italic">강의 안내 받기</span>
+                <span className="relative z-10 font-bold italic">👉 강의 안내 받기</span>
+                <span className="absolute -inset-2 bg-gradient-to-br from-[#8B5E3C] to-[#2D5A27] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
               </a>
               <a
                 href="https://pf.kakao.com/_IxguMn"
