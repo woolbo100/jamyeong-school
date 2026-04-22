@@ -47,7 +47,7 @@ export default function FiveElementsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-black text-white relative overflow-hidden">
+    <section className="py-24 px-6 text-white relative overflow-hidden">
       {/* 타이틀 */}
       <div className="max-w-6xl mx-auto text-center mb-20">
         <Reveal>
