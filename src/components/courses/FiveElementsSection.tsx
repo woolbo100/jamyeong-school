@@ -107,7 +107,7 @@ export default function FiveElementsSection() {
       {/* 하단 메시지 */}
       <Reveal delayMs={1000}>
         <div className="text-center mt-20">
-          <p className="text-gray-500 font-light italic tracking-widest text-sm">
+          <p className="text-gray-300 font-light italic tracking-[0.3em] text-lg">
             당신은 지금 어느 단계에 있나요?
           </p>
           <div className="mt-4 w-12 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent mx-auto"></div>
