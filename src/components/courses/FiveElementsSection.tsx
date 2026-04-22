@@ -10,6 +10,7 @@ export default function FiveElementsSection() {
       subtitle: "나를 이해하고 콘텐츠 방향을 찾는 과정",
       desc: "콘텐츠 주제, 브랜드 방향 확립",
       gradient: "from-earth/50 to-transparent",
+      hoverColor: "group-hover:text-[#4ADE80]",
       link: "/courses/earth"
     },
     {
@@ -18,6 +19,7 @@ export default function FiveElementsSection() {
       subtitle: "감정을 작품으로 만들고 브랜드를 시작하는 과정",
       desc: "아트 이미지, 영상, 굿즈 제작",
       gradient: "from-fire/50 to-transparent",
+      hoverColor: "group-hover:text-[#F87171]",
       link: "/courses/fire"
     },
     {
@@ -26,6 +28,7 @@ export default function FiveElementsSection() {
       subtitle: "내 경험을 강의와 콘텐츠로 바꾸는 과정",
       desc: "SNS 콘텐츠, 미니 강의 제작",
       gradient: "from-air/50 to-transparent",
+      hoverColor: "group-hover:text-[#60A5FA]",
       link: "/courses/air"
     },
     {
@@ -34,6 +37,7 @@ export default function FiveElementsSection() {
       subtitle: "콘텐츠를 수익 구조로 만드는 과정",
       desc: "디지털 상품, 자동화 수익",
       gradient: "from-water/50 to-transparent",
+      hoverColor: "group-hover:text-[#38BDF8]",
       link: "/courses/water"
     },
     {
@@ -42,6 +46,7 @@ export default function FiveElementsSection() {
       subtitle: "강사·브랜드로 확장하는 리더 과정",
       desc: "강사활동, 리더쉽, 풍요마인드",
       gradient: "from-ether/50 to-transparent",
+      hoverColor: "group-hover:text-[#C084FC]",
       link: "/courses/abundance"
     },
   ];
@@ -68,7 +73,7 @@ export default function FiveElementsSection() {
             <Reveal key={idx} delayMs={idx * 100}>
               <Link
                 href={el.link}
-                className="group relative flex flex-col p-8 rounded-3xl bg-[#181614] border border-white/5 hover:border-[#B89B6A]/30 transition-all duration-500 hover:-translate-y-2 h-[380px] overflow-hidden"
+                className="group relative flex flex-col p-8 rounded-3xl bg-[#151513] border border-white/5 hover:border-[#B89B6A]/30 transition-all duration-500 hover:-translate-y-2 h-[380px] overflow-hidden"
               >
                 {/* 배경 그라데이션 */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${el.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
@@ -92,7 +97,7 @@ export default function FiveElementsSection() {
 
                 {/* 텍스트 */}
                 <div className="relative z-10 mb-4">
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#D4AF37] transition-colors">{el.title}</h3>
+                  <h3 className={`text-xl font-bold mb-3 text-white transition-colors ${el.hoverColor}`}>{el.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed font-light">{el.subtitle}</p>
                 </div>
 
