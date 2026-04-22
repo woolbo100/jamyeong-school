@@ -51,11 +51,10 @@ export default function FiveElementsSection() {
       {/* 타이틀 */}
       <div className="max-w-6xl mx-auto text-center mb-20">
         <Reveal>
-          <h2 className="text-4xl md:text-6xl font-display mb-8 tracking-tight uppercase italic leading-tight">
-            자명스쿨은 <br className="hidden md:block" />
-            <span className="text-5xl md:text-7xl bg-gradient-to-r from-[#D4AF37] to-[#B89B6A] bg-clip-text text-transparent inline-block mt-2 md:mt-4">5단계 성장 시스템</span>입니다
+          <h2 className="text-2xl md:text-4xl font-display mb-6 tracking-tight uppercase italic">
+            자명스쿨은 <span className="bg-gradient-to-r from-[#D4AF37] to-[#B89B6A] bg-clip-text text-transparent">5단계 성장 시스템</span>입니다
           </h2>
-          <p className="text-gray-400 text-lg font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
             나를 이해하고, 표현하고, 수익으로 연결하는 흐름
           </p>
         </Reveal>
@@ -102,7 +101,7 @@ export default function FiveElementsSection() {
 
                 {/* 결과 (Gold Emphasis) */}
                 <div className="mt-auto pt-6 border-t border-white/5">
-                  <p className="text-[10px] font-bold tracking-[0.2em] text-[#D4AF37] uppercase opacity-80 group-hover:opacity-100 transition-opacity">
+                  <p className="text-[13px] md:text-sm font-bold tracking-[0.1em] text-[#C9B37E] uppercase opacity-90 group-hover:opacity-100 transition-opacity">
                     {el.desc}
                   </p>
                 </div>
