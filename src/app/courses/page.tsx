@@ -458,7 +458,21 @@ export default function CoursesPage() {
                         <div className="max-w-5xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                             
-                            <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 overflow-x-auto pb-8 md:pb-12 scrollbar-hide">
+                            {/* 텍스트 (위로 이동) */}
+                            <div className="relative z-10 text-center mb-12">
+                                <p className="text-lg md:text-xl text-white/90 font-light italic leading-relaxed break-keep mb-3">
+                                    자명스쿨은 단순히 <span className="font-bold text-white">AI</span>를 배우는 곳이 아니라
+                                </p>
+                                <p className="text-sm md:text-base text-white/60 font-light italic mb-3 tracking-wide">
+                                    마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고
+                                </p>
+                                <p className="text-lg md:text-xl text-antiqueGold font-medium italic">
+                                    함께 성장하는 구조입니다.
+                                </p>
+                            </div>
+
+                            {/* 아이콘 (아래로 이동) */}
+                            <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 overflow-x-auto scrollbar-hide">
                                 {[
                                     { src: "earth", alt: "Rooting" },
                                     { src: "fire", alt: "Creation" },
@@ -484,12 +498,6 @@ export default function CoursesPage() {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="relative z-10 text-center">
-                                <p className="text-lg md:text-xl text-white/90 font-light italic leading-relaxed break-keep">
-                                    자명스쿨은 단순히 <span className="font-bold text-white">AI</span>를 배우는 곳이 아니라 <br className="hidden md:block" />
-                                    <span className="text-antiqueGold font-medium">마음의 흐름을 현실의 구조로 바꾸는 학교</span>입니다.
-                                </p>
                             </div>
                         </div>
                     </Reveal>
