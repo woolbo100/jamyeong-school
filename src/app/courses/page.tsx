@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
+import FiveElementsSection from "@/components/courses/FiveElementsSection";
 
 export default function CoursesPage() {
     return (
@@ -33,40 +34,9 @@ export default function CoursesPage() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-antiqueGold/40 to-transparent"></div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-6 lg:px-8 py-24 space-y-32 lg:space-y-64">
-                {/* Growth Flow Summary */}
-                <section className="text-center mb-20 lg:mb-40">
-                    <Reveal>
-                        <div className="max-w-5xl mx-auto p-12 rounded-[2.5rem] border border-white/10 bg-white/[0.02] backdrop-blur-sm transition-all duration-500 hover:bg-white/[0.04] hover:border-white/20 hover:-translate-y-1 transform-gpu group">
-                            <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed mb-12 tracking-tight italic">
-                                자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
-                                마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고 <br />
-                                함께 성장하는 구조입니다.
-                            </p>
-                            <div className="flex justify-center items-center gap-2 md:gap-6">
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="흙">
-                                    <Image src="/images/icon/earth.png" alt="흙" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
-                                </div>
-                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="불">
-                                    <Image src="/images/icon/fire.png" alt="불" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
-                                </div>
-                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="공기">
-                                    <Image src="/images/icon/air.png" alt="공기" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
-                                </div>
-                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="물">
-                                    <Image src="/images/icon/water.png" alt="물" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
-                                </div>
-                                <span className="text-white/20 text-2xl md:text-3xl">→</span>
-                                <div className="hover:scale-110 transition-transform duration-500 cursor-default shrink-0" title="에테르">
-                                    <Image src="/images/icon/ether.png" alt="에테르" width={120} height={120} className="w-16 h-16 md:w-28 md:h-28 object-contain" />
-                                </div>
-                            </div>
-                        </div>
-                    </Reveal>
-                </section>
+            <main className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 space-y-32 lg:space-y-64">
+                {/* Growth Flow Section */}
+                <FiveElementsSection />
                 <section className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1">
                         <Reveal>
