@@ -491,7 +491,6 @@ export default function CoursesPage() {
                                     <span className="text-antiqueGold font-medium">마음의 흐름을 현실의 구조로 바꾸는 학교</span>입니다.
                                 </p>
                             </div>
-                            </div>
                         </div>
                     </Reveal>
 
