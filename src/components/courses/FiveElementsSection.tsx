@@ -49,12 +49,12 @@ export default function FiveElementsSection() {
   return (
     <section className="py-24 px-6 text-white relative overflow-hidden">
       {/* 타이틀 */}
-      <div className="max-w-6xl mx-auto text-center mb-20">
+      <div className="max-w-6xl mx-auto text-center mb-16 px-6">
         <Reveal>
-          <h2 className="text-2xl md:text-4xl font-display mb-6 tracking-tight uppercase italic">
+          <h2 className="text-xl md:text-2xl font-display mb-4 tracking-tight uppercase italic whitespace-nowrap">
             자명스쿨은 <span className="bg-gradient-to-r from-[#D4AF37] to-[#B89B6A] bg-clip-text text-transparent">5단계 성장 시스템</span>입니다
           </h2>
-          <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
             나를 이해하고, 표현하고, 수익으로 연결하는 흐름
           </p>
         </Reveal>
@@ -84,9 +84,11 @@ export default function FiveElementsSection() {
                   {idx + 1}
                 </div>
 
-                {/* 아이콘 */}
-                <div className="relative w-14 h-14 mb-8 group-hover:scale-110 transition-transform duration-700 ease-premium">
-                  <Image src={el.icon} alt={el.title} fill className="object-contain" />
+                {/* 아이콘 (크기 축소 및 중앙 정렬) */}
+                <div className="mb-10 flex justify-center">
+                  <div className="relative w-9 h-9 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                    <Image src={el.icon} alt={el.title} fill className="object-contain" />
+                  </div>
                 </div>
 
                 {/* 타이틀 */}
@@ -99,9 +101,9 @@ export default function FiveElementsSection() {
                   {el.subtitle}
                 </p>
 
-                {/* 결과 (Gold Emphasis) */}
+                {/* 결과 (Gold Emphasis - 크기 확대 및 2줄 유도) */}
                 <div className="mt-auto pt-6 border-t border-white/5">
-                  <p className="text-[13px] md:text-sm font-bold tracking-[0.1em] text-[#C9B37E] uppercase opacity-90 group-hover:opacity-100 transition-opacity">
+                  <p className="text-[15px] font-bold tracking-tight text-[#C9B37E] leading-snug opacity-95 group-hover:opacity-100 transition-opacity max-w-[150px]">
                     {el.desc}
                   </p>
                 </div>
