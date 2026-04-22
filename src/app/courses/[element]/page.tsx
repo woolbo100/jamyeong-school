@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-type ElementType = "earth" | "fire" | "metal" | "water" | "abundance";
+type ElementType = "earth" | "fire" | "water" | "abundance";
 
 interface ElementData {
   slug: ElementType;
@@ -92,40 +92,6 @@ const elementData: Record<ElementType, ElementData> = {
       "전문가 수준의 AI 이미지 제작 능력 확보",
       "내적 억눌림을 예술로 치유하는 창조적 경험",
       "디지털 시대의 새로운 창작 무기 장착",
-    ],
-  },
-  metal: {
-    slug: "metal",
-    symbol: "🌀",
-    name: "공기",
-    lectureName: "마음을 나누다",
-    tagline: "콘텐츠와 메시지로 나를 표현하는 브랜딩 클래스",
-    color: "text-air",
-    borderColor: "border-air",
-    bgColor: "bg-air/10",
-    auraColor: "rgba(214, 198, 168, 0.2)",
-    recommends: [
-      "나만의 지혜를 세상에 알리고 싶은 분",
-      "전자책이나 강의를 만들고 싶은 분",
-      "콘텐츠 제작의 구조를 잡고 싶은 분",
-      "설득력 있는 메시지 전달을 원하는 리더",
-    ],
-    learningContent: [
-      "메시지 구조화 및 커리큘럼 설계",
-      "독자의 마음을 움직이는 콘텐츠 글쓰기",
-      "전자책 기획 및 디자인 자동화",
-      "AI를 활용한 콘텐츠 재생산 시스템",
-    ],
-    curriculum: [
-      { unit: "1주차", title: "메시지 타겟팅", details: "나의 지혜를 필요로 하는 대상과 핵심 메시지 규정" },
-      { unit: "2주차", title: "콘텐츠 설계학", details: "누구나 쉽게 이해하는 4단계 교육 구조 설계" },
-      { unit: "3주차", title: "제작 자동화", details: "AI와 캔바를 연동해 빠른 결과물 제작 시스템 구축" },
-      { unit: "4주차", title: "런칭 전략", details: "첫 콘텐츠를 세상에 내놓는 브랜딩 및 홍보 기법" },
-    ],
-    effects: [
-      "자신만의 콘텐츠/강의 브랜드 구축 완료",
-      "논리적이고 설득력 있는 표현 능력 비약적 향상",
-      "세상과 소통하는 강력한 영향력의 씨앗 확보",
     ],
   },
   water: {
