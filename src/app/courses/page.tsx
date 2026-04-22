@@ -470,15 +470,7 @@ export default function CoursesPage() {
                         <div className="max-w-5xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                             
-                            <div className="relative z-10 text-center mb-16">
-                                <p className="text-lg md:text-xl text-white/90 font-light italic leading-relaxed break-keep">
-                                    자명스쿨은 단순히 <span className="font-bold text-white">AI</span>를 배우는 곳이 아니라 <br className="hidden md:block" />
-                                    마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고 <br className="hidden md:block" />
-                                    <span className="text-antiqueGold font-medium">함께 성장하는 구조</span>입니다.
-                                </p>
-                            </div>
-
-                            <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+                            <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 overflow-x-auto pb-8 md:pb-12 scrollbar-hide">
                                 {[
                                     { src: "earth", alt: "Rooting" },
                                     { src: "fire", alt: "Creation" },
@@ -498,11 +490,19 @@ export default function CoursesPage() {
                                         </div>
                                         {i < 4 && (
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-white/20 shrink-0">
-                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                         )}
                                     </div>
                                 ))}
+                            </div>
+
+                            <div className="relative z-10 text-center">
+                                <p className="text-lg md:text-xl text-white/90 font-light italic leading-relaxed break-keep">
+                                    자명스쿨은 단순히 <span className="font-bold text-white">AI</span>를 배우는 곳이 아니라 <br className="hidden md:block" />
+                                    <span className="text-antiqueGold font-medium">마음의 흐름을 현실의 구조로 바꾸는 학교</span>입니다.
+                                </p>
+                            </div>
                             </div>
                         </div>
                     </Reveal>
