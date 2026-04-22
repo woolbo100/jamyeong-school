@@ -28,7 +28,7 @@ export default function FiveElementsSection() {
       subtitle: "내 경험을 강의와 콘텐츠로 바꾸는 과정",
       desc: "SNS 콘텐츠, 미니 강의 제작",
       gradient: "from-air/50 to-transparent",
-      hoverColor: "group-hover:text-[#60A5FA]",
+      hoverColor: "group-hover:text-[#E5E1D8]",
       link: "/courses/air"
     },
     {
@@ -86,7 +86,7 @@ export default function FiveElementsSection() {
 
                 {/* 아이콘 (중앙 정렬 및 크기 확대) */}
                 <div className="mb-10 flex justify-center">
-                  <div className="relative w-14 h-14 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                  <div className="relative w-20 h-20 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
                     <Image
                       src={el.icon}
                       alt={el.title}
