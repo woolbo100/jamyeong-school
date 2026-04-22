@@ -67,7 +67,7 @@ export default function FiveElementsSection() {
             <Reveal key={idx} delayMs={idx * 100}>
               <Link
                 href={el.link}
-                className="group relative flex flex-col p-8 rounded-3xl bg-[#14161A] border border-white/5 hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2 h-[380px] overflow-hidden"
+                className="group relative flex flex-col p-8 rounded-3xl bg-[#181614] border border-white/5 hover:border-[#B89B6A]/30 transition-all duration-500 hover:-translate-y-2 h-[380px] overflow-hidden"
               >
                 {/* 배경 그라데이션 */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${el.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
