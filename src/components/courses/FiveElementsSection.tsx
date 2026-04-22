@@ -47,7 +47,7 @@ export default function FiveElementsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 text-white relative overflow-hidden">
+    <section className="pt-24 pb-12 px-6 text-white relative overflow-hidden">
       {/* 타이틀 */}
       <div className="max-w-6xl mx-auto text-center mb-16 px-6">
         <Reveal>
@@ -59,47 +59,49 @@ export default function FiveElementsSection() {
           </p>
         </Reveal>
       </div>
+
       {/* Separator Ornament */}
       <Reveal delayMs={400}>
         <div className="flex justify-center items-center gap-4 mb-20 opacity-60">
-          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D4AF37]/40"></div>
-          <div className="w-2.5 h-2.5 rotate-45 border border-[#D4AF37]/60 shadow-[0_0_15px_rgba(212,175,55,0.2)]"></div>
-          <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#D4AF37]/40"></div>
+          <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]"></div>
+          <div className="w-2 h-2 rotate-45 border border-[#D4AF37]"></div>
+          <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#D4AF37]"></div>
         </div>
       </Reveal>
 
-      {/* 카드 */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
-        {elements.map((el, idx) => (
-          <Reveal key={idx} delayMs={idx * 150}>
-            <Link href={el.link} className="block h-full">
-              <div
-                className="group relative bg-[#14161A] border border-white/5 rounded-2xl p-8 h-full transition-all duration-500 hover:-translate-y-3 hover:border-[#D4AF37]/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
+          {elements.map((el, idx) => (
+            <Reveal key={idx} delayMs={idx * 100}>
+              <Link
+                href={el.link}
+                className="group relative flex flex-col p-8 rounded-3xl bg-[#14161A] border border-white/5 hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2 h-[420px] overflow-hidden"
               >
-                {/* Gradient Left Border Emphasis */}
-                <div className={`absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b ${el.gradient} opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
+                {/* 배경 그라데이션 */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${el.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 
-                {/* Step Number Background */}
-                <div className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-display italic select-none group-hover:text-white/[0.05] transition-colors duration-500">
+                {/* 숫자 배경 */}
+                <div className="absolute top-4 right-6 text-6xl font-display text-white/[0.03] italic pointer-events-none group-hover:text-white/[0.06] transition-colors">
                   {idx + 1}
                 </div>
 
                 {/* 아이콘 (중앙 정렬 및 크기 확대) */}
                 <div className="mb-10 flex justify-center">
                   <div className="relative w-14 h-14 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                    <Image src={el.icon} alt={el.title} fill className="object-contain" />
+                    <Image
+                      src={el.icon}
+                      alt={el.title}
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
 
-                {/* 타이틀 */}
-                <h3 className="text-xl font-bold mb-4 group-hover:text-[#D4AF37] transition-colors duration-300">
-                  {el.title}
-                </h3>
-
-                {/* 설명 */}
-                <p className="text-sm text-gray-400 mb-8 leading-relaxed font-light">
-                  {el.subtitle}
-                </p>
+                {/* 텍스트 */}
+                <div className="relative z-10 mb-4">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#D4AF37] transition-colors">{el.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed font-light">{el.subtitle}</p>
+                </div>
 
                 {/* 결과 (Gold Emphasis - 크기 확대 및 2줄 유도) */}
                 <div className="mt-auto pt-6 border-t border-white/5">
@@ -107,19 +109,19 @@ export default function FiveElementsSection() {
                     {el.desc}
                   </p>
                 </div>
-              </div>
-            </Link>
-          </Reveal>
-        ))}
+              </Link>
+            </Reveal>
+          ))}
+        </div>
       </div>
 
-      {/* 하단 메시지 */}
-      <Reveal delayMs={1000}>
-        <div className="text-center mt-20">
-          <p className="text-gray-300 font-light italic tracking-[0.3em] text-lg">
+      {/* 하단 메시지 (간격 대폭 축소) */}
+      <Reveal delayMs={600}>
+        <div className="text-center mt-12">
+          <p className="text-gray-400 font-light italic tracking-[0.2em] text-base md:text-lg">
             당신은 지금 어느 단계에 있나요?
           </p>
-          <div className="mt-4 w-12 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent mx-auto"></div>
+          <div className="mt-4 w-10 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent mx-auto"></div>
         </div>
       </Reveal>
     </section>

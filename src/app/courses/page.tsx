@@ -34,23 +34,11 @@ export default function CoursesPage() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-antiqueGold/40 to-transparent"></div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 space-y-32 lg:space-y-64">
+            <main className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 space-y-20 lg:space-y-32">
                 {/* Growth Flow Section */}
                 <FiveElementsSection />
 
-                {/* Section Separator Ornament */}
-                <Reveal delayMs={200}>
-                    <div className="flex items-center justify-center w-full max-w-4xl mx-auto py-20">
-                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-antiqueGold/30 to-transparent"></div>
-                        <div className="mx-8 relative">
-                            <div className="w-3 h-3 rotate-45 border border-antiqueGold/50 shadow-[0_0_15px_rgba(184,155,106,0.3)]"></div>
-                            <div className="absolute inset-0 w-3 h-3 rotate-45 bg-antiqueGold/10 blur-[2px]"></div>
-                        </div>
-                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-antiqueGold/30 to-transparent"></div>
-                    </div>
-                </Reveal>
-
-                <section className="grid lg:grid-cols-2 gap-16 items-center">
+                <section className="grid lg:grid-cols-2 gap-16 items-center pt-8">
                     <div className="order-2 lg:order-1">
                         <Reveal>
                             <div className="flex items-center space-x-3 text-earth mb-6">
