@@ -40,7 +40,7 @@ export default function FiveElementsSection() {
       icon: "/images/icons/ether.png",
       title: "마음을 빛내다",
       subtitle: "강사·브랜드로 확장하는 리더 과정",
-      desc: "강사 활동, 브랜드 확장",
+      desc: "강사활동, 리더쉽, 풍요마인드",
       gradient: "from-ether/50 to-transparent",
       link: "/courses/abundance"
     },
@@ -67,7 +67,7 @@ export default function FiveElementsSection() {
             <Reveal key={idx} delayMs={idx * 100}>
               <Link
                 href={el.link}
-                className="group relative flex flex-col p-8 rounded-3xl bg-[#14161A] border border-white/5 hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2 h-[420px] overflow-hidden"
+                className="group relative flex flex-col p-8 rounded-3xl bg-[#14161A] border border-white/5 hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2 h-[380px] overflow-hidden"
               >
                 {/* 배경 그라데이션 */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${el.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
