@@ -448,9 +448,53 @@ export default function CoursesPage() {
             </main>
 
             {/* CTA Section */}
-            <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5">
-                <div className="max-w-6xl mx-auto text-center">
-                    <Reveal>
+            <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5 relative overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-antiqueGold/5 blur-[120px] rounded-full pointer-events-none" />
+                
+                <div className="max-w-6xl mx-auto text-center relative z-10">
+                    {/* Growth Structure Card (New) */}
+                    <Reveal delayMs={100}>
+                        <div className="max-w-4xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                            
+                            <div className="relative z-10 text-center mb-16">
+                                <p className="text-lg md:text-xl text-white/90 font-light italic leading-relaxed break-keep">
+                                    자명스쿨은 단순히 <span className="font-bold text-white">AI</span>를 배우는 곳이 아니라 <br className="hidden md:block" />
+                                    마음을 이해하고 → 표현하고 → 나누고 → 수익으로 연결하고 → 리더로 확장하고 <br className="hidden md:block" />
+                                    <span className="text-antiqueGold font-medium">함께 성장하는 구조</span>입니다.
+                                </p>
+                            </div>
+
+                            <div className="relative z-10 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                                {[
+                                    { src: "earth", alt: "Rooting" },
+                                    { src: "fire", alt: "Creation" },
+                                    { src: "air", alt: "Flow" },
+                                    { src: "water", alt: "Wealth" },
+                                    { src: "ether", alt: "Infinite" }
+                                ].map((icon, i) => (
+                                    <div key={i} className="flex items-center gap-6 md:gap-10">
+                                        <div className="relative w-16 h-16 md:w-20 md:h-20 group/icon">
+                                            <div className="absolute inset-0 bg-white/10 blur-xl rounded-full scale-0 group-hover/icon:scale-150 transition-transform duration-700" />
+                                            <Image 
+                                                src={`/images/icon/${icon.src}.png`} 
+                                                alt={icon.alt} 
+                                                fill 
+                                                className="object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover/icon:scale-110 transition-transform duration-500" 
+                                            />
+                                        </div>
+                                        {i < 4 && (
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white/20 hidden sm:block">
+                                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </Reveal>
+
+                    <Reveal delayMs={300}>
                         <h1 className="text-xl md:text-3xl font-display text-white mb-12 leading-tight italic break-keep px-4 tracking-tighter">
                             자명스쿨은 단순히 AI를 배우는 곳이 아니라 <br />
                             마음의 흐름을 현실의 구조로 바꾸는 학교입니다.
