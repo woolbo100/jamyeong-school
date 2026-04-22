@@ -48,11 +48,12 @@ export default function FiveElementsSection() {
 
   return (
     <section className="pt-24 pb-12 px-6 text-white relative overflow-hidden">
-      {/* 타이틀 (크기 확대 및 컬러 교체) */}
+      {/* 타이틀 (글자 크기 추가 확대 및 깨짐 방지) */}
       <div className="max-w-6xl mx-auto text-center mb-16 px-6">
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-display mb-4 tracking-tight uppercase italic whitespace-nowrap">
-            자명스쿨은 <span className="bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] bg-clip-text text-transparent">5단계 성장 시스템</span>입니다
+          <h2 className="text-4xl md:text-5xl font-display mb-4 tracking-tighter uppercase italic leading-tight">
+            자명스쿨은 <br className="md:hidden" />
+            <span className="bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] bg-clip-text text-transparent px-1">5단계 성장 시스템</span>입니다
           </h2>
           <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
             나를 이해하고, 표현하고, 수익으로 연결하는 흐름
