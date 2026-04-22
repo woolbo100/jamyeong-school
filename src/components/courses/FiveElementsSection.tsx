@@ -60,6 +60,14 @@ export default function FiveElementsSection() {
           </p>
         </Reveal>
       </div>
+      {/* Separator Ornament */}
+      <Reveal delayMs={400}>
+        <div className="flex justify-center items-center gap-4 mb-20 opacity-60">
+          <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D4AF37]/40"></div>
+          <div className="w-2.5 h-2.5 rotate-45 border border-[#D4AF37]/60 shadow-[0_0_15px_rgba(212,175,55,0.2)]"></div>
+          <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#D4AF37]/40"></div>
+        </div>
+      </Reveal>
 
       {/* 카드 */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6">
