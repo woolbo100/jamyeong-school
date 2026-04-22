@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export default function FiveElementsSection() {
   const elements = [
     {
-      icon: "/images/icons/earth.png",
+      icon: "/images/icon/earth.png",
       title: "마음을 심다",
       subtitle: "나를 이해하고 콘텐츠 방향을 찾는 과정",
       desc: "콘텐츠 주제, 브랜드 방향 확립",
@@ -14,7 +14,7 @@ export default function FiveElementsSection() {
       link: "/courses/earth"
     },
     {
-      icon: "/images/icons/fire.png",
+      icon: "/images/icon/fire.png",
       title: "마음을 그리다",
       subtitle: "감정을 작품으로 만들고 브랜드를 시작하는 과정",
       desc: "아트 이미지, 영상, 굿즈 제작",
@@ -23,7 +23,7 @@ export default function FiveElementsSection() {
       link: "/courses/fire"
     },
     {
-      icon: "/images/icons/air.png",
+      icon: "/images/icon/air.png",
       title: "마음을 나누다",
       subtitle: "내 경험을 강의와 콘텐츠로 바꾸는 과정",
       desc: "SNS 콘텐츠, 미니 강의 제작",
@@ -32,7 +32,7 @@ export default function FiveElementsSection() {
       link: "/courses/air"
     },
     {
-      icon: "/images/icons/water.png",
+      icon: "/images/icon/water.png",
       title: "마음을 채우다",
       subtitle: "콘텐츠를 수익 구조로 만드는 과정",
       desc: "디지털 상품, 자동화 수익",
@@ -41,7 +41,7 @@ export default function FiveElementsSection() {
       link: "/courses/water"
     },
     {
-      icon: "/images/icons/ether.png",
+      icon: "/images/icon/ether.png",
       title: "마음을 빛내다",
       subtitle: "강사·브랜드로 확장하는 리더 과정",
       desc: "강사활동, 리더쉽, 풍요마인드",
@@ -67,6 +67,7 @@ export default function FiveElementsSection() {
       </div>
 
 
+      {/* 가로 폭을 하단 섹션과 맞추기 위해 내부 max-w 및 px 제거 */}
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
           {elements.map((el, idx) => (
@@ -112,16 +113,6 @@ export default function FiveElementsSection() {
           ))}
         </div>
       </div>
-
-      {/* 하단 메시지 (간격 대폭 축소) */}
-      <Reveal delayMs={600}>
-        <div className="text-center mt-12">
-          <p className="text-gray-400 font-light italic tracking-[0.2em] text-base md:text-lg">
-            당신은 지금 어느 단계에 있나요?
-          </p>
-          <div className="mt-4 w-10 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent mx-auto"></div>
-        </div>
-      </Reveal>
     </section>
   );
 }
