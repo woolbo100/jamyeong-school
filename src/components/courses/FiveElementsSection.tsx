@@ -84,9 +84,9 @@ export default function FiveElementsSection() {
                   {idx + 1}
                 </div>
 
-                {/* 아이콘 (크기 축소 및 중앙 정렬) */}
+                {/* 아이콘 (중앙 정렬 및 크기 확대) */}
                 <div className="mb-10 flex justify-center">
-                  <div className="relative w-9 h-9 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                  <div className="relative w-14 h-14 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
                     <Image src={el.icon} alt={el.title} fill className="object-contain" />
                   </div>
                 </div>
