@@ -26,7 +26,7 @@ export default function FiveElementsSection() {
       subtitle: "내 경험을 강의와 콘텐츠로 바꾸는 과정",
       desc: "SNS 콘텐츠, 미니 강의 제작",
       gradient: "from-air/50 to-transparent",
-      link: "/courses/air"
+      link: "/courses/metal"
     },
     {
       icon: "/images/icons/water.png",
