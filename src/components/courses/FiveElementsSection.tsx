@@ -61,7 +61,7 @@ export default function FiveElementsSection() {
       </div>
 
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
           {elements.map((el, idx) => (
             <Reveal key={idx} delayMs={idx * 100}>
