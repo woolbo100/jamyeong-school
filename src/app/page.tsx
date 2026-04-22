@@ -147,10 +147,10 @@ function CommunityBanner() {
 function FeaturedLectures() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const cards = [
-    { title: "흙(Earth) - 마음을 정화하고 풍요를 위한 기반 다지기", price: "마음을 심다: 내 경험을 한권의 '감성북'으로 출판", image: "/images/main/earth.png" },
-    { title: "불(Fire) - 열정과 창조의 불꽃으로 마음을 표현하기", price: "마음을 그리다 : AI로 나만의 아트테라피 작품 제작", image: "/images/main/fire.png" },
-    { title: "공기(Air) - 나의 경험과 지식을 세상과 나누고 소통하기", price: "마음을 나누다 : 브랜드 지식창업 마스터 클래스", image: "/images/main/air.png" },
-    { title: "물(Water) - 내 안에 흐르는 풍요의 물결로 마음을 채우기", price: "마음을 채우다: 1인 비지니스 수익화 올인원 클래스", image: "/images/main/water.png" },
+    { title: "흙(Earth) - 마음을 정화하고 풍요를 위한 기반 다지기", price: "마음을 심다: 내 경험을 한권의 '감성북'으로 출판", image: "/images/main/earth.png", link: "/courses/earth" },
+    { title: "불(Fire) - 열정과 창조의 불꽃으로 마음을 표현하기", price: "마음을 그리다 : AI로 나만의 아트테라피 작품 제작", image: "/images/main/fire.png", link: "/courses/fire" },
+    { title: "공기(Air) - 나의 경험과 지식을 세상과 나누고 소통하기", price: "마음을 나누다 : 브랜드 지식창업 마스터 클래스", image: "/images/main/air.png", link: "/courses/air" },
+    { title: "물(Water) - 내 안에 흐르는 풍요의 물결로 마음을 채우기", price: "마음을 채우다: 1인 비지니스 수익화 올인원 클래스", image: "/images/main/water.png", link: "/courses/water" },
   ];
 
   return (
@@ -166,11 +166,9 @@ function FeaturedLectures() {
           const isActive = activeIndex === i;
           return (
             <Reveal key={c.title} delayMs={i * 120}>
-              <button
-                type="button"
-                onClick={() => setActiveIndex(i)}
+              <div
                 className={`w-full group relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border text-left transition-all duration-300 ease-out transform-gpu text-white 
-                  ${isActive ? 'border-[#8A6A3F]/70 -translate-y-1 scale-[1.01]' : 'border-white/10 hover:border-[#8A6A3F]/50 hover:-translate-y-1 hover:scale-[1.01]'}`}
+                  ${isActive ? 'border-[#8A6A3F]/70' : 'border-white/10 hover:border-[#8A6A3F]/50'}`}
               >
                 {/* Top Highlight Line */}
                 <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent transition-opacity duration-500 z-20 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
@@ -189,24 +187,26 @@ function FeaturedLectures() {
                     <h3 className="font-bold text-lg text-[#D6C6A8]">{c.title}</h3>
                     <div className="mt-4 text-white text-2xl font-bold">{c.price}</div>
                     <div className="mt-6">
-                      <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
-                        {/* External Aura Glow */}
-                        <span
-                          aria-hidden="true"
-                          className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
-                          style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
-                        />
-                        {/* Sharp Ring Highlight */}
-                        <span
-                          aria-hidden="true"
-                          className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
-                        />
-                        <span className="relative z-10">강의 구매하기</span>
-                      </div>
+                      <Link href={c.link}>
+                        <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px] cursor-pointer">
+                          {/* External Aura Glow */}
+                          <span
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
+                            style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
+                          />
+                          {/* Sharp Ring Highlight */}
+                          <span
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
+                          />
+                          <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </button>
+              </div>
             </Reveal>
           );
         })}
@@ -215,11 +215,9 @@ function FeaturedLectures() {
       {/* 가로형 에테르(Aether) 배너 */}
       <div className="mt-10">
         <Reveal delayMs={480}>
-          <button
-            type="button"
-            onClick={() => setActiveIndex(4)}
+          <div
             className={`w-full group relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border text-left transition-all duration-300 ease-out transform-gpu text-white 
-              ${activeIndex === 4 ? 'border-[#8A6A3F]/70 -translate-y-1 scale-[1.01]' : 'border-white/10 hover:border-[#8A6A3F]/50 hover:-translate-y-1 hover:scale-[1.01]'}`}
+              ${activeIndex === 4 ? 'border-[#8A6A3F]/70' : 'border-white/10 hover:border-[#8A6A3F]/50'}`}
           >
             {/* Top Highlight Line */}
             <div className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6C6A8]/40 to-transparent transition-opacity duration-500 z-20 ${activeIndex === 4 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
@@ -242,24 +240,26 @@ function FeaturedLectures() {
                 <h3 className="font-bold text-lg text-[#D6C6A8]">에테르(Aether) - 풍요마인드와 리더쉽 확장으로 스스로 빛나기</h3>
                 <div className="mt-4 text-white text-2xl font-bold">마음을 빛내다 : 풍요마인드& 강사, 리더 인증 과정</div>
                 <div className="mt-8 w-full">
-                  <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px]">
-                    {/* External Aura Glow */}
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
-                      style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
-                    />
-                    {/* Sharp Ring Highlight */}
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
-                    />
-                    <span className="relative z-10">강의 구매하기</span>
-                  </div>
+                  <Link href="/courses/abundance">
+                    <div className="group relative overflow-visible w-full rounded-xl h-11 flex items-center justify-center text-sm font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow transition-all duration-300 ease-out transform-gpu hover:-translate-y-[1px] cursor-pointer">
+                      {/* External Aura Glow */}
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -inset-1 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-lg"
+                        style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.38), transparent 55%)' }}
+                      />
+                      {/* Sharp Ring Highlight */}
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-1 ring-[#8A6A3F]/45"
+                      />
+                      <span className="relative z-10">강의 커리큘럼 보러가기</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
-          </button>
+          </div>
         </Reveal>
       </div>
     </section>
