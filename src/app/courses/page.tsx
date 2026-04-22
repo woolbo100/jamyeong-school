@@ -454,7 +454,7 @@ export default function CoursesPage() {
                 <div className="max-w-6xl mx-auto text-center relative z-10">
                     {/* Growth Structure Card (New) */}
                     <Reveal delayMs={100}>
-                        <div className="max-w-4xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">
+                        <div className="max-w-5xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                             
                             <div className="relative z-10 text-center mb-16">
@@ -465,7 +465,7 @@ export default function CoursesPage() {
                                 </p>
                             </div>
 
-                            <div className="relative z-10 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                            <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
                                 {[
                                     { src: "earth", alt: "Rooting" },
                                     { src: "fire", alt: "Creation" },
@@ -473,8 +473,8 @@ export default function CoursesPage() {
                                     { src: "water", alt: "Wealth" },
                                     { src: "ether", alt: "Infinite" }
                                 ].map((icon, i) => (
-                                    <div key={i} className="flex items-center gap-6 md:gap-10">
-                                        <div className="relative w-16 h-16 md:w-20 md:h-20 group/icon">
+                                    <div key={i} className="flex items-center gap-3 sm:gap-6 md:gap-8 lg:gap-10 shrink-0">
+                                        <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 group/icon">
                                             <div className="absolute inset-0 bg-white/10 blur-xl rounded-full scale-0 group-hover/icon:scale-150 transition-transform duration-700" />
                                             <Image 
                                                 src={`/images/icon/${icon.src}.png`} 
@@ -484,7 +484,7 @@ export default function CoursesPage() {
                                             />
                                         </div>
                                         {i < 4 && (
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white/20 hidden sm:block">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-white/20 shrink-0">
                                                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                             </svg>
                                         )}
