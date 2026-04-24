@@ -350,6 +350,9 @@ export default function AboutPage() {
               
               <div className="space-y-6 mb-12">
                 <p className="text-white/80 font-light leading-relaxed break-keep">
+                  심리학 전공과 NLP, 최면, 명상, 브레인 트레이닝 전문가로서 사람의 변화와 무의식 구조를 깊이 있게 다루며, AI 관련 자격증 30개 이상과 강의·콘텐츠 제작·수익화 경험을 바탕으로 이론이 아닌 실제 결과를 만드는 교육을 제공합니다.
+                </p>
+                <p className="text-white/80 font-light leading-relaxed break-keep">
                   자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
                 </p>
                 <ul className="space-y-3 text-white/60 text-sm font-light">
