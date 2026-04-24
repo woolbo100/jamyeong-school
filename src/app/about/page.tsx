@@ -126,7 +126,7 @@ export default function AboutPage() {
                 label: "흙",
                 name: "마음을 심다",
                 image: "/images/icon/earth.png",
-                desc: "자기 이해 / 무의식 정리",
+                desc: "자기 이해 / 책 출판",
                 color: "text-earth",
                 borderClass: "border-earth/30",
                 hoverBorderClass: "hover:border-earth/50",
