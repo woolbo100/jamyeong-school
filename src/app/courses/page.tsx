@@ -177,7 +177,7 @@ export default function CoursesPage() {
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div className="space-y-1.5">
                                             <p className="text-white/90 text-base font-semibold">강의: AI 아티스트 올인원 클래스</p>
-                                            <p className="text-fire text-base font-semibold">자격증: AI 아트테라피 지도사</p>
+                                            <p className="text-fire text-base font-semibold">자격증: AI감성아트전문가</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-fire/20 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
