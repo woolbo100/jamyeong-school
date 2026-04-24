@@ -208,7 +208,7 @@ export default function AboutPage() {
                 color: "text-[#B89B6A]",
                 bgColor: "bg-[#B89B6A]/10",
                 borderColor: "border-[#B89B6A]/30",
-                icon: "🌱"
+                image: "/images/icon/earth.png"
               },
               {
                 num: "02",
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 color: "text-[#EF4444]",
                 bgColor: "bg-[#EF4444]/10",
                 borderColor: "border-[#EF4444]/30",
-                icon: "🔥"
+                image: "/images/icon/fire.png"
               },
               {
                 num: "03",
@@ -228,7 +228,7 @@ export default function AboutPage() {
                 color: "text-[#E5E7EB]",
                 bgColor: "bg-[#E5E7EB]/10",
                 borderColor: "border-[#E5E7EB]/30",
-                icon: "💨"
+                image: "/images/icon/air.png"
               },
               {
                 num: "04",
@@ -238,7 +238,7 @@ export default function AboutPage() {
                 color: "text-[#3B82F6]",
                 bgColor: "bg-[#3B82F6]/10",
                 borderColor: "border-[#3B82F6]/30",
-                icon: "💧"
+                image: "/images/icon/water.png"
               },
               {
                 num: "05",
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 color: "text-[#A855F7]",
                 bgColor: "bg-[#A855F7]/10",
                 borderColor: "border-[#A855F7]/30",
-                icon: "✨"
+                image: "/images/icon/ether.png"
               }
             ].map((item, idx) => (
               <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
@@ -257,8 +257,10 @@ export default function AboutPage() {
                   <span className={`text-sm font-bold mb-4 opacity-60 ${item.color}`}>{item.num}</span>
                   
                   {/* Circle Icon Container */}
-                  <div className={`w-24 h-24 rounded-full border-2 ${item.borderColor} ${item.bgColor} flex items-center justify-center mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(0,0,0,0.3)]`}>
-                    <span className="text-4xl">{item.icon}</span>
+                  <div className={`w-24 h-24 rounded-full border-2 ${item.borderColor} ${item.bgColor} flex items-center justify-center mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(0,0,0,0.3)] p-5`}>
+                    <div className="relative w-full h-full">
+                      <Image src={item.image} alt={item.name} fill className="object-contain" />
+                    </div>
                     
                     {/* Connecting Arrow (Desktop) */}
                     {idx < 4 && (
