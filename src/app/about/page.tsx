@@ -204,7 +204,7 @@ export default function AboutPage() {
                 num: "01",
                 name: "Earth",
                 title: "나를 이해한다",
-                desc: "나를 이해하고\n글로 표현합니다.",
+                desc: "나를 이해하고\n글, 그림으로 표현합니다.",
                 color: "text-[#B89B6A]",
                 bgColor: "bg-[#B89B6A]/10",
                 borderColor: "border-[#B89B6A]/30",
