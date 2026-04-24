@@ -186,7 +186,7 @@ export default function AboutPage() {
                   </div>
                   
                   <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
-                  <p className="text-xs text-white/40 leading-relaxed group-hover:text-white/60 transition-colors">{element.desc}</p>
+                  <p className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">{element.desc}</p>
                   {/* Subtle Glow Background */}
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent ${element.glowClass} to-transparent`} />
                 </div>
