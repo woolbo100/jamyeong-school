@@ -8,7 +8,7 @@ export default function FiveElementsSection() {
       icon: "/images/icon/earth.png",
       title: "마음을 심다",
       subtitle: "나를 이해하고 콘텐츠 방향을 찾는 과정",
-      desc: "자기인식, 콘텐츠 주제, 브랜드 확립, 출판",
+      desc: "자기인식, 콘텐츠 주제, 브랜드 확립, 책 출판",
       gradient: "from-earth/50 to-transparent",
       hoverColor: "group-hover:text-[#868B6E]",
       link: "/courses/earth"
