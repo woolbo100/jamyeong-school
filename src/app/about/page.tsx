@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="text-center mb-20">
               <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase mb-4 block">Core Curriculum</span>
               <h2 className="text-4xl md:text-6xl font-display mb-8">자명스쿨 5원소 시스템</h2>
-              <p className="text-white/50 font-light max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto leading-relaxed">
                 자기 이해부터 수익화까지, 단계별로 성장하는 자명스쿨만의 통합 변화 시스템입니다. <br />
                 우리는 배움이 아닌 ‘변화’를 만듭니다.
               </p>
