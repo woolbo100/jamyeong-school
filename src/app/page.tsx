@@ -395,7 +395,7 @@ function FaqAndContact() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <Reveal>
           <div className="h-full flex flex-col">
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic">자주 묻는 질문</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block uppercase italic pr-4">자주 묻는 질문</h2>
             <p className="mt-4 text-zinc-400">자명스쿨 강의 신청부터 진행 방식까지, 자주 묻는 질문을 먼저 확인해보세요.</p>
 
             <div className="mt-10 space-y-4 flex-grow">
@@ -462,7 +462,7 @@ function FaqAndContact() {
               </div>
             ) : (
               <div className="bg-white/[0.03] border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-md">
-                <h2 className="text-3xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block italic">문의하기</h2>
+                <h2 className="text-3xl font-bold bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block italic pr-4">문의하기</h2>
                 <p className="mt-4 text-zinc-400 leading-relaxed">
                   자명스쿨 강의, 커리큘럼, 협업, 강연 관련 문의를 남겨주세요.<br />
                   확인 후 순차적으로 답변드립니다.

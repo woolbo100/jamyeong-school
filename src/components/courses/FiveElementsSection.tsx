@@ -58,7 +58,7 @@ export default function FiveElementsSection() {
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-display mb-4 tracking-tighter uppercase italic leading-tight">
             자명스쿨은 <br className="md:hidden" />
-            <span className="bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] bg-clip-text text-transparent px-1">5단계 성장 시스템</span>입니다
+            <span className="bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] bg-clip-text text-transparent px-1 pr-4 inline-block">5단계 성장 시스템</span>입니다
           </h2>
           <p className="text-zinc-300 text-sm md:text-base font-medium leading-relaxed max-w-2xl mx-auto">
             나를 이해하고, 표현하고, 수익으로 연결하는 흐름

@@ -20,7 +20,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delayMs={200}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display mb-10 leading-tight tracking-tight uppercase italic">
-              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2 pr-2">
+              <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent inline-block py-2 pr-4">
                 자명스쿨
               </span>
               <span className="text-white inline-block py-2 pr-4 ml-2">
