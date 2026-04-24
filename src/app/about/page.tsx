@@ -214,7 +214,7 @@ export default function AboutPage() {
                 num: "02",
                 name: "Fire",
                 title: "나를 표현한다",
-                desc: "내면의 에너지를\n형태로 만들어냅니다.",
+                desc: "감정과 내면에너지를\n아트로 만들어냅니다.",
                 color: "text-[#EF4444]",
                 bgColor: "bg-[#EF4444]/10",
                 borderColor: "border-[#EF4444]/30",
