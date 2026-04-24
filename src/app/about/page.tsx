@@ -196,7 +196,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* 3.5. Growth Flow Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-24 px-6 relative overflow-hidden bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
             {[
