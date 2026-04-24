@@ -231,7 +231,7 @@ export default function CoursesPage() {
                                 <div className="p-6 rounded-2xl bg-[#D6C6A8]/5 border border-[#D6C6A8]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div className="space-y-1.5">
-                                            <p className="text-white/90 text-base font-semibold">강의: 지식창업 마스터 클래스 • 1인 비즈니스 과정</p>
+                                            <p className="text-white/90 text-base font-semibold">강의: 브랜드 지식창업 마스터 클래스</p>
                                             <p className="text-[#D6C6A8] text-base font-semibold">자격증: 캔바/AI브랜딩 마스터 강사</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-[#D6C6A8]/30 pt-4 md:pt-0 md:pl-6">
