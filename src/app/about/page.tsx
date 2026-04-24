@@ -195,8 +195,19 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Section Divider/Transition Text */}
+      <div className="py-12 text-center bg-white/[0.02]">
+        <Reveal delayMs={200}>
+          <p className="text-xl md:text-2xl font-display text-white/80 tracking-widest italic">
+            "자명스쿨 5원소 시스템으로 이렇게 변화, 성장합니다."
+          </p>
+          <div className="mt-6 w-12 h-[1px] bg-white/20 mx-auto" />
+        </Reveal>
+      </div>
+
       {/* 3.5. Growth Flow Section */}
-      <section className="py-24 px-6 relative overflow-hidden bg-white/[0.02]">
+      <section className="pb-24 pt-12 px-6 relative overflow-hidden bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
             {[
