@@ -103,24 +103,28 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-6 pt-2">
-            <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px] active:scale-95">
-              {/* External Aura Glow */}
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -inset-2 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-xl"
-                style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.5), transparent 60%)' }}
-              />
-              {/* Sharp Ring Highlight */}
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-2 ring-[#D6C6A8]/40"
-              />
-              <span className="relative z-10 text-[#0B0B10]">나에게 맞는 강의 찾기</span>
-            </button>
+            <Link href="/courses">
+              <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px] active:scale-95">
+                {/* External Aura Glow */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-2 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-xl"
+                  style={{ background: 'radial-gradient(1200px 120px at 50% 50%, rgba(184,155,106,0.5), transparent 60%)' }}
+                />
+                {/* Sharp Ring Highlight */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-[1px] rounded-[inherit] opacity-0 transition-all duration-300 group-hover:opacity-100 ring-2 ring-[#D6C6A8]/40"
+                />
+                <span className="relative z-10 text-[#0B0B10]">나에게 맞는 강의 찾기</span>
+              </button>
+            </Link>
 
-            <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-white/5 backdrop-blur-md border border-white/10 text-white shadow-xl transition-all duration-300 ease-out transform-gpu hover:bg-white/10 hover:-translate-y-[2px] active:scale-95">
-              <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">커리큘럼 보기</span>
-            </button>
+            <Link href="/courses">
+              <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-white/5 backdrop-blur-md border border-white/10 text-white shadow-xl transition-all duration-300 ease-out transform-gpu hover:bg-white/10 hover:-translate-y-[2px] active:scale-95">
+                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">커리큘럼 보기</span>
+              </button>
+            </Link>
           </div>
         </div>
 
