@@ -199,10 +199,13 @@ export default function AboutPage() {
       {/* Section Divider/Transition Text */}
       <div className="py-12 text-center bg-white/[0.02]">
         <Reveal delayMs={200}>
-          <p className="text-xl md:text-2xl font-display text-white/80 tracking-widest italic">
+          <p className="text-xl md:text-2xl font-display text-white/80 tracking-widest italic mb-4">
             "자명스쿨 5원소 시스템으로 이렇게 변화, 성장합니다."
           </p>
-          <div className="mt-6 w-12 h-[1px] bg-white/20 mx-auto" />
+          <p className="text-base md:text-lg text-white/40 font-light tracking-wide">
+            이 흐름을 따라가면 실제 강의, 콘텐츠, 수익 구조까지 연결됩니다.
+          </p>
+          <div className="mt-8 w-12 h-[1px] bg-white/20 mx-auto" />
         </Reveal>
       </div>
 
