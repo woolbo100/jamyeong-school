@@ -64,6 +64,10 @@ export default function SiteHeader() {
           href="https://pf.kakao.com/_IxguMn"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open('https://pf.kakao.com/_IxguMn', '_blank', 'noopener,noreferrer');
+          }}
           className="flex items-center justify-center h-[34px] px-4 text-[13px] font-bold rounded-lg bg-[#222222] border border-[#333333] text-[#ffffff] transition-colors hover:bg-[#333333]"
         >
           상담하기
