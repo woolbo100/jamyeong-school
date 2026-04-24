@@ -296,15 +296,16 @@ export default function AboutPage() {
                       )}
                     </div>
 
-                  {/* Text Content */}
-                  <div className="space-y-3">
-                    <h4 className={`text-lg font-bold uppercase tracking-wider ${item.color}`}>{item.name}</h4>
-                    <h3 className="text-xl font-bold text-white break-keep">{item.title}</h3>
-                    <p className="text-sm text-white/40 leading-relaxed whitespace-pre-line break-keep">{item.desc}</p>
+                    {/* Text Content */}
+                    <div className="space-y-3">
+                      <h4 className={`text-lg font-bold uppercase tracking-wider ${item.color}`}>{item.name}</h4>
+                      <h3 className="text-xl font-bold text-white break-keep">{item.title}</h3>
+                      <p className="text-sm text-white/40 leading-relaxed whitespace-pre-line break-keep">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

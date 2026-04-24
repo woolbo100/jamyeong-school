@@ -44,28 +44,6 @@
 
   /* Custom Fonts */
   --font-display: "Cinzel", serif;
-  /* Five Elements Flow Animation */
-  @keyframes flow-line {
-    0% { left: -100%; opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { left: 100%; opacity: 0; }
-  }
-
-  .animate-flow-line {
-    animation: flow-line 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-flow-glow {
-    animation: flow-glow 4s ease-in-out infinite;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .animate-flow-line, .animate-flow-glow {
-      animation: none !important;
-      display: none;
-    }
-  }
 }
 
 @layer utilities {
@@ -238,6 +216,24 @@
 .hover-glow-knowledge-content:hover { box-shadow: 0 0 15px rgba(192, 192, 192, 0.4); border-color: rgba(192, 192, 192, 0.6); }
 .hover-glow-monetization-system:hover { box-shadow: 0 0 15px rgba(79, 195, 247, 0.4); border-color: rgba(79, 195, 247, 0.6); }
 .hover-glow-abundance-expansion:hover { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); border-color: rgba(212, 175, 55, 0.6); }
+
+/* Five Elements Flow Animation */
+@keyframes flow-line {
+  0% { left: -100%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.animate-flow-line {
+  animation: flow-line 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow-line {
+    animation: none !important;
+  }
+}
 
 .category-badge {
   @apply rounded-full px-3 py-1 text-xs font-medium border border-white/10 transition-all duration-300;
