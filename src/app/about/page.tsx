@@ -199,7 +199,7 @@ export default function AboutPage() {
       {/* Section Divider/Transition Text */}
       <div className="py-12 text-center bg-white/[0.02]">
         <Reveal delayMs={200}>
-          <p className="text-xl md:text-2xl font-display text-white/80 tracking-widest italic mb-4">
+          <p className="text-3xl md:text-4xl font-display text-white/90 tracking-widest italic mb-6">
             "자명스쿨 5원소 시스템으로 이렇게 변화, 성장합니다."
           </p>
           <p className="text-base md:text-lg text-white/40 font-light tracking-wide">
