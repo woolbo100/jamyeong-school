@@ -332,7 +332,7 @@ export default function CoursesPage() {
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">상품 구조 설계 • 서비스 제작 • 수익화, 자동화 시스템 구축</p>
                                     </div>
                                 </div>
 
