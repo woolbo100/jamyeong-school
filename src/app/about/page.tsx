@@ -348,7 +348,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-white/40 font-light mb-8 italic">AI × 심리 × 인문학을 결합한 교육 전문가</p>
               
-              <div className="space-y-6 mb-12">
+              <div className="space-y-10 mb-12">
                 <p className="text-white/80 font-light leading-relaxed break-keep">
                   심리학 전공과 NLP, 최면, 명상, 브레인 트레이닝 전문가로서 사람의 변화와 무의식 구조를 깊이 있게 다루며, AI 관련 자격증 30개 이상과 강의·콘텐츠 제작·수익화 경험을 바탕으로 이론이 아닌 실제 결과를 만드는 교육을 제공합니다.
                 </p>
