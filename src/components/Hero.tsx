@@ -120,9 +120,9 @@ export default function Hero() {
               </button>
             </Link>
 
-            <Link href="/courses">
+            <Link href="/about">
               <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-white/5 backdrop-blur-md border border-white/10 text-white shadow-xl transition-all duration-300 ease-out transform-gpu hover:bg-white/10 hover:-translate-y-[2px] active:scale-95">
-                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">커리큘럼 보기</span>
+                <span className="relative z-10 text-white/90 group-hover:text-white transition-colors">자명스쿨 철학</span>
               </button>
             </Link>
           </div>
