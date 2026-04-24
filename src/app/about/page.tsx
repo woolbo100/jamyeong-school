@@ -379,6 +379,8 @@ export default function AboutPage() {
                 "강의 / 전자책 / 브랜드를 만들고 싶은 분",
                 "새로운 삶의 방향을 찾고 있는 분",
                 "디지털 도구를 가치 있게 쓰고 싶은 분",
+                "나를 표현하고 가치를 전달하고 싶으신 분",
+                "AI시대 마음과 기술을 융합하고 싶으신 분",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] hover:border-white/15 hover:translate-x-1.5 transition-all duration-300 group cursor-default">
                   <span className="text-antiqueGold text-lg leading-none group-hover:scale-150 transition-transform">●</span>
