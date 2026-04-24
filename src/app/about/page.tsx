@@ -195,6 +195,92 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* 3.5. Growth Flow Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
+            {[
+              {
+                num: "01",
+                name: "Earth",
+                title: "나를 이해한다",
+                desc: "기초가 단단해야\n모든 것이 시작됩니다.",
+                color: "text-[#B89B6A]",
+                bgColor: "bg-[#B89B6A]/10",
+                borderColor: "border-[#B89B6A]/30",
+                icon: "🌱"
+              },
+              {
+                num: "02",
+                name: "Fire",
+                title: "나를 표현한다",
+                desc: "내면의 에너지를\n형태로 만들어냅니다.",
+                color: "text-[#EF4444]",
+                bgColor: "bg-[#EF4444]/10",
+                borderColor: "border-[#EF4444]/30",
+                icon: "🔥"
+              },
+              {
+                num: "03",
+                name: "Air",
+                title: "나를 전달한다",
+                desc: "메시지와 콘텐츠로\n사람들과 연결합니다.",
+                color: "text-[#E5E7EB]",
+                bgColor: "bg-[#E5E7EB]/10",
+                borderColor: "border-[#E5E7EB]/30",
+                icon: "💨"
+              },
+              {
+                num: "04",
+                name: "Water",
+                title: "돈을 흐르게 한다",
+                desc: "가치를 돈으로 바꾸는\n구조를 만듭니다.",
+                color: "text-[#3B82F6]",
+                bgColor: "bg-[#3B82F6]/10",
+                borderColor: "border-[#3B82F6]/30",
+                icon: "💧"
+              },
+              {
+                num: "05",
+                name: "Ether",
+                title: "확장된다",
+                desc: "에너지를 확장하고\n세상에 영향을 미칩니다.",
+                color: "text-[#A855F7]",
+                bgColor: "bg-[#A855F7]/10",
+                borderColor: "border-[#A855F7]/30",
+                icon: "✨"
+              }
+            ].map((item, idx) => (
+              <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+                <div className="relative flex flex-col items-center text-center group">
+                  {/* Number */}
+                  <span className={`text-sm font-bold mb-4 opacity-60 ${item.color}`}>{item.num}</span>
+                  
+                  {/* Circle Icon Container */}
+                  <div className={`w-24 h-24 rounded-full border-2 ${item.borderColor} ${item.bgColor} flex items-center justify-center mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(0,0,0,0.3)]`}>
+                    <span className="text-4xl">{item.icon}</span>
+                    
+                    {/* Connecting Arrow (Desktop) */}
+                    {idx < 4 && (
+                      <div className="hidden md:block absolute top-1/2 -right-full w-full h-[1px] bg-gradient-to-r from-white/20 to-white/5 z-0">
+                        <div className="absolute right-0 -top-1 border-t-2 border-r-2 border-white/20 w-2 h-2 rotate-45" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="space-y-3">
+                    <h4 className={`text-lg font-bold uppercase tracking-wider ${item.color}`}>{item.name}</h4>
+                    <h3 className="text-xl font-bold text-white break-keep">{item.title}</h3>
+                    <p className="text-sm text-white/40 leading-relaxed whitespace-pre-line break-keep">{item.desc}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* 4. Instructor Section */}
       <section className="py-32 px-6 max-w-7xl mx-auto">
