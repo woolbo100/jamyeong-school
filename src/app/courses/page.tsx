@@ -220,7 +220,7 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">자기표현 확장, 가치전달, 나눔</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
