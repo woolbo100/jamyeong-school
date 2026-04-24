@@ -368,7 +368,7 @@ export default function AboutPage() {
 
       {/* 5. Target Audience Section */}
       <section className="py-24 px-6 bg-white/[0.02]">
-        <div className="max-w-4xl mx-auto py-16 px-8 rounded-[3rem] border border-white/5 bg-white/[0.01] text-center">
+        <div className="max-w-5xl mx-auto py-16 px-8 rounded-[3rem] border border-white/5 bg-white/[0.01] text-center">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-display mb-12">이런 분들에게 추천합니다</h2>
             <div className="grid sm:grid-cols-2 gap-4 text-left">
