@@ -44,6 +44,28 @@
 
   /* Custom Fonts */
   --font-display: "Cinzel", serif;
+  /* Five Elements Flow Animation */
+  @keyframes flow-line {
+    0% { left: -100%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+  }
+
+  .animate-flow-line {
+    animation: flow-line 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-flow-glow {
+    animation: flow-glow 4s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-flow-line, .animate-flow-glow {
+      animation: none !important;
+      display: none;
+    }
+  }
 }
 
 @layer utilities {

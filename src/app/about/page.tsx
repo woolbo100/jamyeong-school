@@ -248,27 +248,42 @@ export default function AboutPage() {
                 color: "text-[#A855F7]",
                 bgColor: "bg-[#A855F7]/10",
                 borderColor: "border-[#A855F7]/30",
-                image: "/images/icon/ether.png"
+                image: "/images/icon/ether.png",
               }
-            ].map((item, idx) => (
-              <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
-                <div className="relative flex flex-col items-center text-center group">
-                  {/* Number */}
-                  <span className={`text-sm font-bold mb-4 opacity-60 ${item.color}`}>{item.num}</span>
-                  
-                  {/* Circle Icon Container */}
-                  <div className={`w-24 h-24 rounded-full border-2 ${item.borderColor} ${item.bgColor} flex items-center justify-center mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(0,0,0,0.3)] p-5`}>
-                    <div className="relative w-full h-full">
-                      <Image src={item.image} alt={item.name} fill className="object-contain" />
-                    </div>
+            ].map((item, idx) => {
+              const flowGlowColors = [
+                "from-[#B89B6A] via-[#D6C6A8] to-transparent", // Earth -> Fire (Gold)
+                "from-[#EF4444] via-[#F87171] to-transparent", // Fire -> Air (Red)
+                "from-[#E5E7EB] via-white to-transparent",     // Air -> Water (Silver/White)
+                "from-[#3B82F6] via-[#A855F7] to-transparent", // Water -> Ether (Blue/Purple)
+              ];
+
+              return (
+                <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+                  <div className="relative flex flex-col items-center text-center group">
+                    {/* Number */}
+                    <span className={`text-sm font-bold mb-4 opacity-60 ${item.color}`}>{item.num}</span>
                     
-                    {/* Connecting Arrow (Desktop) */}
-                    {idx < 4 && (
-                      <div className="hidden md:block absolute top-1/2 -right-full w-full h-[1px] bg-gradient-to-r from-white/20 to-white/5 z-0">
-                        <div className="absolute right-0 -top-1 border-t-2 border-r-2 border-white/20 w-2 h-2 rotate-45" />
+                    {/* Circle Icon Container */}
+                    <div className={`w-24 h-24 rounded-full border-2 ${item.borderColor} ${item.bgColor} flex items-center justify-center mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(0,0,0,0.3)] p-5`}>
+                      <div className="relative w-full h-full">
+                        <Image src={item.image} alt={item.name} fill className="object-contain" />
                       </div>
-                    )}
-                  </div>
+                      
+                      {/* Connecting Arrow (Desktop Only Animation) */}
+                      {idx < 4 && (
+                        <div className="hidden md:block absolute top-1/2 -right-full w-full h-[1px] bg-white/5 z-0">
+                          {/* Base Static Line */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent" />
+                          
+                          {/* Animated Flow Glow */}
+                          <div className={`absolute top-0 h-full w-1/2 bg-gradient-to-r ${flowGlowColors[idx]} animate-flow-line opacity-50 blur-[2px]`} />
+                          
+                          {/* Arrow Head */}
+                          <div className="absolute right-0 -top-[3px] border-t-[1px] border-r-[1px] border-white/20 w-[7px] h-[7px] rotate-45" />
+                        </div>
+                      )}
+                    </div>
 
                   {/* Text Content */}
                   <div className="space-y-3">
