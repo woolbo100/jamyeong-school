@@ -59,11 +59,11 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">자기 인식 • 무의식 정화 • 정체성 확립</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">자기 인식 • 무의식 정화 • 정체성 확립</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">자기 탐색 질문 • 에세이 및 그림책 기획 • 컨텐츠 생성 • 편집, 출판</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">자기 탐색 질문 • 에세이 및 그림책 기획 • 컨텐츠 생성 • 편집, 출판</p>
                                     </div>
                                 </div>
 
@@ -165,11 +165,11 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">감정 표현 • 내면 치유 • 세계관 형성</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">감정 표현 • 내면 치유 • 세계관 형성</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">AI 이미지 생성 • 감정 기반 아트 제작 • 세계관 시각화</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">AI 이미지 생성 • 감정 기반 아트 제작 • 세계관 시각화</p>
                                     </div>
                                 </div>
 
@@ -220,11 +220,11 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
                                     </div>
                                 </div>
 
@@ -328,11 +328,11 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">결핍 → 풍요 전환 • 가치와 수익 연결</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">결핍 → 풍요 전환 • 가치와 수익 연결</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
                                     </div>
                                 </div>
 
@@ -383,11 +383,11 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-base leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
+                                        <p className="text-white/70 text-sm leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
                                     </div>
                                 </div>
 
