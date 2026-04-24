@@ -339,7 +339,8 @@ export default function CoursesPage() {
                                 <div className="p-6 rounded-2xl bg-water/5 border border-water/10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div className="space-y-1.5">
-                                            <p className="text-white/90 text-base font-semibold">강의: 수익화 마스터 클래스 • 서비스 런칭 과정</p>
+                                            <p className="text-white/90 text-base font-semibold">강의: 1인 비지니스 올인원 마스터 클래스</p>
+                                            <p className="text-water text-base font-semibold">자격증: AI 브랜딩마스터 강사</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-water/20 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
