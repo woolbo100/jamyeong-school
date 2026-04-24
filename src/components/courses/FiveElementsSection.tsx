@@ -8,16 +8,16 @@ export default function FiveElementsSection() {
       icon: "/images/icon/earth.png",
       title: "마음을 심다",
       subtitle: "나를 이해하고 콘텐츠 방향을 찾는 과정",
-      desc: "콘텐츠 주제, 브랜드 방향 확립",
+      desc: "자기인식, 콘텐츠 주제, 브랜드 방향 확립",
       gradient: "from-earth/50 to-transparent",
-      hoverColor: "group-hover:text-[#4ADE80]",
+      hoverColor: "group-hover:text-[#868B6E]",
       link: "/courses/earth"
     },
     {
       icon: "/images/icon/fire.png",
       title: "마음을 그리다",
       subtitle: "감정을 작품으로 만들고 브랜드를 시작하는 과정",
-      desc: "아트 이미지, 영상, 굿즈 제작",
+      desc: "감정 시각화, 아트 이미지, 영상, 굿즈 제작",
       gradient: "from-fire/50 to-transparent",
       hoverColor: "group-hover:text-[#F87171]",
       link: "/courses/fire"
@@ -26,7 +26,7 @@ export default function FiveElementsSection() {
       icon: "/images/icon/air.png",
       title: "마음을 나누다",
       subtitle: "내 경험을 강의와 콘텐츠로 바꾸는 과정",
-      desc: "SNS 콘텐츠, 미니 강의 제작",
+      desc: "SNS콘텐츠, 강의 제작, 강의 스킬, 지식 전달",
       gradient: "from-air/50 to-transparent",
       hoverColor: "group-hover:text-[#F1E5AC]",
       link: "/courses/air"
@@ -35,7 +35,7 @@ export default function FiveElementsSection() {
       icon: "/images/icon/water.png",
       title: "마음을 채우다",
       subtitle: "콘텐츠를 수익 구조로 만드는 과정",
-      desc: "디지털 상품, 자동화 수익",
+      desc: "디지털 상품, 수익화 자동화 시스템 구축",
       gradient: "from-water/50 to-transparent",
       hoverColor: "group-hover:text-[#38BDF8]",
       link: "/courses/water"
@@ -44,7 +44,7 @@ export default function FiveElementsSection() {
       icon: "/images/icon/ether.png",
       title: "마음을 빛내다",
       subtitle: "강사·브랜드로 확장하는 리더 과정",
-      desc: "강사활동, 리더쉽, 풍요마인드",
+      desc: "강사활동, 리더쉽, 풍요마인드, 영향력 구축",
       gradient: "from-ether/50 to-transparent",
       hoverColor: "group-hover:text-[#C084FC]",
       link: "/courses/abundance"
@@ -60,7 +60,7 @@ export default function FiveElementsSection() {
             자명스쿨은 <br className="md:hidden" />
             <span className="bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] bg-clip-text text-transparent px-1">5단계 성장 시스템</span>입니다
           </h2>
-          <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-zinc-300 text-sm md:text-base font-medium leading-relaxed max-w-2xl mx-auto">
             나를 이해하고, 표현하고, 수익으로 연결하는 흐름
           </p>
         </Reveal>
@@ -99,7 +99,7 @@ export default function FiveElementsSection() {
                 {/* 텍스트 */}
                 <div className="relative z-10 mb-4">
                   <h3 className={`text-xl font-bold mb-3 text-white transition-colors ${el.hoverColor}`}>{el.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed font-light">{el.subtitle}</p>
+                  <p className="text-zinc-300 text-sm leading-relaxed font-medium">{el.subtitle}</p>
                 </div>
 
                 {/* 결과 (Gold Emphasis - 크기 확대 및 2줄 유도) */}
