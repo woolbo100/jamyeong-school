@@ -59,20 +59,19 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">자기 인식 • 무의식 정화 • 정체성 확립</p>
+                                        <p className="text-white/70 text-base leading-relaxed">자기 인식 • 무의식 정화 • 정체성 확립</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">자기 탐색 질문 생성 • 에세이 및 브랜드 문장 정리 • 출판 기획 보조</p>
+                                        <p className="text-white/70 text-base leading-relaxed">자기 탐색 질문 • 에세이 및 그림책 기획 • 컨텐츠 생성 • 편집, 출판</p>
                                     </div>
                                 </div>
 
                                 <div className="p-6 rounded-2xl bg-earth/5 border border-earth/10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
-                                            <p className="text-white/80 text-sm">그림책/에세이 출판 강의 • 브랜딩 기초 과정</p>
-                                            <p className="text-earth/80 text-xs mt-1 font-medium">자격증: 감성출판지도사</p>
+                                        <div className="space-y-1.5">
+                                            <p className="text-white/90 text-base font-semibold">강의: 브랜딩 그림책/에세이 출판 과정</p>
+                                            <p className="text-earth text-base font-semibold">자격증: 감성출판지도사</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-earth/20 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-earth text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
@@ -84,7 +83,7 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/earth"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-earth/30 text-earth hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-earth/30 text-earth hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
                                     <span className="absolute inset-0 bg-earth/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -166,20 +165,19 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">감정 표현 • 내면 치유 • 세계관 형성</p>
+                                        <p className="text-white/70 text-base leading-relaxed">감정 표현 • 내면 치유 • 세계관 형성</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">AI 이미지 생성 • 감정 기반 아트 제작 • 세계관 시각화</p>
+                                        <p className="text-white/70 text-base leading-relaxed">AI 이미지 생성 • 감정 기반 아트 제작 • 세계관 시각화</p>
                                     </div>
                                 </div>
 
                                 <div className="p-6 rounded-2xl bg-fire/5 border border-fire/10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
-                                            <p className="text-white/80 text-sm">AI 아티스트 올인원 클래스</p>
-                                            <p className="text-fire/80 text-xs mt-1 font-medium">자격증: AI 아트테라피 지도사</p>
+                                        <div className="space-y-1.5">
+                                            <p className="text-white/90 text-base font-semibold">강의: AI 아티스트 올인원 클래스</p>
+                                            <p className="text-fire text-base font-semibold">자격증: AI 아트테라피 지도사</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-fire/20 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-fire text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
@@ -191,7 +189,7 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/fire"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-fire/30 text-fire hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-fire/30 text-fire hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
                                     <span className="absolute inset-0 bg-fire/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -222,20 +220,19 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
+                                        <p className="text-white/70 text-base leading-relaxed">메시지 구조화 • 지혜 정리 • 자기 표현 확장</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
+                                        <p className="text-white/70 text-base leading-relaxed">강의 커리큘럼 생성 • 전자책 구조화 • 콘텐츠 제작 자동화</p>
                                     </div>
                                 </div>
 
                                 <div className="p-6 rounded-2xl bg-[#D6C6A8]/5 border border-[#D6C6A8]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-2">연결 강의 & 자격증</h4>
-                                            <p className="text-white/80 text-sm">지식창업 마스터 클래스 • 1인 비즈니스 과정</p>
-                                            <p className="text-[#D6C6A8]/80 text-xs mt-1 font-medium">자격증: 캔바/AI브랜딩 마스터 강사</p>
+                                        <div className="space-y-1.5">
+                                            <p className="text-white/90 text-base font-semibold">강의: 지식창업 마스터 클래스 • 1인 비즈니스 과정</p>
+                                            <p className="text-[#D6C6A8] text-base font-semibold">자격증: 캔바/AI브랜딩 마스터 강사</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-[#D6C6A8]/30 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-[#D6C6A8] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
@@ -247,7 +244,7 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/air"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#D6C6A8]/30 text-slate-200 hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#D6C6A8]/30 text-slate-200 hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
                                     <span className="absolute inset-0 bg-[#D6C6A8]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -331,19 +328,18 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">결핍 → 풍요 전환 • 가치와 수익 연결</p>
+                                        <p className="text-white/70 text-base leading-relaxed">결핍 → 풍요 전환 • 가치와 수익 연결</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
+                                        <p className="text-white/70 text-base leading-relaxed">상품 구조 설계 • 랜딩페이지 제작 • 자동화 시스템 구축</p>
                                     </div>
                                 </div>
 
                                 <div className="p-6 rounded-2xl bg-water/5 border border-water/10">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
-                                            <p className="text-white/80 text-sm">수익화 마스터 클래스 • 서비스 런칭 과정</p>
+                                        <div className="space-y-1.5">
+                                            <p className="text-white/90 text-base font-semibold">강의: 수익화 마스터 클래스 • 서비스 런칭 과정</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-water/20 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-water text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
@@ -355,7 +351,7 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/water"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-water/30 text-water hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-water/30 text-water hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
                                     <span className="absolute inset-0 bg-water/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -387,19 +383,18 @@ export default function CoursesPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">마음공부</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
+                                        <p className="text-white/70 text-base leading-relaxed">리더십 • 영향력 확장 • 순환 구조 형성</p>
                                     </div>
                                     <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                                         <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-3">AI 활용</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
+                                        <p className="text-white/70 text-base leading-relaxed">교육 시스템 확장 • 멘토링 구조화 • 커뮤니티 운영</p>
                                     </div>
                                 </div>
 
                                 <div className="p-6 rounded-2xl bg-[#a855f7]/5 border border-[#a855f7]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-2">연결 강의</h4>
-                                            <p className="text-white/80 text-sm">멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
+                                        <div className="space-y-1.5">
+                                            <p className="text-white/90 text-base font-semibold">강의: 멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-[#a855f7]/30 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
@@ -411,7 +406,7 @@ export default function CoursesPage() {
                             <div className="mt-10">
                                 <Link
                                     href="/courses/abundance"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-xs font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#a855f7]/30 text-[#a855f7] hover:text-white transition-all duration-500"
+                                    className="group relative inline-flex items-center justify-center px-10 py-5 text-sm font-bold uppercase tracking-[0.3em] overflow-hidden rounded-full border border-[#a855f7]/30 text-[#a855f7] hover:text-white transition-all duration-500"
                                 >
                                     <span className="relative z-10">강의 커리큘럼 보러가기</span>
                                     <span className="absolute inset-0 bg-[#a855f7]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
