@@ -395,7 +395,8 @@ export default function CoursesPage() {
                                 <div className="p-6 rounded-2xl bg-[#a855f7]/5 border border-[#a855f7]/20">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div className="space-y-1.5">
-                                            <p className="text-white/90 text-base font-semibold">강의: 멘토링 과정 • 리더십 교육 • 협회 강사 양성</p>
+                                            <p className="text-white/90 text-base font-semibold">강의: 멘토링 • 리더십 교육 • 협회 강사 과정</p>
+                                            <p className="text-[#a855f7] text-base font-semibold">자격증: 라이프 코드 마스터</p>
                                         </div>
                                         <div className="md:text-right border-t md:border-t-0 md:border-l border-[#a855f7]/30 pt-4 md:pt-0 md:pl-6">
                                             <h4 className="text-[#a855f7] text-xs font-bold tracking-widest uppercase mb-2">결과</h4>
