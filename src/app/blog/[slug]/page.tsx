@@ -63,7 +63,7 @@ export default async function BlogDetailPage({ params }: Props) {
         )}
 
         {/* Article Body - Unified Width */}
-        <article className="rounded-[40px] bg-white px-8 py-12 md:px-16 md:py-24 text-zinc-900 shadow-2xl w-full">
+        <article className="rounded-[40px] bg-[#FAF7F2] px-8 py-12 md:px-16 md:py-24 text-zinc-900 shadow-2xl w-full">
           <div className="max-w-3xl mx-auto">
             <div
               className="prose prose-zinc lg:prose-xl max-w-none prose-headings:mt-12 prose-headings:text-zinc-900 prose-p:leading-8 prose-p:text-zinc-700 prose-li:text-zinc-700 prose-headings:font-bold prose-headings:italic"
