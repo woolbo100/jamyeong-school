@@ -30,7 +30,7 @@ export default function BlogListClient({
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#B89B6A]/80">
             Jamyeong Journal
           </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">자명스쿨 블로그</h1>
+          <h1 className="text-4xl font-semibold md:text-5xl">자명노트</h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70">
             AI, 마음공부, 창작, 지식창업의 흐름을 기록합니다.
           </p>

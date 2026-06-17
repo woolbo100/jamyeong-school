@@ -7,26 +7,33 @@ type Props = {
     isHovered?: boolean;
 };
 
+// Generate Milky Way Stars (Layer C - High Density) outside the component to keep it pure
+const STATIC_MILKY_WAY_STARS = [...Array(220)].map((_, i) => ({
+    id: i,
+    top: `${Math.random() * 100}%`,
+    left: `${Math.random() * 100}%`,
+    size: Math.random() * 2 + 0.5,
+    opacity: Math.random() * 0.6 + 0.1,
+    delay: `${Math.random() * 8}s`,
+    duration: `${4 + Math.random() * 5}s`,
+    color: Math.random() > 0.4 ? '#D6C6A8' : '#B89B6A',
+    parallaxFactor: 0.8 + Math.random() * 1.5, // Different depth for each star
+}));
+
+// Generate Foreground Bright Stars (Layer B) outside the component to keep it pure
+const STATIC_BRIGHT_STARS = [...Array(25)].map((_, i) => ({
+    id: i,
+    top: `${Math.random() * 100}%`,
+    left: `${Math.random() * 100}%`,
+    opacity: Math.random() * 0.5 + 0.3,
+    delay: `${Math.random() * 4}s`,
+    duration: `${2 + Math.random() * 2}s`,
+}));
+
 const HeroCosmicFX = ({ mousePos = { x: 0, y: 0 }, isHovered = false }: Props) => {
     // Calculate parallax offsets
     const parallaxX = isHovered ? (mousePos.x - 500) * 0.012 : 0;
     const parallaxY = isHovered ? (mousePos.y - 500) * 0.012 : 0;
-
-    // Generate Milky Way Stars (Layer C - High Density)
-    // useMemo to prevent re-generating on every cursor move
-    const milkyWayStars = useMemo(() => {
-        return [...Array(220)].map((_, i) => ({
-            id: i,
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            size: Math.random() * 2 + 0.5,
-            opacity: Math.random() * 0.6 + 0.1,
-            delay: `${Math.random() * 8}s`,
-            duration: `${4 + Math.random() * 5}s`,
-            color: Math.random() > 0.4 ? '#D6C6A8' : '#B89B6A',
-            parallaxFactor: 0.8 + Math.random() * 1.5, // Different depth for each star
-        }));
-    }, []);
 
     return (
         <div className="pointer-events-none absolute inset-0 overflow-hidden z-0 select-none">
@@ -66,7 +73,7 @@ const HeroCosmicFX = ({ mousePos = { x: 0, y: 0 }, isHovered = false }: Props) =
 
             {/* Layer C: Milky Way Cluster (Dense Golden Stars) */}
             <div className="absolute inset-[-5%] w-[110%] h-[110%] transition-transform duration-300 ease-out">
-                {milkyWayStars.map((star) => (
+                {STATIC_MILKY_WAY_STARS.map((star) => (
                     <div
                         key={`mw-star-${star.id}`}
                         className="absolute rounded-full animate-twinkle transform-gpu"
@@ -93,16 +100,16 @@ const HeroCosmicFX = ({ mousePos = { x: 0, y: 0 }, isHovered = false }: Props) =
                     transform: `translate(${parallaxX * 2.2}px, ${parallaxY * 2.2}px)`,
                 }}
             >
-                {[...Array(25)].map((_, i) => (
+                {STATIC_BRIGHT_STARS.map((star) => (
                     <div
-                        key={`bright-${i}`}
+                        key={`bright-${star.id}`}
                         className="absolute w-[2px] h-[2px] rounded-full bg-white animate-twinkle"
                         style={{
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                            opacity: Math.random() * 0.5 + 0.3,
-                            animationDelay: `${Math.random() * 4}s`,
-                            animationDuration: `${2 + Math.random() * 2}s`,
+                            top: star.top,
+                            left: star.left,
+                            opacity: star.opacity,
+                            animationDelay: star.delay,
+                            animationDuration: star.duration,
                             boxShadow: '0 0 10px rgba(255, 255, 255, 0.8)',
                         }}
                     />

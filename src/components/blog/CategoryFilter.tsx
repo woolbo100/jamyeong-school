@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function CategoryFilter({
-  categories,
+  categories: _categories,
   selected,
   onChange,
 }: Props) {
