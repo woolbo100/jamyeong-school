@@ -1,4 +1,5 @@
 import { login, signup } from './actions'
+import SocialLoginButtons from './SocialLoginButtons'
 
 export const metadata = {
     title: 'Login',
@@ -86,6 +87,8 @@ export default async function LoginPage(props: {
                         </button>
                     </div>
                 </form>
+                
+                <SocialLoginButtons />
             </div>
         </div>
     )
