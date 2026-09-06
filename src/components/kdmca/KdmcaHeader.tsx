@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 export default function KdmcaHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,60 +16,60 @@ export default function KdmcaHeader() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 w-full bg-[#FAF9F6]/90 backdrop-blur-xs border-b border-[#E7E5DF]">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+        <div className="flex items-center justify-between h-18">
           {/* 로고 영역 */}
-          <Link href="/kdmca" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-amber-400 font-bold text-base shadow-xs group-hover:bg-slate-800 transition-colors">
+          <Link href="/kdmca" className="flex items-center gap-3.5 group">
+            <div className="w-8 h-8 rounded-xs bg-[#14253D] flex items-center justify-center text-[#B59A68] font-serif text-sm font-bold tracking-tight">
               KD
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-tight">
+              <div className="flex items-baseline gap-2">
+                <span className="text-[15px] sm:text-[17px] font-bold text-[#20242A] tracking-tight">
                   한국디지털마인드코칭협회
                 </span>
-                <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
+                <span className="text-[10px] font-mono tracking-widest text-[#B59A68] font-semibold">
                   KDMCA
                 </span>
               </div>
-              <span className="text-[11px] text-slate-500 font-normal tracking-tight hidden sm:inline">
+              <span className="text-[10px] text-[#6B7280] font-normal tracking-wide hidden sm:inline">
                 Korea Digital Mind Coaching Association
               </span>
             </div>
           </Link>
 
           {/* 데스크톱 네비게이션 */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7 text-[13px] font-medium text-[#4B5563]">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors"
+                className="hover:text-[#14253D] transition-colors py-1 relative hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[1.5px] hover:after:bg-[#B59A68]"
               >
                 {link.name}
               </a>
             ))}
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-1.5 rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 transition-colors border border-slate-200/80"
+              className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#14253D] px-3 py-1.5 border border-[#D5D3CC] rounded-xs hover:border-[#14253D] hover:bg-[#14253D] hover:text-[#FAF9F6] transition-all"
               title="자명스쿨 메인페이지로 이동"
             >
               <span>자명스쿨</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+              <ArrowUpRight className="w-3 h-3 opacity-70" />
             </Link>
           </nav>
 
-          {/* 모바일 햄버거 버튼 */}
+          {/* 모바일 메뉴 버튼 */}
           <div className="md:hidden flex items-center">
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-md text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden focus:ring-2 focus:ring-slate-400"
+              className="p-1.5 text-[#20242A] hover:text-[#14253D] focus:outline-hidden"
               aria-label="메뉴 열기/닫기"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -77,26 +77,26 @@ export default function KdmcaHeader() {
 
       {/* 모바일 드롭다운 메뉴 */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top-2 duration-150">
-          <div className="flex flex-col space-y-2">
+        <div className="md:hidden border-b border-[#E7E5DF] bg-[#FAF9F6] px-6 py-5 space-y-3">
+          <div className="flex flex-col space-y-2.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-3 py-2.5 rounded-md text-base font-medium text-slate-800 hover:bg-slate-50 transition-colors"
+                className="py-1.5 text-sm font-medium text-[#20242A] border-b border-[#EFECE6]"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 border-t border-slate-100">
+            <div className="pt-2">
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-between px-3 py-2.5 rounded-md text-sm font-semibold bg-slate-50 text-slate-800 hover:bg-slate-100 transition-colors"
+                className="flex items-center justify-between py-2 text-xs font-semibold text-[#14253D]"
               >
-                <span>자명스쿨 바로가기</span>
-                <ExternalLink className="w-4 h-4 text-slate-500" />
+                <span>자명스쿨 교육과정 허브</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
