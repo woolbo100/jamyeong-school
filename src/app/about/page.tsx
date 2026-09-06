@@ -29,8 +29,11 @@ export default function AboutPage() {
             </h1>
           </Reveal>
           <Reveal delayMs={400}>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-2">
+              <p className="text-xl md:text-2xl text-[#E2D4BE] font-medium leading-relaxed">
+                나를 이해하고, 방향을 설계하고, 디지털로 현실화하는 학교
+              </p>
+              <p className="text-lg md:text-xl text-white/80 font-normal leading-relaxed">
                 AI로 마음을 이해하고 콘텐츠로 표현하며 삶을 변화시키는 교육을 합니다.
               </p>
             </div>
