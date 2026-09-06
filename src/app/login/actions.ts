@@ -35,7 +35,7 @@ export async function signup(formData: FormData) {
     const rawRedirect = (formData.get('redirect') as string) || '/'
     const redirectUrl = rawRedirect.startsWith('/') ? rawRedirect : '/'
 
-    const { error } = await supabase.auth.signUp({ email, password })
+    const { data, error } = await supabase.auth.signUp({ email, password })
 
     if (error) {
         const errorParams = new URLSearchParams()
@@ -46,9 +46,15 @@ export async function signup(formData: FormData) {
         redirect(`/login?${errorParams.toString()}`)
     }
 
+    // 이메일 인증이 꺼져 있는 경우 즉시 로그인 처리
+    if (data?.session) {
+        revalidatePath('/', 'layout')
+        redirect(redirectUrl)
+    }
+
     revalidatePath('/', 'layout')
     const successParams = new URLSearchParams()
-    successParams.set('message', '이메일 확인 링크를 발송했습니다. 이메일을 확인해 주세요.')
+    successParams.set('message', '회원가입이 완료되었습니다. 메일함(또는 스팸메일함)의 인증 링크를 확인하시거나 로그인해 주세요.')
     if (redirectUrl && redirectUrl !== '/') {
         successParams.set('redirect', redirectUrl)
     }
