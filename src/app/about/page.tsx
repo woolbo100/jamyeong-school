@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
-import { Brain, Palette, Rocket } from "lucide-react";
+import { Brain, Palette, Rocket, ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -411,7 +411,7 @@ export default function AboutPage() {
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight break-keep">
               자명스쿨은 마음과 디지털 역량을 연결하는 <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-antiqueGold via-[#E2D4BE] to-champagneGold bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent font-bold inline-block px-1">
                 5개의 전문 자격과정
               </span>
               을 운영합니다.
@@ -529,6 +529,34 @@ export default function AboutPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        {/* KDMCA Association Link Banner */}
+        <div className="mt-14 max-w-4xl mx-auto">
+          <Reveal delayMs={200} slideFrom="bottom">
+            <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-white/[0.04] via-white/[0.02] to-white/[0.04] border border-antiqueGold/30 hover:border-antiqueGold/60 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="text-center sm:text-left space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/30 text-antiqueGold text-xs font-medium">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>공식 자격증 발급·인증 기관</span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                  한국디지털마인드코칭협회 <span className="text-antiqueGold text-base font-normal">(KDMCA)</span>
+                </h3>
+                <p className="text-white/60 text-sm font-light leading-relaxed break-keep">
+                  자명스쿨의 5대 민간자격과정 공식 인증 기준 및 협회 설립 목적과 비전을 확인하실 수 있습니다.
+                </p>
+              </div>
+
+              <Link
+                href="/kdmca"
+                className="shrink-0 px-6 py-3.5 rounded-xl bg-gradient-to-r from-antiqueGold via-[#D4AF37] to-champagneGold text-[#0B0B10] font-bold text-sm tracking-tight flex items-center gap-2 hover:brightness-110 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
+              >
+                <span>협회 소개 바로가기</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
