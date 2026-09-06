@@ -86,6 +86,8 @@ export default function SiteFooter() {
                   <p className="text-xs text-[#B89B6A] font-semibold tracking-wider uppercase">인증 기관</p>
                   <Link
                     href="/kdmca"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm text-zinc-300 hover:text-white transition-colors group"
                   >
                     <span>한국디지털마인드코칭협회</span>

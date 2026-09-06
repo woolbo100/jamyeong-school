@@ -550,6 +550,8 @@ export default function AboutPage() {
 
               <Link
                 href="/kdmca"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="shrink-0 px-6 py-3.5 rounded-xl bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] font-bold text-sm tracking-tight flex items-center gap-2 shadow hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
               >
                 <span>협회 소개 바로가기</span>
