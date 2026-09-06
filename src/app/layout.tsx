@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
-import CosmicBackground from "@/components/CosmicBackground";
+import MainLayoutWrapper from "@/components/MainLayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,12 +44,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen text-white bg-black`}
       >
-        <CosmicBackground />
-        <SiteHeader />
-        <div className="pt-16">
+        <MainLayoutWrapper>
           {children}
-        </div>
-        <SiteFooter />
+        </MainLayoutWrapper>
       </body>
     </html>
   );
