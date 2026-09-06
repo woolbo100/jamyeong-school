@@ -97,8 +97,8 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-white/80 text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-2xl">
-              AI와 마음공부를 융합하여 나만의 세계를 정렬하고<br />
-              삶의 좌표를 다시 설계합니다.
+              AI와 마음공부를 융합해 나를 이해하고, 삶의 좌표를 다시 설계합니다.<br />
+              나를 알고, 가능성을 설계하고, 디지털로 현실화하는 학교
             </p>
           </div>
 
