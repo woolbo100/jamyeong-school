@@ -39,22 +39,6 @@ export default function SiteFooter() {
                 AI와 마음공부를 연결하는 미래형 교육 플랫폼
               </p>
             </div>
-
-            {/* KDMCA Association Quick Link */}
-            <div>
-              <Link
-                href="/kdmca"
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-[#B89B6A]/30 hover:border-[#B89B6A] transition-all duration-300 group max-w-fit"
-              >
-                <span className="w-2 h-2 rounded-full bg-antiqueGold group-hover:scale-125 transition-transform shadow-[0_0_8px_rgba(184,155,106,0.6)]" />
-                <span className="text-xs sm:text-sm text-zinc-300 group-hover:text-white font-medium">
-                  한국디지털마인드코칭협회 (KDMCA)
-                </span>
-                <span className="text-xs text-[#B89B6A] group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </Link>
-            </div>
           </div>
 
           {/* Navigation and Contact Section */}
@@ -65,12 +49,6 @@ export default function SiteFooter() {
               <ul className="flex flex-col space-y-4">
                 <li><Link href="/about" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명스쿨 소개</Link></li>
                 <li><Link href="/courses" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 소개</Link></li>
-                <li>
-                  <Link href="/kdmca" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors flex items-center gap-1.5">
-                    <span>한국디지털마인드코칭협회</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#B89B6A]/15 text-[#B89B6A] font-semibold">인증</span>
-                  </Link>
-                </li>
                 <li><Link href="/apply" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 신청</Link></li>
                 <li><Link href="/resources" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명자료실</Link></li>
                 <li><Link href="/reviews" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 후기</Link></li>
@@ -102,6 +80,18 @@ export default function SiteFooter() {
                   문의는 영업일 기준<br />
                   순차적으로 답변 드립니다.
                 </p>
+
+                {/* KDMCA Association Link under Contact */}
+                <div className="pt-2 border-t border-white/5 space-y-1.5">
+                  <p className="text-xs text-[#B89B6A] font-semibold tracking-wider uppercase">인증 기관</p>
+                  <Link
+                    href="/kdmca"
+                    className="inline-flex items-center gap-1.5 text-sm text-zinc-300 hover:text-white transition-colors group"
+                  >
+                    <span>한국디지털마인드코칭협회</span>
+                    <span className="text-[#B89B6A] text-xs group-hover:translate-x-1 transition-transform">→</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
