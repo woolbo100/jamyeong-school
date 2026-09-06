@@ -402,6 +402,136 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 4.5 Professional Certification Courses Section */}
+      <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto relative">
+        <div className="text-center mb-16 px-4">
+          <Reveal>
+            <div className="flex items-center justify-center space-x-3 text-antiqueGold mb-4">
+              <span className="font-display tracking-[0.3em] text-xs uppercase">Professional Certifications</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight break-keep">
+              자명스쿨은 마음과 디지털 역량을 연결하는 <br className="hidden md:block" />
+              <span className="bg-gradient-to-r from-antiqueGold via-[#E2D4BE] to-champagneGold bg-clip-text text-transparent">
+                5개의 전문 자격과정
+              </span>
+              을 운영합니다.
+            </h2>
+            <p className="text-white/60 text-base md:text-lg font-light max-w-3xl mx-auto leading-relaxed break-keep">
+              한국디지털마인드코칭협회 공식 인증 커리큘럼을 통해 내면의 본질을 세우고,
+              디지털과 AI 기술로 세상에 가치를 전하는 전문 강사·지도사로 성장하세요.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {[
+            {
+              title: "디지털마인드코칭전문가",
+              badge: "제5원소 에테르",
+              category: "마인드 & 리더십",
+              desc: "무의식과 잠재력을 깨우고 디지털 시대 풍요로운 삶의 좌표를 이끄는 최고위 코칭 과정",
+              image: "/images/icon/ether.png",
+              link: "/courses/abundance",
+              color: "text-[#A855F7]",
+              borderColor: "border-[#A855F7]/30",
+              badgeBg: "bg-[#A855F7]/10 text-[#C084FC]",
+              glowColor: "rgba(168, 85, 247, 0.15)",
+            },
+            {
+              title: "AI브랜딩마스터강사",
+              badge: "제4원소 물",
+              category: "비즈니스 & 수익화",
+              desc: "고유한 가치와 AI 자동화 시스템을 결합하여 지속 가능한 디지털 수익 자산을 구축하는 과정",
+              image: "/images/icon/water.png",
+              link: "/courses/water",
+              color: "text-water",
+              borderColor: "border-water/30",
+              badgeBg: "bg-water/10 text-water",
+              glowColor: "rgba(56, 189, 248, 0.15)",
+            },
+            {
+              title: "캔바콘텐츠마스터강사",
+              badge: "제3원소 공기",
+              category: "콘텐츠 & 강의",
+              desc: "캔바와 AI를 활용하여 시선을 사로잡는 고품격 비주얼 콘텐츠와 명품 강의 교안을 제작하는 과정",
+              image: "/images/icon/air.png",
+              link: "/courses/air",
+              color: "text-air",
+              borderColor: "border-air/30",
+              badgeBg: "bg-air/10 text-[#F1E5AC]",
+              glowColor: "rgba(226, 212, 190, 0.15)",
+            },
+            {
+              title: "감성출판지도사",
+              badge: "제1원소 흙",
+              category: "자기인식 & 출판",
+              desc: "내면의 경험과 통찰을 정돈하여 세상에 단 하나뿐인 브랜딩 그림책과 에세이를 기획·출판하는 과정",
+              image: "/images/icon/earth.png",
+              link: "/courses/earth",
+              color: "text-earth",
+              borderColor: "border-earth/30",
+              badgeBg: "bg-earth/10 text-earth",
+              glowColor: "rgba(184, 155, 106, 0.15)",
+            },
+            {
+              title: "AI감성아트지도사",
+              badge: "제2원소 불",
+              category: "감정표현 & 아트",
+              desc: "감정과 내면 세계관을 최첨단 생성형 AI 아트로 시각화하고 실제 작품과 굿즈로 확장하는 과정",
+              image: "/images/icon/fire.png",
+              link: "/courses/fire",
+              color: "text-fire",
+              borderColor: "border-fire/30",
+              badgeBg: "bg-fire/10 text-fire",
+              glowColor: "rgba(239, 68, 68, 0.15)",
+            },
+          ].map((course, idx) => (
+            <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+              <div className="h-full p-7 rounded-[2rem] bg-white/[0.02] border border-white/10 hover:border-antiqueGold/40 hover:bg-white/[0.05] transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:-translate-y-2">
+                {/* Glow backdrop on hover */}
+                <div 
+                  className="absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] pointer-events-none -z-10" 
+                  style={{
+                    background: `radial-gradient(400px circle at 50% 0%, ${course.glowColor}, transparent 70%)`
+                  }}
+                />
+
+                <div>
+                  {/* Top Badge & Icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <span className={`text-xs px-3 py-1 rounded-full font-medium border border-white/10 ${course.badgeBg}`}>
+                      {course.badge}
+                    </span>
+                    <div className="relative w-12 h-12 group-hover:scale-110 transition-transform duration-500">
+                      <Image src={course.image} alt={course.title} fill className="object-contain" />
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-white/40 tracking-wider mb-2 font-light">{course.category}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                    {course.title}
+                  </h3>
+                  <p className="text-sm text-white/60 font-light leading-relaxed mb-6 break-keep">
+                    {course.desc}
+                  </p>
+                </div>
+
+                {/* Action Link */}
+                <div className="pt-4 border-t border-white/5">
+                  <Link
+                    href={course.link}
+                    className="w-full py-3 px-4 rounded-xl bg-white/[0.04] border border-white/10 text-white/90 text-sm font-semibold flex items-center justify-center gap-2 group/btn hover:bg-gradient-to-r hover:from-antiqueGold hover:to-champagneGold hover:text-[#0B0B10] hover:border-transparent transition-all duration-300"
+                  >
+                    <span>과정 자세히 보기</span>
+                    <span className="group-hover/btn:translate-x-1 transition-transform duration-300 text-xs">→</span>
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* 5. Target Audience Section */}
       <section className="py-24 px-6 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto py-16 px-8 rounded-[3rem] border border-white/5 bg-white/[0.01] text-center">
