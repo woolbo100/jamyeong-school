@@ -9,7 +9,8 @@ export async function login(formData: FormData) {
 
     const email = formData.get('email') as string
     const password = formData.get('password') as string
-    const redirectUrl = (formData.get('redirect') as string) || '/'
+    const rawRedirect = (formData.get('redirect') as string) || '/'
+    const redirectUrl = rawRedirect.startsWith('/') ? rawRedirect : '/'
 
     const { error } = await supabase.auth.signInWithPassword({ email, password })
 
@@ -31,7 +32,8 @@ export async function signup(formData: FormData) {
 
     const email = formData.get('email') as string
     const password = formData.get('password') as string
-    const redirectUrl = (formData.get('redirect') as string) || '/'
+    const rawRedirect = (formData.get('redirect') as string) || '/'
+    const redirectUrl = rawRedirect.startsWith('/') ? rawRedirect : '/'
 
     const { error } = await supabase.auth.signUp({ email, password })
 
@@ -45,5 +47,10 @@ export async function signup(formData: FormData) {
     }
 
     revalidatePath('/', 'layout')
-    redirect(`/login?message=이메일 확인 링크를 발송했습니다. 이메일을 확인해 주세요.&redirect=${encodeURIComponent(redirectUrl)}`)
+    const successParams = new URLSearchParams()
+    successParams.set('message', '이메일 확인 링크를 발송했습니다. 이메일을 확인해 주세요.')
+    if (redirectUrl && redirectUrl !== '/') {
+        successParams.set('redirect', redirectUrl)
+    }
+    redirect(`/login?${successParams.toString()}`)
 }
