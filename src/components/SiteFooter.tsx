@@ -38,6 +38,24 @@ export default function SiteFooter() {
               <p className="text-zinc-400 text-sm md:text-base font-normal">
                 AI와 마음공부를 연결하는 미래형 교육 플랫폼
               </p>
+
+              {/* KDMCA Association Quick Link */}
+              <div className="pt-2">
+                <Link
+                  href="/kdmca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-[#B89B6A]/30 hover:border-[#B89B6A] transition-all duration-300 group max-w-fit"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#B89B6A] group-hover:scale-125 transition-transform shadow-[0_0_8px_rgba(184,155,106,0.6)]" />
+                  <span className="text-xs sm:text-sm text-zinc-300 group-hover:text-white font-medium">
+                    한국디지털마인드코칭협회 (KDMCA)
+                  </span>
+                  <span className="text-xs text-[#B89B6A] group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -80,20 +98,6 @@ export default function SiteFooter() {
                   문의는 영업일 기준<br />
                   순차적으로 답변 드립니다.
                 </p>
-
-                {/* KDMCA Association Link under Contact */}
-                <div className="pt-2 border-t border-white/5 space-y-1.5">
-                  <p className="text-xs text-[#B89B6A] font-semibold tracking-wider uppercase">인증 기관</p>
-                  <Link
-                    href="/kdmca"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-zinc-300 hover:text-white transition-colors group"
-                  >
-                    <span>한국디지털마인드코칭협회</span>
-                    <span className="text-[#B89B6A] text-xs group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
