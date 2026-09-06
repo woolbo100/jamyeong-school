@@ -7,35 +7,43 @@ import { createClient } from '@/utils/supabase/server'
 export async function login(formData: FormData) {
     const supabase = await createClient()
 
-    const data = {
-        email: formData.get('email') as string,
-        password: formData.get('password') as string,
-    }
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
+    const redirectUrl = (formData.get('redirect') as string) || '/'
 
-    const { error } = await supabase.auth.signInWithPassword(data)
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (error) {
-        redirect('/login?message=Could not authenticate user')
+        const errorParams = new URLSearchParams()
+        errorParams.set('message', '이메일 또는 비밀번호가 일치하지 않습니다.')
+        if (redirectUrl && redirectUrl !== '/') {
+            errorParams.set('redirect', redirectUrl)
+        }
+        redirect(`/login?${errorParams.toString()}`)
     }
 
     revalidatePath('/', 'layout')
-    redirect('/')
+    redirect(redirectUrl)
 }
 
 export async function signup(formData: FormData) {
     const supabase = await createClient()
 
-    const data = {
-        email: formData.get('email') as string,
-        password: formData.get('password') as string,
-    }
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
+    const redirectUrl = (formData.get('redirect') as string) || '/'
 
-    const { error } = await supabase.auth.signUp(data)
+    const { error } = await supabase.auth.signUp({ email, password })
 
     if (error) {
-        redirect('/login?message=' + error.message)
+        const errorParams = new URLSearchParams()
+        errorParams.set('message', error.message)
+        if (redirectUrl && redirectUrl !== '/') {
+            errorParams.set('redirect', redirectUrl)
+        }
+        redirect(`/login?${errorParams.toString()}`)
     }
 
     revalidatePath('/', 'layout')
-    redirect('/login?message=Check email to continue sign in process')
+    redirect(`/login?message=이메일 확인 링크를 발송했습니다. 이메일을 확인해 주세요.&redirect=${encodeURIComponent(redirectUrl)}`)
 }

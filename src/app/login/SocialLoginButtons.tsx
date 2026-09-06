@@ -2,14 +2,19 @@
 
 import { createClient } from '@/utils/supabase/client'
 
-export default function SocialLoginButtons() {
+interface Props {
+    redirectUrl?: string
+}
+
+export default function SocialLoginButtons({ redirectUrl = '/mypage' }: Props) {
     const supabase = createClient()
 
     const handleLogin = async (provider: 'kakao' | 'google') => {
+        const nextTarget = encodeURIComponent(redirectUrl)
         await supabase.auth.signInWithOAuth({
             provider,
             options: {
-                redirectTo: `${window.location.origin}/auth/callback?next=/mypage`,
+                redirectTo: `${window.location.origin}/auth/callback?next=${nextTarget}`,
             },
         })
     }

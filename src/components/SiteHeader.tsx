@@ -51,7 +51,7 @@ export default function SiteHeader() {
         <span className="text-white text-xl font-bold tracking-tight transition-all duration-300 group-hover:blur-[0.4px]">자명스쿨</span>
       </Link>
 
-      <nav className="hidden md:flex items-center gap-7 text-sm">
+      <nav className="hidden md:flex items-center gap-6 text-sm">
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/about">
           자명스쿨소개
         </Link>
@@ -64,6 +64,9 @@ export default function SiteHeader() {
         >
           <span>강의신청</span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#B89B6A] group-hover:bg-[#FFFBD1] animate-pulse" />
+        </Link>
+        <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/resources">
+          자명자료실
         </Link>
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/reviews">
           강의후기
@@ -135,6 +138,12 @@ export default function SiteHeader() {
           >
             <span>강의신청</span>
             <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#B89B6A]/20 text-[#D6C6A8] border border-[#B89B6A]/30">신규 OPEN</span>
+          </Link>
+          <Link 
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+            href="/resources"
+          >
+            자명자료실
           </Link>
           <Link 
             className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
