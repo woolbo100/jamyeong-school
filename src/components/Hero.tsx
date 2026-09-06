@@ -88,21 +88,26 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-40 pb-24">
 
         {/* Left: Text Content */}
-        <div className="text-left space-y-10 py-12 lg:py-0">
-          <div className="space-y-6">
-            <h1 className="font-semibold tracking-tight text-white leading-[1.3]">
+        <div className="text-left space-y-8 md:space-y-9 py-12 lg:py-0">
+          <div>
+            <h1 className="font-semibold tracking-tight text-white leading-[1.3] mb-9 md:mb-10">
               <span className="block text-4xl md:text-5xl lg:text-[3.2rem] mb-8 text-white opacity-100 whitespace-nowrap">스스로 빛나는 나만의 가치</span>
               <span className="block text-6xl md:text-7xl lg:text-8xl bg-gradient-to-br from-[#FFFBD1] via-[#E7C07E] via-[#D4AF37] to-[#8A6A3F] bg-clip-text text-transparent filter drop-shadow-[0_0_20px_rgba(212,175,55,0.15)]">
                 자명스쿨
               </span>
             </h1>
-            <p className="text-white/80 text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-2xl">
-              AI와 마음공부를 융합해 나를 이해하고, 삶의 좌표를 다시 설계합니다.<br />
-              나를 알고, 가능성을 설계하고, 디지털로 현실화하는 학교
-            </p>
+            <div className="space-y-3 md:space-y-4">
+              <p className="text-white/90 text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-2xl">
+                AI와 마음공부를 융합해<br />
+                나를 이해하고, 삶의 좌표를 다시 설계합니다.
+              </p>
+              <p className="text-white/70 text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-2xl">
+                나를 알고, 가능성을 설계하고, 디지털로 현실화하는 학교
+              </p>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-6 pt-2">
+          <div className="flex flex-wrap gap-6 pt-1">
             <Link href="/courses">
               <button className="group relative overflow-visible rounded-xl h-14 px-8 text-base font-bold bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px] active:scale-95">
                 {/* External Aura Glow */}
