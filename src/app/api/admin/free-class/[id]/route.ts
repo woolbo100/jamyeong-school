@@ -13,7 +13,7 @@ export async function PATCH(
       data: { user },
     } = await supabase.auth.getUser();
 
-    if (!isAdminUser(user)) {
+    if (!(await isAdminUser(user, supabase))) {
       return NextResponse.json({ error: '관리자 권한 필요' }, { status: 403 });
     }
 

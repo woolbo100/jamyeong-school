@@ -22,7 +22,7 @@ export default async function EditResourcePage({ params }: Props) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user || !isAdminUser(user)) {
+  if (!user || !(await isAdminUser(user, supabase))) {
     redirect('/login?redirect=/admin/resources');
   }
 

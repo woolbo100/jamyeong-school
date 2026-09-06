@@ -58,8 +58,8 @@ export default function SiteHeader() {
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/courses">
           강의소개
         </Link>
-        <Link 
-          className="text-[#D6C6A8] font-semibold hover:text-[#FFFBD1] transition-colors duration-200 flex items-center gap-1.5 group" 
+        <Link
+          className="text-[#D6C6A8] font-semibold hover:text-[#FFFBD1] transition-colors duration-200 flex items-center gap-1.5 group"
           href="/apply"
         >
           <span>강의신청</span>
@@ -108,9 +108,9 @@ export default function SiteHeader() {
         </Link>
 
         {/* Mobile Hamburger Button */}
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white/90 p-2 focus:outline-none" 
+          className="md:hidden text-white/90 p-2 focus:outline-none"
           aria-label={isMobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
         >
           {isMobileMenuOpen ? "✕" : "☰"}
@@ -120,45 +120,45 @@ export default function SiteHeader() {
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-[#0B0B10]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 flex flex-col gap-4 text-base shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200">
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/about"
           >
             자명스쿨소개
           </Link>
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/courses"
           >
             강의소개
           </Link>
-          <Link 
-            className="text-[#D6C6A8] font-bold py-2 border-b border-white/5 flex items-center justify-between" 
+          <Link
+            className="text-[#D6C6A8] font-bold py-2 border-b border-white/5 flex items-center justify-between"
             href="/apply"
           >
             <span>강의신청</span>
             <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#B89B6A]/20 text-[#D6C6A8] border border-[#B89B6A]/30">신규 OPEN</span>
           </Link>
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/resources"
           >
             자명자료실
           </Link>
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/reviews"
           >
             강의후기
           </Link>
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/blog"
           >
             자명노트
           </Link>
-          <Link 
-            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5" 
+          <Link
+            className="text-white/90 hover:text-[#D6C6A8] py-2 border-b border-white/5"
             href="/contact"
           >
             문의하기

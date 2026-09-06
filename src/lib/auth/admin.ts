@@ -1,38 +1,46 @@
-import { User } from '@supabase/supabase-js';
+import { User, SupabaseClient } from '@supabase/supabase-js';
 import { createClient as createSupabaseClient } from '@supabase/supabase-js';
-
-// 관리자 이메일 목록 (환경변수 ADMIN_EMAILS가 있으면 콤마로 분리, 없으면 기본 관리자 이메일 포함)
-const DEFAULT_ADMIN_EMAILS = ['buzasun@naver.com'];
-
-export function getAdminEmails(): string[] {
-  const envEmails = process.env.ADMIN_EMAILS;
-  if (!envEmails) return DEFAULT_ADMIN_EMAILS;
-  return envEmails
-    .split(',')
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean);
-}
+import { createClient } from '@/utils/supabase/server';
 
 /**
- * 주어진 Supabase User 객체가 관리자 권한을 가졌는지 검사합니다.
- * 1. user.app_metadata.role === 'admin'
- * 2. user.email이 관리자 이메일 목록에 포함되어 있는지
+ * 서버 환경에서 현재 로그인한 사용자의 role이 'admin'인지 DB(profiles 테이블)에서 검사합니다.
+ * - 관리자 계정을 별도로 하드코딩하지 않습니다.
+ * - 코드나 환경변수에 평문 비밀번호를 저장하지 않습니다.
+ * - profiles.role === 'admin' 또는 app_metadata.role === 'admin'인 사용자만 관리자 권한을 부여합니다.
  */
-export function isAdminUser(user: User | null | undefined): boolean {
-  if (!user) return false;
+export async function isAdminUser(
+  user: User | null | undefined,
+  client?: SupabaseClient
+): Promise<boolean> {
+  if (!user || !user.id) return false;
 
-  // 1. role 기반 체크
+  // 1. Supabase Auth app_metadata에 role이 'admin'인 경우
   if (user.app_metadata?.role === 'admin') {
     return true;
   }
 
-  // 2. email 기반 체크
-  const userEmail = user.email?.toLowerCase();
-  if (userEmail) {
-    const adminEmails = getAdminEmails();
-    if (adminEmails.includes(userEmail)) {
+  // 2. profiles 테이블의 role 컬럼이 'admin'인지 확인
+  try {
+    let supabase = client;
+    if (!supabase) {
+      if (process.env.SUPABASE_SERVICE_ROLE_KEY) {
+        supabase = createAdminSupabaseClient();
+      } else {
+        supabase = await createClient();
+      }
+    }
+
+    const { data: profile, error } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', user.id)
+      .maybeSingle();
+
+    if (!error && profile?.role === 'admin') {
       return true;
     }
+  } catch (err) {
+    console.error('isAdminUser check error:', err);
   }
 
   return false;
@@ -45,7 +53,7 @@ export function isAdminUser(user: User | null | undefined): boolean {
 export function createAdminSupabaseClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-  
+
   return createSupabaseClient(url, serviceKey, {
     auth: {
       autoRefreshToken: false,

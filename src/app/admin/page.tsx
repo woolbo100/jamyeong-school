@@ -30,25 +30,43 @@ export default async function AdminDashboardPage() {
   let newMembersThisMonth = 0;
   let recentMembers: RecentMember[] = [];
 
-  // 1. 회원 정보 조회 (service_role client 시도)
+  // 1. 회원 정보 조회 (profiles 테이블 우선, auth.admin fallback)
   try {
-    const { data: userData, error: userError } = await adminSupabase.auth.admin.listUsers({
-      page: 1,
-      perPage: 50,
-    });
+    const { count: profileCount, data: profileList } = await supabase
+      .from('profiles')
+      .select('*', { count: 'exact' })
+      .order('created_at', { ascending: false });
 
-    if (!userError && userData?.users) {
-      totalMembers = userData.users.length;
-      newMembersThisMonth = userData.users.filter(
-        (u) => new Date(u.created_at) >= new Date(firstDayOfMonth)
+    if (profileCount !== null && profileCount !== undefined && profileCount > 0) {
+      totalMembers = profileCount;
+      newMembersThisMonth = (profileList || []).filter(
+        (p) => new Date(p.created_at) >= new Date(firstDayOfMonth)
       ).length;
-
-      recentMembers = userData.users.slice(0, 5).map((u) => ({
-        id: u.id,
-        name: (u.user_metadata?.full_name || u.user_metadata?.name || u.email?.split('@')[0]) as string,
-        email: u.email || '',
-        created_at: u.created_at,
+      recentMembers = (profileList || []).slice(0, 5).map((p) => ({
+        id: p.id,
+        name: p.name || p.email?.split('@')[0] || '회원',
+        email: p.email || '',
+        created_at: p.created_at,
       }));
+    } else {
+      const { data: userData, error: userError } = await adminSupabase.auth.admin.listUsers({
+        page: 1,
+        perPage: 50,
+      });
+
+      if (!userError && userData?.users) {
+        totalMembers = userData.users.length;
+        newMembersThisMonth = userData.users.filter(
+          (u) => new Date(u.created_at) >= new Date(firstDayOfMonth)
+        ).length;
+
+        recentMembers = userData.users.slice(0, 5).map((u) => ({
+          id: u.id,
+          name: (u.user_metadata?.full_name || u.user_metadata?.name || u.email?.split('@')[0]) as string,
+          email: u.email || '',
+          created_at: u.created_at,
+        }));
+      }
     }
   } catch (err) {
     console.error('List users error:', err);

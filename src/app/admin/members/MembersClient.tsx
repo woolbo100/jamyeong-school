@@ -13,6 +13,7 @@ export interface MemberItem {
   download_count: number;
   has_applied_free_class: boolean;
   status: string;
+  role?: string;
 }
 
 interface Props {
@@ -117,7 +118,14 @@ export default function MembersClient({ initialMembers }: Props) {
                 filtered.map((m) => (
                   <tr key={m.id} className="hover:bg-[#FAF7F2]/60 transition-colors">
                     <td className="py-4 px-6 font-bold text-[#2E2723]">
-                      {m.name || '회원'}
+                      <div className="flex items-center gap-1.5">
+                        <span>{m.name || '회원'}</span>
+                        {m.role === 'admin' && (
+                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#8A6A3F]/10 text-[#8A6A3F] border border-[#8A6A3F]/30 font-semibold">
+                            관리자
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="py-4 px-6 text-[#5C4C40]">
                       {m.email}

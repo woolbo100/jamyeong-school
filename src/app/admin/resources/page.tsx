@@ -18,7 +18,7 @@ export default async function AdminResourcesPage() {
   } = await supabase.auth.getUser();
 
   // 관리자 권한 검사
-  if (!user || !isAdminUser(user)) {
+  if (!user || !(await isAdminUser(user, supabase))) {
     redirect('/login?redirect=/admin/resources');
   }
 

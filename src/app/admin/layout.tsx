@@ -24,8 +24,8 @@ export default async function AdminLayout({
     data: { user },
   } = await supabase.auth.getUser();
 
-  // 관리자 권한 서버 검증 (비관리자 접근 차단)
-  if (!user || !isAdminUser(user)) {
+  // 관리자 권한 서버 검증 (profiles.role = 'admin' 확인)
+  if (!user || !(await isAdminUser(user, supabase))) {
     redirect('/login?redirect=/admin');
   }
 
