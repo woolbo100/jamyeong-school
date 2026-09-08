@@ -351,14 +351,27 @@ export default function AboutPage() {
               </h2>
               <p className="text-white/40 font-light mb-8 italic">AI × 심리 × 인문학을 결합한 교육 전문가</p>
               
-              <div className="space-y-10 mb-12">
+              <div className="space-y-8 mb-12">
                 <p className="text-white/80 font-light leading-relaxed break-keep">
                   심리학 전공을 기반으로 NLP, 최면, 명상, 브레인 트레이닝 등 사람의 무의식과 변화 구조를 연구해왔으며, AI 관련 자격증 30개 이상과 강의·콘텐츠 제작·수익화 경험을 통해 검증된 실전 교육을 제공합니다.
                 </p>
+
+                {/* 3. 핵심 정체성 문장 (독립적 강조 영역) */}
+                <div className="py-4.5 px-5 sm:px-6 rounded-xl border border-antiqueGold/25 border-l-[3px] border-l-antiqueGold bg-antiqueGold/[0.03] backdrop-blur-xs">
+                  <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed break-keep tracking-tight">
+                    “저는 <span className="text-antiqueGold font-semibold">사람의 내면 변화</span>와{" "}
+                    <br className="sm:hidden" />
+                    <span className="text-antiqueGold font-semibold">디지털 기술</span>을 연결하는{" "}
+                    <br className="sm:hidden" />
+                    <span className="text-antiqueGold font-semibold">교육과 코칭</span>을 합니다.”
+                  </p>
+                </div>
+
                 <p className="text-white/80 font-light leading-relaxed break-keep">
                   자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
                 </p>
-                <ul className="space-y-3 text-white/60 text-sm font-light">
+
+                <ul className="space-y-3 text-white/60 text-sm font-light pt-2">
                   <li className="flex items-start gap-3 text-antiqueGold/90 font-medium">
                     <span className="text-antiqueGold">✔</span> 
                     <span>자명심리문화연구소 / 한국디지털마인드코칭협회 / 이끌림출판사 대표</span>
@@ -373,7 +386,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-antiqueGold">✔</span> 
-                    <span>40권 이상 저서 출간 작가 및 출판 지도사</span>
+                    <span>50권 이상 저서 출간 작가 및 출판 지도사</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-antiqueGold">✔</span> 
