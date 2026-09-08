@@ -48,31 +48,55 @@ export default function KdmcaClientView() {
 
       <main className="w-full">
         {/* =========================================================================
-            1. HERO 영역 (따뜻한 Ivory / Off White: #FAF9F6)
+            1. HERO 영역 (따뜻한 Ivory / Off White: #FAF9F6, 존재감 및 위계 대폭 강화)
         ========================================================================= */}
-        <section className="w-full bg-[#FAF9F6] border-b border-[#E7E5DF] pt-16 pb-20 sm:pt-24 sm:pb-28">
-          <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+        <section className="w-full bg-[#FAF9F6] border-b border-[#E7E5DF] min-h-[620px] lg:min-h-[680px] flex flex-col justify-center relative overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24">
+          {/* 절제된 미세 앰비언트 라이트 (권위와 깊이감 부여) */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-[radial-gradient(ellipse_at_top,rgba(181,154,104,0.08)_0%,transparent_70%)] pointer-events-none"
+            aria-hidden="true"
+          />
+
+          <div className="max-w-[1200px] mx-auto px-5 sm:px-8 w-full relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               {/* 좌측 약 65% 타이포그래피 영역 */}
               <div className="lg:col-span-8 space-y-6">
-                <div className="space-y-2">
-                  <span className="text-[11px] sm:text-xs font-mono tracking-[0.25em] text-[#B59A68] uppercase font-semibold block">
-                    KOREA DIGITAL MIND COACHING ASSOCIATION
+                {/* 2. 상단 eyebrow 라벨 */}
+                <div className="space-y-1.5">
+                  <span className="text-[11px] sm:text-xs font-mono tracking-[0.24em] text-[#B59A68] uppercase font-semibold block">
+                    KDMCA · KOREA DIGITAL MIND COACHING ASSOCIATION
                   </span>
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14253D] tracking-tight leading-[1.18]">
+                  <span className="text-xs font-semibold text-[#14253D]/70 tracking-wide block">
+                    등록 민간자격 공식 관리기관
+                  </span>
+                </div>
+
+                {/* 3. 메인 기관명 & 4. 핵심 철학 문구 */}
+                <div className="space-y-3 pt-1">
+                  <h1 className="text-3xl sm:text-4xl lg:text-[54px] xl:text-[60px] font-bold text-[#14253D] tracking-tight leading-[1.14]">
                     한국디지털마인드코칭협회
                   </h1>
-                  <p className="text-base sm:text-lg font-medium text-[#4B5563] pt-1 tracking-tight">
-                    AI · 디지털 콘텐츠 · 코칭 역량을 연결하는 미래형 교육 전문기관
+                  <p className="text-xl sm:text-2xl lg:text-[28px] font-bold text-[#14253D] pt-1 tracking-tight leading-snug break-keep">
+                    사람의 <span className="text-[#B59A68] font-semibold">내면 변화</span>와{" "}
+                    <br className="sm:hidden" />
+                    <span className="text-[#B59A68] font-semibold">디지털 기술</span>을 연결합니다.
                   </p>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#6B7280] max-w-[680px] leading-relaxed font-normal pt-1">
-                  한국디지털마인드코칭협회는 급변하는 디지털 환경에 필요한 AI 활용 능력, 콘텐츠 제작 능력, 교육 및 코칭 역량을 융합하여 전문 교육인과 강사를 양성하는 교육·자격 운영기관입니다.
+                {/* 5. 기관 설명 문구 (PC 기준 2줄 폭 최적화) */}
+                <p className="text-xs sm:text-sm lg:text-[15px] text-[#555E6D] max-w-[700px] leading-relaxed font-normal pt-1 break-keep">
+                  한국디지털마인드코칭협회는 사람의 마음과 변화에 대한 이해를 바탕으로 AI와 디지털 기술을 연결하여 새로운 시대의 코칭·교육 전문가를 양성하는 교육·자격 전문기관입니다.
                 </p>
 
-                {/* 버튼 2개: Deep Navy Solid + Subtle Outline */}
-                <div className="pt-4 flex flex-wrap items-center gap-3.5">
+                {/* 6. 철학 키워드 (절제된 샴페인골드 모노스페이스) */}
+                <div className="pt-2">
+                  <span className="text-[11px] sm:text-xs font-mono tracking-[0.28em] text-[#B59A68] font-semibold uppercase block">
+                    MIND · COACHING · DIGITAL · CHANGE
+                  </span>
+                </div>
+
+                {/* 7. 버튼 2개: Deep Navy Solid + Subtle Outline */}
+                <div className="pt-5 flex flex-wrap items-center gap-3.5">
                   <a
                     href="#qualifications"
                     className="px-6 py-3 bg-[#14253D] hover:bg-[#1E3A5F] text-[#FAF9F6] text-xs font-semibold tracking-wide transition-colors inline-flex items-center gap-2 rounded-xs"
@@ -127,6 +151,17 @@ export default function KdmcaClientView() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* 9. HERO → 대표자격체계 연결 인디케이터 */}
+            <div className="pt-10 sm:pt-14 flex items-center justify-start">
+              <a
+                href="#signature-path"
+                className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-[#8C98A4] hover:text-[#B59A68] transition-colors uppercase inline-flex items-center gap-2 group"
+              >
+                <span className="group-hover:translate-x-0.5 transition-transform">DIGITAL MIND COACHING PATH</span>
+                <span className="text-[#B59A68] group-hover:translate-y-0.5 transition-transform">↓</span>
+              </a>
             </div>
           </div>
         </section>
