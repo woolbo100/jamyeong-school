@@ -233,7 +233,7 @@ export default function KdmcaClientView() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
               <div>
                 <span className="text-xs font-mono tracking-[0.2em] text-[#B59A68] uppercase font-semibold block mb-2">
-                  02 — CREATE & BRAND
+                  CREATE & BRAND
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14253D] tracking-tight">
                   등록 민간자격 과정
