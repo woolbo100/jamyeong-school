@@ -230,8 +230,10 @@ export default function KdmcaSignatureSection() {
                   <p className="text-xs sm:text-sm font-bold text-[#FAF9F6] flex items-center gap-1.5">
                     <span>→ 코칭 역량 완성</span>
                   </p>
-                  <p className="text-[11px] text-[#94A3B8] leading-relaxed pt-0.5">
-                    사람의 마음과 변화 원리를 이해하고 실제 마인드코칭을 수행할 수 있는 전문 역량을 완성합니다.
+                  <p className="text-[11px] text-[#94A3B8] leading-relaxed pt-0.5 break-keep">
+                    사람의 마음과 변화 원리를 이해하고
+                    <br className="hidden sm:inline" />{" "}
+                    실제 마인드코칭을 수행할 수 있는 전문 역량을 완성합니다.
                   </p>
                 </div>
               </div>
@@ -298,7 +300,7 @@ export default function KdmcaSignatureSection() {
                   <p className="text-xs sm:text-sm font-bold text-[#FAF9F6] flex items-center gap-1.5">
                     <span>→ 교육 · 서비스 · 브랜드까지 완성</span>
                   </p>
-                  <p className="text-[11px] text-[#94A3B8] leading-relaxed pt-0.5">
+                  <p className="text-[11px] text-[#94A3B8] leading-relaxed pt-0.5 break-keep">
                     확보한 코칭 역량을 기반으로 AI와 디지털 기술을 결합하여 독자적 서비스와 교육 브랜드를 설계 및 운영합니다.
                   </p>
                 </div>
