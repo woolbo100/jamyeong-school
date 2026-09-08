@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRight, ArrowDown, Check, Sparkles } from "lucide-react";
 
 export default function KdmcaSignatureSection() {
@@ -42,99 +43,20 @@ export default function KdmcaSignatureSection() {
             1. 공식 엠블럼 (KDMCA Official Vector Seal)
         ========================================================================= */}
         <div className="flex flex-col items-center justify-center text-center mb-6">
-          <div className="relative group p-1 mb-4">
+          <div className="relative group p-1 mb-5">
             {/* 엠블럼 외곽 은은한 골드 글로우 */}
-            <div className="absolute inset-0 rounded-full bg-[#B59A68]/15 blur-md group-hover:bg-[#B59A68]/25 transition-all duration-500" />
+            <div className="absolute inset-0 rounded-full bg-[#B59A68]/20 blur-xl group-hover:bg-[#B59A68]/35 transition-all duration-500 pointer-events-none" />
 
-            {/* 정교한 SVG 메달형 인증마크 엠블럼 */}
-            <svg
-              className="w-24 h-24 sm:w-28 sm:h-28 relative z-10 transition-transform duration-500 group-hover:scale-105"
-              viewBox="0 0 120 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="KDMCA 공식 엠블럼"
-            >
-              {/* 외부 얇은 골드 링 */}
-              <circle
-                cx="60"
-                cy="60"
-                r="57"
-                stroke="#B59A68"
-                strokeWidth="1.2"
-                strokeOpacity="0.85"
+            {/* 공식 KDMCA 메달 엠블럼 이미지 */}
+            <div className="relative w-32 h-32 sm:w-36 sm:h-36 transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)]">
+              <Image
+                src="/images/kdmca/kdmca-emblem.png"
+                alt="한국디지털마인드코칭협회 공식 엠블럼"
+                fill
+                priority
+                className="object-contain rounded-full"
               />
-              {/* 내부 보조 링 */}
-              <circle
-                cx="60"
-                cy="60"
-                r="52"
-                stroke="#B59A68"
-                strokeWidth="0.6"
-                strokeDasharray="2 3"
-                strokeOpacity="0.6"
-              />
-              <circle
-                cx="60"
-                cy="60"
-                r="48"
-                fill="#0F1E33"
-                stroke="#B59A68"
-                strokeWidth="0.8"
-              />
-
-              {/* 엠블럼 중앙 KDMCA 각인 */}
-              <text
-                x="60"
-                y="36"
-                textAnchor="middle"
-                fill="#B59A68"
-                fontSize="6.5"
-                fontFamily="sans-serif"
-                fontWeight="700"
-                letterSpacing="0.28em"
-              >
-                KDMCA
-              </text>
-
-              {/* 중앙 심볼: 지혜와 코칭을 상징하는 기하학적 나침반/스타 모티프 */}
-              <path
-                d="M60 42L62.5 54L74.5 56.5L62.5 59L60 71L57.5 59L45.5 56.5L57.5 54L60 42Z"
-                fill="#B59A68"
-                fillOpacity="0.9"
-              />
-              <circle cx="60" cy="56.5" r="1.5" fill="#0F1E33" />
-
-              {/* 엠블럼 하단 텍스트 */}
-              <text
-                x="60"
-                y="81"
-                textAnchor="middle"
-                fill="#FAF9F6"
-                fontSize="5"
-                fontFamily="sans-serif"
-                fontWeight="600"
-                letterSpacing="0.18em"
-              >
-                DIGITAL MIND COACHING
-              </text>
-              <text
-                x="60"
-                y="89"
-                textAnchor="middle"
-                fill="#B59A68"
-                fontSize="4"
-                fontFamily="sans-serif"
-                fontWeight="500"
-                letterSpacing="0.14em"
-              >
-                PROFESSIONAL · MASTER
-              </text>
-
-              {/* 양옆 장식 점 */}
-              <circle cx="28" cy="56.5" r="1" fill="#B59A68" />
-              <circle cx="92" cy="56.5" r="1" fill="#B59A68" />
-            </svg>
+            </div>
           </div>
 
           {/* 영문 골드 라벨 */}
