@@ -114,38 +114,40 @@ export default function KdmcaClientView() {
                 </div>
               </div>
 
-              {/* 우측 약 35% 절제된 공식 기관 엠블럼 & 직인 프레임 */}
+              {/* 우측 약 35% 절제된 공식 기관 엠블럼 & 직인 프레임 (크기 및 존재감 강화) */}
               <div className="lg:col-span-4 flex justify-start lg:justify-end">
-                <div className="w-full max-w-[320px] bg-white border border-[#D5D3CC] p-6 space-y-5 shadow-2xs">
+                <div className="w-full max-w-[380px] bg-white border border-[#D5D3CC] p-7 sm:p-8 space-y-6 shadow-xs">
                   <div className="flex items-center justify-between pb-4 border-b border-[#E7E5DF]">
-                    <span className="text-[10px] font-mono tracking-widest text-[#B59A68] uppercase font-semibold">
+                    <span className="text-[11px] sm:text-xs font-mono tracking-widest text-[#B59A68] uppercase font-semibold">
                       OFFICIAL ACCREDITATION
                     </span>
-                    <span className="text-[10px] font-mono text-[#9CA3AF]">EST. 2026</span>
+                    <span className="text-[11px] font-mono text-[#9CA3AF]">EST. 2026</span>
                   </div>
 
-                  <div className="space-y-1">
-                    <span className="text-xs font-bold text-[#14253D] block">
+                  <div className="space-y-2">
+                    <span className="text-sm sm:text-base font-bold text-[#14253D] block tracking-tight">
                       대한민국 등록 민간자격 관리기관
                     </span>
-                    <p className="text-[11px] text-[#6B7280] leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-[#555E6D] leading-relaxed break-keep">
                       본 협회는 자격기본법에 의거하여 정식 등록된 4대 교육·코칭 민간자격을 공식 운영합니다.
                     </p>
                   </div>
 
                   {/* 공식 직인 날인 영역 */}
-                  <div className="pt-4 border-t border-[#E7E5DF] flex items-center justify-between">
-                    <div className="text-left">
-                      <span className="text-[10px] font-mono text-[#B59A68] uppercase block">OFFICIAL SEAL</span>
-                      <span className="text-xs font-bold text-[#14253D]">대표자 백진선</span>
+                  <div className="pt-5 border-t border-[#E7E5DF] flex items-center justify-between">
+                    <div className="text-left space-y-0.5">
+                      <span className="text-[10px] sm:text-[11px] font-mono text-[#B59A68] uppercase block font-semibold">
+                        OFFICIAL SEAL
+                      </span>
+                      <span className="text-sm sm:text-[15px] font-bold text-[#14253D]">대표자 백진선</span>
                     </div>
-                    <div className="p-0.5 bg-white border border-[#D5D3CC]">
+                    <div className="p-1 bg-white border border-[#D5D3CC]">
                       <Image
                         src="/images/kdmca/kdmca-seal.png"
                         alt="한국디지털마인드코칭협회 공식 직인"
-                        width={48}
-                        height={48}
-                        className="block"
+                        width={64}
+                        height={64}
+                        className="block w-14 h-14 sm:w-16 sm:h-16 object-contain"
                       />
                     </div>
                   </div>
