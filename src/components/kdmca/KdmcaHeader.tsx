@@ -9,6 +9,7 @@ export default function KdmcaHeader() {
 
   const navLinks = [
     { name: "협회소개", href: "#about" },
+    { name: "대표자격체계", href: "#signature-path" },
     { name: "자격과정", href: "#qualifications" },
     { name: "자격취득절차", href: "#process" },
     { name: "자격관리", href: "#management" },

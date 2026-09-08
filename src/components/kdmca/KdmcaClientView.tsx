@@ -12,6 +12,7 @@ import {
 import KdmcaHeader from "@/components/kdmca/KdmcaHeader";
 import KdmcaFooter from "@/components/kdmca/KdmcaFooter";
 import QualificationDetailModal from "@/components/kdmca/QualificationDetailModal";
+import KdmcaSignatureSection from "@/components/kdmca/KdmcaSignatureSection";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function KdmcaClientView() {
@@ -183,67 +184,92 @@ export default function KdmcaClientView() {
             </div>
           </div>
         </section>
+ 
+        {/* =========================================================================
+            디지털마인드코칭 대표 자격체계 (KDMCA SIGNATURE CERTIFICATION PATH)
+        ========================================================================= */}
+        <KdmcaSignatureSection />
 
         {/* =========================================================================
             3. 등록 민간자격 (아주 연한 Blue Gray: #F2F5F7)
         ========================================================================= */}
         <section id="qualifications" className="w-full bg-[#F2F5F7] border-b border-[#E2E6EA] py-24 sm:py-32 scroll-mt-18">
           <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
               <div>
                 <span className="text-xs font-mono tracking-[0.2em] text-[#B59A68] uppercase font-semibold block mb-2">
-                  02 — CERTIFICATIONS
+                  02 — CREATE & BRAND
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14253D] tracking-tight">
                   등록 민간자격 과정
                 </h2>
               </div>
-              <p className="text-xs sm:text-sm text-[#6B7280] max-w-md sm:text-right leading-relaxed">
-                한국디지털마인드코칭협회에서는 AI, 디지털 콘텐츠, 출판, 디자인 및 감성예술 분야의 전문 역량을 갖춘 인재 양성을 위한 등록 민간자격과정을 운영하고 있습니다.
-              </p>
+              <div className="max-w-lg sm:text-right space-y-2">
+                <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                  디지털마인드코칭의 가치와 전문성을 콘텐츠로 표현하고 세상과 연결하는 CREATE & BRAND 전문과정입니다. AI, 디지털 콘텐츠, 출판, 디자인 및 브랜딩 분야의 실무 역량을 바탕으로 자신만의 콘텐츠와 전문 브랜드를 구축할 수 있도록 교육합니다.
+                </p>
+                <span className="text-[11px] font-mono tracking-[0.2em] text-[#B59A68] font-semibold uppercase block">
+                  CREATE · EXPRESS · PUBLISH · BRAND
+                </span>
+              </div>
             </div>
 
             {/* 4개 자격증: 2x2 에디토리얼 그리드 (Blue Gray 배경 위에서 White 카드와 Muted Gold 포인트) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#DCE2E6] border border-[#DCE2E6]">
-              {QUALIFICATIONS_DATA.map((qual, idx) => (
-                <div
-                  key={qual.id}
-                  className="bg-white p-7 sm:p-9 hover:bg-[#FAFCFD] transition-colors group flex flex-col justify-between"
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs font-mono font-bold text-[#B59A68]">
-                        0{idx + 1}
-                      </span>
-                      <span className="text-[11px] font-mono text-[#B59A68] font-semibold tracking-wide">
-                        REG. NO. {qual.registrationNumber}
-                      </span>
+              {QUALIFICATIONS_DATA.map((qual, idx) => {
+                const categoryTagMap: Record<string, string> = {
+                  "canva-master": "CREATE",
+                  "publishing-instructor": "PUBLISH",
+                  "ai-art-instructor": "VISUALIZE",
+                  "ai-branding-master": "BRAND",
+                };
+                const tag = categoryTagMap[qual.id] || "CERT";
+
+                return (
+                  <div
+                    key={qual.id}
+                    className="bg-white p-7 sm:p-9 hover:bg-[#FAFCFD] transition-colors group flex flex-col justify-between"
+                  >
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-mono font-bold text-[#B59A68]">
+                            0{idx + 1}
+                          </span>
+                          <span className="text-[11px] font-mono font-bold tracking-[0.18em] text-[#B59A68] uppercase">
+                            · {tag}
+                          </span>
+                        </div>
+                        <span className="text-[11px] font-mono text-[#8C98A4] font-medium tracking-wide">
+                          REG. NO. {qual.registrationNumber}
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg sm:text-xl font-bold text-[#14253D] tracking-tight group-hover:text-[#1E3A5F] transition-colors">
+                        {qual.name}
+                      </h3>
+
+                      <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed pt-1">
+                        {qual.shortDescription}
+                      </p>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-[#14253D] tracking-tight group-hover:text-[#1E3A5F] transition-colors">
-                      {qual.name}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed pt-1">
-                      {qual.shortDescription}
-                    </p>
+                    <div className="pt-6 mt-6 border-t border-[#EDF1F4] flex items-center justify-between text-xs">
+                      <span className="text-[11px] text-[#8C98A4]">
+                        {qual.type} · {qual.level}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedQualification(qual)}
+                        className="inline-flex items-center gap-1.5 font-semibold text-[#14253D] group-hover:text-[#B59A68] transition-colors text-xs"
+                      >
+                        <span>상세보기</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </div>
                   </div>
-
-                  <div className="pt-6 mt-6 border-t border-[#EDF1F4] flex items-center justify-between text-xs">
-                    <span className="text-[11px] text-[#8C98A4]">
-                      {qual.type} · {qual.level}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedQualification(qual)}
-                      className="inline-flex items-center gap-1.5 font-semibold text-[#14253D] group-hover:text-[#B59A68] transition-colors text-xs"
-                    >
-                      <span>상세보기</span>
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                    </button>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* 공통 기준 한 줄 공지 */}
