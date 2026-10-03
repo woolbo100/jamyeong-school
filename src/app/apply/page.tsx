@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 자명스쿨의 전문 교육과정(정규과정) 안내 및 신청 허브",
 };
 
-// 5개 과정 카드 데이터 구조화
+// 6개 정규과정 카드 데이터 구조화
 interface CourseApplyItem {
   id: string;
   title: string;
@@ -19,50 +19,13 @@ interface CourseApplyItem {
   statusLabel: string;
   href: string | null; // 실제 랜딩페이지 생성 시 URL만 입력하면 즉시 활성화
   featured?: boolean;
+  badge?: "FLAGSHIP COURSE" | "MASTER COURSE" | null;
   icon: string;
   elementLabel?: string;
 }
 
 const COURSES: CourseApplyItem[] = [
-  {
-    id: "digital-mind-coaching",
-    title: "디지털마인드코칭전문가",
-    category: "MIND COACHING",
-    elementLabel: "제5원소 에테르",
-    description: "자기이해, 마인드 패턴, 강점과 기질을 바탕으로 삶과 일의 방향을 설계하는 자명스쿨의 핵심 코칭 과정",
-    tags: ["자기이해", "마인드", "진로", "코칭"],
-    status: "coming-soon",
-    statusLabel: "모집예정",
-    href: null, // 추후 '/apply/digital-mind-coaching' 등으로 연결
-    featured: true,
-    icon: "/images/icon/ether.png",
-  },
-  {
-    id: "ai-branding",
-    title: "AI브랜딩마스터강사",
-    category: "AI BRANDING",
-    elementLabel: "제4원소 물",
-    description: "AI를 활용해 나만의 브랜드 방향을 찾고 콘텐츠와 강의로 연결하는 실전 브랜딩 과정",
-    tags: ["AI", "브랜딩", "1인브랜드", "강의"],
-    status: "coming-soon",
-    statusLabel: "모집예정",
-    href: null, // 추후 '/apply/ai-branding' 연결
-    featured: false,
-    icon: "/images/icon/water.png",
-  },
-  {
-    id: "canva-content",
-    title: "캔바콘텐츠마스터강사",
-    category: "CONTENT DESIGN",
-    elementLabel: "제3원소 공기",
-    description: "캔바를 활용해 교육, SNS, 강의자료 등 실전 콘텐츠 제작 역량을 키우는 과정",
-    tags: ["캔바", "디자인", "콘텐츠", "실무"],
-    status: "coming-soon",
-    statusLabel: "모집예정",
-    href: null, // 추후 '/apply/canva-content' 연결
-    featured: false,
-    icon: "/images/icon/air.png",
-  },
+  // 1. 감성출판지도사
   {
     id: "emotional-publishing",
     title: "감성출판지도사",
@@ -72,10 +35,11 @@ const COURSES: CourseApplyItem[] = [
     tags: ["전자책", "출판", "글쓰기", "콘텐츠"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null, // 추후 '/apply/emotional-publishing' 연결
+    href: null,
     featured: false,
     icon: "/images/icon/earth.png",
   },
+  // 2. AI감성아트지도사
   {
     id: "ai-emotional-art",
     title: "AI감성아트지도사",
@@ -85,9 +49,67 @@ const COURSES: CourseApplyItem[] = [
     tags: ["AI아트", "이미지", "감성콘텐츠", "창작"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null, // 추후 '/apply/ai-emotional-art' 연결
+    href: null,
     featured: false,
     icon: "/images/icon/fire.png",
+  },
+  // 3. 캔바콘텐츠마스터강사
+  {
+    id: "canva-content",
+    title: "캔바콘텐츠마스터강사",
+    category: "CONTENT DESIGN",
+    elementLabel: "제3원소 공기",
+    description: "캔바를 활용해 교육, SNS, 강의자료 등 실전 콘텐츠 제작 역량을 키우는 과정",
+    tags: ["캔바", "디자인", "콘텐츠", "실무"],
+    status: "coming-soon",
+    statusLabel: "모집예정",
+    href: null,
+    featured: false,
+    icon: "/images/icon/air.png",
+  },
+  // 4. AI브랜딩마스터강사
+  {
+    id: "ai-branding",
+    title: "AI브랜딩마스터강사",
+    category: "AI BRANDING",
+    elementLabel: "제4원소 물",
+    description: "AI를 활용해 나만의 브랜드 방향을 찾고 콘텐츠와 강의로 연결하는 실전 브랜딩 과정",
+    tags: ["AI", "브랜딩", "1인브랜드", "강의"],
+    status: "coming-soon",
+    statusLabel: "모집예정",
+    href: null,
+    featured: false,
+    icon: "/images/icon/water.png",
+  },
+  // 5. 디지털마인드코칭전문가 (FLAGSHIP)
+  {
+    id: "digital-mind-coaching",
+    title: "디지털마인드코칭전문가",
+    category: "MIND COACHING",
+    elementLabel: "제5원소 에테르",
+    description: "자기이해, 마인드 패턴, 강점과 기질을 바탕으로 삶과 일의 방향을 설계하고 코칭의 핵심 역량을 기르는 자명스쿨의 대표 과정",
+    tags: ["자기이해", "마인드", "진로", "코칭"],
+    status: "coming-soon",
+    statusLabel: "모집예정",
+    href: null,
+    featured: true,
+    badge: "FLAGSHIP COURSE",
+    icon: "/images/icon/ether.png",
+  },
+  // 6. 디지털마인드코칭마스터 (MASTER)
+  {
+    id: "digital-mind-coaching-master",
+    title: "디지털마인드코칭마스터",
+    category: "MIND COACHING",
+    elementLabel: "최종 심화",
+    description: "마인드코칭을 상담·교육·프로그램으로 확장하고 AI와 디지털 도구를 활용해 자신만의 코칭 서비스와 브랜드를 완성하는 최종 심화 과정",
+    tags: ["마인드코칭", "코칭서비스", "AI활용", "프로그램개발"],
+    status: "coming-soon",
+    statusLabel: "모집예정",
+    href: null,
+    featured: true,
+    badge: "MASTER COURSE",
+    icon: "/images/icon/ether.png",
   },
 ];
 
@@ -142,7 +164,7 @@ export default function ApplyPage() {
           </span>
         </div>
 
-        {/* 5개 과정 카드 그리드 */}
+        {/* 6개 과정 카드 그리드 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {COURSES.map((course) => {
             const isFeatured = course.featured;
@@ -157,11 +179,17 @@ export default function ApplyPage() {
                       : "bg-white border border-[#E8DFD3] shadow-[0_4px_20px_rgba(46,39,35,0.04)] hover:shadow-[0_12px_32px_rgba(46,39,35,0.08)] hover:border-[#D6C6A8] hover:-translate-y-1"
                   }`}
               >
-                {/* Featured 배지 (FLAGSHIP) */}
-                {isFeatured && (
+                {/* 상단 배지 (FLAGSHIP COURSE 또는 MASTER COURSE) */}
+                {course.badge === "FLAGSHIP COURSE" && (
                   <div className="absolute -top-3.5 left-7 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#C6A66B] to-[#B89455] text-white text-[11px] font-bold tracking-wider uppercase shadow-md flex items-center gap-1.5">
                     <span>★</span>
                     <span>FLAGSHIP COURSE</span>
+                  </div>
+                )}
+                {course.badge === "MASTER COURSE" && (
+                  <div className="absolute -top-3.5 left-7 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#B89455] to-[#8E6D38] text-white text-[11px] font-bold tracking-wider uppercase shadow-md flex items-center gap-1.5">
+                    <span>✦</span>
+                    <span>MASTER COURSE</span>
                   </div>
                 )}
 
