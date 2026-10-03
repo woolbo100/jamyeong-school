@@ -67,7 +67,8 @@ export default function SiteFooter() {
               <ul className="flex flex-col space-y-4">
                 <li><Link href="/about" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명스쿨 소개</Link></li>
                 <li><Link href="/courses" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 소개</Link></li>
-                <li><Link href="/apply" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 신청</Link></li>
+                <li><Link href="/apply" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">정규과정</Link></li>
+                <li><Link href="/oneday" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">원데이클래스</Link></li>
                 <li><Link href="/resources" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명자료실</Link></li>
                 <li><Link href="/reviews" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 후기</Link></li>
                 <li><Link href="/blog" className="text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명노트</Link></li>

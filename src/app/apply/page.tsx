@@ -4,8 +4,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "강의신청 | 자명스쿨",
-  description: "나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 자명스쿨의 전문 교육과정 신청 허브",
+  title: "정규과정 | 자명스쿨",
+  description: "나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 자명스쿨의 전문 교육과정(정규과정) 안내 및 신청 허브",
 };
 
 // 5개 과정 카드 데이터 구조화
@@ -103,24 +103,24 @@ export default function ApplyPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
             <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
-              JAMYUNG SCHOOL · CLASS
+              JAMYUNG SCHOOL · REGULAR COURSE
             </span>
           </div>
 
           {/* 메인 제목 */}
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
-            현재 모집 중인 강의
+            자명스쿨 정규과정
           </h1>
 
           {/* 서브카피 */}
           <p className="text-base md:text-xl font-medium text-[#4A3F35] max-w-2xl mx-auto mb-3 leading-relaxed break-keep">
             나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 <br className="hidden sm:inline" />
-            자명스쿨의 교육과정을 만나보세요.
+            자명스쿨의 체계적인 전문·자격 과정을 만나보세요.
           </p>
 
           {/* 보조 설명 */}
           <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
-            자명스쿨의 자격과정과 실무 교육 중 현재 신청 가능한 과정을 확인하세요.
+            기초부터 실전까지 장기간 탄탄하게 배우는 자명스쿨의 핵심 정규 교육과정입니다.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function ApplyPage() {
         {/* 과정 개수 및 안내 라벨 */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-[#2E2723]">개설 교육과정</span>
+            <span className="text-sm font-semibold text-[#2E2723]">개설 정규과정</span>
             <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] font-bold">
               총 {COURSES.length}개
             </span>

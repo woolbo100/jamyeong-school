@@ -51,7 +51,7 @@ export default function SiteHeader() {
         <span className="text-white text-xl font-bold tracking-tight transition-all duration-300 group-hover:blur-[0.4px]">자명스쿨</span>
       </Link>
 
-      <nav className="hidden md:flex items-center gap-6 text-sm">
+      <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm">
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/about">
           자명스쿨소개
         </Link>
@@ -59,10 +59,17 @@ export default function SiteHeader() {
           강의소개
         </Link>
         <Link
-          className="text-[#D6C6A8] font-semibold hover:text-[#FFFBD1] transition-colors duration-200 flex items-center gap-1.5 group"
+          className={`${pathname === '/apply' ? 'text-[#FFFBD1]' : 'text-[#D6C6A8]'} font-semibold hover:text-[#FFFBD1] transition-colors duration-200 flex items-center gap-1.5 group`}
           href="/apply"
         >
-          <span>강의신청</span>
+          <span>정규과정</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B89B6A] group-hover:bg-[#FFFBD1] animate-pulse" />
+        </Link>
+        <Link
+          className={`${pathname === '/oneday' ? 'text-[#FFFBD1]' : 'text-[#D6C6A8]'} font-semibold hover:text-[#FFFBD1] transition-colors duration-200 flex items-center gap-1.5 group`}
+          href="/oneday"
+        >
+          <span>원데이클래스</span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#B89B6A] group-hover:bg-[#FFFBD1] animate-pulse" />
         </Link>
         <Link className="text-white/90 hover:text-[#D6C6A8] transition-colors duration-200" href="/resources">
@@ -136,7 +143,14 @@ export default function SiteHeader() {
             className="text-[#D6C6A8] font-bold py-2 border-b border-white/5 flex items-center justify-between"
             href="/apply"
           >
-            <span>강의신청</span>
+            <span>정규과정</span>
+            <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#B89B6A]/20 text-[#D6C6A8] border border-[#B89B6A]/30">전문과정</span>
+          </Link>
+          <Link
+            className="text-[#D6C6A8] font-bold py-2 border-b border-white/5 flex items-center justify-between"
+            href="/oneday"
+          >
+            <span>원데이클래스</span>
             <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#B89B6A]/20 text-[#D6C6A8] border border-[#B89B6A]/30">신규 OPEN</span>
           </Link>
           <Link
