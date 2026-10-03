@@ -15,6 +15,9 @@ export default function SiteHeader() {
     pathname.startsWith('/oneday') ||
     pathname.startsWith('/resources');
 
+  // 스크롤을 내렸을 때(sticky 상태)이면서 라이트 페이지인 경우에만 라이트 헤더 스타일 적용
+  const isLightSticky = isLightPage && isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 8);
@@ -33,7 +36,8 @@ export default function SiteHeader() {
   const getMenuClass = (href: string, isSpecial: boolean = false) => {
     const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
 
-    if (isLightPage) {
+    if (isLightSticky) {
+      // 라이트 페이지에서 스크롤을 내렸을 때 (베이지 배경 위)
       if (isActive) {
         return 'text-[#B58B4A] font-bold transition-colors duration-200';
       }
@@ -42,6 +46,7 @@ export default function SiteHeader() {
       }
       return 'text-[#3F342B] font-medium hover:text-[#9B7440] transition-colors duration-200';
     } else {
+      // 스크롤 전(TOP) 상태이거나 다크 페이지일 때 (검정/어두운 배경 위)
       if (isActive) {
         return 'text-[#FFFBD1] font-semibold transition-colors duration-200';
       }
@@ -56,10 +61,8 @@ export default function SiteHeader() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 transition-all duration-300 ease-out
         ${
-          isLightPage
-            ? isScrolled
-              ? 'bg-[#F8F3EA]/92 backdrop-blur-[12px] border-b border-[#785F41]/12 shadow-[0_4px_20px_rgba(46,39,35,0.06)]'
-              : 'bg-transparent border-b border-[#785F41]/10'
+          isLightSticky
+            ? 'bg-[#F8F3EA]/92 backdrop-blur-[12px] border-b border-[#785F41]/12 shadow-[0_4px_20px_rgba(46,39,35,0.06)]'
             : isScrolled
               ? 'bg-trueBlack/85 backdrop-blur-md border-b border-white/5 shadow-lg'
               : 'bg-transparent border-b border-white/10'
@@ -70,14 +73,14 @@ export default function SiteHeader() {
         className={`absolute left-0 right-0 bottom-0 h-[1px] transition-opacity duration-500 pointer-events-none
           ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
         style={{
-          background: isLightPage
+          background: isLightSticky
             ? 'linear-gradient(to right, transparent, rgba(181,139,74,0.4), transparent)'
             : 'linear-gradient(to right, transparent, rgba(214,198,168,0.75), transparent)',
         }}
       />
 
-      {/* Golden Glow Blur Effect (다크 페이지 전용) */}
-      {!isLightPage && (
+      {/* Golden Glow Blur Effect (다크 페이지 스크롤 전용) */}
+      {!isLightSticky && (
         <div
           className={`absolute left-0 right-0 -bottom-10 h-20 blur-2xl transition-opacity duration-500 pointer-events-none
             ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
@@ -94,7 +97,7 @@ export default function SiteHeader() {
         </span>
         <span
           className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-            isLightPage ? 'text-[#3F342B]' : 'text-white'
+            isLightSticky ? 'text-[#3F342B]' : 'text-white'
           }`}
         >
           자명스쿨
@@ -116,7 +119,7 @@ export default function SiteHeader() {
           <span>정규과정</span>
           <span
             className={`w-1.5 h-1.5 rounded-full ${
-              isLightPage ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
+              isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
             } group-hover:scale-125 transition-transform animate-pulse`}
           />
         </Link>
@@ -127,7 +130,7 @@ export default function SiteHeader() {
           <span>원데이클래스</span>
           <span
             className={`w-1.5 h-1.5 rounded-full ${
-              isLightPage ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
+              isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
             } group-hover:scale-125 transition-transform animate-pulse`}
           />
         </Link>
@@ -156,7 +159,7 @@ export default function SiteHeader() {
             window.open('https://pf.kakao.com/_IxguMn', '_blank', 'noopener,noreferrer');
           }}
           className={`hidden sm:flex items-center justify-center h-[34px] px-4 text-[13px] font-bold rounded-lg transition-colors ${
-            isLightPage
+            isLightSticky
               ? 'bg-[#2E2723] text-white border border-[#2E2723] hover:bg-[#433830]'
               : 'bg-[#222222] border border-[#333333] text-[#ffffff] hover:bg-[#333333]'
           }`}
@@ -188,7 +191,7 @@ export default function SiteHeader() {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={`md:hidden p-2 focus:outline-none transition-colors ${
-            isLightPage ? 'text-[#3F342B]' : 'text-white/90'
+            isLightSticky ? 'text-[#3F342B]' : 'text-white/90'
           }`}
           aria-label={isMobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
         >
@@ -200,14 +203,14 @@ export default function SiteHeader() {
       {isMobileMenuOpen && (
         <div
           className={`md:hidden absolute top-full left-0 right-0 px-6 py-6 flex flex-col gap-4 text-base shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200 ${
-            isLightPage
+            isLightSticky
               ? 'bg-[#F9F6F0]/98 backdrop-blur-2xl border-b border-[#E8DFD3] text-[#3F342B]'
               : 'bg-[#0B0B10]/95 backdrop-blur-2xl border-b border-white/10 text-white/90'
           }`}
         >
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
@@ -217,7 +220,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
@@ -227,7 +230,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b flex items-center justify-between font-bold ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-[#D6C6A8] border-white/5'
             }`}
@@ -236,7 +239,7 @@ export default function SiteHeader() {
             <span>정규과정</span>
             <span
               className={`text-[11px] px-2 py-0.5 rounded-full border ${
-                isLightPage
+                isLightSticky
                   ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
                   : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
               }`}
@@ -246,7 +249,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b flex items-center justify-between font-bold ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-[#D6C6A8] border-white/5'
             }`}
@@ -255,7 +258,7 @@ export default function SiteHeader() {
             <span>원데이클래스</span>
             <span
               className={`text-[11px] px-2 py-0.5 rounded-full border ${
-                isLightPage
+                isLightSticky
                   ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
                   : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
               }`}
@@ -265,7 +268,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
@@ -275,7 +278,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
@@ -285,7 +288,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
@@ -295,7 +298,7 @@ export default function SiteHeader() {
           </Link>
           <Link
             className={`py-2 border-b ${
-              isLightPage
+              isLightSticky
                 ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
                 : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
             }`}
