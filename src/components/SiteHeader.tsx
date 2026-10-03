@@ -38,11 +38,11 @@ export default function SiteHeader() {
 
     if (isLightSticky) {
       // 라이트 페이지에서 스크롤을 내렸을 때 (베이지 배경 위)
+      if (isSpecial) {
+        return 'text-[#B58B4A] font-bold hover:text-[#8E6D38] transition-colors duration-200';
+      }
       if (isActive) {
         return 'text-[#B58B4A] font-bold transition-colors duration-200';
-      }
-      if (isSpecial) {
-        return 'text-[#5C4838] font-semibold hover:text-[#B58B4A] transition-colors duration-200';
       }
       return 'text-[#3F342B] font-medium hover:text-[#9B7440] transition-colors duration-200';
     } else {
