@@ -87,4 +87,13 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     status: "scheduled",
     applicationUrl: null,
   },
+  {
+    id: "ai-brand-short-drama",
+    category: "AI VIDEO",
+    title: "AI 브랜드 숏드라마 제작",
+    description: "AI를 활용해 짧은 이야기를 기획하고 이미지·영상·음성을 조합해 1~2분 분량의 브랜드 숏드라마 한 편을 직접 제작합니다.",
+    tags: ["AI영상", "숏드라마", "브랜드콘텐츠", "스토리텔링"],
+    status: "scheduled",
+    applicationUrl: null,
+  },
 ];
