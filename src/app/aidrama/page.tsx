@@ -118,7 +118,7 @@ export default function AidramaPage() {
                 <strong>일시:</strong> <span className="text-[#C6A66B] font-medium">[확정 필요 · 일정 조율중]</span>
               </div>
               <div className="text-sm md:text-base text-[#EDE6DC]">
-                <strong>참가비:</strong> <span className="text-[#C6A66B] font-bold">[확정 필요 · 런칭 특가 예정]</span>
+                <strong>참가비:</strong> <span className="text-[#C6A66B] font-bold">29,000원</span> <span className="text-xs text-[#A8988B]">(런칭 특가)</span>
               </div>
             </div>
             <a
@@ -586,18 +586,18 @@ export default function AidramaPage() {
       </section>
 
       {/* ───────────────────────────────────────────────
-          ⑧ 제공 자료와 수업 후 활용 (Materials & Bonus)
+          ⑧ 핵심 제공 자료와 수업 후 활용 (Core Materials)
          ─────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-            EXCLUSIVE BONUSES
+            CORE LEARNING ASSETS
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-            수업 후에도 다음 작품을 무한 제작할 수 있는 실전 무기 4종
+            수업 후에도 다음 작품을 무한 제작하는 핵심 실전 무기 4종
           </h2>
           <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
-            원데이 수강생에게만 평생 소장 가능한 실전 패키지를 100% 증정합니다.
+            단순 보너스가 아닌, 본 수업의 완성도를 지탱하는 핵심 기획 스킬과 실전 패키지 원본을 평생 소장용으로 100% 제공합니다.
           </p>
         </div>
 
@@ -607,7 +607,7 @@ export default function AidramaPage() {
               01
             </span>
             <div>
-              <span className="text-xs text-[#C6A66B] font-bold">[평생 소장]</span>
+              <span className="text-xs text-[#C6A66B] font-bold">[핵심 실전 스킬 · 평생 소장]</span>
               <h3 className="text-base font-bold text-[#FAF7F2] mb-1">
                 자명스쿨 '1분 숏드라마 올인원 AI 프롬프트 스킬' 원본
               </h3>
@@ -814,6 +814,17 @@ export default function AidramaPage() {
             머릿속에만 맴돌던 상상, <br />
             오늘 당신의 첫 숏드라마로 현실이 됩니다.
           </h2>
+
+          {/* 설득 후킹 문구 */}
+          <div className="my-8 p-6 md:p-8 rounded-2xl bg-[#1C1510] border border-[#4A3728] max-w-2xl mx-auto text-center space-y-3 shadow-lg">
+            <p className="text-base sm:text-lg text-[#F5EFE6] font-bold leading-relaxed break-keep">
+              "20만 원 넘는 인강 끊어놓고 1강 듣다 포기하셨나요?"
+            </p>
+            <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
+              커피 몇 잔 값(29,000원)으로, 오늘 단 90분 만에 내 손으로 1분 완성작을 뽑아내는 초압축 실전으로 오세요.
+            </p>
+          </div>
+
           <p className="text-base sm:text-lg text-[#A8988B] mb-10 max-w-xl mx-auto break-keep">
             웹소설 작가의 서사 설계와 AI 제작 시스템을 손에 쥐고 <br className="hidden sm:inline" />
             단 90분 만에 손에 잡히는 내 작품을 만들어보세요.
@@ -833,13 +844,13 @@ export default function AidramaPage() {
               <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
                 <span className="text-xs md:text-sm text-[#8F7D6E]">참가비</span>
                 <div className="text-right">
-                  <span className="text-base md:text-xl text-[#FAF7F2] font-extrabold">[수강료 확정 필요]</span>
-                  <span className="text-[11px] text-[#A8988B] block">* 대형 플랫폼 VOD 대비 합리적인 실시간 코칭</span>
+                  <span className="text-base md:text-xl text-[#FAF7F2] font-extrabold">29,000원</span>
+                  <span className="text-[11px] text-[#A8988B] block">* 20만 원대 VOD 대비 80% 이상 가벼운 파격 실시간 특가</span>
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs md:text-sm text-[#8F7D6E]">제공 혜택</span>
-                <span className="text-xs md:text-sm text-[#D6C6A8] font-semibold">전용 프롬프트 스킬 + 템플릿 4종 증정</span>
+                <span className="text-xs md:text-sm text-[#8F7D6E]">핵심 제공 자료</span>
+                <span className="text-xs md:text-sm text-[#D6C6A8] font-semibold">전용 프롬프트 엔진 원본 + 실전 템플릿 4종</span>
               </div>
             </div>
 
