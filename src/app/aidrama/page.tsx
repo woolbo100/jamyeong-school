@@ -739,65 +739,72 @@ export default function AidramaPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            3-8. 자주 묻는 질문 (FAQ)
+            3-8. 자주 묻는 질문 (FAQ) - 자명스쿨 시그니처 베이지 배경
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-16">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              FAQ
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-              자주 묻는 질문
-            </h2>
-            <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
-              수강 전 가장 많이 질문해주시는 내용을 정리했습니다.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2A211A]">
-              <h4 className="text-base font-bold text-[#FAF7F2] mb-2">
-                Q. 영상 편집이나 컴퓨터를 잘 모르는 왕초보도 정말 가능한가요?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                네, 가능합니다. 복잡한 전문 영상 편집 프로그램을 쓰지 않으며, 검증된 프롬프트 엔진에 키워드를 넣고 완성된 클립을 이어붙이는 직관적인 워크플로우로 진행됩니다.
+        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 px-4 sm:px-6 border-b border-[#E8DFD3]">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#8E6D38] uppercase mb-3 block">
+                FREQUENTLY ASKED QUESTIONS
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#2E2723] mb-4 break-keep">
+                자주 묻는 질문
+              </h2>
+              <p className="text-sm sm:text-base text-[#6E5A4D] max-w-xl mx-auto break-keep">
+                수강 전 가장 많이 궁금해하시는 질문과 답변을 모았습니다.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2A211A]">
-              <h4 className="text-base font-bold text-[#FAF7F2] mb-2">
-                Q. 90분 수업 안에 진짜로 1편이 완성되나요?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                네. 수강생이 기획 단계에서 길을 잃지 않도록 대본 템플릿과 컷 연출 공식표를 사전에 제공하며, 90분 안에 스마트폰에 1편의 영상 파일(mp4)을 다운로드하는 것을 목표로 커리큘럼이 정밀하게 짜여 있습니다.
-              </p>
-            </div>
+            <div className="space-y-4">
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>영상 편집이나 컴퓨터를 잘 모르는 왕초보도 정말 가능한가요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  네, 가능합니다. 복잡한 전문 영상 편집 프로그램을 쓰지 않으며, 검증된 프롬프트 엔진에 키워드를 넣고 완성된 클립을 이어붙이는 직관적인 워크플로우로 진행됩니다.
+                </p>
+              </div>
 
-            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2A211A]">
-              <h4 className="text-base font-bold text-[#FAF7F2] mb-2">
-                Q. 도구 결제 비용(구독료)이 별도로 필요한가요?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                아닙니다. 수업 시작 전부터 비싼 유료 프로그램을 강제 결제하지 않습니다. 무료 크레딧을 지혜롭게 활용하는 방법과 크레딧 낭비를 막는 프롬프트 팁을 알려드립니다. [세부 도구 무료 크레딧 기준 확정 필요]
-              </p>
-            </div>
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>90분 수업 안에 진짜로 1편이 완성되나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  네. 수강생이 기획 단계에서 길을 잃지 않도록 대본 템플릿과 컷 연출 공식표를 사전에 제공하며, 90분 안에 스마트폰에 1편의 영상 파일(mp4)을 다운로드하는 것을 목표로 커리큘럼이 정밀하게 짜여 있습니다.
+                </p>
+              </div>
 
-            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2A211A]">
-              <h4 className="text-base font-bold text-[#FAF7F2] mb-2">
-                Q. 수업 녹화본(다시보기)을 제공하나요?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                [다시보기 제공 여부 및 열람 기간 정책 확정 필요]
-              </p>
-            </div>
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>도구 결제 비용(구독료)이 별도로 필요한가요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  아닙니다. 수업 시작 전부터 비싼 유료 프로그램을 강제 결제하지 않습니다. 무료 크레딧을 지혜롭게 활용하는 방법과 크레딧 낭비를 막는 프롬프트 팁을 알려드립니다. [세부 도구 무료 크레딧 기준 확정 필요]
+                </p>
+              </div>
 
-            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2A211A]">
-              <h4 className="text-base font-bold text-[#FAF7F2] mb-2">
-                Q. 취소 및 환불 기준은 어떻게 되나요?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                자명스쿨의 공통 수강 취소 및 환불 규정을 따릅니다. [환불 정책 세부 기준 확정 필요]
-              </p>
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>수업 녹화본(다시보기)을 제공하나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  [다시보기 제공 여부 및 열람 기간 정책 확정 필요]
+                </p>
+              </div>
+
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>취소 및 환불 기준은 어떻게 되나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  자명스쿨의 공통 수강 취소 및 환불 규정을 따릅니다. [환불 정책 세부 기준 확정 필요]
+                </p>
+              </div>
             </div>
           </div>
         </section>
