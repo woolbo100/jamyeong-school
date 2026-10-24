@@ -60,12 +60,11 @@ export default function SiteHeader() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 transition-all duration-300 ease-out
-        ${
-          isLightSticky
-            ? 'bg-[#F8F3EA]/92 backdrop-blur-[12px] border-b border-[#785F41]/12 shadow-[0_4px_20px_rgba(46,39,35,0.06)]'
-            : isScrolled
-              ? 'bg-trueBlack/85 backdrop-blur-md border-b border-white/5 shadow-lg'
-              : 'bg-transparent border-b border-white/10'
+        ${isLightSticky
+          ? 'bg-[#F8F3EA]/92 backdrop-blur-[12px] border-b border-[#785F41]/12 shadow-[0_4px_20px_rgba(46,39,35,0.06)]'
+          : isScrolled
+            ? 'bg-trueBlack/85 backdrop-blur-md border-b border-white/5 shadow-lg'
+            : 'bg-transparent border-b border-white/10'
         }`}
     >
       {/* Golden Line Effect */}
@@ -96,9 +95,8 @@ export default function SiteHeader() {
           JM
         </span>
         <span
-          className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-            isLightSticky ? 'text-[#3F342B]' : 'text-white'
-          }`}
+          className={`text-xl font-bold tracking-tight transition-colors duration-300 ${isLightSticky ? 'text-[#3F342B]' : 'text-white'
+            }`}
         >
           자명스쿨
         </span>
@@ -118,9 +116,8 @@ export default function SiteHeader() {
         >
           <span>정규과정</span>
           <span
-            className={`w-1.5 h-1.5 rounded-full ${
-              isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
-            } group-hover:scale-125 transition-transform animate-pulse`}
+            className={`w-1.5 h-1.5 rounded-full ${isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
+              } group-hover:scale-125 transition-transform animate-pulse`}
           />
         </Link>
         <Link
@@ -129,9 +126,8 @@ export default function SiteHeader() {
         >
           <span>원데이클래스</span>
           <span
-            className={`w-1.5 h-1.5 rounded-full ${
-              isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
-            } group-hover:scale-125 transition-transform animate-pulse`}
+            className={`w-1.5 h-1.5 rounded-full ${isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
+              } group-hover:scale-125 transition-transform animate-pulse`}
           />
         </Link>
         <Link className={getMenuClass('/resources')} href="/resources">
@@ -158,11 +154,10 @@ export default function SiteHeader() {
             e.preventDefault();
             window.open('https://pf.kakao.com/_IxguMn', '_blank', 'noopener,noreferrer');
           }}
-          className={`hidden sm:flex items-center justify-center h-[34px] px-4 text-[13px] font-bold rounded-lg transition-colors ${
-            isLightSticky
-              ? 'bg-[#2E2723] text-white border border-[#2E2723] hover:bg-[#433830]'
-              : 'bg-[#222222] border border-[#333333] text-[#ffffff] hover:bg-[#333333]'
-          }`}
+          className={`hidden sm:flex items-center justify-center h-[34px] px-4 text-[13px] font-bold rounded-lg transition-colors ${isLightSticky
+            ? 'bg-[#2E2723] text-white border border-[#2E2723] hover:bg-[#433830]'
+            : 'bg-[#222222] border border-[#333333] text-[#ffffff] hover:bg-[#333333]'
+            }`}
         >
           상담하기
         </a>
@@ -190,9 +185,8 @@ export default function SiteHeader() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={`md:hidden p-2 focus:outline-none transition-colors ${
-            isLightSticky ? 'text-[#3F342B]' : 'text-white/90'
-          }`}
+          className={`md:hidden p-2 focus:outline-none transition-colors ${isLightSticky ? 'text-[#3F342B]' : 'text-white/90'
+            }`}
           aria-label={isMobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
         >
           {isMobileMenuOpen ? "✕" : "☰"}
@@ -202,106 +196,95 @@ export default function SiteHeader() {
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div
-          className={`md:hidden absolute top-full left-0 right-0 px-6 py-6 flex flex-col gap-4 text-base shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200 ${
-            isLightSticky
-              ? 'bg-[#F9F6F0]/98 backdrop-blur-2xl border-b border-[#E8DFD3] text-[#3F342B]'
-              : 'bg-[#0B0B10]/95 backdrop-blur-2xl border-b border-white/10 text-white/90'
-          }`}
+          className={`md:hidden absolute top-full left-0 right-0 px-6 py-6 flex flex-col gap-4 text-base shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200 ${isLightSticky
+            ? 'bg-[#F9F6F0]/98 backdrop-blur-2xl border-b border-[#E8DFD3] text-[#3F342B]'
+            : 'bg-[#0B0B10]/95 backdrop-blur-2xl border-b border-white/10 text-white/90'
+            }`}
         >
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/about"
           >
             자명스쿨소개
           </Link>
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/courses"
           >
             강의소개
           </Link>
           <Link
-            className={`py-2 border-b flex items-center justify-between font-bold ${
-              isLightSticky
-                ? 'text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b flex items-center justify-between font-bold ${isLightSticky
+              ? 'text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-[#D6C6A8] border-white/5'
+              }`}
             href="/apply"
           >
             <span>정규과정</span>
             <span
-              className={`text-[11px] px-2 py-0.5 rounded-full border ${
-                isLightSticky
-                  ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
-                  : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
-              }`}
+              className={`text-[11px] px-2 py-0.5 rounded-full border ${isLightSticky
+                ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
+                : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
+                }`}
             >
               전문과정
             </span>
           </Link>
           <Link
-            className={`py-2 border-b flex items-center justify-between font-bold ${
-              isLightSticky
-                ? 'text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b flex items-center justify-between font-bold ${isLightSticky
+              ? 'text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-[#D6C6A8] border-white/5'
+              }`}
             href="/oneday"
           >
             <span>원데이클래스</span>
             <span
-              className={`text-[11px] px-2 py-0.5 rounded-full border ${
-                isLightSticky
-                  ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
-                  : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
-              }`}
+              className={`text-[11px] px-2 py-0.5 rounded-full border ${isLightSticky
+                ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'
+                : 'bg-[#B89B6A]/20 text-[#D6C6A8] border-[#B89B6A]/30'
+                }`}
             >
               신규 OPEN
             </span>
           </Link>
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/resources"
           >
             자명자료실
           </Link>
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/reviews"
           >
             강의후기
           </Link>
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/blog"
           >
             자명노트
           </Link>
           <Link
-            className={`py-2 border-b ${
-              isLightSticky
-                ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
-                : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
-            }`}
+            className={`py-2 border-b ${isLightSticky
+              ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
+              : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
+              }`}
             href="/contact"
           >
             문의하기

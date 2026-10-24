@@ -101,9 +101,23 @@ export default function OnedayPage() {
                   </div>
 
                   {/* 클래스명 */}
-                  <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep mb-3">
-                    {item.title}
-                  </h2>
+                  {item.detailUrl ? (
+                    <Link
+                      href={item.detailUrl}
+                      className="group/title block mb-3"
+                    >
+                      <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover/title:text-[#8E6D38] transition-colors break-keep flex items-center justify-between">
+                        <span>{item.title}</span>
+                        <span className="text-xs font-normal text-[#8E6D38] opacity-0 group-hover/title:opacity-100 transition-opacity shrink-0 ml-2">
+                          상세보기 →
+                        </span>
+                      </h2>
+                    </Link>
+                  ) : (
+                    <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep mb-3">
+                      {item.title}
+                    </h2>
+                  )}
 
                   {/* 설명 */}
                   <p className="text-sm text-[#5C4C40] leading-relaxed mb-6 font-normal break-keep min-h-[64px]">
@@ -176,8 +190,17 @@ export default function OnedayPage() {
                     >
                       <span>이번 클래스 마감</span>
                     </button>
+                  ) : item.detailUrl ? (
+                    /* 상세페이지가 준비된 경우 커리큘럼/상세보기 이동 */
+                    <Link
+                      href={item.detailUrl}
+                      className="w-full min-h-[46px] px-5 rounded-xl bg-[#2E2723] hover:bg-[#1F1916] text-[#FFFBD1] text-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-all duration-200 group/btn"
+                    >
+                      <span>커리큘럼 & 상세 보기</span>
+                      <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
+                    </Link>
                   ) : (
-                    /* scheduled 상태 */
+                    /* scheduled 기본 상태 */
                     <button
                       type="button"
                       disabled

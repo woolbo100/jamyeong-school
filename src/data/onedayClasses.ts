@@ -11,6 +11,7 @@ export interface OnedayClassItem {
   duration?: string; // 예: "3시간"
   price?: string; // 예: "50,000원"
   applicationUrl?: string | null; // 신청 링크 (구글폼, 네이버예약, 결제페이지 등)
+  detailUrl?: string | null; // 상세페이지 링크 (예: "/aidrama")
   icon?: string;
 }
 
@@ -95,5 +96,6 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["AI영상", "숏드라마", "브랜드콘텐츠", "스토리텔링"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/aidrama",
   },
 ];
