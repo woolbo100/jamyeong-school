@@ -8,13 +8,75 @@ export const metadata: Metadata = {
     "도파민 터지는 스토리부터 영상 완성까지, 90분 만에 웹소설 작가의 서사 공식과 AI 전용 프롬프트 엔진으로 나만의 첫 숏드라마 1편을 직접 완성합니다.",
 };
 
+// ─────────────────────────────────────────────────────────────
+// [원데이 클래스 기본 설정 데이터]
+// 다른 원데이 강의를 제작할 때 이 객체와 아래 설정만 변경하여 쉽게 재사용할 수 있습니다.
+// ─────────────────────────────────────────────────────────────
+const CLASS_CONFIG = {
+  category: "AI CREATIVE 〉 영상 스토리텔링",
+  badge: "자명스쿨 원데이 실전 마스터",
+  titleMain: "내 취향대로 도파민 풀충전!",
+  titleSub: "AI로 만드는 나만의 브랜드 숏드라마",
+  titleAccent: ": 스토리 / 캐릭터 / 영상 입문 올인원",
+  description:
+    "인강 끊어놓고 작심삼일로 끝나지 않습니다. 복잡한 유료 프로그램 설치 없이 웹소설 작가의 서사 공식과 전용 프롬프트 엔진으로 단 90분 만에 내 스마트폰에 저장되는 1분 완성작(mp4)을 뽑아냅니다.",
+  meta: {
+    format: "Zoom 실시간",
+    duration: "90분 초압축",
+    difficulty: "누구나 (입문)",
+    schedule: "[확정 필요]",
+  },
+  price: {
+    badge: "원데이 런칭 특가",
+    regular: "정규 VOD 200,000원 상당",
+    current: "29,000",
+    unit: "원",
+    note: "* 커피 몇 잔 값으로 평생 소장 프롬프트 엔진과 1편 완성본 획득",
+  },
+  tags: ["AI영상", "숏드라마", "도파민서사", "캐릭터고정", "90분완성"],
+};
+
+// ─────────────────────────────────────────────────────────────
+// [선택적 / 교체 가능 콘텐츠 슬롯 설정]
+// 실제 콘텐츠가 준비되면 배열에 추가하거나, 비워두면 화면에 불필요한 빈 공간 없이 깔끔하게 숨겨집니다.
+// 가상의 후기나 작품은 임의로 생성하지 않습니다.
+// ─────────────────────────────────────────────────────────────
+interface ReviewItem {
+  id: string;
+  name: string;
+  role: string;
+  text: string;
+}
+
+interface WorkItem {
+  id: string;
+  title: string;
+  author: string;
+  mediaUrl?: string;
+  thumbnailUrl?: string;
+}
+
+// 1. 완성 결과물 섹션 아래에 선택적으로 노출할 짧은 대표 후기 (2~3개)
+//    - 후기가 쌓이기 전에는 빈 배열([])로 두면 완전히 숨겨집니다.
+const FEATURED_SHORT_REVIEWS: ReviewItem[] = [];
+
+// 2. 수강생 작품 목록 (실제 작품 등록 시 채워짐)
+const STUDENT_WORKS: WorkItem[] = [];
+
+// 3. 수강생 상세 후기 목록 (실제 후기 등록 시 채워짐)
+const STUDENT_REVIEWS: ReviewItem[] = [];
+
+// 4. 초안 단계에서 미디어/자료의 자리 표시(Placeholder) 노출 여부
+//    - false로 바꾸면 미등록 자리 표시 영역을 깔끔하게 숨깁니다.
+const SHOW_DRAFT_PLACEHOLDERS = true;
+
 export default function AidramaPage() {
   return (
     <main className="min-h-screen bg-[#0D0B0A] text-[#EDE6DC] selection:bg-[#C6A66B]/30 selection:text-white font-sans">
       {/* ───────────────────────────────────────────────
           공통 서브 헤더 네비게이션
          ─────────────────────────────────────────────── */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] px-6 py-3.5 transition-all">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] px-4 sm:px-6 py-3.5 transition-all">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link
             href="/oneday"
@@ -23,12 +85,12 @@ export default function AidramaPage() {
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             <span>원데이 클래스 목록</span>
           </Link>
-          <div className="text-[11px] md:text-xs tracking-wider text-[#C6A66B] font-medium">
+          <div className="text-[11px] md:text-xs tracking-wider text-[#C6A66B] font-medium hidden sm:block">
             작은 배움, 하나의 완성.
           </div>
           <a
             href="#apply"
-            className="px-3.5 py-1.5 rounded-full bg-[#C6A66B] hover:bg-[#D6C6A8] text-[#1A1410] text-xs font-bold transition-colors"
+            className="px-4 py-1.5 rounded-full bg-[#C6A66B] hover:bg-[#D6C6A8] text-[#1A1410] text-xs font-bold transition-colors"
           >
             수강 신청
           </a>
@@ -36,102 +98,112 @@ export default function AidramaPage() {
       </nav>
 
       {/* ═══════════════════════════════════════════════
-          영역 1. 최상단 대표 이미지 (Hero Media)
-          - 가로형 대표 이미지/영상 자리 (본문 콘텐츠 폭 기준)
-          - 모바일에서도 인물·결과물이 잘리지 않는 비율 최적화
+          섹션 1. 강의 제목 · 핵심 정보 · 대표 영상 (Hero)
+          - 최상단에 강의 제목이 가장 먼저 나오도록 배치
+          - 데스크톱: 좌측(제목/정보/가격/신청) + 우측(대표 영상) 2열 구성
+          - 모바일: 제목 → 핵심정보/가격/신청 버튼 → 대표 영상 순서로 노출
+          - 대표 영상이 첫 화면 전체를 가리지 않도록 적정 크기로 균형 조절
          ═══════════════════════════════════════════════ */}
-      <section className="pt-6 pb-2 md:pt-10 md:pb-4 px-4 sm:px-6 bg-[#0D0B0A]">
+      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#3E3228] bg-gradient-to-b from-[#181310] to-[#120E0C] shadow-2xl group">
-            {/* 16:9 와이드 가로형 대표 미디어 영역 */}
-            <div className="aspect-[16/9] w-full flex flex-col items-center justify-center p-6 sm:p-12 text-center relative overflow-hidden">
-              {/* 은은한 배경 오라 */}
-              <div
-                className="absolute inset-0 pointer-events-none opacity-30"
-                style={{
-                  background:
-                    "radial-gradient(circle at 50% 50%, rgba(198,166,107,0.35) 0%, rgba(46,39,35,0.2) 60%, transparent 100%)",
-                }}
-              />
-
-              <div className="relative z-10 flex flex-col items-center max-w-2xl">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#C6A66B]/20 border border-[#C6A66B]/50 flex items-center justify-center text-[#D6C6A8] text-2xl md:text-3xl mb-4 shadow-lg group-hover:scale-105 transition-transform">
-                  ▶
-                </div>
-                <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#241C17]/90 border border-[#4D3A2B] text-xs md:text-sm font-bold text-[#D6C6A8] mb-3">
-                  [대표 이미지 · 영상 자리 (가로형 16:9)]
-                </span>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#FAF7F2] mb-2 break-keep">
-                  AI로 완성하는 1분 숏드라마 대표 결과물
-                </h2>
-                <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
-                  웹소설 도파민 서사 공식과 일관성 프롬프트 엔진으로 제작된 고화질 영상 및 대표 장면
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════
-          영역 2. 제목·신청 안내 영역 (Beige Header & CTA)
-          - 가로 전체를 채우는 자명스쿨 시그니처 베이지 배경 (#F9F6F0)
-          - 진한 브라운 타이포그래피 (#2E2723, #4A3F35, #7C6656)
-          - PC: 좌측(제목/목표/정보) + 우측(가격/신청 카드) 2열
-          - Mobile: 제목 → 소개 → 정보 → 가격 → 신청 버튼 1열
-         ═══════════════════════════════════════════════ */}
-      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] py-12 md:py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             
-            {/* 좌측: 원데이 분류, 강의명, 완성 목표 소개, 수업 정보 메타 */}
+            {/* 좌측: 분류, 강의명, 소개, 메타정보, 가격 & 신청 버튼 */}
             <div className="lg:col-span-7 space-y-6">
-              {/* 원데이 분류 & 브랜드 문구 */}
+              
+              {/* 1) 분류 또는 짧은 브랜드 문구 */}
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs md:text-sm font-bold tracking-wider text-[#8E6D38] uppercase">
-                  AI CREATIVE 〉 영상 스토리텔링
+                  {CLASS_CONFIG.category}
                 </span>
                 <span className="text-[#C6A66B]">·</span>
-                <span className="text-xs text-[#7C6656] font-medium">자명스쿨 원데이 실전 마스터</span>
+                <span className="text-xs text-[#7C6656] font-medium">
+                  {CLASS_CONFIG.badge}
+                </span>
               </div>
 
-              {/* 강의명 */}
-              <h1 className="text-2xl sm:text-4xl md:text-4xl font-extrabold tracking-tight text-[#2E2723] leading-tight break-keep">
-                내 취향대로 도파민 풀충전! <br />
-                AI로 만드는 나만의 브랜드 숏드라마
+              {/* 2) 강의 제목 — 페이지에서 가장 눈에 띄게 */}
+              <h1 className="text-2xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight text-[#2E2723] leading-tight break-keep">
+                {CLASS_CONFIG.titleMain} <br />
+                {CLASS_CONFIG.titleSub}
                 <span className="block text-lg sm:text-2xl font-bold text-[#8E6D38] mt-2">
-                  : 스토리 / 캐릭터 / 영상 입문 올인원
+                  {CLASS_CONFIG.titleAccent}
                 </span>
               </h1>
 
-              {/* 수업의 완성 목표를 담은 소개 */}
+              {/* 3) 강의 설명 */}
               <p className="text-sm sm:text-base text-[#4A3F35] leading-relaxed break-keep">
-                인강 끊어놓고 작심삼일로 끝나지 않습니다. 복잡한 유료 프로그램 설치 없이 웹소설 작가의 서사 공식과 전용 프롬프트 엔진으로 <strong>단 90분 만에 내 스마트폰에 저장되는 1분 완성작(mp4)</strong>을 뽑아냅니다.
+                {CLASS_CONFIG.description}
               </p>
 
-              {/* 수업 진행 메타데이터 (진행방식 · 수업시간 · 난이도 · 일정) */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                <div className="p-3.5 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
+              {/* 4) 진행 방식 / 수업 시간 / 난이도 / 일정 (핵심 정보 카드) */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
                   <span className="block text-[11px] text-[#7C6656] mb-0.5">진행 방식</span>
-                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">Zoom 실시간</strong>
+                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">
+                    {CLASS_CONFIG.meta.format}
+                  </strong>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
+                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
                   <span className="block text-[11px] text-[#7C6656] mb-0.5">수업 시간</span>
-                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">90분 초압축</strong>
+                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">
+                    {CLASS_CONFIG.meta.duration}
+                  </strong>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
+                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
                   <span className="block text-[11px] text-[#7C6656] mb-0.5">수강 난이도</span>
-                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">누구나 (입문)</strong>
+                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">
+                    {CLASS_CONFIG.meta.difficulty}
+                  </strong>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
+                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
                   <span className="block text-[11px] text-[#7C6656] mb-0.5">수업 일정</span>
-                  <strong className="text-xs sm:text-sm text-[#8E6D38] font-bold">[확정 필요]</strong>
+                  <strong className="text-xs sm:text-sm text-[#8E6D38] font-bold">
+                    {CLASS_CONFIG.meta.schedule}
+                  </strong>
+                </div>
+              </div>
+
+              {/* 5) 참가비와 상단 신청 버튼 (모바일에서도 쉽게 보이도록 구성) */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs space-y-3.5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="px-2 py-0.5 rounded-full bg-red-50 text-red-600 border border-red-200 text-[11px] font-bold">
+                        {CLASS_CONFIG.price.badge}
+                      </span>
+                      <span className="text-xs text-[#7C6656] line-through">
+                        {CLASS_CONFIG.price.regular}
+                      </span>
+                    </div>
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-2xl sm:text-3xl font-extrabold text-[#2E2723]">
+                        {CLASS_CONFIG.price.current}
+                        <span className="text-xl font-bold">{CLASS_CONFIG.price.unit}</span>
+                      </span>
+                      <span className="text-xs text-[#7C6656]">/ 실시간 라이브 코칭</span>
+                    </div>
+                  </div>
+
+                  {/* 수강 신청 바로가기 버튼 */}
+                  <a
+                    href="#apply"
+                    className="w-full sm:w-auto min-h-[46px] px-6 rounded-xl bg-[#2E2723] hover:bg-[#1F1916] text-[#FFFBD1] text-sm sm:text-base font-bold inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all group shrink-0"
+                  >
+                    <span>지금 수강 신청하기</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </div>
+
+                <div className="text-[11px] sm:text-xs text-[#8E6D38] border-t border-[#F0E8DD] pt-2.5 flex items-center justify-between">
+                  <span>{CLASS_CONFIG.price.note}</span>
+                  <span className="hidden sm:inline text-[#7C6656]">• 90분 내 1편 직접 완성</span>
                 </div>
               </div>
 
               {/* 핵심 키워드 태그 */}
-              <div className="flex flex-wrap gap-2 pt-1">
-                {["AI영상", "숏드라마", "도파민서사", "캐릭터고정", "90분완성"].map((tag, idx) => (
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {CLASS_CONFIG.tags.map((tag, idx) => (
                   <span
                     key={idx}
                     className="text-xs px-2.5 py-1 rounded-lg bg-[#FAF2E6] text-[#7C6656] font-medium border border-[#E8DFD3]"
@@ -140,66 +212,37 @@ export default function AidramaPage() {
                   </span>
                 ))}
               </div>
+
             </div>
 
-            {/* 우측: 가격 안내 카드 & 신청 버튼 (PC 우측 고정 느낌, 모바일 아래 배치) */}
+            {/* 우측: 6) 대표 영상 또는 이미지 */}
+            {/* 데스크톱에서는 우측 열, 모바일에서는 좌측 정보·신청 버튼 바로 아래에 단정하게 배치 */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl md:rounded-3xl bg-white border border-[#E8DFD3] p-6 sm:p-8 shadow-[0_12px_32px_rgba(46,39,35,0.06)] space-y-6">
-                
-                {/* 가격 영역 */}
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="px-2.5 py-0.5 rounded-full bg-red-50 text-red-600 border border-red-200 text-xs font-bold">
-                      원데이 런칭 특가
-                    </span>
-                    <span className="text-xs text-[#7C6656] line-through">
-                      정규 VOD 200,000원 상당
-                    </span>
-                  </div>
+              <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#3E3228] bg-gradient-to-b from-[#181310] to-[#120E0C] shadow-xl group">
+                <div className="aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] w-full flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                  {/* 은은한 배경 오라 */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-30"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 50% 50%, rgba(198,166,107,0.35) 0%, rgba(46,39,35,0.2) 60%, transparent 100%)",
+                    }}
+                  />
 
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl sm:text-4xl font-extrabold text-[#2E2723]">
-                      29,000<span className="text-2xl font-bold">원</span>
+                  <div className="relative z-10 flex flex-col items-center max-w-sm">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#C6A66B]/20 border border-[#C6A66B]/50 flex items-center justify-center text-[#D6C6A8] text-xl md:text-2xl mb-3 shadow-lg group-hover:scale-105 transition-transform">
+                      ▶
+                    </div>
+                    <span className="inline-block px-3 py-1 rounded-full bg-[#241C17]/90 border border-[#4D3A2B] text-[11px] md:text-xs font-bold text-[#D6C6A8] mb-2">
+                      [대표 영상 · 결과물 미리보기]
                     </span>
-                    <span className="text-xs text-[#7C6656]">/ 실시간 라이브 코칭</span>
+                    <h2 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-1.5 break-keep">
+                      AI로 완성하는 1분 숏드라마 대표 결과물
+                    </h2>
+                    <p className="text-xs text-[#A8988B] leading-relaxed break-keep">
+                      웹소설 도파민 서사 공식과 일관성 프롬프트 엔진으로 제작된 고화질 영상 및 대표 장면
+                    </p>
                   </div>
-                  <p className="text-xs text-[#8E6D38] mt-1.5 font-medium">
-                    * 커피 몇 잔 값으로 평생 소장 프롬프트 엔진과 1편 완성본 획득
-                  </p>
-                </div>
-
-                {/* 포함 내역 체크리스트 */}
-                <div className="py-4 border-y border-[#F0E8DD] space-y-2.5 text-xs text-[#5C4C40]">
-                  <div className="flex items-center justify-between">
-                    <span>• 90분 실시간 양방향 코칭</span>
-                    <strong className="text-[#2E2723]">포함</strong>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>• 전용 숏드라마 AI 프롬프트 엔진</span>
-                    <strong className="text-[#8E6D38]">평생 소장</strong>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>• 도파민 서사 & 타임코드 공식표 4종</span>
-                    <strong className="text-[#8E6D38]">100% 증정</strong>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>• 실습 완성 결과물 (1분 숏드라마 mp4)</span>
-                    <strong className="text-[#2E2723]">수강생 전원</strong>
-                  </div>
-                </div>
-
-                {/* 신청 버튼 */}
-                <div className="space-y-2.5">
-                  <a
-                    href="#apply"
-                    className="w-full min-h-[52px] px-6 rounded-xl bg-[#2E2723] hover:bg-[#1F1916] text-[#FFFBD1] text-base font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all group"
-                  >
-                    <span>지금 바로 내 첫 숏드라마 완성하러 가기</span>
-                    <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
-                  <p className="text-[11px] text-center text-[#7C6656]">
-                    * 클래스 일정 확정 시 신청 링크가 바로 연결됩니다. [확정 필요]
-                  </p>
                 </div>
               </div>
             </div>
@@ -209,16 +252,64 @@ export default function AidramaPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════
-          영역 3. 본문 상세 영역 (Dark & Deep Brown)
-          - 검정 & 딥브라운 배경 (#0D0B0A, #120E0C, #181310)
-          - 기본 글자: 밝은 베이지 (#EDE6DC, #FAF7F2)
-          - 강조 요소: 샴페인골드 (#C6A66B, #D6C6A8)
-          - 9단계 순서 구조 준수
+          본문 상세 영역 (Dark & Deep Brown Theme)
          ═══════════════════════════════════════════════ */}
       <div className="w-full bg-[#0D0B0A]">
 
         {/* ───────────────────────────────────────────
-            3-1. 후킹 문구와 수강생의 고민 공감
+            섹션 2. 추천 대상 (Who it's for)
+            - 짧게 배치하여 고민 공감 섹션과 중복되지 않도록 핵심 대상만 깔끔하게 구성
+           ─────────────────────────────────────────── */}
+        <section className="py-16 md:py-20 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+          <div className="text-center mb-10 md:mb-12">
+            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
+              RECOMMENDED FOR
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#FAF7F2] mb-3 break-keep">
+              이런 분들께 가장 필요한 실전 수업입니다
+            </h2>
+            <p className="text-xs sm:text-sm text-[#9E8B7C] max-w-lg mx-auto break-keep">
+              복잡한 이론이나 툴 공부 없이, 곧바로 내 사업과 채널에 쓰일 결과물이 필요한 분을 위해 기획되었습니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="p-5 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/40 transition-colors">
+              <span className="text-2xl mb-3 block">🏢</span>
+              <h3 className="text-sm font-bold text-[#FAF7F2] mb-1.5">1인 기업 & 브랜드 대표님</h3>
+              <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+                내 브랜드나 상품을 바이럴할 숏폼 영상 콘텐츠가 절실한 대표님
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/40 transition-colors">
+              <span className="text-2xl mb-3 block">🎬</span>
+              <h3 className="text-sm font-bold text-[#FAF7F2] mb-1.5">AI 영상 입문 희망자</h3>
+              <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+                숏드라마를 만들고 싶지만 비싼 툴과 복잡한 프롬프트로 망설였던 분
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/40 transition-colors">
+              <span className="text-2xl mb-3 block">💡</span>
+              <h3 className="text-sm font-bold text-[#FAF7F2] mb-1.5">스토리·아이디어 창작자</h3>
+              <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+                영상 편집 기술은 몰라도 번뜩이는 이야기 아이디어를 영상화하고 싶은 분
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/40 transition-colors">
+              <span className="text-2xl mb-3 block">🚀</span>
+              <h3 className="text-sm font-bold text-[#FAF7F2] mb-1.5">새로운 수익 파이프라인 탐색자</h3>
+              <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+                AI 영상 창작 프로세스를 습득해 SNS 수익화 기회를 찾고 계신 분
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────────────────────────────────────
+            섹션 3. 수강생이 겪는 어려움과 고민 (Real Struggles)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
           <div className="text-center mb-14">
@@ -267,15 +358,17 @@ export default function AidramaPage() {
             </div>
           </div>
 
-          {/* 제작 전 고민 예시 자리 */}
-          <div className="rounded-2xl border border-dashed border-[#3D3026] bg-[#120E0C] p-8 text-center mb-10">
-            <span className="inline-block px-3 py-1 rounded bg-[#1D1713] text-xs font-medium text-[#C6A66B] mb-2">
-              [실습 화면 자리: 제작 전 흔히 겪는 시행착오 예시]
-            </span>
-            <p className="text-xs text-[#8F7D6E]">
-              얼굴이 제각각 바뀌어 실패한 불량 컷들과 복잡한 사이트 결제 화면 비교
-            </p>
-          </div>
+          {/* 제작 전 고민 예시 화면 (독립적 교체/숨김 가능 영역) */}
+          {SHOW_DRAFT_PLACEHOLDERS && (
+            <div className="rounded-2xl border border-dashed border-[#3D3026] bg-[#120E0C] p-8 text-center mb-10">
+              <span className="inline-block px-3 py-1 rounded bg-[#1D1713] text-xs font-medium text-[#C6A66B] mb-2">
+                [제작 과정 화면: 제작 전 흔히 겪는 시행착오 예시 자리]
+              </span>
+              <p className="text-xs text-[#8F7D6E]">
+                얼굴이 제각각 바뀌어 실패한 불량 컷들과 복잡한 사이트 결제 화면 비교 이미지
+              </p>
+            </div>
+          )}
 
           {/* 설득 전환 메시지 */}
           <div className="p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#120E0C] border border-[#3E3024] text-center">
@@ -289,7 +382,8 @@ export default function AidramaPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            3-2. 완성작 이미지·영상과 실습 완성 범위
+            섹션 4. 수업에서 완성할 결과물 · 대표 장면 (Your Result)
+            + 선택적 짧은 대표 후기 2~3개 슬롯 지원
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
           <div className="max-w-5xl mx-auto">
@@ -306,13 +400,15 @@ export default function AidramaPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
-              {/* 세로 영상 자리 */}
+              {/* 세로 영상 자리 (독립적 교체 가능) */}
               <div className="lg:col-span-5 rounded-3xl border border-[#3E3228] bg-[#181310] p-6 text-center shadow-xl">
                 <div className="aspect-[9/16] max-w-[280px] mx-auto rounded-2xl border border-dashed border-[#4A3C30] bg-[#0E0B09] flex flex-col items-center justify-center p-4">
                   <div className="w-12 h-12 rounded-full bg-[#C6A66B]/20 flex items-center justify-center text-[#D6C6A8] mb-3">
                     📱
                   </div>
-                  <span className="text-xs font-bold text-[#C6A66B] mb-1">[완성 영상 자리: 대표 완성작]</span>
+                  <span className="text-xs font-bold text-[#C6A66B] mb-1">
+                    [완성 영상 자리: 대표 완성작]
+                  </span>
                   <p className="text-[11px] text-[#7A6A5E] leading-relaxed">
                     9:16 모바일 숏폼 최적화 <br />
                     완성 영상 (mp4) 재생 영역
@@ -357,11 +453,38 @@ export default function AidramaPage() {
                 </div>
               </div>
             </div>
+
+            {/* [지침 반영] 후기가 쌓이면 짧은 대표 후기 2~3개를 완성 결과물 아래에 선택적으로 노출 */}
+            {FEATURED_SHORT_REVIEWS.length > 0 && (
+              <div className="mt-12 pt-8 border-t border-[#26201B]">
+                <div className="text-center mb-6">
+                  <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider">
+                    REAL VOICES
+                  </span>
+                  <h4 className="text-base sm:text-lg font-bold text-[#FAF7F2] mt-1">
+                    수강생이 직접 남긴 한 줄 후기
+                  </h4>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {FEATURED_SHORT_REVIEWS.map((review) => (
+                    <div
+                      key={review.id}
+                      className="p-4 rounded-xl bg-[#17120F] border border-[#2C221B] text-xs text-[#C8BCB0] leading-relaxed"
+                    >
+                      <p className="mb-2 italic font-medium">"{review.text}"</p>
+                      <span className="text-[11px] text-[#8F7D6E] block font-semibold">
+                        — {review.name} ({review.role})
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            3-3. 수업의 특징과 제공하는 해결 방법
+            섹션 5. 자명스쿨 수업의 차별점 (Difference)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
           <div className="text-center mb-14">
@@ -432,57 +555,7 @@ export default function AidramaPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            3-4. 강사 소개와 신뢰 근거
-           ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="rounded-3xl bg-gradient-to-b from-[#181310] to-[#120E0C] border border-[#3E3127] p-8 md:p-12">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              {/* 강사 프로필 이미지 자리 */}
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-[#201814] border border-dashed border-[#5C4838] shrink-0 flex flex-col items-center justify-center p-3 text-center">
-                <span className="text-2xl mb-1">✍️</span>
-                <span className="text-xs font-bold text-[#C6A66B]">[강사 프로필 자리]</span>
-                <span className="text-[10px] text-[#7A6A5E] mt-1">자명스쿨 대표 & 기획자</span>
-              </div>
-
-              {/* 강사 소개 텍스트 */}
-              <div className="space-y-4 text-center md:text-left">
-                <div>
-                  <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block mb-1">
-                    INSTRUCTOR
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#FAF7F2]">
-                    “이야기를 짓고, 시스템으로 완성하는 AI 크리에이터”
-                  </h3>
-                </div>
-
-                <ul className="space-y-2 text-xs md:text-sm text-[#A8988B] text-left">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span><strong>공인 웹소설 전문 자격 보유</strong> (스토리 구조, 인물 갈등, 클리셰 연출 전문)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span><strong>자명스쿨 대표 & 지식 콘텐츠/전자책 다수 출간 기획자</strong></span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span><strong>복잡한 기술을 왕초보도 바로 쓰는 시스템으로 압축해 주는 AI 실전 교육가</strong></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* 강사의 한마디 */}
-            <div className="mt-8 pt-8 border-t border-[#2E241E] bg-[#120E0C]/60 p-6 rounded-2xl">
-              <p className="text-sm md:text-base text-[#D6C6A8] italic leading-relaxed break-keep">
-                “AI 툴은 누구나 며칠이면 배웁니다. 하지만 사람의 마음을 쥐락펴락하고 끝까지 영상을 보게 만드는 '서사 설계 능력'은 아무나 가르칠 수 없습니다. 비싼 프로그램 설치 없이도 내 머릿속 상상이 생생한 드라마가 되는 쾌감을 선물해 드릴게요.”
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ───────────────────────────────────────────
-            3-5. 단계별 커리큘럼
+            섹션 6. 단계별 커리큘럼 (Curriculum)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
           <div className="max-w-4xl mx-auto">
@@ -593,7 +666,7 @@ export default function AidramaPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            3-6. 핵심 제공 자료와 수업 후 활용
+            섹션 7. 제공 자료 · 템플릿 · 혜택 (Core Assets)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
           <div className="text-center mb-16">
@@ -670,76 +743,206 @@ export default function AidramaPage() {
             </div>
           </div>
 
-          {/* 제공 자료 미리보기 박스 */}
-          <div className="rounded-2xl border border-dashed border-[#3D3025] bg-[#120E0C] p-8 text-center">
-            <span className="inline-block px-3 py-1 rounded bg-[#1F1813] text-xs font-semibold text-[#C6A66B] mb-2">
-              [제공 자료 미리보기 자리: 실전 무기 4종 목업 번들]
-            </span>
-            <p className="text-xs text-[#8F7D6E]">
-              템플릿 문서 표지, 프롬프트 시트 목업, 모바일 가이드 화면이 포함된 그래픽
-            </p>
+          {/* 제공 자료 미리보기 자리 (독립적으로 교체 및 숨김 가능) */}
+          {SHOW_DRAFT_PLACEHOLDERS && (
+            <div className="rounded-2xl border border-dashed border-[#3D3025] bg-[#120E0C] p-8 text-center">
+              <span className="inline-block px-3 py-1 rounded bg-[#1F1813] text-xs font-semibold text-[#C6A66B] mb-2">
+                [제공 자료 미리보기 자리: 실전 무기 4종 목업 번들]
+              </span>
+              <p className="text-xs text-[#8F7D6E]">
+                템플릿 문서 표지, 프롬프트 시트 목업, 모바일 가이드 화면이 포함된 그래픽
+              </p>
+            </div>
+          )}
+        </section>
+
+        {/* ───────────────────────────────────────────
+            섹션 8. 수강생 작품 · 후기 (Showcase & Reviews)
+            - 가상의 후기나 작품은 만들지 않음
+            - 등록된 작품이나 후기가 있을 때 깔끔하게 노출되며,
+              미등록 상태에서는 군더더기 없는 사전 안내 메시지 1장으로 표현
+           ─────────────────────────────────────────── */}
+        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                STUDENT SHOWCASE & REVIEWS
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
+                수강생 작품 & 생생한 후기
+              </h2>
+              <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
+                원데이 클래스를 통해 수강생 분들이 직접 완성한 1분 숏드라마와 생생한 수강 경험입니다.
+              </p>
+            </div>
+
+            {/* 실제 등록된 작품 목록 (있을 때만 렌더링) */}
+            {STUDENT_WORKS.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+                {STUDENT_WORKS.map((work) => (
+                  <div
+                    key={work.id}
+                    className="rounded-2xl bg-[#181310] border border-[#2E241E] p-4 text-center"
+                  >
+                    <div className="aspect-[9/16] rounded-xl bg-[#0E0B09] border border-[#3E3024] mb-3 flex items-center justify-center">
+                      <span className="text-xs text-[#C6A66B]">{work.title}</span>
+                    </div>
+                    <strong className="text-sm text-[#FAF7F2] block">{work.title}</strong>
+                    <span className="text-xs text-[#8F7D6E]">{work.author} 수강생</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* 실제 등록된 후기 목록 (있을 때만 렌더링) */}
+            {STUDENT_REVIEWS.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {STUDENT_REVIEWS.map((review) => (
+                  <div
+                    key={review.id}
+                    className="p-6 rounded-2xl bg-[#181310] border border-[#2E241E]"
+                  >
+                    <p className="text-sm text-[#FAF7F2] leading-relaxed mb-4">
+                      "{review.text}"
+                    </p>
+                    <div className="flex items-center justify-between text-xs text-[#8F7D6E]">
+                      <span className="font-bold text-[#D6C6A8]">{review.name}</span>
+                      <span>{review.role}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* 미등록 시 자리 표시 안내 (공개 시 빈 공간 없이 신뢰감 있게 정돈) */}
+            {STUDENT_WORKS.length === 0 && STUDENT_REVIEWS.length === 0 && SHOW_DRAFT_PLACEHOLDERS && (
+              <div className="rounded-2xl border border-dashed border-[#3D3025] bg-[#181310] p-8 sm:p-10 text-center max-w-2xl mx-auto">
+                <span className="inline-block px-3 py-1 rounded bg-[#241C16] text-xs font-semibold text-[#C6A66B] mb-2">
+                  [수강생 작품 · 후기 등록 예정]
+                </span>
+                <p className="text-sm text-[#D6C6A8] font-medium mb-1">
+                  1기 클래스 종료 후 수강생 분들의 1분 숏드라마 완성작과 생생한 후기가 공개됩니다.
+                </p>
+                <p className="text-xs text-[#8F7D6E]">
+                  * 실제 수강생의 동의를 받은 실제 결과물과 검증된 후기만 투명하게 게시합니다.
+                </p>
+              </div>
+            )}
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            3-7. 추천 대상 · 준비물 · 추가 비용
+            섹션 9. 강사 소개 (Instructor)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* 추천 대상 */}
-              <div className="p-7 rounded-2xl bg-[#16120F] border border-[#2C221B]">
-                <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-2">TARGET</span>
-                <h3 className="text-xl font-bold text-[#FAF7F2] mb-5">이런 분들께 강력 추천합니다</h3>
-                <ul className="space-y-3 text-xs md:text-sm text-[#A8988B]">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span>내 브랜드나 상품을 바이럴할 숏폼 영상 콘텐츠가 절실한 대표님</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span>AI 숏드라마를 시작하고 싶지만 비싼 툴과 복잡한 프롬프트로 좌절했던 분</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span>영상 편집은 할 줄 몰라도 번뜩이는 이야기 아이디어를 영상으로 만들고 싶은 분</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#C6A66B] font-bold">✔</span>
-                    <span>새로운 AI 영상 창작 파이프라인을 습득해 수익화 기회를 찾고 계신 분</span>
-                  </li>
-                </ul>
+        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+          <div className="rounded-3xl bg-gradient-to-b from-[#181310] to-[#120E0C] border border-[#3E3127] p-8 md:p-12">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              {/* 강사 프로필 이미지 자리 (교체 가능) */}
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-[#201814] border border-dashed border-[#5C4838] shrink-0 flex flex-col items-center justify-center p-3 text-center">
+                <span className="text-2xl mb-1">✍️</span>
+                <span className="text-xs font-bold text-[#C6A66B]">[강사 프로필 자리]</span>
+                <span className="text-[10px] text-[#7A6A5E] mt-1">자명스쿨 대표 & 기획자</span>
               </div>
 
-              {/* 수강 준비 안내 */}
-              <div className="p-7 rounded-2xl bg-[#16120F] border border-[#2C221B]">
-                <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-2">PREPARATION</span>
-                <h3 className="text-xl font-bold text-[#FAF7F2] mb-5">수업 전 확인해주세요</h3>
-                <ul className="space-y-3 text-xs md:text-sm text-[#A8988B]">
+              {/* 강사 소개 텍스트 */}
+              <div className="space-y-4 text-center md:text-left">
+                <div>
+                  <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block mb-1">
+                    INSTRUCTOR
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#FAF7F2]">
+                    “이야기를 짓고, 시스템으로 완성하는 AI 크리에이터”
+                  </h3>
+                </div>
+
+                <ul className="space-y-2 text-xs md:text-sm text-[#A8988B] text-left">
                   <li className="flex items-start gap-2">
-                    <strong className="text-[#EDE6DC] shrink-0">기기 환경:</strong>
-                    <span>크롬 브라우저 구동 가능한 노트북 또는 데스크톱 PC (유료 프로그램 설치 불필요)</span>
+                    <span className="text-[#C6A66B] font-bold">✔</span>
+                    <span><strong>공인 웹소설 전문 자격 보유</strong> (스토리 구조, 인물 갈등, 클리셰 연출 전문)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <strong className="text-[#EDE6DC] shrink-0">사전 계정:</strong>
-                    <span>구글 계정 및 안내드리는 도구 무료 가입 [확정 필요]</span>
+                    <span className="text-[#C6A66B] font-bold">✔</span>
+                    <span><strong>자명스쿨 대표 & 지식 콘텐츠/전자책 다수 출간 기획자</strong></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <strong className="text-[#EDE6DC] shrink-0">추가 비용:</strong>
-                    <span>수업 실습은 무료 제공 크레딧 범위 내에서 충분히 진행되도록 설계되었습니다.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <strong className="text-[#EDE6DC] shrink-0">수강 수준:</strong>
-                    <span>코딩 및 영상 편집 경험이 전무한 왕초보자도 따라오실 수 있습니다.</span>
+                    <span className="text-[#C6A66B] font-bold">✔</span>
+                    <span><strong>복잡한 기술을 왕초보도 바로 쓰는 시스템으로 압축해 주는 AI 실전 교육가</strong></span>
                   </li>
                 </ul>
               </div>
+            </div>
+
+            {/* 강사의 한마디 */}
+            <div className="mt-8 pt-8 border-t border-[#2E241E] bg-[#120E0C]/60 p-6 rounded-2xl">
+              <p className="text-sm md:text-base text-[#D6C6A8] italic leading-relaxed break-keep">
+                “AI 툴은 누구나 며칠이면 배웁니다. 하지만 사람의 마음을 쥐락펴락하고 끝까지 영상을 보게 만드는 '서사 설계 능력'은 아무나 가르칠 수 없습니다. 비싼 프로그램 설치 없이도 내 머릿속 상상이 생생한 드라마가 되는 쾌감을 선물해 드릴게요.”
+              </p>
             </div>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            3-8. 자주 묻는 질문 (FAQ) - 자명스쿨 시그니처 베이지 배경
+            섹션 10. 준비사항 · 추가 비용 안내 (Preparation & Costs)
+            - 추천 대상과 분리하여 수강 전 체크포인트로 명확하게 구성
+           ─────────────────────────────────────────── */}
+        <section className="py-20 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+          <div className="text-center mb-12">
+            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
+              PREPARATION & NOTICE
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#FAF7F2] mb-3 break-keep">
+              수업 전 꼭 확인해주세요
+            </h2>
+            <p className="text-xs sm:text-sm text-[#9E8B7C] max-w-lg mx-auto break-keep">
+              수강 전 필요한 준비물과 비용 안내입니다. 비싼 유료 결제 없이도 참여하실 수 있도록 설계되었습니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2C221B]">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">💻</span>
+                <strong className="text-sm font-bold text-[#EDE6DC]">기기 환경</strong>
+              </div>
+              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed">
+                크롬 브라우저 구동이 가능한 노트북 또는 데스크톱 PC (복잡한 유료 프로그램 설치는 전혀 필요 없습니다).
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2C221B]">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">🔑</span>
+                <strong className="text-sm font-bold text-[#EDE6DC]">사전 계정</strong>
+              </div>
+              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed">
+                구글 계정 및 수업에서 안내드리는 도구의 기본 무료 회원가입 [확정 필요].
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2C221B]">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">💳</span>
+                <strong className="text-sm font-bold text-[#EDE6DC]">추가 비용 (툴 구독료)</strong>
+              </div>
+              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed">
+                수업 실습은 무료 제공 크레딧 범위 내에서 충분히 1편을 완성할 수 있도록 효율적으로 진행됩니다.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-[#16120F] border border-[#2C221B]">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">🌱</span>
+                <strong className="text-sm font-bold text-[#EDE6DC]">수강 난이도</strong>
+              </div>
+              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed">
+                코딩이나 영상 편집 경험이 전무한 초보자분들도 그대로 따라 하실 수 있는 왕초보 눈높이 수업입니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────────────────────────────────────
+            섹션 11. 자주 묻는 질문 (FAQ) - 자명스쿨 시그니처 베이지 배경
            ─────────────────────────────────────────── */}
         <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 px-4 sm:px-6 border-b border-[#E8DFD3]">
           <div className="max-w-4xl mx-auto">
@@ -810,7 +1013,8 @@ export default function AidramaPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            3-9. 최종 가격 · 일정 · 신청 버튼 (Final CTA)
+            섹션 12. 최종 수강 신청 (Final CTA)
+            - 모든 신청 버튼의 이동 목적지 (#apply)
            ─────────────────────────────────────────── */}
         <section id="apply" className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden">
           <div
@@ -849,22 +1053,32 @@ export default function AidramaPage() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
                   <span className="text-xs md:text-sm text-[#8F7D6E]">과정 형태</span>
-                  <span className="text-xs md:text-sm text-[#FAF7F2] font-semibold">실시간 온라인 Zoom 라이브 코칭</span>
+                  <span className="text-xs md:text-sm text-[#FAF7F2] font-semibold">
+                    {CLASS_CONFIG.meta.format}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
                   <span className="text-xs md:text-sm text-[#8F7D6E]">일정 및 시간</span>
-                  <span className="text-xs md:text-sm text-[#C6A66B] font-bold">[일정 확정 필요 · 90분 진행]</span>
+                  <span className="text-xs md:text-sm text-[#C6A66B] font-bold">
+                    {CLASS_CONFIG.meta.schedule} · {CLASS_CONFIG.meta.duration} 진행
+                  </span>
                 </div>
                 <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
                   <span className="text-xs md:text-sm text-[#8F7D6E]">참가비</span>
                   <div className="text-right">
-                    <span className="text-base md:text-xl text-[#FAF7F2] font-extrabold">29,000원</span>
-                    <span className="text-[11px] text-[#A8988B] block">* 20만 원대 VOD 대비 80% 이상 가벼운 파격 실시간 특가</span>
+                    <span className="text-base md:text-xl text-[#FAF7F2] font-extrabold">
+                      {CLASS_CONFIG.price.current}{CLASS_CONFIG.price.unit}
+                    </span>
+                    <span className="text-[11px] text-[#A8988B] block">
+                      * 20만 원대 VOD 대비 80% 이상 가벼운 파격 실시간 특가
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs md:text-sm text-[#8F7D6E]">핵심 제공 자료</span>
-                  <span className="text-xs md:text-sm text-[#D6C6A8] font-semibold">전용 프롬프트 엔진 원본 + 실전 템플릿 4종</span>
+                  <span className="text-xs md:text-sm text-[#D6C6A8] font-semibold">
+                    전용 프롬프트 엔진 원본 + 실전 템플릿 4종
+                  </span>
                 </div>
               </div>
 
