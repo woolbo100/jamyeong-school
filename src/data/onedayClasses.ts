@@ -69,6 +69,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["미니앱", "앱인토스", "서비스제작", "AI개발"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/miniapp",
   },
   {
     id: "ai-saju-tarot-service",
