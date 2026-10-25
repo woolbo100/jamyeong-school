@@ -215,11 +215,11 @@ export default function AidramaPage() {
 
             </div>
 
-            {/* 우측: 6) 대표 영상 또는 이미지 */}
+            {/* 우측: 6) 대표 영상 또는 이미지 (세로 9:16 숏츠 최적화 비율) */}
             {/* 데스크톱에서는 우측 열, 모바일에서는 좌측 정보·신청 버튼 바로 아래에 단정하게 배치 */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#3E3228] bg-gradient-to-b from-[#181310] to-[#120E0C] shadow-xl group">
-                <div className="aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] w-full flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] relative rounded-[28px] overflow-hidden border border-[#3E3228] bg-gradient-to-b from-[#181310] to-[#120E0C] shadow-2xl group">
+                <div className="aspect-[9/16] w-full flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
                   {/* 은은한 배경 오라 */}
                   <div
                     className="absolute inset-0 pointer-events-none opacity-30"
@@ -229,19 +229,32 @@ export default function AidramaPage() {
                     }}
                   />
 
-                  <div className="relative z-10 flex flex-col items-center max-w-sm">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#C6A66B]/20 border border-[#C6A66B]/50 flex items-center justify-center text-[#D6C6A8] text-xl md:text-2xl mb-3 shadow-lg group-hover:scale-105 transition-transform">
+                  {/* 스마트폰 상단 노치/스피커 바 느낌 디테일 */}
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-14 h-1 rounded-full bg-[#2E241E]" />
+
+                  <div className="relative z-10 flex flex-col items-center max-w-[240px]">
+                    <div className="w-14 h-14 rounded-full bg-[#C6A66B]/20 border border-[#C6A66B]/50 flex items-center justify-center text-[#D6C6A8] text-xl mb-3 shadow-lg group-hover:scale-105 transition-transform">
                       ▶
                     </div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-[#241C17]/90 border border-[#4D3A2B] text-[11px] md:text-xs font-bold text-[#D6C6A8] mb-2">
-                      [대표 영상 · 결과물 미리보기]
+                    <span className="inline-block px-3 py-1 rounded-full bg-[#241C17]/90 border border-[#4D3A2B] text-[11px] font-bold text-[#D6C6A8] mb-2">
+                      [9:16 쇼츠 대표 영상]
                     </span>
                     <h2 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-1.5 break-keep">
-                      AI로 완성하는 1분 숏드라마 대표 결과물
+                      AI 1분 숏드라마 대표 완성작
                     </h2>
                     <p className="text-xs text-[#A8988B] leading-relaxed break-keep">
-                      웹소설 도파민 서사 공식과 일관성 프롬프트 엔진으로 제작된 고화질 영상 및 대표 장면
+                      스마트폰 숏폼(쇼츠·릴스) 9:16 최적화 <br />
+                      웹소설 도파민 서사 1분 완성 영상 (mp4)
                     </p>
+                  </div>
+
+                  {/* 하단 쇼츠 타임라인 진행바 디테일 */}
+                  <div className="absolute bottom-3.5 left-4 right-4 flex items-center gap-1.5 opacity-60">
+                    <span className="text-[10px] text-[#A8988B]">00:00</span>
+                    <div className="flex-1 h-0.5 rounded-full bg-[#3E3228] overflow-hidden">
+                      <div className="w-1/3 h-full bg-[#C6A66B]" />
+                    </div>
+                    <span className="text-[10px] text-[#A8988B]">01:00</span>
                   </div>
                 </div>
               </div>
