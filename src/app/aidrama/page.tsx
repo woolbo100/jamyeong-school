@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI 브랜드 숏드라마 제작 실전 원데이 클래스 | 자명스쿨",
   description:
-    "도파민 터지는 스토리부터 영상 완성까지, 90분 만에 웹소설 작가의 서사 공식과 AI 전용 프롬프트 엔진으로 나만의 첫 숏드라마 1편을 직접 완성합니다.",
+    "도파민 터지는 스토리부터 영상 완성까지, 1Day 만에 웹소설 작가의 서사 공식과 AI 전용 프롬프트 엔진으로 나만의 첫 숏드라마 1편을 직접 완성합니다.",
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -19,10 +19,10 @@ const CLASS_CONFIG = {
   titleSub: "AI로 만드는 나만의 브랜드 숏드라마",
   titleAccent: ": 스토리 / 캐릭터 / 영상 입문 올인원",
   description:
-    "인강 끊어놓고 작심삼일로 끝나지 않습니다. 복잡한 유료 프로그램 설치 없이 웹소설 작가의 서사 공식과 전용 프롬프트 엔진으로 단 90분 만에 내 스마트폰에 저장되는 1분 완성작(mp4)을 뽑아냅니다.",
+    "인강 끊어놓고 작심삼일로 끝나지 않습니다. 복잡한 유료 프로그램 설치 없이 웹소설 작가의 서사 공식과 전용 프롬프트 엔진으로 단 1Day 만에 내 스마트폰에 저장되는 1분 완성작(mp4)을 뽑아냅니다.",
   meta: {
     format: "Zoom 실시간",
-    duration: "90분 초압축",
+    duration: "3~4시간",
     difficulty: "누구나 (입문)",
     schedule: "[확정 필요]",
   },
@@ -33,7 +33,7 @@ const CLASS_CONFIG = {
     unit: "원",
     note: "* 커피 몇 잔 값으로 평생 소장 프롬프트 엔진과 1편 완성본 획득",
   },
-  tags: ["AI영상", "숏드라마", "도파민서사", "캐릭터고정", "90분완성"],
+  tags: ["AI영상", "숏드라마", "도파민서사", "캐릭터고정", "1Day완성"],
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -197,7 +197,7 @@ export default function AidramaPage() {
 
                 <div className="text-[11px] sm:text-xs text-[#8E6D38] border-t border-[#F0E8DD] pt-2.5 flex items-center justify-between">
                   <span>{CLASS_CONFIG.price.note}</span>
-                  <span className="hidden sm:inline text-[#7C6656]">• 90분 내 1편 직접 완성</span>
+                  <span className="hidden sm:inline text-[#7C6656]">• 원데이 끝장 1편 직접 완성</span>
                 </div>
               </div>
 
@@ -797,10 +797,10 @@ export default function AidramaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-                90-MIN CURRICULUM
+                1DAY CURRICULUM
               </span>
               <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-                5단계로 끝내는 90분 실시간 완성 로드맵
+                5단계로 끝내는 1Day 실시간 완성 로드맵
               </h2>
               <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
                 단순 시청 강의가 아닌, 강사와 함께 화면을 띄워놓고 1단계부터 5단계까지 직접 만들어갑니다.
@@ -1208,10 +1208,10 @@ export default function AidramaPage() {
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>90분 수업 안에 진짜로 1편이 완성되나요?</span>
+                  <span>1Day(3~4시간) 수업 안에 진짜로 1편이 완성되나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  네. 수강생이 기획 단계에서 길을 잃지 않도록 대본 템플릿과 컷 연출 공식표를 사전에 제공하며, 90분 안에 스마트폰에 1편의 영상 파일(mp4)을 다운로드하는 것을 목표로 커리큘럼이 정밀하게 짜여 있습니다.
+                  네. 수강생이 기획 단계에서 길을 잃지 않도록 대본 템플릿과 컷 연출 공식표를 사전에 제공하며, 1Day(3~4시간) 안에 스마트폰에 1편의 영상 파일(mp4)을 다운로드하는 것을 목표로 커리큘럼이 정밀하게 짜여 있습니다.
                 </p>
               </div>
 
@@ -1275,13 +1275,13 @@ export default function AidramaPage() {
                 "20만 원 넘는 인강 끊어놓고 1강 듣다 포기하셨나요?"
               </p>
               <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
-                커피 몇 잔 값(29,000원)으로, 오늘 단 90분 만에 내 손으로 1분 완성작을 뽑아내는 초압축 실전으로 오세요.
+                커피 몇 잔 값(29,000원)으로, 오늘 단 1Day 만에 내 손으로 1분 완성작을 뽑아내는 원데이 끝장 실전으로 오세요.
               </p>
             </div>
 
             <p className="text-base sm:text-lg text-[#A8988B] mb-10 max-w-xl mx-auto break-keep">
               웹소설 작가의 서사 설계와 AI 제작 시스템을 손에 쥐고 <br className="hidden sm:inline" />
-              단 90분 만에 손에 잡히는 내 작품을 만들어보세요.
+              단 1Day 만에 손에 잡히는 내 작품을 만들어보세요.
             </p>
 
             {/* 최종 신청 요약 카드 */}
