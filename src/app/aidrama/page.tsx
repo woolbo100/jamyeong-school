@@ -270,6 +270,229 @@ export default function AidramaPage() {
       <div className="w-full bg-[#0D0B0A]">
 
         {/* ───────────────────────────────────────────
+            섹션 1.5. 제작 흐름 요약 & 수강 패키지 요약
+            - 상세 커리큘럼을 읽기 전 전체 제작 과정(3단계)과 포함된 핵심 패키지를 한눈에 파악
+           ─────────────────────────────────────────── */}
+        <section className="py-14 md:py-20 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+          
+          {/* 1. 제작 흐름 3단계 */}
+          <div className="mb-14 md:mb-16">
+            <div className="text-center mb-10 md:mb-12">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
+                PROCESS OVERVIEW
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#FAF7F2] mb-3 break-keep">
+                이야기가 한 편의 숏드라마가 되는 과정
+              </h2>
+              <p className="text-xs sm:text-sm text-[#9E8B7C] max-w-lg mx-auto break-keep">
+                기획부터 영상 완성까지, 세 흐름으로 함께 따라갑니다.
+              </p>
+            </div>
+
+            {/* 카드 3개 + 연결 화살표 (PC: 가로 배치 + 오른쪽 화살표, 모바일: 세로 배치 + 아래쪽 화살표) */}
+            <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 md:gap-2">
+              {/* 단계 01 */}
+              <div className="flex-1 p-5 sm:p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between hover:border-[#C6A66B]/30 transition-all shadow-xs">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-extrabold tracking-wider text-[#C6A66B] px-2.5 py-1 rounded-md bg-[#C6A66B]/10 border border-[#C6A66B]/20">
+                      01
+                    </span>
+                    {/* 대본·스토리보드 선형 아이콘 */}
+                    <div className="w-10 h-10 rounded-xl bg-[#1C1613] border border-[#332720] flex items-center justify-center text-[#C6A66B]">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
+                    이야기와 장면 설계
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    대본 템플릿으로 인물과 갈등을 정하고 장면을 구성합니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* 화살표 01 -> 02 */}
+              <div className="flex items-center justify-center py-1 md:py-0 md:px-2 text-[#C6A66B]/60">
+                {/* PC 가로 화살표 */}
+                <svg className="hidden md:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+                {/* 모바일 세로 화살표 */}
+                <svg className="block md:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                </svg>
+              </div>
+
+              {/* 단계 02 */}
+              <div className="flex-1 p-5 sm:p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between hover:border-[#C6A66B]/30 transition-all shadow-xs">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-extrabold tracking-wider text-[#C6A66B] px-2.5 py-1 rounded-md bg-[#C6A66B]/10 border border-[#C6A66B]/20">
+                      02
+                    </span>
+                    {/* 인물 프레임·영상 선형 아이콘 */}
+                    <div className="w-10 h-10 rounded-xl bg-[#1C1613] border border-[#332720] flex items-center justify-center text-[#C6A66B]">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
+                    캐릭터와 영상 제작
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    캐릭터 이미지를 만들고 장면별 영상으로 연결합니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* 화살표 02 -> 03 */}
+              <div className="flex items-center justify-center py-1 md:py-0 md:px-2 text-[#C6A66B]/60">
+                {/* PC 가로 화살표 */}
+                <svg className="hidden md:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+                {/* 모바일 세로 화살표 */}
+                <svg className="block md:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                </svg>
+              </div>
+
+              {/* 단계 03 */}
+              <div className="flex-1 p-5 sm:p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between hover:border-[#C6A66B]/30 transition-all shadow-xs">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-extrabold tracking-wider text-[#C6A66B] px-2.5 py-1 rounded-md bg-[#C6A66B]/10 border border-[#C6A66B]/20">
+                      03
+                    </span>
+                    {/* 타임라인·재생 선형 아이콘 */}
+                    <div className="w-10 h-10 rounded-xl bg-[#1C1613] border border-[#332720] flex items-center justify-center text-[#C6A66B]">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
+                    편집하고 완성하기
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    대사·소리·자막을 더해 숏드라마 파일로 완성합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 2. 수강 패키지 요약 카드 (하나의 큰 카드) */}
+          <div className="rounded-3xl bg-gradient-to-b from-[#18120F] to-[#130E0C] border border-[#3A2E24] p-6 sm:p-8 md:p-10 shadow-xl">
+            {/* 상단 헤더 */}
+            <div className="text-center md:text-left mb-8 pb-6 border-b border-[#2C211A] flex flex-col md:flex-row md:items-end justify-between gap-3">
+              <div>
+                <span className="text-xs font-bold tracking-[0.15em] text-[#C6A66B] uppercase mb-1.5 block">
+                  PACKAGE INCLUDED
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#FAF7F2] break-keep">
+                  이번 원데이에 함께 담았습니다
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-[#9E8B7C] break-keep">
+                함께 만드는 수업부터, 다음 작품에 활용할 제작 자료까지.
+              </p>
+            </div>
+
+            {/* 카드 내부 4개 항목 (PC: 2x2 그리드, 모바일: 1열) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+              {/* 항목 01 */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1612]/90 border border-[#2E241D] flex items-start gap-3.5 hover:border-[#C6A66B]/30 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#2A1F18] border border-[#3E2E23] flex items-center justify-center text-[#C6A66B] shrink-0 mt-0.5">
+                  {/* 모니터 / 실시간 라이브 화상 회의 아이콘 */}
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[11px] font-bold text-[#C6A66B]">01</span>
+                    <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] truncate">
+                      Zoom 실시간 제작 수업
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    강사의 화면을 보며 단계별로 함께 실습합니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* 항목 02 */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1612]/90 border border-[#2E241D] flex items-start gap-3.5 hover:border-[#C6A66B]/30 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#2A1F18] border border-[#3E2E23] flex items-center justify-center text-[#C6A66B] shrink-0 mt-0.5">
+                  {/* AI 스파크/프롬프트 아이콘 */}
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[11px] font-bold text-[#C6A66B]">02</span>
+                    <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] truncate">
+                      숏드라마 AI 프롬프트 스킬
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    기획·대본·장면별 프롬프트 제작에 활용하는 원본 파일
+                  </p>
+                </div>
+              </div>
+
+              {/* 항목 03 */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1612]/90 border border-[#2E241D] flex items-start gap-3.5 hover:border-[#C6A66B]/30 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#2A1F18] border border-[#3E2E23] flex items-center justify-center text-[#C6A66B] shrink-0 mt-0.5">
+                  {/* 대본/문서 가이드 아이콘 */}
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[11px] font-bold text-[#C6A66B]">03</span>
+                    <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] truncate">
+                      대본 템플릿과 연출 가이드
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    클리셰 대본 3종과 타임코드·카메라 무빙 자료
+                  </p>
+                </div>
+              </div>
+
+              {/* 항목 04 */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1612]/90 border border-[#2E241D] flex items-start gap-3.5 hover:border-[#C6A66B]/30 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#2A1F18] border border-[#3E2E23] flex items-center justify-center text-[#C6A66B] shrink-0 mt-0.5">
+                  {/* 오픈채팅/말풍선 아이콘 */}
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                  </svg>
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[11px] font-bold text-[#C6A66B]">04</span>
+                    <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] truncate">
+                      수강 후 질문 공간
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    다음 작품을 만들며 궁금한 점을 나누는 수강생 오픈채팅방
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────────────────────────────────────
             섹션 2. 추천 대상 (Who it's for)
             - 짧게 배치하여 고민 공감 섹션과 중복되지 않도록 핵심 대상만 깔끔하게 구성
            ─────────────────────────────────────────── */}
