@@ -17,15 +17,15 @@ const CLASS_CONFIG = {
   titleMain: "코딩을 몰라도",
   titleSub: "내 아이디어가 실제 앱이 됩니다",
   description:
-    "ChatGPT와 Codex를 활용해 아이디어 기획부터 미니앱 제작, 테스트, 앱인토스 등록과 출시 과정까지 직접 경험합니다.",
-  highlight: "배우는 데서 끝나지 않습니다. 오늘, 내가 만든 앱 하나를 완성합니다.",
+    "ChatGPT와 Codex로 작은 아이디어를 실제로 작동하는 미니앱으로 만듭니다. 기획부터 제작, 모바일 테스트, 앱인토스 등록 준비까지 전용 템플릿으로 함께 따라갑니다.",
+  highlight: "구경하는 수업에서, 직접 만들고 실행하는 경험으로.",
   meta: {
     format: "실시간 온라인 실습",
     duration: "하루 완성 원데이",
     difficulty: "왕초보 가능",
     schedule: "수시 모집 (오픈 예정)",
   },
-  tags: ["ChatGPT", "Codex", "앱인토스", "미니앱제작", "바이브코딩"],
+  tags: ["ChatGPT", "Codex", "앱인토스", "미니앱제작", "루모라타로"],
   ctaText: "미니앱 만들기 시작하기",
 };
 
@@ -93,6 +93,22 @@ export default function MiniappPage() {
                 ✨ {CLASS_CONFIG.highlight}
               </div>
 
+              {/* 핵심 가치 배지 3개 */}
+              <div className="flex flex-wrap items-center gap-2 pt-0.5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF2E6] text-[#7C6656] text-xs font-semibold border border-[#E8DFD3] shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8E6D38]" />
+                  AI와 대화하며 제작
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF2E6] text-[#7C6656] text-xs font-semibold border border-[#E8DFD3] shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8E6D38]" />
+                  실제 모바일 테스트
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF2E6] text-[#7C6656] text-xs font-semibold border border-[#E8DFD3] shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8E6D38]" />
+                  재사용 가능한 원본 제공
+                </span>
+              </div>
+
               {/* 4) 진행 방식 / 수업 시간 / 난이도 / 일정 (핵심 정보 카드) */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
                 <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
@@ -146,7 +162,7 @@ export default function MiniappPage() {
 
             </div>
 
-            {/* 우측: 앱인토스 미니앱 프리뷰 목업 프레임 */}
+            {/* 우측: 실제 승인 사례 '루모라 타로' 미니앱 프리뷰 목업 프레임 */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-[290px] sm:max-w-[310px] lg:max-w-[330px] relative rounded-[32px] overflow-hidden border-[6px] border-[#2A231F] bg-[#110E0C] shadow-2xl group">
                 {/* 스마트폰 상단 노치/스피커 바 */}
@@ -162,7 +178,7 @@ export default function MiniappPage() {
                     <div className="w-5 h-5 rounded-md bg-[#0064FF] flex items-center justify-center text-white text-[10px] font-bold">
                       t
                     </div>
-                    <span className="text-xs font-semibold text-[#EDE6DC]">앱인토스 미니앱</span>
+                    <span className="text-xs font-semibold text-[#EDE6DC]">토스 미니앱</span>
                   </div>
                   <div className="flex items-center gap-1.5 text-xs text-[#8C7B6E]">
                     <span>•••</span>
@@ -170,51 +186,66 @@ export default function MiniappPage() {
                   </div>
                 </div>
 
-                {/* 미니앱 내부 화면 콘텐츠 */}
+                {/* 미니앱 내부 화면: 강사 실제 제작·정식 승인 사례 '루모라 타로' */}
                 <div className="p-4 space-y-3 bg-gradient-to-b from-[#181310] to-[#120E0C] min-h-[380px]">
-                  {/* 빌드 완료 배지 */}
+                  {/* 실제 승인 사례 안내 배지 */}
                   <div className="flex items-center justify-between px-3 py-1.5 rounded-lg bg-[#0064FF]/15 border border-[#0064FF]/30 text-[11px] text-[#60A5FA]">
-                    <span className="font-semibold">● App in Toss 빌드 완료</span>
-                    <span className="text-[10px] text-zinc-400">.ait 파일</span>
+                    <span className="font-semibold">● 정식 승인 사례</span>
+                    <span className="text-[10px] text-zinc-300 font-medium">루모라 타로</span>
                   </div>
 
-                  {/* 미니앱 메인 카드 예시 */}
-                  <div className="p-4 rounded-2xl bg-[#221B17] border border-[#3E3127] text-left space-y-2">
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-[#C6A66B]/20 text-[#D6C6A8] font-bold inline-block">
-                      나만의 맞춤 추천 앱
-                    </span>
+                  {/* 루모라 타로 메인 카드 화면 */}
+                  <div className="p-4 rounded-2xl bg-[#221B17] border border-[#3E3127] text-left space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] px-2 py-0.5 rounded bg-[#C6A66B]/20 text-[#D6C6A8] font-bold inline-block">
+                        강사 제작·정식 승인 사례
+                      </span>
+                      <span className="text-[10px] text-[#A8988B]">모바일 실행 화면</span>
+                    </div>
+
                     <h3 className="text-sm font-bold text-[#FAF7F2]">
-                      오늘 나에게 꼭 맞는 선택은?
+                      오늘의 루모라 타로 리딩
                     </h3>
                     <p className="text-[11px] text-[#9E8B7C] leading-snug">
-                      조건 3가지를 선택하면 AI가 분석한 최적의 결과를 안내해 드립니다.
+                      직관적인 원카드 리딩으로 오늘의 기운과 조언을 확인합니다.
                     </p>
-                    <div className="pt-2 space-y-1.5">
-                      <div className="w-full py-2 px-3 rounded-xl bg-[#2E241E] border border-[#4A3B2F] text-xs text-[#EDE6DC] font-medium flex justify-between items-center">
-                        <span>1. 선호하는 분위기 선택</span>
-                        <span className="text-[#C6A66B]">선택완료 ✓</span>
-                      </div>
-                      <div className="w-full py-2 px-3 rounded-xl bg-[#2E241E] border border-[#4A3B2F] text-xs text-[#EDE6DC] font-medium flex justify-between items-center">
-                        <span>2. 관심 카테고리 설정</span>
-                        <span className="text-[#C6A66B]">선택완료 ✓</span>
-                      </div>
+
+                    {/* 타로 카드 결과 비주얼 */}
+                    <div className="p-3 rounded-xl bg-[#1A1411] border border-[#4A3B2F] text-center space-y-1.5 my-1">
+                      <div className="text-2xl">✨ 🃏 ✨</div>
+                      <strong className="text-xs text-[#D6C6A8] block font-bold">
+                        XVII · THE STAR (별)
+                      </strong>
+                      <p className="text-[10px] text-[#A8988B] leading-relaxed">
+                        “새로운 희망과 직관의 빛, 나만의 영감을 믿으세요.”
+                      </p>
                     </div>
-                    <button
-                      type="button"
-                      className="w-full py-2.5 rounded-xl bg-[#0064FF] text-white text-xs font-bold shadow-md hover:bg-[#0052D4] transition-colors mt-2"
-                    >
-                      결과 확인하고 공유하기
-                    </button>
+
+                    {/* 동작 버튼 */}
+                    <div className="space-y-1.5 pt-1">
+                      <button
+                        type="button"
+                        className="w-full py-2 rounded-xl bg-[#0064FF] text-white text-xs font-bold shadow-md hover:bg-[#0052D4] transition-colors"
+                      >
+                        오늘의 카드 다시 뽑기
+                      </button>
+                      <button
+                        type="button"
+                        className="w-full py-1.5 rounded-lg bg-[#2E241E] text-[#D6C6A8] text-[11px] font-semibold hover:bg-[#382C25] transition-colors"
+                      >
+                        결과 카드 저장 & 공유
+                      </button>
+                    </div>
                   </div>
 
                   {/* 하단 미니앱 상태 안내 */}
                   <div className="p-3 rounded-xl bg-[#1A1411] border border-[#2B211A] text-[11px] text-[#A8988B] space-y-1">
                     <div className="flex items-center justify-between text-[#D6C6A8]">
-                      <span>심사 준비 상태</span>
-                      <span className="font-bold text-green-400">등록 검증 완료</span>
+                      <span>심사 결과</span>
+                      <span className="font-bold text-green-400">정식 승인 완료 ✓</span>
                     </div>
                     <p className="text-[10px] text-[#7A6A5E]">
-                      아이디어 기획 → Codex 개발 → 앱인토스 정식 배포
+                      기획 ➔ Codex 제작 ➔ 모바일 테스트 ➔ 토스 정식 승인
                     </p>
                   </div>
                 </div>
@@ -234,6 +265,28 @@ export default function MiniappPage() {
           본문 상세 영역 (Dark & Deep Brown Theme)
          ═══════════════════════════════════════════════ */}
       <div className="w-full bg-[#0D0B0A]">
+
+        {/* ───────────────────────────────────────────
+            01.5. 앱인토스 미니앱 개념 안내 (INFO BOX)
+           ─────────────────────────────────────────── */}
+        <section className="pt-12 md:pt-16 px-4 sm:px-6 max-w-4xl mx-auto">
+          <div className="p-6 md:p-7 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col md:flex-row md:items-center gap-5 shadow-lg">
+            <div className="w-12 h-12 rounded-2xl bg-[#0064FF]/15 border border-[#0064FF]/30 flex items-center justify-center text-[#60A5FA] text-xl shrink-0 font-bold">
+              t
+            </div>
+            <div className="space-y-1.5 flex-1">
+              <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block">
+                ABOUT APP IN TOSS
+              </span>
+              <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2]">
+                앱인토스 미니앱이란?
+              </h3>
+              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                토스 앱 안에서 이용하는 작은 서비스입니다. 별도의 앱을 설치하는 방식과 달리, 토스 안에서 사용자가 서비스를 실행합니다. 이번 수업에서는 추천·테스트·카드형 콘텐츠 등 작은 기능을 가진 첫 미니앱을 제작합니다.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ───────────────────────────────────────────
             02. PROBLEM (WHY MINI APP?)
@@ -305,7 +358,7 @@ export default function MiniappPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            03. BEFORE → AFTER
+            03. BEFORE → AFTER (핵심 비교 3개)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
           <div className="max-w-4xl mx-auto">
@@ -322,19 +375,19 @@ export default function MiniappPage() {
               </p>
             </div>
 
-            {/* Before vs After 비교 리스트 */}
+            {/* Before vs After 핵심 비교 3개 리스트 */}
             <div className="space-y-4">
               {/* 항목 1 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
                 <div className="space-y-1">
                   <span className="text-xs text-red-400 font-bold">✕ BEFORE</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">아이디어만 메모해 둔다</h4>
+                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">아이디어 메모</h4>
                   <p className="text-xs text-[#8F7D6E]">노트에 적힌 채 실현되지 못하고 잊혀지는 상상</p>
                 </div>
                 <div className="space-y-1 md:border-l md:border-[#2B221B] md:pl-5">
                   <span className="text-xs text-[#C6A66B] font-bold">✓ AFTER</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">아이디어를 앱 구조로 기획한다</h4>
-                  <p className="text-xs text-[#A8988B]">사용자 흐름과 기능 명세가 정리된 실전 화면으로 구체화</p>
+                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">화면·기능 기획</h4>
+                  <p className="text-xs text-[#A8988B]">사용자 흐름과 필수 기능이 명확히 정리된 실제 앱 설계</p>
                 </div>
               </div>
 
@@ -342,13 +395,13 @@ export default function MiniappPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
                 <div className="space-y-1">
                   <span className="text-xs text-red-400 font-bold">✕ BEFORE</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">코딩을 몰라 시작하지 못한다</h4>
-                  <p className="text-xs text-[#8F7D6E]">문법의 어려움에 부딪혀 시작 단계에서 중도 포기</p>
+                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">제작의 막막함</h4>
+                  <p className="text-xs text-[#8F7D6E]">문법과 개발 환경의 어려움에 부딪혀 시작조차 못 함</p>
                 </div>
                 <div className="space-y-1 md:border-l md:border-[#2B221B] md:pl-5">
                   <span className="text-xs text-[#C6A66B] font-bold">✓ AFTER</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">AI에게 원하는 기능을 정확하게 요청한다</h4>
-                  <p className="text-xs text-[#A8988B]">ChatGPT와 Codex와 대화하며 자연어로 코드를 완성</p>
+                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">AI와 제작·수정</h4>
+                  <p className="text-xs text-[#A8988B]">ChatGPT와 Codex와 대화하며 자연어로 코드를 만들고 바로 수정</p>
                 </div>
               </div>
 
@@ -356,41 +409,13 @@ export default function MiniappPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
                 <div className="space-y-1">
                   <span className="text-xs text-red-400 font-bold">✕ BEFORE</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">앱 제작은 개발자의 영역이라 생각한다</h4>
-                  <p className="text-xs text-[#8F7D6E]">소수의 엔지니어만 서비스 출시가 가능하다고 여김</p>
+                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">실행 경험 없음</h4>
+                  <p className="text-xs text-[#8F7D6E]">화면 시안만 보거나 브라우저에서 멈춰 실제 작동 미확인</p>
                 </div>
                 <div className="space-y-1 md:border-l md:border-[#2B221B] md:pl-5">
                   <span className="text-xs text-[#C6A66B] font-bold">✓ AFTER</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">직접 앱을 실행하고 수정한다</h4>
-                  <p className="text-xs text-[#A8988B]">내 브라우저와 모바일에서 클릭하고 수정하는 능동적 창작</p>
-                </div>
-              </div>
-
-              {/* 항목 4 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
-                <div className="space-y-1">
-                  <span className="text-xs text-red-400 font-bold">✕ BEFORE</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">서비스 출시 과정을 경험해본 적이 없다</h4>
-                  <p className="text-xs text-[#8F7D6E]">등록 방법과 플랫폼 규격을 몰라 세상에 내보내지 못함</p>
-                </div>
-                <div className="space-y-1 md:border-l md:border-[#2B221B] md:pl-5">
-                  <span className="text-xs text-[#C6A66B] font-bold">✓ AFTER</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">앱인토스에 실제 등록 과정을 경험한다</h4>
-                  <p className="text-xs text-[#A8988B]">.ait 빌드부터 스크린샷, 심사 콘솔 등록까지 전 과정 체득</p>
-                </div>
-              </div>
-
-              {/* 항목 5 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
-                <div className="space-y-1">
-                  <span className="text-xs text-red-400 font-bold">✕ BEFORE</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#FAF7F2]">한 번 만들고 나면 손댈 수 없다</h4>
-                  <p className="text-xs text-[#8F7D6E]">버그나 추가 기능이 생겨도 대처하지 못하고 방치</p>
-                </div>
-                <div className="space-y-1 md:border-l md:border-[#2B221B] md:pl-5">
-                  <span className="text-xs text-[#C6A66B] font-bold">✓ AFTER</span>
-                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">완성한 프로젝트를 다시 수정하고 확장한다</h4>
-                  <p className="text-xs text-[#A8988B]">새로운 아이디어를 얼마든지 계속해서 업데이트하고 발전</p>
+                  <h4 className="text-sm md:text-base font-bold text-[#D6C6A8]">모바일 테스트·등록 준비</h4>
+                  <p className="text-xs text-[#A8988B]">스마트폰에서 직접 만져보고 앱인토스 콘솔 심사 요청까지 체득</p>
                 </div>
               </div>
             </div>
@@ -491,6 +516,76 @@ export default function MiniappPage() {
               </div>
             </div>
           </div>
+
+          {/* 수업 패키지 요약 카드 (지침 5) */}
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#16120F] border border-[#2E241D]">
+            <div className="text-center mb-6">
+              <span className="text-[11px] font-bold text-[#C6A66B] tracking-[0.2em] uppercase block mb-1">
+                PACKAGE INCLUDED
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
+                첫 앱 제작에 필요한 틀을 함께 드립니다
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1713] border border-[#362920] flex items-start gap-3.5">
+                <span className="w-8 h-8 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+                  01
+                </span>
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] mb-1">
+                    실시간 제작 실습
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    기획·제작·테스트·등록 준비를 함께 진행
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1713] border border-[#362920] flex items-start gap-3.5">
+                <span className="w-8 h-8 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+                  02
+                </span>
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] mb-1">
+                    원본 프로젝트와 스타터 템플릿
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    다음 앱 제작에도 활용할 기본 구조
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1713] border border-[#362920] flex items-start gap-3.5">
+                <span className="w-8 h-8 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+                  03
+                </span>
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] mb-1">
+                    제작·등록 프롬프트
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    기능 요청부터 앱 소개 문구까지 활용
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#1D1713] border border-[#362920] flex items-start gap-3.5">
+                <span className="w-8 h-8 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
+                  04
+                </span>
+                <div>
+                  <h4 className="text-sm sm:text-base font-bold text-[#FAF7F2] mb-1">
+                    이미지 템플릿과 점검표
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    로고·스크린샷 준비와 테스트·출시 준비 확인
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ───────────────────────────────────────────
@@ -566,13 +661,29 @@ export default function MiniappPage() {
                 </div>
                 <h3 className="text-lg font-bold text-[#FAF7F2] mb-2">기록·도구형 앱</h3>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed mb-4">
-                  간단한 내용을 직접 입력하고 저장하거나 다시 확인하는 실용 도구 앱
+                  간단한 내용을 입력하고 기기에 저장(로컬 스토리지)하여 확인하는 실용 도구 앱
                 </p>
                 <div className="p-3 rounded-xl bg-[#1E1713] border border-[#33271E] text-xs text-[#D6C6A8]">
                   <span className="text-[#8E6D38] font-bold block mb-1">실전 예시:</span>
-                  하루 기록 / 체크리스트 / 아이디어 노트 / 작은 습관 도구
+                  오늘의 한 줄 기록 / 체크리스트 / 간단 메모 / 작은 습관 카운터
                 </div>
               </div>
+            </div>
+
+            {/* 각자 만드는 앱의 범위 안내 (지침 9) */}
+            <div className="mt-10 p-6 sm:p-7 rounded-2xl bg-[#16120F] border border-[#3A2D23] text-center">
+              <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block mb-2">
+                SCOPE & FOCUS
+              </span>
+              <h4 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-3 break-keep">
+                처음에는 핵심 기능 하나부터.
+              </h4>
+              <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed max-w-2xl mx-auto break-keep mb-3">
+                공통 스타터 템플릿을 바탕으로 콘텐츠·디자인·간단한 기능을 바꿔 나만의 앱을 만듭니다. 추천형·테스트형·카드형 등 원데이에서 구현 가능한 범위로 아이디어를 함께 정리합니다.
+              </p>
+              <p className="text-[11px] text-[#7A6A5E] leading-relaxed">
+                ※ 회원 로그인, 결제 시스템, 유료 외부 AI API, 복잡한 서버 데이터베이스 연동은 입문 원데이 실습 범위에 포함되지 않으며, 누구나 확실하게 완성할 수 있는 가벼운 독립형 미니앱 제작에 집중합니다.
+              </p>
             </div>
           </div>
         </section>
@@ -603,16 +714,19 @@ export default function MiniappPage() {
                     STEP 01
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    내 앱 아이디어 정하기
+                    아이디어 정하기
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
                   누구를 위한 앱인지, 어떤 문제를 해결하는지, 사용자가 무엇을 하게 할지 명확히 정리합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                아이디어 워크시트 작성
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  대상 사용자·핵심 기능 정리
+                </span>
+              </div>
             </div>
 
             {/* STEP 02 */}
@@ -623,16 +737,19 @@ export default function MiniappPage() {
                     STEP 02
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    ChatGPT로 앱 기획하기
+                    ChatGPT로 기획하기
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
                   아이디어를 화면과 기능의 구조로 바꿉니다. 앱 이름, 핵심 기능, 사용자 흐름을 체계적으로 도출합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                기능 및 화면 구조화
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  화면 구성·사용 흐름
+                </span>
+              </div>
             </div>
 
             {/* STEP 03 */}
@@ -643,16 +760,19 @@ export default function MiniappPage() {
                     STEP 03
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    Codex로 앱 제작하기
+                    Codex로 제작하기
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
                   완성된 기획을 기반으로 AI에게 앱 제작을 요청합니다. 코드를 직접 쓰지 않고 AI와 대화하며 완성합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                바이브코딩 실습
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  실행 가능한 첫 버전
+                </span>
+              </div>
             </div>
 
             {/* STEP 04 */}
@@ -670,9 +790,12 @@ export default function MiniappPage() {
                   브라우저에서 앱을 실행하고 버튼, 화면, 결과를 확인합니다. 마음에 들지 않으면 AI에게 즉시 수정을 요청합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                실시간 프리뷰 & 피드백
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  주요 기능 점검·수정
+                </span>
+              </div>
             </div>
 
             {/* STEP 05 */}
@@ -683,16 +806,19 @@ export default function MiniappPage() {
                     STEP 05
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    앱인토스용으로 빌드하기
+                    앱인토스용 빌드
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
-                  앱인토스 환경에 맞게 설정을 마치고, 등록에 필요한 최종 <code className="text-[#C6A66B]">.ait</code> 빌드 파일을 생성합니다.
+                  앱인토스 환경에 맞게 설정을 마치고, 등록에 필요한 최종 빌드 파일을 추출합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                .ait 파일 추출
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  등록용 빌드 파일
+                </span>
+              </div>
             </div>
 
             {/* STEP 06 */}
@@ -703,16 +829,19 @@ export default function MiniappPage() {
                     STEP 06
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    실제 모바일 환경 테스트
+                    모바일 테스트
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
-                  PC 브라우저에서 끝내지 않고 실제 모바일 앱 환경에서도 터치감과 주요 기능이 온전히 작동하는지 검증합니다.
+                  PC 브라우저에서 끝내지 않고 실제 모바일 환경에서 터치감과 주요 기능이 온전히 작동하는지 검증합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                모바일 환경 최종 점검
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  실제 환경 테스트 기록
+                </span>
+              </div>
             </div>
 
             {/* STEP 07 */}
@@ -723,16 +852,19 @@ export default function MiniappPage() {
                     STEP 07
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    등록 자료 준비하기
+                    등록 자료 준비
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
-                  앱 이름, 상세 설명, 출시 노트, 검색 키워드, 주요 기능, 앱 로고, 스크린샷 등 등록에 필요한 모든 자료를 완성합니다.
+                  앱 이름, 소개 문구, 검색 키워드, 주요 기능, 앱 로고, 스크린샷 등 등록에 필요한 모든 자료를 완성합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                메타데이터 & 이미지 규격
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  소개 문구·로고·스크린샷
+                </span>
+              </div>
             </div>
 
             {/* STEP 08 */}
@@ -743,55 +875,52 @@ export default function MiniappPage() {
                     STEP 08
                   </span>
                   <h3 className="text-base md:text-lg font-bold text-[#FAF7F2]">
-                    앱인토스 등록 과정 경험하기
+                    콘솔 등록
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-[#9E8B7C] pl-1">
-                  완성한 앱을 앱인토스 콘솔에 등록하고 심사 요청까지의 실제 서비스 릴리즈 흐름을 확실하게 익힙니다.
+                  앱인토스 콘솔에 등록 정보를 입력하고 심사 요청 절차를 익힙니다. 계정과 자료 준비가 완료된 경우 심사 요청까지 실습합니다.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-[#C6A66B] shrink-0 self-start md:self-center">
-                콘솔 심사 접수 실전
-              </span>
+              <div className="flex items-center gap-2 self-start md:self-center shrink-0">
+                <span className="text-[11px] text-[#8F7D6E] font-medium">남는 결과물</span>
+                <span className="px-3 py-1 rounded-lg bg-[#241B15] border border-[#3E2E22] text-xs font-bold text-[#D6C6A8]">
+                  등록 정보 입력·심사 요청 준비
+                </span>
+              </div>
             </div>
+          </div>
+
+          {/* 로드맵 하단 안내 (지침 6) */}
+          <div className="mt-8 p-4 rounded-xl bg-[#191411] border border-[#2E241D] text-center">
+            <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+              ※ 수업의 목표는 작동하는 첫 버전과 출시 준비입니다. 최종 승인과 공개 시점은 플랫폼 심사 및 준비 상태에 따라 달라집니다.
+            </p>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            07. 단순 코딩수업이 아닙니다
+            07. 단순 코딩수업이 아닙니다 (짧은 인용 박스로 축소)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              NOT JUST CODING
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-6 break-keep">
-              이 수업의 핵심은 <br />
-              ‘코딩 공부’가 아닙니다
-            </h2>
-            <div className="space-y-4 text-sm sm:text-base text-[#9E8B7C] max-w-2xl mx-auto leading-relaxed break-keep mb-10">
-              <p>코딩 문법을 달달 외우는 수업이 아닙니다.</p>
-              <p>
-                내가 만들고 싶은 서비스를 논리적으로 설명하고, <br />
-                AI와 협업해 실제 손에 잡히는 결과물을 만들어내는 방법을 배웁니다.
-              </p>
-            </div>
-
-            <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-b from-[#1C1510] to-[#140F0D] border border-[#4A3728] max-w-2xl mx-auto shadow-2xl">
-              <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-widest block mb-2">
-                CORE PHILOSOPHY
+        <section className="py-12 md:py-16 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="max-w-3xl mx-auto">
+            <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#140F0D] border border-[#3E3024] text-center shadow-lg">
+              <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-widest block mb-2">
+                NOT JUST CODING · 핵심 철학
               </span>
-              <p className="text-lg sm:text-2xl font-extrabold text-[#FAF7F2] leading-snug break-keep">
-                “코딩 실력보다 <br />
-                <span className="text-[#D6C6A8]">아이디어를 구조화하고</span> <br />
-                <span className="text-[#C6A66B]">AI에게 정확하게 요청하는 능력</span>입니다.”
+              <p className="text-base sm:text-xl font-bold text-[#FAF7F2] leading-snug break-keep mb-3">
+                “코딩 실력보다 <span className="text-[#D6C6A8]">아이디어를 구조화하고</span>, <br className="sm:hidden" />
+                <span className="text-[#C6A66B]">AI와 대화하며 풀어내는 경험</span>이 먼저입니다.”
+              </p>
+              <p className="text-xs sm:text-sm text-[#8F7D6E] leading-relaxed break-keep max-w-xl mx-auto">
+                문법을 외우는 공부 대신, 내 아이디어를 실제로 실행 가능한 미니앱으로 완성하고 테스트하는 실전 감각을 배웁니다.
               </p>
             </div>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            08. 등록까지 쉽게 만드는 제공 자료 (CLASS KIT)
+            08. 등록까지 쉽게 만드는 제공 자료 7종 (CLASS KIT)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
           <div className="text-center mb-16">
@@ -799,89 +928,115 @@ export default function MiniappPage() {
               CLASS KIT
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-              혼자 다시 만들 수 있도록 <br />
-              실전 템플릿을 제공합니다
+              다음 앱에도 활용할 수 있는 <br />
+              실전 템플릿 7종을 제공합니다
             </h2>
             <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
-              수업이 끝나도 언제든 두 번째, 세 번째 미니앱을 혼자 뚝딱 만들 수 있는 풀 패키지 자료를 드립니다.
+              기본 구조를 다시 만들지 않고, 다음 아이디어에도 활용할 수 있도록 원본 파일과 사용 안내를 제공합니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-10">
             {/* 자료 1 */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">01 · 질문지</span>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 01 · 기획</span>
                 <h3 className="text-base font-bold text-[#FAF7F2] mb-2">앱 기획 워크시트</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  내 아이디어를 막힘없이 앱 구조로 바꾸는 실전 기획 질문지
+                  내 아이디어를 막힘없이 사용자 흐름과 핵심 기능 구조로 정리하는 기획지
                 </p>
               </div>
             </div>
 
             {/* 자료 2 */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">02 · 전용 프롬프트</span>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 02 · 제작</span>
                 <h3 className="text-base font-bold text-[#FAF7F2] mb-2">Codex 제작 프롬프트</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  AI에게 앱 제작을 요청할 때 사용하는 검증된 명령 기본 틀
+                  AI에게 앱 제작 및 수정을 요청할 때 사용하는 검증된 명령 프롬프트 틀
                 </p>
               </div>
             </div>
 
             {/* 자료 3 */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">03 · 베이스 코드</span>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 03 · 베이스 코드</span>
                 <h3 className="text-base font-bold text-[#FAF7F2] mb-2">앱인토스 스타터 템플릿</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  새로운 앱 제작 시 반복 사용할 수 있는 기본 프로젝트 구조
+                  새로운 앱 제작 시 반복 사용할 수 있는 기본 프로젝트 소스 구조
                 </p>
               </div>
             </div>
 
             {/* 자료 4 */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">04 · 등록 문구 AI</span>
-                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">등록 문구 프롬프트</h3>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 04 · 등록 문구</span>
+                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">등록 문구 작성 프롬프트</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  앱 설명, 출시 노트, 검색 키워드, 주요 기능을 정리하는 AI 프롬프트
+                  앱 소개 문구, 주요 기능 설명, 검색 키워드를 완성하는 작성 전용 프롬프트
                 </p>
               </div>
             </div>
 
             {/* 자료 5 */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">05 · 디자인 규격</span>
-                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">Canva 이미지 템플릿</h3>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 05 · 이미지 디자인</span>
+                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">Canva 로고·스크린샷 템플릿</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  앱 로고와 등록용 스크린샷 제작을 위한 공식 규격 템플릿
+                  앱 로고 아이콘과 등록용 모바일 스크린샷 공식 규격 디자인 템플릿
                 </p>
               </div>
             </div>
 
-            {/* 자료 6 & 7 (결합) */}
-            <div className="p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between">
+            {/* 자료 6 */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors">
               <div>
-                <span className="text-xs text-[#C6A66B] font-bold block mb-1">06 & 07 · 검증 시트</span>
-                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">테스트 & 출시 체크리스트</h3>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 06 · 테스트</span>
+                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">기능·모바일 테스트 체크리스트</h3>
                 <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-                  브라우저 → 빌드 → 모바일 환경 검증 및 등록 전 필수 점검 항목 체크
+                  버튼 클릭, 반응 속도, 화면 전환, 모바일 환경 터치감 점검 체크리스트
+                </p>
+              </div>
+            </div>
+
+            {/* 자료 7 (3열 맞춤용: 전체 폭 또는 강조 카드) */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between sm:col-span-2 lg:col-span-3 hover:border-[#C6A66B]/40 transition-colors">
+              <div>
+                <span className="text-xs text-[#C6A66B] font-bold block mb-1">KIT 07 · 최종 출시</span>
+                <h3 className="text-base font-bold text-[#FAF7F2] mb-2">출시 준비 체크리스트</h3>
+                <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
+                  빌드 파일 추출부터 콘솔 등록 정보 입력, 심사 요청 전 누락 방지 최종 점검표
                 </p>
               </div>
             </div>
           </div>
 
-          <p className="text-center text-xs text-[#7A6A5E]">
-            ※ 템플릿과 세부 자료는 수업 시점의 최신 앱인토스 환경에 맞춰 제공됩니다.
-          </p>
+          {/* 사용 흐름 박스 (지침 8) */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-[#17120F] border border-[#3A2D23] text-center">
+            <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-wider block mb-2">
+              HOW TO USE TEMPLATES
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-bold text-[#FAF7F2] mb-3">
+              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">템플릿 복사</span>
+              <span className="text-[#C6A66B]">→</span>
+              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">내 콘텐츠·디자인으로 수정</span>
+              <span className="text-[#C6A66B]">→</span>
+              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">테스트</span>
+              <span className="text-[#C6A66B]">→</span>
+              <span className="px-3 py-1.5 rounded-lg bg-[#2E2218] border border-[#C6A66B]/40 text-[#D6C6A8]">빌드·등록 준비</span>
+            </div>
+            <p className="text-xs text-[#9E8B7C] max-w-xl mx-auto break-keep leading-relaxed">
+              기본 구조를 다시 만들지 않고, 다음 아이디어에도 활용할 수 있도록 원본 파일과 사용 안내를 제공합니다.
+            </p>
+          </div>
         </section>
 
         {/* ───────────────────────────────────────────
-            09. 실제 출시 경험에서 만든 수업
+            09. 실제 승인 사례 (REAL EXPERIENCE)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
           <div className="max-w-4xl mx-auto">
@@ -890,54 +1045,131 @@ export default function MiniappPage() {
                 REAL EXPERIENCE
               </span>
               <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-5 leading-tight break-keep">
-                검색해서 만든 커리큘럼이 아니라 <br />
-                직접 만들고 출시하며 정리한 과정입니다
+                직접 만든 앱을, 실제 승인까지.
               </h2>
               <p className="text-sm sm:text-base text-[#9E8B7C] max-w-2xl mx-auto leading-relaxed break-keep">
-                앱을 만드는 것과 실제로 플랫폼에 등록하는 것은 조금 다릅니다. <br />
-                직접 앱을 제작하고 등록하면서 겪은 모든 디테일을 압축했습니다.
+                루모라 타로를 제작하고 앱인토스에 등록하며 정리한 과정을 수업에 담았습니다. <br className="hidden sm:inline" />
+                앱 실행부터 모바일 테스트, 등록 이미지 준비, 심사 요청까지 실제 화면으로 안내합니다.
               </p>
             </div>
 
-            {/* 직접 확인한 8가지 실전 포인트 뱃지 그리드 */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 01</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">앱 프로젝트 구조</strong>
+            {/* 실제 화면 가이드 4종 (강사 제작·정식 승인 사례) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+              {/* 화면 1 */}
+              <div className="p-4 rounded-2xl bg-[#17120F] border border-[#2B221B] flex flex-col justify-between">
+                <div>
+                  <div className="aspect-[9/13] rounded-xl bg-[#0D0A08] border border-[#3E3024] p-3 flex flex-col items-center justify-center text-center relative overflow-hidden mb-3">
+                    <span className="text-2xl mb-2">🔮</span>
+                    <span className="text-xs font-bold text-[#FAF7F2]">루모라 타로 실행</span>
+                    <span className="text-[10px] text-[#C6A66B] mt-1">인터랙티브 카드 선택</span>
+                    <div className="mt-3 px-2 py-1 rounded bg-[#241B16] text-[9px] text-[#9E8B7C]">
+                      3장 선택 · 운세 해석
+                    </div>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#FAF7F2] mb-1">
+                    01. 실제 앱 실행 화면
+                  </h4>
+                  <p className="text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
+                    카드 선택과 결과 모달이 매끄럽게 구동되는 실제 서비스 화면
+                  </p>
+                </div>
+                <span className="text-[10px] text-[#C6A66B] mt-2 block font-medium">강사 제작 사례</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 02</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">appName 설정</strong>
+
+              {/* 화면 2 */}
+              <div className="p-4 rounded-2xl bg-[#17120F] border border-[#2B221B] flex flex-col justify-between">
+                <div>
+                  <div className="aspect-[9/13] rounded-xl bg-[#0D0A08] border border-[#3E3024] p-3 flex flex-col items-center justify-center text-center relative overflow-hidden mb-3">
+                    <span className="text-2xl mb-2">📱</span>
+                    <span className="text-xs font-bold text-[#FAF7F2]">모바일 실기기 테스트</span>
+                    <span className="text-[10px] text-[#C6A66B] mt-1">터치감 & 화면 반응</span>
+                    <div className="mt-3 px-2 py-1 rounded bg-[#241B16] text-[9px] text-[#9E8B7C]">
+                      안드로이드/iOS 반응형
+                    </div>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#FAF7F2] mb-1">
+                    02. 모바일 테스트 화면
+                  </h4>
+                  <p className="text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
+                    스마트폰 토스 환경에서의 터치 감도와 뷰포트 레이아웃 검증
+                  </p>
+                </div>
+                <span className="text-[10px] text-[#C6A66B] mt-2 block font-medium">강사 제작 사례</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 03</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">빌드 파일(.ait) 생성</strong>
+
+              {/* 화면 3 */}
+              <div className="p-4 rounded-2xl bg-[#17120F] border border-[#2B221B] flex flex-col justify-between">
+                <div>
+                  <div className="aspect-[9/13] rounded-xl bg-[#0D0A08] border border-[#3E3024] p-3 flex flex-col items-center justify-center text-center relative overflow-hidden mb-3">
+                    <span className="text-2xl mb-2">📋</span>
+                    <span className="text-xs font-bold text-[#FAF7F2]">콘솔 등록 자료 입력</span>
+                    <span className="text-[10px] text-[#C6A66B] mt-1">소개 문구 & 스크린샷</span>
+                    <div className="mt-3 px-2 py-1 rounded bg-[#241B16] text-[9px] text-[#9E8B7C]">
+                      메타데이터 규격 검수
+                    </div>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#FAF7F2] mb-1">
+                    03. 등록 자료 입력 화면
+                  </h4>
+                  <p className="text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
+                    심사 반려를 줄이기 위한 정확한 앱 설명 및 공식 규격 이미지 등록
+                  </p>
+                </div>
+                <span className="text-[10px] text-[#C6A66B] mt-2 block font-medium">강사 제작 사례</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 04</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">모바일 테스트</strong>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 05</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">로고·스크린샷 규격</strong>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 06</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">주요 기능 등록</strong>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 07</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">검색 키워드 세팅</strong>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[#181310] border border-[#2C221B] text-center">
-                <span className="text-xs text-[#C6A66B] font-semibold block mb-1">CHECK 08</span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">심사 요청 노하우</strong>
+
+              {/* 화면 4 */}
+              <div className="p-4 rounded-2xl bg-[#17120F] border border-[#2B221B] flex flex-col justify-between">
+                <div>
+                  <div className="aspect-[9/13] rounded-xl bg-[#0D0A08] border border-[#3E3024] p-3 flex flex-col items-center justify-center text-center relative overflow-hidden mb-3">
+                    <span className="text-2xl mb-2">🎉</span>
+                    <span className="text-xs font-bold text-emerald-400">정식 승인 확인</span>
+                    <span className="text-[10px] text-[#FAF7F2] mt-1">앱인토스 심사 통과</span>
+                    <div className="mt-3 px-2 py-1 rounded bg-emerald-950/60 border border-emerald-600/30 text-[9px] text-emerald-300">
+                      심사 상태: 승인 완료
+                    </div>
+                  </div>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#FAF7F2] mb-1">
+                    04. 정식 승인 확인 화면
+                  </h4>
+                  <p className="text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
+                    심사 요청 후 공식 승인을 받은 실제 운영자 콘솔 확인 흐름
+                  </p>
+                </div>
+                <span className="text-[10px] text-[#C6A66B] mt-2 block font-medium">강사 제작 사례</span>
               </div>
             </div>
 
-            <div className="p-6 md:p-8 rounded-2xl bg-[#17120F] border border-[#3E3024] text-center">
-              <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
-                “처음 하는 사람이 어디에서 막히는지까지 세심하게 고려해, 제작부터 등록까지의 전 과정을 단계적으로 안내합니다.”
+            {/* 제작 / 검증 / 등록 3묶음 간소화 정리 (지침 7) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="p-5 rounded-2xl bg-[#181310] border border-[#2C221B]">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-1">PHASE 01</span>
+                <h4 className="text-base font-bold text-[#FAF7F2] mb-2">제작</h4>
+                <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                  프로젝트 구성 · 환경 설정 · 기본 구조 빌드
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#181310] border border-[#2C221B]">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-1">PHASE 02</span>
+                <h4 className="text-base font-bold text-[#FAF7F2] mb-2">검증</h4>
+                <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                  모바일 실행 · 터치 버튼 · 결과 출력 · 화면 점검
+                </p>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#181310] border border-[#2C221B]">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-1">PHASE 03</span>
+                <h4 className="text-base font-bold text-[#FAF7F2] mb-2">등록</h4>
+                <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                  로고 · 스크린샷 · 소개 문구 · 심사 요청 절차
+                </p>
+              </div>
+            </div>
+
+            <div className="p-5 md:p-6 rounded-2xl bg-[#17120F] border border-[#3E3024] text-center">
+              <p className="text-xs sm:text-sm text-[#D6C6A8] leading-relaxed break-keep font-medium">
+                ※ 실제 승인 사례를 통해 처음 시도하는 분들이 맞닥뜨리는 막막함을 해소하고, 제작부터 등록 절차까지 단계별로 막힘없이 안내합니다.
               </p>
             </div>
           </div>
@@ -1062,90 +1294,7 @@ export default function MiniappPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            12. 수업을 마치면 (YOU WILL HAVE)
-           ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-14">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              YOU WILL HAVE
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-              수업이 끝나면 <br />
-              ‘아이디어’가 아니라 결과물이 남습니다
-            </h2>
-            <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
-              단순 지식 전달이 아닌, 내 손에 직접 쥐어지는 8가지 명확한 결과물을 확인하세요.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">나만의 미니앱 프로젝트</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">실제 실행 가능한 앱</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">앱인토스용 빌드 파일 (.ait)</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">앱 소개 및 등록 문구</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">앱 로고 및 스크린샷 이미지</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">주요 기능 및 검색 키워드 세팅</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">앱인토스 등록 실전 경험</span>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#15110E] border border-[#2E241E] flex items-center gap-3">
-              <span className="w-7 h-7 rounded-lg bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-sm font-bold shrink-0">
-                ✔
-              </span>
-              <span className="text-sm font-semibold text-[#FAF7F2]">혼자 다시 제작할 수 있는 프롬프트와 템플릿</span>
-            </div>
-          </div>
-
-          <div className="p-6 md:p-8 rounded-2xl bg-[#1C1510] border border-[#3E3024] text-center shadow-lg">
-            <p className="text-base sm:text-lg font-bold text-[#D6C6A8] leading-relaxed break-keep">
-              “오늘 배운 기술보다 더 중요한 것은 <br className="sm:hidden" />
-              ‘나도 서비스를 만들 수 있다’는 경험입니다.”
-            </p>
-          </div>
-        </section>
-
-        {/* ───────────────────────────────────────────
-            13. 향후 확장
+            12. 향후 확장 (BUSINESS EXPANSION)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
           <div className="max-w-4xl mx-auto">
@@ -1187,7 +1336,7 @@ export default function MiniappPage() {
                 <span className="text-[#C6A66B] font-bold text-lg rotate-90 md:rotate-0">↓</span>
                 <div className="p-4 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
                   <span className="text-[11px] text-[#8E6D38] block mb-1">최종 목표</span>
-                  <strong className="text-xs text-[#FAF7F2]">광고 / 디지털 상품 / 강의 / 브랜드</strong>
+                  <strong className="text-xs text-[#FAF7F2]">광고 / 디지털 상품 / 브랜드</strong>
                 </div>
               </div>
             </div>
@@ -1204,7 +1353,7 @@ export default function MiniappPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            14. CLASS INFO (클래스 안내)
+            13. CLASS INFO (클래스 안내 및 사전 준비·비용 정보)
            ─────────────────────────────────────────── */}
         <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
           <div className="text-center mb-12">
@@ -1212,10 +1361,10 @@ export default function MiniappPage() {
               CLASS INFO
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#FAF7F2] mb-3 break-keep">
-              클래스 안내
+              클래스 안내 & 사전 준비
             </h2>
             <p className="text-xs sm:text-sm text-[#9E8B7C] max-w-lg mx-auto break-keep">
-              누구나 참여하실 수 있는 실전 실습 환경과 사전 준비 사항입니다.
+              누구나 참여하실 수 있는 실전 실습 환경과 상세 준비 사항입니다.
             </p>
           </div>
 
@@ -1235,9 +1384,14 @@ export default function MiniappPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
-              <div className="text-xs text-[#8F7D6E]">진행 방식</div>
-              <div className="sm:col-span-2 text-sm sm:text-base font-medium text-[#FAF7F2]">
-                실시간 온라인 실습형 원데이 클래스
+              <div className="text-xs text-[#8F7D6E]">수업 시간 & 진행 방식</div>
+              <div className="sm:col-span-2 space-y-1">
+                <div className="text-sm sm:text-base font-bold text-[#FAF7F2]">
+                  하루 집중 원데이 클래스 (실시간 온라인 줌 실습)
+                </div>
+                <p className="text-xs text-[#9E8B7C]">
+                  기획부터 제작, 모바일 테스트, 콘솔 등록 준비까지 한 번에 완료하는 집중 실습으로 진행됩니다.
+                </p>
               </div>
             </div>
 
@@ -1248,19 +1402,41 @@ export default function MiniappPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="text-xs text-[#8F7D6E]">사전 준비</div>
-              <div className="sm:col-span-2 space-y-2">
-                <ul className="text-xs sm:text-sm text-[#A8988B] space-y-1.5 list-disc pl-4">
-                  <li>ChatGPT 사용 환경</li>
-                  <li>Codex 사용 환경</li>
-                  <li>앱인토스 계정 및 사전 준비 사항</li>
-                  <li>Chrome 브라우저 구동 PC (노트북/데스크톱)</li>
-                  <li>Canva 사용 환경 (로고/스크린샷 디자인용)</li>
-                </ul>
-                <p className="text-[11px] text-[#7A6A5E] pt-2">
-                  ※ 구체적인 사전 설치 및 계정 준비 사항은 수강 전 별도로 상세하게 안내해 드립니다.
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">AI 이용 환경 및 계정</div>
+              <div className="sm:col-span-2 space-y-2 text-xs sm:text-sm text-[#A8988B]">
+                <p>
+                  <strong className="text-[#FAF7F2]">ChatGPT & Codex:</strong> 기본 무료 계정으로도 실습 참여가 가능하며, 더욱 빠르고 원활한 코드 생성을 위해 유료 플랜(Plus 등) 이용을 권장합니다.
                 </p>
+                <p>
+                  <strong className="text-[#FAF7F2]">Canva & Chrome:</strong> 로고 및 스크린샷 제작을 위한 무료 Canva 계정과 크롬 브라우저 구동 PC가 필요합니다.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">앱인토스 등록 조건</div>
+              <div className="sm:col-span-2 space-y-1 text-xs sm:text-sm text-[#A8988B]">
+                <p>
+                  본인 명의 스마트폰의 토스 앱 및 토스 계정이 필요합니다.
+                </p>
+                <p className="text-[11px] text-[#7A6A5E]">
+                  ※ 계정과 자료 준비가 완료된 수강생은 수업 중 심사 요청까지 함께 실습하며, 미준비 시에도 전체 절차와 콘솔 등록 과정을 완벽히 익힐 수 있습니다.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">사전 준비물 유무</div>
+              <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B]">
+                수업 전 로고나 복잡한 기획안을 미리 만들어오실 필요가 없습니다. 제공되는 기획 워크시트와 Canva 디자인 템플릿으로 수업 시간 내에 함께 완성합니다.
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="text-xs text-[#8F7D6E]">추가 비용 안내</div>
+              <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B]">
+                수업 실습 및 스타터 템플릿 이용에는 별도 추가 비용이 발생하지 않습니다. (선택적인 AI 유료 구독 외 필수 결제 비용 없음)
               </div>
             </div>
           </div>
@@ -1291,40 +1467,40 @@ export default function MiniappPage() {
                   <span>코딩을 전혀 몰라도 가능한가요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  네. 이 수업은 코딩 문법을 배우는 개발자 과정이 아닙니다. ChatGPT와 Codex에게 필요한 기능을 요청하면서 앱을 제작하는 AI 활용 실습 수업입니다.
+                  네. 이 수업은 코딩 문법을 외우는 개발자 과정이 아닙니다. ChatGPT와 Codex에게 필요한 화면과 기능을 요청하면서 앱을 제작하는 AI 실습 수업입니다.
                 </p>
               </div>
 
-              {/* FAQ 2 */}
+              {/* FAQ 2: 지침 11 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>수강생마다 다른 앱을 만들어도 되나요?</span>
+                  <span>수업 당일 토스에 바로 공개되나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  네. 공통된 제작 구조와 프롬프트를 사용하지만 각자 자신의 아이디어로 앱을 제작합니다. 추천형, 테스트형, 카드형, 기록형 등 초보자가 구현하기 좋은 범위 안에서 진행합니다.
+                  수업에서는 앱 제작·테스트와 등록 준비를 진행합니다. 준비가 완료된 경우 심사 요청까지 실습하며, 최종 승인과 공개 시점은 플랫폼 심사에 따라 달라집니다.
                 </p>
               </div>
 
-              {/* FAQ 3 */}
+              {/* FAQ 3: 지침 11 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>수업에서 만든 앱을 실제로 출시할 수 있나요?</span>
+                  <span>프롬프트를 직접 잘 써야 하나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  앱인토스 등록 절차까지 안내합니다. 다만 최종 심사 및 승인은 플랫폼의 심사 기준에 따라 결정되므로 승인을 보장하지는 않습니다.
+                  기획·제작·등록에 활용할 기본 프롬프트를 제공합니다. 수업에서는 내 아이디어에 맞게 내용을 바꾸고, 실행 결과를 확인하며 수정하는 방법을 배웁니다.
                 </p>
               </div>
 
-              {/* FAQ 4 */}
+              {/* FAQ 4: 지침 11 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>수업 시간 안에 앱을 완성할 수 있나요?</span>
+                  <span>수업 후 두 번째 앱도 만들 수 있나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  복잡한 대형 서비스가 아니라 원데이에서 구현 가능한 핵심 기능 중심의 미니앱을 제작합니다. 처음에는 작은 버전을 완성하는 것을 목표로 합니다.
+                  제공된 스타터 템플릿과 프롬프트를 다시 활용할 수 있습니다. 다만 기능과 서비스 유형에 따라 추가 개발이나 플랫폼 기준 확인이 필요할 수 있습니다.
                 </p>
               </div>
 
@@ -1332,10 +1508,10 @@ export default function MiniappPage() {
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>수업 후에도 수정할 수 있나요?</span>
+                  <span>수강생마다 다른 앱을 만들어도 되나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  네. 원본 프로젝트를 수정하고 다시 빌드하여 새로운 버전으로 얼마든지 업데이트할 수 있습니다.
+                  네. 공통된 스타터 템플릿과 프롬프트를 바탕으로 각자의 아이디어를 적용합니다. 추천형, 테스트형, 카드형 등 원데이에서 확실하게 구현 가능한 범위 안에서 함께 정리합니다.
                 </p>
               </div>
 
@@ -1343,10 +1519,10 @@ export default function MiniappPage() {
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>어떤 아이디어를 준비해야 하나요?</span>
+                  <span>로고와 스크린샷도 미리 준비해야 하나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  수업 전 간단한 아이디어 워크시트를 제공합니다. 만들어보고 싶은 앱 아이디어를 2~3개 정도 생각해오면 수업 시간에 구현 가능한 형태로 함께 정리합니다.
+                  사전에 준비하지 않으셔도 괜찮습니다. 수업 중 Canva 공식 규격 템플릿을 활용해 로고 아이콘과 등록용 스크린샷을 제작하는 방법을 함께 실습합니다.
                 </p>
               </div>
 
@@ -1354,21 +1530,10 @@ export default function MiniappPage() {
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
-                  <span>로고와 스크린샷도 만들어야 하나요?</span>
+                  <span>광고나 수익화도 다루나요?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  실제 등록에 필요한 이미지 제작 방법과 규격도 함께 안내합니다. Canva에서 바로 활용할 수 있는 기본 제작 가이드를 제공합니다.
-                </p>
-              </div>
-
-              {/* FAQ 8 */}
-              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
-                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
-                  <span className="text-[#8E6D38]">Q.</span>
-                  <span>광고나 수익화도 배우나요?</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
-                  본 수업의 핵심은 앱 제작과 출시 경험입니다. 광고, 결제, 상품 연결 등은 플랫폼 정책 및 기능에 따라 별도의 확장 영역으로 안내할 수 있습니다.
+                  본 수업의 핵심은 작동하는 첫 버전 제작과 출시 준비 경험입니다. 광고, 결제, 외부 연결 등은 플랫폼 정책 및 서비스 유형에 따른 확장 영역으로 안내하며, 광고 승인이나 수익 발생을 보장하지 않습니다.
                 </p>
               </div>
             </div>
@@ -1376,7 +1541,7 @@ export default function MiniappPage() {
         </section>
 
         {/* ───────────────────────────────────────────
-            16. FINAL CTA (#apply)
+            15. FINAL CTA (#apply)
            ─────────────────────────────────────────── */}
         <section
           id="apply"
@@ -1405,36 +1570,74 @@ export default function MiniappPage() {
                 AI와 함께라면 작은 서비스로 시작할 수 있습니다.
               </p>
               <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
-                배우고 끝나는 수업이 아니라 직접 만들고, 실행하고, 출시까지 경험합니다.
+                배우고 끝나는 수업이 아니라 직접 만들고, 실행하고, 등록 준비까지 완주합니다.
               </p>
             </div>
 
-            {/* 최종 신청 요약 카드 */}
+            {/* 최종 신청 요약 카드 (지침 12: 결과물 요약 통합) */}
             <div className="p-8 md:p-10 rounded-3xl bg-[#181310] border border-[#3E3127] shadow-2xl max-w-xl mx-auto mb-6 text-left">
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
-                  <span className="text-xs md:text-sm text-[#8F7D6E]">과정 형태</span>
-                  <span className="text-xs md:text-sm text-[#FAF7F2] font-semibold">
-                    {CLASS_CONFIG.meta.format}
+              <div className="text-center mb-6 pb-6 border-b border-[#2B221B]">
+                <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-widest block mb-1">
+                  ONE DAY COMPLETION
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
+                  수업을 마치면 손에 쥐어지는 4가지
+                </h3>
+              </div>
+
+              {/* 결과물 요약 4종 (지침 12) */}
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]">
+                  <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2]">
+                    작동하는 미니앱 첫 버전
                   </span>
                 </div>
-                <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
-                  <span className="text-xs md:text-sm text-[#8F7D6E]">일정 및 시간</span>
-                  <span className="text-xs md:text-sm text-[#C6A66B] font-bold">
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]">
+                  <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2]">
+                    원본 프로젝트 소스
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]">
+                  <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2]">
+                    앱인토스 등록 준비 자료 (빌드/문구/이미지)
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]">
+                  <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2]">
+                    다음 앱 제작에도 쓸 수 있는 재사용 템플릿 7종
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-8 pt-4 border-t border-[#2B221B]">
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="text-[#8F7D6E]">과정 형태</span>
+                  <span className="text-[#FAF7F2] font-semibold">{CLASS_CONFIG.meta.format}</span>
+                </div>
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="text-[#8F7D6E]">일정 및 시간</span>
+                  <span className="text-[#C6A66B] font-bold">
                     {CLASS_CONFIG.meta.schedule} · {CLASS_CONFIG.meta.duration}
                   </span>
                 </div>
-                <div className="flex items-center justify-between pb-3 border-b border-[#2B221B]">
-                  <span className="text-xs md:text-sm text-[#8F7D6E]">수강 난이도</span>
-                  <span className="text-xs md:text-sm text-[#FAF7F2] font-semibold">
-                    {CLASS_CONFIG.meta.difficulty}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs md:text-sm text-[#8F7D6E]">제공 자료</span>
-                  <span className="text-xs md:text-sm text-[#D6C6A8] font-semibold">
-                    실전 템플릿 7종 풀 패키지
-                  </span>
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="text-[#8F7D6E]">수강 난이도</span>
+                  <span className="text-[#FAF7F2] font-semibold">{CLASS_CONFIG.meta.difficulty}</span>
                 </div>
               </div>
 
@@ -1470,7 +1673,6 @@ export default function MiniappPage() {
             </div>
           </div>
         </section>
-
       </div>
     </main>
   );
