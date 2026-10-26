@@ -20,13 +20,14 @@ const CLASS_CONFIG = {
     "ChatGPT와 Codex로 작은 아이디어를 실제로 작동하는 미니앱으로 만듭니다. 기획부터 제작, 모바일 테스트, 앱인토스 등록 준비까지 전용 템플릿으로 함께 따라갑니다.",
   highlight: "구경하는 수업에서, 직접 만들고 실행하는 경험으로.",
   meta: {
-    format: "실시간 온라인 실습",
+    format: "Zoom 실시간 온라인 실습",
     duration: "하루 완성 원데이",
     difficulty: "왕초보 가능",
-    schedule: "수시 모집 (오픈 예정)",
+    schedule: "개강 일정 준비 중",
+    price: "29,000원",
   },
   tags: ["ChatGPT", "Codex", "앱인토스", "미니앱제작", "루모라타로"],
-  ctaText: "미니앱 만들기 시작하기",
+  ctaText: "개강 알림 신청",
 };
 
 export default function MiniappPage() {
@@ -51,7 +52,7 @@ export default function MiniappPage() {
             href="#apply"
             className="px-4 py-1.5 rounded-full bg-[#C6A66B] hover:bg-[#D6C6A8] text-[#1A1410] text-xs font-bold transition-colors"
           >
-            수강 신청
+            개강 알림 신청
           </a>
         </div>
       </nav>
@@ -109,12 +110,18 @@ export default function MiniappPage() {
                 </span>
               </div>
 
-              {/* 4) 진행 방식 / 수업 시간 / 난이도 / 일정 (핵심 정보 카드) */}
+              {/* 4) 진행 방식 / 수업 시간 / 수강료 / 일정 (핵심 정보 카드) */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
                 <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
                   <span className="block text-[11px] text-[#7C6656] mb-0.5">진행 방식</span>
                   <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">
                     {CLASS_CONFIG.meta.format}
+                  </strong>
+                </div>
+                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
+                  <span className="block text-[11px] text-[#7C6656] mb-0.5">수강료</span>
+                  <strong className="text-xs sm:text-sm text-[#8E6D38] font-bold">
+                    {CLASS_CONFIG.meta.price}
                   </strong>
                 </div>
                 <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
@@ -124,20 +131,14 @@ export default function MiniappPage() {
                   </strong>
                 </div>
                 <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
-                  <span className="block text-[11px] text-[#7C6656] mb-0.5">수강 난이도</span>
-                  <strong className="text-xs sm:text-sm text-[#8E6D38] font-bold">
-                    {CLASS_CONFIG.meta.difficulty}
-                  </strong>
-                </div>
-                <div className="p-3 rounded-xl bg-white border border-[#E8DFD3] text-center shadow-xs">
-                  <span className="block text-[11px] text-[#7C6656] mb-0.5">수업 일정</span>
-                  <strong className="text-xs sm:text-sm text-[#2E2723] font-bold">
+                  <span className="block text-[11px] text-[#7C6656] mb-0.5">개강 일정</span>
+                  <strong className="text-xs sm:text-sm text-[#C6A66B] font-bold">
                     {CLASS_CONFIG.meta.schedule}
                   </strong>
                 </div>
               </div>
 
-              {/* 5) CTA 버튼 */}
+              {/* 5) CTA 버튼 (알림 신청 안내) */}
               <div className="pt-2">
                 <a
                   href="#apply"
@@ -1384,11 +1385,21 @@ export default function MiniappPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
-              <div className="text-xs text-[#8F7D6E]">수업 시간 & 진행 방식</div>
+              <div className="text-xs text-[#8F7D6E]">수강료</div>
+              <div className="sm:col-span-2 text-sm sm:text-base font-bold text-[#D6C6A8]">
+                29,000원
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">진행 방식 & 일정</div>
               <div className="sm:col-span-2 space-y-1">
                 <div className="text-sm sm:text-base font-bold text-[#FAF7F2]">
-                  하루 집중 원데이 클래스 (실시간 온라인 줌 실습)
+                  Zoom 실시간 온라인 실습 · 하루 집중 원데이
                 </div>
+                <p className="text-xs text-[#C6A66B] font-semibold">
+                  일정: 개강 일정 준비 중 (정확한 날짜와 시작 시간은 확정 후 별도 공지)
+                </p>
                 <p className="text-xs text-[#9E8B7C]">
                   기획부터 제작, 모바일 테스트, 콘솔 등록 준비까지 한 번에 완료하는 집중 실습으로 진행됩니다.
                 </p>
@@ -1399,6 +1410,20 @@ export default function MiniappPage() {
               <div className="text-xs text-[#8F7D6E]">수강 난이도</div>
               <div className="sm:col-span-2 text-sm sm:text-base font-bold text-[#C6A66B]">
                 왕초보 가능 (코딩 사전 지식 전혀 불필요)
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">다시보기 제공</div>
+              <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                수강생에게 수업 녹화본을 제공하며, 녹화본 게시일부터 <strong className="text-[#FAF7F2]">30일 동안</strong> 자유롭게 복습하실 수 있습니다. (수강생 개인정보 및 계정 정보는 노출되지 않도록 편집되어 제공됩니다.)
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
+              <div className="text-xs text-[#8F7D6E]">수업 후 질문 지원</div>
+              <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                수업 종료 후 <strong className="text-[#FAF7F2]">7일 동안</strong> 수강생 전용 오픈채팅방에서 수업 내용과 템플릿에 관한 질문을 순차적으로 답변해 드립니다. (소식 전달용 자명스쿨 커뮤니티와 구분되어 운영됩니다.)
               </div>
             </div>
 
@@ -1433,10 +1458,23 @@ export default function MiniappPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-[#241B15]">
               <div className="text-xs text-[#8F7D6E]">추가 비용 안내</div>
               <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B]">
                 수업 실습 및 스타터 템플릿 이용에는 별도 추가 비용이 발생하지 않습니다. (선택적인 AI 유료 구독 외 필수 결제 비용 없음)
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="text-xs text-[#8F7D6E]">취소 및 환불</div>
+              <div className="sm:col-span-2 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                자명스쿨의 공통 서비스 이용약관을 준수합니다. 자세한 기준은 하단 약관 링크를 통해 확인하실 수 있습니다.{" "}
+                <Link
+                  href="/terms"
+                  className="text-[#C6A66B] underline underline-offset-4 hover:text-[#FAF7F2] font-semibold transition-colors"
+                >
+                  취소·환불 규정 확인 →
+                </Link>
               </div>
             </div>
           </div>
@@ -1504,7 +1542,29 @@ export default function MiniappPage() {
                 </p>
               </div>
 
-              {/* FAQ 5 */}
+              {/* FAQ 5: 지침 2 다시보기 */}
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>수업을 다시 볼 수 있나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  네. 수강생에게 수업 녹화본을 제공하며, 녹화본 게시일부터 30일 동안 복습할 수 있습니다. 제공되는 템플릿과 제작 자료는 내려받아 이후에도 활용할 수 있습니다. (녹화본 제공 시 수강생의 개인정보나 계정 정보가 노출되지 않도록 편집합니다.)
+                </p>
+              </div>
+
+              {/* FAQ 6: 지침 3 수업 후 질문 지원 */}
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>수업 후 막히는 부분도 질문할 수 있나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  수업 종료 후 7일 동안 수강생 전용 오픈채팅방에서 수업 내용과 제공 템플릿에 관한 질문을 받습니다. 질문은 순차적으로 답변하며, 개별 앱의 추가 개발이나 대행 제작은 포함되지 않습니다. (자명스쿨 소식 및 후속 강의 안내를 받는 공식 커뮤니티 참여와는 별개로 7일간의 집중 수업 질문 지원이 제공됩니다.)
+                </p>
+              </div>
+
+              {/* FAQ 7 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
@@ -1515,7 +1575,7 @@ export default function MiniappPage() {
                 </p>
               </div>
 
-              {/* FAQ 6 */}
+              {/* FAQ 8 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
@@ -1526,7 +1586,25 @@ export default function MiniappPage() {
                 </p>
               </div>
 
-              {/* FAQ 7 */}
+              {/* FAQ 9: 지침 4 취소·환불 */}
+              <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
+                <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
+                  <span className="text-[#8E6D38]">Q.</span>
+                  <span>취소 및 환불 기준은 어떻게 되나요?</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5C4C40] leading-relaxed break-keep pl-6">
+                  자명스쿨의 공통 서비스 이용약관을 준수합니다. 결제 전{" "}
+                  <Link
+                    href="/terms"
+                    className="text-[#8E6D38] font-bold underline underline-offset-4 hover:text-[#5C4C40] transition-colors"
+                  >
+                    취소·환불 규정 확인
+                  </Link>
+                  을 통해 상세 기준을 확인하실 수 있습니다.
+                </p>
+              </div>
+
+              {/* FAQ 10 */}
               <div className="p-6 md:p-7 rounded-2xl bg-white border border-[#E8DFD3] shadow-xs">
                 <h4 className="text-base sm:text-lg font-bold text-[#2E2723] mb-2 flex items-start gap-2">
                   <span className="text-[#8E6D38]">Q.</span>
@@ -1585,7 +1663,7 @@ export default function MiniappPage() {
                 </h3>
               </div>
 
-              {/* 결과물 요약 4종 (지침 12) */}
+              {/* 결과물 요약 4종 */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]">
                   <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
@@ -1626,7 +1704,11 @@ export default function MiniappPage() {
 
               <div className="space-y-3 mb-8 pt-4 border-t border-[#2B221B]">
                 <div className="flex items-center justify-between text-xs sm:text-sm">
-                  <span className="text-[#8F7D6E]">과정 형태</span>
+                  <span className="text-[#8F7D6E]">수강료</span>
+                  <span className="text-[#D6C6A8] font-bold text-base">{CLASS_CONFIG.meta.price}</span>
+                </div>
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="text-[#8F7D6E]">진행 방식</span>
                   <span className="text-[#FAF7F2] font-semibold">{CLASS_CONFIG.meta.format}</span>
                 </div>
                 <div className="flex items-center justify-between text-xs sm:text-sm">
@@ -1636,23 +1718,33 @@ export default function MiniappPage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs sm:text-sm">
-                  <span className="text-[#8F7D6E]">수강 난이도</span>
-                  <span className="text-[#FAF7F2] font-semibold">{CLASS_CONFIG.meta.difficulty}</span>
+                  <span className="text-[#8F7D6E]">복습 및 질문 지원</span>
+                  <span className="text-[#FAF7F2] font-medium">녹화본 30일 복습 · 7일간 전용 질문방</span>
                 </div>
               </div>
 
-              {/* 신청 버튼 */}
+              {/* 신청 버튼 (개강 알림 신청) */}
               <button
                 type="button"
                 disabled
                 className="w-full py-4 px-6 rounded-2xl bg-[#C6A66B]/50 text-[#1A1410] font-extrabold text-base md:text-lg cursor-not-allowed flex items-center justify-center gap-2 shadow-lg"
-                title="클래스 일정 확정 후 신청이 오픈됩니다."
+                title="클래스 일정 확정 후 개강 알림 신청이 오픈됩니다."
               >
-                <span>내 미니앱 만들기 (모집 예정)</span>
+                <span>{CLASS_CONFIG.ctaText} (일정 준비 중)</span>
               </button>
               <p className="text-[11px] text-center text-[#7A6A5E] mt-3">
-                * 정식 접수 오픈 시 카카오톡 또는 안내 문자로 가장 먼저 알려드립니다.
+                * 정식 일정 확정 시 카카오톡 또는 안내 문자로 가장 먼저 알려드립니다.
               </p>
+
+              {/* 취소·환불 규정 확인 링크 (지침 4) */}
+              <div className="mt-4 pt-4 border-t border-[#2B221B]/80 text-center">
+                <Link
+                  href="/terms"
+                  className="text-[11px] text-[#A8988B] hover:text-[#C6A66B] underline underline-offset-4 transition-colors"
+                >
+                  결제 전 취소·환불 규정 확인하기 →
+                </Link>
+              </div>
             </div>
 
             {/* 마지막 한 줄 */}
