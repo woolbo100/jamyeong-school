@@ -41,6 +41,9 @@ export default function OnedayPage() {
             전자책, 홈페이지, AI 도구, 콘텐츠, 미니앱 등 <br className="hidden sm:inline" />
             지금 필요한 디지털 결과물을 직접 만들어보세요.
           </p>
+          <p className="text-sm md:text-base text-[#7C6656] max-w-2xl mx-auto mt-2 leading-relaxed break-keep">
+            수강 후에는 함께 배우는 사람들과 결과물을 나누고 교류하는 자명스쿨 전용 커뮤니티에 초대합니다.
+          </p>
         </div>
       </section>
 
