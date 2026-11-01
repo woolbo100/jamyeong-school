@@ -114,7 +114,7 @@ export default function SiteHeader() {
           className={`${getMenuClass('/apply', true)} flex items-center gap-1.5 group`}
           href="/apply"
         >
-          <span>정규과정</span>
+          <span>자격과정</span>
           <span
             className={`w-1.5 h-1.5 rounded-full ${isLightSticky ? 'bg-[#B58B4A]' : 'bg-[#B89B6A]'
               } group-hover:scale-125 transition-transform animate-pulse`}
@@ -226,7 +226,7 @@ export default function SiteHeader() {
               }`}
             href="/apply"
           >
-            <span>정규과정</span>
+            <span>자격과정</span>
             <span
               className={`text-[11px] px-2 py-0.5 rounded-full border ${isLightSticky
                 ? 'bg-[#C6A66B]/15 text-[#8E6D38] border-[#C6A66B]/30'

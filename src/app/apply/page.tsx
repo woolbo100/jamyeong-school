@@ -125,13 +125,13 @@ export default function ApplyPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
             <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
-              JAMYUNG SCHOOL · REGULAR COURSE
+              JAMYEONG SCHOOL · CERTIFICATION COURSES
             </span>
           </div>
 
           {/* 메인 제목 */}
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
-            자명스쿨 정규과정
+            자명스쿨 자격증 과정
           </h1>
 
           {/* 서브카피 */}
@@ -142,7 +142,8 @@ export default function ApplyPage() {
 
           {/* 보조 설명 */}
           <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
-            기초부터 실전까지 장기간 탄탄하게 배우는 자명스쿨의 핵심 정규 교육과정입니다.
+            기초부터 실전까지 체계적으로 배우고, <br className="hidden sm:inline" />
+            전문가·강사로서의 활동 기반을 다지는 자명스쿨의 자격증 교육과정입니다.
           </p>
         </div>
       </section>
