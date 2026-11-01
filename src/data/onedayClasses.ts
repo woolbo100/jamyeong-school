@@ -42,6 +42,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["AI그림책", "출판", "AI이미지", "전자책"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/picturebook",
   },
   {
     id: "chatgpt-codex-automation",
