@@ -24,6 +24,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["블로그홈페이지", "퍼스널브랜딩", "AI홈페이지", "콘텐츠제작"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/blog-website",
   },
   {
     id: "vibe-coding-starter",
@@ -80,6 +81,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["AI사주", "만세력", "사주사이트", "서비스제작"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/saju",
   },
   {
     id: "ai-tarot-card-design",
