@@ -89,6 +89,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["AI타로", "타로사이트", "타로카드", "오라클카드"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/tarot",
   },
   {
     id: "ai-brand-short-drama",
