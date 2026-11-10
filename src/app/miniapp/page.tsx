@@ -36,8 +36,8 @@ export default function MiniappPage() {
       {/* ───────────────────────────────────────────────
           공통 서브 헤더 네비게이션
          ─────────────────────────────────────────────── */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] px-4 sm:px-6 py-3.5 transition-all">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] py-3.5 transition-all">
+        <div className="site-container flex items-center justify-between">
           <Link
             href="/oneday"
             className="inline-flex items-center gap-2 text-xs md:text-sm text-[#A8988B] hover:text-[#C6A66B] transition-colors group"
@@ -60,8 +60,8 @@ export default function MiniappPage() {
       {/* ═══════════════════════════════════════════════
           섹션 1. HERO (강의 제목 · 핵심 정보 · 앱 프리뷰 목업)
          ═══════════════════════════════════════════════ */}
-      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16">
+        <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* 좌측: 분류, 강의명, 소개, 메타정보, 신청 버튼 */}

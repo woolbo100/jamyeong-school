@@ -120,53 +120,56 @@ export default function ApplyPage() {
           1. HERO SECTION
          ──────────────────────── */}
       <section className="pt-16 pb-12 md:pt-20 md:pb-14 px-6 border-b border-[#E8DFD3]/80 bg-gradient-to-b from-[#FAF7F2] to-[#F5EFE6]">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* 작은 라벨 */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
-            <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
-              JAMYEONG SCHOOL · CERTIFICATION COURSES
-            </span>
+        <div className="site-container text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* 작은 라벨 */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+              <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
+                JAMYEONG SCHOOL · CERTIFICATION COURSES
+              </span>
+            </div>
+
+            {/* 메인 제목 */}
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
+              자명스쿨 자격증 과정
+            </h1>
+
+            {/* 서브카피 */}
+            <p className="text-base md:text-xl font-medium text-[#4A3F35] max-w-2xl mx-auto mb-3 leading-relaxed break-keep">
+              나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 <br className="hidden sm:inline" />
+              자명스쿨의 체계적인 전문·자격 과정을 만나보세요.
+            </p>
+
+            {/* 보조 설명 */}
+            <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
+              기초부터 실전까지 체계적으로 배우고, <br className="hidden sm:inline" />
+              전문가·강사로서의 활동 기반을 다지는 자명스쿨의 자격증 교육과정입니다.
+            </p>
           </div>
-
-          {/* 메인 제목 */}
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
-            자명스쿨 자격증 과정
-          </h1>
-
-          {/* 서브카피 */}
-          <p className="text-base md:text-xl font-medium text-[#4A3F35] max-w-2xl mx-auto mb-3 leading-relaxed break-keep">
-            나를 이해하고, 가능성을 설계하고, 디지털로 현실화하는 <br className="hidden sm:inline" />
-            자명스쿨의 체계적인 전문·자격 과정을 만나보세요.
-          </p>
-
-          {/* 보조 설명 */}
-          <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
-            기초부터 실전까지 체계적으로 배우고, <br className="hidden sm:inline" />
-            전문가·강사로서의 활동 기반을 다지는 자명스쿨의 자격증 교육과정입니다.
-          </p>
         </div>
       </section>
 
       {/* ────────────────────────
           2. COURSE CARDS GRID
          ──────────────────────── */}
-      <section className="py-14 md:py-20 px-6 max-w-7xl mx-auto">
-        {/* 과정 개수 및 안내 라벨 */}
-        <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-[#2E2723]">개설 정규과정</span>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] font-bold">
-              총 {COURSES.length}개
+      <section className="py-14 md:py-20 px-6">
+        <div className="site-container">
+          {/* 과정 개수 및 안내 라벨 */}
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-[#2E2723]">개설 정규과정</span>
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] font-bold">
+                총 {COURSES.length}개
+              </span>
+            </div>
+            <span className="text-xs text-[#7C6656]">
+              * 각 과정별 신청 랜딩페이지가 순차 오픈됩니다.
             </span>
           </div>
-          <span className="text-xs text-[#7C6656]">
-            * 각 과정별 신청 랜딩페이지가 순차 오픈됩니다.
-          </span>
-        </div>
 
-        {/* 6개 과정 카드 그리드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {/* 6개 과정 카드 그리드 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {COURSES.map((course) => {
             const isFeatured = course.featured;
 
@@ -283,7 +286,8 @@ export default function ApplyPage() {
             );
           })}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ────────────────────────
           3. BRAND PHILOSOPHY SECTION (DARK CONTRAST)
@@ -297,69 +301,73 @@ export default function ApplyPage() {
           }}
         />
 
-        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-          <span className="inline-block text-[#C6A66B] font-semibold text-xs tracking-[0.3em] uppercase">
-            JAMYUNG PHILOSOPHY
-          </span>
-
-          <h2 className="text-2xl md:text-4xl font-bold leading-snug tracking-tight text-[#FAF7F2] break-keep">
-            나를 이해하는 것에서 시작해 <br />
-            현실의 결과물까지.
-          </h2>
-
-          <div className="py-2">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-[#C6A66B]/30 text-[#D6C6A8] font-bold text-xs md:text-sm tracking-widest">
-              MIND → DIRECTION → DIGITAL ACTION
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <span className="inline-block text-[#C6A66B] font-semibold text-xs tracking-[0.3em] uppercase">
+              JAMYUNG PHILOSOPHY
             </span>
-          </div>
 
-          <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            자명스쿨은 마음과 디지털을 연결하여 <br className="hidden sm:inline" />
-            자신의 가능성을 삶과 일 속에서 실제로 구현할 수 있도록 돕습니다.
-          </p>
+            <h2 className="text-2xl md:text-4xl font-bold leading-snug tracking-tight text-[#FAF7F2] break-keep">
+              나를 이해하는 것에서 시작해 <br />
+              현실의 결과물까지.
+            </h2>
+
+            <div className="py-2">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-[#C6A66B]/30 text-[#D6C6A8] font-bold text-xs md:text-sm tracking-widest">
+                MIND → DIRECTION → DIGITAL ACTION
+              </span>
+            </div>
+
+            <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              자명스쿨은 마음과 디지털을 연결하여 <br className="hidden sm:inline" />
+              자신의 가능성을 삶과 일 속에서 실제로 구현할 수 있도록 돕습니다.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ────────────────────────
           4. BOTTOM GUIDANCE / FAQ SECTION
          ──────────────────────── */}
-      <section className="py-20 md:py-24 px-6 max-w-4xl mx-auto text-center">
-        <div className="p-8 md:p-12 rounded-[32px] bg-white border border-[#E8DFD3] shadow-[0_8px_30px_rgba(46,39,35,0.04)]">
-          <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase mb-3 block">
-            COURSE GUIDE
-          </span>
-          <h3 className="text-2xl md:text-3xl font-bold text-[#2E2723] mb-4 break-keep">
-            어떤 과정이 나에게 맞을지 고민되시나요?
-          </h3>
-          <p className="text-base text-[#6E5A4D] max-w-xl mx-auto mb-8 leading-relaxed break-keep">
-            각 과정은 교육 목적과 활용 분야가 다릅니다. <br />
-            과정별 커리큘럼 상세 정보와 학습 목표를 먼저 확인해 보세요.
-          </p>
+      <section className="py-20 md:py-24 px-6 text-center">
+        <div className="site-container">
+          <div className="max-w-4xl mx-auto p-8 md:p-12 rounded-[32px] bg-white border border-[#E8DFD3] shadow-[0_8px_30px_rgba(46,39,35,0.04)]">
+            <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase mb-3 block">
+              COURSE GUIDE
+            </span>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#2E2723] mb-4 break-keep">
+              어떤 과정이 나에게 맞을지 고민되시나요?
+            </h3>
+            <p className="text-base text-[#6E5A4D] max-w-xl mx-auto mb-8 leading-relaxed break-keep">
+              각 과정은 교육 목적과 활용 분야가 다릅니다. <br />
+              과정별 커리큘럼 상세 정보와 학습 목표를 먼저 확인해 보세요.
+            </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* 기본 강의소개 페이지 연결 */}
-            <Link
-              href="/courses"
-              className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-[#2E2723] hover:bg-[#1E1815] text-[#FFFBD1] text-sm font-bold flex items-center justify-center gap-2 shadow transition-all duration-200"
-            >
-              <span>자명스쿨 강의소개 보기</span>
-              <span className="text-xs">→</span>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {/* 기본 강의소개 페이지 연결 */}
+              <Link
+                href="/courses"
+                className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-[#2E2723] hover:bg-[#1E1815] text-[#FFFBD1] text-sm font-bold flex items-center justify-center gap-2 shadow transition-all duration-200"
+              >
+                <span>자명스쿨 강의소개 보기</span>
+                <span className="text-xs">→</span>
+              </Link>
 
-            {/* 추후 무료특강 신청 버튼 자리 (확장 가능하도록 구조 마련) */}
-            <a
-              href="https://pf.kakao.com/_IxguMn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-white hover:bg-[#FAF7F2] text-[#4A3F35] text-sm font-semibold border border-[#D6C6A8] flex items-center justify-center gap-2 transition-all duration-200"
-            >
-              <span>1:1 과정 추천 상담</span>
-            </a>
+              {/* 추후 무료특강 신청 버튼 자리 (확장 가능하도록 구조 마련) */}
+              <a
+                href="https://pf.kakao.com/_IxguMn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-white hover:bg-[#FAF7F2] text-[#4A3F35] text-sm font-semibold border border-[#D6C6A8] flex items-center justify-center gap-2 transition-all duration-200"
+              >
+                <span>1:1 과정 추천 상담</span>
+              </a>
+            </div>
+
+            <p className="text-xs text-[#9E8E81] mt-6">
+              * 각 과정별 상세 랜딩페이지 및 접수 폼은 순차적으로 오픈됩니다.
+            </p>
           </div>
-
-          <p className="text-xs text-[#9E8E81] mt-6">
-            * 각 과정별 상세 랜딩페이지 및 접수 폼은 순차적으로 오픈됩니다.
-          </p>
         </div>
       </section>
     </main>

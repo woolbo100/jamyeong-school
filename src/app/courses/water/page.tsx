@@ -113,86 +113,88 @@ export default function WaterCoursePage() {
           style={{ backgroundColor: "#FFFFFF" }}
         ></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <Reveal>
-            <div className="flex justify-center mb-10">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 group">
-                <Image 
-                  src="/images/icon/water.png" 
-                  alt="Water Icon" 
-                  fill 
-                  className="object-contain filter drop-shadow-[0_0_25px_rgba(94,169,221,0.35)] group-hover:scale-110 transition-transform duration-1000" 
-                />
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-5xl mx-auto">
+            <Reveal>
+              <div className="flex justify-center mb-10">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 group">
+                  <Image 
+                    src="/images/icon/water.png" 
+                    alt="Water Icon" 
+                    fill 
+                    className="object-contain filter drop-shadow-[0_0_25px_rgba(94,169,221,0.35)] group-hover:scale-110 transition-transform duration-1000" 
+                  />
+                </div>
               </div>
-            </div>
-            
-            <div 
-              className="text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium" 
-              style={{ color: WATER_BLUE }}
-            >
-              Water Curriculum • 1인 서비스 구축
-            </div>
-
-            <h1 className="text-5xl md:text-8xl font-display mb-6 leading-tight tracking-tight italic">
-              마음을 <span style={{ color: WATER_BLUE }}>채우다</span>
-            </h1>
-
-            <div className="mb-8">
-              <span className="text-xl md:text-2xl font-light text-white/90 tracking-wide block mb-2">
-                1인 비즈니스 창업 & 서비스 개발
-              </span>
-              <span className="text-sm md:text-base tracking-[0.25em] text-[#89CFF0]/80 font-medium uppercase">
-                바이브 코딩 & 감성 자동화
-              </span>
-            </div>
-
-            <p className="text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-3xl mx-auto mb-12">
-              나의 온기를 담은 <br className="md:hidden" />
-              <span style={{ color: WATER_LIGHT }}>24시간 일하는 디지털 안식처</span>
-            </p>
-          </Reveal>
-
-          {/* 소개 문구 박스 */}
-          <Reveal delayMs={200}>
-            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-[rgba(94,169,221,0.15)] mb-16 relative overflow-hidden group shadow-2xl">
+              
               <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
-                style={{ backgroundColor: `${WATER_BLUE}0D` }}
-              ></div>
-              <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed font-light">
-                배움을 이어가고 있지만 여전히 불안한 이유는, <br className="hidden md:block" />
-                <span className="text-white font-normal">나의 시간과 노동에만 의지하고 있기 때문</span>일지 모릅니다. <br /><br className="hidden md:block" />
-                이제 당신의 지혜와 경험을 <br className="hidden md:block" />
-                사람들에게 지속적으로 전달할 수 있는 <br className="md:hidden" />
-                <span style={{ color: WATER_BLUE }} className="font-medium">디지털 자산으로 채워보세요.</span>
-              </p>
-            </div>
-          </Reveal>
+                className="text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium" 
+                style={{ color: WATER_BLUE }}
+              >
+                Water Curriculum • 1인 서비스 구축
+              </div>
 
-          {/* 신청 및 문의 버튼 */}
-          <Reveal delayMs={400}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#1E5F74] to-[#133B5C] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
-              >
-                <span className="relative z-10 font-bold italic">👉 강의 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#1E5F74] to-[#133B5C] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-              </a>
-              <button
-                className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#5EA9DD] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
-                onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
-              >
-                <span className="text-xl">📄</span> 강의 안내 PDF 보기
-              </button>
-            </div>
-          </Reveal>
+              <h1 className="text-5xl md:text-8xl font-display mb-6 leading-tight tracking-tight italic">
+                마음을 <span style={{ color: WATER_BLUE }}>채우다</span>
+              </h1>
+
+              <div className="mb-8">
+                <span className="text-xl md:text-2xl font-light text-white/90 tracking-wide block mb-2">
+                  1인 비즈니스 창업 & 서비스 개발
+                </span>
+                <span className="text-sm md:text-base tracking-[0.25em] text-[#89CFF0]/80 font-medium uppercase">
+                  바이브 코딩 & 감성 자동화
+                </span>
+              </div>
+
+              <p className="text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                나의 온기를 담은 <br className="md:hidden" />
+                <span style={{ color: WATER_LIGHT }}>24시간 일하는 디지털 안식처</span>
+              </p>
+            </Reveal>
+
+            {/* 소개 문구 박스 */}
+            <Reveal delayMs={200}>
+              <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-[rgba(94,169,221,0.15)] mb-16 relative overflow-hidden group shadow-2xl">
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
+                  style={{ backgroundColor: `${WATER_BLUE}0D` }}
+                ></div>
+                <p className="relative z-10 text-lg md:text-xl text-[#BFBFBF] leading-relaxed font-light">
+                  배움을 이어가고 있지만 여전히 불안한 이유는, <br className="hidden md:block" />
+                  <span className="text-white font-normal">나의 시간과 노동에만 의지하고 있기 때문</span>일지 모릅니다. <br /><br className="hidden md:block" />
+                  이제 당신의 지혜와 경험을 <br className="hidden md:block" />
+                  사람들에게 지속적으로 전달할 수 있는 <br className="md:hidden" />
+                  <span style={{ color: WATER_BLUE }} className="font-medium">디지털 자산으로 채워보세요.</span>
+                </p>
+              </div>
+            </Reveal>
+
+            {/* 신청 및 문의 버튼 */}
+            <Reveal delayMs={400}>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#1E5F74] to-[#133B5C] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
+                >
+                  <span className="relative z-10 font-bold italic">👉 강의 안내 받기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#1E5F74] to-[#133B5C] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+                </a>
+                <button
+                  className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#5EA9DD] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
+                  onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
+                >
+                  <span className="text-xl">📄</span> 강의 안내 PDF 보기
+                </button>
+              </div>
+            </Reveal>
+          </div>
         </div>
 
         {/* 상단 메인 비주얼 배너 영역 */}
-        <div className="max-w-6xl mx-auto mt-24 px-6">
+        <div className="site-container mt-24">
           <Reveal delayMs={600} slideFrom="bottom">
             <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/[0.05] shadow-[0_30px_60px_rgba(0,0,0,0.5)] bg-gradient-to-br from-[#101921] via-[#0b1016] to-[#090909]">
               <Image 
@@ -221,7 +223,7 @@ export default function WaterCoursePage() {
 
       {/* 2. 고민 공감 영역 (Earth 문제 제기 구조와 동일) */}
       <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
               <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight text-white">
@@ -289,86 +291,90 @@ export default function WaterCoursePage() {
           className="absolute inset-0 opacity-[0.02] pointer-events-none" 
           style={{ backgroundColor: WATER_BLUE }}
         ></div>
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <Reveal>
-            <span 
-              className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80"
-              style={{ color: WATER_BLUE }}
-            >
-              Our Mission
-            </span>
-            <h2 className="text-4xl md:text-6xl font-display mb-12 italic text-white leading-tight">
-              당신의 지혜와 온기가 <br />
-              <span style={{ color: WATER_BLUE }}>필요한 사람에게 닿도록.</span>
-            </h2>
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <span 
+                className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80"
+                style={{ color: WATER_BLUE }}
+              >
+                Our Mission
+              </span>
+              <h2 className="text-4xl md:text-6xl font-display mb-12 italic text-white leading-tight">
+                당신의 지혜와 온기가 <br />
+                <span style={{ color: WATER_BLUE }}>필요한 사람에게 닿도록.</span>
+              </h2>
 
-            <div className="space-y-8 text-lg md:text-2xl font-light text-[#BFBFBF] leading-relaxed max-w-3xl mx-auto">
-              <p>
-                누군가의 마음을 이해해 온 경험, <br />
-                일상을 바꾸는 작은 질문, <br />
-                오래 쌓아온 나만의 지식과 이야기.
-              </p>
-              <div className="w-[1px] h-12 mx-auto" style={{ backgroundColor: `${WATER_BLUE}33` }}></div>
-              <p className="text-white/90">
-                자명스쿨은 그 가치를 <br className="md:hidden" />
-                <span className="text-white font-medium">디지털 서비스로 옮기는 과정</span>을 함께합니다.
-              </p>
-              <div className="p-8 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-white/[0.04] mt-12 text-center shadow-lg">
-                <p className="text-[#BFBFBF] font-light leading-relaxed">
-                  처음부터 모든 기능을 만들기보다, <br />
-                  <span style={{ color: WATER_BLUE }} className="font-medium">나에게 의미 있는 작은 서비스 하나</span>에서 시작합니다.
+              <div className="space-y-8 text-lg md:text-2xl font-light text-[#BFBFBF] leading-relaxed max-w-3xl mx-auto">
+                <p>
+                  누군가의 마음을 이해해 온 경험, <br />
+                  일상을 바꾸는 작은 질문, <br />
+                  오래 쌓아온 나만의 지식과 이야기.
                 </p>
+                <div className="w-[1px] h-12 mx-auto" style={{ backgroundColor: `${WATER_BLUE}33` }}></div>
+                <p className="text-white/90">
+                  자명스쿨은 그 가치를 <br className="md:hidden" />
+                  <span className="text-white font-medium">디지털 서비스로 옮기는 과정</span>을 함께합니다.
+                </p>
+                <div className="p-8 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-white/[0.04] mt-12 text-center shadow-lg">
+                  <p className="text-[#BFBFBF] font-light leading-relaxed">
+                    처음부터 모든 기능을 만들기보다, <br />
+                    <span style={{ color: WATER_BLUE }} className="font-medium">나에게 의미 있는 작은 서비스 하나</span>에서 시작합니다.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 4. 과정 필요성 영역 (WHY) */}
       <section className="py-36 px-6 relative overflow-hidden bg-[#090909]">
-        <div className="max-w-5xl mx-auto relative z-10">
-          <Reveal>
-            <div className="text-center mb-16">
-              <span 
-                className="text-sm tracking-[0.35em] uppercase mb-4 block font-semibold opacity-80"
-                style={{ color: WATER_BLUE }}
-              >
-                Vibe Coding & 1-Person Business
-              </span>
-              <h2 className="text-4xl md:text-6xl font-display mb-8 italic text-white leading-tight">
-                왜 지금, <br className="md:hidden" />
-                <span style={{ color: WATER_BLUE }}>바이브 코딩 & 1인 서비스</span>인가요?
-              </h2>
-            </div>
-            
-            <div className="max-w-3xl mx-auto space-y-8 text-lg md:text-xl font-light text-[#BFBFBF] leading-relaxed">
-              <p>
-                AI와 함께 서비스를 만드는 방법이 넓어지고 있습니다.
-              </p>
-              <p>
-                <strong className="text-white font-medium">바이브 코딩(Vibe Coding)</strong>은 원하는 화면과 기능을 일상 언어로 설명하고, 
-                AI가 만든 결과를 실행하고 확인하며 수정하는 가장 직관적인 제작 방식입니다.
-              </p>
-              <p>
-                타로·사주 콘텐츠 서비스, 매일의 감정을 기록하는 다이어리, 자기이해 질문 카드, 상담·강의 소개 사이트까지. 
-                내가 가진 관심과 경험을 실제로 사용할 수 있는 서비스로 연결해 봅니다.
-              </p>
-
-              {/* 강조 문구 카드 */}
-              <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-[rgba(94,169,221,0.2)] mt-12 text-center shadow-xl">
-                <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
-                  “나의 직관과 감성이 <br />
-                  <span style={{ color: WATER_BLUE }}>누군가에게 도움이 되는 서비스의 출발점</span>이 됩니다.”
-                </p>
+        <div className="site-container relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <Reveal>
+              <div className="text-center mb-16">
+                <span 
+                  className="text-sm tracking-[0.35em] uppercase mb-4 block font-semibold opacity-80"
+                  style={{ color: WATER_BLUE }}
+                >
+                  Vibe Coding & 1-Person Business
+                </span>
+                <h2 className="text-4xl md:text-6xl font-display mb-8 italic text-white leading-tight">
+                  왜 지금, <br className="md:hidden" />
+                  <span style={{ color: WATER_BLUE }}>바이브 코딩 & 1인 서비스</span>인가요?
+                </h2>
               </div>
-            </div>
-          </Reveal>
+              
+              <div className="max-w-3xl mx-auto space-y-8 text-lg md:text-xl font-light text-[#BFBFBF] leading-relaxed">
+                <p>
+                  AI와 함께 서비스를 만드는 방법이 넓어지고 있습니다.
+                </p>
+                <p>
+                  <strong className="text-white font-medium">바이브 코딩(Vibe Coding)</strong>은 원하는 화면과 기능을 일상 언어로 설명하고, 
+                  AI가 만든 결과를 실행하고 확인하며 수정하는 가장 직관적인 제작 방식입니다.
+                </p>
+                <p>
+                  타로·사주 콘텐츠 서비스, 매일의 감정을 기록하는 다이어리, 자기이해 질문 카드, 상담·강의 소개 사이트까지. 
+                  내가 가진 관심과 경험을 실제로 사용할 수 있는 서비스로 연결해 봅니다.
+                </p>
+
+                {/* 강조 문구 카드 */}
+                <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-[rgba(94,169,221,0.2)] mt-12 text-center shadow-xl">
+                  <p className="text-2xl md:text-3xl font-medium text-white leading-relaxed">
+                    “나의 직관과 감성이 <br />
+                    <span style={{ color: WATER_BLUE }}>누군가에게 도움이 되는 서비스의 출발점</span>이 됩니다.”
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 5. 강의에서 배우는 내용 (Earth 해결 제안 구조 활용) */}
       <section className="py-32 px-6 bg-[#0a0a0c]">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-20">
               <span 
@@ -442,7 +448,7 @@ export default function WaterCoursePage() {
 
       {/* 6. 만들 수 있는 서비스 예시 (독립 쇼케이스 영역) */}
       <section className="py-36 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-16">
               <span 
@@ -513,7 +519,7 @@ export default function WaterCoursePage() {
 
       {/* 7. 상세 커리큘럼 (Earth의 5. 상세 커리큘럼 구조 적용) */}
       <section className="py-32 px-6 lg:py-40 bg-[#0a0a0c]">
-        <div className="max-w-[1240px] mx-auto">
+        <div className="site-container">
           <Reveal>
             <div 
               className="relative p-10 md:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
@@ -653,7 +659,7 @@ export default function WaterCoursePage() {
 
       {/* 8. 수강 후 기대 변화 (Earth의 6. 결과 위치) */}
       <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <span 
@@ -709,62 +715,64 @@ export default function WaterCoursePage() {
           style={{ background: `radial-gradient(circle at 50% 100%, ${WATER_BLUE} 0%, transparent 70%)` }}
         ></div>
 
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          {/* 브랜드 메시지 */}
-          <Reveal>
-            <h2 className="text-3xl md:text-6xl font-display mb-8 leading-tight italic text-white">
-              빠르게 달려가지 않아도 괜찮습니다. <br />
-              <span style={{ color: WATER_BLUE }}>나의 속도대로, 차분하고 따뜻하게</span> <br className="hidden md:block" />
-              내 손으로 첫 결과물을 완성해보세요.
-            </h2>
-          </Reveal>
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* 브랜드 메시지 */}
+            <Reveal>
+              <h2 className="text-3xl md:text-6xl font-display mb-8 leading-tight italic text-white">
+                빠르게 달려가지 않아도 괜찮습니다. <br />
+                <span style={{ color: WATER_BLUE }}>나의 속도대로, 차분하고 따뜻하게</span> <br className="hidden md:block" />
+                내 손으로 첫 결과물을 완성해보세요.
+              </h2>
+            </Reveal>
 
-          {/* 신청 안내 */}
-          <Reveal delayMs={300}>
-            <div className="mt-14 mb-16 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] max-w-xl mx-auto">
-              <p className="text-lg md:text-xl text-white font-medium mb-3">
-                상세 일정과 모집 안내는 준비 중입니다.
-              </p>
-              <p className="text-base text-[#BFBFBF] font-light">
-                과정에 대해 궁금한 점은 아래로 편하게 문의해 주세요.
-              </p>
-            </div>
+            {/* 신청 안내 */}
+            <Reveal delayMs={300}>
+              <div className="mt-14 mb-16 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] max-w-xl mx-auto">
+                <p className="text-lg md:text-xl text-white font-medium mb-3">
+                  상세 일정과 모집 안내는 준비 중입니다.
+                </p>
+                <p className="text-base text-[#BFBFBF] font-light">
+                  과정에 대해 궁금한 점은 아래로 편하게 문의해 주세요.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-visible h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#1E5F74] to-[#133B5C] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-2"
-              >
-                <span className="relative z-10 font-bold italic">👉 카카오톡 문의하기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#1E5F74] to-[#133B5C] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
-              </a>
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center"
-              >
-                <span 
-                  className="text-[#BFBFBF] hover:text-[#5EA9DD] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3"
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-visible h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#1E5F74] to-[#133B5C] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-2"
                 >
-                  과정 알림 신청
-                </span>
-                <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Notification</span>
-              </a>
-            </div>
-          </Reveal>
+                  <span className="relative z-10 font-bold italic">👉 카카오톡 문의하기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#1E5F74] to-[#133B5C] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
+                </a>
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center"
+                >
+                  <span 
+                    className="text-[#BFBFBF] hover:text-[#5EA9DD] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3"
+                  >
+                    과정 알림 신청
+                  </span>
+                  <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Notification</span>
+                </a>
+              </div>
+            </Reveal>
 
-          {/* 목록으로 돌아가기 링크 */}
-          <Reveal delayMs={600}>
-            <Link
-              href="/courses"
-              className="inline-block mt-36 text-white/20 hover:text-[#5EA9DD] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
-            >
-              ← BACK TO COURSES
-            </Link>
-          </Reveal>
+            {/* 목록으로 돌아가기 링크 */}
+            <Reveal delayMs={600}>
+              <Link
+                href="/courses"
+                className="inline-block mt-36 text-white/20 hover:text-[#5EA9DD] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
+              >
+                ← BACK TO COURSES
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 

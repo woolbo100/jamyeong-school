@@ -417,7 +417,7 @@ function MockupGraphic({ type }: { type: BrandArtContentItem["mockupType"] }) {
 // ─────────────────────────────────────────────────────────────
 export default function HeartArtProjectSection() {
   return (
-    <section className="py-32 md:py-48 px-6 bg-[#08090B] border-t border-white/5 relative overflow-hidden text-white">
+    <section className="py-32 md:py-48 bg-[#08090B] border-t border-white/5 relative overflow-hidden text-white">
       {/* 앰비언트 백드롭 글로우 */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] blur-[160px] opacity-[0.06] pointer-events-none"
@@ -426,7 +426,7 @@ export default function HeartArtProjectSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 space-y-32 md:space-y-44">
+      <div className="site-container relative z-10 space-y-32 md:space-y-44">
         {/* ═══════════════════════════════════════════════
             [Part 1. 상단 신뢰 라벨 & 경험 실적 & 메인 타이틀]
            ═══════════════════════════════════════════════ */}

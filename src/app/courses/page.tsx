@@ -34,7 +34,7 @@ export default function CoursesPage() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-antiqueGold/40 to-transparent"></div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-6 lg:px-8 pb-24 space-y-20 lg:space-y-32">
+            <main className="site-container pb-24 space-y-20 lg:space-y-32">
                 {/* Growth Flow Section */}
                 <FiveElementsSection />
 
@@ -446,10 +446,10 @@ export default function CoursesPage() {
             </main>
 
             {/* CTA Section */}
-            <section className="py-32 px-6 bg-white/[0.02] border-y border-white/5 relative overflow-hidden">
+            <section className="py-32 bg-white/[0.02] border-y border-white/5 relative overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-antiqueGold/5 blur-[120px] rounded-full pointer-events-none" />
                 
-                <div className="max-w-6xl mx-auto text-center relative z-10">
+                <div className="site-container text-center relative z-10">
                     {/* Growth Structure Card (New) */}
                     <Reveal delayMs={100}>
                         <div className="max-w-5xl mx-auto mb-24 p-10 md:p-16 rounded-[3rem] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl relative group overflow-hidden">

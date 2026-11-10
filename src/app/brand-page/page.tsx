@@ -68,8 +68,8 @@ export default function BrandPageClassPage() {
       {/* ───────────────────────────────────────────────
           공통 상단 서브 내비게이션 (/saju 기준 디자인 체계 동일 유지)
          ─────────────────────────────────────────────── */}
-      <nav className="sticky top-0 z-40 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] px-4 sm:px-6 py-3.5 transition-all">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
+      <nav className="sticky top-0 z-40 backdrop-blur-md bg-[#0D0B0A]/90 border-b border-[#2E2723] py-3.5 transition-all">
+        <div className="site-container flex items-center justify-between gap-2">
           <Link
             href={BRAND_PAGE_CLASS_CONFIG.onedayListUrl}
             className="inline-flex items-center gap-1.5 sm:gap-2 text-xs md:text-sm text-[#A8988B] hover:text-[#C6A66B] transition-colors group"
@@ -96,8 +96,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [2. 상단 히어로]
          ═══════════════════════════════════════════════ */}
-      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16">
+        <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* 좌측: 상단 영문, 메인 제목(H1), 서브 제목, 본문, 강조 문구, 핵심 배지, 수업 정보, 신청 버튼 */}
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">

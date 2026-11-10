@@ -15,57 +15,60 @@ export default function OnedayPage() {
           1. HERO SECTION
          ──────────────────────── */}
       <section className="pt-16 pb-12 md:pt-20 md:pb-14 px-6 border-b border-[#E8DFD3]/80 bg-gradient-to-b from-[#FAF7F2] to-[#F5EFE6]">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* 작은 라벨 */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
-            <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
-              JAMYUNG SCHOOL · ONE DAY CLASS
-            </span>
+        <div className="site-container text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* 작은 라벨 */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C6A66B]/10 border border-[#C6A66B]/25 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+              <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#8E6D38] uppercase">
+                JAMYUNG SCHOOL · ONE DAY CLASS
+              </span>
+            </div>
+
+            {/* 메인 제목 */}
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
+              하루 만에 하나를 완성하는 <br className="hidden sm:inline" />
+              원데이 클래스
+            </h1>
+
+            {/* 서브카피 */}
+            <p className="text-base md:text-xl font-medium text-[#4A3F35] max-w-2xl mx-auto mb-3 leading-relaxed break-keep">
+              배우는 것에서 끝나지 않고, AI와 디지털 도구를 활용해 <br className="hidden sm:inline" />
+              직접 하나의 결과물을 완성하는 실전 클래스입니다.
+            </p>
+
+            {/* 보조 설명 */}
+            <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
+              전자책, 홈페이지, AI 도구, 콘텐츠, 미니앱 등 <br className="hidden sm:inline" />
+              지금 필요한 디지털 결과물을 직접 만들어보세요.
+            </p>
+            <p className="text-sm md:text-base text-[#7C6656] max-w-2xl mx-auto mt-2 leading-relaxed break-keep">
+              수강 후에는 함께 배우는 사람들과 결과물을 나누고 교류하는 자명스쿨 전용 커뮤니티에 초대합니다.
+            </p>
           </div>
-
-          {/* 메인 제목 */}
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#2E2723] mb-5 leading-tight break-keep">
-            하루 만에 하나를 완성하는 <br className="hidden sm:inline" />
-            원데이 클래스
-          </h1>
-
-          {/* 서브카피 */}
-          <p className="text-base md:text-xl font-medium text-[#4A3F35] max-w-2xl mx-auto mb-3 leading-relaxed break-keep">
-            배우는 것에서 끝나지 않고, AI와 디지털 도구를 활용해 <br className="hidden sm:inline" />
-            직접 하나의 결과물을 완성하는 실전 클래스입니다.
-          </p>
-
-          {/* 보조 설명 */}
-          <p className="text-sm md:text-base text-[#7C6656] max-w-xl mx-auto leading-relaxed break-keep">
-            전자책, 홈페이지, AI 도구, 콘텐츠, 미니앱 등 <br className="hidden sm:inline" />
-            지금 필요한 디지털 결과물을 직접 만들어보세요.
-          </p>
-          <p className="text-sm md:text-base text-[#7C6656] max-w-2xl mx-auto mt-2 leading-relaxed break-keep">
-            수강 후에는 함께 배우는 사람들과 결과물을 나누고 교류하는 자명스쿨 전용 커뮤니티에 초대합니다.
-          </p>
         </div>
       </section>
 
       {/* ────────────────────────
           2. ONEDAY CLASS CARDS GRID
          ──────────────────────── */}
-      <section className="py-14 md:py-20 px-6 max-w-7xl mx-auto">
-        {/* 과정 개수 및 안내 라벨 */}
-        <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-[#2E2723]">개설 원데이 클래스</span>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] font-bold">
-              총 {ONEDAY_CLASSES.length}개
+      <section className="py-14 md:py-20 px-6">
+        <div className="site-container">
+          {/* 과정 개수 및 안내 라벨 */}
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-[#2E2723]">개설 원데이 클래스</span>
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] font-bold">
+                총 {ONEDAY_CLASSES.length}개
+              </span>
+            </div>
+            <span className="text-xs text-[#7C6656]">
+              * 수시 모집 형태로 일정 확정 시 순차 접수 시작됩니다.
             </span>
           </div>
-          <span className="text-xs text-[#7C6656]">
-            * 수시 모집 형태로 일정 확정 시 순차 접수 시작됩니다.
-          </span>
-        </div>
 
-        {/* 8개 원데이 클래스 카드 그리드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {/* 8개 원데이 클래스 카드 그리드 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {ONEDAY_CLASSES.map((item: OnedayClassItem) => {
             const isOpen = item.status === "open";
             const isScheduled = item.status === "scheduled";
@@ -231,7 +234,8 @@ export default function OnedayPage() {
             );
           })}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ────────────────────────
           3. BRAND PHILOSOPHY SECTION (DARK CONTRAST)
@@ -245,69 +249,73 @@ export default function OnedayPage() {
           }}
         />
 
-        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-          <span className="inline-block text-[#C6A66B] font-semibold text-xs tracking-[0.3em] uppercase">
-            JAMYUNG WORKSHOP
-          </span>
-
-          <h2 className="text-2xl md:text-4xl font-bold leading-snug tracking-tight text-[#FAF7F2] break-keep">
-            배우는 것에서 끝나지 않고, <br />
-            직접 만들어 내 것으로 만듭니다.
-          </h2>
-
-          <div className="py-2">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-[#C6A66B]/30 text-[#D6C6A8] font-bold text-xs md:text-sm tracking-widest">
-              LEARN → PRACTICE → ONE RESULT
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <span className="inline-block text-[#C6A66B] font-semibold text-xs tracking-[0.3em] uppercase">
+              JAMYUNG WORKSHOP
             </span>
-          </div>
 
-          <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            원데이 클래스는 복잡한 이론 대신 실행에 집중합니다. <br className="hidden sm:inline" />
-            단 몇 시간 만에 실제로 작동하고 손에 잡히는 디지털 결과물을 완성해보세요.
-          </p>
+            <h2 className="text-2xl md:text-4xl font-bold leading-snug tracking-tight text-[#FAF7F2] break-keep">
+              배우는 것에서 끝나지 않고, <br />
+              직접 만들어 내 것으로 만듭니다.
+            </h2>
+
+            <div className="py-2">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-[#C6A66B]/30 text-[#D6C6A8] font-bold text-xs md:text-sm tracking-widest">
+                LEARN → PRACTICE → ONE RESULT
+              </span>
+            </div>
+
+            <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              원데이 클래스는 복잡한 이론 대신 실행에 집중합니다. <br className="hidden sm:inline" />
+              단 몇 시간 만에 실제로 작동하고 손에 잡히는 디지털 결과물을 완성해보세요.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ────────────────────────
           4. BOTTOM GUIDANCE / FAQ SECTION
          ──────────────────────── */}
-      <section className="py-20 md:py-24 px-6 max-w-4xl mx-auto text-center">
-        <div className="p-8 md:p-12 rounded-[32px] bg-white border border-[#E8DFD3] shadow-[0_8px_30px_rgba(46,39,35,0.04)]">
-          <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase mb-3 block">
-            CLASS GUIDE
-          </span>
-          <h3 className="text-2xl md:text-3xl font-bold text-[#2E2723] mb-4 break-keep">
-            어떤 클래스를 먼저 들어야 할지 고민되시나요?
-          </h3>
-          <p className="text-base text-[#6E5A4D] max-w-xl mx-auto mb-8 leading-relaxed break-keep">
-            각 원데이 클래스는 초보자도 쉽게 따라올 수 있도록 단계별 실습으로 진행됩니다. <br />
-            더 깊이 있는 자격·전문 과정을 원하신다면 정규과정도 함께 살펴보세요.
-          </p>
+      <section className="py-20 md:py-24 px-6 text-center">
+        <div className="site-container">
+          <div className="max-w-4xl mx-auto p-8 md:p-12 rounded-[32px] bg-white border border-[#E8DFD3] shadow-[0_8px_30px_rgba(46,39,35,0.04)]">
+            <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase mb-3 block">
+              CLASS GUIDE
+            </span>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#2E2723] mb-4 break-keep">
+              어떤 클래스를 먼저 들어야 할지 고민되시나요?
+            </h3>
+            <p className="text-base text-[#6E5A4D] max-w-xl mx-auto mb-8 leading-relaxed break-keep">
+              각 원데이 클래스는 초보자도 쉽게 따라올 수 있도록 단계별 실습으로 진행됩니다. <br />
+              더 깊이 있는 자격·전문 과정을 원하신다면 정규과정도 함께 살펴보세요.
+            </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* 정규과정 링크 */}
-            <Link
-              href="/apply"
-              className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-[#2E2723] hover:bg-[#1E1815] text-[#FFFBD1] text-sm font-bold flex items-center justify-center gap-2 shadow transition-all duration-200"
-            >
-              <span>자명스쿨 정규과정 보기</span>
-              <span className="text-xs">→</span>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {/* 정규과정 링크 */}
+              <Link
+                href="/apply"
+                className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-[#2E2723] hover:bg-[#1E1815] text-[#FFFBD1] text-sm font-bold flex items-center justify-center gap-2 shadow transition-all duration-200"
+              >
+                <span>자명스쿨 정규과정 보기</span>
+                <span className="text-xs">→</span>
+              </Link>
 
-            {/* 1:1 상담 카카오톡 */}
-            <a
-              href="https://pf.kakao.com/_IxguMn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-white hover:bg-[#FAF7F2] text-[#4A3F35] text-sm font-semibold border border-[#D6C6A8] flex items-center justify-center gap-2 transition-all duration-200"
-            >
-              <span>1:1 클래스 문의 및 추천</span>
-            </a>
+              {/* 1:1 상담 카카오톡 */}
+              <a
+                href="https://pf.kakao.com/_IxguMn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto min-h-[50px] px-8 rounded-full bg-white hover:bg-[#FAF7F2] text-[#4A3F35] text-sm font-semibold border border-[#D6C6A8] flex items-center justify-center gap-2 transition-all duration-200"
+              >
+                <span>1:1 클래스 문의 및 추천</span>
+              </a>
+            </div>
+
+            <p className="text-xs text-[#9E8E81] mt-6">
+              * 원데이 클래스 신청 일정 알림은 자명스쿨 채널을 통해 우선 공지됩니다.
+            </p>
           </div>
-
-          <p className="text-xs text-[#9E8E81] mt-6">
-            * 원데이 클래스 신청 일정 알림은 자명스쿨 채널을 통해 우선 공지됩니다.
-          </p>
         </div>
       </section>
     </main>

@@ -98,84 +98,86 @@ export default function AbundanceCoursePage() {
           style={{ backgroundColor: "#FFFFFF" }}
         ></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <Reveal>
-            <div className="flex justify-center mb-10">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 group">
-                <Image 
-                  src="/images/icon/ether.png" 
-                  alt="Ether Icon" 
-                  fill 
-                  className="object-contain filter drop-shadow-[0_0_25px_rgba(226,195,122,0.35)] group-hover:scale-110 transition-transform duration-1000" 
-                />
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-5xl mx-auto">
+            <Reveal>
+              <div className="flex justify-center mb-10">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 group">
+                  <Image 
+                    src="/images/icon/ether.png" 
+                    alt="Ether Icon" 
+                    fill 
+                    className="object-contain filter drop-shadow-[0_0_25px_rgba(226,195,122,0.35)] group-hover:scale-110 transition-transform duration-1000" 
+                  />
+                </div>
               </div>
-            </div>
-            
-            <div 
-              className="text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium" 
-              style={{ color: ABUNDANCE_GOLD }}
-            >
-              Ether Curriculum • 최고위 리더십 & 강사 양성
-            </div>
-
-            <h1 className="text-5xl md:text-8xl font-display mb-6 leading-tight tracking-tight italic">
-              마음을 <span style={{ color: ABUNDANCE_GOLD }}>빛내다</span>
-            </h1>
-
-            <div className="mb-8">
-              <span className="text-xl md:text-2xl font-light text-white/90 tracking-wide block mb-2">
-                리더십 & 마인드 코치 & 협회 강사 양성
-              </span>
-              <span className="text-sm md:text-base tracking-[0.25em] text-[#E2C37A]/80 font-medium uppercase">
-                풍요 마인드 · Abundance Code
-              </span>
-            </div>
-
-            <p className="text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-3xl mx-auto mb-12">
-              개인의 배움을 넘어, <br className="md:hidden" />
-              <span style={{ color: ABUNDANCE_LIGHT }}>타인의 성장을 이끄는 마인드 리더로</span>
-            </p>
-          </Reveal>
-
-          {/* 소개 문구 (과정의 철학을 전달하는 인용 박스) */}
-          <Reveal delayMs={200}>
-            <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1a1712] to-[#121316] border border-[rgba(226,195,122,0.18)] mb-16 relative overflow-hidden group shadow-2xl">
+              
               <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
-                style={{ backgroundColor: `${ABUNDANCE_GOLD}0D` }}
-              ></div>
-              <p className="relative z-10 text-lg md:text-xl text-[#D1D1D1] leading-relaxed font-light italic">
-                “진정한 풍요는 결핍을 채우려는 노력이 아니라, <br className="hidden md:block" />
-                내 안의 충만함이 흘러넘쳐 <br className="hidden md:block" />
-                <span className="text-white font-normal">세상과 연결되고 순환할 때</span> 비로소 완성됩니다.”
-              </p>
-            </div>
-          </Reveal>
+                className="text-sm tracking-[0.5rem] mb-6 uppercase font-display opacity-90 font-medium" 
+                style={{ color: ABUNDANCE_GOLD }}
+              >
+                Ether Curriculum • 최고위 리더십 & 강사 양성
+              </div>
 
-          {/* 신청 및 문의 버튼 */}
-          <Reveal delayMs={400}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
-              >
-                <span className="relative z-10 font-bold italic">👉 과정 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-              </a>
-              <button
-                className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#E2C37A] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
-                onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
-              >
-                <span className="text-xl">📄</span> 과정 안내 PDF 보기
-              </button>
-            </div>
-          </Reveal>
+              <h1 className="text-5xl md:text-8xl font-display mb-6 leading-tight tracking-tight italic">
+                마음을 <span style={{ color: ABUNDANCE_GOLD }}>빛내다</span>
+              </h1>
+
+              <div className="mb-8">
+                <span className="text-xl md:text-2xl font-light text-white/90 tracking-wide block mb-2">
+                  리더십 & 마인드 코치 & 협회 강사 양성
+                </span>
+                <span className="text-sm md:text-base tracking-[0.25em] text-[#E2C37A]/80 font-medium uppercase">
+                  풍요 마인드 · Abundance Code
+                </span>
+              </div>
+
+              <p className="text-2xl md:text-3xl text-white font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+                개인의 배움을 넘어, <br className="md:hidden" />
+                <span style={{ color: ABUNDANCE_LIGHT }}>타인의 성장을 이끄는 마인드 리더로</span>
+              </p>
+            </Reveal>
+
+            {/* 소개 문구 (과정의 철학을 전달하는 인용 박스) */}
+            <Reveal delayMs={200}>
+              <div className="max-w-2xl mx-auto p-10 rounded-[2rem] bg-gradient-to-br from-[#1a1712] to-[#121316] border border-[rgba(226,195,122,0.18)] mb-16 relative overflow-hidden group shadow-2xl">
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
+                  style={{ backgroundColor: `${ABUNDANCE_GOLD}0D` }}
+                ></div>
+                <p className="relative z-10 text-lg md:text-xl text-[#D1D1D1] leading-relaxed font-light italic">
+                  “진정한 풍요는 결핍을 채우려는 노력이 아니라, <br className="hidden md:block" />
+                  내 안의 충만함이 흘러넘쳐 <br className="hidden md:block" />
+                  <span className="text-white font-normal">세상과 연결되고 순환할 때</span> 비로소 완성됩니다.”
+                </p>
+              </div>
+            </Reveal>
+
+            {/* 신청 및 문의 버튼 */}
+            <Reveal delayMs={400}>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]"
+                >
+                  <span className="relative z-10 font-bold italic">👉 과정 안내 받기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+                </a>
+                <button
+                  className="group flex items-center gap-3 text-[#BFBFBF] hover:text-[#E2C37A] transition-all duration-300 text-base tracking-widest uppercase border-b border-white/10 pb-1"
+                  onClick={() => alert("PDF 안내 파일은 준비 중입니다. 잠시만 기다려 주세요!")}
+                >
+                  <span className="text-xl">📄</span> 과정 안내 PDF 보기
+                </button>
+              </div>
+            </Reveal>
+          </div>
         </div>
 
         {/* 상단 메인 비주얼 배너 영역 */}
-        <div className="max-w-6xl mx-auto mt-24 px-6">
+        <div className="site-container mt-24">
           <Reveal delayMs={600} slideFrom="bottom">
             <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/[0.05] shadow-[0_30px_60px_rgba(0,0,0,0.5)] bg-gradient-to-br from-[#181510] via-[#101012] to-[#090909]">
               <Image 
@@ -204,7 +206,7 @@ export default function AbundanceCoursePage() {
 
       {/* 2. 고민 공감 영역 (Earth 문제 제기 레이아웃) */}
       <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
               <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight text-white">
@@ -272,43 +274,45 @@ export default function AbundanceCoursePage() {
           className="absolute inset-0 opacity-[0.02] pointer-events-none" 
           style={{ backgroundColor: ABUNDANCE_GOLD }}
         ></div>
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <Reveal>
-            <span 
-              className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80"
-              style={{ color: ABUNDANCE_GOLD }}
-            >
-              Our Mission
-            </span>
-            <h2 className="text-4xl md:text-6xl font-display mb-12 italic text-white leading-tight">
-              내가 발견한 빛이 <br />
-              <span style={{ color: ABUNDANCE_GOLD }}>누군가의 시작을 밝힐 수 있도록.</span>
-            </h2>
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <span 
+                className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80"
+                style={{ color: ABUNDANCE_GOLD }}
+              >
+                Our Mission
+              </span>
+              <h2 className="text-4xl md:text-6xl font-display mb-12 italic text-white leading-tight">
+                내가 발견한 빛이 <br />
+                <span style={{ color: ABUNDANCE_GOLD }}>누군가의 시작을 밝힐 수 있도록.</span>
+              </h2>
 
-            <div className="space-y-8 text-lg md:text-2xl font-light text-[#BFBFBF] leading-relaxed max-w-3xl mx-auto">
-              <p>
-                내가 배움을 통해 얻은 변화와 자신감은 <br />
-                다른 사람의 가능성을 알아보는 힘이 됩니다.
-              </p>
-              <div className="w-[1px] h-12 mx-auto" style={{ backgroundColor: `${ABUNDANCE_GOLD}33` }}></div>
-              <p className="text-white/90">
-                자명스쿨의 마지막 원소는 <br className="md:hidden" />
-                <span className="text-white font-medium">나의 성장을 타인의 성장으로 연결하는 과정</span>입니다.
-              </p>
-              <div className="p-8 rounded-[2rem] bg-gradient-to-br from-[#1a1712] to-[#121316] border border-white/[0.04] mt-12 text-center shadow-lg">
-                <p className="text-[#BFBFBF] font-light leading-relaxed">
-                  가르치는 지식과 함께 <br />
-                  <span style={{ color: ABUNDANCE_GOLD }} className="font-medium">듣고, 기다리고, 질문하고, 함께 실천하는 힘</span>을 기릅니다.
+              <div className="space-y-8 text-lg md:text-2xl font-light text-[#BFBFBF] leading-relaxed max-w-3xl mx-auto">
+                <p>
+                  내가 배움을 통해 얻은 변화와 자신감은 <br />
+                  다른 사람의 가능성을 알아보는 힘이 됩니다.
                 </p>
+                <div className="w-[1px] h-12 mx-auto" style={{ backgroundColor: `${ABUNDANCE_GOLD}33` }}></div>
+                <p className="text-white/90">
+                  자명스쿨의 마지막 원소는 <br className="md:hidden" />
+                  <span className="text-white font-medium">나의 성장을 타인의 성장으로 연결하는 과정</span>입니다.
+                </p>
+                <div className="p-8 rounded-[2rem] bg-gradient-to-br from-[#1a1712] to-[#121316] border border-white/[0.04] mt-12 text-center shadow-lg">
+                  <p className="text-[#BFBFBF] font-light leading-relaxed">
+                    가르치는 지식과 함께 <br />
+                    <span style={{ color: ABUNDANCE_GOLD }} className="font-medium">듣고, 기다리고, 질문하고, 함께 실천하는 힘</span>을 기릅니다.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 4. 이 과정이 특별한 이유 (3가지 핵심 차별점) */}
       <section className="py-36 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <span 
@@ -355,7 +359,7 @@ export default function AbundanceCoursePage() {
 
       {/* 5. 강의에서 배우는 내용 (Earth 4개 카드 그리드 구조) */}
       <section className="py-32 px-6 bg-[#0a0a0c]">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-20">
               <span 
@@ -429,7 +433,7 @@ export default function AbundanceCoursePage() {
 
       {/* 6. 상세 커리큘럼 초안 (단계별 로드맵 예시) */}
       <section className="py-32 px-6 lg:py-40 bg-[#090909]">
-        <div className="max-w-[1240px] mx-auto">
+        <div className="site-container">
           <Reveal>
             <div 
               className="relative p-10 md:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
@@ -569,7 +573,7 @@ export default function AbundanceCoursePage() {
 
       {/* 7. 수강 후 기대 변화 (Earth 4개 결과 그리드 레이아웃) */}
       <section className="py-32 px-6 bg-[#0a0a0c]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <span 
@@ -621,7 +625,7 @@ export default function AbundanceCoursePage() {
 
       {/* 8. 자격 및 협회 활동 안내 (독립 섹션) */}
       <section className="py-32 px-6 bg-[#090909] border-t border-white/[0.03]">
-        <div className="max-w-5xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="p-12 md:p-16 rounded-[3rem] bg-gradient-to-br from-[#181510] to-[#101012] border border-[rgba(226,195,122,0.15)] shadow-2xl relative overflow-hidden">
               <div 
@@ -677,63 +681,65 @@ export default function AbundanceCoursePage() {
           style={{ background: `radial-gradient(circle at 50% 100%, ${ABUNDANCE_GOLD} 0%, transparent 70%)` }}
         ></div>
 
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          {/* 마무리 메시지 */}
-          <Reveal>
-            <h2 className="text-3xl md:text-6xl font-display mb-8 leading-tight italic text-white">
-              나의 속도로 자라온 시간이 <br />
-              <span style={{ color: ABUNDANCE_GOLD }}>이제 누군가의 성장을 비추는 빛이 됩니다.</span> <br />
-              나를 채운 배움을, 함께 성장하는 힘으로 이어가세요.
-            </h2>
-          </Reveal>
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* 마무리 메시지 */}
+            <Reveal>
+              <h2 className="text-3xl md:text-6xl font-display mb-8 leading-tight italic text-white">
+                나의 속도로 자라온 시간이 <br />
+                <span style={{ color: ABUNDANCE_GOLD }}>이제 누군가의 성장을 비추는 빛이 됩니다.</span> <br />
+                나를 채운 배움을, 함께 성장하는 힘으로 이어가세요.
+              </h2>
+            </Reveal>
 
-          {/* 신청 안내 */}
-          <Reveal delayMs={300}>
-            <div className="mt-14 mb-16 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] max-w-xl mx-auto">
-              <p className="text-lg md:text-xl text-white font-medium mb-3">
-                세부 커리큘럼과 모집 일정은 준비 중입니다.
-              </p>
-              <p className="text-base text-[#BFBFBF] font-light">
-                수강 대상과 참여 절차는 모집 시 자세히 안내드립니다. <br />
-                궁금하신 점은 아래로 편하게 문의해 주세요.
-              </p>
-            </div>
+            {/* 신청 안내 */}
+            <Reveal delayMs={300}>
+              <div className="mt-14 mb-16 p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] max-w-xl mx-auto">
+                <p className="text-lg md:text-xl text-white font-medium mb-3">
+                  세부 커리큘럼과 모집 일정은 준비 중입니다.
+                </p>
+                <p className="text-base text-[#BFBFBF] font-light">
+                  수강 대상과 참여 절차는 모집 시 자세히 안내드립니다. <br />
+                  궁금하신 점은 아래로 편하게 문의해 주세요.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative overflow-visible h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-2"
-              >
-                <span className="relative z-10 font-bold italic">👉 카카오톡 문의하기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
-              </a>
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center"
-              >
-                <span 
-                  className="text-[#BFBFBF] hover:text-[#E2C37A] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3"
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-visible h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] text-white shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-2"
                 >
-                  과정 알림 신청
-                </span>
-                <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Notification</span>
-              </a>
-            </div>
-          </Reveal>
+                  <span className="relative z-10 font-bold italic">👉 카카오톡 문의하기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#8C6D37] to-[#4A3B22] opacity-0 blur-2xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
+                </a>
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center"
+                >
+                  <span 
+                    className="text-[#BFBFBF] hover:text-[#E2C37A] transition-all duration-300 text-lg tracking-[0.3em] uppercase border-b border-white/10 pb-1 mb-3"
+                  >
+                    과정 알림 신청
+                  </span>
+                  <span className="text-xs text-white/20 uppercase tracking-[0.5em]">Notification</span>
+                </a>
+              </div>
+            </Reveal>
 
-          {/* 목록으로 돌아가기 링크 */}
-          <Reveal delayMs={600}>
-            <Link
-              href="/courses"
-              className="inline-block mt-36 text-white/20 hover:text-[#E2C37A] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
-            >
-              ← BACK TO COURSES
-            </Link>
-          </Reveal>
+            {/* 목록으로 돌아가기 링크 */}
+            <Reveal delayMs={600}>
+              <Link
+                href="/courses"
+                className="inline-block mt-36 text-white/20 hover:text-[#E2C37A] transition-all duration-500 text-sm tracking-[0.6em] uppercase"
+              >
+                ← BACK TO COURSES
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 

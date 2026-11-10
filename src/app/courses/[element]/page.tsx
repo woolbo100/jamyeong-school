@@ -192,58 +192,62 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
           style={{ backgroundColor: data.auraColor }}
         ></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <Reveal>
-            <div className={`text-6xl md:text-8xl mb-10 group-hover:scale-110 transition-transform duration-700`}>
-              {data.symbol}
-            </div>
-          </Reveal>
-          <Reveal delayMs={200}>
-            <span className={`${data.color} font-display text-sm tracking-[0.4em] mb-6 block uppercase opacity-80`}>
-              {data.name} Curriculum
-            </span>
-            <h1 className="text-4xl md:text-7xl font-display mb-8 leading-tight tracking-tight uppercase italic">
-              {data.lectureName}
-            </h1>
-          </Reveal>
-          <Reveal delayMs={400}>
-            <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
-              {data.tagline}
-            </p>
-          </Reveal>
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-5xl mx-auto">
+            <Reveal>
+              <div className={`text-6xl md:text-8xl mb-10 group-hover:scale-110 transition-transform duration-700`}>
+                {data.symbol}
+              </div>
+            </Reveal>
+            <Reveal delayMs={200}>
+              <span className={`${data.color} font-display text-sm tracking-[0.4em] mb-6 block uppercase opacity-80`}>
+                {data.name} Curriculum
+              </span>
+              <h1 className="text-4xl md:text-7xl font-display mb-8 leading-tight tracking-tight uppercase italic">
+                {data.lectureName}
+              </h1>
+            </Reveal>
+            <Reveal delayMs={400}>
+              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
+                {data.tagline}
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 2. Recommended For Section */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
-            <h2 className="text-3xl md:text-5xl font-display mb-8">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
-            <div className="space-y-4">
-              {data.recommends.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/5">
-                  <span className={data.color}>✦</span>
-                  <span className="text-white/80 font-light">{item}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-          <Reveal delayMs={400}>
-            <div className={`p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
-              <h3 className="text-xl font-bold mb-6 italic text-white/40">Our Mission</h3>
-              <p className="text-2xl md:text-3xl font-display leading-tight italic">
-                단순한 지식이 아닌, <br />
-                당신의 존재 자체가 <br />
-                <span className={data.color}>가치가 되는 과정</span>입니다.
-              </p>
-            </div>
-          </Reveal>
+      <section className="py-24 px-6">
+        <div className="site-container">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-5xl font-display mb-8">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
+              <div className="space-y-4">
+                {data.recommends.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/5">
+                    <span className={data.color}>✦</span>
+                    <span className="text-white/80 font-light">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+            <Reveal delayMs={400}>
+              <div className={`p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
+                <h3 className="text-xl font-bold mb-6 italic text-white/40">Our Mission</h3>
+                <p className="text-2xl md:text-3xl font-display leading-tight italic">
+                  단순한 지식이 아닌, <br />
+                  당신의 존재 자체가 <br />
+                  <span className={data.color}>가치가 되는 과정</span>입니다.
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 3. Learning Content Section */}
       <section className="py-24 px-6 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display mb-4">강의에서 배우는 내용</h2>
@@ -267,77 +271,87 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 4. Curriculum Section */}
-      <section className="py-24 px-6 max-w-5xl mx-auto font-sans">
-        <Reveal>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display mb-12">상세 커리큘럼</h2>
-          </div>
-        </Reveal>
-
-        <div className="space-y-6">
-          {data.curriculum.map((item, idx) => (
-            <Reveal key={idx} delayMs={idx * 150}>
-              <div className="group relative p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500">
-                <div className="flex flex-col md:flex-row md:items-center gap-6">
-                  <div className={`text-2xl font-display ${data.color} opacity-60 min-w-[100px]`}>{item.unit}</div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold mb-2 text-white/90">{item.title}</h4>
-                    <p className="text-white/50 leading-relaxed font-light">{item.details}</p>
-                  </div>
-                </div>
+      <section className="py-24 px-6 font-sans">
+        <div className="site-container">
+          <div className="max-w-5xl mx-auto">
+            <Reveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-display mb-12">상세 커리큘럼</h2>
               </div>
             </Reveal>
-          ))}
+
+            <div className="space-y-6">
+              {data.curriculum.map((item, idx) => (
+                <Reveal key={idx} delayMs={idx * 150}>
+                  <div className="group relative p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500">
+                    <div className="flex flex-col md:flex-row md:items-center gap-6">
+                      <div className={`text-2xl font-display ${data.color} opacity-60 min-w-[100px]`}>{item.unit}</div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold mb-2 text-white/90">{item.title}</h4>
+                        <p className="text-white/50 leading-relaxed font-light">{item.details}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* 5. Expected Effects Section */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-        <Reveal>
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-display mb-12">수강 후 기대 효과</h2>
-            <div className="space-y-6">
-              {data.effects.map((item, idx) => (
-                <div key={idx} className="text-xl md:text-2xl text-white/80 font-light italic">
-                  “ {item} ”
+      <section className="py-24 px-6 text-center">
+        <div className="site-container">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <div className="mb-16">
+                <h2 className="text-3xl md:text-4xl font-display mb-12">수강 후 기대 효과</h2>
+                <div className="space-y-6">
+                  {data.effects.map((item, idx) => (
+                    <div key={idx} className="text-xl md:text-2xl text-white/80 font-light italic">
+                      “ {item} ”
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </section>
 
       {/* 6. Application Info & CTA */}
       <section className="py-32 px-6 bg-gradient-to-b from-transparent to-white/[0.03] border-t border-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <Reveal>
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-4">신청 안내</h3>
-              <p className="text-white/50 font-light">
-                상세 일정 및 모집 안내는 별도 공지됩니다. <br />
-                현재 수강 대기 및 궁금한 사항은 아래로 문의해 주세요.
-              </p>
-            </div>
+        <div className="site-container text-center">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold mb-4">신청 안내</h3>
+                <p className="text-white/50 font-light">
+                  상세 일정 및 모집 안내는 별도 공지됩니다. <br />
+                  현재 수강 대기 및 궁금한 사항은 아래로 문의해 주세요.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]`}
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]`}
+                >
+                  <span className="relative z-10 font-bold">강의 신청 문의하기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
+                </a>
+              </div>
+
+              <Link
+                href="/courses"
+                className="text-white/40 hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase border-b border-white/10 pb-1"
               >
-                <span className="relative z-10 font-bold">강의 신청 문의하기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-              </a>
-            </div>
-
-            <Link
-              href="/courses"
-              className="text-white/40 hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase border-b border-white/10 pb-1"
-            >
-              ← 강의소개 메인으로 돌아가기
-            </Link>
-          </Reveal>
+                ← 강의소개 메인으로 돌아가기
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
     </div>

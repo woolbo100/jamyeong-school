@@ -93,7 +93,7 @@ export default function EarthCoursePage() {
     <div className="bg-[#090909] min-h-screen text-white font-sans selection:bg-[#A68253]/30 overflow-x-hidden">
       
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 px-6">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40">
         {/* Aura Background - Updated to Refined Gold */}
         <div 
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-[0.07] pointer-events-none"
@@ -104,7 +104,7 @@ export default function EarthCoursePage() {
           style={{ backgroundColor: "#FFFFFF" }}
         ></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <div className="relative z-10 site-container text-center">
           <Reveal>
             <div className="flex justify-center mb-10">
               <div className="relative w-24 h-24 md:w-32 md:h-32 group">
@@ -177,8 +177,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 2. 문제 제기 */}
-      <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-32 bg-[#090909]">
+        <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <Reveal>
               <h2 className="text-4xl md:text-6xl font-display mb-12 leading-tight text-white">
@@ -222,8 +222,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 3. 해결 제안 */}
-      <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 bg-[#090909]">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 이런 시작을 <br className="md:hidden" /> 만들어드립니다</h2>
@@ -270,9 +270,9 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 4. WHY */}
-      <section className="py-40 px-6 relative overflow-hidden bg-[#0a0a0c]">
+      <section className="py-40 relative overflow-hidden bg-[#0a0a0c]">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundColor: PREMIUM_GOLD }}></div>
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
+        <div className="site-container relative z-10 text-center">
           <Reveal>
             <span style={{ color: PREMIUM_GOLD }} className="text-sm tracking-[0.4em] uppercase mb-8 block font-semibold opacity-80">The Era of AI & Expression</span>
             <h2 className="text-5xl md:text-7xl font-display mb-16 italic text-white">왜 지금 <span style={{ color: PREMIUM_GOLD }}>‘표현’</span>이 중요한가</h2>
@@ -300,8 +300,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 5. 상세 커리큘럼 */}
-      <section className="py-32 px-6 lg:py-40">
-        <div className="max-w-[1240px] mx-auto">
+      <section className="py-32 lg:py-40">
+        <div className="site-container">
           <Reveal>
             <div className="relative p-10 md:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
                  style={{ background: "linear-gradient(180deg, rgba(20,22,26,0.98) 0%, rgba(9,9,9,1) 100%)" }}>
@@ -423,8 +423,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 6. 결과 */}
-      <section className="py-32 px-6 bg-[#090909]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-32 bg-[#090909]">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의를 듣고 나면</h2>
@@ -461,8 +461,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 7. 확장 */}
-      <section className="py-40 px-6 bg-[#090909] border-t border-white/[0.03]">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-40 bg-[#090909] border-t border-white/[0.03]">
+        <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <Reveal>
               <h2 className="text-5xl md:text-7xl font-display mb-12 leading-tight italic text-white">이 과정은 <br /> <span style={{ color: PREMIUM_GOLD }}>시작일 뿐입니다</span></h2>
@@ -496,8 +496,8 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 8. 특별한 점 */}
-      <section className="py-40 px-6 bg-gradient-to-b from-[#14161A] to-[#090909]">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-40 bg-gradient-to-b from-[#14161A] to-[#090909]">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-28">
               <h2 className="text-4xl md:text-6xl font-display mb-6 italic text-white">이 강의가 특별한 이유</h2>
@@ -537,9 +537,9 @@ export default function EarthCoursePage() {
       </section>
 
       {/* 9. CTA */}
-      <section className="py-48 px-6 text-center bg-[#090909] relative overflow-hidden">
+      <section className="py-48 text-center bg-[#090909] relative overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-[#A682531A] to-transparent pointer-events-none"></div>
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
+        <div className="site-container relative z-10 text-center">
           <Reveal>
             <h2 className="text-4xl md:text-7xl font-display mb-16 leading-tight italic text-white">
               지금 필요한 것은 <br />

@@ -46,6 +46,30 @@
   --font-display: "Cinzel", serif;
 }
 
+/* 자명스쿨 공통 메인 콘텐츠 컨테이너 (1280px 통일 그리드) */
+.site-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @layer utilities {
   .animate-spin-slow-slow {
     animation: spin 20s linear infinite;

@@ -93,14 +93,14 @@ export default function FireCoursePage() {
     <div className="bg-black min-h-screen text-white font-sans selection:bg-[#FF6A3D]/30 overflow-x-hidden">
       
       {/* 1. Hero Section (Super Hybrid: Earth Centered Top + Favored Fire Split) */}
-      <section className="relative pt-32 pb-40 px-6">
+      <section className="relative pt-32 pb-40">
         {/* Glow Effects */}
         <div 
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] blur-[150px] opacity-[0.05] pointer-events-none"
           style={{ background: `radial-gradient(circle, ${GOLD}, transparent 70%)` }}
         ></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 site-container">
           
           {/* A. Centered Top Section (Earth Structure Clone) */}
           <div className="text-center mb-40">
@@ -230,8 +230,8 @@ export default function FireCoursePage() {
       </section>
 
       {/* 2. 문제 제기 - 문제 공감 */}
-      <section className="py-32 px-6 bg-black relative">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-32 bg-black relative">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-7xl font-display mb-10 text-white italic">
@@ -271,8 +271,8 @@ export default function FireCoursePage() {
       </section>
 
       {/* 3. 해결 제안 */}
-      <section className="py-32 px-6 bg-black">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-32 bg-black">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white">이 강의는 당신을 이렇게 바꿉니다</h2>
@@ -314,9 +314,9 @@ export default function FireCoursePage() {
       </section>
 
       {/* 4. WHY Section */}
-      <section className="py-40 px-6 relative overflow-hidden bg-black">
+      <section className="py-40 relative overflow-hidden bg-black">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(166,130,83,0.05),transparent_50%)]" />
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
+        <div className="site-container relative z-10 text-center">
           <Reveal>
             <span style={{ color: GOLD }} className="text-sm tracking-[0.5em] uppercase mb-10 block font-semibold">The Core Philosophy</span>
             <h2 className="text-5xl md:text-7xl font-display mb-16 italic text-white">지금은 <span style={{ color: GOLD }}>표현의 시대</span>입니다</h2>
@@ -344,8 +344,8 @@ export default function FireCoursePage() {
       </section>
 
       {/* 5. 🎨 GALLERY SECTION (CORE) */}
-      <section className="py-40 px-6 bg-black">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-40 bg-black">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <div className="inline-block px-6 py-2 rounded-full border border-[#A68253]/30 text-[#A68253] text-xs tracking-widest uppercase mb-6">Exhibition Space</div>
@@ -391,8 +391,8 @@ export default function FireCoursePage() {
       </section>
 
       {/* 6. 상세 커리큘럼 */}
-      <section className="py-32 px-6 lg:py-48 bg-[#050505]">
-        <div className="max-w-[1240px] mx-auto">
+      <section className="py-32 lg:py-48 bg-[#050505]">
+        <div className="site-container">
           <Reveal>
             <div className="relative p-12 md:p-24 rounded-[4rem] border border-white/[0.05] shadow-[0_40px_120px_rgba(0,0,0,0.8)] overflow-hidden bg-[#0a0a0a]">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#A68253]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -499,8 +499,8 @@ export default function FireCoursePage() {
       </section>
 
       {/* 7. 결과 섹션 */}
-      <section className="py-40 px-6 bg-black">
-        <div className="max-w-5xl mx-auto shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[4rem] p-12 md:p-24 border border-white/5">
+      <section className="py-40 bg-black">
+        <div className="site-container shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[4rem] p-12 md:p-24 border border-white/5">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-7xl font-display mb-10 text-white italic">이 과정을 끝내면</h2>
@@ -538,9 +538,9 @@ export default function FireCoursePage() {
       </section>
 
       {/* 8. 확장 섹션 */}
-      <section className="py-40 px-6 bg-black border-t border-white/5 relative overflow-hidden">
+      <section className="py-40 bg-black border-t border-white/5 relative overflow-hidden">
         <div className="absolute left-0 bottom-0 w-1/2 h-1/2 bg-[#FF6A3D]/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
+        <div className="site-container flex flex-col lg:flex-row items-center gap-24">
           <div className="lg:w-1/2">
             <Reveal>
               <h2 className="text-5xl md:text-8xl font-display mb-12 leading-tight italic text-white uppercase tracking-tighter">
@@ -588,11 +588,11 @@ export default function FireCoursePage() {
       <HeartArtProjectSection />
 
       {/* 9. CTA */}
-      <section className="py-48 px-6 text-center bg-black relative overflow-hidden">
+      <section className="py-48 text-center bg-black relative overflow-hidden">
         {/* Cinematic Particles Backdrop (CSS Placeholder) */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#A68253 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
         
-        <div className="max-w-5xl mx-auto relative z-10 text-center">
+        <div className="site-container relative z-10 text-center">
           <Reveal>
             <div className="flex justify-center mb-16">
               <div className="w-20 h-20 relative">

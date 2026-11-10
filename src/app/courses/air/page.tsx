@@ -111,13 +111,13 @@ export default function AirCoursePage() {
     <div className={`bg-[${BG}] min-h-screen text-white font-sans selection:bg-[${ACCENT_1}]/30 overflow-x-hidden`} style={{ backgroundColor: BG }}>
       
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-40 px-6">
+      <section className="relative pt-32 pb-40">
         <div 
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] blur-[150px] opacity-[0.08] pointer-events-none"
           style={{ background: `radial-gradient(circle, ${ACCENT_2}, transparent 70%)` }}
         ></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 site-container">
           <div className="text-center mb-32">
             <Reveal>
               <div className="flex justify-center mb-10">
@@ -233,7 +233,7 @@ export default function AirCoursePage() {
 
       {/* 2. Problem Section */}
       <section className="py-32 px-6 bg-[#09090B]">
-        <div className="max-w-6xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-6xl font-display mb-8 text-white italic">
@@ -274,7 +274,7 @@ export default function AirCoursePage() {
 
       {/* 3. Solution Section */}
       <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-24">
               <h2 className="text-4xl md:text-5xl font-display mb-8 text-white uppercase italic tracking-tight">이 과정은 이런 변화를 만들어드립니다</h2>
@@ -317,33 +317,35 @@ export default function AirCoursePage() {
       {/* 4. WHY Section */}
       <section className="py-40 px-6 relative overflow-hidden bg-black">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,179,126,0.05),transparent_50%)]" />
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <Reveal>
-            <span style={{ color: ACCENT_1 }} className="text-xs tracking-[0.5em] uppercase mb-10 block font-semibold">The Air Philosophy</span>
-            <h2 className="text-4xl md:text-6xl font-display mb-16 italic text-white leading-tight">전달되지 않는 지혜는<br /><span style={{ color: ACCENT_1 }}>존재하지 않는 것</span>과 같습니다</h2>
-            <div className="space-y-12 text-lg md:text-xl font-light text-[#C7C7CC] leading-relaxed">
-              <p>
-                이제는 아는 사람보다 <br />
-                <span className="text-white font-medium italic underline underline-offset-4 decoration-[#C9B37E]/40">정리해서 전달할 수 있는 사람</span>이 기회를 가집니다.
-              </p>
-              <p>
-                AI와 디지털 도구는 당신의 지식과 경험을 <br />
-                세상에 더 넓게 전달하는 강력한 확장 장치입니다.
-              </p>
-              <div className="p-12 rounded-[3.5rem] bg-gradient-to-br from-[#14161A] to-black border border-white/5 mt-20 group">
-                <p className="text-white text-2xl md:text-3xl font-light italic leading-relaxed">
-                  이 과정은 당신의 지식을<br />
-                  <span style={{ color: ACCENT_1 }} className="font-bold underline underline-offset-8">강의, 콘텐츠, 브랜드로 바꾸는 여정</span>입니다.
+        <div className="site-container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <span style={{ color: ACCENT_1 }} className="text-xs tracking-[0.5em] uppercase mb-10 block font-semibold">The Air Philosophy</span>
+              <h2 className="text-4xl md:text-6xl font-display mb-16 italic text-white leading-tight">전달되지 않는 지혜는<br /><span style={{ color: ACCENT_1 }}>존재하지 않는 것</span>과 같습니다</h2>
+              <div className="space-y-12 text-lg md:text-xl font-light text-[#C7C7CC] leading-relaxed">
+                <p>
+                  이제는 아는 사람보다 <br />
+                  <span className="text-white font-medium italic underline underline-offset-4 decoration-[#C9B37E]/40">정리해서 전달할 수 있는 사람</span>이 기회를 가집니다.
                 </p>
+                <p>
+                  AI와 디지털 도구는 당신의 지식과 경험을 <br />
+                  세상에 더 넓게 전달하는 강력한 확장 장치입니다.
+                </p>
+                <div className="p-12 rounded-[3.5rem] bg-gradient-to-br from-[#14161A] to-black border border-white/5 mt-20 group">
+                  <p className="text-white text-2xl md:text-3xl font-light italic leading-relaxed">
+                    이 과정은 당신의 지식을<br />
+                    <span style={{ color: ACCENT_1 }} className="font-bold underline underline-offset-8">강의, 콘텐츠, 브랜드로 바꾸는 여정</span>입니다.
+                  </p>
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* 5. Curriculum Section */}
       <section className="py-32 px-6 bg-[#050505]">
-        <div className="max-w-7xl mx-auto">
+        <div className="site-container">
           <Reveal>
             <div className="text-center mb-28">
               <h2 className="text-5xl md:text-8xl font-display mb-12 italic text-white uppercase tracking-tighter">Curriculum</h2>
@@ -449,45 +451,47 @@ export default function AirCoursePage() {
 
       {/* 6. Results Section */}
       <section className="py-40 px-6">
-        <div className="max-w-5xl mx-auto p-16 md:p-24 rounded-[4rem] border border-white/5 bg-gradient-to-br from-[#14161A] to-black">
-          <Reveal>
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-display mb-10 text-white italic">이 과정을 끝내면</h2>
-              <div className="w-20 h-[1px] bg-[#C9B37E]/30 mx-auto" />
+        <div className="site-container">
+          <div className="p-16 md:p-24 rounded-[4rem] border border-white/5 bg-gradient-to-br from-[#14161A] to-black">
+            <Reveal>
+              <div className="text-center mb-20">
+                <h2 className="text-4xl md:text-6xl font-display mb-10 text-white italic">이 과정을 끝내면</h2>
+                <div className="w-20 h-[1px] bg-[#C9B37E]/30 mx-auto" />
+              </div>
+            </Reveal>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+              {[
+                "내 브랜드 방향이 명확해집니다",
+                "콘텐츠를 반복 가능하게 만드는 구조가 생깁니다",
+                "전자책, 상세페이지, 홈페이지를 직접 만듭니다",
+                "강의 자료와 온라인 비즈니스 자산이 쌓입니다",
+                "내 지식이 수익 구조로 연결되기 시작합니다"
+              ].map((text, i) => (
+                <Reveal key={i} delayMs={i * 100}>
+                  <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 text-center group hover:border-[#C9B37E]/40 transition-all duration-300">
+                    <p className="text-lg text-[#C7C7CC] font-light group-hover:text-white transition-colors leading-relaxed">
+                      ✔ {text}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-            {[
-              "내 브랜드 방향이 명확해집니다",
-              "콘텐츠를 반복 가능하게 만드는 구조가 생깁니다",
-              "전자책, 상세페이지, 홈페이지를 직접 만듭니다",
-              "강의 자료와 온라인 비즈니스 자산이 쌓입니다",
-              "내 지식이 수익 구조로 연결되기 시작합니다"
-            ].map((text, i) => (
-              <Reveal key={i} delayMs={i * 100}>
-                <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 text-center group hover:border-[#C9B37E]/40 transition-all duration-300">
-                  <p className="text-lg text-[#C7C7CC] font-light group-hover:text-white transition-colors leading-relaxed">
-                    ✔ {text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+            <Reveal delayMs={600}>
+              <div className="text-center">
+                <p className="text-2xl md:text-4xl font-display italic text-white leading-tight">
+                  흩어져 있던 생각과 경험이<br />
+                  <span style={{ color: ACCENT_1 }} className="font-bold underline underline-offset-8">브랜드와 비즈니스의 흐름</span>으로 연결됩니다
+                </p>
+              </div>
+            </Reveal>
           </div>
-          <Reveal delayMs={600}>
-            <div className="text-center">
-              <p className="text-2xl md:text-4xl font-display italic text-white leading-tight">
-                흩어져 있던 생각과 경험이<br />
-                <span style={{ color: ACCENT_1 }} className="font-bold underline underline-offset-8">브랜드와 비즈니스의 흐름</span>으로 연결됩니다
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
       {/* 7. Expansion Section */}
       <section className="py-40 px-6 border-t border-white/5 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 w-1/2 h-1/2 bg-[#C9B37E]/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
+        <div className="site-container flex flex-col lg:flex-row items-center gap-24">
           <div className="lg:w-1/2">
             <Reveal>
               <h2 className="text-5xl md:text-8xl font-display mb-10 leading-tight italic text-white uppercase tracking-tighter">
@@ -533,51 +537,53 @@ export default function AirCoursePage() {
       {/* 8. CTA Section */}
       <section className="py-48 px-6 text-center bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#C9B37E 1.2px, transparent 1.2px)", backgroundSize: "60px 60px" }} />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <Reveal>
-            <div className="flex justify-center mb-16">
-              <div className="w-24 h-24 relative">
-                <Image src="/images/icon/air.png" alt="Air Icon" fill className="object-contain filter drop-shadow-[0_0_20px_rgba(201,179,126,0.4)]" />
+        <div className="site-container relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <div className="flex justify-center mb-16">
+                <div className="w-24 h-24 relative">
+                  <Image src="/images/icon/air.png" alt="Air Icon" fill className="object-contain filter drop-shadow-[0_0_20px_rgba(201,179,126,0.4)]" />
+                </div>
               </div>
-            </div>
-            <h2 className="text-4xl md:text-7xl font-display mb-10 tracking-tight italic text-white leading-tight uppercase">
-              이제는 당신의 브랜드를<br />
-              <span style={{ color: ACCENT_1 }}>구축할 차례입니다</span>
-            </h2>
-            <p className="text-xl text-[#C7C7CC] font-light italic mb-20 opacity-80">
-              지식과 경험은 정리되는 순간 비즈니스 자산이 됩니다.
-            </p>
-          </Reveal>
-          <Reveal delayMs={300}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                className="group relative h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#C9B37E] to-[#B8B1A3] text-black shadow-[0_20px_60px_rgba(201,179,126,0.25)] transition-all duration-500 hover:-translate-y-2"
+              <h2 className="text-4xl md:text-7xl font-display mb-10 tracking-tight italic text-white leading-tight uppercase">
+                이제는 당신의 브랜드를<br />
+                <span style={{ color: ACCENT_1 }}>구축할 차례입니다</span>
+              </h2>
+              <p className="text-xl text-[#C7C7CC] font-light italic mb-20 opacity-80">
+                지식과 경험은 정리되는 순간 비즈니스 자산이 됩니다.
+              </p>
+            </Reveal>
+            <Reveal delayMs={300}>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  className="group relative h-20 w-full sm:w-96 px-8 flex items-center justify-center text-xl font-bold tracking-[0.2em] rounded-full bg-gradient-to-br from-[#C9B37E] to-[#B8B1A3] text-black shadow-[0_20px_60px_rgba(201,179,126,0.25)] transition-all duration-500 hover:-translate-y-2"
+                >
+                  <span className="relative z-10 font-bold italic">강의 안내 받기</span>
+                  <span className="absolute -inset-2 bg-gradient-to-br from-[#C9B37E] to-[#B8B1A3] opacity-0 blur-3xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
+                </a>
+                <a
+                  href="https://pf.kakao.com/_IxguMn"
+                  target="_blank"
+                  className="group flex flex-col items-center"
+                >
+                  <span className="text-white/40 group-hover:text-[#C9B37E] transition-all duration-300 text-xl tracking-[0.3em] uppercase border-b border-white/5 pb-1 mb-3">
+                    문의하기
+                  </span>
+                  <span className="text-[10px] text-white/10 uppercase tracking-[0.6em] font-bold">REACH OUT</span>
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delayMs={800}>
+              <Link
+                href="/courses"
+                className="inline-block mt-40 text-white/20 hover:text-[#C9B37E] transition-all duration-500 text-sm tracking-[0.5em] uppercase font-light"
               >
-                <span className="relative z-10 font-bold italic">강의 안내 받기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#C9B37E] to-[#B8B1A3] opacity-0 blur-3xl group-hover:opacity-40 transition-opacity duration-300 rounded-full" />
-              </a>
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                className="group flex flex-col items-center"
-              >
-                <span className="text-white/40 group-hover:text-[#C9B37E] transition-all duration-300 text-xl tracking-[0.3em] uppercase border-b border-white/5 pb-1 mb-3">
-                  문의하기
-                </span>
-                <span className="text-[10px] text-white/10 uppercase tracking-[0.6em] font-bold">REACH OUT</span>
-              </a>
-            </div>
-          </Reveal>
-          <Reveal delayMs={800}>
-            <Link
-              href="/courses"
-              className="inline-block mt-40 text-white/20 hover:text-[#C9B37E] transition-all duration-500 text-sm tracking-[0.5em] uppercase font-light"
-            >
-              ← Return To Collection
-            </Link>
-          </Reveal>
+                ← Return To Collection
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
     </div>
