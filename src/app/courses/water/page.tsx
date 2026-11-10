@@ -9,6 +9,7 @@ export default function WaterCoursePage() {
   const WATER_BLUE = "#5EA9DD";
   const WATER_LIGHT = "#99D5F9";
   const WATER_EMERALD = "#4DB6AC";
+  const WATER_GOLD = "#E2B774";
 
   // 커리큘럼 데이터 (단계별 커리큘럼 예시)
   const curriculumData = [
@@ -63,6 +64,98 @@ export default function WaterCoursePage() {
 
   const part1 = curriculumData.slice(0, 2);
   const part2 = curriculumData.slice(2, 4);
+
+  // 5~6주차 확장 커리큘럼 데이터 (비즈니스 & 자동판매 퍼널)
+  const extendedCurriculum = [
+    {
+      week: "5회차",
+      badge: "고객 흐름 & 동선",
+      title: "서비스 판매 동선 & 고객 퍼널",
+      summary: "나의 서비스를 실제 비즈니스로 연결하기",
+      details: [
+        "내가 만든 서비스의 타깃과 고객 흐름 다시 정리하기",
+        "서비스 소개페이지와 신청 동선 설계하기",
+        "무료 콘텐츠와 유료 서비스의 연결 구조 이해하기",
+        "고객이 어디에서 들어오고 어디로 이동하는지 간단한 퍼널 구조 그려보기",
+        "블로그·SNS·스레드·유튜브 등 콘텐츠 유입 채널과 서비스 연결하기"
+      ],
+      result: "서비스 판매 동선 & 고객 퍼널 설계"
+    },
+    {
+      week: "6회차",
+      badge: "자동판매 & 운영 시스템",
+      title: "1인 비즈니스 자동판매 퍼널",
+      summary: "1인 비즈니스 자동판매 퍼널 & 운영 시스템",
+      details: [
+        "콘텐츠 → 무료자료 → 신청폼 → 이메일 DB → 상품·서비스로 이어지는 자동판매 퍼널 구조 이해하기",
+        "리드마그넷과 무료자료를 활용해 관심 고객을 모으는 방법 이해하기",
+        "이메일 DB를 활용한 후속 콘텐츠와 관계 형성 구조 설계하기",
+        "전자책·강의·상담·디지털서비스 등 내 상품으로 자연스럽게 연결하는 흐름 만들기",
+        "반복되는 안내·신청·자료 전달 업무를 자동화할 수 있는 기본 구조 이해하기",
+        "이후 Make, n8n, API, 이메일 자동화 등으로 확장할 수 있는 방향 살펴보기"
+      ],
+      result: "나만의 1인 비즈니스 자동판매 시스템 설계"
+    }
+  ];
+
+  // 퍼널 흐름 시각화 단계 데이터
+  const funnelSteps = [
+    {
+      step: "01",
+      code: "CONTENT",
+      title: "콘텐츠",
+      desc: "블로그·SNS·스레드·유튜브 등\n관심을 만드는 콘텐츠"
+    },
+    {
+      step: "02",
+      code: "LEAD MAGNET",
+      title: "무료자료",
+      desc: "체크리스트·미니 전자책·가이드 등\n무료 제공 자료"
+    },
+    {
+      step: "03",
+      code: "FORM",
+      title: "신청폼",
+      desc: "신청폼을 통한\n관심 고객 정보 수집"
+    },
+    {
+      step: "04",
+      code: "DB",
+      title: "이메일 DB",
+      desc: "다시 만날 수 있는\n고객 자산 축적"
+    },
+    {
+      step: "05",
+      code: "FOLLOW-UP",
+      title: "후속 콘텐츠",
+      desc: "이메일·콘텐츠를 통한\n신뢰 형성"
+    },
+    {
+      step: "06",
+      code: "OFFER",
+      title: "상품·서비스",
+      desc: "전자책·강의·상담·\n서비스로 연결"
+    }
+  ];
+
+  // 실제 적용 예시 3개 데이터
+  const funnelExamples = [
+    {
+      label: "예시 01",
+      category: "전자책 판매",
+      flow: ["스레드 콘텐츠", "무료 미니북", "이메일 DB", "본 전자책"]
+    },
+    {
+      label: "예시 02",
+      category: "강의 모집",
+      flow: ["블로그·유튜브", "무료 체크리스트", "개강 알림", "원데이·정규과정"]
+    },
+    {
+      label: "예시 03",
+      category: "상담·코칭·서비스",
+      flow: ["무료 테스트", "결과 자료", "이메일 후속 콘텐츠", "유료 서비스"]
+    }
+  ];
 
   // 만들 수 있는 서비스 예시 데이터
   const serviceExamples = [
@@ -650,6 +743,271 @@ export default function WaterCoursePage() {
                   ※ 웹 배포를 기본 실습으로 진행하며, 결제 연동에 필요한 준비와 앱인토스 등 추가 배포 방식의 확장 방향을 다룹니다. <br className="hidden md:block" />
                   세부 실습 및 연동 범위는 과정 모집 시 최종 확정 안내됩니다.
                 </p>
+              </div>
+
+              {/* ──────────────────────────────────────────────────────────
+                  신규 5~6주차 확장 섹션 (1인 비즈니스 운영·자동판매 퍼널)
+                  ────────────────────────────────────────────────────────── */}
+              <div className="mt-20 md:mt-28 pt-16 md:pt-20 border-t border-white/[0.08]">
+                {/* 6. 과정 전체 흐름 설명 브릿지 메시지 */}
+                <Reveal>
+                  <div className="relative p-8 md:p-12 lg:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#121c24] via-[#0d161e] to-[#090909] border border-[rgba(94,169,221,0.22)] text-center mb-16 md:mb-20 overflow-hidden shadow-2xl">
+                    <div
+                      className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 blur-[140px] opacity-15 pointer-events-none"
+                      style={{ backgroundColor: WATER_BLUE }}
+                    ></div>
+                    <div
+                      className="absolute -bottom-24 right-10 w-80 h-80 blur-[130px] opacity-10 pointer-events-none"
+                      style={{ backgroundColor: WATER_GOLD }}
+                    ></div>
+
+                    <div className="relative z-10 max-w-3xl mx-auto">
+                      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-[rgba(226,183,116,0.3)] mb-6">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E2B774] animate-pulse"></span>
+                        <span className="course-caption uppercase tracking-[0.25em] font-mono text-[#E2B774] font-semibold text-xs">
+                          6-Week Expansion • Business Funnel
+                        </span>
+                      </div>
+
+                      <h3 className="course-section-title font-display text-white mb-6 leading-tight italic">
+                        만드는 것에서 <span style={{ color: WATER_BLUE }}>끝나지 않습니다</span>
+                      </h3>
+
+                      <p className="course-body text-[#BFBFBF] font-light leading-relaxed mb-6">
+                        아이디어를 서비스로 만들고, <br className="md:hidden" />
+                        웹에 배포하고, <br className="md:hidden" />
+                        사람을 불러오고, <br />
+                        관심 고객을 모으고, <br className="md:hidden" />
+                        상품과 서비스로 연결하는 것까지.
+                      </p>
+
+                      <div className="w-16 h-[1px] mx-auto mb-6" style={{ backgroundColor: `${WATER_BLUE}40` }}></div>
+
+                      <p className="course-hero-sub text-white font-medium">
+                        Water 과정은 <span style={{ color: WATER_LIGHT }}>'서비스 제작'</span>에서 <br className="md:hidden" />
+                        <span style={{ color: WATER_GOLD }}>'1인 비즈니스 운영 구조'</span>까지 확장합니다.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {/* Part 3 헤더 */}
+                <div className="flex items-center gap-6 md:gap-8 mb-12">
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to right, transparent, ${WATER_BLUE}33, ${WATER_GOLD}33)` }}></div>
+                  <h3 className="course-mid-title font-display tracking-[0.1em] px-4 md:px-6 italic text-center" style={{ color: WATER_LIGHT }}>
+                    Part 3. <span className="text-white font-normal">1인 비즈니스 운영과 자동판매 퍼널</span>
+                  </h3>
+                  <div className="h-[1px] flex-1" style={{ background: `linear-gradient(to left, transparent, ${WATER_BLUE}33, ${WATER_GOLD}33)` }}></div>
+                </div>
+
+                {/* 2 & 3. 5주차 및 6주차 커리큘럼 카드 */}
+                <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-20 md:mb-24">
+                  {extendedCurriculum.map((item, i) => (
+                    <Reveal key={i} delayMs={i * 150} slideFrom="bottom">
+                      <div className="group relative p-8 md:p-10 rounded-[2.5rem] border border-white/[0.05] transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.4)] flex flex-col h-full bg-gradient-to-br from-[#121c24] to-[#0c1218] hover:border-[rgba(94,169,221,0.35)]">
+                        <div
+                          className="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                          style={{
+                            background: i === 1
+                              ? `linear-gradient(to right, transparent, ${WATER_GOLD}66, transparent)`
+                              : `linear-gradient(to right, transparent, ${WATER_BLUE}66, transparent)`
+                          }}
+                        ></div>
+
+                        <div className="flex items-center justify-between mb-4">
+                          <div
+                            className="course-mid-title font-display font-bold tracking-tighter"
+                            style={{ color: i === 1 ? `${WATER_GOLD}B3` : `${WATER_BLUE}B3` }}
+                          >
+                            {item.week}
+                          </div>
+                          <span
+                            className="course-caption font-mono uppercase px-3 py-1 rounded-full bg-white/[0.03] border text-xs"
+                            style={{
+                              borderColor: i === 1 ? "rgba(226,183,116,0.3)" : "rgba(94,169,221,0.25)",
+                              color: i === 1 ? WATER_GOLD : WATER_BLUE
+                            }}
+                          >
+                            {item.badge}
+                          </span>
+                        </div>
+
+                        <h4 className="course-card-title font-bold mb-6 text-white group-hover:text-[#99D5F9] transition-colors leading-tight">
+                          {item.summary}
+                        </h4>
+
+                        <ul className="space-y-4 mb-10 flex-1">
+                          {item.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-start gap-4 text-[#BFBFBF] group-hover:text-white transition-colors course-body">
+                              <span
+                                className="text-xs mt-1.5"
+                                style={{ color: i === 1 ? WATER_GOLD : WATER_BLUE }}
+                              >
+                                ✦
+                              </span>
+                              <span className="leading-[1.7] font-light">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="pt-6 border-t border-white/[0.05] flex items-center justify-between">
+                          <span
+                            className="course-body font-bold italic tracking-wide"
+                            style={{ color: i === 1 ? WATER_GOLD : WATER_BLUE }}
+                          >
+                            {item.result}
+                          </span>
+                          <span
+                            className="text-xl group-hover:translate-x-2 transition-transform duration-500"
+                            style={{ color: i === 1 ? `${WATER_GOLD}66` : `${WATER_BLUE}66` }}
+                          >
+                            →
+                          </span>
+                        </div>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+
+                {/* 4. 퍼널 흐름 시각화 */}
+                <Reveal delayMs={200}>
+                  <div className="p-8 md:p-12 lg:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#101921] to-[#0a0f14] border border-white/[0.06] shadow-2xl mb-16 md:mb-20 relative overflow-hidden">
+                    <div
+                      className="absolute top-0 right-0 w-80 h-80 blur-[130px] opacity-10 pointer-events-none"
+                      style={{ backgroundColor: WATER_BLUE }}
+                    ></div>
+
+                    <div className="text-center mb-12 md:mb-14">
+                      <span
+                        className="course-caption tracking-[0.35em] uppercase mb-3 block font-mono font-semibold"
+                        style={{ color: WATER_BLUE }}
+                      >
+                        SOLO BUSINESS AUTOMATION
+                      </span>
+                      <h3 className="course-mid-title font-display text-white italic leading-tight">
+                        내가 일하지 않는 시간에도 <br />
+                        <span style={{ color: WATER_LIGHT }}>콘텐츠와 서비스가 연결되는 구조</span>
+                      </h3>
+                      <p className="course-caption text-[#A0A0A0] font-light mt-4 max-w-xl mx-auto">
+                        디지털 자산과 자동판매 퍼널이 연결되어 반복 업무를 줄이고 고객과 신뢰를 쌓아가는 현실적인 6단계 흐름
+                      </p>
+                    </div>
+
+                    {/* 가로형 / 단계형 흐름도 */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 relative">
+                      {funnelSteps.map((step, idx) => (
+                        <div key={idx} className="relative flex flex-col">
+                          <div className="p-5 md:p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-[rgba(94,169,221,0.35)] transition-all duration-300 h-full flex flex-col justify-between group">
+                            <div>
+                              <div className="flex items-center justify-between mb-3">
+                                <span className="course-caption font-mono text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-white/50">
+                                  {step.step}
+                                </span>
+                                <span className="text-xs" style={{ color: idx >= 4 ? WATER_GOLD : WATER_BLUE }}>
+                                  ✦
+                                </span>
+                              </div>
+                              <div
+                                className="course-caption font-mono font-semibold text-[11px] tracking-wider mb-1"
+                                style={{ color: idx >= 4 ? WATER_GOLD : WATER_BLUE }}
+                              >
+                                {step.code}
+                              </div>
+                              <div className="text-base font-bold text-white mb-3 group-hover:text-[#99D5F9] transition-colors">
+                                {step.title}
+                              </div>
+                            </div>
+                            <div className="text-xs text-[#BFBFBF] font-light leading-relaxed whitespace-pre-line pt-3 border-t border-white/[0.04]">
+                              {step.desc}
+                            </div>
+                          </div>
+
+                          {/* 화살표 (마지막 아이템 제외, 데스크톱 가로 연결 표시) */}
+                          {idx < funnelSteps.length - 1 && (
+                            <div className="hidden lg:flex absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 text-white/30 text-sm pointer-events-none">
+                              →
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+
+                {/* 5. 실제 적용 예시 (사례 카드 3개) */}
+                <Reveal delayMs={300}>
+                  <div>
+                    <div className="text-center mb-8">
+                      <span className="course-caption uppercase tracking-[0.25em] text-[#89CFF0]/80 font-mono text-xs block mb-2">
+                        PRACTICAL EXAMPLES
+                      </span>
+                      <h4 className="course-card-title font-bold text-white">
+                        실제 적용 예시
+                      </h4>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {funnelExamples.map((ex, idx) => (
+                        <div
+                          key={idx}
+                          className="p-7 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-white/[0.05] hover:border-[rgba(94,169,221,0.3)] transition-all duration-500 shadow-lg flex flex-col justify-between"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between mb-4">
+                              <span className="course-caption font-mono font-semibold px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.06] text-[#E2B774] text-xs">
+                                {ex.label}
+                              </span>
+                              <span className="course-caption text-white/40 font-mono text-xs">
+                                Case Study
+                              </span>
+                            </div>
+
+                            <h5 className="text-lg font-bold text-white mb-6">
+                              {ex.category}
+                            </h5>
+
+                            <div className="space-y-3">
+                              {ex.flow.map((item, fIdx) => (
+                                <div key={fIdx}>
+                                  <div className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                                    <span
+                                      className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-mono font-bold flex-shrink-0"
+                                      style={{
+                                        backgroundColor: fIdx === ex.flow.length - 1 ? `${WATER_GOLD}26` : `${WATER_BLUE}1A`,
+                                        color: fIdx === ex.flow.length - 1 ? WATER_GOLD : WATER_BLUE
+                                      }}
+                                    >
+                                      {fIdx + 1}
+                                    </span>
+                                    <span
+                                      className={`course-caption font-light ${
+                                        fIdx === ex.flow.length - 1 ? "text-white font-medium" : "text-[#BFBFBF]"
+                                      }`}
+                                    >
+                                      {item}
+                                    </span>
+                                  </div>
+                                  {fIdx < ex.flow.length - 1 && (
+                                    <div className="text-center py-1 text-white/20 text-xs">
+                                      ↓
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="mt-6 pt-4 border-t border-white/[0.04] text-center">
+                            <span className="course-caption text-white/50 text-xs font-light">
+                              {ex.category} 자동판매 퍼널 흐름
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+
               </div>
 
             </div>
