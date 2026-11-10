@@ -352,46 +352,48 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [02. AI 그림책 출판 소개]
            ─────────────────────────────────────────── */}
-        <section className="pt-14 pb-16 md:py-20 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#15110E] border border-[#2E241D] shadow-lg space-y-6">
-            <div className="space-y-3">
-              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase block">
-                ABOUT AI PICTURE BOOK
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF7F2] leading-tight break-keep">
-                그림을 잘 그리지 못해도, <br />
-                내 이야기를 그림책으로 표현할 수 있습니다.
-              </h2>
-            </div>
+        <section className="w-full pt-14 pb-16 md:py-20 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#15110E] border border-[#2E241D] shadow-lg space-y-6">
+              <div className="space-y-3">
+                <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase block">
+                  ABOUT AI PICTURE BOOK
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF7F2] leading-tight break-keep">
+                  그림을 잘 그리지 못해도, <br />
+                  내 이야기를 그림책으로 표현할 수 있습니다.
+                </h2>
+              </div>
 
-            <div className="space-y-3 text-sm sm:text-base text-[#C8BCB0] leading-relaxed break-keep">
-              <p>
-                내가 전하고 싶은 메시지를 이야기로 정리하고, <br className="hidden sm:inline" />
-                AI로 장면을 시각화한 뒤 Canva에서 책으로 편집합니다.
-              </p>
-              <p>
-                이 수업에서는 그림책 파일을 만드는 데서 한 걸음 더 나아가, <br className="hidden sm:inline" />
-                유페이퍼 전자책과 부크크 POD 종이책 등록으로 이어지는 <br className="hidden sm:inline" />
-                출판 과정을 함께 살펴봅니다.
-              </p>
-            </div>
+              <div className="space-y-3 text-sm sm:text-base text-[#C8BCB0] leading-relaxed break-keep">
+                <p>
+                  내가 전하고 싶은 메시지를 이야기로 정리하고, <br className="hidden sm:inline" />
+                  AI로 장면을 시각화한 뒤 Canva에서 책으로 편집합니다.
+                </p>
+                <p>
+                  이 수업에서는 그림책 파일을 만드는 데서 한 걸음 더 나아가, <br className="hidden sm:inline" />
+                  유페이퍼 전자책과 부크크 POD 종이책 등록으로 이어지는 <br className="hidden sm:inline" />
+                  출판 과정을 함께 살펴봅니다.
+                </p>
+              </div>
 
-            {/* 펼친 내지 교체형 슬롯 미리보기 */}
-            <div className="pt-2">
-              <ReplaceableImageFrame
-                slot={spreadPagesSlot}
-                fallbackVariant="spread-detail"
-              />
-            </div>
+              {/* 펼친 내지 교체형 슬롯 미리보기 */}
+              <div className="pt-2">
+                <ReplaceableImageFrame
+                  slot={spreadPagesSlot}
+                  fallbackVariant="spread-detail"
+                />
+              </div>
 
-            {/* 작은 설명: POD 안내 */}
-            <div className="p-4 rounded-2xl bg-[#1C1612] border border-[#362A20] flex items-start gap-3">
-              <span className="px-2 py-0.5 rounded bg-[#C6A66B]/20 text-[#D6C6A8] text-[11px] font-bold shrink-0 mt-0.5">
-                POD란?
-              </span>
-              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
-                POD는 주문에 따라 책을 인쇄하는 방식으로, 처음부터 많은 수량을 제작하지 않고 종이책 출판을 시작하는 방법입니다.
-              </p>
+              {/* 작은 설명: POD 안내 */}
+              <div className="p-4 rounded-2xl bg-[#1C1612] border border-[#362A20] flex items-start gap-3">
+                <span className="px-2 py-0.5 rounded bg-[#C6A66B]/20 text-[#D6C6A8] text-[11px] font-bold shrink-0 mt-0.5">
+                  POD란?
+                </span>
+                <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                  POD는 주문에 따라 책을 인쇄하는 방식으로, 처음부터 많은 수량을 제작하지 않고 종이책 출판을 시작하는 방법입니다.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -399,64 +401,66 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [03. 공감과 시작의 장벽]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-14">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              WHY YOUR FIRST BOOK?
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-5 leading-tight break-keep">
-              책을 내고 싶다는 생각, <br />
-              아직 마음속에만 담아두셨나요?
-            </h2>
-            <div className="space-y-3 text-sm sm:text-base text-[#9E8B7C] max-w-2xl mx-auto leading-relaxed break-keep">
-              <p>
-                이야기는 있지만 어떻게 시작할지 모르겠고, <br />
-                그림을 직접 그리기는 어렵고, <br />
-                출판은 전문가만 할 수 있는 일처럼 느껴졌다면.
-              </p>
-              <p className="pt-2 text-[#D6C6A8] font-medium">
-                이제 첫 책을 만드는 과정을 <br />
-                하나씩 따라갈 수 있는 순서로 만나보세요.
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-14">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                WHY YOUR FIRST BOOK?
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-5 leading-tight break-keep">
+                책을 내고 싶다는 생각, <br />
+                아직 마음속에만 담아두셨나요?
+              </h2>
+              <div className="space-y-3 text-sm sm:text-base text-[#9E8B7C] max-w-2xl mx-auto leading-relaxed break-keep">
+                <p>
+                  이야기는 있지만 어떻게 시작할지 모르겠고, <br />
+                  그림을 직접 그리기는 어렵고, <br />
+                  출판은 전문가만 할 수 있는 일처럼 느껴졌다면.
+                </p>
+                <p className="pt-2 text-[#D6C6A8] font-medium">
+                  이제 첫 책을 만드는 과정을 <br />
+                  하나씩 따라갈 수 있는 순서로 만나보세요.
+                </p>
+              </div>
+            </div>
+
+            {/* 장벽 카드 3개 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {BARRIER_CARDS.map((card) => (
+                <div
+                  key={card.number}
+                  className="p-6 md:p-7 rounded-2xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="text-xs font-bold text-[#C6A66B] mb-2 block">
+                      {card.number}. {card.title}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-3 leading-snug break-keep">
+                      {card.quote}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                      {card.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 마무리 강조 */}
+            <div className="p-7 md:p-9 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#120E0C] border border-[#3E3024] text-center shadow-lg">
+              <p className="text-base sm:text-xl font-bold text-[#D6C6A8] leading-relaxed break-keep">
+                “첫 책에 필요한 것은 완벽한 그림 실력보다, <br className="hidden sm:inline" />
+                내 이야기를 끝까지 책으로 만드는 경험입니다.”
               </p>
             </div>
-          </div>
-
-          {/* 장벽 카드 3개 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {BARRIER_CARDS.map((card) => (
-              <div
-                key={card.number}
-                className="p-6 md:p-7 rounded-2xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between"
-              >
-                <div>
-                  <span className="text-xs font-bold text-[#C6A66B] mb-2 block">
-                    {card.number}. {card.title}
-                  </span>
-                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-3 leading-snug break-keep">
-                    {card.quote}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* 마무리 강조 */}
-          <div className="p-7 md:p-9 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#120E0C] border border-[#3E3024] text-center shadow-lg">
-            <p className="text-base sm:text-xl font-bold text-[#D6C6A8] leading-relaxed break-keep">
-              “첫 책에 필요한 것은 완벽한 그림 실력보다, <br className="hidden sm:inline" />
-              내 이야기를 끝까지 책으로 만드는 경험입니다.”
-            </p>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
             [04. Before / After]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 TRANSFORMATION
@@ -506,62 +510,64 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [05. 하루 수업의 4가지 결과]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-14">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              ONE DAY RESULT
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
-              하루의 배움이 <br />
-              첫 그림책의 시작이 됩니다.
-            </h2>
-            <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
-              기획부터 이미지, 편집, 출판 준비까지. <br />
-              책 한 권을 만드는 전체 흐름을 직접 경험합니다.
-            </p>
-          </div>
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-14">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                ONE DAY RESULT
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
+                하루의 배움이 <br />
+                첫 그림책의 시작이 됩니다.
+              </h2>
+              <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
+                기획부터 이미지, 편집, 출판 준비까지. <br />
+                책 한 권을 만드는 전체 흐름을 직접 경험합니다.
+              </p>
+            </div>
 
-          {/* 결과 카드 4개 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {ONE_DAY_RESULTS.map((card) => (
-              <div
-                key={card.number}
-                className="p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/50 transition-colors flex flex-col justify-between"
-              >
-                <div>
-                  <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block mb-2">
-                    {card.number}. {card.code}
-                  </span>
-                  <h3 className="text-base font-bold text-[#FAF7F2] mb-3 break-keep">
-                    {card.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                    {card.description}
-                  </p>
+            {/* 결과 카드 4개 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {ONE_DAY_RESULTS.map((card) => (
+                <div
+                  key={card.number}
+                  className="p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] hover:border-[#C6A66B]/50 transition-colors flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block mb-2">
+                      {card.number}. {card.code}
+                    </span>
+                    <h3 className="text-base font-bold text-[#FAF7F2] mb-3 break-keep">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                      {card.description}
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-4 border-t border-[#221B16] text-[11px] text-[#C6A66B] font-medium">
+                    {card.tag}
+                  </div>
                 </div>
-                <div className="pt-4 mt-4 border-t border-[#221B16] text-[11px] text-[#C6A66B] font-medium">
-                  {card.tag}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* 하단 안내 */}
-          <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-[#17120F] border border-[#2E241D] text-center space-y-1">
-            <p className="text-xs sm:text-sm text-[#D6C6A8] leading-relaxed break-keep">
-              실습 속도와 작품 분량에 따라 수업 후 추가 편집이 필요할 수 있습니다.
-            </p>
-            <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
-              출판 등록 전에는 제공되는 1:1 컨설팅으로 준비 상태를 점검합니다.
-            </p>
+            {/* 하단 안내 */}
+            <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-[#17120F] border border-[#2E241D] text-center space-y-1">
+              <p className="text-xs sm:text-sm text-[#D6C6A8] leading-relaxed break-keep">
+                실습 속도와 작품 분량에 따라 수업 후 추가 편집이 필요할 수 있습니다.
+              </p>
+              <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                출판 등록 전에는 제공되는 1:1 컨설팅으로 준비 상태를 점검합니다.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
             [06. 수업 구성 요약]
            ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-16 md:py-24 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#16120F] border border-[#2E241D] shadow-lg">
               <div className="text-center mb-8">
                 <span className="text-xs font-bold text-[#C6A66B] tracking-[0.2em] uppercase block mb-2">
@@ -601,82 +607,84 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [07. 제작 가능한 그림책 예시]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-14">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              YOUR STORY, YOUR BOOK
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
-              특별한 이야기가 아니라, <br />
-              나만의 시선이 담긴 이야기면 좋습니다.
-            </h2>
-          </div>
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-14">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                YOUR STORY, YOUR BOOK
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
+                특별한 이야기가 아니라, <br />
+                나만의 시선이 담긴 이야기면 좋습니다.
+              </h2>
+            </div>
 
-          {/* 예시 카드 4개 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
-            {BOOK_EXAMPLES.map((example) => (
-              <div
-                key={example.number}
-                className="p-6 md:p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] hover:border-[#C6A66B]/40 transition-colors"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-[#C6A66B]">
-                    {example.number}
-                  </span>
-                  <div className="w-9 h-9 rounded-xl bg-[#C6A66B]/15 text-[#D6C6A8] flex items-center justify-center text-base">
-                    {example.icon}
+            {/* 예시 카드 4개 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+              {BOOK_EXAMPLES.map((example) => (
+                <div
+                  key={example.number}
+                  className="p-6 md:p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] hover:border-[#C6A66B]/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold text-[#C6A66B]">
+                      {example.number}
+                    </span>
+                    <div className="w-9 h-9 rounded-xl bg-[#C6A66B]/15 text-[#D6C6A8] flex items-center justify-center text-base">
+                      {example.icon}
+                    </div>
                   </div>
+                  <h3 className="text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
+                    {example.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    {example.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
-                  {example.title}
+              ))}
+            </div>
+
+            {/* 보조 영역: 한 가지 이야기에서 컬러링북까지 + 컬러링북 교체형 이미지 슬롯 */}
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#15110E] border border-[#362920] grid grid-cols-1 md:grid-cols-12 gap-6 items-center mb-6">
+              <div className="md:col-span-7 space-y-2.5">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block">
+                  COLORING BOOK EXPANSION
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
+                  한 가지 이야기에서 컬러링북까지
                 </h3>
-                <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                  {example.description}
+                <p className="text-xs sm:text-sm text-[#C8BCB0] leading-relaxed break-keep">
+                  완성한 장면을 바탕으로 컬러링북에 적합한 선화 이미지를 만드는 방법도 배웁니다.
                 </p>
               </div>
-            ))}
-          </div>
+              <div className="md:col-span-5">
+                <ReplaceableImageFrame
+                  slot={PICTUREBOOK_IMAGES.coloringBookSample}
+                  fallbackVariant="coloring-lineart"
+                />
+              </div>
+            </div>
 
-          {/* 보조 영역: 한 가지 이야기에서 컬러링북까지 + 컬러링북 교체형 이미지 슬롯 */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-[#15110E] border border-[#362920] grid grid-cols-1 md:grid-cols-12 gap-6 items-center mb-6">
-            <div className="md:col-span-7 space-y-2.5">
-              <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block">
-                COLORING BOOK EXPANSION
+            {/* 실습 범위 안내 */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center space-y-1">
+              <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-wider block mb-1">
+                SCOPE OF PRACTICE
               </span>
-              <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
-                한 가지 이야기에서 컬러링북까지
-              </h3>
-              <p className="text-xs sm:text-sm text-[#C8BCB0] leading-relaxed break-keep">
-                완성한 장면을 바탕으로 컬러링북에 적합한 선화 이미지를 만드는 방법도 배웁니다.
+              <p className="text-xs sm:text-sm text-[#D6C6A8] font-medium leading-relaxed break-keep">
+                첫 수업에서는 짧은 이야기와 부담 없는 장면 수로 시작합니다.
+              </p>
+              <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+                긴 장편이나 복잡한 다중 캐릭터 구성은 첫 작품 이후 확장합니다.
               </p>
             </div>
-            <div className="md:col-span-5">
-              <ReplaceableImageFrame
-                slot={PICTUREBOOK_IMAGES.coloringBookSample}
-                fallbackVariant="coloring-lineart"
-              />
-            </div>
-          </div>
-
-          {/* 실습 범위 안내 */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center space-y-1">
-            <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-wider block mb-1">
-              SCOPE OF PRACTICE
-            </span>
-            <p className="text-xs sm:text-sm text-[#D6C6A8] font-medium leading-relaxed break-keep">
-              첫 수업에서는 짧은 이야기와 부담 없는 장면 수로 시작합니다.
-            </p>
-            <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
-              긴 장편이나 복잡한 다중 캐릭터 구성은 첫 작품 이후 확장합니다.
-            </p>
           </div>
         </section>
 
         {/* ───────────────────────────────────────────
             [08. 8단계 제작·출판 과정]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-16">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 HOW IT WORKS
@@ -734,24 +742,26 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [09. 강의 핵심 철학]
            ─────────────────────────────────────────── */}
-        <section className="py-14 md:py-20 px-4 sm:px-6 border-b border-[#26201B]">
-          <div className="max-w-3xl mx-auto">
-            <div className="p-7 md:p-10 rounded-3xl bg-gradient-to-b from-[#1C1510] to-[#140F0D] border border-[#3E3024] text-center shadow-lg space-y-4">
-              <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-[0.2em] block">
-                NOT JUST A BOOK
-              </span>
-              <blockquote className="text-lg sm:text-2xl font-bold text-[#FAF7F2] leading-snug break-keep">
-                “첫 그림책은 작품 한 권이면서, <br />
-                나를 설명하는 새로운 이력이 됩니다.”
-              </blockquote>
-              <div className="space-y-2 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep max-w-xl mx-auto pt-1">
-                <p>
-                  내가 살아온 이야기, 전하고 싶은 메시지, <br className="hidden sm:inline" />
-                  앞으로 펼치고 싶은 활동을 한 권의 책으로 표현합니다.
-                </p>
-                <p className="text-[#D6C6A8] font-medium">
-                  AI는 제작을 돕고, 책에 담길 시선과 이야기는 나에게서 시작됩니다.
-                </p>
+        <section className="w-full py-14 md:py-20 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="max-w-3xl mx-auto">
+              <div className="p-7 md:p-10 rounded-3xl bg-gradient-to-b from-[#1C1510] to-[#140F0D] border border-[#3E3024] text-center shadow-lg space-y-4">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-[0.2em] block">
+                  NOT JUST A BOOK
+                </span>
+                <blockquote className="text-lg sm:text-2xl font-bold text-[#FAF7F2] leading-snug break-keep">
+                  “첫 그림책은 작품 한 권이면서, <br />
+                  나를 설명하는 새로운 이력이 됩니다.”
+                </blockquote>
+                <div className="space-y-2 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep max-w-xl mx-auto pt-1">
+                  <p>
+                    내가 살아온 이야기, 전하고 싶은 메시지, <br className="hidden sm:inline" />
+                    앞으로 펼치고 싶은 활동을 한 권의 책으로 표현합니다.
+                  </p>
+                  <p className="text-[#D6C6A8] font-medium">
+                    AI는 제작을 돕고, 책에 담길 시선과 이야기는 나에게서 시작됩니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -760,77 +770,79 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [10. 수강생 혜택 6종]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-16">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              CLASS KIT
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
-              첫 책 이후에도 다시 활용할 수 있는 <br />
-              제작 자료와 출판 지원을 드립니다.
-            </h2>
-          </div>
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-16">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                CLASS KIT
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
+                첫 책 이후에도 다시 활용할 수 있는 <br />
+                제작 자료와 출판 지원을 드립니다.
+              </h2>
+            </div>
 
-          {/* 혜택 6종 그리드 (모바일 1열, 태블릿 2열, 데스크톱 3열) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-10">
-            {CLASS_KITS.map((kit) => (
-              <div
-                key={kit.code}
-                className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors"
-              >
-                <div>
-                  <span className="text-xs text-[#C6A66B] font-bold block mb-1.5">
-                    {kit.code}
-                  </span>
-                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2.5 break-keep">
-                    {kit.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                    {kit.description}
-                  </p>
+            {/* 혜택 6종 그리드 (모바일 1열, 태블릿 2열, 데스크톱 3열) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-10">
+              {CLASS_KITS.map((kit) => (
+                <div
+                  key={kit.code}
+                  className="p-5 sm:p-6 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col justify-between hover:border-[#C6A66B]/40 transition-colors"
+                >
+                  <div>
+                    <span className="text-xs text-[#C6A66B] font-bold block mb-1.5">
+                      {kit.code}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2.5 break-keep">
+                      {kit.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                      {kit.description}
+                    </p>
+                  </div>
+                  {kit.note && (
+                    <p className="mt-4 pt-3 border-t border-[#241B15] text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
+                      * {kit.note}
+                    </p>
+                  )}
                 </div>
-                {kit.note && (
-                  <p className="mt-4 pt-3 border-t border-[#241B15] text-[11px] text-[#8F7D6E] leading-relaxed break-keep">
-                    * {kit.note}
-                  </p>
-                )}
+              ))}
+            </div>
+
+            {/* 제공 자료 이미지 교체 슬롯 (스킬 화면, 템플릿 일부, 도구 화면, 안내서 표지) */}
+            <div className="mb-8">
+              <ReplaceableImageFrame
+                slot={PICTUREBOOK_IMAGES.classKitPreview}
+                fallbackVariant="class-kit"
+              />
+            </div>
+
+            {/* 하단 활용 흐름 */}
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#17120F] border border-[#3A2D23] text-center">
+              <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-wider block mb-3">
+                HOW TO USE CLASS KIT
+              </span>
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-[#FAF7F2]">
+                <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
+                  기획 스킬 실행
+                </span>
+                <span className="text-[#C6A66B]">→</span>
+                <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
+                  이미지 제작
+                </span>
+                <span className="text-[#C6A66B]">→</span>
+                <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
+                  템플릿 편집
+                </span>
+                <span className="text-[#C6A66B]">→</span>
+                <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
+                  출판 전 점검
+                </span>
+                <span className="text-[#C6A66B]">→</span>
+                <span className="px-3 py-1.5 rounded-lg bg-[#2E2218] border border-[#C6A66B]/40 text-[#D6C6A8]">
+                  등록 준비
+                </span>
               </div>
-            ))}
-          </div>
-
-          {/* 제공 자료 이미지 교체 슬롯 (스킬 화면, 템플릿 일부, 도구 화면, 안내서 표지) */}
-          <div className="mb-8">
-            <ReplaceableImageFrame
-              slot={PICTUREBOOK_IMAGES.classKitPreview}
-              fallbackVariant="class-kit"
-            />
-          </div>
-
-          {/* 하단 활용 흐름 */}
-          <div className="p-6 sm:p-7 rounded-2xl bg-[#17120F] border border-[#3A2D23] text-center">
-            <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-wider block mb-3">
-              HOW TO USE CLASS KIT
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-[#FAF7F2]">
-              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
-                기획 스킬 실행
-              </span>
-              <span className="text-[#C6A66B]">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
-                이미지 제작
-              </span>
-              <span className="text-[#C6A66B]">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
-                템플릿 편집
-              </span>
-              <span className="text-[#C6A66B]">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-[#241B16] border border-[#3E2F25]">
-                출판 전 점검
-              </span>
-              <span className="text-[#C6A66B]">→</span>
-              <span className="px-3 py-1.5 rounded-lg bg-[#2E2218] border border-[#C6A66B]/40 text-[#D6C6A8]">
-                등록 준비
-              </span>
             </div>
           </div>
         </section>
@@ -838,8 +850,8 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [11. 실제 그림책·출판 사례]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-5xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 REAL EXPERIENCE
@@ -914,52 +926,54 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [12. 첫 책 이후의 성장]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-12">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              YOUR FIRST BOOK
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-5 leading-tight break-keep">
-              첫 책 한 권이, <br />
-              다음 이야기를 만드는 힘이 됩니다.
-            </h2>
-            <div className="space-y-3 text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto leading-relaxed break-keep">
-              <p>처음부터 모든 것이 완벽할 필요는 없습니다.</p>
-              <p>
-                한 권을 만들어보면 <br />
-                내가 어떤 이야기를 잘하는지, <br />
-                어떤 그림과 편집이 어울리는지, <br />
-                다음 책은 어떻게 만들면 좋을지 보이기 시작합니다.
-              </p>
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-12">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                YOUR FIRST BOOK
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-5 leading-tight break-keep">
+                첫 책 한 권이, <br />
+                다음 이야기를 만드는 힘이 됩니다.
+              </h2>
+              <div className="space-y-3 text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto leading-relaxed break-keep">
+                <p>처음부터 모든 것이 완벽할 필요는 없습니다.</p>
+                <p>
+                  한 권을 만들어보면 <br />
+                  내가 어떤 이야기를 잘하는지, <br />
+                  어떤 그림과 편집이 어울리는지, <br />
+                  다음 책은 어떻게 만들면 좋을지 보이기 시작합니다.
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* 성장 흐름 배너 */}
-          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#181310] via-[#241B16] to-[#181310] border border-[#443325] text-center mb-8 shadow-xl">
-            <span className="text-xs text-[#C6A66B] font-bold tracking-widest block mb-2.5 uppercase">
-              GROWTH FLOW
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-sm sm:text-xl font-extrabold text-[#FAF7F2]">
-              <span>첫 그림책 제작</span>
-              <span className="text-[#C6A66B]">→</span>
-              <span>출판 도전</span>
-              <span className="text-[#C6A66B]">→</span>
-              <span>독자와 만남</span>
-              <span className="text-[#C6A66B]">→</span>
-              <span className="text-[#D6C6A8]">다음 작품 기획</span>
+            {/* 성장 흐름 배너 */}
+            <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#181310] via-[#241B16] to-[#181310] border border-[#443325] text-center mb-8 shadow-xl">
+              <span className="text-xs text-[#C6A66B] font-bold tracking-widest block mb-2.5 uppercase">
+                GROWTH FLOW
+              </span>
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-sm sm:text-xl font-extrabold text-[#FAF7F2]">
+                <span>첫 그림책 제작</span>
+                <span className="text-[#C6A66B]">→</span>
+                <span>출판 도전</span>
+                <span className="text-[#C6A66B]">→</span>
+                <span>독자와 만남</span>
+                <span className="text-[#C6A66B]">→</span>
+                <span className="text-[#D6C6A8]">다음 작품 기획</span>
+              </div>
             </div>
-          </div>
 
-          <p className="text-center text-sm md:text-base text-[#C8BCB0] font-semibold break-keep">
-            제공된 스킬과 템플릿을 다시 활용하며, 나만의 시리즈와 활동으로 이어가세요.
-          </p>
+            <p className="text-center text-sm md:text-base text-[#C8BCB0] font-semibold break-keep">
+              제공된 스킬과 템플릿을 다시 활용하며, 나만의 시리즈와 활동으로 이어가세요.
+            </p>
+          </div>
         </section>
 
         {/* ───────────────────────────────────────────
             [13. 추천 대상]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 RECOMMENDED FOR
@@ -990,108 +1004,110 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [14. 작가 브랜딩·커리어 확장]
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
-          <div className="text-center mb-14">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
-              AUTHOR BRANDING
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
-              그림책 한 권에서, <br />
-              나를 소개하는 새로운 커리어로
-            </h2>
-            <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto leading-relaxed break-keep">
-              책은 나의 경험과 철학을 보여주는 콘텐츠입니다. <br />
-              첫 출판을 계기로 작가 소개를 정리하고, <br className="hidden sm:inline" />
-              기존 활동과 연결할 수 있는 방향을 찾아봅니다.
-            </p>
-          </div>
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-14">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                AUTHOR BRANDING
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#FAF7F2] mb-4 leading-tight break-keep">
+                그림책 한 권에서, <br />
+                나를 소개하는 새로운 커리어로
+              </h2>
+              <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto leading-relaxed break-keep">
+                책은 나의 경험과 철학을 보여주는 콘텐츠입니다. <br />
+                첫 출판을 계기로 작가 소개를 정리하고, <br className="hidden sm:inline" />
+                기존 활동과 연결할 수 있는 방향을 찾아봅니다.
+              </p>
+            </div>
 
-          {/* 확장 흐름 다이어그램 */}
-          <div className="p-6 sm:p-8 rounded-3xl bg-[#181310] border border-[#2E241E] mb-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center">
-              <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
-                <span className="text-[11px] text-[#A8988B] block mb-0.5">
-                  STEP 01
+            {/* 확장 흐름 다이어그램 */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#181310] border border-[#2E241E] mb-8">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center">
+                <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
+                  <span className="text-[11px] text-[#A8988B] block mb-0.5">
+                    STEP 01
+                  </span>
+                  <strong className="text-xs sm:text-sm text-[#FAF7F2]">
+                    나의 이야기
+                  </strong>
+                </div>
+                <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
+                  →
                 </span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">
-                  나의 이야기
-                </strong>
-              </div>
-              <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
-                →
-              </span>
-              <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#C6A66B]/40 w-full md:w-auto flex-1">
-                <span className="text-[11px] text-[#C6A66B] block mb-0.5">
-                  STEP 02
+                <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#C6A66B]/40 w-full md:w-auto flex-1">
+                  <span className="text-[11px] text-[#C6A66B] block mb-0.5">
+                    STEP 02
+                  </span>
+                  <strong className="text-xs sm:text-sm text-[#D6C6A8]">
+                    첫 그림책
+                  </strong>
+                </div>
+                <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
+                  →
                 </span>
-                <strong className="text-xs sm:text-sm text-[#D6C6A8]">
-                  첫 그림책
-                </strong>
-              </div>
-              <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
-                →
-              </span>
-              <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
-                <span className="text-[11px] text-[#A8988B] block mb-0.5">
-                  STEP 03
+                <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
+                  <span className="text-[11px] text-[#A8988B] block mb-0.5">
+                    STEP 03
+                  </span>
+                  <strong className="text-xs sm:text-sm text-[#FAF7F2]">
+                    출판 이력
+                  </strong>
+                </div>
+                <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
+                  →
                 </span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">
-                  출판 이력
-                </strong>
-              </div>
-              <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
-                →
-              </span>
-              <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
-                <span className="text-[11px] text-[#A8988B] block mb-0.5">
-                  STEP 04
+                <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
+                  <span className="text-[11px] text-[#A8988B] block mb-0.5">
+                    STEP 04
+                  </span>
+                  <strong className="text-xs sm:text-sm text-[#FAF7F2]">
+                    작가 프로필
+                  </strong>
+                </div>
+                <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
+                  →
                 </span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">
-                  작가 프로필
-                </strong>
-              </div>
-              <span className="text-[#C6A66B] font-bold text-base rotate-90 md:rotate-0">
-                →
-              </span>
-              <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
-                <span className="text-[11px] text-[#8E6D38] block mb-0.5">
-                  STEP 05
-                </span>
-                <strong className="text-xs sm:text-sm text-[#FAF7F2]">
-                  브랜드·콘텐츠·활동 확장
-                </strong>
+                <div className="p-3.5 rounded-xl bg-[#231A15] border border-[#3E2F25] w-full md:w-auto flex-1">
+                  <span className="text-[11px] text-[#8E6D38] block mb-0.5">
+                    STEP 05
+                  </span>
+                  <strong className="text-xs sm:text-sm text-[#FAF7F2]">
+                    브랜드·콘텐츠·활동 확장
+                  </strong>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* 확장 카드 3개 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            {AUTHOR_BRANDING_CARDS.map((card) => (
-              <div
-                key={card.number}
-                className="p-6 rounded-2xl bg-[#15110E] border border-[#2C221B]"
-              >
-                <span className="text-xs font-bold text-[#C6A66B] block mb-2">
-                  {card.number}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
+            {/* 확장 카드 3개 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+              {AUTHOR_BRANDING_CARDS.map((card) => (
+                <div
+                  key={card.number}
+                  className="p-6 rounded-2xl bg-[#15110E] border border-[#2C221B]"
+                >
+                  <span className="text-xs font-bold text-[#C6A66B] block mb-2">
+                    {card.number}
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] mb-2 break-keep">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    {card.description}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-          {/* 하단 안내 (네이버 인물정보 기준 준수) */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center space-y-1">
-            <p className="text-xs sm:text-sm text-[#D6C6A8] font-medium break-keep">
-              출판 이력을 바탕으로, 작가 프로필과 네이버 인물정보 등록 준비까지 함께 살펴봅니다.
-            </p>
-            <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
-              ※ 네이버 인물정보는 신청 시점의 등록 기준과 제출 자료에 따라 검토됩니다. 출판만으로 등록이 자동 보장되지는 않습니다.
-            </p>
+            {/* 하단 안내 (네이버 인물정보 기준 준수) */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center space-y-1">
+              <p className="text-xs sm:text-sm text-[#D6C6A8] font-medium break-keep">
+                출판 이력을 바탕으로, 작가 프로필과 네이버 인물정보 등록 준비까지 함께 살펴봅니다.
+              </p>
+              <p className="text-xs text-[#8F7D6E] leading-relaxed break-keep">
+                ※ 네이버 인물정보는 신청 시점의 등록 기준과 제출 자료에 따라 검토됩니다. 출판만으로 등록이 자동 보장되지는 않습니다.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -1100,9 +1116,9 @@ export default function PicturebookPage() {
            ─────────────────────────────────────────── */}
         <section
           id="class-info"
-          className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]"
+          className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="site-container">
             <div className="text-center mb-12">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
                 CLASS INFO
@@ -1249,8 +1265,8 @@ export default function PicturebookPage() {
         {/* ───────────────────────────────────────────
             [16. FAQ] - 자명스쿨 시그니처 웜베이지 배경 + 키보드 접근성 아코디언
            ─────────────────────────────────────────── */}
-        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 px-4 sm:px-6 border-b border-[#E8DFD3]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 border-b border-[#E8DFD3]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#8E6D38] uppercase mb-3 block">
                 FREQUENTLY ASKED QUESTIONS
@@ -1275,7 +1291,7 @@ export default function PicturebookPage() {
            ─────────────────────────────────────────── */}
         <section
           id="apply"
-          className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden"
+          className="w-full py-20 md:py-28 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden"
         >
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none opacity-15 blur-[140px]"
@@ -1285,133 +1301,135 @@ export default function PicturebookPage() {
             }}
           />
 
-          <div className="max-w-3xl mx-auto text-center relative z-10">
-            <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#C6A66B] uppercase mb-4 block">
-              FROM YOUR STORY TO YOUR BOOK
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#FAF7F2] mb-6 leading-tight break-keep">
-              언젠가 쓰고 싶었던 이야기, <br />
-              이번에는 책으로 시작해보세요.
-            </h2>
+          <div className="site-container relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#C6A66B] uppercase mb-4 block">
+                FROM YOUR STORY TO YOUR BOOK
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-extrabold text-[#FAF7F2] mb-6 leading-tight break-keep">
+                언젠가 쓰고 싶었던 이야기, <br />
+                이번에는 책으로 시작해보세요.
+              </h2>
 
-            {/* 본문 설명 카드 */}
-            <div className="my-8 p-6 md:p-8 rounded-2xl bg-[#1C1510] border border-[#4A3728] max-w-2xl mx-auto text-center space-y-3 shadow-lg">
-              <p className="text-base sm:text-lg text-[#F5EFE6] font-bold leading-relaxed break-keep">
-                머릿속에만 있던 이야기를 꺼내고, <br />
-                AI로 장면을 만들고, <br />
-                Canva로 한 권의 책을 완성해가는 시간.
-              </p>
-              <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
-                첫 그림책은 나의 이야기를 세상에 소개하는 첫걸음이 됩니다.
-              </p>
-            </div>
-
-            {/* 최종 신청 요약 카드 */}
-            <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#181310] border border-[#3E3127] shadow-2xl max-w-xl mx-auto mb-6 text-left">
-              <div className="text-center mb-6 pb-6 border-b border-[#2B221B]">
-                <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-widest block mb-1">
-                  {PICTUREBOOK_CLASS_CONFIG.courseTitle}
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
-                  수업을 통해 준비하는 4가지 결과물
-                </h3>
-              </div>
-
-              {/* 결과물 요약 4종 */}
-              <div className="space-y-3 mb-6">
-                {FINAL_CTA_RESULTS.map((res, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]"
-                  >
-                    <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
-                      ✓
-                    </span>
-                    <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2] break-keep">
-                      {res}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* 혜택 강조 */}
-              <div className="p-4 rounded-2xl bg-[#140F0C] border border-[#2E231B] mb-6">
-                <span className="text-[11px] font-bold text-[#C6A66B] block mb-1.5">
-                  포함 혜택 6종
-                </span>
-                <p className="text-xs sm:text-sm text-[#D6C6A8] leading-relaxed break-keep font-medium">
-                  기획 스킬 · 순서 템플릿 · 자동 생성 도구 <br />
-                  1인 출판사 등록 전자책 · 출판 등록 전 1:1 컨설팅 <br />
-                  부크크 등록 실전 노하우 정리집
+              {/* 본문 설명 카드 */}
+              <div className="my-8 p-6 md:p-8 rounded-2xl bg-[#1C1510] border border-[#4A3728] max-w-2xl mx-auto text-center space-y-3 shadow-lg">
+                <p className="text-base sm:text-lg text-[#F5EFE6] font-bold leading-relaxed break-keep">
+                  머릿속에만 있던 이야기를 꺼내고, <br />
+                  AI로 장면을 만들고, <br />
+                  Canva로 한 권의 책을 완성해가는 시간.
+                </p>
+                <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
+                  첫 그림책은 나의 이야기를 세상에 소개하는 첫걸음이 됩니다.
                 </p>
               </div>
 
-              {/* 강의 정보 (상단 정보와 동일한 데이터 참조) */}
-              <div className="space-y-3 mb-8 pt-4 border-t border-[#2B221B]">
-                <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
-                  <span className="text-[#8F7D6E]">수업 시간</span>
-                  <span className="text-[#FAF7F2] font-semibold text-right">
-                    {PICTUREBOOK_CLASS_CONFIG.duration}
+              {/* 최종 신청 요약 카드 */}
+              <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-[#181310] border border-[#3E3127] shadow-2xl max-w-xl mx-auto mb-6 text-left">
+                <div className="text-center mb-6 pb-6 border-b border-[#2B221B]">
+                  <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-widest block mb-1">
+                    {PICTUREBOOK_CLASS_CONFIG.courseTitle}
                   </span>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] break-keep">
+                    수업을 통해 준비하는 4가지 결과물
+                  </h3>
                 </div>
-                <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
-                  <span className="text-[#8F7D6E]">수강료</span>
-                  <span className="text-[#D6C6A8] font-bold text-right">
-                    {PICTUREBOOK_CLASS_CONFIG.price}
-                  </span>
+
+                {/* 결과물 요약 4종 */}
+                <div className="space-y-3 mb-6">
+                  {FINAL_CTA_RESULTS.map((res, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-[#221A15] border border-[#33261C]"
+                    >
+                      <span className="w-6 h-6 rounded-md bg-[#C6A66B]/20 text-[#D6C6A8] flex items-center justify-center text-xs font-bold shrink-0">
+                        ✓
+                      </span>
+                      <span className="text-xs sm:text-sm font-semibold text-[#FAF7F2] break-keep">
+                        {res}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
-                  <span className="text-[#8F7D6E]">개강 일정</span>
-                  <span className="text-[#C6A66B] font-bold text-right">
-                    {PICTUREBOOK_CLASS_CONFIG.schedule}
+
+                {/* 혜택 강조 */}
+                <div className="p-4 rounded-2xl bg-[#140F0C] border border-[#2E231B] mb-6">
+                  <span className="text-[11px] font-bold text-[#C6A66B] block mb-1.5">
+                    포함 혜택 6종
                   </span>
+                  <p className="text-xs sm:text-sm text-[#D6C6A8] leading-relaxed break-keep font-medium">
+                    기획 스킬 · 순서 템플릿 · 자동 생성 도구 <br />
+                    1인 출판사 등록 전자책 · 출판 등록 전 1:1 컨설팅 <br />
+                    부크크 등록 실전 노하우 정리집
+                  </p>
                 </div>
-                <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
-                  <span className="text-[#8F7D6E]">출판 전 지원</span>
-                  <span className="text-[#FAF7F2] font-medium text-right">
-                    {PICTUREBOOK_CLASS_CONFIG.prePublishSupport}
-                  </span>
+
+                {/* 강의 정보 (상단 정보와 동일한 데이터 참조) */}
+                <div className="space-y-3 mb-8 pt-4 border-t border-[#2B221B]">
+                  <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
+                    <span className="text-[#8F7D6E]">수업 시간</span>
+                    <span className="text-[#FAF7F2] font-semibold text-right">
+                      {PICTUREBOOK_CLASS_CONFIG.duration}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
+                    <span className="text-[#8F7D6E]">수강료</span>
+                    <span className="text-[#D6C6A8] font-bold text-right">
+                      {PICTUREBOOK_CLASS_CONFIG.price}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
+                    <span className="text-[#8F7D6E]">개강 일정</span>
+                    <span className="text-[#C6A66B] font-bold text-right">
+                      {PICTUREBOOK_CLASS_CONFIG.schedule}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs sm:text-sm gap-2">
+                    <span className="text-[#8F7D6E]">출판 전 지원</span>
+                    <span className="text-[#FAF7F2] font-medium text-right">
+                      {PICTUREBOOK_CLASS_CONFIG.prePublishSupport}
+                    </span>
+                  </div>
+                </div>
+
+                {/* CTA 버튼 */}
+                <PicturebookCtaButton
+                  courseId={PICTUREBOOK_CLASS_CONFIG.id}
+                  courseTitle={PICTUREBOOK_CLASS_CONFIG.courseTitle}
+                  status={PICTUREBOOK_CLASS_CONFIG.status}
+                  applicationUrl={PICTUREBOOK_CLASS_CONFIG.applicationUrl}
+                  notificationUrl={PICTUREBOOK_CLASS_CONFIG.notificationUrl}
+                  ctaOpenText={PICTUREBOOK_CLASS_CONFIG.ctaOpenText}
+                  ctaScheduledText={PICTUREBOOK_CLASS_CONFIG.ctaScheduledText}
+                  variant="final"
+                />
+
+                {/* 보조 링크 2종 */}
+                <div className="mt-5 pt-4 border-t border-[#2B221B]/80 flex flex-wrap items-center justify-center gap-4 text-xs">
+                  <Link
+                    href={PICTUREBOOK_CLASS_CONFIG.termsUrl}
+                    className="text-[#A8988B] hover:text-[#C6A66B] underline underline-offset-4 transition-colors"
+                  >
+                    취소·환불 규정 확인하기
+                  </Link>
+                  <span className="text-[#3E3127]">|</span>
+                  <Link
+                    href={PICTUREBOOK_CLASS_CONFIG.onedayListUrl}
+                    className="text-[#A8988B] hover:text-[#C6A66B] underline underline-offset-4 transition-colors"
+                  >
+                    다른 원데이 클래스 둘러보기
+                  </Link>
                 </div>
               </div>
 
-              {/* CTA 버튼 */}
-              <PicturebookCtaButton
-                courseId={PICTUREBOOK_CLASS_CONFIG.id}
-                courseTitle={PICTUREBOOK_CLASS_CONFIG.courseTitle}
-                status={PICTUREBOOK_CLASS_CONFIG.status}
-                applicationUrl={PICTUREBOOK_CLASS_CONFIG.applicationUrl}
-                notificationUrl={PICTUREBOOK_CLASS_CONFIG.notificationUrl}
-                ctaOpenText={PICTUREBOOK_CLASS_CONFIG.ctaOpenText}
-                ctaScheduledText={PICTUREBOOK_CLASS_CONFIG.ctaScheduledText}
-                variant="final"
-              />
-
-              {/* 보조 링크 2종 */}
-              <div className="mt-5 pt-4 border-t border-[#2B221B]/80 flex flex-wrap items-center justify-center gap-4 text-xs">
-                <Link
-                  href={PICTUREBOOK_CLASS_CONFIG.termsUrl}
-                  className="text-[#A8988B] hover:text-[#C6A66B] underline underline-offset-4 transition-colors"
-                >
-                  취소·환불 규정 확인하기
-                </Link>
-                <span className="text-[#3E3127]">|</span>
-                <Link
-                  href={PICTUREBOOK_CLASS_CONFIG.onedayListUrl}
-                  className="text-[#A8988B] hover:text-[#C6A66B] underline underline-offset-4 transition-colors"
-                >
-                  다른 원데이 클래스 둘러보기
-                </Link>
+              {/* 마지막 문구 */}
+              <div className="py-6 text-center">
+                <p className="text-base sm:text-lg font-bold text-[#D6C6A8] break-keep">
+                  작은 배움, 하나의 완성. <br />
+                  <span className="text-[#FAF7F2]">
+                    이번에는 당신의 이야기가 책이 됩니다.
+                  </span>
+                </p>
               </div>
-            </div>
-
-            {/* 마지막 문구 */}
-            <div className="py-6 text-center">
-              <p className="text-base sm:text-lg font-bold text-[#D6C6A8] break-keep">
-                작은 배움, 하나의 완성. <br />
-                <span className="text-[#FAF7F2]">
-                  이번에는 당신의 이야기가 책이 됩니다.
-                </span>
-              </p>
             </div>
           </div>
         </section>

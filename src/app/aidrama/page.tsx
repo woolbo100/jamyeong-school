@@ -295,7 +295,8 @@ export default function AidramaPage() {
             섹션 1.5. 제작 흐름 요약 & 수강 패키지 요약
             - 상세 커리큘럼을 읽기 전 전체 제작 과정(3단계)과 포함된 핵심 패키지를 한눈에 파악
            ─────────────────────────────────────────── */}
-        <section className="py-14 md:py-20 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-14 md:py-20 border-b border-[#26201B]">
+          <div className="site-container">
           
           {/* 1. 제작 흐름 5단계 (PROCESS OVERVIEW) */}
           <div className="mb-14 md:mb-16">
@@ -570,13 +571,15 @@ export default function AidramaPage() {
               </div>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 2. 추천 대상 (Who it's for)
             - 짧게 배치하여 고민 공감 섹션과 중복되지 않도록 핵심 대상만 깔끔하게 구성
            ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-20 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-16 md:py-20 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-10 md:mb-12">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
               RECOMMENDED FOR
@@ -622,12 +625,14 @@ export default function AidramaPage() {
               </p>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 3. 수강생이 겪는 어려움과 고민 (Real Struggles)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-14">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               REAL STRUGGLES
@@ -695,14 +700,15 @@ export default function AidramaPage() {
               불필요한 시행착오는 줄이고, 사람의 마음을 쥐락펴락하는 스토리텔링에 집중하도록 돕습니다.
             </p>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 4. 수업에서 완성할 결과물 · 대표 장면 (Your Result)
             + 선택적 짧은 대표 후기 2~3개 슬롯 지원
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-5xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 YOUR RESULT
@@ -802,7 +808,8 @@ export default function AidramaPage() {
         {/* ───────────────────────────────────────────
             섹션 5. 자명스쿨 수업의 차별점 (Difference)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-14">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               DIFFERENCE
@@ -868,13 +875,14 @@ export default function AidramaPage() {
               </div>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 6. 단계별 커리큘럼 (Curriculum)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-16">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 1DAY CURRICULUM
@@ -985,7 +993,8 @@ export default function AidramaPage() {
         {/* ───────────────────────────────────────────
             섹션 7. 제공 자료 · 템플릿 · 혜택 (Core Assets)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-16">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               CORE LEARNING ASSETS
@@ -1094,6 +1103,7 @@ export default function AidramaPage() {
               </p>
             </div>
           )}
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
@@ -1102,8 +1112,8 @@ export default function AidramaPage() {
             - 등록된 작품이나 후기가 있을 때 깔끔하게 노출되며,
               미등록 상태에서는 군더더기 없는 사전 안내 메시지 1장으로 표현
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-5xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-12">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 STUDENT SHOWCASE & REVIEWS
@@ -1174,7 +1184,8 @@ export default function AidramaPage() {
         {/* ───────────────────────────────────────────
             섹션 9. 강사 소개 (Instructor)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="rounded-3xl bg-gradient-to-b from-[#181310] to-[#120E0C] border border-[#3E3127] p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* 강사 프로필 이미지 자리 (교체 가능) */}
@@ -1219,13 +1230,15 @@ export default function AidramaPage() {
               </p>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 10. 준비사항 · 추가 비용 안내 (Preparation & Costs)
             - 추천 대상과 분리하여 수강 전 체크포인트로 명확하게 구성
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-24 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-12">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
               PREPARATION & NOTICE
@@ -1279,13 +1292,14 @@ export default function AidramaPage() {
               </p>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             섹션 11. 자주 묻는 질문 (FAQ) - 자명스쿨 시그니처 베이지 배경
            ─────────────────────────────────────────── */}
-        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 px-4 sm:px-6 border-b border-[#E8DFD3]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 border-b border-[#E8DFD3]">
+          <div className="site-container">
             <div className="text-center mb-16">
               <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#8E6D38] uppercase mb-3 block">
                 FREQUENTLY ASKED QUESTIONS
@@ -1356,7 +1370,7 @@ export default function AidramaPage() {
             섹션 12. 최종 수강 신청 (Final CTA)
             - 모든 신청 버튼의 이동 목적지 (#apply)
            ─────────────────────────────────────────── */}
-        <section id="apply" className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden">
+        <section id="apply" className="w-full py-20 md:py-28 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden">
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none opacity-15 blur-[140px]"
             style={{
@@ -1364,7 +1378,8 @@ export default function AidramaPage() {
             }}
           />
 
-          <div className="max-w-3xl mx-auto text-center relative z-10">
+          <div className="site-container relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
             <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#C6A66B] uppercase mb-4 block">
               ONE DAY, ONE RESULT
             </span>
@@ -1445,8 +1460,8 @@ export default function AidramaPage() {
               </Link>
             </div>
           </div>
+          </div>
         </section>
-
       </div>
     </main>
   );

@@ -332,8 +332,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [3. 수업 소개 — 기존 ‘앱인토스란?’ 영역 대응]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      <section className="w-full py-16 md:py-20 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container text-center space-y-6">
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
             ABOUT BLOG WEBSITE
           </span>
@@ -368,8 +368,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [4. 고민 공감 — WHY BLOG WEBSITE?]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               WHY BLOG WEBSITE?
@@ -422,8 +422,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [5. 수강 전후 변화 — TRANSFORMATION]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container space-y-10">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               TRANSFORMATION
@@ -513,8 +513,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [6. 하루 완성 결과물 — ONE DAY RESULT]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               ONE DAY RESULT
@@ -566,8 +566,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [7. 수업 구성 요약 — PACKAGE INCLUDED]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               PACKAGE INCLUDED
@@ -604,8 +604,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [8. 제작 예시 — 기존 APP EXAMPLES 영역 대응]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               BUSINESS DESIGN EXAMPLES
@@ -661,8 +661,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [9. 핵심 차별점 — 내 비즈니스의 온라인 인테리어]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#14100D]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#14100D]">
+        <div className="site-container">
           <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1E1713] to-[#15100D] border-2 border-[#C6A66B]/45 shadow-2xl space-y-8">
             <div className="text-center space-y-3">
               <span className="inline-block px-3.5 py-1 rounded-full bg-[#C6A66B]/15 border border-[#C6A66B]/40 text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
@@ -712,8 +712,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [10. 커리큘럼 — 기본 버전·심화 버전]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               CURRICULUM · BASIC & ADVANCED
@@ -865,8 +865,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [11. 핵심 철학 — 기존 NOT JUST CODING 영역 대응]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="p-6 sm:p-10 rounded-3xl bg-[#181310] border border-[#382C23] space-y-6 text-center">
             <span className="inline-block px-3.5 py-1 rounded-full bg-[#241B15] border border-[#3E3024] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
               NOT JUST ONE-TIME DESIGN
@@ -892,8 +892,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [12. 혜택 자료 — CLASS KIT]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container space-y-10">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               CLASS KIT
@@ -939,8 +939,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [13. 실제 제작 사례 — REAL EXPERIENCE]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               REAL EXPERIENCE
@@ -991,8 +991,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [14. 후속 활용 — FIRST RELEASE]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      <section className="w-full py-16 md:py-20 border-b border-[#221C18]">
+        <div className="site-container text-center space-y-6">
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
             GROWING DIGITAL SPACE
           </span>
@@ -1011,8 +1011,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [15. 추천 대상 — RECOMMENDED FOR]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               RECOMMENDED FOR
@@ -1043,8 +1043,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [16. 비즈니스 활용 — BUSINESS EXPANSION]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-4xl mx-auto space-y-10">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container space-y-10">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               VISITOR JOURNEY & EXPANSION
@@ -1098,8 +1098,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [17. 클래스 안내 — CLASS INFO]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container space-y-8">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               CLASS INFO
@@ -1232,8 +1232,8 @@ export default function BlogWebsiteClassPage() {
       {/* ═══════════════════════════════════════════════
           [18. 자주 묻는 질문 — FAQ 8문항]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3]">
-        <div className="max-w-4xl mx-auto">
+      <section className="w-full py-16 md:py-24 bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase block">
               FAQ
@@ -1252,9 +1252,10 @@ export default function BlogWebsiteClassPage() {
          ═══════════════════════════════════════════════ */}
       <section
         id="apply"
-        className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#120E0C] to-[#0D0B0A]"
+        className="w-full py-20 md:py-28 bg-gradient-to-b from-[#120E0C] to-[#0D0B0A]"
       >
-        <div className="max-w-3xl mx-auto text-center space-y-8">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               YOUR BLOG, YOUR BRAND
@@ -1315,6 +1316,7 @@ export default function BlogWebsiteClassPage() {
             </p>
           </div>
         </div>
+      </div>
       </section>
 
       {/* 모바일 하단 고정 신청 바 */}

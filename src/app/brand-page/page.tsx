@@ -354,8 +354,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [3. ABOUT BRAND PAGE — 기존 서비스 소개 대응]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      <section className="w-full py-16 md:py-20 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container text-center space-y-6">
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
             ABOUT BRAND PAGE
           </span>
@@ -394,8 +394,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [4. 고민 공감 — WHY BRAND PAGE?]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               WHY BRAND PAGE?
@@ -449,8 +449,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [5. 수강 전후 변화 — TRANSFORMATION]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               TRANSFORMATION
@@ -500,8 +500,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [6. 하루 완성 결과물 — ONE DAY RESULT]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               ONE DAY RESULT
@@ -557,8 +557,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [7. 수업 구성 요약 — PACKAGE INCLUDED]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               PACKAGE INCLUDED
@@ -595,8 +595,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [8. 디자인 예시 — DESIGN EXAMPLES]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               DESIGN EXAMPLES
@@ -655,8 +655,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [9. 핵심 차별점 — CORE DIFFERENTIATOR]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#14100D]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#14100D]">
+        <div className="site-container">
           <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1E1713] to-[#15100D] border-2 border-[#C6A66B]/45 shadow-2xl space-y-8">
             <div className="text-center space-y-3">
               <span className="inline-block px-3.5 py-1 rounded-full bg-[#C6A66B]/15 border border-[#C6A66B]/40 text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
@@ -746,8 +746,8 @@ export default function BrandPageClassPage() {
           [10. 제작 과정 — HOW IT WORKS]
           8단계 커리큘럼 + 4시간 기준 시간 구성안 표
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               HOW IT WORKS
@@ -837,8 +837,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [11. 혜택 자료 — CLASS KIT]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto space-y-10">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container space-y-10">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               CLASS KIT
@@ -885,8 +885,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [12. 실제 제작 사례 — REAL EXPERIENCE]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               REAL EXPERIENCE
@@ -937,8 +937,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [13. 후속 확장 — FIRST RELEASE & EXPANSION]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      <section className="w-full py-16 md:py-20 border-b border-[#221C18]">
+        <div className="site-container text-center space-y-6">
           <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
             FIRST RELEASE & EXPANSION
           </span>
@@ -969,8 +969,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [14. 추천 대상 — RECOMMENDED FOR]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               RECOMMENDED FOR
@@ -1001,8 +1001,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [15. 활용 방향 — BUSINESS EXPANSION]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18]">
-        <div className="max-w-5xl mx-auto">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               BUSINESS EXPANSION
@@ -1044,8 +1044,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [16. 클래스 안내 — CLASS INFO]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 border-b border-[#221C18] bg-[#120E0C]">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container space-y-8">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               CLASS INFO
@@ -1150,8 +1150,8 @@ export default function BrandPageClassPage() {
       {/* ═══════════════════════════════════════════════
           [17. 자주 묻는 질문 — FAQ 6문항]
          ═══════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3]">
-        <div className="max-w-4xl mx-auto">
+      <section className="w-full py-16 md:py-24 bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3]">
+        <div className="site-container">
           <div className="text-center mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#8E6D38] uppercase block">
               FAQ
@@ -1170,9 +1170,10 @@ export default function BrandPageClassPage() {
          ═══════════════════════════════════════════════ */}
       <section
         id="apply"
-        className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#120E0C] to-[#0D0B0A]"
+        className="w-full py-20 md:py-28 bg-gradient-to-b from-[#120E0C] to-[#0D0B0A]"
       >
-        <div className="max-w-3xl mx-auto text-center space-y-8">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="space-y-3">
             <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
               AI BRAND PAGE · ONE DAY CLASS
@@ -1235,6 +1236,7 @@ export default function BrandPageClassPage() {
             </p>
           </div>
         </div>
+      </div>
       </section>
 
       {/* 모바일 하단 고정 신청 바 */}

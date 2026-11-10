@@ -270,7 +270,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             01.5. 앱인토스 미니앱 개념 안내 (INFO BOX)
            ─────────────────────────────────────────── */}
-        <section className="pt-12 md:pt-16 px-4 sm:px-6 max-w-4xl mx-auto">
+        <section className="w-full pt-12 md:pt-16">
+          <div className="site-container">
           <div className="p-6 md:p-7 rounded-2xl bg-[#15110E] border border-[#2E241D] flex flex-col md:flex-row md:items-center gap-5 shadow-lg">
             <div className="w-12 h-12 rounded-2xl bg-[#0064FF]/15 border border-[#0064FF]/30 flex items-center justify-center text-[#60A5FA] text-xl shrink-0 font-bold">
               t
@@ -287,12 +288,14 @@ export default function MiniappPage() {
               </p>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             02. PROBLEM (WHY MINI APP?)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-14">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               WHY MINI APP?
@@ -356,13 +359,14 @@ export default function MiniappPage() {
               복잡한 코딩의 장벽은 AI가 대신 넘겨주고, 여러분은 오직 나만의 아이디어와 사용자 경험에만 집중합니다.
             </p>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             03. BEFORE → AFTER (핵심 비교 3개)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 TRANSFORMATION
@@ -426,7 +430,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             04. 수업 핵심 결과 (ONE DAY RESULT)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-14">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               ONE DAY RESULT
@@ -587,13 +592,14 @@ export default function MiniappPage() {
               </div>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             05. 이런 앱을 만들 수 있습니다
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 APP EXAMPLES
@@ -692,7 +698,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             06. 실제 제작 과정 (HOW IT WORKS) - STEP 01 ~ 08
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-16">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               HOW IT WORKS
@@ -898,13 +905,14 @@ export default function MiniappPage() {
               ※ 수업의 목표는 작동하는 첫 버전과 출시 준비입니다. 최종 승인과 공개 시점은 플랫폼 심사 및 준비 상태에 따라 달라집니다.
             </p>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             07. 단순 코딩수업이 아닙니다 (짧은 인용 박스로 축소)
            ─────────────────────────────────────────── */}
-        <section className="py-12 md:py-16 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-3xl mx-auto">
+        <section className="w-full py-12 md:py-16 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#140F0D] border border-[#3E3024] text-center shadow-lg">
               <span className="text-[11px] font-bold text-[#C6A66B] uppercase tracking-widest block mb-2">
                 NOT JUST CODING · 핵심 철학
@@ -923,7 +931,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             08. 등록까지 쉽게 만드는 제공 자료 7종 (CLASS KIT)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-16">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               CLASS KIT
@@ -1034,13 +1043,14 @@ export default function MiniappPage() {
               기본 구조를 다시 만들지 않고, 다음 아이디어에도 활용할 수 있도록 원본 파일과 사용 안내를 제공합니다.
             </p>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             09. 실제 승인 사례 (REAL EXPERIENCE)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 REAL EXPERIENCE
@@ -1179,7 +1189,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             10. 완벽한 앱을 만드는 것이 목표가 아닙니다
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-12">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
               FIRST RELEASE
@@ -1215,13 +1226,14 @@ export default function MiniappPage() {
           <p className="text-center text-sm md:text-base text-[#C8BCB0] font-semibold break-keep">
             앱은 한 번 만들고 끝나는 일회성 결과물이 아니라, 계속 성장시킬 수 있는 소중한 디지털 자산입니다.
           </p>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             11. 이런 분께 추천합니다
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 RECOMMENDED FOR
@@ -1297,8 +1309,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             12. 향후 확장 (BUSINESS EXPANSION)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 bg-[#120E0C] border-b border-[#26201B]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full py-20 md:py-28 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
             <div className="text-center mb-14">
               <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
                 BUSINESS EXPANSION
@@ -1356,7 +1368,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             13. CLASS INFO (클래스 안내 및 사전 준비·비용 정보)
            ─────────────────────────────────────────── */}
-        <section className="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto border-b border-[#26201B]">
+        <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
+          <div className="site-container">
           <div className="text-center mb-12">
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-2.5 block">
               CLASS INFO
@@ -1478,13 +1491,14 @@ export default function MiniappPage() {
               </div>
             </div>
           </div>
+                  </div>
         </section>
 
         {/* ───────────────────────────────────────────
             15. FAQ (자주 묻는 질문) - 자명스쿨 시그니처 웜베이지 배경
            ─────────────────────────────────────────── */}
-        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 px-4 sm:px-6 border-b border-[#E8DFD3]">
-          <div className="max-w-4xl mx-auto">
+        <section className="w-full bg-[#F9F6F0] text-[#2E2723] py-20 md:py-28 border-b border-[#E8DFD3]">
+          <div className="site-container">
             <div className="text-center mb-16">
               <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#8E6D38] uppercase mb-3 block">
                 FREQUENTLY ASKED QUESTIONS
@@ -1621,9 +1635,8 @@ export default function MiniappPage() {
         {/* ───────────────────────────────────────────
             15. FINAL CTA (#apply)
            ─────────────────────────────────────────── */}
-        <section
-          id="apply"
-          className="py-20 md:py-28 px-4 sm:px-6 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden"
+        <section id="apply"
+          className="w-full py-20 md:py-28 bg-gradient-to-b from-[#14100E] to-[#0A0807] relative overflow-hidden"
         >
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none opacity-15 blur-[140px]"
@@ -1632,7 +1645,8 @@ export default function MiniappPage() {
             }}
           />
 
-          <div className="max-w-3xl mx-auto text-center relative z-10">
+          <div className="site-container relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
             <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#C6A66B] uppercase mb-4 block">
               FROM IDEA TO APP
             </span>
@@ -1763,6 +1777,7 @@ export default function MiniappPage() {
                 ← 다른 원데이 클래스도 함께 둘러보기
               </Link>
             </div>
+          </div>
           </div>
         </section>
       </div>
