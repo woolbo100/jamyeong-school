@@ -157,6 +157,104 @@ export default function WaterCoursePage() {
     }
   ];
 
+  // 1인 비즈니스 시스템 6단계 데이터
+  const businessSystemSteps = [
+    {
+      step: "01",
+      keyword: "IDEA & TARGET",
+      shortKey: "01 IDEA",
+      title: "아이템과 타깃 정하기",
+      desc: "내 경험·지식·서비스 중 무엇을 상품화할 것인지 정리합니다.",
+      bullets: [
+        "내가 잘 아는 것",
+        "고객이 필요로 하는 것",
+        "실제 서비스로 만들 수 있는 것",
+        "누구에게 판매할 것인지"
+      ],
+      result: "나의 서비스 아이템 + 핵심 타깃"
+    },
+    {
+      step: "02",
+      keyword: "BUILD",
+      shortKey: "02 BUILD",
+      title: "서비스 만들기",
+      desc: "아이디어를 실제로 사용할 수 있는 디지털 서비스 형태로 구현합니다.",
+      examples: [
+        "브랜드 소개 페이지",
+        "테스트형 서비스",
+        "상담형 서비스",
+        "간단한 웹도구",
+        "콘텐츠형 웹서비스",
+        "디지털 상품"
+      ],
+      result: "나만의 서비스 1개"
+    },
+    {
+      step: "03",
+      keyword: "SALES PAGE",
+      shortKey: "03 SALES",
+      title: "판매 페이지와 신청 구조 만들기",
+      desc: "서비스를 만들었다면 고객이 내용을 이해하고 신청할 수 있는 흐름이 필요합니다.",
+      bullets: [
+        "랜딩페이지",
+        "서비스 소개",
+        "CTA (행동 유도)",
+        "신청폼",
+        "문의",
+        "결제 또는 신청 동선"
+      ],
+      result: "판매페이지 + 신청 구조"
+    },
+    {
+      step: "04",
+      keyword: "TRAFFIC",
+      shortKey: "04 TRAFFIC",
+      title: "콘텐츠 유입 만들기",
+      desc: "좋은 서비스를 만들어도 사람이 찾아오지 않으면 판매가 일어나지 않습니다.",
+      trafficText: "블로그, 스레드, 유튜브, SNS 등 나에게 맞는 콘텐츠 채널을 선택하고 콘텐츠에서 서비스로 이동하는 흐름을 설계합니다.",
+      result: "콘텐츠 유입 전략"
+    },
+    {
+      step: "05",
+      keyword: "LEAD & DB",
+      shortKey: "05 LEAD",
+      title: "DB와 무료자료 연결",
+      desc: "처음 방문한 사람이 바로 구매하지 않아도 다시 만날 수 있는 구조를 만듭니다.",
+      leadFlow: {
+        sources: ["무료 체크리스트", "미니 전자책", "가이드", "무료 테스트", "샘플 자료"],
+        form: "신청폼",
+        db: "이메일 또는 고객 DB"
+      },
+      result: "리드마그넷 + 고객 DB 수집 구조"
+    },
+    {
+      step: "06",
+      keyword: "AUTOMATION",
+      shortKey: "06 AUTOMATION",
+      title: "자동판매·운영 시스템 만들기",
+      desc: "모아진 고객과 지속적으로 연결될 수 있도록 반복되는 업무와 판매 흐름을 자동화 가능한 구조로 설계합니다.",
+      automationItems: [
+        "무료자료 자동 전달",
+        "후속 이메일",
+        "상품 안내",
+        "신청 안내",
+        "고객 관리",
+        "반복 업무 자동화",
+        "기존 고객 재접점"
+      ],
+      futureExpansion: ["Make", "n8n", "API", "이메일 자동화", "CRM"],
+      result: "나만의 자동판매·운영 시스템 설계"
+    }
+  ];
+
+  // 6주 후 최종 4대 핵심 결과물
+  const finalDeliverables = [
+    { num: "01", title: "내 서비스 1개", desc: "실제 사용할 수 있는 완성형 디지털 서비스" },
+    { num: "02", title: "판매페이지", desc: "고객이 이해하고 신청하는 랜딩·신청 동선" },
+    { num: "03", title: "고객유입 퍼널", desc: "콘텐츠·무료자료·DB로 연결되는 유입 구조" },
+    { num: "04", title: "자동화 운영 구조", desc: "반복 업무를 줄이고 지속되는 1인 시스템" }
+  ];
+
   // 만들 수 있는 서비스 예시 데이터
   const serviceExamples = [
     {
@@ -934,6 +1032,242 @@ export default function WaterCoursePage() {
                   </div>
                 </Reveal>
 
+                {/* ──────────────────────────────────────────────────────────
+                    [추가] 1인 비즈니스 시스템 6단계 & 최종 결과물 강조
+                    ────────────────────────────────────────────────────────── */}
+                <div className="mb-20 md:mb-24">
+                  {/* 섹션 헤더 */}
+                  <Reveal delayMs={100}>
+                    <div className="text-center mb-14 md:mb-16">
+                      <span
+                        className="course-caption tracking-[0.35em] uppercase mb-3 block font-mono font-semibold"
+                        style={{ color: WATER_GOLD }}
+                      >
+                        SOLO BUSINESS SYSTEM
+                      </span>
+                      <h3 className="course-section-title font-display text-white mb-6 leading-tight italic">
+                        하나의 아이디어가 <br />
+                        <span style={{ color: WATER_BLUE }}>팔리는 서비스와 운영 시스템</span>이 되기까지
+                      </h3>
+                      <div className="max-w-2xl mx-auto space-y-2 course-body text-[#BFBFBF] font-light leading-relaxed">
+                        <p>
+                          단순히 웹서비스 하나를 만드는 데서 끝나지 않습니다.
+                        </p>
+                        <p className="text-white/90 font-normal">
+                          내가 가진 경험과 지식을 실제 서비스로 만들고, <br className="hidden sm:inline" />
+                          고객이 들어오는 길을 설계하고, <br className="hidden sm:inline" />
+                          판매와 운영이 반복될 수 있는 구조까지 연결합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                  {/* 6단계 카드 그리드 (2열 카드형, 스크롤하며 발전하는 흐름) */}
+                  <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16 md:mb-20">
+                    {businessSystemSteps.map((step, idx) => (
+                      <Reveal key={idx} delayMs={idx * 120} slideFrom="bottom">
+                        <div className="group relative p-8 md:p-9 rounded-[2rem] bg-gradient-to-br from-[#121c24] to-[#0c1218] border border-white/[0.05] hover:border-[rgba(94,169,221,0.35)] transition-all duration-500 shadow-xl flex flex-col justify-between h-full">
+                          {/* 상단 은은한 호버 라인 */}
+                          <div
+                            className="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity rounded-t-[2rem]"
+                            style={{
+                              background: idx >= 4
+                                ? `linear-gradient(to right, transparent, ${WATER_GOLD}80, transparent)`
+                                : `linear-gradient(to right, transparent, ${WATER_BLUE}80, transparent)`
+                            }}
+                          ></div>
+
+                          <div>
+                            {/* 상단 번호 & 영문 키워드 */}
+                            <div className="flex items-center justify-between mb-4">
+                              <span
+                                className="course-caption font-mono font-bold px-3 py-1 rounded-full text-xs"
+                                style={{
+                                  backgroundColor: idx >= 4 ? `${WATER_GOLD}15` : `${WATER_BLUE}15`,
+                                  color: idx >= 4 ? WATER_GOLD : WATER_BLUE,
+                                  border: `1px solid ${idx >= 4 ? `${WATER_GOLD}30` : `${WATER_BLUE}30`}`
+                                }}
+                              >
+                                {step.shortKey}
+                              </span>
+                              <span className="course-caption text-white/30 font-mono text-xs">
+                                {step.keyword}
+                              </span>
+                            </div>
+
+                            {/* 단계 제목 & 설명 */}
+                            <h4 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#99D5F9] transition-colors leading-snug">
+                              {step.title}
+                            </h4>
+                            <p className="text-sm text-[#BFBFBF] font-light leading-relaxed mb-6">
+                              {step.desc}
+                            </p>
+
+                            {/* 단계별 맞춤형 세부 내용 */}
+                            {/* 01: 아이템과 타깃 정하기 불릿 */}
+                            {step.bullets && (
+                              <ul className="space-y-2.5 mb-8">
+                                {step.bullets.map((bullet, bIdx) => (
+                                  <li key={bIdx} className="flex items-center gap-2.5 text-xs text-[#D0D0D0] font-light">
+                                    <span className="text-xs" style={{ color: WATER_BLUE }}>•</span>
+                                    <span>{bullet}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+
+                            {/* 02: 서비스 만들기 예시 태그 */}
+                            {step.examples && (
+                              <div className="mb-8">
+                                <div className="course-caption text-white/40 font-mono text-[11px] mb-2.5 uppercase">
+                                  구현 예시
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                  {step.examples.map((ex, eIdx) => (
+                                    <span
+                                      key={eIdx}
+                                      className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs text-[#BFBFBF] font-light"
+                                    >
+                                      {ex}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* 04: 콘텐츠 유입 전략 텍스트 */}
+                            {step.trafficText && (
+                              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] mb-8">
+                                <p className="text-xs text-[#C8C8C8] font-light leading-relaxed">
+                                  {step.trafficText}
+                                </p>
+                              </div>
+                            )}
+
+                            {/* 05: 리드 & DB 플로우 */}
+                            {step.leadFlow && (
+                              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] space-y-2 mb-8 text-center">
+                                <div className="text-xs text-[#D8D8D8] font-light leading-relaxed">
+                                  {step.leadFlow.sources.join(" · ")}
+                                </div>
+                                <div className="text-xs" style={{ color: WATER_BLUE }}>↓</div>
+                                <div className="inline-block px-3 py-1 rounded-md bg-white/[0.04] text-xs font-medium text-white border border-white/10">
+                                  {step.leadFlow.form}
+                                </div>
+                                <div className="text-xs" style={{ color: WATER_GOLD }}>↓</div>
+                                <div className="text-xs font-semibold" style={{ color: WATER_GOLD }}>
+                                  {step.leadFlow.db}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* 06: 자동판매 운영 시스템 & 확장 */}
+                            {step.automationItems && (
+                              <div className="space-y-4 mb-8">
+                                <div>
+                                  <div className="course-caption text-white/40 font-mono text-[11px] mb-2 uppercase">
+                                    자동화 영역
+                                  </div>
+                                  <div className="grid grid-cols-2 gap-1.5">
+                                    {step.automationItems.map((item, aIdx) => (
+                                      <div key={aIdx} className="flex items-center gap-1.5 text-xs text-[#C0C0C0] font-light">
+                                        <span className="text-[10px]" style={{ color: WATER_GOLD }}>✦</span>
+                                        <span>{item}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                                {step.futureExpansion && (
+                                  <div className="pt-3 border-t border-white/[0.04]">
+                                    <span className="course-caption text-white/40 font-mono text-[11px] block mb-1.5 uppercase">
+                                      향후 확장 도구
+                                    </span>
+                                    <div className="flex flex-wrap gap-1.5">
+                                      {step.futureExpansion.map((tool, tIdx) => (
+                                        <span
+                                          key={tIdx}
+                                          className="px-2 py-0.5 rounded bg-white/[0.03] text-[11px] font-mono text-[#E2B774] border border-[#E2B774]/20"
+                                        >
+                                          {tool}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+
+                          {/* 하단 결과물 뱃지 박스 */}
+                          <div className="pt-4 border-t border-white/[0.05] flex items-center justify-between">
+                            <span className="course-caption text-white/40 text-xs">결과물</span>
+                            <span
+                              className="text-xs md:text-sm font-semibold italic"
+                              style={{ color: idx >= 4 ? WATER_GOLD : WATER_BLUE }}
+                            >
+                              {step.result}
+                            </span>
+                          </div>
+                        </div>
+                      </Reveal>
+                    ))}
+                  </div>
+
+                  {/* 최종 결과물 강조 (FINAL BUSINESS SYSTEM) */}
+                  <Reveal delayMs={200}>
+                    <div className="relative p-8 md:p-12 lg:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#121c24] via-[#0d161e] to-[#0a0f14] border border-[rgba(226,183,116,0.25)] shadow-2xl text-center overflow-hidden">
+                      <div
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] blur-[150px] opacity-10 pointer-events-none"
+                        style={{ backgroundColor: WATER_GOLD }}
+                      ></div>
+
+                      <div className="relative z-10 max-w-4xl mx-auto">
+                        <span
+                          className="course-caption tracking-[0.35em] uppercase mb-3 block font-mono font-semibold text-xs"
+                          style={{ color: WATER_GOLD }}
+                        >
+                          FINAL BUSINESS SYSTEM
+                        </span>
+                        <h3 className="course-mid-title font-display text-white mb-8 leading-tight italic">
+                          6주 후, 하나의 서비스가 <br />
+                          <span style={{ color: WATER_GOLD }}>하나의 비즈니스 구조</span>가 됩니다.
+                        </h3>
+
+                        {/* 4대 결과물 박스 */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-left">
+                          {finalDeliverables.map((item, idx) => (
+                            <div
+                              key={idx}
+                              className="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-[rgba(226,183,116,0.35)] transition-all duration-300 group"
+                            >
+                              <span
+                                className="course-caption font-mono font-bold text-xs block mb-2"
+                                style={{ color: WATER_GOLD }}
+                              >
+                                {item.num}
+                              </span>
+                              <div className="text-base font-bold text-white mb-1.5 group-hover:text-[#F5C26B] transition-colors">
+                                {item.title}
+                              </div>
+                              <p className="text-xs text-[#A0A0A0] font-light leading-relaxed">
+                                {item.desc}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="w-16 h-[1px] mx-auto mb-6" style={{ backgroundColor: `${WATER_GOLD}40` }}></div>
+
+                        <p className="course-caption text-[#D0D0D0] font-light leading-relaxed max-w-2xl mx-auto">
+                          아이디어만 남기는 것이 아니라 <br />
+                          <span className="text-white font-medium">만들고, 보여주고, 사람을 모으고, 판매하고, 반복해서 운영할 수 있는</span> <br />
+                          <strong className="text-white font-semibold">'나만의 1인 비즈니스 시스템'</strong>을 설계합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
+
                 {/* 5. 실제 적용 예시 (사례 카드 3개) */}
                 <Reveal delayMs={300}>
                   <div>
@@ -941,9 +1275,12 @@ export default function WaterCoursePage() {
                       <span className="course-caption uppercase tracking-[0.25em] text-[#89CFF0]/80 font-mono text-xs block mb-2">
                         PRACTICAL EXAMPLES
                       </span>
-                      <h4 className="course-card-title font-bold text-white">
+                      <h4 className="course-card-title font-bold text-white mb-2">
                         실제 적용 예시
                       </h4>
+                      <p className="course-caption text-[#A0A0A0] font-light max-w-lg mx-auto">
+                        위 6단계 시스템이 실제 비즈니스 모델(전자책·강의·상담)에서 어떻게 구현되는지 살펴보세요
+                      </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
