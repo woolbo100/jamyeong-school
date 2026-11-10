@@ -417,7 +417,7 @@ function MockupGraphic({ type }: { type: BrandArtContentItem["mockupType"] }) {
 // ─────────────────────────────────────────────────────────────
 export default function HeartArtProjectSection() {
   return (
-    <section className="py-32 md:py-48 bg-[#08090B] border-t border-white/5 relative overflow-hidden text-white">
+    <section className="py-24 md:py-32 bg-[#08090B] border-t border-white/5 relative overflow-hidden text-white">
       {/* 앰비언트 백드롭 글로우 */}
       <div
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] blur-[160px] opacity-[0.06] pointer-events-none"
@@ -426,34 +426,34 @@ export default function HeartArtProjectSection() {
         }}
       />
 
-      <div className="site-container relative z-10 space-y-32 md:space-y-44">
+      <div className="site-container relative z-10 space-y-24 md:space-y-32">
         {/* ═══════════════════════════════════════════════
             [Part 1. 상단 신뢰 라벨 & 경험 실적 & 메인 타이틀]
            ═══════════════════════════════════════════════ */}
         <div>
           <Reveal>
-            <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="text-center max-w-4xl mx-auto mb-14 md:mb-16">
               {/* Eyebrow 배지 */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1510] border border-[#A68253]/40 text-xs md:text-sm font-bold tracking-[0.2em] text-[#A68253] uppercase mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1510] border border-[#A68253]/40 course-caption font-bold tracking-[0.2em] text-[#A68253] uppercase mb-4 shadow-sm">
                 <span>HEART ART · SIGNATURE PROJECT</span>
               </div>
 
               {/* 과정명 & 부제 */}
-              <h3 className="text-sm md:text-base font-semibold text-[#BFBFBF] tracking-widest uppercase mb-4">
+              <h3 className="course-caption font-semibold text-[#BFBFBF] tracking-widest uppercase mb-3">
                 AI 감성아트지도사 – HEART ART PROJECT
               </h3>
-              <p className="text-lg md:text-xl font-medium text-[#A68253] mb-8">
+              <p className="course-hero-sub font-medium text-[#A68253] mb-6">
                 내 감성을 브랜드 콘텐츠로 만드는 AI 아트 실전
               </p>
 
               {/* 메인 제목 */}
-              <h2 className="text-4xl md:text-7xl font-display font-bold leading-tight italic text-white tracking-tight mb-8">
+              <h2 className="course-section-title font-display font-bold leading-tight italic text-white tracking-tight mb-6">
                 나만의 감성을 <br />
                 <span style={{ color: GOLD }}>브랜드 콘텐츠</span>로 완성합니다
               </h2>
 
               {/* 보조 설명 */}
-              <p className="text-base md:text-xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto break-keep">
+              <p className="course-body text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto break-keep">
                 예쁜 이미지를 만드는 데서 끝나지 않습니다. <br />
                 내가 좋아하는 색, 나만의 감정, 브랜드가 전하고 싶은 메시지를 <br className="hidden sm:inline" />
                 SNS, 블로그, 강의, 상품 홍보에 실제로 사용할 수 있는 나만의 아트 콘텐츠로 확장합니다.
@@ -534,15 +534,15 @@ export default function HeartArtProjectSection() {
            ═══════════════════════════════════════════════ */}
         <div>
           <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+              <span className="course-caption font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
                 FROM HEART TO BRAND
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 italic">
+              <h2 className="course-section-title font-display font-bold text-white mb-4 italic">
                 감정에서 시작해 <br />
                 하나의 브랜드 언어로 완성합니다
               </h2>
-              <p className="text-sm md:text-base text-[#BFBFBF] font-light break-keep">
+              <p className="course-body text-[#BFBFBF] font-light break-keep">
                 내면의 고유한 결을 발견하고, 그것을 시각화하여 대중과 소통하는 5단계 창작 여정
               </p>
             </div>
@@ -656,19 +656,19 @@ export default function HeartArtProjectSection() {
            ═══════════════════════════════════════════════ */}
         <div>
           <Reveal>
-            <div className="text-center max-w-4xl mx-auto mb-16">
-              <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
+            <div className="text-center max-w-4xl mx-auto mb-14 md:mb-16">
+              <span className="course-caption font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
                 BRAND ART CONTENT 10
               </span>
-              <h2 className="text-3xl md:text-6xl font-display font-bold text-white mb-6 italic leading-tight">
+              <h2 className="course-section-title font-display font-bold text-white mb-6 italic leading-tight">
                 예쁜 그림에서 끝내지 않습니다 <br />
                 <span style={{ color: GOLD }}>내 브랜드에 실제로 쓰는</span> 아트 콘텐츠 10종
               </h2>
-              <p className="text-base md:text-xl text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto break-keep">
+              <p className="course-body text-[#BFBFBF] font-light leading-relaxed max-w-3xl mx-auto break-keep">
                 6주 동안 만든 AI 아트를 SNS, 블로그, 강의, 상품, 출판, 영상까지 연결해 <br className="hidden sm:inline" />
                 나만의 브랜드에서 반복해서 사용할 수 있는 10개의 아트 콘텐츠 자산으로 완성합니다.
               </p>
-              <div className="mt-6 inline-block px-5 py-2 rounded-full bg-[#181410] border border-[#A68253]/30 text-xs sm:text-sm text-[#A68253] font-semibold">
+              <div className="mt-6 inline-block px-5 py-2 rounded-full bg-[#181410] border border-[#A68253]/30 course-caption text-[#A68253] font-semibold">
                 “한 번 만든 작품이 콘텐츠가 되고, 콘텐츠가 쌓여 나만의 브랜드 비주얼이 됩니다.”
               </div>
             </div>
@@ -695,11 +695,11 @@ export default function HeartArtProjectSection() {
                       </span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#A68253] transition-colors break-keep">
+                    <h3 className="course-card-title font-bold text-white group-hover:text-[#A68253] transition-colors break-keep">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#BFBFBF] font-light leading-relaxed break-keep min-h-[40px]">
+                    <p className="course-caption text-[#BFBFBF] font-light leading-relaxed break-keep min-h-[40px]">
                       {item.description}
                     </p>
                   </div>
@@ -714,15 +714,15 @@ export default function HeartArtProjectSection() {
               <div className="inline-block px-4 py-1.5 rounded-full bg-[#261D16] border border-[#A68253]/50 text-xs font-bold text-[#A68253] tracking-widest uppercase">
                 FINAL PROJECT
               </div>
-              <h3 className="text-2xl sm:text-4xl font-display font-bold text-white italic leading-tight">
+              <h3 className="course-mid-title font-display font-bold text-white italic leading-tight">
                 내 브랜드용 아트 콘텐츠 10종 세트 완성
               </h3>
-              <p className="text-sm sm:text-base text-[#BFBFBF] font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              <p className="course-body text-[#BFBFBF] font-light leading-relaxed max-w-2xl mx-auto break-keep">
                 6주 동안 배운 AI 이미지, 감성 글쓰기, 디자인, 영상, 브랜딩을 연결해 <br className="hidden sm:inline" />
                 <strong className="text-white font-semibold">SNS · 블로그 · 홈페이지 · 강의 · 상품 · 출판 · 영상</strong> 등에서 <br className="hidden sm:inline" />
                 계속 사용할 수 있는 나만의 브랜드 비주얼 자산으로 완성합니다.
               </p>
-              <div className="pt-2 border-t border-white/10 text-xs sm:text-sm text-[#A68253] font-medium italic">
+              <div className="pt-2 border-t border-white/10 course-caption text-[#A68253] font-medium italic">
                 “작품을 만드는 법에서 끝나지 않습니다. 작품이 나를 알리고, 브랜드를 기억하게 만드는 콘텐츠가 되도록 만듭니다.”
               </div>
             </div>
@@ -734,15 +734,15 @@ export default function HeartArtProjectSection() {
            ═══════════════════════════════════════════════ */}
         <div>
           <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
+              <span className="course-caption font-semibold tracking-[0.25em] text-[#A68253] uppercase block mb-3">
                 MARKETING APPLICATION
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4 italic">
+              <h2 className="course-section-title font-display font-bold text-white mb-4 italic">
                 완성한 콘텐츠는 <br />
                 바로 나의 마케팅 자산이 됩니다
               </h2>
-              <p className="text-sm md:text-base text-[#BFBFBF] font-light break-keep">
+              <p className="course-body text-[#BFBFBF] font-light break-keep">
                 수업이 끝난 뒤에도 계속 사용할 수 있는 '나만의 브랜드 비주얼 라이브러리'를 구축합니다.
               </p>
             </div>
@@ -782,10 +782,10 @@ export default function HeartArtProjectSection() {
             <Reveal>
               <div className="h-full p-8 sm:p-10 rounded-3xl bg-[#121418] border border-white/10 flex flex-col justify-between space-y-6">
                 <div>
-                  <span className="text-xs font-bold text-[#A68253] tracking-[0.2em] uppercase block mb-2">
+                  <span className="course-caption font-bold text-[#A68253] tracking-[0.2em] uppercase block mb-2">
                     WHAT YOU GET
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-display font-bold text-white italic mb-6">
+                  <h3 className="course-mid-title font-display font-bold text-white italic mb-6">
                     수료 후 갖게 되는 것
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -799,7 +799,7 @@ export default function HeartArtProjectSection() {
                     ].map((text, idx) => (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center gap-2.5 text-xs sm:text-sm font-medium text-white"
+                        className="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center gap-2.5 course-caption font-medium text-white"
                       >
                         <span className="text-[#A68253] font-bold">✔</span>
                         <span>{text}</span>
@@ -807,7 +807,7 @@ export default function HeartArtProjectSection() {
                     ))}
                   </div>
                 </div>
-                <p className="text-xs text-[#BFBFBF] pt-4 border-t border-white/5">
+                <p className="course-caption text-[#BFBFBF] pt-4 border-t border-white/5">
                   단순 기술 습득을 넘어, 브랜드의 시각적 자산을 손에 쥐고 수료합니다.
                 </p>
               </div>
@@ -819,10 +819,10 @@ export default function HeartArtProjectSection() {
             <Reveal delayMs={200}>
               <div className="h-full p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#1C1610] via-[#14100D] to-[#0A0807] border border-[#A68253]/40 flex flex-col justify-between space-y-6 shadow-xl">
                 <div>
-                  <span className="text-xs font-bold text-[#A68253] tracking-[0.2em] uppercase block mb-2">
+                  <span className="course-caption font-bold text-[#A68253] tracking-[0.2em] uppercase block mb-2">
                     CLASS BENEFIT
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-display font-bold text-white italic mb-4">
+                  <h3 className="course-mid-title font-display font-bold text-white italic mb-4">
                     수강생 전용 자료 5종
                   </h3>
                   <p className="text-xs text-[#BFBFBF] mb-6">

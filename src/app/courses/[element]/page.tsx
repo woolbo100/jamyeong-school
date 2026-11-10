@@ -185,7 +185,7 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
   return (
     <div className="bg-trueBlack min-h-screen text-white font-sans selection:bg-antiqueGold/30">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+      <section className="relative pt-24 pb-20 lg:pt-28 lg:pb-24 px-6 overflow-hidden">
         {/* Aura Background */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-20 pointer-events-none"
@@ -195,20 +195,20 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
         <div className="site-container relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
             <Reveal>
-              <div className={`text-6xl md:text-8xl mb-10 group-hover:scale-110 transition-transform duration-700`}>
+              <div className={`text-5xl md:text-7xl mb-8 group-hover:scale-110 transition-transform duration-700`}>
                 {data.symbol}
               </div>
             </Reveal>
             <Reveal delayMs={200}>
-              <span className={`${data.color} font-display text-sm tracking-[0.4em] mb-6 block uppercase opacity-80`}>
+              <span className={`${data.color} font-display course-caption tracking-[0.4em] mb-4 block uppercase opacity-80`}>
                 {data.name} Curriculum
               </span>
-              <h1 className="text-4xl md:text-7xl font-display mb-8 leading-tight tracking-tight uppercase italic">
+              <h1 className="course-hero-title font-display mb-6 leading-tight tracking-tight uppercase italic">
                 {data.lectureName}
               </h1>
             </Reveal>
             <Reveal delayMs={400}>
-              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
+              <p className="course-hero-sub text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
                 {data.tagline}
               </p>
             </Reveal>
@@ -217,24 +217,24 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 2. Recommended For Section */}
-      <section className="py-24 px-6">
+      <section className="py-20 md:py-24 px-6">
         <div className="site-container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <Reveal>
-              <h2 className="text-3xl md:text-5xl font-display mb-8">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
+              <h2 className="course-section-title font-display mb-6">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
               <div className="space-y-4">
                 {data.recommends.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/5">
                     <span className={data.color}>✦</span>
-                    <span className="text-white/80 font-light">{item}</span>
+                    <span className="course-body text-white/80 font-light">{item}</span>
                   </div>
                 ))}
               </div>
             </Reveal>
             <Reveal delayMs={400}>
-              <div className={`p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
-                <h3 className="text-xl font-bold mb-6 italic text-white/40">Our Mission</h3>
-                <p className="text-2xl md:text-3xl font-display leading-tight italic">
+              <div className={`p-8 md:p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
+                <h3 className="course-caption font-bold mb-4 italic text-white/40">Our Mission</h3>
+                <p className="course-quote font-display leading-tight italic">
                   단순한 지식이 아닌, <br />
                   당신의 존재 자체가 <br />
                   <span className={data.color}>가치가 되는 과정</span>입니다.
@@ -246,23 +246,23 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 3. Learning Content Section */}
-      <section className="py-24 px-6 bg-white/[0.02]">
+      <section className="py-20 md:py-24 px-6 bg-white/[0.02]">
         <div className="site-container">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-display mb-4">강의에서 배우는 내용</h2>
-              <div className={`w-20 h-1 mx-auto rounded-full bg-current ${data.color}`}></div>
+            <div className="text-center mb-14 md:mb-16">
+              <h2 className="course-section-title font-display mb-4">강의에서 배우는 내용</h2>
+              <div className={`w-16 h-1 mx-auto rounded-full bg-current ${data.color}`}></div>
             </div>
           </Reveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.learningContent.map((item, idx) => (
               <Reveal key={idx} delayMs={idx * 150} slideFrom="bottom">
-                <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all duration-500 h-full flex flex-col items-center text-center">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-6 ${data.bgColor} ${data.color} font-bold`}>
+                <div className="p-6 md:p-8 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all duration-500 h-full flex flex-col items-center text-center">
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-5 ${data.bgColor} ${data.color} font-bold text-sm`}>
                     {idx + 1}
                   </div>
-                  <p className="text-white/90 font-medium leading-relaxed">{item}</p>
+                  <p className="course-body text-white/90 font-medium leading-relaxed">{item}</p>
                 </div>
               </Reveal>
             ))}
@@ -271,24 +271,24 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 4. Curriculum Section */}
-      <section className="py-24 px-6 font-sans">
+      <section className="py-20 md:py-24 px-6 font-sans">
         <div className="site-container">
           <div className="max-w-5xl mx-auto">
             <Reveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-display mb-12">상세 커리큘럼</h2>
+              <div className="text-center mb-14 md:mb-16">
+                <h2 className="course-section-title font-display mb-8">상세 커리큘럼</h2>
               </div>
             </Reveal>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {data.curriculum.map((item, idx) => (
                 <Reveal key={idx} delayMs={idx * 150}>
-                  <div className="group relative p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500">
-                    <div className="flex flex-col md:flex-row md:items-center gap-6">
-                      <div className={`text-2xl font-display ${data.color} opacity-60 min-w-[100px]`}>{item.unit}</div>
+                  <div className="group relative p-6 md:p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all duration-500">
+                    <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                      <div className={`course-card-title font-display ${data.color} opacity-70 min-w-[90px]`}>{item.unit}</div>
                       <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-2 text-white/90">{item.title}</h4>
-                        <p className="text-white/50 leading-relaxed font-light">{item.details}</p>
+                        <h4 className="course-card-title font-bold mb-1 text-white/90">{item.title}</h4>
+                        <p className="course-caption text-white/50 leading-relaxed font-light">{item.details}</p>
                       </div>
                     </div>
                   </div>
@@ -300,15 +300,15 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 5. Expected Effects Section */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-20 md:py-24 px-6 text-center">
         <div className="site-container">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <div className="mb-16">
-                <h2 className="text-3xl md:text-4xl font-display mb-12">수강 후 기대 효과</h2>
+              <div className="mb-12">
+                <h2 className="course-section-title font-display mb-10">수강 후 기대 효과</h2>
                 <div className="space-y-6">
                   {data.effects.map((item, idx) => (
-                    <div key={idx} className="text-xl md:text-2xl text-white/80 font-light italic">
+                    <div key={idx} className="course-quote text-white/80 font-light italic">
                       “ {item} ”
                     </div>
                   ))}
@@ -320,24 +320,24 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* 6. Application Info & CTA */}
-      <section className="py-32 px-6 bg-gradient-to-b from-transparent to-white/[0.03] border-t border-white/5">
+      <section className="py-24 md:py-32 px-6 bg-gradient-to-b from-transparent to-white/[0.03] border-t border-white/5">
         <div className="site-container text-center">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold mb-4">신청 안내</h3>
-                <p className="text-white/50 font-light">
+              <div className="mb-10">
+                <h3 className="course-mid-title font-bold mb-3">신청 안내</h3>
+                <p className="course-body text-white/50 font-light">
                   상세 일정 및 모집 안내는 별도 공지됩니다. <br />
                   현재 수강 대기 및 궁금한 사항은 아래로 문의해 주세요.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
                 <a
                   href="https://pf.kakao.com/_IxguMn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative overflow-visible h-16 w-full sm:w-72 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]`}
+                  className={`group relative overflow-visible h-14 w-full sm:w-64 px-8 flex items-center justify-center course-card-title font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 transform-gpu hover:-translate-y-[2px]`}
                 >
                   <span className="relative z-10 font-bold">강의 신청 문의하기</span>
                   <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
@@ -346,7 +346,7 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
 
               <Link
                 href="/courses"
-                className="text-white/40 hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase border-b border-white/10 pb-1"
+                className="text-white/40 hover:text-white transition-colors duration-300 course-caption tracking-widest uppercase border-b border-white/10 pb-1"
               >
                 ← 강의소개 메인으로 돌아가기
               </Link>
