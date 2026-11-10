@@ -4,6 +4,7 @@ export interface OnedayClassItem {
   id: string;
   category: string; // 영문 카테고리 (예: DIGITAL START)
   title: string;
+  subtitle?: string; // 부제 (예: "단 하루 만에 완성하는 내 첫 종이책")
   description: string;
   tags: string[];
   status: OnedayStatus;
@@ -27,13 +28,14 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     detailUrl: "/blog-website",
   },
   {
-    id: "vibe-coding-starter",
-    category: "VIBE CODING",
-    title: "바이브코딩 기초",
-    description: "복잡한 코딩 지식 없이 AI와 대화하며 웹페이지와 간단한 서비스를 직접 만들어보는 바이브코딩 입문 클래스입니다.",
-    tags: ["바이브코딩", "AI코딩", "웹제작", "초보가능"],
+    id: "ai-brand-page",
+    category: "AI BRAND PAGE",
+    title: "AI로 브랜드 소개 페이지 제작",
+    description: "강사, 작가, 상담가, 프리랜서, 1인사업자를 위한 나만의 브랜드 소개 페이지. AI와 대화하며 소개, 경력, 서비스, SNS 링크를 한 페이지에 담아 직접 완성합니다.",
+    tags: ["브랜드페이지", "바이브코딩", "AI웹제작", "1인브랜드"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/brand-page",
   },
   {
     id: "ai-picture-book",
@@ -55,13 +57,15 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     applicationUrl: null,
   },
   {
-    id: "google-ai-tools",
-    category: "AI TOOL MAKING",
-    title: "구글 AI 도구 제작소",
-    description: "구글의 다양한 AI 도구를 활용해 업무와 콘텐츠 제작에 사용할 수 있는 나만의 실용적인 AI 도구를 직접 제작합니다.",
-    tags: ["GoogleAI", "AI도구", "업무활용", "자동화"],
+    id: "ai-paper-book",
+    category: "AI PUBLISHING",
+    title: "AI 감성 종이책 출판",
+    subtitle: "단 하루 만에 완성하는 내 첫 종이책",
+    description: "에세이, 필사책, 시화집, 컬러링북 등 부담 없이 시작할 수 있는 콘텐츠를 활용해 기획부터 편집, 표지, POD 출판까지 내 이름의 첫 종이책을 만들어봅니다.",
+    tags: ["종이책출판", "POD출판", "1인출판", "작가브랜딩"],
     status: "scheduled",
     applicationUrl: null,
+    detailUrl: "/paperbook",
   },
   {
     id: "app-in-toss-miniapp",

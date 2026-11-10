@@ -167,9 +167,9 @@ const elementData: Record<ElementType, ElementData> = {
 export async function generateMetadata({ params }: { params: Promise<{ element: string }> }): Promise<Metadata> {
   const { element } = await params;
   const data = elementData[element as ElementType];
-  
+
   if (!data) return { title: "Page Not Found" };
-  
+
   return {
     title: `${data.name} | ${data.lectureName} - 자명스쿨`,
     description: data.tagline,
@@ -187,7 +187,7 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
         {/* Aura Background */}
-        <div 
+        <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-[150px] opacity-20 pointer-events-none"
           style={{ backgroundColor: data.auraColor }}
         ></div>
@@ -217,27 +217,27 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       {/* 2. Recommended For Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-           <Reveal>
-              <h2 className="text-3xl md:text-5xl font-display mb-8">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
-              <div className="space-y-4">
-                {data.recommends.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/5">
-                    <span className={data.color}>✦</span>
-                    <span className="text-white/80 font-light">{item}</span>
-                  </div>
-                ))}
-              </div>
-           </Reveal>
-           <Reveal delayMs={400}>
-              <div className={`p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
-                <h3 className="text-xl font-bold mb-6 italic text-white/40">Our Mission</h3>
-                <p className="text-2xl md:text-3xl font-display leading-tight italic">
-                   단순한 지식이 아닌, <br />
-                   당신의 존재 자체가 <br /> 
-                   <span className={data.color}>가치가 되는 과정</span>입니다.
-                </p>
-              </div>
-           </Reveal>
+          <Reveal>
+            <h2 className="text-3xl md:text-5xl font-display mb-8">이런 분께 <br className="hidden md:block" /><span className={data.color}>추천합니다</span></h2>
+            <div className="space-y-4">
+              {data.recommends.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <span className={data.color}>✦</span>
+                  <span className="text-white/80 font-light">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal delayMs={400}>
+            <div className={`p-12 rounded-[2.5rem] border ${data.borderColor}/20 bg-white/[0.02] flex flex-col justify-center h-full`}>
+              <h3 className="text-xl font-bold mb-6 italic text-white/40">Our Mission</h3>
+              <p className="text-2xl md:text-3xl font-display leading-tight italic">
+                단순한 지식이 아닌, <br />
+                당신의 존재 자체가 <br />
+                <span className={data.color}>가치가 되는 과정</span>입니다.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -270,7 +270,7 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
       <section className="py-24 px-6 max-w-5xl mx-auto font-sans">
         <Reveal>
           <div className="text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-display mb-12">상세 커리큘럼</h2>
+            <h2 className="text-3xl md:text-4xl font-display mb-12">상세 커리큘럼</h2>
           </div>
         </Reveal>
 
@@ -312,13 +312,13 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
             <div className="mb-12">
-               <h3 className="text-2xl font-bold mb-4">신청 안내</h3>
-               <p className="text-white/50 font-light">
-                 상세 일정 및 모집 안내는 별도 공지됩니다. <br />
-                 현재 수강 대기 및 궁금한 사항은 아래로 문의해 주세요.
-               </p>
+              <h3 className="text-2xl font-bold mb-4">신청 안내</h3>
+              <p className="text-white/50 font-light">
+                상세 일정 및 모집 안내는 별도 공지됩니다. <br />
+                현재 수강 대기 및 궁금한 사항은 아래로 문의해 주세요.
+              </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
               <a
                 href="https://pf.kakao.com/_IxguMn"

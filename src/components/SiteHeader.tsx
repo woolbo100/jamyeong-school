@@ -9,11 +9,12 @@ export default function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // 라이트/베이지 배경 페이지 판별 (/apply, /oneday, /resources 등)
+  // 라이트/베이지 배경 페이지 판별 (/apply, /oneday, /resources, /brand-page 등)
   const isLightPage =
     pathname.startsWith('/apply') ||
     pathname.startsWith('/oneday') ||
-    pathname.startsWith('/resources');
+    pathname.startsWith('/resources') ||
+    pathname.startsWith('/brand-page');
 
   // 스크롤을 내렸을 때(sticky 상태)이면서 라이트 페이지인 경우에만 라이트 헤더 스타일 적용
   const isLightSticky = isLightPage && isScrolled;

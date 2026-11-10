@@ -103,12 +103,17 @@ export default function OnedayPage() {
                     </span>
                   </div>
 
-                  {/* 클래스명 */}
+                  {/* 클래스명 & 부제 */}
                   {item.detailUrl ? (
                     <Link
                       href={item.detailUrl}
                       className="group/title block mb-3"
                     >
+                      {item.subtitle && (
+                        <p className="text-xs font-semibold text-[#8E6D38] mb-1 tracking-tight">
+                          # {item.subtitle}
+                        </p>
+                      )}
                       <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover/title:text-[#8E6D38] transition-colors break-keep flex items-center justify-between">
                         <span>{item.title}</span>
                         <span className="text-xs font-normal text-[#8E6D38] opacity-0 group-hover/title:opacity-100 transition-opacity shrink-0 ml-2">
@@ -117,9 +122,16 @@ export default function OnedayPage() {
                       </h2>
                     </Link>
                   ) : (
-                    <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep mb-3">
-                      {item.title}
-                    </h2>
+                    <div className="mb-3">
+                      {item.subtitle && (
+                        <p className="text-xs font-semibold text-[#8E6D38] mb-1 tracking-tight">
+                          # {item.subtitle}
+                        </p>
+                      )}
+                      <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep">
+                        {item.title}
+                      </h2>
+                    </div>
                   )}
 
                   {/* 설명 */}

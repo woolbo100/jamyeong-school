@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import HeartArtProjectSection from "@/components/courses/HeartArtProjectSection";
 
 export default function FireCoursePage() {
   const curriculumData = [
@@ -582,6 +583,9 @@ export default function FireCoursePage() {
           </div>
         </div>
       </section>
+
+      {/* 8-2. HEART ART PROJECT (BRAND ART CONTENT 10) */}
+      <HeartArtProjectSection />
 
       {/* 9. CTA */}
       <section className="py-48 px-6 text-center bg-black relative overflow-hidden">
