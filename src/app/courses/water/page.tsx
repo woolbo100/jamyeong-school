@@ -711,11 +711,11 @@ export default function WaterCoursePage() {
       {/* 7. 상세 커리큘럼 (Earth의 5. 상세 커리큘럼 구조 적용) */}
       <section className="py-24 px-6 lg:py-32 bg-[#0a0a0c]">
         <div className="site-container">
-          <Reveal>
-            <div
-              className="relative p-8 md:p-16 lg:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
-              style={{ background: "linear-gradient(180deg, rgba(18,28,36,0.98) 0%, rgba(9,9,9,1) 100%)" }}
-            >
+          <div
+            className="relative p-8 md:p-16 lg:p-20 rounded-[3rem] border border-white/[0.05] shadow-[0_40px_100px_rgba(0,0,0,0.6)] overflow-hidden"
+            style={{ background: "linear-gradient(180deg, rgba(18,28,36,0.98) 0%, rgba(9,9,9,1) 100%)" }}
+          >
+            <Reveal>
               <div className="relative z-10 text-center mb-16 md:mb-20">
                 <h2 className="course-section-title font-display mb-6 italic text-white">
                   작은 아이디어에서 <br />
@@ -736,6 +736,7 @@ export default function WaterCoursePage() {
                   </span>
                 </div>
               </div>
+            </Reveal>
 
               {/* Part 1 */}
               <div className="mb-20 md:mb-24">
@@ -1348,7 +1349,6 @@ export default function WaterCoursePage() {
               </div>
 
             </div>
-          </Reveal>
         </div>
       </section>
 
