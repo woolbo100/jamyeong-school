@@ -15,6 +15,7 @@ export interface PaperbookClassConfig {
   heroMainTitleLine2: string;
   heroHighlightTitle: string;
   heroDescription: string;
+  heroSubDescription?: string;
   heroHookText: string;
   heroBadges: string[];
   tags: string[];
@@ -46,6 +47,8 @@ export const PAPERBOOK_CLASS_CONFIG: PaperbookClassConfig = {
   heroHighlightTitle: "단 하루 3~4시간, 내 손에 쥐어지는 첫 종이책 만들기",
   heroDescription:
     "책을 내고 싶지만 긴 원고를 쓰는 것부터 막막했다면, 에세이, 필사책, 디카시, 시화집, 컬러링 에세이처럼 부담 없이 시작할 수 있는 작은 책부터 시작해보세요. AI를 활용해 콘텐츠를 정리하고, Canva로 내지와 표지를 편집한 뒤 POD 방식으로 실제 종이책 출판까지 이어가는 첫 출판 실습 클래스입니다.",
+  heroSubDescription:
+    "내 삶을 돌아보는 작은 기록부터, 오래 간직하고 싶은 인생의 이야기까지. AI와 함께 나만의 이야기를 한 권의 종이책으로 남겨보세요.",
   heroHookText: "✨ 책을 쓰는 법만 배우는 수업이 아닙니다. 내 이름이 들어간 실제 종이책을 만드는 수업입니다.",
   heroBadges: [
     "출판사 대표 직강",
@@ -106,6 +109,62 @@ export const FIRST_HOOK_SECTION = {
   ],
   highlightQuote:
     "첫 책은 거창할 필요가 없습니다. 중요한 것은 '내 이름으로 책 한 권을 실제로 출간해본 경험'입니다.",
+};
+
+// ─────────────────────────────────────────────────────────────
+// 3-1. 신규 감성 섹션 (THE STORY OF MY LIFE & 3가지 방법 카드)
+// ─────────────────────────────────────────────────────────────
+export interface LifeStoryCardItem {
+  cardNumber: string;
+  title: string;
+  quote: string;
+  description: string;
+  tag: string;
+  icon: string;
+}
+
+export const LIFE_STORY_SECTION = {
+  label: "THE STORY OF MY LIFE",
+  badge: "나를 발견하는 시간",
+  title: "누구에게나, 한 권의 책이 될 이야기가 있습니다.",
+  paragraphs: [
+    "우리는 살아오면서 수많은 순간을 지나왔습니다.",
+    "기억하고 싶은 날도, 잊고 싶었던 시간도, 지금의 나를 만들어온 소중한 이야기입니다.",
+    "거창한 성공담이나 특별한 인생이 아니어도 괜찮습니다.",
+    "어린 시절의 추억, 인생의 전환점, 누군가에게 전하고 싶은 마음, 오랜 시간 품어온 생각까지.",
+    "그렇게 흩어져 있던 기억을 하나씩 꺼내어 정리하다 보면, 어느새 나만의 이야기가 됩니다.",
+  ],
+  quote: "책을 만든다는 것은 때로, 나 자신을 다시 만나는 과정이기도 합니다.",
+  subTitle: "나의 이야기가 책이 되는 3가지 방법",
+  cards: [
+    {
+      cardNumber: "CARD 01",
+      title: "나의 인생 에세이",
+      quote: "평범했던 하루도, 돌아보면 나만의 이야기가 됩니다.",
+      description:
+        "일상의 경험, 감정, 생각을 짧은 글로 기록하고 나만의 시선이 담긴 에세이로 엮어봅니다.",
+      tag: "#인생에세이 #일상의기록",
+      icon: "✍️",
+    },
+    {
+      cardNumber: "CARD 02",
+      title: "나의 작은 자서전",
+      quote: "살아온 시간을 돌아보며, 지금의 나를 발견합니다.",
+      description:
+        "어린 시절부터 인생의 전환점까지 기억에 남는 장면들을 정리하고, 한 편의 인생 이야기로 구성해봅니다.",
+      tag: "#작은자서전 #기억의정리",
+      icon: "⏳",
+    },
+    {
+      cardNumber: "CARD 03",
+      title: "소중한 사람에게 남기는 책",
+      quote: "언젠가 전하고 싶었던 마음을, 오래 남을 책으로.",
+      description:
+        "부모님과 가족의 이야기, 자녀에게 전하고 싶은 마음, 소중한 사람과의 추억을 글과 사진으로 담아봅니다.",
+      tag: "#가족기록 #전하고싶은마음",
+      icon: "💌",
+    },
+  ] as LifeStoryCardItem[],
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -215,6 +274,9 @@ export const BOOK_STYLE_ITEMS: BookStyleItem[] = [
 
 export const BOOK_STYLE_FOOTER =
   "어떤 형식이든 '내 콘텐츠를 책의 형태로 완성하는 것'이 수업의 핵심입니다.";
+
+export const BOOK_STYLE_LIFE_STORY_NOTE =
+  "인생 에세이와 작은 자서전도 짧은 에세이북 형태로 시작할 수 있습니다. 내 삶의 한 장면만 골라도 충분히 첫 책의 주제가 됩니다.";
 
 // ─────────────────────────────────────────────────────────────
 // 7. 출판 반려 방지 영역 (PUBLISHING CHECK)
@@ -339,7 +401,8 @@ export const CURRICULUM_STEPS: CurriculumStepItem[] = [
   {
     step: "STEP 01",
     title: "책의 목적과 독자 정하기",
-    description: "내가 만들 책의 방향성과 독자 타깃을 정의합니다.",
+    description:
+      "내가 만들 책의 방향성과 독자 타깃을 정의합니다. 자서전이나 인생 에세이를 선택한 경우, 나의 기억과 경험에서 책의 주제를 발견하는 방법도 함께 살펴봅니다.",
     output: "책의 주제·타깃",
   },
   {
@@ -357,7 +420,8 @@ export const CURRICULUM_STEPS: CurriculumStepItem[] = [
   {
     step: "STEP 04",
     title: "본문 콘텐츠 구성",
-    description: "기존 글을 정리하거나 AI와 함께 초안을 작성하고 감성적으로 다듬습니다.",
+    description:
+      "기존 글을 정리하거나 AI와 함께 초안을 작성하고 감성적으로 다듬습니다. AI 질문을 활용해 기억에 남는 장면을 정리하고, 자신의 말투와 감정이 살아 있는 글로 다듬는 방법을 소개합니다.",
     output: "본문 초안",
   },
   {
@@ -514,10 +578,13 @@ export const RECOMMENDED_FOR_LIST: string[] = [
   "출판 반려나 수정 요청을 줄이고 싶은 분",
   "개인 브랜딩을 위한 작가 이력을 만들고 싶은 분",
   "향후 1인출판사 운영에도 관심이 있는 분",
+  "살아온 시간을 돌아보며 나만의 이야기를 책으로 남기고 싶은 분",
+  "부모님이나 가족의 인생 이야기를 기록하고 싶은 분",
+  "글쓰기 경험은 부족하지만 AI의 도움으로 인생 에세이를 시작하고 싶은 분",
 ];
 
 // ─────────────────────────────────────────────────────────────
-// 16. FAQ (자주 묻는 질문 7종)
+// 16. FAQ (자주 묻는 질문 8종)
 // ─────────────────────────────────────────────────────────────
 export interface FaqItem {
   id: string;
@@ -569,6 +636,12 @@ export const PAPERBOOK_FAQS: FaqItem[] = [
     answer:
       "기본적인 텍스트와 이미지 편집부터 출판용 내지와 표지를 만드는 흐름을 순서대로 실습하므로 컴퓨터 기초 조작이 가능하시다면 충분히 따라오실 수 있습니다.",
   },
+  {
+    id: "faq-8",
+    question: "글을 써본 적이 없어도 자서전이나 인생 에세이를 만들 수 있나요?",
+    answer:
+      "네. 처음부터 긴 자서전을 완성할 필요는 없습니다. 기억에 남는 사건이나 소중한 추억 한 가지를 선택해 짧은 글부터 시작할 수 있습니다. AI를 활용해 질문을 만들고 생각을 정리하면서 자신만의 글을 구성하는 방법을 배웁니다.",
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -579,6 +652,8 @@ export const FINAL_CTA_SECTION = {
   mainTitle: "언젠가 내고 싶었던 책,\n이번에는 진짜 한 권으로 만들어보세요.",
   subText:
     "에세이도, 필사책도, 시화집도, 컬러링북도 좋습니다.\n거창한 첫 책보다 끝까지 완성해본 첫 책이 다음 시작을 만들어줍니다.",
+  lifeStoryNote:
+    "나의 경험이 글이 되고, 나의 이야기가 한 권의 책으로 남는 시간. 자명스쿨에서 첫 페이지를 시작해보세요.",
   highlightText: "출판사 대표와 함께 기획부터 편집, 표지, POD 출판 등록까지.",
   ctaButtonText: "개강 알림 신청하기",
   footerMeta: "단 하루 3~4시간 · Zoom 실시간 실습 · 초보자 참여 가능",

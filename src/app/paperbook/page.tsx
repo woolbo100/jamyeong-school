@@ -5,10 +5,12 @@ import {
   PAPERBOOK_CLASS_CONFIG,
   PUBLISHER_DIRECT_SECTION,
   FIRST_HOOK_SECTION,
+  LIFE_STORY_SECTION,
   WHY_PAPER_BOOK_ITEMS,
   ZERO_COST_SECTION,
   BOOK_STYLE_ITEMS,
   BOOK_STYLE_FOOTER,
+  BOOK_STYLE_LIFE_STORY_NOTE,
   PUBLISHING_CHECK_SECTION,
   ONE_DAY_RESULTS,
   TRANSFORMATION_ITEMS,
@@ -34,14 +36,14 @@ import {
 export const metadata: Metadata = {
   title: "AI 감성 종이책 출판 원데이 | 단 하루 만에 완성하는 내 첫 종이책 · 자명스쿨",
   description:
-    "에세이, 필사책, 디카시, 시화집, 컬러링북, 감성 워크북 등 부담 없는 콘텐츠로 시작하는 첫 종이책. Canva 내지·표지 편집부터 재고 없는 POD 출판, 반려 방지 체크까지 출판사 대표 직강으로 배웁니다.",
+    "에세이, 인생 에세이, 자서전, 필사책, 디카시, 시화집, 컬러링북, 감성 워크북 등 부담 없는 콘텐츠로 시작하는 첫 종이책. Canva 내지·표지 편집부터 재고 없는 POD 출판, 반려 방지 체크까지 출판사 대표 직강으로 배웁니다.",
   alternates: {
     canonical: "https://www.jmschool.kr/paperbook",
   },
   openGraph: {
     title: "AI 감성 종이책 출판 원데이 | 단 하루 만에 완성하는 내 첫 종이책 · 자명스쿨",
     description:
-      "에세이, 필사책, 디카시, 시화집, 컬러링북, 감성 워크북 등 부담 없는 콘텐츠로 시작하는 첫 종이책. Canva 내지·표지 편집부터 재고 없는 POD 출판, 반려 방지 체크까지 출판사 대표 직강으로 배웁니다.",
+      "에세이, 인생 에세이, 자서전, 필사책, 디카시, 시화집, 컬러링북, 감성 워크북 등 부담 없는 콘텐츠로 시작하는 첫 종이책. Canva 내지·표지 편집부터 재고 없는 POD 출판, 반려 방지 체크까지 출판사 대표 직강으로 배웁니다.",
     url: "https://www.jmschool.kr/paperbook",
     siteName: "자명스쿨",
     locale: "ko_KR",
@@ -131,6 +133,11 @@ export default function PaperbookPage() {
                   AI를 활용해 콘텐츠를 정리하고, Canva로 내지와 표지를 편집한 뒤 <br className="hidden sm:inline" />
                   POD 방식으로 실제 종이책 출판까지 이어가는 첫 출판 실습 클래스입니다.
                 </p>
+                {PAPERBOOK_CLASS_CONFIG.heroSubDescription && (
+                  <p className="text-xs sm:text-sm text-[#7C6656] pt-1.5 border-t border-[#E8DFD3] font-medium leading-relaxed">
+                    {PAPERBOOK_CLASS_CONFIG.heroSubDescription}
+                  </p>
+                )}
               </div>
 
               {/* 강조 카피 박스 */}
@@ -301,6 +308,97 @@ export default function PaperbookPage() {
         </section>
 
         {/* ───────────────────────────────────────────
+            [03-1. 신규 감성 섹션 (THE STORY OF MY LIFE & 3가지 방법 카드)]
+            자서전·인생 에세이·자기 성찰을 통한 출판 방향성 제시
+           ─────────────────────────────────────────── */}
+        <section className="w-full py-20 md:py-28 border-b border-[#2B2119] bg-gradient-to-b from-[#17120F] via-[#130E0C] to-[#0F0B09] relative overflow-hidden">
+          {/* 감성적인 소프트 앰버 조명 효과 */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-60 bg-[#C6A66B]/8 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="site-container relative z-10 space-y-16">
+            {/* 상단: 감성 메시지 & 성찰 인용 */}
+            <div className="max-w-3xl mx-auto text-center space-y-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#241B15] border border-[#453424] text-xs font-semibold text-[#D6C6A8]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                <span className="tracking-widest uppercase text-[#C6A66B] font-bold">
+                  {LIFE_STORY_SECTION.label}
+                </span>
+                <span className="text-[#8F7D6E]">·</span>
+                <span>{LIFE_STORY_SECTION.badge}</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-4xl md:text-[38px] font-bold text-[#FAF7F2] leading-tight break-keep">
+                “{LIFE_STORY_SECTION.title}”
+              </h2>
+
+              <div className="space-y-3.5 text-sm sm:text-base text-[#C2B4A6] leading-relaxed break-keep pt-1 font-light">
+                {LIFE_STORY_SECTION.paragraphs.map((p, idx) => (
+                  <p key={idx} className="leading-relaxed">
+                    {p}
+                  </p>
+                ))}
+              </div>
+
+              {/* 감성 강조 인용구 카드 */}
+              <div className="pt-2">
+                <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#211A14] via-[#1B140F] to-[#211A14] border border-[#48372A] shadow-md max-w-2xl mx-auto text-center">
+                  <span className="text-xl sm:text-2xl block mb-2 opacity-80">📖</span>
+                  <p className="text-base sm:text-lg font-bold text-[#D6C6A8] leading-relaxed break-keep font-serif">
+                    “{LIFE_STORY_SECTION.quote}”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 하단: 나의 이야기가 책이 되는 3가지 방법 카드 */}
+            <div className="space-y-8 pt-4">
+              <div className="text-center space-y-2">
+                <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-[0.2em] block">
+                  3 WAYS TO PUBLISH YOUR STORY
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#FAF7F2] break-keep">
+                  {LIFE_STORY_SECTION.subTitle}
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {LIFE_STORY_SECTION.cards.map((card) => (
+                  <div
+                    key={card.cardNumber}
+                    className="p-6 sm:p-7 rounded-2xl bg-[#17120F] border border-[#2F231B] hover:border-[#C6A66B]/50 transition-all duration-300 flex flex-col justify-between space-y-5 group shadow-md"
+                  >
+                    <div className="space-y-3.5">
+                      <div className="flex items-center justify-between">
+                        <span className="px-2.5 py-0.5 rounded bg-[#241A14] border border-[#3D2C21] text-[11px] font-extrabold text-[#C6A66B]">
+                          {card.cardNumber}
+                        </span>
+                        <span className="text-2xl group-hover:scale-110 transition-transform">
+                          {card.icon}
+                        </span>
+                      </div>
+                      <h4 className="text-lg font-bold text-[#FAF7F2] leading-snug break-keep">
+                        {card.title}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-[#D6C6A8] font-semibold leading-relaxed break-keep">
+                        “{card.quote}”
+                      </p>
+                      <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep pt-1">
+                        {card.description}
+                      </p>
+                    </div>
+                    <div className="pt-3 border-t border-[#261D17]">
+                      <span className="text-[11px] text-[#C6A66B] font-medium">
+                        {card.tag}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────────────────────────────────────
             [04. WHY PAPER BOOK? (01~04)]
            ─────────────────────────────────────────── */}
         <section className="w-full py-20 md:py-28 border-b border-[#26201B]">
@@ -423,11 +521,18 @@ export default function PaperbookPage() {
               ))}
             </div>
 
-            {/* 하단 강조 문구 */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center">
-              <p className="text-xs sm:text-sm text-[#D6C6A8] font-bold leading-relaxed break-keep">
-                ✨ {BOOK_STYLE_FOOTER}
-              </p>
+            {/* 하단 강조 문구 및 인생 에세이/자서전 확장 안내 */}
+            <div className="space-y-3">
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#16120F] border border-[#2E241D] text-center">
+                <p className="text-xs sm:text-sm text-[#D6C6A8] font-bold leading-relaxed break-keep">
+                  ✨ {BOOK_STYLE_FOOTER}
+                </p>
+              </div>
+              <div className="p-4 sm:p-5 rounded-xl bg-[#1C1612] border border-[#3A2D23] text-center">
+                <p className="text-xs sm:text-sm text-[#BFAFA2] leading-relaxed break-keep">
+                  💡 <strong className="text-[#FAF7F2] font-semibold">{BOOK_STYLE_LIFE_STORY_NOTE}</strong>
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -1045,6 +1150,11 @@ export default function PaperbookPage() {
                 <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep font-medium">
                   {FINAL_CTA_SECTION.highlightText}
                 </p>
+                {FINAL_CTA_SECTION.lifeStoryNote && (
+                  <p className="text-xs sm:text-sm text-[#C6A66B] pt-2 border-t border-[#3E2D20] font-semibold break-keep">
+                    ✨ {FINAL_CTA_SECTION.lifeStoryNote}
+                  </p>
+                )}
               </div>
 
               {/* 최종 신청 카드 */}
