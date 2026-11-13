@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import CourseDetailContainer from "@/components/courses/CourseDetailContainer";
 
 interface CourseRefundPolicySectionProps {
   className?: string;
@@ -15,7 +16,7 @@ export default function CourseRefundPolicySection({
       aria-label="수강 취소 및 환불 안내"
       className={`w-full py-16 md:py-24 border-t border-[#B89B6A]/20 bg-[#0C0C0F] text-white selection:bg-[#B89B6A]/30 ${className}`}
     >
-      <div className="max-w-5xl mx-auto px-6">
+      <CourseDetailContainer>
         {/* 상단 섹션 타이틀 */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
           <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase px-3.5 py-1 rounded-full bg-[#B89B6A]/10 border border-[#B89B6A]/25">
@@ -157,7 +158,7 @@ export default function CourseRefundPolicySection({
             <span className="text-[#B89B6A] group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>
-      </div>
+      </CourseDetailContainer>
     </section>
   );
 }

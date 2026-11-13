@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
+import CourseDetailContainer from "@/components/courses/CourseDetailContainer";
 import {
   EMOTIONAL_PUBLISHING_CONFIG,
   EMPATHY_POINTS,
@@ -60,11 +61,11 @@ export default function EmotionalPublishingPage() {
       {/* ─────────────────────────────────────────────────────────────
           SECTION 01. 메인 히어로
          ───────────────────────────────────────────────────────────── */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 px-6 border-b border-[#B89B6A]/20 overflow-hidden">
+      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 border-b border-[#B89B6A]/20 overflow-hidden">
         {/* 은은한 샴페인 골드 오로라 배경 */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B89B6A]/10 blur-[140px] rounded-full pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
+        <CourseDetailContainer className="text-center relative z-10 space-y-6">
           {/* 상단 라벨 */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B89B6A]/10 border border-[#B89B6A]/30">
             <span className="w-2 h-2 rounded-full bg-[#B89B6A] animate-pulse" />
@@ -148,14 +149,14 @@ export default function EmotionalPublishingPage() {
               {EMOTIONAL_PUBLISHING_CONFIG.price.note}
             </p>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 02. 공감과 문제 제기
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Empathy & Challenge
@@ -195,14 +196,14 @@ export default function EmotionalPublishingPage() {
               AI와 함께라면 누구나 자신의 감성을 온전히 담은 첫 종이책을 완성할 수 있습니다.
             </p>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 03. 이 과정의 세 가지 결과
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto space-y-14">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-14">
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Core Achievements
@@ -256,14 +257,14 @@ export default function EmotionalPublishingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 04. 내가 만들 수 있는 책 8종 (선택형)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-6xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               8 Book Formats
@@ -320,14 +321,14 @@ export default function EmotionalPublishingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 05. 실제 출판 결과물 소개
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Student Publications
@@ -373,14 +374,14 @@ export default function EmotionalPublishingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 06. 핵심 커리큘럼 6개 모듈
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-4xl mx-auto space-y-14">
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-14">
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Curriculum Roadmap
@@ -432,14 +433,14 @@ export default function EmotionalPublishingPage() {
           <p className="text-center text-xs text-zinc-500 font-light">
             ※ 상세 영상 편수와 러닝타임은 정식 오픈 시 공지됩니다.
           </p>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 07. VOD 학습 방식
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               How It Works
@@ -481,14 +482,14 @@ export default function EmotionalPublishingPage() {
             <p>• 과제 제출은 향후 전용 접수 양식 및 학습관리 시스템(LMS)을 통해 진행됩니다.</p>
             <p>• 본 과정은 자기주도형 온라인 교육으로, 무제한 1:1 대면 첨삭이나 개인 코칭은 포함되지 않습니다 (공지 및 질의응답 중심 운영).</p>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 08. 자격 취득 및 작품 평가 (KDMCA 등록정보)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Official Certification
@@ -538,17 +539,17 @@ export default function EmotionalPublishingPage() {
               <p>{QUALIFICATION_SPEC.notice}</p>
             </div>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 08.5. 커리어 및 교육 활동 확장 (공통 템플릿 재사용 구조)
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 relative overflow-hidden">
+      <section className="py-20 md:py-28 border-b border-white/5 relative overflow-hidden">
         {/* 은은한 배경 광원 */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#B89B6A]/5 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto space-y-12 relative z-10">
+        <CourseDetailContainer className="space-y-12 relative z-10">
           {/* 섹션 헤더 */}
           <div className="text-center space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
@@ -609,14 +610,14 @@ export default function EmotionalPublishingPage() {
               </p>
             </div>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 09. 수강 혜택 6종
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Practical Materials
@@ -649,14 +650,14 @@ export default function EmotionalPublishingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 10. 이런 분께 추천합니다
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Recommended For
@@ -684,14 +685,14 @@ export default function EmotionalPublishingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 11. 원데이와 자격과정 비교
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Course Comparison
@@ -732,64 +733,66 @@ export default function EmotionalPublishingPage() {
               → 실시간으로 빠르게 경험하는 &lsquo;AI 감성 종이책 출판 원데이 클래스&rsquo; 둘러보기
             </Link>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 12. 가격 및 신청 안내
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5 bg-[#0F0E0D]">
-        <div className="max-w-3xl mx-auto text-center space-y-8">
-          <div className="space-y-3">
-            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
-              Enrollment & Pricing
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
-              내 이름의 책 한 권, 그리고 새로운 배움의 증명
-            </h2>
-          </div>
-
-          <div className="p-8 rounded-3xl bg-[#161412] border border-[#B89B6A]/30 space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs text-zinc-400">상품명</span>
-              <h3 className="text-xl font-bold text-[#FAF7F2]">
-                감성출판지도사 1급 실전 VOD 자격과정
-              </h3>
-              <p className="text-3xl sm:text-4xl font-black text-[#E6C99B] pt-2">
-                99,000원
-              </p>
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer>
+          <div className="max-w-2xl mx-auto text-center space-y-8">
+            <div className="space-y-3">
+              <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+                Enrollment & Pricing
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+                내 이름의 책 한 권, 그리고 새로운 배움의 증명
+              </h2>
             </div>
 
-            <div className="text-left text-xs text-zinc-300 space-y-2 p-5 rounded-2xl bg-black/40 border border-white/5">
-              <p className="font-bold text-[#B89B6A]">포함 항목</p>
-              <p>• VOD 정규 교육 과정 전체 시청 권한</p>
-              <p>• 책 유형별 실습 템플릿 및 프롬프트 자료 일체</p>
-              <p>• 포트폴리오 작품 제출 및 1회차 자격 검정 심사</p>
-              <p>• 최종 합격 시 감성출판지도사 1급 민간자격증 발급</p>
-              
-              <div className="pt-3 border-t border-white/10 space-y-1 text-zinc-500 text-[11px]">
-                <p>※ 별도 비용 안내: 실물 책 POD 인쇄·배송비 및 외부 유료 도구 이용료는 본인 부담입니다.</p>
+            <div className="p-8 rounded-3xl bg-[#161412] border border-[#B89B6A]/30 space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs text-zinc-400">상품명</span>
+                <h3 className="text-xl font-bold text-[#FAF7F2]">
+                  감성출판지도사 1급 실전 VOD 자격과정
+                </h3>
+                <p className="text-3xl sm:text-4xl font-black text-[#E6C99B] pt-2">
+                  99,000원
+                </p>
               </div>
-            </div>
 
-            {/* 비활성 버튼 */}
-            <button
-              type="button"
-              disabled
-              className="w-full py-4 px-6 rounded-2xl bg-zinc-800 text-zinc-400 font-bold text-base cursor-not-allowed border border-white/10"
-              title="과정 정식 오픈 준비 중입니다."
-            >
-              과정 신청 준비중
-            </button>
+              <div className="text-left text-xs text-zinc-300 space-y-2 p-5 rounded-2xl bg-black/40 border border-white/5">
+                <p className="font-bold text-[#B89B6A]">포함 항목</p>
+                <p>• VOD 정규 교육 과정 전체 시청 권한</p>
+                <p>• 책 유형별 실습 템플릿 및 프롬프트 자료 일체</p>
+                <p>• 포트폴리오 작품 제출 및 1회차 자격 검정 심사</p>
+                <p>• 최종 합격 시 감성출판지도사 1급 민간자격증 발급</p>
+                
+                <div className="pt-3 border-t border-white/10 space-y-1 text-zinc-500 text-[11px]">
+                  <p>※ 별도 비용 안내: 실물 책 POD 인쇄·배송비 및 외부 유료 도구 이용료는 본인 부담입니다.</p>
+                </div>
+              </div>
+
+              {/* 비활성 버튼 */}
+              <button
+                type="button"
+                disabled
+                className="w-full py-4 px-6 rounded-2xl bg-zinc-800 text-zinc-400 font-bold text-base cursor-not-allowed border border-white/10"
+                title="과정 정식 오픈 준비 중입니다."
+              >
+                과정 신청 준비중
+              </button>
+            </div>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
           SECTION 13. FAQ
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 px-6 border-b border-white/5">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="py-20 md:py-28 border-b border-white/5">
+        <CourseDetailContainer className="space-y-12">
           <div className="text-center space-y-3">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
               Frequently Asked Questions
@@ -799,8 +802,10 @@ export default function EmotionalPublishingPage() {
             </h2>
           </div>
 
-          <EmotionalPublishingFaqAccordion />
-        </div>
+          <div className="max-w-4xl mx-auto">
+            <EmotionalPublishingFaqAccordion />
+          </div>
+        </CourseDetailContainer>
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
@@ -811,31 +816,33 @@ export default function EmotionalPublishingPage() {
       {/* ─────────────────────────────────────────────────────────────
           SECTION 15. 마지막 CTA
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6 text-center bg-gradient-to-b from-[#0C0B0A] to-[#141210]">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-snug break-keep">
-            당신이 살아온 시간이 <br className="hidden sm:inline" />
-            한 권의 책이 될 수 있습니다.
-          </h2>
-          <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed font-light break-keep">
-            누군가에게는 작은 에세이, 누군가에게는 인생의 기록, 또 누군가에게는 새로운 작가 활동의 시작. <br className="hidden sm:inline" />
-            자명스쿨에서 나만의 책을 완성하고 배움의 다음 단계를 준비해보세요.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] pt-2 break-keep">
-            나만의 책을 만들고, 새로운 커리어의 가능성까지 넓혀보세요.
-          </p>
-          <div className="pt-4">
-            <a
-              href={EMOTIONAL_PUBLISHING_CONFIG.notificationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] text-[#0C0B0A] font-bold text-sm tracking-wider hover:brightness-110 transition-all shadow-xl"
-            >
-              <span>과정 오픈 알림 받기</span>
-              <span className="ml-2">→</span>
-            </a>
+      <section className="py-24 md:py-32 text-center bg-gradient-to-b from-[#0C0B0A] to-[#141210]">
+        <CourseDetailContainer>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-snug break-keep">
+              당신이 살아온 시간이 <br className="hidden sm:inline" />
+              한 권의 책이 될 수 있습니다.
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed font-light break-keep">
+              누군가에게는 작은 에세이, 누군가에게는 인생의 기록, 또 누군가에게는 새로운 작가 활동의 시작. <br className="hidden sm:inline" />
+              자명스쿨에서 나만의 책을 완성하고 배움의 다음 단계를 준비해보세요.
+            </p>
+            <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] pt-2 break-keep">
+              나만의 책을 만들고, 새로운 커리어의 가능성까지 넓혀보세요.
+            </p>
+            <div className="pt-4">
+              <a
+                href={EMOTIONAL_PUBLISHING_CONFIG.notificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] text-[#0C0B0A] font-bold text-sm tracking-wider hover:brightness-110 transition-all shadow-xl"
+              >
+                <span>과정 오픈 알림 받기</span>
+                <span className="ml-2">→</span>
+              </a>
+            </div>
           </div>
-        </div>
+        </CourseDetailContainer>
       </section>
 
     </div>
