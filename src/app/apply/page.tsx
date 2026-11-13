@@ -49,7 +49,7 @@ const COURSES: CourseApplyItem[] = [
     tags: ["AI아트", "이미지", "감성콘텐츠", "창작"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null,
+    href: "/courses/ai-emotional-art",
     featured: false,
     icon: "/images/icon/fire.png",
   },
