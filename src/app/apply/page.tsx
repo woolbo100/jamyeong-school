@@ -35,7 +35,7 @@ const COURSES: CourseApplyItem[] = [
     tags: ["전자책", "출판", "글쓰기", "콘텐츠"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null,
+    href: "/courses/emotional-publishing",
     featured: false,
     icon: "/images/icon/earth.png",
   },
@@ -236,9 +236,17 @@ export default function ApplyPage() {
                       />
                     </div>
                     <div>
-                      <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep">
-                        {course.title}
-                      </h2>
+                      {course.href ? (
+                        <Link href={course.href}>
+                          <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep hover:underline underline-offset-4">
+                            {course.title}
+                          </h2>
+                        </Link>
+                      ) : (
+                        <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep">
+                          {course.title}
+                        </h2>
+                      )}
                     </div>
                   </div>
 
