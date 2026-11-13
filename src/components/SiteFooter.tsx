@@ -25,18 +25,17 @@ export default function SiteFooter() {
         {/* 
           [PC 화면 (lg 이상)]
           5개 영역을 1개의 가로 행으로 나란히 배치 (CSS Grid)
-          너비 비율: 브랜드 소개 27% / MENU 13% / POLICY 15% / CONTACT 15% / BUSINESS INFO 30%
-          (합계 100% 비율을 가로 스크롤 없이 유연하게 맞추기 위해 fr 단위 적용)
+          권장 비율: 1.35fr 0.65fr 0.85fr 0.8fr 1.45fr (column-gap: 32px)
           
           [모바일/태블릿 화면 (< lg)]
           1. 브랜드 소개: 상단 전체 너비
-          2. MENU & 3. POLICY: 2열로 나란히 배치하여 공간 절약
+          2. MENU & 3. POLICY: 2열로 나란히 배치
           4. CONTACT: 모바일에서 보기 편하게 배치
-          5. BUSINESS INFO: 하단 전체 너비로 시원하게 배치
+          5. BUSINESS INFO: 하단 전체 너비에 세로 1줄 정렬 유지
         */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,2.7fr)_minmax(0,1.3fr)_minmax(0,1.5fr)_minmax(0,1.5fr)_minmax(0,3.0fr)] gap-8 sm:gap-10 lg:gap-8 xl:gap-10 items-start mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)_minmax(0,0.85fr)_minmax(0,0.8fr)_minmax(0,1.45fr)] gap-8 items-start mb-16">
           
-          {/* 1. 브랜드 소개 + 협회 링크 (PC 권장 너비: 27%) */}
+          {/* 1. 브랜드 소개 + 협회 링크 (1.35fr) */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-6">
             <div className="space-y-3">
               <p className="text-base sm:text-lg font-medium text-zinc-100 leading-snug tracking-tight">
@@ -76,7 +75,7 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          {/* 2. MENU (PC 권장 너비: 13%) */}
+          {/* 2. MENU (0.65fr) */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col space-y-4">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Menu
@@ -93,7 +92,7 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* 3. POLICY (PC 권장 너비: 15%) */}
+          {/* 3. POLICY (0.85fr) */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col space-y-4">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Policy
@@ -105,7 +104,7 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* 4. CONTACT (PC 권장 너비: 15%) */}
+          {/* 4. CONTACT (0.8fr) */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col space-y-4 pt-4 md:pt-0 border-t border-white/5 md:border-t-0">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Contact
@@ -143,37 +142,50 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          {/* 5. BUSINESS INFO (PC 권장 너비: 30%) - PC에서 가장 우측에 배치 */}
+          {/* 5. BUSINESS INFO (1.45fr) - 항목별 한 줄씩 세로 정렬 (| 구분자 없음) */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-4 pt-6 md:pt-8 lg:pt-0 border-t border-white/5 lg:border-t-0">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Business Info
             </h3>
-            <div className="flex flex-col space-y-2 text-xs text-zinc-400 break-keep leading-relaxed font-light">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <span><strong className="text-zinc-300 font-medium">상호명:</strong> 자명스쿨</span>
-                <span className="text-zinc-700">|</span>
-                <span><strong className="text-zinc-300 font-medium">대표자:</strong> 백진선</span>
-              </div>
+            <div className="flex flex-col space-y-1.5 text-xs text-zinc-400 break-keep leading-relaxed font-light text-left">
+              <p>
+                <span className="text-zinc-300 font-medium">상호명 :</span> 이끌림
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">대표자 :</span> 백진선
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">사업자등록번호 :</span> 605-22-78891
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">통신판매업 신고번호 :</span> 2021-부산해운대-1716
+              </p>
+              <p className="break-keep">
+                <span className="text-zinc-300 font-medium">주소 :</span> 부산광역시 해운대구 반송로 621(석대동) 203호
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">Email :</span>{" "}
+                <a 
+                  href="mailto:buzasun@naver.com" 
+                  className="text-zinc-300 hover:text-[#B89B6A] transition-colors underline-offset-2 hover:underline"
+                >
+                  buzasun@naver.com
+                </a>
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">Customer Center :</span> 1600-2805
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">운영시간 :</span> Mon–Fri 10:00–18:00
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">소속기관 :</span> 한국디지털마인드코칭협회
+              </p>
+              <p>
+                <span className="text-zinc-300 font-medium">개인정보보호책임자 :</span> 백진선
+              </p>
 
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <span><strong className="text-zinc-300 font-medium">소속기관:</strong> 한국디지털마인드코칭협회</span>
-                <span className="text-zinc-700">|</span>
-                <span><strong className="text-zinc-300 font-medium">개인정보보호책임자:</strong> 백진선</span>
-              </div>
-
-              <div>
-                <p className="break-keep">
-                  <strong className="text-zinc-300 font-medium">사업장 소재지:</strong> 부산광역시 해운대구 반송로 621(석대동), 203호
-                </p>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <span><strong className="text-zinc-300 font-medium">고객센터:</strong> 010-2339-1033</span>
-                <span className="text-zinc-700">|</span>
-                <span><strong className="text-zinc-300 font-medium">이메일:</strong> buzasun@naver.com</span>
-              </div>
-
-              <p className="text-[11px] text-zinc-500 pt-1 leading-normal">
+              <p className="text-[11px] text-zinc-500 pt-2 leading-normal">
                 자명스쿨의 모든 콘텐츠 및 교육 과정은 저작권법의 보호를 받습니다.
               </p>
             </div>
