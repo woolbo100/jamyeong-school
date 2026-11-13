@@ -63,7 +63,7 @@ const COURSES: CourseApplyItem[] = [
     tags: ["캔바", "디자인", "콘텐츠", "실무"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null,
+    href: "/courses/canva-content-master",
     featured: false,
     icon: "/images/icon/air.png",
   },

@@ -843,3 +843,4 @@ export default function AiEmotionalArtCoursePage() {
     </div>
   );
 }
+
