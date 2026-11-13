@@ -24,8 +24,9 @@ export default function SiteFooter() {
       <div className="max-w-[1400px] mx-auto px-6">
         {/* 
           [PC 화면 (lg 이상)]
-          5개 영역을 1개의 가로 행으로 나란히 배치 (CSS Grid)
-          권장 비율: 1.35fr 0.65fr 0.85fr 0.8fr 1.45fr (column-gap: 32px)
+          5개 영역을 1개의 가로 행으로 균형 있게 배치 (CSS Grid)
+          최적화 비율: 1.45fr 0.75fr 0.95fr 0.95fr 1.65fr
+          column-gap: clamp(24px, 2.5vw, 44px) - 화면 폭에 따라 유연하게 호흡하는 간격
           
           [모바일/태블릿 화면 (< lg)]
           1. 브랜드 소개: 상단 전체 너비
@@ -33,9 +34,15 @@ export default function SiteFooter() {
           4. CONTACT: 모바일에서 보기 편하게 배치
           5. BUSINESS INFO: 하단 전체 너비에 세로 1줄 정렬 유지
         */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)_minmax(0,0.85fr)_minmax(0,0.8fr)_minmax(0,1.45fr)] gap-8 items-start mb-16">
+        <div 
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,0.75fr)_minmax(0,0.95fr)_minmax(0,0.95fr)_minmax(0,1.65fr)] items-start mb-16"
+          style={{
+            columnGap: 'clamp(24px, 2.5vw, 44px)',
+            rowGap: '2.5rem'
+          }}
+        >
           
-          {/* 1. 브랜드 소개 + 협회 링크 (1.35fr) */}
+          {/* 1. 브랜드 소개 + 협회 링크 (1.45fr) */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-6">
             <div className="space-y-3">
               <p className="text-base sm:text-lg font-medium text-zinc-100 leading-snug tracking-tight">
@@ -75,12 +82,12 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          {/* 2. MENU (0.65fr) */}
+          {/* 2. MENU (0.75fr) */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col space-y-4">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Menu
             </h3>
-            <ul className="flex flex-col space-y-2.5">
+            <ul className="flex flex-col space-y-2.5 text-left">
               <li><Link href="/about" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명스쿨 소개</Link></li>
               <li><Link href="/courses" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 소개</Link></li>
               <li><Link href="/apply" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자격과정</Link></li>
@@ -92,24 +99,24 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* 3. POLICY (0.85fr) */}
+          {/* 3. POLICY (0.95fr) */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col space-y-4">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Policy
             </h3>
-            <ul className="flex flex-col space-y-2.5">
+            <ul className="flex flex-col space-y-2.5 text-left">
               <li><Link href="/terms" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">서비스 이용약관</Link></li>
               <li><Link href="/privacy" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">개인정보처리방침</Link></li>
               <li><Link href="/refund" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">환불 및 취소 정책</Link></li>
             </ul>
           </div>
 
-          {/* 4. CONTACT (0.8fr) */}
+          {/* 4. CONTACT (0.95fr) */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col space-y-4 pt-4 md:pt-0 border-t border-white/5 md:border-t-0">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Contact
             </h3>
-            <div className="flex flex-col space-y-3.5">
+            <div className="flex flex-col space-y-4 text-left">
               {/* 카카오톡 상담 채널 */}
               <div>
                 <p className="text-[11px] text-zinc-500 uppercase tracking-wider mb-1">카카오톡 상담</p>
@@ -125,7 +132,7 @@ export default function SiteFooter() {
               </div>
 
               {/* 제안 / 문의 이메일 */}
-              <div className="space-y-0.5">
+              <div className="space-y-1">
                 <p className="text-[11px] text-zinc-500 uppercase tracking-wider">제안 / 문의</p>
                 <a 
                   href="mailto:buzasun@naver.com" 
@@ -134,15 +141,10 @@ export default function SiteFooter() {
                   buzasun@naver.com
                 </a>
               </div>
-
-              {/* 답변 안내 문구 */}
-              <p className="text-[11px] text-zinc-500 leading-relaxed break-keep pt-1">
-                문의는 영업일 기준 순차적으로 신속하게 답변 드립니다.
-              </p>
             </div>
           </div>
 
-          {/* 5. BUSINESS INFO (1.45fr) - 항목별 한 줄씩 세로 정렬 (| 구분자 없음) */}
+          {/* 5. BUSINESS INFO (1.65fr) - 긴 주소와 정보가 줄바꿈 없이 자연스럽게 표시되는 충분한 공간 */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-4 pt-6 md:pt-8 lg:pt-0 border-t border-white/5 lg:border-t-0">
             <h3 className="text-xs font-bold text-[#B89B6A] uppercase tracking-[0.2em] h-5 flex items-center">
               Business Info
@@ -183,10 +185,6 @@ export default function SiteFooter() {
               </p>
               <p>
                 <span className="text-zinc-300 font-medium">개인정보보호책임자 :</span> 백진선
-              </p>
-
-              <p className="text-[11px] text-zinc-500 pt-2 leading-normal">
-                자명스쿨의 모든 콘텐츠 및 교육 과정은 저작권법의 보호를 받습니다.
               </p>
             </div>
           </div>
