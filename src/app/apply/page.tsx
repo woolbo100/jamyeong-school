@@ -77,7 +77,7 @@ const COURSES: CourseApplyItem[] = [
     tags: ["AI", "브랜딩", "1인브랜드", "강의"],
     status: "coming-soon",
     statusLabel: "모집예정",
-    href: null,
+    href: "/courses/ai-branding-master",
     featured: false,
     icon: "/images/icon/water.png",
   },
