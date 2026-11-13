@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 import {
   PAPERBOOK_CLASS_CONFIG,
   PUBLISHER_DIRECT_SECTION,
@@ -1246,6 +1247,9 @@ export default function PaperbookPage() {
             </div>
           </div>
         </section>
+
+        {/* 수강 취소 및 환불 안내 공통 섹션 */}
+        <CourseRefundPolicySection />
       </div>
 
       {/* 모바일 화면 하단 플로팅 바 */}

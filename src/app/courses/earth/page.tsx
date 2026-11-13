@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export default function EarthCoursePage() {
   const curriculumData = [
@@ -583,6 +584,9 @@ export default function EarthCoursePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
     </div>
   );
 }

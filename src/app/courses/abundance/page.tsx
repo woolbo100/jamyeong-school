@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export default function AbundanceCoursePage() {
   // 풍요(Abundance & Ether) 테마 색상 (따뜻하고 기품 있는 샴페인 골드 & 에테르 오로라)
@@ -743,6 +744,8 @@ export default function AbundanceCoursePage() {
         </div>
       </section>
 
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
     </div>
   );
 }

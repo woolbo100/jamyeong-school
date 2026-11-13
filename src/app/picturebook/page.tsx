@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 import {
   PICTUREBOOK_CLASS_CONFIG,
   PICTUREBOOK_IMAGES,
@@ -1433,6 +1434,9 @@ export default function PicturebookPage() {
             </div>
           </div>
         </section>
+
+        {/* 수강 취소 및 환불 안내 공통 섹션 */}
+        <CourseRefundPolicySection />
       </div>
 
       {/* ───────────────────────────────────────────────

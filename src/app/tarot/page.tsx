@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 import {
   TAROT_CLASS_CONFIG,
   TAROT_IMAGES,
@@ -1410,6 +1411,9 @@ export default function TarotClassPage() {
         </div>
       </div>
       </section>
+
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
 
       {/* 모바일 하단 고정 신청 바 */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#14100D]/95 backdrop-blur-md border-t border-[#322720] px-4 py-3 flex items-center justify-between gap-3">

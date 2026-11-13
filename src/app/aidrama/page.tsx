@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export const metadata: Metadata = {
   title: "AI 브랜드 숏드라마 제작 실전 원데이 클래스 | 자명스쿨",
@@ -1462,6 +1463,9 @@ export default function AidramaPage() {
           </div>
           </div>
         </section>
+
+        {/* 수강 취소 및 환불 안내 공통 섹션 */}
+        <CourseRefundPolicySection />
       </div>
     </main>
   );

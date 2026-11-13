@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export default function WaterCoursePage() {
   // Water 테마 색상 (차분하고 맑은 물결 컬러)
@@ -1471,6 +1472,8 @@ export default function WaterCoursePage() {
         </div>
       </section>
 
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
     </div>
   );
 }

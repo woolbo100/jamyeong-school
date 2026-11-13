@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import HeartArtProjectSection from "@/components/courses/HeartArtProjectSection";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export default function FireCoursePage() {
   const curriculumData = [
@@ -642,6 +643,9 @@ export default function FireCoursePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
 
       {/* Global CSS Overrides for this page */}
       <style jsx global>{`

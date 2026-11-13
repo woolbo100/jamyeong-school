@@ -2,6 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 type ElementType = "earth" | "fire" | "water" | "abundance";
 
@@ -354,6 +355,9 @@ export default async function ElementDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+
+      {/* 수강 취소 및 환불 안내 공통 섹션 */}
+      <CourseRefundPolicySection />
     </div>
   );
 }

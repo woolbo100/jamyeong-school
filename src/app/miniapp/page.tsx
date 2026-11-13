@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export const metadata: Metadata = {
   title: "AI로 나만의 미니앱 만들고 실제 출시하기 | 자명스쿨 원데이 클래스",
@@ -1780,6 +1781,9 @@ export default function MiniappPage() {
           </div>
           </div>
         </section>
+
+        {/* 수강 취소 및 환불 안내 공통 섹션 */}
+        <CourseRefundPolicySection />
       </div>
     </main>
   );
