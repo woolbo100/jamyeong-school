@@ -241,6 +241,53 @@ export const TAROT_CLASS_CONFIG: TarotClassConfig = {
 // 3. 섹션별 상세 데이터
 // ─────────────────────────────────────────────────────────────
 
+// [신규 기능: AI 음성 타로 리딩]
+export const TAROT_VOICE_FEATURE = {
+  badge: "NEW EDUCATION · AI VOICE READING",
+  title: "내가 만든 타로가, 이제 목소리로 이야기를 들려줍니다.",
+  subtitles: [
+    "카드를 선택하면 AI가 나만의 타로 해석을 생성하고, 그 이야기를 목소리로 들려줍니다.",
+    "화면에 글자로 나타나는 타로 해석을 넘어, 직접 듣고 경험하는 AI 타로 서비스를 만들어 보세요.",
+  ],
+  highlight: "카드를 뽑고, 해석을 만들고, AI의 목소리로 듣는 나만의 타로 웹앱.",
+  cards: [
+    {
+      cardNo: "CARD 01",
+      title: "나만의 타로 카드",
+      description:
+        "AI로 제작한 카드 이미지와 원하는 세계관을 활용해 나만의 타로 서비스를 구성합니다.",
+      tag: "#카드제작 #세계관구축",
+      icon: "🎴",
+    },
+    {
+      cardNo: "CARD 02",
+      title: "AI 맞춤형 타로 해석",
+      description:
+        "사용자가 선택한 카드와 질문을 바탕으로 AI가 상황에 맞는 타로 리딩을 생성합니다.",
+      tag: "#맞춤해석 #리딩생성",
+      icon: "✨",
+    },
+    {
+      cardNo: "CARD 03",
+      title: "AI 음성 리딩",
+      description:
+        "생성된 타로 해석을 TTS 기술로 음성 변환하고, 재생 버튼을 눌러 직접 들을 수 있도록 구현합니다.",
+      tag: "#TTS음성변환 #오디오플레이어",
+      icon: "🎙️",
+    },
+  ],
+  demo: {
+    badge: "음성 리딩 기능 예시",
+    title: "타로가 들려주는 오늘의 메시지",
+    cardTitle: "XVII. THE STAR (별)",
+    sampleText:
+      "지금 당신에게 필요한 것은 서두르는 선택이 아니라, 자신의 마음을 조금 더 깊이 들여다보는 시간입니다.",
+    buttonText: "AI 리딩 들어보기",
+    notice:
+      "* 실제 강의 실습에서는 복잡한 유료 구독 없이 브라우저 무료 TTS 기술을 중심으로 배우며, Gemini TTS 등 고품질 AI 음성은 확장 가능한 추가 옵션으로 안내합니다.",
+  },
+};
+
 // [4. 고민 공감 — WHY TAROT CREATIVE?]
 export const TAROT_PROBLEM_CARDS = [
   {
@@ -440,6 +487,21 @@ export const TAROT_CURRICULUM_STEPS = [
   },
 ];
 
+// [신규 교육 요소: AI 음성 타로 리딩 실습]
+export const TAROT_VOICE_CURRICULUM = {
+  badge: "NEW 실습 항목",
+  title: "추가 실습: AI가 읽어주는 타로 리딩",
+  description:
+    "기본 실습은 무료 TTS 방식으로 설계하고, Gemini TTS 등 고품질 AI 음성은 선택적 확장 기능으로 소개합니다.",
+  items: [
+    "TTS(Text-to-Speech)의 기본 원리 이해",
+    "타로 해석 텍스트를 음성으로 변환하는 방법",
+    "타로 결과 화면에 음성 재생 버튼 추가",
+    "음성 재생·정지 기능 구현",
+    "무료 TTS 활용과 고품질 AI 음성 API 확장 방법 소개",
+  ],
+};
+
 export const TAROT_TIME_SCHEDULE = [
   { phase: "콘셉트·레퍼런스 정리", duration: "20분" },
   { phase: "카드 이미지 제작·스타일 통일", duration: "60분" },
@@ -615,6 +677,12 @@ export const TAROT_FAQS: TarotFaqItem[] = [
     question: "앱인토스 등록도 포함되나요?",
     answer:
       "이 수업은 카드 이미지와 웹 타로서비스 제작에 집중합니다. 앱인토스용 변환과 등록은 별도 미니앱 클래스에서 다룹니다.",
+  },
+  {
+    id: "tarot-faq-9",
+    question: "음성 리딩(TTS) 기능도 추가 비용 없이 배울 수 있나요?",
+    answer:
+      "네. 실습에서는 브라우저 기본 무료 TTS 방식을 활용해 추가 비용 없이 재생 버튼과 음성 출력을 구현합니다. 이후 더 다양한 목소리가 필요할 때 활용할 수 있는 Gemini TTS 등 고품질 AI 음성 확장법도 함께 소개해 드립니다.",
   },
 ];
 

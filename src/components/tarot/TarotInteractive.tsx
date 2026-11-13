@@ -619,3 +619,256 @@ export function TarotCtaButton({
   );
 }
 
+// ─────────────────────────────────────────────────────────────
+// 4. AI 음성 타로 리딩 시연 플레이어 컴포넌트
+// 타로 카드 1장 + 해석 텍스트 + 'AI 리딩 들어보기' 재생 인터랙션
+// 브라우저 Web Speech API(무료 TTS) 지원 시 실제 한국어 음성 재생 및
+// 시각적 오디오 플레이어 파형 애니메이션 제공
+// ─────────────────────────────────────────────────────────────
+interface TarotAudioReadingDemoProps {
+  title?: string;
+  badge?: string;
+  sampleText?: string;
+  cardTitle?: string;
+  notice?: string;
+}
+
+export function TarotAudioReadingDemo({
+  title = "타로가 들려주는 오늘의 메시지",
+  badge = "음성 리딩 기능 예시",
+  sampleText = "지금 당신에게 필요한 것은 서두르는 선택이 아니라, 자신의 마음을 조금 더 깊이 들여다보는 시간입니다.",
+  cardTitle = "XVII. THE STAR (별 카드)",
+  notice = "* 실제 강의 실습에서는 복잡한 유료 결제 없이 브라우저 기본 무료 TTS 방식으로 구현하며, Gemini TTS 등 고품질 AI 음성은 확장 방법으로 함께 소개합니다.",
+}: TarotAudioReadingDemoProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [duration] = useState(8); // 약 8초 분량
+
+  // 음성 재생 정지 핸들러
+  const stopAudio = () => {
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    setIsPlaying(false);
+    setProgress(0);
+  };
+
+  // 음성 재생 토글 핸들러
+  const handleTogglePlay = () => {
+    if (isPlaying) {
+      stopAudio();
+      return;
+    }
+
+    setIsPlaying(true);
+    setProgress(0);
+
+    // 1. 브라우저 Web Speech API (실제 무료 TTS) 시도
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(sampleText);
+      utterance.lang = "ko-KR";
+      utterance.rate = 0.95; // 편안하고 차분한 타로 리딩 템포
+
+      utterance.onend = () => {
+        setIsPlaying(false);
+        setProgress(100);
+      };
+
+      utterance.onerror = () => {
+        setIsPlaying(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  // 진행률 및 재생 타이머 애니메이션 (실제 음성 및 가상 타이머 동기화)
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const intervalTime = 100;
+    const step = 100 / ((duration * 1000) / intervalTime);
+
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setIsPlaying(false);
+          return 0;
+        }
+        return Math.min(prev + step, 100);
+      });
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, [isPlaying, duration]);
+
+  // 컴포넌트 언마운트 시 음성 중지
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  const currentSeconds = Math.min(
+    Math.floor((progress / 100) * duration),
+    duration
+  );
+
+  return (
+    <div className="w-full max-w-3xl mx-auto rounded-3xl bg-gradient-to-b from-[#1E1713] via-[#16110E] to-[#120D0A] border border-[#3E3024] p-5 sm:p-8 shadow-2xl relative overflow-hidden">
+      {/* 배경 신비로운 조명 효과 */}
+      <div className="absolute -top-24 -right-24 w-60 h-60 bg-[#C6A66B]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-60 h-60 bg-[#8E6D38]/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* 상단 헤더: 라벨 & 타이틀 */}
+      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#2C2119] pb-4 mb-6">
+        <div>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2A2018] border border-[#48372A] text-[11px] font-bold text-[#C6A66B]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B] animate-pulse" />
+            {badge}
+          </span>
+          <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#FAF7F2] mt-2">
+            {title}
+          </h3>
+        </div>
+        <div className="text-[11px] text-[#A8988B] sm:text-right">
+          <span className="text-[#C6A66B] font-semibold">AI 음성 타로 리딩</span> 실습 데모
+        </div>
+      </div>
+
+      {/* 메인 콘텐츠: 카드 이미지(좌) + 텍스트 및 오디오 플레이어(우) */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        {/* 좌측: 신비로운 타로 카드 1장 */}
+        <div className="md:col-span-5 flex flex-col items-center">
+          <div className="relative w-44 sm:w-48 aspect-[9/15] rounded-2xl bg-gradient-to-b from-[#2B2119] via-[#1C1510] to-[#120D09] border-2 border-[#C6A66B]/60 p-3 shadow-xl flex flex-col justify-between group hover:border-[#D6C6A8] transition-all duration-300">
+            {/* 카드 상단 로마숫자 & 타이틀 */}
+            <div className="flex items-center justify-between text-[10px] text-[#D6C6A8] font-serif border-b border-[#3E3024] pb-1.5">
+              <span>XVII</span>
+              <span className="font-semibold tracking-wider">THE STAR</span>
+              <span>XVII</span>
+            </div>
+
+            {/* 카드 중앙 일러스트 비주얼 */}
+            <div className="my-auto flex flex-col items-center text-center space-y-2 py-4">
+              <div className="relative w-16 h-16 rounded-full bg-[#241A13] border border-[#C6A66B]/50 flex items-center justify-center text-2xl shadow-inner">
+                ✨
+                {isPlaying && (
+                  <span className="absolute inset-0 rounded-full border border-[#C6A66B] animate-ping opacity-40" />
+                )}
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-xs font-bold text-[#FAF7F2] tracking-wide block">
+                  별 카드 (The Star)
+                </span>
+                <span className="text-[10px] text-[#C6A66B]">
+                  희망 · 직관 · 마음의 회복
+                </span>
+              </div>
+            </div>
+
+            {/* 카드 하단 */}
+            <div className="border-t border-[#3E3024] pt-1.5 text-center">
+              <span className="text-[9px] text-[#8F7D6E] tracking-widest uppercase">
+                MY TAROT DECK
+              </span>
+            </div>
+          </div>
+          <span className="text-[11px] text-[#9E8B7C] mt-2 font-medium">
+            {cardTitle}
+          </span>
+        </div>
+
+        {/* 우측: 짧은 AI 해석 텍스트 + 오디오 플레이어 UI */}
+        <div className="md:col-span-7 space-y-5">
+          {/* 짧은 AI 해석 메시지 박스 */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#17110E] border border-[#33261C] relative">
+            <span className="text-xs font-bold text-[#C6A66B] block mb-1.5">
+              💬 AI 타로 해석 결과
+            </span>
+            <p className="text-sm sm:text-base text-[#FAF7F2] font-medium leading-relaxed break-keep">
+              &ldquo;{sampleText}&rdquo;
+            </p>
+          </div>
+
+          {/* 오디오 플레이어 UI 박스 */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#201813] border border-[#403023] space-y-3 shadow-inner">
+            <div className="flex items-center justify-between text-xs text-[#A8988B]">
+              <span className="flex items-center gap-1.5 font-medium">
+                <span className="text-sm">🎧</span>
+                <span className="text-[#D6C6A8] font-semibold">
+                  {isPlaying ? "AI 음성 리딩 재생 중..." : "AI 목소리로 듣기 준비"}
+                </span>
+              </span>
+              <span className="font-mono text-[#C6A66B]">
+                0:0{currentSeconds} / 0:0{duration}
+              </span>
+            </div>
+
+            {/* 오디오 진행 바 */}
+            <div className="w-full h-2 rounded-full bg-[#120D0A] overflow-hidden relative">
+              <div
+                className="h-full bg-gradient-to-r from-[#8E6D38] via-[#C6A66B] to-[#E5D2A8] transition-all duration-100 rounded-full"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+
+            {/* 실시간 파형(Waveform) 애니메이션 */}
+            <div className="h-6 flex items-center justify-between gap-1 px-1">
+              {[28, 45, 75, 30, 85, 95, 60, 40, 70, 90, 50, 35, 80, 65, 40].map(
+                (height, idx) => (
+                  <span
+                    key={idx}
+                    className={`flex-1 rounded-full transition-all duration-200 ${
+                      isPlaying
+                        ? "bg-[#C6A66B]"
+                        : "bg-[#3A2D23]"
+                    }`}
+                    style={{
+                      height: isPlaying
+                        ? `${Math.max(15, (height * ((idx % 3) + 1)) % 100)}%`
+                        : "20%",
+                    }}
+                  />
+                )
+              )}
+            </div>
+
+            {/* 버튼 영역: 'AI 리딩 들어보기' / 일시정지 */}
+            <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+              <button
+                type="button"
+                onClick={handleTogglePlay}
+                className="min-h-[46px] px-5 rounded-xl bg-[#C6A66B] hover:bg-[#D6C6A8] text-[#1A1410] text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
+              >
+                {isPlaying ? (
+                  <>
+                    <span className="w-3 h-3 bg-[#1A1410] rounded-xs inline-block" />
+                    <span>음성 재생 멈추기</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-sm">▶</span>
+                    <span>AI 리딩 들어보기</span>
+                  </>
+                )}
+              </button>
+
+              <span className="text-[11px] text-[#8F7D6E] sm:ml-auto self-center text-center sm:text-right break-keep">
+                클릭하면 목소리로 예시 문장을 읽어줍니다
+              </span>
+            </div>
+          </div>
+
+          {/* 안내 주석 */}
+          <p className="text-[11px] text-[#7E6A5B] leading-relaxed break-keep">
+            {notice}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+

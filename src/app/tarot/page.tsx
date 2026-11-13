@@ -12,6 +12,8 @@ import {
   TAROT_CONCEPT_EXAMPLES,
   CONSISTENCY_POINTS,
   TAROT_CURRICULUM_STEPS,
+  TAROT_VOICE_CURRICULUM,
+  TAROT_VOICE_FEATURE,
   TAROT_TIME_SCHEDULE,
   TAROT_CLASS_KITS,
   TAROT_REAL_CASES,
@@ -24,6 +26,7 @@ import {
   TarotReplaceableImage,
   TarotFaqAccordion,
   TarotCtaButton,
+  TarotAudioReadingDemo,
 } from "@/components/tarot/TarotInteractive";
 
 export const metadata: Metadata = {
@@ -391,6 +394,79 @@ export default function TarotClassPage() {
                 하루 3~4시간, 내 취향을 담은 서비스를 완성합니다.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [3-1. 신규 기능 소개 — AI 음성 타로 리딩]
+          핵심 홍보 문구 + 3대 기능 소개 카드 + 음성 시연 UI
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#140F0D]">
+        <div className="site-container space-y-12 md:space-y-16">
+          {/* 섹션 헤더: 핵심 홍보 문구 */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-[#201813] border border-[#3A2D23] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
+              {TAROT_VOICE_FEATURE.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              {TAROT_VOICE_FEATURE.title}
+            </h2>
+            <div className="space-y-2 text-sm sm:text-base text-[#B8A89A] leading-relaxed break-keep pt-1">
+              {TAROT_VOICE_FEATURE.subtitles.map((text, idx) => (
+                <p key={idx}>{text}</p>
+              ))}
+            </div>
+
+            {/* 강조 문구 박스 */}
+            <div className="pt-2 max-w-xl mx-auto">
+              <div className="p-4 rounded-xl bg-[#1C1511] border border-[#3E3024] text-xs sm:text-sm font-bold text-[#D6C6A8] leading-relaxed shadow-sm break-keep">
+                ✨ {TAROT_VOICE_FEATURE.highlight}
+              </div>
+            </div>
+          </div>
+
+          {/* 신규 기능 소개 3개 카드 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {TAROT_VOICE_FEATURE.cards.map((card) => (
+              <div
+                key={card.cardNo}
+                className="p-6 rounded-2xl bg-[#18120F] border border-[#2E231C] hover:border-[#C6A66B]/50 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-md group"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="px-2.5 py-0.5 rounded bg-[#241A14] border border-[#3D2C21] text-[11px] font-extrabold text-[#C6A66B]">
+                      {card.cardNo}
+                    </span>
+                    <span className="text-xl group-hover:scale-110 transition-transform">
+                      {card.icon}
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-extrabold text-[#FAF7F2] leading-snug break-keep">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                    {card.description}
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-[#261D17]">
+                  <span className="text-[11px] text-[#C6A66B] font-semibold">
+                    {card.tag}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 음성 리딩 시연 영역 */}
+          <div className="pt-2">
+            <TarotAudioReadingDemo
+              title={TAROT_VOICE_FEATURE.demo.title}
+              badge={TAROT_VOICE_FEATURE.demo.badge}
+              sampleText={TAROT_VOICE_FEATURE.demo.sampleText}
+              cardTitle={TAROT_VOICE_FEATURE.demo.cardTitle}
+              notice={TAROT_VOICE_FEATURE.demo.notice}
+            />
           </div>
         </div>
       </section>
@@ -773,6 +849,55 @@ export default function TarotClassPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* [신규 실습 항목: 추가 실습 — AI가 읽어주는 타로 리딩] */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#211A15] via-[#1B1410] to-[#16100D] border-2 border-[#C6A66B]/50 space-y-5 shadow-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#362920] pb-4">
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#C6A66B] text-[#1A1410] text-[11px] font-extrabold">
+                    {TAROT_VOICE_CURRICULUM.badge}
+                  </span>
+                  <span className="text-xs text-[#D6C6A8] font-semibold">
+                    듣는 타로 서비스 완성
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#FAF7F2] break-keep">
+                  {TAROT_VOICE_CURRICULUM.title}
+                </h3>
+              </div>
+              <span className="text-xs text-[#C6A66B] bg-[#291F18] px-3.5 py-1.5 rounded-xl border border-[#3E2E23] self-start sm:self-auto font-medium">
+                보너스 실습 파트
+              </span>
+            </div>
+
+            <p className="text-xs sm:text-sm text-[#B8A89A] leading-relaxed break-keep">
+              {TAROT_VOICE_CURRICULUM.description}
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
+              {TAROT_VOICE_CURRICULUM.items.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 rounded-xl bg-[#140F0C] border border-[#2D211A] flex items-start gap-2.5 hover:border-[#C6A66B]/40 transition-colors"
+                >
+                  <span className="w-5 h-5 rounded-full bg-[#C6A66B]/20 text-[#C6A66B] text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    {idx + 1}
+                  </span>
+                  <span className="text-xs sm:text-sm text-[#FAF7F2] font-medium leading-snug break-keep">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-2 border-t border-[#2D211A] flex items-center gap-2 text-[11px] text-[#8F7D6E]">
+              <span className="text-[#C6A66B]">💡</span>
+              <span className="break-keep">
+                기본 실습은 추가 비용이 전혀 없는 무료 TTS 기술로 진행되며, Gemini TTS 등 고품질 AI 음성은 원하는 분들을 위한 선택적 확장 기능으로 소개됩니다.
+              </span>
+            </div>
           </div>
 
           {/* 시간 구성안 (4시간 기준) */}
