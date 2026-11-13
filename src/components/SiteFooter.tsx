@@ -89,7 +89,7 @@ export default function SiteFooter() {
               <li><Link href="/resources" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명자료실</Link></li>
               <li><Link href="/reviews" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 후기</Link></li>
               <li><Link href="/blog" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명노트</Link></li>
-              <li><Link href="/contact" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">문의하기</Link></li>
+              <li><Link href="/contact" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">고객센터</Link></li>
             </ul>
           </div>
 

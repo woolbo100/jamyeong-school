@@ -141,7 +141,7 @@ export default function SiteHeader() {
           자명노트
         </Link>
         <Link className={getMenuClass('/contact')} href="/contact">
-          문의하기
+          고객센터
         </Link>
       </nav>
 
@@ -288,7 +288,7 @@ export default function SiteHeader() {
               }`}
             href="/contact"
           >
-            문의하기
+            고객센터
           </Link>
           <div className="pt-2 flex gap-3">
             <a
