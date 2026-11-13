@@ -25,8 +25,9 @@ export default function SiteFooter() {
         {/* 
           [PC 화면 (lg 이상)]
           5개 영역을 1개의 가로 행으로 균형 있게 배치 (CSS Grid)
-          최적화 비율: 1.45fr 0.75fr 0.95fr 0.95fr 1.65fr
-          column-gap: clamp(24px, 2.5vw, 44px) - 화면 폭에 따라 유연하게 호흡하는 간격
+          최적화 비율: 2.05fr 0.75fr 0.9fr 0.9fr 1.6fr
+          - 브랜드 소개와 Menu 영역 사이의 여백을 쾌적하게 넓히고, Menu부터 우측으로 자연스럽게 정돈
+          - column-gap: clamp(28px, 3vw, 50px)
           
           [모바일/태블릿 화면 (< lg)]
           1. 브랜드 소개: 상단 전체 너비
@@ -35,15 +36,15 @@ export default function SiteFooter() {
           5. BUSINESS INFO: 하단 전체 너비에 세로 1줄 정렬 유지
         */}
         <div 
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,0.75fr)_minmax(0,0.95fr)_minmax(0,0.95fr)_minmax(0,1.65fr)] items-start mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-[minmax(0,2.05fr)_minmax(0,0.75fr)_minmax(0,0.9fr)_minmax(0,0.9fr)_minmax(0,1.6fr)] items-start mb-16"
           style={{
-            columnGap: 'clamp(24px, 2.5vw, 44px)',
+            columnGap: 'clamp(28px, 3vw, 50px)',
             rowGap: '2.5rem'
           }}
         >
           
-          {/* 1. 브랜드 소개 + 협회 링크 (1.45fr) */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-6">
+          {/* 1. 브랜드 소개 + 협회 링크 (2.05fr + 우측 넉넉한 여백) */}
+          <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col space-y-6 lg:pr-8 xl:pr-12">
             <div className="space-y-3">
               <p className="text-base sm:text-lg font-medium text-zinc-100 leading-snug tracking-tight">
                 마음을 이해하고 표현하고<br />
