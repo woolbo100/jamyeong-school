@@ -49,6 +49,25 @@ export interface StudentWorkCase {
   tag: string;
 }
 
+export interface CareerExpansionCard {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  iconType: "certificate" | "lecture" | "portfolio" | "expansion";
+}
+
+export interface CareerExpansionSectionData {
+  badge: string;
+  titleMain: string;
+  titleSub: string;
+  description: string[];
+  cards: CareerExpansionCard[];
+  highlight: string;
+  subHighlight: string;
+  disclaimer: string;
+}
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -134,7 +153,7 @@ export const CORE_ACHIEVEMENTS = [
     title: "자격 취득 기회",
     sub: "감성출판지도사 1급",
     description:
-      "완성한 출판 포트폴리오를 제출하여 공정한 검정 평가를 거친 후, 기준 충족 시 등록 민간자격증을 취득합니다.",
+      "실전 출판 역량을 익히고, 정해진 자격 검정에 합격하면 감성출판지도사 민간자격증을 취득할 수 있습니다. 관련 자격 이력과 완성 작품을 향후 교육 활동 준비에 활용해보세요.",
     points: ["실습 결과물 기준 작품 평가", "합격 기준 충족 시 민간자격증 발급"],
     badge: "수강만으로 자동 발급되지 않으며, 평가 통과 필수",
   },
@@ -346,6 +365,52 @@ export const QUALIFICATION_SPEC: QualificationSpec = {
 };
 
 // ─────────────────────────────────────────────────────────────
+// [7-1. 커리어 및 교육 활동 확장 데이터 (신규 섹션 - 재사용 가능 구조)]
+// ─────────────────────────────────────────────────────────────
+export const CAREER_EXPANSION_DATA: CareerExpansionSectionData = {
+  badge: "배움에서 끝나지 않는 새로운 가능성",
+  titleMain: "나만의 책을 완성하고,",
+  titleSub: "새로운 교육 활동의 기회까지 준비하세요.",
+  description: [
+    "감성출판지도사 과정은 단순히 책 한 권을 만드는 교육에서 끝나지 않습니다. AI와 디지털 도구를 활용한 출판 실무를 익히고, 자신만의 작품을 완성하며, 자격 검정을 통해 관련 민간자격 취득에도 도전할 수 있습니다.",
+    "완성한 책과 자격 이력은 향후 강사 프로필, 교육 프로그램 기획, 오프라인 클래스 제안 등에 활용할 수 있는 소중한 자산이 됩니다.",
+  ],
+  cards: [
+    {
+      id: "career-1",
+      number: "CARD 01",
+      title: "강사 프로필과 자격 이력",
+      description: "관련 민간자격을 취득하여 강사 이력서와 프로필에 기재할 수 있는 자격 이력을 준비합니다.",
+      iconType: "certificate",
+    },
+    {
+      id: "career-2",
+      number: "CARD 02",
+      title: "오프라인 강의 활동 준비",
+      description: "문화센터, 평생교육기관, 지역 교육 프로그램 등에서 활용할 수 있는 출판 교육 콘텐츠와 강의 주제를 구상합니다.",
+      iconType: "lecture",
+    },
+    {
+      id: "career-3",
+      number: "CARD 03",
+      title: "나만의 교육 콘텐츠 확보",
+      description: "직접 완성한 그림책, 에세이, 자서전, 시화집 등을 실제 작품 사례이자 강의 포트폴리오로 활용할 수 있습니다.",
+      iconType: "portfolio",
+    },
+    {
+      id: "career-4",
+      number: "CARD 04",
+      title: "커리어 및 활동 분야 확장",
+      description: "기존 강의 분야에 AI 출판 교육을 접목하거나, 나만의 원데이 클래스와 소규모 출판 워크숍을 기획하는 기반을 마련합니다.",
+      iconType: "expansion",
+    },
+  ],
+  highlight: "작품은 나의 실력을 보여주고, 자격은 배운 역량을 설명하는 또 하나의 이력이 됩니다.",
+  subHighlight: "책 한 권의 완성을 넘어, 내가 배운 것을 다른 사람에게 전달하는 다음 단계까지 준비해보세요.",
+  disclaimer: "※ 민간자격 취득이 강사 채용·출강 또는 수익을 보장하지는 않습니다. 기관별 강사 선발 및 자격 요건은 다를 수 있습니다.",
+};
+
+// ─────────────────────────────────────────────────────────────
 // [8. 수강 혜택 6종]
 // ─────────────────────────────────────────────────────────────
 export const COURSE_BENEFITS: BenefitItem[] = [
@@ -410,8 +475,20 @@ export const TARGET_AUDIENCE = [
     desc: "AI 이미지 도구를 활용해 동화책, 시화집 등 예술성 있는 감성 도서를 만들고 싶은 분",
   },
   {
+    title: "문화센터·평생교육기관 등에서 강사 활동을 준비하는 분",
+    desc: "출판 교육 기획안과 자격증을 기반으로 지자체 및 평생교육기관 강의 출강을 계획하는 분",
+  },
+  {
+    title: "기존 강의에 AI 출판·그림책·감성 글쓰기를 추가하고 싶은 현직 강사",
+    desc: "자신의 기존 교육 커리큘럼에 실물 책 제작 실습을 접목하여 강의 경쟁력을 강화하고 싶은 강사",
+  },
+  {
+    title: "강의 제안에 활용할 작품 포트폴리오와 자격 이력을 준비하고 싶은 분",
+    desc: "단순 수료증이 아닌 실제 출판물 포트폴리오와 공인된 민간자격 이력으로 공신력을 갖추고 싶은 분",
+  },
+  {
     title: "강사 · 코치 · 상담가로서 지식 브랜딩이 필요한 분",
-    desc: "자신만의 전문 영역과 메시지를 담은 책을 완성하여 강의 활동의 공신력을 더하고 싶은 분",
+    desc: "자신만의 전문 영역과 메시지를 담은 책을 완성하여 교육 활동의 전문성을 더하고 싶은 분",
   },
   {
     title: "AI와 캔바를 배워 실전 출판 결과물로 연결하고 싶은 분",
@@ -499,3 +576,4 @@ export const FAQS: FaqItem[] = [
       "원데이 클래스(/paperbook)는 실시간 Zoom으로 3~4시간 동안 출판의 전체 흐름을 압축 체험하는 단기 집중 실습입니다. 반면 본 VOD 자격과정은 시간에 구애받지 않고 VOD를 보며 한 권의 책을 스스로 완성도 높게 완성하고, 공식 포트폴리오 평가를 통해 감성출판지도사 민간자격을 취득하는 종합 전문가 입문 과정입니다.",
   },
 ];
+

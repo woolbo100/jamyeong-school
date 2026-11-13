@@ -11,6 +11,7 @@ import {
   STUDENT_WORKS,
   CURRICULUM_MODULES,
   QUALIFICATION_SPEC,
+  CAREER_EXPANSION_DATA,
   COURSE_BENEFITS,
   TARGET_AUDIENCE,
   COMPARISON_TABLE,
@@ -22,6 +23,35 @@ export const metadata: Metadata = {
   description:
     "내 이야기가 한 권의 책이 되고, 배움은 하나의 자격이 됩니다. AI와 캔바로 나만의 책을 완성하고 감성출판지도사 자격을 취득하는 자기주도형 VOD 민간자격과정",
 };
+
+function CareerIcon({ type }: { type: "certificate" | "lecture" | "portfolio" | "expansion" }) {
+  switch (type) {
+    case "certificate":
+      return (
+        <svg className="w-6 h-6 text-[#E6C99B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      );
+    case "lecture":
+      return (
+        <svg className="w-6 h-6 text-[#E6C99B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
+        </svg>
+      );
+    case "portfolio":
+      return (
+        <svg className="w-6 h-6 text-[#E6C99B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      );
+    case "expansion":
+      return (
+        <svg className="w-6 h-6 text-[#E6C99B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      );
+  }
+}
 
 export default function EmotionalPublishingPage() {
   return (
@@ -59,6 +89,11 @@ export default function EmotionalPublishingPage() {
           {/* 소개 문구 */}
           <p className="text-sm sm:text-base md:text-lg text-zinc-300 max-w-3xl mx-auto font-light leading-relaxed break-keep">
             {EMOTIONAL_PUBLISHING_CONFIG.description}
+          </p>
+
+          {/* 소개 문구 아래 추가 강조 문구 */}
+          <p className="text-sm sm:text-base font-semibold text-[#E6C99B] max-w-3xl mx-auto pt-1 break-keep">
+            나만의 책 출판부터 관련 민간자격 취득, 교육 활동을 위한 포트폴리오 준비까지.
           </p>
 
           {/* 핵심 배지 5개 */}
@@ -507,6 +542,77 @@ export default function EmotionalPublishingPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
+          SECTION 08.5. 커리어 및 교육 활동 확장 (공통 템플릿 재사용 구조)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 px-6 border-b border-white/5 relative overflow-hidden">
+        {/* 은은한 배경 광원 */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#B89B6A]/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto space-y-12 relative z-10">
+          {/* 섹션 헤더 */}
+          <div className="text-center space-y-4">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {CAREER_EXPANSION_DATA.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep leading-tight">
+              {CAREER_EXPANSION_DATA.titleMain} <br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-[#FAF7F2] via-[#E6C99B] to-[#B89B6A] bg-clip-text text-transparent">
+                {CAREER_EXPANSION_DATA.titleSub}
+              </span>
+            </h2>
+            <div className="space-y-2 max-w-2xl mx-auto pt-2">
+              {CAREER_EXPANSION_DATA.description.map((desc, idx) => (
+                <p key={idx} className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+                  {desc}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* 4개 핵심 카드 (2열 x 2행 그리드) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            {CAREER_EXPANSION_DATA.cards.map((card) => (
+              <div
+                key={card.id}
+                className="group p-6 rounded-2xl bg-[#141210] border border-white/10 hover:border-[#B89B6A]/40 transition-all duration-300 space-y-3 shadow-lg"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-[#B89B6A] tracking-wider">
+                    {card.number}
+                  </span>
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-center group-hover:border-[#B89B6A]/30 transition-colors">
+                    <CareerIcon type={card.iconType} />
+                  </div>
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] group-hover:text-[#E6C99B] transition-colors break-keep">
+                  {card.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed break-keep">
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* 하단 강조 메시지 및 법적 고지 박스 */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#161412] to-[#12100E] border border-[#B89B6A]/30 text-center space-y-4">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] break-keep">
+              &ldquo;{CAREER_EXPANSION_DATA.highlight}&rdquo;
+            </p>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light max-w-xl mx-auto break-keep">
+              {CAREER_EXPANSION_DATA.subHighlight}
+            </p>
+
+            <div className="pt-4 border-t border-white/10">
+              <p className="text-[11px] sm:text-xs text-zinc-400 font-light leading-relaxed break-keep">
+                {CAREER_EXPANSION_DATA.disclaimer}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
           SECTION 09. 수강 혜택 6종
          ───────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 px-6 border-b border-white/5">
@@ -715,6 +821,9 @@ export default function EmotionalPublishingPage() {
             누군가에게는 작은 에세이, 누군가에게는 인생의 기록, 또 누군가에게는 새로운 작가 활동의 시작. <br className="hidden sm:inline" />
             자명스쿨에서 나만의 책을 완성하고 배움의 다음 단계를 준비해보세요.
           </p>
+          <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] pt-2 break-keep">
+            나만의 책을 만들고, 새로운 커리어의 가능성까지 넓혀보세요.
+          </p>
           <div className="pt-4">
             <a
               href={EMOTIONAL_PUBLISHING_CONFIG.notificationUrl}
@@ -732,3 +841,4 @@ export default function EmotionalPublishingPage() {
     </div>
   );
 }
+
