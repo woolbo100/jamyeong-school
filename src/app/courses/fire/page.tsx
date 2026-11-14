@@ -1,12 +1,204 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import HeartArtProjectSection from "@/components/courses/HeartArtProjectSection";
 import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
+// ─────────────────────────────────────────────────────────────
+// 신규 확장 데이터: 「불(火) — 마음을 그리다」 감성 아트
+// ─────────────────────────────────────────────────────────────
+
+// 1. 신규 섹션 A: 마음에서 시작하는 AI 아트
+const EMOTIONAL_START_DATA = {
+  badge: "HEART & ART",
+  title: "한 장의 그림은 내 마음에서 시작됩니다.",
+  description: [
+    "때로는 말보다 색이, 문장보다 풍경이 내 마음을 더 잘 표현해 주기도 합니다.",
+    "불안한 마음을 고요한 호수로 그려보고, 오래된 기억을 따뜻한 햇살이 비치는 정원으로 표현해 보는 시간.",
+    "AI는 단순한 이미지 생성 도구를 넘어 나의 감정과 이야기를 창작물로 표현할 수 있도록 돕는 따뜻한 도구가 됩니다.",
+  ],
+  steps: [
+    {
+      step: "STEP 01",
+      title: "나를 바라보다",
+      desc: "감정 기록, 자기 성찰, 내 마음의 색과 이미지 찾기",
+      icon: "🪞",
+    },
+    {
+      step: "STEP 02",
+      title: "작품으로 표현하다",
+      desc: "AI 이미지, 만다라, 오라클 카드, 그림책, 감성 영상 제작",
+      icon: "🎨",
+    },
+    {
+      step: "STEP 03",
+      title: "세상과 나누다",
+      desc: "작품 큐레이션, 온라인 전시, 창작 포트폴리오 완성",
+      icon: "✨",
+    },
+  ],
+  quote: "나를 위해 그린 한 장의 그림이 누군가에게는 따뜻한 위로가 될 수 있습니다.",
+};
+
+// 2. 신규 섹션 B: 6가지 감성 창작 경험
+const SIX_CREATIVE_EXPERIENCES = [
+  {
+    num: "01",
+    title: "감정 시각화 아트워크",
+    desc: "나의 감정과 기억, 마음의 풍경을 색과 이미지로 표현한 AI 감성 작품",
+    tag: "감정시각화",
+    icon: "🖌️",
+    mockup: "Fine Art",
+  },
+  {
+    num: "02",
+    title: "만다라 & 감성 아트 굿즈",
+    desc: "만다라 컬러링 도안, 심리스 패턴, 엽서, 달력, 패브릭 포스터, 스카프 등 일상에 활용할 수 있는 감성 디자인",
+    tag: "만다라·굿즈",
+    icon: "🏵️",
+    mockup: "Pattern & Goods",
+  },
+  {
+    num: "03",
+    title: "마음 메시지 오라클 카드",
+    desc: "긍정 확언과 감성 이미지를 결합한 나만의 오라클 카드 12종",
+    tag: "오라클카드 12종",
+    icon: "🃏",
+    mockup: "Oracle Cards",
+  },
+  {
+    num: "04",
+    title: "감성 그림책 & 명상 에세이",
+    desc: "일관된 화풍과 짧은 이야기를 결합한 그림책 또는 명상 에세이 콘텐츠",
+    tag: "그림책·에세이",
+    icon: "📖",
+    mockup: "Art Book",
+  },
+  {
+    num: "05",
+    title: "1분 감성 영상 & 명상 콘텐츠",
+    desc: "AI 이미지 모션, 자막, 음악을 활용한 감성 영상 에세이와 시각 명상 콘텐츠",
+    tag: "숏폼영상·명상",
+    icon: "🎬",
+    mockup: "Motion Video",
+  },
+  {
+    num: "06",
+    title: "나만의 온라인 아트 전시회",
+    desc: "대표 작품을 선정하고 작가 노트를 작성하여 온라인 갤러리에서 소개하는 창작 경험",
+    tag: "온라인갤러리",
+    icon: "🏛️",
+    mockup: "Web Gallery",
+  },
+];
+
+// 3. 신규 섹션 C: 확장된 6주 AI 감성 아트 커리큘럼
+const EXPANDED_6WEEKS_CURRICULUM = [
+  {
+    week: "WEEK 01",
+    theme: "마음을 읽다",
+    title: "감정 시각화 & 감성 무드보드",
+    topics: [
+      "나의 감정과 마음의 색 찾기",
+      "감정 은유화와 이미지 표현",
+      "AI 이미지 생성 기초",
+      "나만의 화풍과 무드보드 설계",
+    ],
+    result: "감성 무드보드",
+    icon: "🌿",
+  },
+  {
+    week: "WEEK 02",
+    theme: "마음을 정화하다",
+    title: "만다라 & 명상적 패턴 아트",
+    topics: [
+      "만다라와 젠탱글 창작",
+      "컬러링 아트 디자인",
+      "AI 심리스 패턴 제작",
+      "반복 패턴의 감성 굿즈 활용",
+    ],
+    result: "만다라 도안 및 패턴 아트",
+    icon: "💮",
+  },
+  {
+    week: "WEEK 03",
+    theme: "마음을 소장하다",
+    title: "오라클 카드 & 감성 아트 굿즈",
+    topics: [
+      "긍정 확언 문장 기획",
+      "오라클 카드 12종 디자인",
+      "Canva를 활용한 카드와 달력 편집",
+      "POD 굿즈 제작 및 상품화 기초",
+    ],
+    result: "오라클 카드 및 굿즈 디자인 시안",
+    icon: "🎴",
+  },
+  {
+    week: "WEEK 04",
+    theme: "마음을 쓰다",
+    title: "그림책 & 명상 에세이",
+    topics: [
+      "감성 스토리보드 구성",
+      "일관된 화풍과 장면 제작",
+      "이미지와 명상 산문 결합",
+      "전자책 및 POD 출판 기초",
+    ],
+    result: "감성 그림책 또는 명상 에세이 원고",
+    icon: "📚",
+  },
+  {
+    week: "WEEK 05",
+    theme: "마음을 흐르게 하다",
+    title: "AI 감성 영상 & 시각 명상 콘텐츠",
+    topics: [
+      "AI 이미지 모션 연출",
+      "움직이는 만다라 영상 제작",
+      "AI 명상 음악 및 배경음 활용",
+      "릴스·쇼츠 감성 영상 편집",
+    ],
+    result: "1분 감성 영상",
+    icon: "🎥",
+  },
+  {
+    week: "WEEK 06",
+    theme: "마음을 나누다",
+    title: "온라인 아트 전시회 & 창작 포트폴리오",
+    topics: [
+      "대표 작품 선정 및 큐레이션",
+      "작가 노트 작성",
+      "온라인 웹 갤러리 구성",
+      "나만의 창작 포트폴리오 정리",
+      "감성 아트 수업 기획 기초",
+    ],
+    result: "온라인 작품 전시 및 포트폴리오",
+    icon: "🕊️",
+  },
+];
+
+// 4. 신규 섹션 D: 온라인 아트 전시회 5단계
+const EXHIBITION_STEPS = [
+  { step: "01", title: "전시 주제와 제목 정하기", desc: "나만의 감성 테마와 세계관 설정" },
+  { step: "02", title: "대표 작품 선정", desc: "6주간 제작한 결과물 중 대표작 큐레이션" },
+  { step: "03", title: "작품 해설과 작가 노트 작성", desc: "작품에 담긴 이야기와 감정의 기록" },
+  { step: "04", title: "온라인 갤러리 구성", desc: "모바일·PC에서 감상하는 웹 전시관 구축" },
+  { step: "05", title: "전시 링크 공유 및 작품 소개", desc: "소중한 사람들과 세상에 작품 선보이기" },
+];
+
+// 5. 추천 대상 보강 목록
+const RECOMMENDED_AUDIENCE = [
+  "AI를 조금 더 편안하고 즐겁게 배우고 싶은 분",
+  "AI 그림에 자신의 감정과 이야기를 담고 싶은 분",
+  "마음공부와 명상, 심리 분야에 관심 있는 분",
+  "그림책, 오라클 카드, 아트 굿즈를 제작하고 싶은 분",
+  "자신만의 감성 작품을 온라인 전시회에 소개하고 싶은 분",
+  "AI 아트 창작을 향후 교육이나 콘텐츠 활동으로 확장하고 싶은 분",
+];
+
 export default function FireCoursePage() {
+  const [expandedWeek, setExpandedWeek] = useState<number | null>(0);
   const curriculumData = [
     {
       week: "1주차",
@@ -227,6 +419,50 @@ export default function FireCoursePage() {
               </Reveal>
             </div>
           </div>
+
+          {/* C. 강의 소개 보강: 마음을 표현하는 AI 아트 (지침 3번) */}
+          <div className="mt-20 md:mt-24 pt-16 border-t border-white/5">
+            <Reveal delayMs={300}>
+              <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#1A1815] via-[#14161A] to-black border border-[#A68253]/25 shadow-2xl relative overflow-hidden text-center space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A68253]/15 border border-[#A68253]/30">
+                  <span className="w-2 h-2 rounded-full bg-[#FF6A3D] animate-pulse" />
+                  <span className="text-xs font-bold tracking-[0.2em] text-[#A68253] uppercase">
+                    Core Philosophy
+                  </span>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-sm md:text-base text-[#D9D9D9] font-light tracking-wide italic">
+                    &ldquo;기술의 속도를 잠시 내려놓고, 내 안의 감정과 이야기를 한 장의 그림으로 만나보세요.&rdquo;
+                  </p>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+                    &ldquo;더 빨리, 더 많이 만드는 AI가 아니라, <br className="hidden sm:inline" />
+                    <span style={{ color: GOLD }}>나의 마음을 표현하는 AI</span>.&rdquo;
+                  </h3>
+                </div>
+
+                <div className="space-y-4 text-xs sm:text-sm md:text-base text-[#BFBFBF] font-light leading-relaxed max-w-2xl mx-auto break-keep pt-2">
+                  <p>
+                    AI로 아름다운 그림을 만드는 방법은 많습니다. <br className="hidden sm:inline" />
+                    하지만 그 그림에 나의 감정과 기억, 내면의 이야기를 담는 방법은 조금 다릅니다.
+                  </p>
+                  <p>
+                    <span className="text-white font-medium">「불 — 마음을 그리다」</span>는 AI 이미지 창작 기술에 자기 성찰과 명상적 창작을 결합한 감성 아트 교육입니다.
+                    감정을 색과 이미지로 표현하는 것에서 출발해 오라클 카드, 감성 아트 굿즈, 그림책, 영상 콘텐츠로 확장하고, 나만의 작품을 세상에 선보이는 경험까지 이어갑니다.
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-white/10 space-y-2">
+                  <p className="text-sm sm:text-base font-bold text-white italic">
+                    &ldquo;기술에 나를 맞추지 않고, 기술로 나다운 작품을 만드는 시간.&rdquo;
+                  </p>
+                  <p className="text-xs text-[#A68253] font-medium tracking-wide">
+                    ✦ AI라는 붓으로 마음을 그리고, 나만의 작품으로 세상과 연결되는 시간.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -344,6 +580,72 @@ export default function FireCoursePage() {
         </div>
       </section>
 
+      {/* 신규 SECTION A. 마음에서 시작하는 AI 아트 (지침 4번) */}
+      <section className="py-24 md:py-28 bg-[#080808] border-t border-b border-white/5 relative overflow-hidden">
+        {/* 온기 가득한 은은한 불빛 광원 */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF6A3D]/5 blur-[160px] rounded-full pointer-events-none" />
+
+        <div className="site-container relative z-10">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-4">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-[#A68253]/30 text-[#A68253] text-[11px] tracking-widest uppercase">
+                {EMOTIONAL_START_DATA.badge}
+              </div>
+              <h2 className="course-section-title font-display text-white italic">
+                {EMOTIONAL_START_DATA.title}
+              </h2>
+              <div className="space-y-3 pt-2 text-[#BFBFBF] font-light leading-relaxed course-body">
+                {EMOTIONAL_START_DATA.description.map((desc, dIdx) => (
+                  <p key={dIdx} className="break-keep">{desc}</p>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* 3단계 가로 흐름형 다이어그램 카드 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-14">
+            {EMOTIONAL_START_DATA.steps.map((st, sIdx) => (
+              <Reveal key={st.step} delayMs={sIdx * 200} slideFrom="bottom">
+                <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/40 transition-all duration-500 h-full flex flex-col justify-between space-y-6 shadow-2xl group hover:-translate-y-2">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#A68253]/15 text-[#A68253] border border-[#A68253]/30">
+                        {st.step}
+                      </span>
+                      <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                        {st.icon}
+                      </span>
+                    </div>
+
+                    <h3 className="course-card-title font-bold text-white leading-tight">
+                      {st.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-[#BFBFBF] font-light leading-relaxed break-keep">
+                      {st.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-[#A68253]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A3D]" />
+                    <span className="font-light tracking-wide">핵심 창작 단계 0{sIdx + 1}</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* 하단 카피 */}
+          <Reveal delayMs={600}>
+            <div className="text-center max-w-2xl mx-auto">
+              <p className="course-quote font-light italic text-[#D9D9D9] leading-relaxed">
+                &ldquo;{EMOTIONAL_START_DATA.quote}&rdquo;
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* 5. 🎨 GALLERY SECTION (CORE) */}
       <section className="py-24 md:py-28 bg-black">
         <div className="site-container">
@@ -388,6 +690,76 @@ export default function FireCoursePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 신규 SECTION B. 6가지 감성 창작 경험 (지침 5번) */}
+      <section className="py-24 md:py-28 bg-[#0a0a0a] border-b border-white/5 relative overflow-hidden">
+        <div className="site-container relative z-10">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-4">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-[#A68253]/30 text-[#A68253] text-[11px] tracking-widest uppercase">
+                6 Creative Assets
+              </div>
+              <h2 className="course-section-title font-display text-white italic">
+                마음에서 시작한 이미지가 <br className="hidden sm:inline" />
+                <span style={{ color: GOLD }}>나만의 작품</span>이 됩니다.
+              </h2>
+              <p className="course-hero-sub text-[#BFBFBF] font-light italic">
+                &ldquo;감정을 표현하는 한 장의 그림부터, 세상에 선보이는 나만의 아트 컬렉션까지.&rdquo;
+              </p>
+              <div className="w-16 h-[1px] bg-white/20 mx-auto pt-2" />
+            </div>
+          </Reveal>
+
+          {/* 6개 창작 경험 그리드 (데스크톱 3열 x 2행, 모바일 1열) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
+            {SIX_CREATIVE_EXPERIENCES.map((item, idx) => (
+              <Reveal key={item.num} delayMs={idx * 150} slideFrom="bottom">
+                <div className="p-8 md:p-9 rounded-[2.5rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/50 transition-all duration-500 flex flex-col justify-between space-y-6 h-full shadow-2xl group hover:-translate-y-2">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-mono font-bold text-[#A68253]">
+                        PORTFOLIO {item.num}
+                      </span>
+                      <span className="text-[10px] font-mono tracking-wider text-[#A68253] uppercase px-2.5 py-0.5 rounded-full bg-[#A68253]/15 border border-[#A68253]/25">
+                        {item.mockup}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">{item.icon}</span>
+                      <h3 className="course-card-title font-bold text-white group-hover:text-[#A68253] transition-colors">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-[#BFBFBF] font-light leading-relaxed break-keep">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-[11px] text-[#A68253] font-light">
+                      #{item.tag}
+                    </span>
+                    <span className="text-xs text-white/30 group-hover:text-white/70 transition-colors">
+                      창작 실습 분야 →
+                    </span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* 투명성 안내 문구 */}
+          <Reveal delayMs={400}>
+            <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-[#121417] border border-white/5 text-center">
+              <p className="text-xs text-[#BFBFBF]/80 font-light leading-relaxed break-keep">
+                ※ 위 6개 창작 영역은 강의에서 학습하고 실습하는 포트폴리오 범주이며, 개인의 학습 속도와 선택에 따라 중심 결과물이 다를 수 있습니다.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -503,6 +875,179 @@ export default function FireCoursePage() {
         </div>
       </section>
 
+      {/* 신규 SECTION C. 확장된 6주 AI 감성 아트 커리큘럼 (지침 6번) */}
+      <section className="py-24 md:py-28 bg-[#070707] border-b border-white/5 relative overflow-hidden">
+        <div className="site-container relative z-10">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-4">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-[#A68253]/30 text-[#A68253] text-[11px] tracking-widest uppercase">
+                Expanded Roadmap
+              </div>
+              <h2 className="course-section-title font-display text-white italic">
+                마음을 읽고, 표현하고, <br className="hidden sm:inline" />
+                <span style={{ color: GOLD }}>소장하고, 나누는 6주</span>
+              </h2>
+              <p className="course-hero-sub text-[#BFBFBF] font-light italic">
+                기존 실무 테크닉을 넘어, 감성 예술과 창작 브랜드로 확장되는 6주 심화 로드맵입니다.
+              </p>
+              <div className="w-16 h-[1px] bg-white/20 mx-auto pt-2" />
+            </div>
+          </Reveal>
+
+          {/* 6주차 아코디언 / 타임라인 카드 그리드 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+            {EXPANDED_6WEEKS_CURRICULUM.map((wk, wIdx) => {
+              const isOpen = expandedWeek === wIdx;
+              return (
+                <Reveal key={wk.week} delayMs={wIdx * 100} slideFrom="bottom">
+                  <div
+                    onClick={() => setExpandedWeek(isOpen ? null : wIdx)}
+                    className={`p-7 sm:p-8 rounded-[2.5rem] border transition-all duration-500 cursor-pointer flex flex-col justify-between h-full shadow-2xl ${
+                      isOpen
+                        ? "bg-[#16181D] border-[#A68253]/60 shadow-[0_0_50px_rgba(166,130,83,0.15)]"
+                        : "bg-[#14161A] border-white/[0.08] hover:border-[#A68253]/40 hover:-translate-y-1"
+                    }`}
+                  >
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#A68253]/15 text-[#A68253] border border-[#A68253]/30">
+                          {wk.week}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-medium text-[#D9D9D9]">
+                            {wk.theme}
+                          </span>
+                          <span className="text-lg">{wk.icon}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="course-card-title font-bold text-white leading-tight">
+                        {wk.title}
+                      </h3>
+
+                      <ul className="space-y-2 pt-2 border-t border-white/5">
+                        {wk.topics.map((tpc, tIdx) => (
+                          <li key={tIdx} className="text-xs text-[#BFBFBF] font-light flex items-start gap-2">
+                            <span style={{ color: GOLD }} className="shrink-0 mt-0.5">•</span>
+                            <span className="break-keep">{tpc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs mt-4">
+                      <span className="text-white/40 font-light">대표 결과물</span>
+                      <span className="font-semibold text-[#A68253] bg-[#A68253]/10 px-2.5 py-1 rounded-md border border-[#A68253]/20">
+                        {wk.result}
+                      </span>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+
+          <div className="text-center">
+            <p className="text-xs text-[#BFBFBF]/60 font-light">
+              ※ 본 6주 확장 로드맵은 AI 아트 테크닉을 감성 콘텐츠와 브랜드로 승화시키는 추천 심화 실습 구성입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 신규 SECTION D. 온라인 아트 전시회 (지침 7번) */}
+      <section className="py-24 md:py-32 bg-[#050505] border-b border-white/5 relative overflow-hidden">
+        {/* 잔잔한 앰비언트 조명 */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#A68253]/8 blur-[180px] rounded-full pointer-events-none" />
+
+        <div className="site-container relative z-10 space-y-16">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto space-y-4">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-[#A68253]/30 text-[#A68253] text-[11px] tracking-widest uppercase">
+                Online Exhibition
+              </div>
+              <h2 className="course-section-title font-display text-white italic">
+                내 마음의 그림이 <br className="hidden sm:inline" />
+                <span style={{ color: GOLD }}>처음으로 갤러리에 걸리는 순간</span>
+              </h2>
+              <div className="space-y-3 pt-2 text-[#BFBFBF] font-light leading-relaxed course-body max-w-2xl mx-auto">
+                <p>
+                  처음에는 작은 감정 하나에서 시작한 그림이었습니다. <br className="hidden sm:inline" />
+                  하지만 작품이 하나씩 쌓이면서 나만의 색과 이야기가 생겨납니다.
+                </p>
+                <p>
+                  6주 동안 제작한 작품 가운데 대표작을 선정하고, 작가 노트를 작성해 온라인 전시 공간에 소개합니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* 대형 16:9 가상 갤러리 프리뷰 프레임 */}
+          <Reveal delayMs={300}>
+            <div className="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-b from-[#181614] to-[#0D0E10] border border-[#A68253]/30 p-6 sm:p-10 shadow-[0_40px_100px_rgba(0,0,0,0.8)] space-y-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF6A3D] animate-pulse" />
+                  <span className="text-xs font-mono font-bold tracking-wider text-[#A68253] uppercase">
+                    VIRTUAL ART GALLERY • 온라인 전시 예시
+                  </span>
+                </div>
+                <span className="text-xs text-white/40 font-light">
+                  모바일 & PC 반응형 디지털 갤러리
+                </span>
+              </div>
+
+              <div className="relative aspect-[16/9] rounded-2xl bg-black/80 border border-white/10 flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden group">
+                <div className="w-20 h-20 rounded-full bg-[#A68253]/15 border border-[#A68253]/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500">
+                  🏛️
+                </div>
+                <div className="space-y-2 max-w-lg">
+                  <h3 className="course-card-title font-bold text-white leading-tight">
+                    나만의 대표작과 작가 노트가 걸리는 전시 공간
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#BFBFBF] font-light leading-relaxed break-keep">
+                    링크 하나로 누구나 감상할 수 있는 나만의 웹 갤러리를 완성하고, 소중한 사람들과 세상에 따뜻한 감동을 공유합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* 5단계 전시 과정 카드 */}
+          <div className="max-w-5xl mx-auto space-y-6">
+            <h3 className="text-center text-xs font-bold tracking-[0.25em] text-[#A68253] uppercase">
+              5 Steps To Virtual Exhibition
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+              {EXHIBITION_STEPS.map((st, idx) => (
+                <Reveal key={st.step} delayMs={idx * 150} slideFrom="bottom">
+                  <div className="p-6 rounded-2xl bg-[#14161A] border border-white/[0.08] flex flex-col justify-between space-y-2 text-center h-full hover:border-[#A68253]/30 transition-colors">
+                    <span className="text-[11px] font-mono font-bold text-[#A68253]">
+                      STEP {st.step}
+                    </span>
+                    <h4 className="text-xs sm:text-sm font-bold text-white break-keep">
+                      {st.title}
+                    </h4>
+                    <p className="text-[11px] text-[#BFBFBF]/80 font-light leading-relaxed break-keep">
+                      {st.desc}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          {/* 강조 문구 배너 */}
+          <Reveal delayMs={500}>
+            <div className="max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/30 text-center space-y-3">
+              <p className="text-base sm:text-lg md:text-xl font-display italic text-white break-keep leading-relaxed">
+                &ldquo;그림을 만드는 경험에서, <span style={{ color: GOLD }} className="font-bold">내 이름으로 작품을 선보이는 경험</span>까지.&rdquo;
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* 7. 결과 섹션 */}
       <section className="py-24 md:py-28 bg-black">
         <div className="site-container shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[3rem] p-8 md:p-16 border border-white/5">
@@ -539,6 +1084,38 @@ export default function FireCoursePage() {
               </p>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* 신규: 이런 분께 추천합니다 (지침 8번 보강) */}
+      <section className="py-24 md:py-28 bg-[#090909] border-t border-b border-white/5 relative overflow-hidden">
+        <div className="site-container relative z-10">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+              <div className="inline-block px-4 py-1.5 rounded-full border border-[#A68253]/30 text-[#A68253] text-[11px] tracking-widest uppercase">
+                Recommended For
+              </div>
+              <h2 className="course-section-title font-display text-white italic">
+                이런 분들께 <span style={{ color: GOLD }}>이 강의를 추천합니다</span>
+              </h2>
+              <p className="course-hero-sub text-[#BFBFBF] font-light italic">
+                감각적인 예술 창작부터 나만의 브랜드 구축까지, 마음을 표현하고 싶은 모든 분을 환영합니다.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {RECOMMENDED_AUDIENCE.map((text, idx) => (
+              <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+                <div className="p-7 rounded-[2rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/40 transition-all duration-300 flex items-start gap-4 h-full shadow-lg group hover:-translate-y-1">
+                  <span className="w-2 h-2 rounded-full bg-[#FF6A3D] mt-2 shrink-0 group-hover:scale-125 transition-transform" />
+                  <p className="course-card-title text-[#BFBFBF] font-light leading-relaxed group-hover:text-white transition-colors break-keep">
+                    {text}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -591,6 +1168,39 @@ export default function FireCoursePage() {
 
       {/* 8-2. HEART ART PROJECT (BRAND ART CONTENT 10) */}
       <HeartArtProjectSection />
+
+      {/* 신규: 지도사 과정과의 연결 배너 (지침 9번) */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a0a0a] via-[#14161A] to-black border-t border-b border-white/5 relative overflow-hidden">
+        <div className="site-container relative z-10 max-w-4xl mx-auto">
+          <Reveal>
+            <div className="p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/35 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+              <div className="space-y-3 max-w-xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A68253]/15 border border-[#A68253]/25">
+                  <span className="text-[11px] font-bold tracking-wider text-[#A68253] uppercase">
+                    Certification Pathway
+                  </span>
+                </div>
+                <h3 className="course-card-title text-xl md:text-2xl font-bold text-white leading-tight">
+                  나만의 창작 경험을 누군가와 나누고 싶다면?
+                </h3>
+                <p className="text-xs sm:text-sm text-[#BFBFBF] font-light leading-relaxed break-keep">
+                  감성 아트 창작을 넘어 교육 프로그램을 기획하고 지도사 활동을 준비하고 싶다면, 자명스쿨의 AI 감성 아트 지도사 과정을 살펴보세요.
+                </p>
+              </div>
+
+              <div className="shrink-0">
+                <Link
+                  href="/courses/ai-emotional-art"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-[#A68253] to-[#8B5E3C] text-white font-bold text-xs sm:text-sm tracking-wider hover:brightness-110 transition-all shadow-xl group"
+                >
+                  <span>AI 감성 아트 지도사 과정 자세히 보기</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* 9. CTA */}
       <section className="py-28 md:py-36 text-center bg-black relative overflow-hidden">
