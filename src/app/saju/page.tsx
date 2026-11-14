@@ -20,6 +20,10 @@ import {
   SAJU_EXPANSION_IDEAS,
   SAJU_FAQS,
   SAJU_FINAL_COMPLETION_ITEMS,
+  SAJU_WHY_CALCULATION,
+  SAJU_CORE_BENEFITS,
+  SAJU_AUTOMATION_STEPS,
+  SAJU_TEMPLATE_OFFER_BANNER,
 } from "@/data/sajuClassData";
 import {
   SajuReplaceableImage,
@@ -93,14 +97,14 @@ export default function SajuClassPage() {
       </nav>
 
       {/* ═══════════════════════════════════════════════
-          [2. 상단 히어로]
+          [2. 상단 히어로 영역]
          ═══════════════════════════════════════════════ */}
       <section className="w-full bg-[#F9F6F0] text-[#2E2723] border-b border-[#E8DFD3] pt-8 pb-12 md:py-16">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* 좌측: 상단 영문, 메인 제목(H1), 서브 제목, 본문, 강조 문구, 핵심 배지, 수업 정보, 신청 버튼 */}
+            {/* 좌측: 상단 배지, 메인 후킹 문구, 제목(H1), 서브 문구, 핵심 혜택 3가지, 수업 정보, 신청 버튼 */}
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">
-              {/* 상단 영문 라벨 */}
+              {/* 상단 라벨 & 만세력 템플릿 강조 배지 */}
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs md:text-sm font-bold tracking-wider text-[#8E6D38] uppercase">
                   {SAJU_CLASS_CONFIG.categoryLabel}
@@ -111,45 +115,51 @@ export default function SajuClassPage() {
                 </span>
               </div>
 
-              {/* 강의명 & 부제 식별 배지 */}
-              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-lg bg-[#FAF2E6] border border-[#E8DFD3] text-xs text-[#6E5A4D]">
-                <strong className="font-bold text-[#2E2723]">
-                  {SAJU_CLASS_CONFIG.courseTitle}
-                </strong>
-                <span className="text-[#C6A66B]">|</span>
-                <span>{SAJU_CLASS_CONFIG.courseSubtitle}</span>
+              {/* 🎁 상단 강조 배지 */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8E6D38]/10 border border-[#8E6D38]/30 text-xs sm:text-sm font-extrabold text-[#755523] shadow-xs">
+                <span>{SAJU_CLASS_CONFIG.templateBadge || "🎁 검증된 만세력 계산 웹 템플릿 제공"}</span>
               </div>
 
-              {/* 메인 제목 (H1) & 서브 제목 */}
+              {/* 메인 후킹 문구 & 강의 식별 */}
               <div className="space-y-2">
+                <p className="text-xs sm:text-sm font-extrabold text-[#8E6D38] tracking-wide break-keep">
+                  {SAJU_CLASS_CONFIG.heroHookText || "“AI로 사주 사이트를 만드는 것보다 중요한 것은, 정확하게 작동하는 만세력입니다.”"}
+                </p>
+                {/* 메인 제목 (H1) & 서브 제목 */}
                 <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-[#2E2723] leading-tight break-keep">
                   {SAJU_CLASS_CONFIG.heroTitleLine1} <br />
                   <span className="text-[#8E6D38]">
                     {SAJU_CLASS_CONFIG.heroTitleLine2}
                   </span>
                 </h1>
-                <p className="text-base sm:text-lg font-bold text-[#6E5A4D] break-keep">
+                <p className="text-base sm:text-lg font-bold text-[#6E5A4D] break-keep pt-1">
                   {SAJU_CLASS_CONFIG.heroSubTitle}
                 </p>
               </div>
 
               {/* 설명 본문 */}
               <p className="text-sm sm:text-base text-[#4A3F35] leading-relaxed break-keep">
-                생년월일과 태어난 시간을 입력하면{" "}
-                <br className="hidden sm:inline" />
-                사주 정보와 풀이 결과가 펼쳐지는 나만의 사이트.{" "}
-                <br className="hidden sm:inline" />
-                AI와 기본 템플릿을 활용해 만세력 계산 연결부터{" "}
-                <br className="hidden sm:inline" />
-                해석 결과 자동 표시, 사주에 어울리는 디자인까지 함께 완성합니다.
+                {SAJU_CLASS_CONFIG.heroDescription}
               </p>
 
-              {/* 강조 문구 */}
-              <div className="p-4 rounded-xl bg-[#FAF2E6] border border-[#E8DFD3] text-sm font-semibold text-[#8E6D38] leading-relaxed break-keep">
-                ✨ {SAJU_CLASS_CONFIG.heroHighlight}
+              {/* 핵심 혜택 3가지 */}
+              <div className="p-4 rounded-2xl bg-white border border-[#E8DFD3] space-y-2 shadow-xs">
+                <span className="text-[11px] font-extrabold text-[#8E6D38] tracking-wider uppercase block">
+                  CORE BENEFITS · 이번 클래스 핵심 혜택
+                </span>
+                <ul className="space-y-1.5 text-xs sm:text-sm font-bold text-[#2E2723]">
+                  {SAJU_CLASS_CONFIG.heroKeyBenefits?.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3] text-[#8E6D38] flex items-center justify-center text-xs font-black shrink-0">
+                        ✓
+                      </span>
+                      <span className="break-keep">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* 핵심 배지 4개 */}
+              {/* 핵심 배지 */}
               <div className="flex flex-wrap items-center gap-2 pt-0.5">
                 {SAJU_CLASS_CONFIG.heroBadges.map((badge, idx) => (
                   <span
@@ -299,7 +309,7 @@ export default function SajuClassPage() {
                         {/* 화살표 */}
                         <div className="flex items-center justify-center text-[10px] text-[#C6A66B] font-bold gap-1">
                           <span>↓</span>
-                          <span>만세력 오픈소스 사주 정보 계산</span>
+                          <span>만세력 계산 로직 사주 정보 생성</span>
                           <span>↓</span>
                         </div>
 
@@ -310,7 +320,7 @@ export default function SajuClassPage() {
                               02. 사주 명식 & 오행 정보
                             </span>
                             <span className="text-[8px] text-emerald-400 font-semibold">
-                              계산 연동 완료
+                              검증 계산 로직
                             </span>
                           </div>
                           <div className="grid grid-cols-4 gap-1 text-center">
@@ -342,18 +352,17 @@ export default function SajuClassPage() {
                         <div className="p-3 rounded-xl bg-[#241B15] border border-[#46362A] space-y-1.5">
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] font-bold text-[#C6A66B]">
-                              03. 풀이 결과 자동 표시
+                              03. AI 해석 결과 표시
                             </span>
                             <span className="text-[8px] text-[#A8988B]">
-                              API 호출 0원
+                              맞춤형 브랜딩
                             </span>
                           </div>
                           <p className="text-[11px] font-bold text-[#FAF7F2] break-keep">
                             “큰 숲을 이루는 갑목(甲木)처럼 곧고 단단한 기운”
                           </p>
                           <p className="text-[10px] text-[#C4B5A6] leading-relaxed break-keep">
-                            계산된 사주 항목에 따라 미리 준비한 성향과 운세 메시지가
-                            결과페이지에 자동으로 연결되어 펼쳐집니다.
+                            계산된 사주 데이터와 설정한 AI 프롬프트가 결합되어 나만의 브랜드 결과페이지에 펼쳐집니다.
                           </p>
                         </div>
                       </div>
@@ -361,12 +370,212 @@ export default function SajuClassPage() {
                   </div>
                 </div>
 
-                {/* 하단 캡션 (수업 결과물 예시 명시) */}
+                {/* 하단 캡션 */}
                 <p className="mt-3 text-center text-xs text-[#6E5A4D] font-medium">
-                  ▲ 수업 결과물 예시 (입력 화면 → 만세력 계산 → 결과페이지 표시)
+                  ▲ 수업 결과물 예시 (입력 화면 → 만세력 계산 템플릿 → 결과페이지 표시)
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [신규 섹션 3: 왜 만세력 계산이 중요할까요?]
+          히어로 영역 바로 아래, 커리큘럼 소개 전 배치
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
+              {SAJU_WHY_CALCULATION.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              {SAJU_WHY_CALCULATION.titleLine1} <br />
+              <span className="text-[#D6C6A8]">
+                {SAJU_WHY_CALCULATION.titleLine2}
+              </span>
+            </h2>
+            <div className="space-y-2 text-sm sm:text-base text-[#B8A89A] leading-relaxed break-keep pt-2">
+              {SAJU_WHY_CALCULATION.description.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* 비교 카드: PC 2열, 모바일 1열 / 오른쪽 카드 시각적 강조 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* 좌측 카드: 일반적인 AI 사주 사이트 제작 */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#17120F] border border-[#2B221D] flex flex-col justify-between space-y-6">
+              <div className="space-y-3">
+                <span className="inline-block px-3 py-1 rounded-lg bg-zinc-800/80 border border-zinc-700 text-zinc-300 text-xs font-bold">
+                  기존 방식의 한계
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-[#E5DCD3] break-keep">
+                  {SAJU_WHY_CALCULATION.generalAi.title}
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {SAJU_WHY_CALCULATION.generalAi.points.map((pt, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                    <span className="w-5 h-5 rounded-full bg-zinc-800 text-zinc-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                      ✕
+                    </span>
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-3.5 rounded-xl bg-[#130F0D] border border-zinc-800/80 text-center">
+                <p className="text-xs text-zinc-400">
+                  ⚠️ 기초 데이터 오류로 인한 신뢰도 하락 위험
+                </p>
+              </div>
+            </div>
+
+            {/* 우측 카드: 자명스쿨 실전 템플릿 활용 (시각적 강조) */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#221A14] to-[#18120E] border-2 border-[#C6A66B] shadow-2xl flex flex-col justify-between space-y-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-[#C6A66B] text-[#140F0A] text-[10px] sm:text-xs font-black px-3.5 py-1 rounded-bl-xl tracking-wider">
+                자명스쿨의 차별점
+              </div>
+              <div className="space-y-3">
+                <span className="inline-block px-3 py-1 rounded-lg bg-[#C6A66B]/20 border border-[#C6A66B]/40 text-[#C6A66B] text-xs font-extrabold">
+                  검증된 솔루션
+                </span>
+                <h3 className="text-lg sm:text-xl font-extrabold text-[#FAF7F2] break-keep">
+                  {SAJU_WHY_CALCULATION.jamyeongTemplate.title}
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {SAJU_WHY_CALCULATION.jamyeongTemplate.points.map((pt, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#EDE6DC] font-semibold leading-relaxed break-keep">
+                    <span className="w-5 h-5 rounded-full bg-[#C6A66B] text-[#1A1410] flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
+                      ✓
+                    </span>
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-3.5 rounded-xl bg-[#1C1510] border border-[#C6A66B]/40 text-center">
+                <p className="text-xs sm:text-sm font-bold text-[#D6C6A8]">
+                  ✨ 신뢰할 수 있는 만세력 엔진 탑재로 빠른 출시 가능
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [신규 섹션 4: 핵심 혜택 — 검증된 만세력 계산 웹 템플릿 제공]
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18]">
+        <div className="site-container">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
+              {SAJU_CORE_BENEFITS.badge}
+            </span>
+            <p className="text-sm sm:text-base font-bold text-[#D6C6A8]">
+              {SAJU_CORE_BENEFITS.titleSub}
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              {SAJU_CORE_BENEFITS.titleMain}
+            </h2>
+            <p className="text-sm sm:text-base text-[#A8988B] leading-relaxed break-keep pt-2">
+              {SAJU_CORE_BENEFITS.description}
+            </p>
+          </div>
+
+          {/* 혜택 카드 4개 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {SAJU_CORE_BENEFITS.cards.map((card) => (
+              <div
+                key={card.num}
+                className="p-6 rounded-2xl bg-[#161210] border border-[#2E241E] hover:border-[#C6A66B]/60 transition-all flex flex-col justify-between space-y-4 group"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-[#C6A66B]/15 border border-[#C6A66B]/40 text-[#C6A66B] text-sm font-black">
+                      {card.num}
+                    </span>
+                    <span className="text-[10px] font-bold text-[#C6A66B] px-2 py-0.5 rounded-full bg-[#201813] border border-[#34271D]">
+                      {card.tag}
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-extrabold text-[#FAF7F2] break-keep group-hover:text-[#D6C6A8] transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 하단 투명 안내 문구 */}
+          <div className="mt-8 p-4 rounded-xl bg-[#15110E] border border-[#2B211A] text-center max-w-3xl mx-auto">
+            <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep">
+              {SAJU_CORE_BENEFITS.notice}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [신규 섹션 5: 자동화 구조 시각화]
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-16 md:py-24 border-b border-[#221C18] bg-[#120E0C]">
+        <div className="site-container">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
+              {SAJU_AUTOMATION_STEPS.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              {SAJU_AUTOMATION_STEPS.title}
+            </h2>
+          </div>
+
+          {/* 4단계 가로형 프로세스 카드 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+            {SAJU_AUTOMATION_STEPS.steps.map((step, idx) => (
+              <div
+                key={step.step}
+                className="p-5 sm:p-6 rounded-2xl bg-[#17120F] border border-[#2F241C] flex flex-col justify-between space-y-3 relative group hover:border-[#C6A66B]/50 transition-colors"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-black text-[#C6A66B] tracking-wider">
+                      {step.step}
+                    </span>
+                    <span className="text-xl">{step.icon}</span>
+                  </div>
+                  <h3 className="text-base font-extrabold text-[#FAF7F2] break-keep">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-[#A8988B] leading-relaxed break-keep">
+                    {step.desc}
+                  </p>
+                </div>
+                {/* 모바일/PC 단계 화살표 표시 */}
+                {idx < 3 && (
+                  <div className="hidden lg:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 w-5 h-5 rounded-full bg-[#201813] border border-[#3E3024] text-[#C6A66B] text-[10px] font-bold flex items-center justify-center pointer-events-none text-center">
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* 하단 강조 문구 & 안내 */}
+          <div className="mt-8 max-w-2xl mx-auto text-center space-y-3">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-[#1C1612] via-[#241B15] to-[#1C1612] border border-[#3E3024]">
+              <p className="text-sm sm:text-base font-extrabold text-[#FAF7F2] break-keep">
+                ✨ {SAJU_AUTOMATION_STEPS.highlightNotice}
+              </p>
+            </div>
+            <p className="text-xs text-[#8F7D6E] break-keep">
+              {SAJU_AUTOMATION_STEPS.subNotice}
+            </p>
           </div>
         </div>
       </section>
@@ -1244,6 +1453,40 @@ export default function SajuClassPage() {
           </div>
 
           <SajuFaqAccordion items={SAJU_FAQS} />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [7. 수강 혜택 강조 배너]
+          기존 신청 CTA 바로 위에 배치
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-14 md:py-20 bg-gradient-to-b from-[#16110E] via-[#1F1712] to-[#120E0C] border-b border-[#34271D]">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#221A14] to-[#17120F] border-2 border-[#C6A66B] shadow-2xl text-center space-y-6 relative overflow-hidden">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#C6A66B]/20 border border-[#C6A66B]/50 text-[#C6A66B] text-xs sm:text-sm font-extrabold tracking-wider uppercase">
+              🎁 {SAJU_TEMPLATE_OFFER_BANNER.topLabel}
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+                {SAJU_TEMPLATE_OFFER_BANNER.mainTitle}
+              </h2>
+              <p className="text-sm sm:text-base text-[#D6C6A8] leading-relaxed break-keep whitespace-pre-line max-w-xl mx-auto font-medium">
+                {SAJU_TEMPLATE_OFFER_BANNER.subTitle}
+              </p>
+            </div>
+            <div className="pt-2 flex flex-col items-center justify-center">
+              <SajuCtaButton
+                courseId={SAJU_CLASS_CONFIG.id}
+                courseTitle={SAJU_CLASS_CONFIG.courseTitle}
+                status={SAJU_CLASS_CONFIG.status}
+                applicationUrl={SAJU_CLASS_CONFIG.applicationUrl}
+                notificationUrl={SAJU_CLASS_CONFIG.notificationUrl}
+                ctaOpenText={SAJU_CLASS_CONFIG.ctaOpenText}
+                ctaScheduledText={SAJU_CLASS_CONFIG.ctaScheduledText}
+                variant="hero"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

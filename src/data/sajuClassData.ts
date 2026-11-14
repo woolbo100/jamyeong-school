@@ -177,6 +177,8 @@ export interface SajuClassConfig {
   routePath: string;
   categoryLabel: string;
   subBadge: string;
+  templateBadge?: string;
+  heroHookText?: string;
   courseTitle: string;
   courseSubtitle: string;
   heroTitleLine1: string;
@@ -185,6 +187,7 @@ export interface SajuClassConfig {
   heroDescription: string;
   heroHighlight: string;
   heroBadges: string[];
+  heroKeyBenefits?: string[];
   tags: string[];
   status: OnedayStatus;
   format: string;
@@ -212,34 +215,41 @@ export const SAJU_CLASS_CONFIG: SajuClassConfig = {
   routePath: "/saju",
   categoryLabel: "AI SAJU SERVICE · ONE DAY CLASS",
   subBadge: "자명스쿨 원데이 실전 마스터",
+  templateBadge: "🎁 검증된 만세력 계산 웹 템플릿 제공",
+  heroHookText: "“AI로 사주 사이트를 만드는 것보다 중요한 것은, 정확하게 작동하는 만세력입니다.”",
   courseTitle: "AI 사주 서비스 제작",
-  courseSubtitle: "만세력 오픈소스부터 결과페이지 자동화까지",
-  heroTitleLine1: "사주를 몰라도 만들 수 있는",
-  heroTitleLine2: "나만의 사주사이트",
-  heroSubTitle: "만세력 오픈소스부터 결과페이지 자동화까지, 하루 3~4시간.",
+  courseSubtitle: "검증된 만세력 템플릿부터 AI 해석 서비스까지",
+  heroTitleLine1: "검증된 만세력 템플릿으로 시작하는",
+  heroTitleLine2: "나만의 AI 사주 서비스 만들기",
+  heroSubTitle: "복잡한 만세력 계산 코드를 처음부터 개발할 필요 없이!",
   heroDescription:
-    "생년월일과 태어난 시간을 입력하면 사주 정보와 풀이 결과가 펼쳐지는 나만의 사이트. AI와 기본 템플릿을 활용해 만세력 계산 연결부터 해석 결과 자동 표시, 사주에 어울리는 디자인까지 함께 완성합니다.",
-  heroHighlight: "아이디어로만 생각했던 사주서비스를, 직접 작동하는 사이트로.",
+    "만세력 계산 로직이 탑재된 실전 웹 템플릿을 활용해, 나만의 브랜드와 AI 해석 프롬프트를 결합한 사주 서비스를 직접 만들어 봅니다.",
+  heroHighlight: "아이디어로만 생각했던 사주서비스를, 검증된 템플릿으로 직접 작동하는 사이트로.",
   heroBadges: [
     "사주·코딩 초보 참여 가능",
-    "만세력 오픈소스 활용",
+    "검증된 만세력 템플릿 제공",
     "결과페이지 자동화",
     "해석 API 호출 없는 기본 구조",
   ],
-  tags: ["AI사주", "만세력", "사주사이트", "서비스제작"],
+  heroKeyBenefits: [
+    "만세력 계산 웹 템플릿 제공",
+    "내 브랜드에 맞는 AI 사주 해석 서비스 제작",
+    "실제 웹사이트 구현 및 서비스 운영 구조 실습",
+  ],
+  tags: ["AI사주", "만세력", "사주사이트", "웹템플릿제공", "서비스제작"],
   status: "scheduled",
   format: "Zoom 실시간 온라인 실습",
   duration: "하루 3~4시간",
   schedule: "개강 일정 준비 중",
   price: "오픈 예정",
   difficulty: "사주·코딩 사전 지식 없이 참여 가능",
-  goalSummary: "입력·계산·기본 해석·결과 표시가 작동하는 사이트 첫 버전",
+  goalSummary: "입력·만세력 계산·AI 해석·결과 표시가 작동하는 사이트 첫 버전",
   materialsSummary:
-    "기본 템플릿·바이브코딩 PDF·디자인 레퍼런스·Notion 프롬프트",
+    "만세력 계산 웹 템플릿·바이브코딩 PDF·디자인 레퍼런스·Notion 프롬프트",
   preparationSummary:
     "PC·크롬 브라우저·수업에서 안내하는 제작 도구 계정",
   preClassNotice:
-    "원활한 실습을 위해 수업 전 안내되는 계정과 제작 환경을 준비해주세요. 기본 템플릿과 예제 데이터를 활용해 함께 진행합니다.",
+    "원활한 실습을 위해 수업 전 안내되는 계정과 제작 환경을 준비해주세요. 만세력 계산 템플릿과 예제 데이터를 활용해 함께 진행합니다.",
   replayPolicy: null,
   questionSupportPolicy: null,
   communityInviteText:
@@ -255,6 +265,118 @@ export const SAJU_CLASS_CONFIG: SajuClassConfig = {
 // ─────────────────────────────────────────────────────────────
 // 3. 섹션별 상세 데이터
 // ─────────────────────────────────────────────────────────────
+
+// [신규 섹션: 왜 만세력 계산이 중요할까요?]
+export const SAJU_WHY_CALCULATION = {
+  badge: "WHY CALCULATION MATTERS",
+  titleLine1: "예쁜 사주 사이트는 AI가 만들어 줍니다.",
+  titleLine2: "하지만 정확한 만세력 계산은 다릅니다.",
+  description: [
+    "AI에게 \"사주 사이트를 만들어 줘\"라고 요청하면 멋진 웹페이지는 비교적 쉽게 만들 수 있습니다.",
+    "하지만 실제 생년월일과 출생 시간을 입력했을 때 월주나 일주가 잘못 계산된다면 어떨까요?",
+    "사주 서비스의 출발점은 화려한 디자인이 아니라 신뢰할 수 있는 기초 데이터입니다.",
+    "이번 클래스에서는 복잡한 계산 로직을 처음부터 개발하지 않고, 사전에 검증한 만세력 계산 템플릿을 활용해 실제 서비스 제작에 집중합니다.",
+  ],
+  generalAi: {
+    title: "일반적인 AI 사주 사이트 제작",
+    points: [
+      "AI가 생성한 계산 코드의 오류 가능성",
+      "만세력 계산 방법을 직접 조사해야 하는 부담",
+      "절기 및 출생 시간 처리 검증 필요",
+      "오류 수정에 많은 시간 소요",
+    ],
+  },
+  jamyeongTemplate: {
+    title: "자명스쿨 실전 템플릿 활용",
+    points: [
+      "사전 검증된 만세력 계산 로직 제공",
+      "복잡한 계산 엔진 개발 과정 단축",
+      "브랜드 디자인과 해석 콘텐츠 제작에 집중",
+      "실제 서비스로 확장 가능한 기초 구조 확보",
+    ],
+  },
+};
+
+// [신규 섹션: 핵심 혜택 — 검증된 만세력 계산 웹 템플릿 제공]
+export const SAJU_CORE_BENEFITS = {
+  badge: "SPECIAL BENEFIT",
+  titleSub: "이번 클래스의 가장 특별한 혜택",
+  titleMain: "검증된 만세력 계산 웹 템플릿 제공",
+  description:
+    "사주 서비스를 만들 때 가장 막막한 부분은 만세력 계산입니다. 이번 클래스에서는 만세력 계산 기능이 구현된 웹 템플릿을 제공해, 수강생이 직접 브랜드와 해석 방식을 변경하며 자신만의 서비스를 제작할 수 있도록 돕습니다.",
+  notice:
+    "※ 검증 범위와 제공 파일 구성은 실제 배포 템플릿 기준으로 표시합니다. 유료 운영 기능은 수업에서 구현하는 범위와 향후 확장 가능한 기능을 구분합니다.",
+  cards: [
+    {
+      num: "01",
+      title: "만세력 계산 엔진",
+      desc: "생년월일과 출생 시간을 바탕으로 사주 기초 데이터를 계산하는 기능이 탑재된 템플릿",
+      tag: "핵심 로직 탑재",
+    },
+    {
+      num: "02",
+      title: "브랜드 맞춤 제작",
+      desc: "서비스 이름, 컬러, 이미지, 문구를 수정하여 나만의 브랜드로 구성",
+      tag: "100% 커스텀 가능",
+    },
+    {
+      num: "03",
+      title: "AI 해석 프롬프트 연결",
+      desc: "연애, 재물, 성격, 관계 등 원하는 주제에 맞게 AI 해석 콘텐츠 구성",
+      tag: "프롬프트 자유 확장",
+    },
+    {
+      num: "04",
+      title: "웹서비스 확장 기반",
+      desc: "향후 회원 기능, 결제, 유료 리포트 등으로 확장할 수 있는 웹서비스 제작 기반",
+      tag: "유료 서비스 확장성",
+    },
+  ],
+};
+
+// [신규 섹션: 자동화 구조 시각화]
+export const SAJU_AUTOMATION_STEPS = {
+  badge: "AUTOMATION PIPELINE",
+  title: "생년월일 입력부터 AI 사주 해석까지, 하나의 흐름으로!",
+  highlightNotice:
+    "“만세력 계산부터 AI 해석까지 연결되는 서비스 구조를 직접 경험해 보세요.”",
+  subNotice:
+    "※ 위 구조는 수업에서 실제 연동되는 범위에 맞게 표시합니다. 미구현 기능을 완성 기능으로 안내하지 않습니다.",
+  steps: [
+    {
+      step: "STEP 01",
+      title: "고객 정보 입력",
+      desc: "생년월일 및 출생 시간 입력",
+      icon: "📅",
+    },
+    {
+      step: "STEP 02",
+      title: "만세력 자동 계산",
+      desc: "탑재된 계산 로직을 통한 사주 기초 데이터 생성",
+      icon: "⚙️",
+    },
+    {
+      step: "STEP 03",
+      title: "AI 해석 연결",
+      desc: "계산된 데이터를 설정한 AI 프롬프트에 전달",
+      icon: "✨",
+    },
+    {
+      step: "STEP 04",
+      title: "결과 화면 출력",
+      desc: "나만의 브랜드로 사주 해석 결과 제공",
+      icon: "📱",
+    },
+  ],
+};
+
+// [신규 섹션: 수강 혜택 강조 배너]
+export const SAJU_TEMPLATE_OFFER_BANNER = {
+  topLabel: "원데이 클래스 수강생 제공 혜택",
+  mainTitle: "검증된 만세력 계산 웹 템플릿을 드립니다.",
+  subTitle:
+    "처음부터 개발하지 마세요.\n이미 구현된 계산 구조 위에 나만의 브랜드와 AI 해석 콘텐츠를 더해 보세요.",
+};
 
 // [4. 고민 공감 — WHY SAJU SERVICE?]
 export const SAJU_PROBLEM_CARDS = [
@@ -361,10 +483,10 @@ export interface SajuConceptExample {
   title: string;
   description: string;
   imageSlotKey:
-    | "conceptTraditional"
-    | "conceptMindful"
-    | "conceptModern"
-    | "conceptFantasy";
+  | "conceptTraditional"
+  | "conceptMindful"
+  | "conceptModern"
+  | "conceptFantasy";
 }
 
 export const SAJU_CONCEPT_EXAMPLES: SajuConceptExample[] = [
@@ -402,43 +524,43 @@ export const SAJU_CONCEPT_EXAMPLES: SajuConceptExample[] = [
 export const SAJU_CURRICULUM_STEPS = [
   {
     step: "STEP 01",
-    title: "서비스 주제와 대상 정하기",
-    output: "서비스 이름·핵심 기능",
+    title: "서비스 기획 및 주제 선정",
+    output: "나만의 사주 서비스 콘셉트 & 타깃 설정",
   },
   {
     step: "STEP 02",
-    title: "레퍼런스로 디자인 방향 정하기",
-    output: "색감·폰트·화면 구성",
+    title: "만세력 계산 템플릿 기본 구조 이해",
+    output: "제공된 만세력 웹 템플릿 구조 파악 및 레퍼런스 탐색",
   },
   {
     step: "STEP 03",
-    title: "기본 템플릿 실행하기",
-    output: "수정 가능한 사이트 기본 구조",
+    title: "실전 템플릿 실행 및 테스트",
+    output: "로컬 환경 실행 및 기본 만세력 계산 작동 확인",
   },
   {
     step: "STEP 04",
-    title: "생년월일 입력 화면 구성하기",
-    output: "입력 항목·필수값 안내",
+    title: "내 브랜드명·컬러·이미지 변경",
+    output: "생년월일 입력 화면 및 브랜드 맞춤 UI 디자인",
   },
   {
     step: "STEP 05",
-    title: "만세력 계산 기능 연결하기",
-    output: "사주 정보 계산·참고 결과 비교",
+    title: "만세력 계산 엔진 연동 점검",
+    output: "사주 기초 데이터(년·월·일·시주) 자동 생성 검증",
   },
   {
     step: "STEP 06",
-    title: "기본 해석 데이터 연결하기",
-    output: "항목별 설명 자동 표시",
+    title: "AI 사주 해석 프롬프트 수정",
+    output: "연애·재물·성격 등 맞춤형 AI 해석 콘텐츠 연결",
   },
   {
     step: "STEP 07",
-    title: "결과페이지 디자인하기",
-    output: "명식·오행·기본 해석 화면",
+    title: "고객 입력부터 결과 출력까지 작동 확인",
+    output: "입력 → 만세력 계산 → 결과페이지 완벽 연동",
   },
   {
     step: "STEP 08",
-    title: "PC·모바일에서 점검하기",
-    output: "작동하는 첫 버전·공유 준비",
+    title: "웹사이트 배포 및 유료 서비스 확장 이해",
+    output: "실제 웹 배포 완료 & 향후 유료 리포트 확장 로드맵",
   },
 ];
 
@@ -487,10 +609,10 @@ export interface SajuRealCaseItem {
   title: string;
   description: string;
   imageSlotKey:
-    | "realCaseInput"
-    | "realCaseCompare"
-    | "realCaseResult"
-    | "realCaseMobile";
+  | "realCaseInput"
+  | "realCaseCompare"
+  | "realCaseResult"
+  | "realCaseMobile";
 }
 
 export const SAJU_REAL_CASES: SajuRealCaseItem[] = [
@@ -571,7 +693,7 @@ export const SAJU_EXPANSION_IDEAS = [
   },
 ];
 
-// [18. 자주 묻는 질문 — FAQ 9문항]
+// [18. 자주 묻는 질문 — FAQ]
 export interface SajuFaqItem {
   id: string;
   question: string;
@@ -580,55 +702,55 @@ export interface SajuFaqItem {
 
 export const SAJU_FAQS: SajuFaqItem[] = [
   {
-    id: "saju-faq-1",
+    id: "saju-faq-01",
+    question: "코딩을 잘 몰라도 참여할 수 있나요?",
+    answer:
+      "AI 코딩 도구와 제공 템플릿을 활용하는 실습 중심 수업입니다. 복잡한 만세력 계산 코드를 처음부터 작성하지 않고, 단계별로 사이트를 수정하고 실행하는 방법을 배웁니다.",
+  },
+  {
+    id: "saju-faq-02",
+    question: "만세력 계산 템플릿을 제공하나요?",
+    answer:
+      "네. 수업 실습에 활용하는 만세력 계산 웹 템플릿을 제공합니다. 제공 범위와 사용 조건은 클래스 안내를 따릅니다.",
+  },
+  {
+    id: "saju-faq-03",
+    question: "내 브랜드로 수정할 수 있나요?",
+    answer:
+      "네. 브랜드명, 디자인, 이미지, 해석 프롬프트 등 지정된 영역을 변경해 자신만의 서비스로 구성할 수 있습니다.",
+  },
+  {
+    id: "saju-faq-04",
+    question: "완성한 사이트를 유료 서비스로 운영할 수 있나요?",
+    answer:
+      "수업에서 제작한 웹서비스를 기반으로 유료 서비스로 확장할 수 있습니다. 실제 유료 운영을 위해서는 별도의 결제 연동, API 사용료 관리, 개인정보 보호, 오류 검증 및 운영 준비가 필요할 수 있습니다.",
+  },
+  {
+    id: "saju-faq-05",
     question: "사주를 전혀 몰라도 만들 수 있나요?",
     answer:
       "네. 제공 템플릿과 예제 해석을 활용해 서비스 제작 흐름을 익힙니다. 전문적인 사주 감정 교육과는 구분되며, 기본 구조를 이해하고 수정하는 실습에 집중합니다.",
   },
   {
-    id: "saju-faq-2",
-    question: "코딩을 몰라도 참여할 수 있나요?",
-    answer:
-      "기본 템플릿과 프롬프트를 바탕으로 AI에게 기능과 디자인 수정을 요청하며 진행합니다.",
-  },
-  {
-    id: "saju-faq-3",
+    id: "saju-faq-06",
     question: "만세력 계산이 제대로 되는지도 확인하나요?",
     answer:
       "네. 입력 조건과 계산 기준을 확인하고, 같은 기준의 참고 결과와 비교하는 방법을 배웁니다. 지원 범위와 계산 기준은 수업용 템플릿에 안내합니다.",
   },
   {
-    id: "saju-faq-4",
+    id: "saju-faq-07",
     question: "API 요금 없이 해석을 어떻게 보여주나요?",
     answer:
-      "계산된 사주 항목에 미리 준비한 해석을 연결합니다. 결과를 볼 때마다 외부 AI에 해석을 요청하지 않는 방식입니다.",
+      "계산된 사주 항목에 미리 준비한 해석을 연결합니다. 결과를 볼 때마다 외부 AI에 해석을 요청하지 않는 효율적인 구조를 만듭니다.",
   },
   {
-    id: "saju-faq-5",
-    question: "결과페이지도 자동으로 바뀌나요?",
-    answer:
-      "네. 입력값에 따라 계산된 정보를 받아 해당 항목과 기본 해석을 결과 화면에 표시하도록 연결합니다.",
-  },
-  {
-    id: "saju-faq-6",
-    question: "제가 원하는 분위기로 디자인할 수 있나요?",
-    answer:
-      "네. 레퍼런스를 활용해 색감·폰트·배경·결과 카드 배치를 수정합니다.",
-  },
-  {
-    id: "saju-faq-7",
+    id: "saju-faq-08",
     question: "양력·음력과 해외 출생도 모두 지원하나요?",
     answer:
       "수업용 템플릿과 만세력 오픈소스의 지원 범위에 따라 달라집니다. 지원하는 입력 조건을 안내하고 그 범위 안에서 실습합니다.",
   },
   {
-    id: "saju-faq-8",
-    question: "전문적인 종합 사주리포트까지 완성하나요?",
-    answer:
-      "원데이에서는 기본 계산과 해석 결과가 작동하는 사이트를 만듭니다. 심화 리포트와 고급 해석은 별도의 콘텐츠 설계와 검토가 필요한 확장 영역입니다.",
-  },
-  {
-    id: "saju-faq-9",
+    id: "saju-faq-09",
     question: "앱인토스 등록도 포함되나요?",
     answer:
       "이 수업은 웹 사주서비스 제작에 집중합니다. 앱인토스용 변환과 등록은 별도 미니앱 클래스에서 다룹니다.",
