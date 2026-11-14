@@ -15,6 +15,13 @@ import {
   CAREER_EXPANSION_DATA,
   TARGET_AUDIENCE,
   COMPARISON_TABLE,
+  EMOTIONAL_HOOK_SECTION,
+  EMOTIONAL_EMPATHY_SECTION,
+  EDUCATIONAL_PHILOSOPHY_SECTION,
+  SIX_EMOTIONAL_PORTFOLIOS,
+  SIX_WEEKS_EXPANDED_CURRICULUM,
+  ONLINE_EXHIBITION_SECTION,
+  INSTRUCTOR_EXPANSION_SECTION,
 } from "@/data/aiEmotionalArtCourseData";
 import { AiEmotionalArtFaqAccordion } from "@/components/courses/ai-emotional-art/AiEmotionalArtInteractive";
 
@@ -141,6 +148,160 @@ export default function AiEmotionalArtCoursePage() {
             </div>
             <p className="text-[11px] text-zinc-500 mt-3 font-light">
               {AI_EMOTIONAL_ART_CONFIG.price.note}
+            </p>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION A. 감성 후킹 영역 (에디토리얼 레이아웃)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 border-b border-[#B89B6A]/20 bg-gradient-to-b from-[#0C0B0A] via-[#141210] to-[#0F0E0D] relative overflow-hidden">
+        {/* 잔잔한 샴페인 빛 배경 */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B89B6A]/5 blur-[150px] rounded-full pointer-events-none" />
+
+        <CourseDetailContainer className="relative z-10 max-w-4xl mx-auto space-y-10 text-center">
+          {/* 상단 에디토리얼 태그 */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B89B6A]/10 border border-[#B89B6A]/25">
+            <span className="text-xs font-medium tracking-[0.2em] text-[#E6C99B] uppercase">
+              EMOTIONAL REFLECTION
+            </span>
+          </div>
+
+          {/* 메인 헤드라인 & 메시지 */}
+          <div className="space-y-4">
+            <p className="text-sm sm:text-base md:text-lg text-[#D6C6A8] font-light tracking-wide break-keep">
+              &ldquo;{EMOTIONAL_HOOK_SECTION.headline}&rdquo;
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              {EMOTIONAL_HOOK_SECTION.mainMessage}
+            </h2>
+          </div>
+
+          {/* 에디토리얼 본문 단락 */}
+          <div className="space-y-4 max-w-2xl mx-auto text-sm sm:text-base text-zinc-300 font-light leading-relaxed break-keep">
+            {EMOTIONAL_HOOK_SECTION.description.map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+          </div>
+
+          {/* 서정적 인용 박스 */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#161412]/80 border border-[#B89B6A]/30 backdrop-blur-sm shadow-2xl space-y-3">
+            <p className="text-base sm:text-lg md:text-xl font-serif italic text-[#FAF7F2] break-keep leading-relaxed">
+              &ldquo;{EMOTIONAL_HOOK_SECTION.quote}&rdquo;
+            </p>
+            <div className="pt-3 border-t border-[#B89B6A]/20">
+              <span className="inline-block text-xs sm:text-sm font-semibold text-[#E6C99B] tracking-wide">
+                ✦ {EMOTIONAL_HOOK_SECTION.coreConcept}
+              </span>
+            </div>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION B. 공감과 문제 인식 (감성 공감 카드 4종)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {EMOTIONAL_EMPATHY_SECTION.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+              {EMOTIONAL_EMPATHY_SECTION.title}
+            </h2>
+          </div>
+
+          {/* 4개 감성 공감 카드 그리드 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
+            {EMOTIONAL_EMPATHY_SECTION.cards.map((card) => (
+              <div
+                key={card.number}
+                className="p-6 sm:p-7 rounded-2xl bg-[#141210] border border-[#B89B6A]/20 hover:border-[#B89B6A]/50 transition-all duration-300 space-y-3 flex flex-col justify-between shadow-lg"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#B89B6A]">
+                      {card.number}
+                    </span>
+                    <span className="text-xl">{card.icon}</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2]">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep italic">
+                    &ldquo;{card.quote}&rdquo;
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 핵심 전환 메시지 배너 */}
+          <div className="max-w-4xl mx-auto p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#1C1815] via-[#221C16] to-[#1C1815] border border-[#B89B6A]/40 text-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] leading-relaxed break-keep">
+              ✨ {EMOTIONAL_EMPATHY_SECTION.highlight}
+            </p>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION C. 자명스쿨의 교육 철학 (3단계 시각화)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-white/5 bg-[#0C0B0A]">
+        <CourseDetailContainer className="space-y-14">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {EDUCATIONAL_PHILOSOPHY_SECTION.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+              {EDUCATIONAL_PHILOSOPHY_SECTION.title}
+            </h2>
+            <div className="space-y-2 pt-2">
+              {EDUCATIONAL_PHILOSOPHY_SECTION.description.map((desc, dIdx) => (
+                <p key={dIdx} className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+                  {desc}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* 3단계 시각화 카드 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {EDUCATIONAL_PHILOSOPHY_SECTION.steps.map((st, sIdx) => (
+              <div
+                key={st.step}
+                className="relative p-7 rounded-3xl bg-[#141210] border border-[#B89B6A]/30 flex flex-col justify-between space-y-5 hover:border-[#B89B6A]/60 transition-all duration-300 shadow-xl"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#B89B6A]/15 text-[#E6C99B] border border-[#B89B6A]/30">
+                      {st.step}
+                    </span>
+                    <span className="text-2xl">{st.icon}</span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2]">
+                    {st.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light break-keep">
+                    {st.desc}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-[#B89B6A]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#B89B6A]" />
+                  <span className="font-medium">핵심 창작 단계 {sIdx + 1}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 서정적 클로징 문구 */}
+          <div className="text-center max-w-2xl mx-auto pt-4">
+            <p className="text-sm sm:text-base font-serif italic text-[#D6C6A8] break-keep leading-relaxed">
+              &ldquo;{EDUCATIONAL_PHILOSOPHY_SECTION.quote}&rdquo;
             </p>
           </div>
         </CourseDetailContainer>
@@ -360,6 +521,64 @@ export default function AiEmotionalArtCoursePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION D. 6가지 감성 포트폴리오
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-[#B89B6A]/20 bg-gradient-to-b from-[#0C0B0A] via-[#141210] to-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {SIX_EMOTIONAL_PORTFOLIOS.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+              {SIX_EMOTIONAL_PORTFOLIOS.title}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+              {SIX_EMOTIONAL_PORTFOLIOS.subTitle}
+            </p>
+          </div>
+
+          {/* 6대 포트폴리오 카드 그리드 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {SIX_EMOTIONAL_PORTFOLIOS.items.map((item) => (
+              <div
+                key={item.number}
+                className="p-6 sm:p-7 rounded-2xl bg-[#141210] border border-[#B89B6A]/25 hover:border-[#B89B6A]/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-lg group"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#B89B6A]">
+                      PORTFOLIO {item.number}
+                    </span>
+                    <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#B89B6A]/15 text-[#E6C99B] border border-[#B89B6A]/30">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] group-hover:text-[#E6C99B] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed break-keep">
+                    {item.desc}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-xs text-[#D6C6A8]">
+                  <span>✦</span>
+                  <span className="font-light">실전 창작 포트폴리오 영역</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 비보장형/선택형 투명성 안내문구 */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#161412] border border-white/10 text-center max-w-3xl mx-auto">
+            <p className="text-xs text-zinc-400 font-light leading-relaxed break-keep">
+              {SIX_EMOTIONAL_PORTFOLIOS.notice}
+            </p>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
           SECTION 06. 교육 커리큘럼 (6개 모듈)
          ───────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
@@ -415,6 +634,72 @@ export default function AiEmotionalArtCoursePage() {
           <p className="text-center text-xs text-zinc-500 font-light">
             ※ 위 커리큘럼은 심사용 교육과정 초안이며, 상세 회차와 러닝타임은 정식 오픈 시 공지됩니다.
           </p>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION E. 감성 아트 6주 확장 커리큘럼 (타임라인 로드맵)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-[#B89B6A]/20 bg-[#0C0B0A]">
+        <CourseDetailContainer className="space-y-14">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {SIX_WEEKS_EXPANDED_CURRICULUM.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+              {SIX_WEEKS_EXPANDED_CURRICULUM.title}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+              {SIX_WEEKS_EXPANDED_CURRICULUM.subTitle}
+            </p>
+          </div>
+
+          {/* 6주차 로드맵 카드 그리드 (PC 2열, 모바일 1열) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {SIX_WEEKS_EXPANDED_CURRICULUM.weeks.map((wk) => (
+              <div
+                key={wk.week}
+                className="p-6 sm:p-7 rounded-3xl bg-[#141210] border border-[#B89B6A]/25 hover:border-[#B89B6A]/50 transition-all duration-300 flex flex-col justify-between space-y-5 shadow-xl"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#B89B6A]/15 text-[#E6C99B] border border-[#B89B6A]/30">
+                      {wk.week}
+                    </span>
+                    <span className="text-xs font-medium text-[#D6C6A8]">
+                      테마: {wk.theme}
+                    </span>
+                  </div>
+
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] break-keep">
+                    {wk.title}
+                  </h3>
+
+                  <ul className="space-y-1.5 pt-2 border-t border-white/5">
+                    {wk.topics.map((tpc, tIdx) => (
+                      <li key={tIdx} className="text-xs sm:text-sm text-zinc-400 font-light flex items-start gap-2">
+                        <span className="text-[#B89B6A] shrink-0 mt-0.5">•</span>
+                        <span className="break-keep">{tpc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+                  <span className="text-zinc-500 font-light">주차별 결과물</span>
+                  <span className="font-semibold text-[#E6C99B] bg-[#B89B6A]/10 px-2.5 py-1 rounded-md border border-[#B89B6A]/20">
+                    {wk.result}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-xs text-zinc-500 font-light">
+              ※ 본 6주 확장 로드맵은 단계별 포트폴리오를 체계적으로 완성할 수 있도록 돕는 실습 추천 가이드라인입니다.
+            </p>
+          </div>
         </CourseDetailContainer>
       </section>
 
@@ -594,6 +879,67 @@ export default function AiEmotionalArtCoursePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION G. 창작에서 지도사 활동으로 (4대 활동 분야)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-[#B89B6A]/20 bg-gradient-to-b from-[#0F0E0D] to-[#0C0B0A]">
+        <CourseDetailContainer className="space-y-12">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {INSTRUCTOR_EXPANSION_SECTION.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep">
+              {INSTRUCTOR_EXPANSION_SECTION.title}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+              {INSTRUCTOR_EXPANSION_SECTION.description}
+            </p>
+          </div>
+
+          {/* 4대 활동 분야 카드 그리드 (PC 2열, 모바일 1열) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
+            {INSTRUCTOR_EXPANSION_SECTION.areas.map((area, aIdx) => (
+              <div
+                key={aIdx}
+                className="p-6 sm:p-7 rounded-2xl bg-[#141210] border border-[#B89B6A]/25 hover:border-[#B89B6A]/50 transition-all duration-300 space-y-3 flex flex-col justify-between shadow-lg"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#B89B6A]">
+                      FIELD 0{aIdx + 1}
+                    </span>
+                    <span className="text-2xl">{area.icon}</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] break-keep">
+                    {area.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed break-keep">
+                    {area.desc}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-xs text-[#D6C6A8]">
+                  <span>✓</span>
+                  <span className="font-light">지도사 맞춤형 진로 확장</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 인용구 및 투명성 고지 박스 */}
+          <div className="max-w-3xl mx-auto p-6 sm:p-7 rounded-2xl bg-[#161412] border border-white/10 text-center space-y-3">
+            <p className="text-sm sm:text-base font-serif italic text-[#E6C99B] break-keep">
+              &ldquo;{INSTRUCTOR_EXPANSION_SECTION.quote}&rdquo;
+            </p>
+            <div className="pt-2 border-t border-white/5">
+              <p className="text-[11px] sm:text-xs text-zinc-500 font-light leading-relaxed break-keep">
+                {INSTRUCTOR_EXPANSION_SECTION.disclaimer}
+              </p>
+            </div>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
           SECTION 10. 실제 작품 및 수강생 후기 (정직한 슬롯 준비)
          ───────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 border-b border-white/5">
@@ -658,6 +1004,110 @@ export default function AiEmotionalArtCoursePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          신규 SECTION F. 온라인 전시회 특별 경험 (대형 갤러리 컷 & 5단계)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 border-b border-[#B89B6A]/20 bg-gradient-to-b from-[#0C0B0A] via-[#141210] to-[#0F0E0D] relative overflow-hidden">
+        {/* 잔잔한 갤러리 앰비언트 조명 */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#B89B6A]/8 blur-[160px] rounded-full pointer-events-none" />
+
+        <CourseDetailContainer className="relative z-10 space-y-14">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
+              {ONLINE_EXHIBITION_SECTION.badge}
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FAF7F2] break-keep leading-tight">
+              {ONLINE_EXHIBITION_SECTION.mainHeadline}
+            </h2>
+            <p className="text-sm sm:text-base text-[#D6C6A8] font-light leading-relaxed break-keep">
+              {ONLINE_EXHIBITION_SECTION.subHeadline}
+            </p>
+            <div className="space-y-2 pt-2 max-w-2xl mx-auto">
+              {ONLINE_EXHIBITION_SECTION.description.map((desc, dIdx) => (
+                <p key={dIdx} className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep">
+                  {desc}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* 대형 가상 갤러리 프리뷰 프레임 */}
+          <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#181512] to-[#0E0C0B] border border-[#B89B6A]/40 p-6 sm:p-10 shadow-2xl space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#B89B6A] animate-pulse" />
+                <span className="text-xs font-mono font-bold tracking-wider text-[#E6C99B] uppercase">
+                  JAMYEONG SCHOOL VIRTUAL GALLERY
+                </span>
+              </div>
+              <span className="text-xs text-zinc-400 font-light">
+                온라인 웹 갤러리 큐레이션 실습
+              </span>
+            </div>
+
+            <div className="relative aspect-[16/9] rounded-2xl bg-black/60 border border-white/10 flex flex-col items-center justify-center p-6 text-center space-y-3 overflow-hidden">
+              <div className="w-16 h-16 rounded-full bg-[#B89B6A]/10 border border-[#B89B6A]/30 flex items-center justify-center text-2xl text-[#E6C99B]">
+                🖼️
+              </div>
+              <p className="text-sm sm:text-base font-bold text-[#FAF7F2] break-keep">
+                나만의 대표작 큐레이션과 작가 노트가 걸리는 온라인 전시 공간
+              </p>
+              <p className="text-xs text-zinc-400 font-light max-w-md break-keep">
+                스마트폰과 PC로 누구나 접속할 수 있는 나만의 웹 갤러리 링크를 완성하고, 소중한 사람들과 세상에 작품을 공유합니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 5단계 전시 구성 흐름 */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            <h3 className="text-center text-sm font-bold tracking-wider text-[#B89B6A] uppercase">
+              온라인 전시회 준비 5단계 프로세스
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+              {ONLINE_EXHIBITION_SECTION.steps.map((stp, sIdx) => (
+                <div
+                  key={sIdx}
+                  className="p-4 rounded-xl bg-[#141210] border border-[#B89B6A]/20 flex flex-col justify-between space-y-2 text-center"
+                >
+                  <span className="text-[11px] font-mono font-bold text-[#B89B6A]">
+                    STEP 0{sIdx + 1}
+                  </span>
+                  <p className="text-xs font-medium text-[#FAF7F2] break-keep">
+                    {stp.replace(/^\d+\.\s*/, "")}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 인용구 및 전시 연계 CTA */}
+          <div className="max-w-3xl mx-auto p-8 rounded-3xl bg-[#161412] border border-[#B89B6A]/30 text-center space-y-5">
+            <p className="text-base sm:text-lg font-serif italic text-[#FAF7F2] break-keep">
+              &ldquo;{ONLINE_EXHIBITION_SECTION.quote}&rdquo;
+            </p>
+            <div className="space-y-1">
+              <p className="text-sm font-bold text-[#E6C99B]">
+                {ONLINE_EXHIBITION_SECTION.ctaText}
+              </p>
+              <p className="text-xs text-zinc-400 font-light">
+                {ONLINE_EXHIBITION_SECTION.ctaSubText}
+              </p>
+            </div>
+            <div className="pt-2">
+              <a
+                href={AI_EMOTIONAL_ART_CONFIG.notificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-[#B89B6A]/40 text-xs sm:text-sm font-semibold text-[#FAF7F2] transition-colors"
+              >
+                <span>오픈 일정 알림 신청하고 전시 혜택 안내받기</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
         </CourseDetailContainer>
       </section>
@@ -814,25 +1264,34 @@ export default function AiEmotionalArtCoursePage() {
       {/* ─────────────────────────────────────────────────────────────
           SECTION 15. 최종 CTA
          ───────────────────────────────────────────────────────────── */}
-      <section className="py-24 md:py-32 text-center bg-gradient-to-b from-[#0C0B0A] to-[#141210]">
-        <CourseDetailContainer>
+      <section className="py-24 md:py-32 text-center bg-gradient-to-b from-[#0C0B0A] via-[#141210] to-[#0A0908] relative overflow-hidden">
+        {/* 잔잔한 광원 */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#B89B6A]/10 blur-[150px] rounded-full pointer-events-none" />
+
+        <CourseDetailContainer className="relative z-10">
           <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-snug break-keep">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B89B6A]/10 border border-[#B89B6A]/25">
+              <span className="text-xs font-semibold text-[#E6C99B] tracking-wide">
+                ✦ {EMOTIONAL_HOOK_SECTION.coreConcept}
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FAF7F2] leading-snug break-keep">
               당신의 감성이 작품이 되고, <br className="hidden sm:inline" />
-              그 작품이 새로운 가능성의 시작이 됩니다.
+              그 작품이 세상과 만나는 첫 걸음
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed font-light break-keep">
-              AI 아트 실습부터 포트폴리오 완성, 관련 민간자격 취득 준비까지. <br className="hidden sm:inline" />
-              자명스쿨에서 새로운 창작의 길을 시작해보세요.
+            <p className="text-xs sm:text-sm md:text-base text-zinc-300 leading-relaxed font-light break-keep max-w-2xl mx-auto">
+              기술을 넘어 마음을 표현하는 AI 감성 아트 실습부터, 6가지 포트폴리오와 온라인 전시회, 그리고 정식 민간자격 취득까지. <br className="hidden sm:inline" />
+              자명스쿨과 함께 나다운 예술적 여정을 시작해보세요.
             </p>
-            <div className="pt-4">
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href={AI_EMOTIONAL_ART_CONFIG.notificationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-gradient-to-r from-[#B89B6A] to-[#9E7C47] text-[#0C0B0A] font-bold text-sm tracking-wider hover:brightness-110 transition-all shadow-xl"
               >
-                <span>AI 감성아트 지도사 과정 신청하기</span>
+                <span>AI 감성아트 지도사 과정 알림 신청하기</span>
                 <span className="ml-2">→</span>
               </a>
             </div>
