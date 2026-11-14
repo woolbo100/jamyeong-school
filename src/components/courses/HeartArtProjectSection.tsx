@@ -463,7 +463,7 @@ export default function HeartArtProjectSection() {
 
           {/* 절제된 신뢰 실적 3열 카드 */}
           <Reveal delayMs={200}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full mx-auto mb-8">
               <div className="p-6 rounded-2xl bg-[#121418] border border-white/10 text-center space-y-1.5 hover:border-[#A68253]/40 transition-colors">
                 <span className="text-3xl sm:text-4xl font-extrabold text-[#A68253] font-display">
                   100+
@@ -520,7 +520,7 @@ export default function HeartArtProjectSection() {
 
           {/* 핵심 후킹 강조 배너 */}
           <Reveal delayMs={300}>
-            <div className="mt-12 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#17130F] via-[#241B15] to-[#17130F] border border-[#A68253]/30 text-center max-w-3xl mx-auto shadow-xl">
+            <div className="mt-12 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#17130F] via-[#241B15] to-[#17130F] border border-[#A68253]/30 text-center w-full mx-auto shadow-xl">
               <p className="text-base sm:text-xl font-bold text-[#E5D7C5] leading-relaxed break-keep">
                 ✨ AI 아트는 단순한 그림이 아니라, <br className="sm:hidden" />
                 <span style={{ color: GOLD }}>나를 알리고 브랜드를 기억하게 만드는 가장 감각적인 언어</span>입니다.
@@ -585,7 +585,7 @@ export default function HeartArtProjectSection() {
         {/* ═══════════════════════════════════════════════
             [Part 3. 단순 AI 이미지 강의와의 차별화]
            ═══════════════════════════════════════════════ */}
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full mx-auto">
           <Reveal>
             <div className="rounded-3xl bg-[#121418] border border-white/10 p-8 sm:p-12 space-y-8">
               <div className="text-center space-y-2">
@@ -710,7 +710,7 @@ export default function HeartArtProjectSection() {
 
           {/* FINAL PROJECT 메시지 배너 */}
           <Reveal delayMs={300}>
-            <div className="mt-16 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-[#1A1410] via-[#120F0D] to-[#0A0807] border border-[#A68253]/40 text-center space-y-6 max-w-4xl mx-auto shadow-2xl">
+            <div className="mt-16 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-[#1A1410] via-[#120F0D] to-[#0A0807] border border-[#A68253]/40 text-center space-y-6 w-full mx-auto shadow-2xl">
               <div className="inline-block px-4 py-1.5 rounded-full bg-[#261D16] border border-[#A68253]/50 text-xs font-bold text-[#A68253] tracking-widest uppercase">
                 FINAL PROJECT
               </div>

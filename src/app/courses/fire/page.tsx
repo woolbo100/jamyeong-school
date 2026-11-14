@@ -423,7 +423,7 @@ export default function FireCoursePage() {
           {/* C. 강의 소개 보강: 마음을 표현하는 AI 아트 (지침 3번) */}
           <div className="mt-20 md:mt-24 pt-16 border-t border-white/5">
             <Reveal delayMs={300}>
-              <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#1A1815] via-[#14161A] to-black border border-[#A68253]/25 shadow-2xl relative overflow-hidden text-center space-y-6">
+              <div className="w-full mx-auto p-8 md:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#1A1815] via-[#14161A] to-black border border-[#A68253]/25 shadow-2xl relative overflow-hidden text-center space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A68253]/15 border border-[#A68253]/30">
                   <span className="w-2 h-2 rounded-full bg-[#FF6A3D] animate-pulse" />
                   <span className="text-xs font-bold tracking-[0.2em] text-[#A68253] uppercase">
@@ -603,7 +603,7 @@ export default function FireCoursePage() {
           </Reveal>
 
           {/* 3단계 가로 흐름형 다이어그램 카드 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full mx-auto mb-14">
             {EMOTIONAL_START_DATA.steps.map((st, sIdx) => (
               <Reveal key={st.step} delayMs={sIdx * 200} slideFrom="bottom">
                 <div className="p-8 md:p-10 rounded-[2.5rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/40 transition-all duration-500 h-full flex flex-col justify-between space-y-6 shadow-2xl group hover:-translate-y-2">
@@ -713,7 +713,7 @@ export default function FireCoursePage() {
           </Reveal>
 
           {/* 6개 창작 경험 그리드 (데스크톱 3열 x 2행, 모바일 1열) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full mx-auto mb-12">
             {SIX_CREATIVE_EXPERIENCES.map((item, idx) => (
               <Reveal key={item.num} delayMs={idx * 150} slideFrom="bottom">
                 <div className="p-8 md:p-9 rounded-[2.5rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/50 transition-all duration-500 flex flex-col justify-between space-y-6 h-full shadow-2xl group hover:-translate-y-2">
@@ -754,7 +754,7 @@ export default function FireCoursePage() {
 
           {/* 투명성 안내 문구 */}
           <Reveal delayMs={400}>
-            <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-[#121417] border border-white/5 text-center">
+            <div className="w-full mx-auto p-5 rounded-2xl bg-[#121417] border border-white/5 text-center">
               <p className="text-xs text-[#BFBFBF]/80 font-light leading-relaxed break-keep">
                 ※ 위 6개 창작 영역은 강의에서 학습하고 실습하는 포트폴리오 범주이며, 개인의 학습 속도와 선택에 따라 중심 결과물이 다를 수 있습니다.
               </p>
@@ -895,7 +895,7 @@ export default function FireCoursePage() {
           </Reveal>
 
           {/* 6주차 아코디언 / 타임라인 카드 그리드 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mx-auto mb-12">
             {EXPANDED_6WEEKS_CURRICULUM.map((wk, wIdx) => {
               const isOpen = expandedWeek === wIdx;
               return (
@@ -984,7 +984,7 @@ export default function FireCoursePage() {
 
           {/* 대형 16:9 가상 갤러리 프리뷰 프레임 */}
           <Reveal delayMs={300}>
-            <div className="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-b from-[#181614] to-[#0D0E10] border border-[#A68253]/30 p-6 sm:p-10 shadow-[0_40px_100px_rgba(0,0,0,0.8)] space-y-6">
+            <div className="w-full mx-auto rounded-[3rem] bg-gradient-to-b from-[#181614] to-[#0D0E10] border border-[#A68253]/30 p-6 sm:p-10 shadow-[0_40px_100px_rgba(0,0,0,0.8)] space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF6A3D] animate-pulse" />
@@ -1014,7 +1014,7 @@ export default function FireCoursePage() {
           </Reveal>
 
           {/* 5단계 전시 과정 카드 */}
-          <div className="max-w-5xl mx-auto space-y-6">
+          <div className="w-full mx-auto space-y-6">
             <h3 className="text-center text-xs font-bold tracking-[0.25em] text-[#A68253] uppercase">
               5 Steps To Virtual Exhibition
             </h3>
@@ -1039,7 +1039,7 @@ export default function FireCoursePage() {
 
           {/* 강조 문구 배너 */}
           <Reveal delayMs={500}>
-            <div className="max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/30 text-center space-y-3">
+            <div className="w-full mx-auto p-8 rounded-3xl bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/30 text-center space-y-3">
               <p className="text-base sm:text-lg md:text-xl font-display italic text-white break-keep leading-relaxed">
                 &ldquo;그림을 만드는 경험에서, <span style={{ color: GOLD }} className="font-bold">내 이름으로 작품을 선보이는 경험</span>까지.&rdquo;
               </p>
@@ -1050,38 +1050,38 @@ export default function FireCoursePage() {
 
       {/* 7. 결과 섹션 */}
       <section className="py-24 md:py-28 bg-black">
-        <div className="site-container shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[3rem] p-8 md:p-16 border border-white/5">
+        <div className="site-container">
           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="course-section-title font-display mb-6 text-white italic">이 과정을 끝내면</h2>
-              <div className="w-16 h-[1px] bg-[#A68253]/30 mx-auto" />
-            </div>
-          </Reveal>
+            <div className="shadow-[0_0_100px_rgba(166,130,83,0.05)] rounded-[3rem] p-8 md:p-16 border border-white/5 bg-[#0a0a0a]">
+              <div className="text-center mb-16">
+                <h2 className="course-section-title font-display mb-6 text-white italic">이 과정을 끝내면</h2>
+                <div className="w-16 h-[1px] bg-[#A68253]/30 mx-auto" />
+              </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {[
-              "디지털 아트 크리에이터",
-              "굿즈 브랜드 디렉터",
-              "미디어 아트 크리에이터",
-              "영상 콘텐츠 전문가",
-              "AI 콘텐츠 강사"
-            ].map((text, i) => (
-              <Reveal key={i} delayMs={i * 100}>
-                <div className="p-6 rounded-2xl bg-[#14161A] border border-white/5 text-center group transition-all duration-300 hover:border-[#A68253]/40">
-                  <p className="course-card-title text-[#BFBFBF] font-light group-hover:text-white transition-colors">
-                    ✔ {text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          
-          <Reveal delayMs={600}>
-            <div className="text-center">
-              <p className="course-quote font-display italic text-white leading-tight">
-                당신의 감정이<br />
-                <span style={{ color: GOLD }} className="font-bold underline underline-offset-8">하나의 작품으로 완성</span>됩니다
-              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                {[
+                  "디지털 아트 크리에이터",
+                  "굿즈 브랜드 디렉터",
+                  "미디어 아트 크리에이터",
+                  "영상 콘텐츠 전문가",
+                  "AI 콘텐츠 강사"
+                ].map((text, i) => (
+                  <Reveal key={i} delayMs={i * 100}>
+                    <div className="p-6 rounded-2xl bg-[#14161A] border border-white/5 text-center group transition-all duration-300 hover:border-[#A68253]/40">
+                      <p className="course-card-title text-[#BFBFBF] font-light group-hover:text-white transition-colors">
+                        ✔ {text}
+                      </p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+              
+              <div className="text-center">
+                <p className="course-quote font-display italic text-white leading-tight">
+                  당신의 감정이<br />
+                  <span style={{ color: GOLD }} className="font-bold underline underline-offset-8">하나의 작품으로 완성</span>됩니다
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -1104,7 +1104,7 @@ export default function FireCoursePage() {
             </div>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mx-auto">
             {RECOMMENDED_AUDIENCE.map((text, idx) => (
               <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
                 <div className="p-7 rounded-[2rem] bg-[#14161A] border border-white/[0.08] hover:border-[#A68253]/40 transition-all duration-300 flex items-start gap-4 h-full shadow-lg group hover:-translate-y-1">
@@ -1171,9 +1171,9 @@ export default function FireCoursePage() {
 
       {/* 신규: 지도사 과정과의 연결 배너 (지침 9번) */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a0a0a] via-[#14161A] to-black border-t border-b border-white/5 relative overflow-hidden">
-        <div className="site-container relative z-10 max-w-4xl mx-auto">
+        <div className="site-container relative z-10 w-full">
           <Reveal>
-            <div className="p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/35 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <div className="w-full p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-[#171512] via-[#1F1B16] to-[#171512] border border-[#A68253]/35 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
               <div className="space-y-3 max-w-xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A68253]/15 border border-[#A68253]/25">
                   <span className="text-[11px] font-bold tracking-wider text-[#A68253] uppercase">
