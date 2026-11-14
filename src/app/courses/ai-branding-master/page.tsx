@@ -8,13 +8,18 @@ import {
   AI_BRANDING_MASTER_CONFIG,
   EMPATHY_POINTS,
   CORE_ACHIEVEMENTS,
+  SERVICE_SECTION_HEADER,
+  SERVICE_FOUR_PILLARS,
   SERVICE_TYPES,
+  EBOOK_FUNNEL_SECTION,
   PROCESS_STEPS,
   CURRICULUM_MODULES,
   CASE_STUDIES,
   OUTCOME_ASSETS,
   QUALIFICATION_SPEC,
   CAREER_EXPANSION_DATA,
+  BRANDING_BUSINESS_DIFFERENCE,
+  ENROLLMENT_CTA_BANNER,
   TARGET_AUDIENCE,
   COMPARISON_TABLE,
 } from "@/data/aiBrandingMasterCourseData";
@@ -92,6 +97,21 @@ export default function AiBrandingMasterCoursePage() {
           <p className="text-sm sm:text-base md:text-lg text-zinc-300 max-w-3xl mx-auto font-light leading-relaxed break-keep">
             {AI_BRANDING_MASTER_CONFIG.description}
           </p>
+
+          {/* 신규: 히어로 강조 문구 & 보조 문구 */}
+          <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1A1612] via-[#221C16] to-[#1A1612] border border-[#B89B6A]/40 max-w-2xl mx-auto space-y-2.5 shadow-lg">
+            <p className="text-xs sm:text-sm font-extrabold text-[#E6C99B] tracking-wide">
+              ✨ {AI_BRANDING_MASTER_CONFIG.heroHighlightTitle}
+            </p>
+            <p className="text-xs sm:text-sm text-zinc-200 font-medium leading-relaxed break-keep">
+              {AI_BRANDING_MASTER_CONFIG.heroHighlightDesc}
+            </p>
+            <div className="pt-2 border-t border-white/10">
+              <p className="text-[11px] sm:text-xs text-zinc-400 font-light leading-relaxed break-keep whitespace-pre-line">
+                {AI_BRANDING_MASTER_CONFIG.heroSubDesc}
+              </p>
+            </div>
+          </div>
 
           {/* 핵심 키워드 5개 배지 */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5 pt-2 max-w-4xl mx-auto">
@@ -258,74 +278,203 @@ export default function AiBrandingMasterCoursePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          SECTION 04. 무엇을 만들 수 있나요? (핵심 판매 섹션)
+          SECTION 04. 나만의 브랜드를 온라인 서비스로 확장하기
          ───────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 border-b border-white/5 bg-[#0F0E0D]">
-        <CourseDetailContainer className="space-y-12">
+        <CourseDetailContainer className="space-y-14">
+          {/* 섹션 헤더 (지침 3번 요구사항) */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <span className="text-xs font-bold tracking-[0.25em] text-[#B89B6A] uppercase block">
-              6 Practical Digital Services
+              {SERVICE_SECTION_HEADER.badge}
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep leading-tight">
-              아이디어를 서비스로. <br className="hidden sm:inline" />
-              나만의 AI 비즈니스를 시작하는 다양한 방법
+              {SERVICE_SECTION_HEADER.titleMain}
             </h2>
-            <p className="text-xs sm:text-sm text-zinc-400 font-light leading-relaxed break-keep">
-              나의 관심 분야와 전문성을 디지털 서비스로 연결해보세요. 
-              다양한 제작 사례를 살펴보고, 자신의 브랜드에 맞는 프로젝트를 선택할 수 있습니다.
-            </p>
+            <div className="space-y-2 text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep pt-1">
+              {SERVICE_SECTION_HEADER.description.map((desc, idx) => (
+                <p key={idx}>{desc}</p>
+              ))}
+            </div>
           </div>
 
-          {/* 6종 서비스 카드 그리드 (PC 3열 x 2행, 모바일 1열) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SERVICE_TYPES.map((service) => (
-              <div
-                key={service.id}
-                className="p-6 rounded-2xl bg-[#141210] border border-white/10 hover:border-[#B89B6A]/40 transition-all duration-300 flex flex-col justify-between space-y-4 group"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-[#B89B6A]">
-                      SERVICE {service.number}
-                    </span>
-                    <span className="text-[9px] font-mono tracking-wider text-zinc-500 uppercase px-2 py-0.5 rounded bg-black/40 border border-white/5">
-                      {service.mockupTag}
-                    </span>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-bold text-[#FAF7F2] group-hover:text-[#E6C99B] transition-colors">
-                      {service.title}
+          {/* 서비스 제작 및 활용 4대 핵심 축 (지침 3번 요구사항) */}
+          <div className="space-y-4">
+            <span className="text-xs font-extrabold text-[#E6C99B] tracking-wider uppercase block text-center sm:text-left">
+              FOUR CORE EXPANSION PILLARS · 4대 서비스 제작 및 활용 축
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {SERVICE_FOUR_PILLARS.map((item) => (
+                <div
+                  key={item.number}
+                  className={`p-6 rounded-2xl flex flex-col justify-between space-y-4 transition-all duration-300 ${
+                    item.isNew
+                      ? "bg-gradient-to-b from-[#201A14] to-[#15110E] border-2 border-[#C6A66B]/70 shadow-xl"
+                      : "bg-[#141210] border border-white/10 hover:border-[#B89B6A]/40"
+                  }`}
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-mono font-bold text-[#B89B6A]">
+                        PILLAR {item.number}
+                      </span>
+                      <span
+                        className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                          item.isNew
+                            ? "bg-[#C6A66B]/20 text-[#E6C99B] border border-[#C6A66B]/50"
+                            : "bg-white/[0.04] text-zinc-400 border border-white/10"
+                        }`}
+                      >
+                        {item.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] break-keep">
+                      {item.title}
                     </h3>
-                    <p className="text-xs text-[#B89B6A] font-medium">
-                      {service.subtitle}
+                    <p className="text-xs text-zinc-300 font-light leading-relaxed break-keep">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 기존 6종 실무 서비스 유형 (유지) */}
+          <div className="space-y-6 pt-6 border-t border-white/5">
+            <div className="text-center sm:text-left space-y-1">
+              <span className="text-xs font-bold text-[#B89B6A] uppercase tracking-wider block">
+                6 Practical Implementation Examples
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2]">
+                다양한 실전 디지털 서비스 제작 사례
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {SERVICE_TYPES.map((service) => (
+                <div
+                  key={service.id}
+                  className="p-6 rounded-2xl bg-[#141210] border border-white/10 hover:border-[#B89B6A]/40 transition-all duration-300 flex flex-col justify-between space-y-4 group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-mono font-bold text-[#B89B6A]">
+                        SERVICE {service.number}
+                      </span>
+                      <span className="text-[9px] font-mono tracking-wider text-zinc-500 uppercase px-2 py-0.5 rounded bg-black/40 border border-white/5">
+                        {service.mockupTag}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-[#FAF7F2] group-hover:text-[#E6C99B] transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-xs text-[#B89B6A] font-medium">
+                        {service.subtitle}
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-zinc-400 font-light leading-relaxed break-keep">
+                      {service.description}
                     </p>
                   </div>
 
-                  <p className="text-xs text-zinc-400 font-light leading-relaxed break-keep">
-                    {service.description}
-                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
+                    {service.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-[10px] px-2 py-0.5 rounded-md bg-white/[0.03] text-zinc-400"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
-                  {service.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-[10px] px-2 py-0.5 rounded-md bg-white/[0.03] text-zinc-400"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="p-4 rounded-2xl bg-[#12100E] border border-white/5 text-[11px] text-zinc-400 leading-relaxed font-light space-y-1">
             <p className="text-[#E6C99B] font-medium">※ 서비스 유형 및 유의사항 안내</p>
-            <p>• 위 6개 유형은 제작 가능한 서비스의 대표 예시 및 응용 방향이며, 모든 수강생이 6개 전체를 의무 제작하는 것은 아닙니다 (핵심 집중 프로젝트 1종 완성 권장).</p>
+            <p>• 위 유형들은 제작 가능한 서비스의 대표 예시 및 응용 방향이며, 모든 수강생이 전체를 의무 제작하는 것은 아닙니다 (핵심 집중 프로젝트 1종 완성 권장).</p>
             <p>• 사주·타로·심리 테스트 서비스는 오락 및 자기이해 증진 목적의 콘텐츠이며, 의료적·전문적 심리 진단을 대체하거나 보장하지 않습니다.</p>
             <p>• 앱인토스 미니앱 연동은 외부 플랫폼의 공식 정책 및 심사 기준에 따르며, 제작만으로 플랫폼 등록 승인이 보장되는 것은 아닙니다.</p>
+          </div>
+        </CourseDetailContainer>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          [신규 섹션: 전자책 판매 자동화 퍼널] (지침 4번)
+         ───────────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 border-b border-white/5 bg-gradient-to-b from-[#12100E] via-[#16120F] to-[#0F0E0D]">
+        <CourseDetailContainer className="space-y-12">
+          {/* 섹션 헤더 */}
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B89B6A]/15 border border-[#B89B6A]/40">
+              <span className="w-2 h-2 rounded-full bg-[#E6C99B] animate-pulse" />
+              <span className="text-xs font-extrabold tracking-wider text-[#E6C99B] uppercase">
+                {EBOOK_FUNNEL_SECTION.badge}
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] break-keep leading-tight">
+              {EBOOK_FUNNEL_SECTION.titleMain}
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg font-bold text-[#E6C99B] break-keep">
+              {EBOOK_FUNNEL_SECTION.titleSub}
+            </p>
+            <div className="space-y-2 text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep pt-2">
+              {EBOOK_FUNNEL_SECTION.description.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* 4단계 프로세스 카드 (PC 가로형 그리드, 모바일 세로형) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+            {EBOOK_FUNNEL_SECTION.steps.map((step, idx) => (
+              <div
+                key={step.step}
+                className="p-6 rounded-2xl bg-[#141210] border border-[#B89B6A]/30 hover:border-[#B89B6A]/70 transition-all flex flex-col justify-between space-y-4 relative group shadow-lg"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-bold text-[#B89B6A] tracking-wider">
+                      {step.step}
+                    </span>
+                    <span className="text-2xl">{step.icon}</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#FAF7F2] group-hover:text-[#E6C99B] transition-colors break-keep">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-zinc-300 font-light leading-relaxed break-keep">
+                    {step.desc}
+                  </p>
+                </div>
+
+                {/* PC 환경 화살표 인디케이터 */}
+                {idx < 3 && (
+                  <div className="hidden lg:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10 w-5 h-5 rounded-full bg-[#1F1914] border border-[#B89B6A]/40 text-[#E6C99B] text-[10px] font-bold text-center leading-5 pointer-events-none">
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* 하단 강조 문구 & 안내 */}
+          <div className="max-w-2xl mx-auto text-center space-y-3 pt-2">
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1C1612] via-[#241B16] to-[#1C1612] border border-[#B89B6A]/40 shadow-xl space-y-1">
+              <p className="text-sm sm:text-base font-extrabold text-[#FAF7F2] break-keep">
+                ✨ {EBOOK_FUNNEL_SECTION.highlight}
+              </p>
+              <p className="text-xs sm:text-sm text-[#E6C99B] font-medium break-keep">
+                {EBOOK_FUNNEL_SECTION.subHighlight}
+              </p>
+            </div>
+            <p className="text-[11px] sm:text-xs text-zinc-400 font-light leading-relaxed break-keep">
+              {EBOOK_FUNNEL_SECTION.notice}
+            </p>
           </div>
         </CourseDetailContainer>
       </section>
@@ -385,7 +534,7 @@ export default function AiBrandingMasterCoursePage() {
               1인 브랜드 기획부터 실제 배포 및 강의 설계까지
             </h2>
             <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl mx-auto break-keep">
-              총 6개 실전 모듈을 통해 나만의 디지털 서비스 론칭과 강사 활동 역량을 체득합니다.
+              총 6개 실전 모듈 + 신규 보강 특강을 통해 나만의 디지털 서비스 론칭과 강사 활동 역량을 체득합니다.
             </p>
           </div>
 
@@ -425,9 +574,14 @@ export default function AiBrandingMasterCoursePage() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-zinc-500 font-light">
-            ※ 위 커리큘럼은 심사용 상세페이지 초안이며, 상세 회차 및 실습 분량은 정식 개강 공지 시 확정됩니다.
-          </p>
+          <div className="p-4 rounded-2xl bg-[#12100E] border border-white/5 text-center space-y-1">
+            <p className="text-xs text-zinc-400 font-light leading-relaxed break-keep">
+              ※ 이 교육은 복잡한 웹 개발이나 결제 API 프로그래밍을 처음부터 배우는 과정이 아니며, 이미 제공되는 다양한 온라인 도구를 활용해 디지털 상품 판매 시스템이 어떻게 구성되고 작동하는지 이해하는 실무 중심 교육입니다.
+            </p>
+            <p className="text-[11px] text-zinc-500 font-light">
+              ※ 상세 회차 및 실습 분량은 정식 개강 공지 시 확정되며, 신규 보강 특강은 개강 일정에 맞춰 순차 제공됩니다.
+            </p>
+          </div>
         </CourseDetailContainer>
       </section>
 
@@ -696,6 +850,32 @@ export default function AiBrandingMasterCoursePage() {
               </p>
             </div>
           </div>
+
+          {/* 신규: AI 브랜딩 마스터 강사 과정의 차별점 (지침 7번) */}
+          <div className="p-7 sm:p-10 rounded-3xl bg-gradient-to-b from-[#1E1914] via-[#16120E] to-[#110E0C] border-2 border-[#C6A66B]/60 shadow-2xl space-y-6 text-center">
+            <div className="inline-block px-3.5 py-1 rounded-full bg-[#B89B6A]/20 border border-[#B89B6A]/40 text-[#E6C99B] text-xs font-black uppercase tracking-wider">
+              {BRANDING_BUSINESS_DIFFERENCE.badge}
+            </div>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#FAF7F2] break-keep">
+              {BRANDING_BUSINESS_DIFFERENCE.title}
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+              {BRANDING_BUSINESS_DIFFERENCE.description}
+            </p>
+
+            {/* 핵심 파이프라인 박스 */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-black/40 border border-[#B89B6A]/30 max-w-2xl mx-auto space-y-2">
+              <span className="text-[11px] font-bold text-[#B89B6A] uppercase tracking-wider block">
+                CORE VALUE CHAIN
+              </span>
+              <p className="text-xs sm:text-base font-extrabold text-[#E6C99B] break-keep">
+                {BRANDING_BUSINESS_DIFFERENCE.pipelineHighlight}
+              </p>
+              <p className="text-[11px] sm:text-xs text-zinc-400 font-light pt-1">
+                {BRANDING_BUSINESS_DIFFERENCE.subMessage}
+              </p>
+            </div>
+          </div>
         </CourseDetailContainer>
       </section>
 
@@ -865,7 +1045,7 @@ export default function AiBrandingMasterCoursePage() {
                   AI 브랜딩 마스터 강사 VOD 자격과정
                 </h3>
                 <p className="text-3xl sm:text-4xl font-black text-[#E6C99B] pt-2">
-                  199,000원
+                  {AI_BRANDING_MASTER_CONFIG.price.amount}
                 </p>
               </div>
 
@@ -880,6 +1060,16 @@ export default function AiBrandingMasterCoursePage() {
                 <div className="pt-3 border-t border-white/10 space-y-1 text-zinc-500 text-[11px]">
                   <p>※ 별도 비용 안내: 유료 AI API 및 유료 클라우드 호스팅/커스텀 도메인 구입 비용은 본인 부담입니다.</p>
                 </div>
+              </div>
+
+              {/* 신규: 수강 혜택 강조 배너 (지침 8번) */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#1C1612] via-[#241B15] to-[#1C1612] border border-[#B89B6A]/40 text-center space-y-1.5 shadow-md">
+                <p className="text-xs sm:text-sm font-bold text-[#E6C99B] break-keep">
+                  ✨ {ENROLLMENT_CTA_BANNER.highlightTitle}
+                </p>
+                <p className="text-[11px] sm:text-xs text-zinc-300 font-light leading-relaxed break-keep">
+                  {ENROLLMENT_CTA_BANNER.description}
+                </p>
               </div>
 
               {/* 비활성 버튼 */}
@@ -933,7 +1123,18 @@ export default function AiBrandingMasterCoursePage() {
               AI를 배우는 것에서 멈추지 마세요. 나만의 브랜드를 위한 서비스를 만들고, 그 경험을 다음 기회로 연결해보세요. <br className="hidden sm:inline" />
               자명스쿨에서 AI 브랜딩 마스터 강사로서의 새로운 도전을 시작합니다.
             </p>
-            <div className="pt-4">
+
+            {/* 수강 혜택 강조 배너 (지침 8번) */}
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-[#1C1612] via-[#241B15] to-[#1C1612] border border-[#B89B6A]/40 max-w-xl mx-auto space-y-1.5 shadow-lg">
+              <p className="text-xs sm:text-sm font-bold text-[#E6C99B] break-keep">
+                ✨ {ENROLLMENT_CTA_BANNER.highlightTitle}
+              </p>
+              <p className="text-[11px] sm:text-xs text-zinc-300 font-light leading-relaxed break-keep">
+                {ENROLLMENT_CTA_BANNER.description}
+              </p>
+            </div>
+
+            <div className="pt-2">
               <a
                 href={AI_BRANDING_MASTER_CONFIG.notificationUrl}
                 target="_blank"
