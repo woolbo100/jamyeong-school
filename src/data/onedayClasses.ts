@@ -129,7 +129,7 @@ export const ONEDAY_CLASSES: OnedayClassItem[] = [
     tags: ["AI상세페이지", "상품브랜딩", "카피라이팅", "디자인"],
     status: "scheduled",
     applicationUrl: null,
-    detailUrl: null,
+    detailUrl: "/sales-page",
   },
   {
     id: "ebook-sns-automation",
