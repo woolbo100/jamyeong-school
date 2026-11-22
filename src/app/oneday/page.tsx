@@ -114,7 +114,7 @@ export default function OnedayPage() {
                     >
                       {item.subtitle && (
                         <div className="mb-2">
-                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3]">
+                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3] break-keep">
                             {item.subtitle}
                           </span>
                         </div>
@@ -130,7 +130,7 @@ export default function OnedayPage() {
                     <div className="mb-3">
                       {item.subtitle && (
                         <div className="mb-2">
-                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3]">
+                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3] break-keep">
                             {item.subtitle}
                           </span>
                         </div>
