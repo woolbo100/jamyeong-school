@@ -371,7 +371,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 5대 공감 카드 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {[
               { num: "01", text: "얼굴 공개나 촬영이 부담스럽다" },
               { num: "02", text: "음악 제작 경험이 전혀 없다" },
@@ -409,7 +409,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 5대 핵심 기획 질문 그리드 */}
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className="mb-12">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] mb-4 text-center sm:text-left">
               5 CORE PLANNING QUESTIONS · 채널 기획 5대 질문
             </h3>
@@ -436,7 +436,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 3대 채널 콘셉트 예시 */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
             <div className="bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl">
               <span className="text-xs font-bold text-[#E0A96D] block mb-1">CONCEPT 01</span>
               <h4 className="text-base font-bold text-[#EDE6DC] mb-2">하루를 마무리하는 마음의 쉼표</h4>
@@ -461,7 +461,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 강조 배너 */}
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 sm:p-6 rounded-2xl text-center">
+          <div className="bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 sm:p-6 rounded-2xl text-center">
             <p className="text-sm sm:text-base md:text-lg font-bold text-[#EDE6DC] break-keep">
               ✨ &ldquo;AI는 음악을 만들어 주지만, 그 음악에 어떤 의미를 담을지는 내가 결정합니다.&rdquo;
             </p>
@@ -486,7 +486,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* TYPE 01 */}
             <div className="bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 flex flex-col justify-between hover:border-[#C6A66B]/50 transition-all">
               <div>
@@ -606,7 +606,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
                 before: "좋아하는 힐링 음악을 감상하기만 한다.",
@@ -670,7 +670,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { num: "01", title: "AI 음악 도구 기본 사용법", desc: "음악 생성 인터페이스와 작업 프로세스 익히기" },
               { num: "02", title: "명상·수면 장르 구분", desc: "앰비언트, 뉴에이지, 로파이, 싱잉볼 등 장르 특성 파악" },
@@ -716,7 +716,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 스킬 작동 프로세스 카드 */}
-          <div className="max-w-4xl mx-auto bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
+          <div className="bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               {/* 입력 */}
               <div className="md:col-span-4 bg-[#1C1512] border border-[#3A2D25] p-4 rounded-xl">
@@ -805,7 +805,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
             {/* 7대 학습 내용 리스트 */}
             <div className="lg:col-span-7 space-y-3">
               {[
@@ -878,7 +878,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 7대 학습 내용 */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
             {[
               { num: "01", title: "AI 생성 음원 정리", desc: "메타데이터 정리 및 트랙별 길이, 무드 분류" },
               { num: "02", title: "플레이리스트 순서 구성", desc: "도입-몰입-이완으로 이어지는 자연스러운 곡 배치" },
@@ -897,7 +897,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 현실적 제작 안내 박스 */}
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
+          <div className="bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
             <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-1">
               PRACTICAL LEARNING GUIDE
             </span>
@@ -926,7 +926,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[
               { title: "채널 콘셉트 & 기본 세팅", desc: "채널 아트, 프로필, 채널 키워드 일관성 맞추기" },
               { title: "플레이리스트 제목 기획", desc: "검색 유입과 감성 클릭을 모두 잡는 네이밍 공식" },
@@ -970,7 +970,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[
               {
                 title: "채널 타깃과 콘셉트의 일관성",
@@ -1016,7 +1016,7 @@ export default function HealingPlaylistPage() {
           </div>
 
           {/* 건전한 성장 안내 배너 */}
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-4 sm:p-5 rounded-2xl text-center">
+          <div className="bg-[#181310] border border-[#3A2D25] p-4 sm:p-5 rounded-2xl text-center">
             <p className="text-xs sm:text-sm text-[#A8988B]">
               자명스쿨은 <strong>‘쉬운 자동 수익’이나 ‘단기 수익 보장’ 같은 허위·과장 광고를 지양합니다.</strong> <br className="hidden sm:inline" />
               진정성 있는 감성과 꾸준한 창작으로 내 취향을 하나의 채널 브랜드로 키워나가는 바른 길을 함께합니다.
@@ -1042,7 +1042,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -1112,7 +1112,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {[
               {
                 num: "혜택 01",
@@ -1181,7 +1181,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-3 mb-8">
+          <div className="space-y-3 mb-8">
             {[
               { num: "01", name: "나만의 힐링 채널 콘셉트 기획안", detail: "누구에게 어떤 위로를 전할지 정의한 채널 아이덴티티 시트" },
               { num: "02", name: "AI로 직접 제작한 힐링 음악 샘플", detail: "내 취향과 프롬프트 스킬로 뽑아낸 고음질 오디오 트랙" },
@@ -1230,7 +1230,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "얼굴을 공개하지 않고 유튜브를 시작하고 싶은 분",
               "명상·힐링·수면 음악에 깊은 관심이 있는 분",
@@ -1272,7 +1272,7 @@ export default function HealingPlaylistPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 q: "음악을 전혀 몰라도 수강할 수 있나요?",
@@ -1324,7 +1324,8 @@ export default function HealingPlaylistPage() {
         {/* 은은한 배경 광원 효과 */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#C6A66B]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="site-container relative z-10 max-w-2xl mx-auto px-4">
+        <div className="site-container relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase">
             RESERVATION
           </span>
@@ -1361,7 +1362,8 @@ export default function HealingPlaylistPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ───────────────────────────────────────────────
           환불 및 취소 규정 공통 섹션

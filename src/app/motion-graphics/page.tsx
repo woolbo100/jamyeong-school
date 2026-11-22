@@ -296,7 +296,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* 강조 문구 배너 */}
-            <div className="p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#120E0C] border border-[#3E3024] text-center shadow-lg max-w-3xl mx-auto">
+            <div className="p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#1C1510] to-[#120E0C] border border-[#3E3024] text-center shadow-lg">
               <p className="text-base sm:text-xl font-bold text-[#D6C6A8] leading-relaxed break-keep">
                 “중요한 것은 화려한 효과보다, 내가 어떤 메시지를 전하고 싶은가입니다.”
               </p>
@@ -326,7 +326,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* Before vs After 비교 4개 리스트 */}
-            <div className="space-y-4 max-w-4xl mx-auto">
+            <div className="space-y-4">
               {/* 항목 1 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#17120F] border border-[#2B221B]">
                 <div className="space-y-1">
@@ -412,7 +412,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* 2대 콘셉트 상세 카드 그리드 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* TYPE 01 — 마인드셋 모션 */}
               <div className="p-7 sm:p-9 rounded-3xl bg-[#14100E] border border-[#2A211B] flex flex-col justify-between space-y-6 shadow-xl">
                 <div className="space-y-4">
@@ -545,7 +545,7 @@ export default function MotionGraphicsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
               {/* 01 */}
               <div className="p-6 rounded-2xl bg-[#17120F] border border-[#2B221B] space-y-2">
                 <span className="text-xs font-mono font-bold text-[#C6A66B] block">01</span>
@@ -584,7 +584,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* 핵심 결과물 배너 */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#C6A66B]/15 via-white/[0.02] to-[#C6A66B]/15 border border-[#C6A66B]/30 max-w-3xl mx-auto text-center space-y-2 shadow-lg">
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#C6A66B]/15 via-white/[0.02] to-[#C6A66B]/15 border border-[#C6A66B]/30 text-center space-y-2 shadow-lg">
               <span className="text-xs font-bold text-[#C6A66B] uppercase tracking-wider block">
                 CORE DELIVERABLE
               </span>
@@ -615,7 +615,7 @@ export default function MotionGraphicsPage() {
               </p>
             </div>
 
-            <div className="space-y-4 max-w-3xl mx-auto">
+            <div className="space-y-4">
               {[
                 {
                   step: "STEP 01",
@@ -683,7 +683,7 @@ export default function MotionGraphicsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {/* PART 01 */}
               <div className="p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] space-y-4">
                 <span className="text-xs font-mono font-bold text-[#C6A66B] px-2.5 py-0.5 rounded bg-[#C6A66B]/15">
@@ -794,7 +794,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* 중요 사전 안내 박스 */}
-            <div className="p-6 rounded-2xl bg-[#1A1411] border border-[#3E3024] max-w-4xl mx-auto text-center space-y-2">
+            <div className="p-6 rounded-2xl bg-[#1A1411] border border-[#3E3024] text-center space-y-2">
               <strong className="text-xs sm:text-sm text-[#D6C6A8] block font-bold">
                 ⚠️ 클래스 운영 원칙
               </strong>
@@ -881,7 +881,7 @@ export default function MotionGraphicsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 { title: "모션그래픽 예시 프롬프트", desc: "원하는 분위기와 움직임을 자연어로 지시하는 실전 프롬프트 모음" },
                 { title: "Remotion 프로젝트 예제", desc: "바로 열어보고 실행할 수 있는 스타터 프로젝트 원본 코드" },
@@ -916,7 +916,7 @@ export default function MotionGraphicsPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 "감성적인 문장과 메시지를 영상으로 표현하고 싶은 분",
                 "성장·동기부여 숏폼을 만들고 싶은 분",
@@ -957,7 +957,7 @@ export default function MotionGraphicsPage() {
             </div>
 
             {/* 챌린지 활동 5단계 */}
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 max-w-5xl mx-auto mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
               {[
                 { num: "01", text: "오늘의 모션그래픽 예시 감상" },
                 { num: "02", text: "제공된 프롬프트와 소스 확인" },
@@ -992,7 +992,7 @@ export default function MotionGraphicsPage() {
               </h2>
             </div>
 
-            <div className="space-y-4 max-w-3xl mx-auto">
+            <div className="space-y-4">
               {[
                 {
                   q: "코딩을 전혀 몰라도 수강할 수 있나요?",

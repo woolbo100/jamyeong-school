@@ -268,7 +268,7 @@ export default function SalesPageDesignPage() {
           </div>
 
           {/* 5대 문제 카드 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {[
               { num: "01", title: "기능만 나열하는 설명", desc: "고객에게 어떤 변화를 주는지보다 기술과 스펙만 나열한다." },
               { num: "02", title: "고민과 동떨어진 카피", desc: "소비자의 실제 고통이나 결핍과 연결되지 못하고 겉돈다." },
@@ -315,7 +315,7 @@ export default function SalesPageDesignPage() {
           </div>
 
           {/* 6대 기획 핵심 질문 카드 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {[
               {
                 q: "Q1",
@@ -361,7 +361,7 @@ export default function SalesPageDesignPage() {
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
+          <div className="bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center text-xs sm:text-sm text-[#A8988B] leading-relaxed break-keep">
             수업에서는 고객을 조종하는 기술이 아니라, <strong>고객의 문제와 욕구를 정확히 이해하고 그것을 설득력 있게 전달하는 바른 방법</strong>을 배웁니다.
           </div>
         </div>
@@ -385,7 +385,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
                 before: "기능과 스펙, 특징을 나열하기만 한다.",
@@ -449,7 +449,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
             {[
               { step: "01", name: "HOOK", title: "시선을 멈추는 첫 문장", desc: "이탈률을 낮추는 강력한 헤드카피와 비주얼" },
               { step: "02", name: "EMPATHY", title: "고객의 고민과 공감", desc: "&ldquo;내 이야기 같다&rdquo;고 느끼게 만드는 상황 제시" },
@@ -478,7 +478,7 @@ export default function SalesPageDesignPage() {
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-4 rounded-xl text-center">
+          <div className="bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-4 rounded-xl text-center">
             <p className="text-xs sm:text-sm text-[#EDE6DC] font-medium break-keep">
               이 구조를 바탕으로 상품에 맞는 설득 흐름을 먼저 잡고, 그다음 각 섹션에 들어갈 이미지와 소스의 역할을 함께 설계합니다.
             </p>
@@ -504,7 +504,7 @@ export default function SalesPageDesignPage() {
           </div>
 
           {/* 4대 비주얼 소스 카드 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* 01. 제품 상세컷 */}
             <div className="bg-[#14100E] border border-[#2A211B] p-6 rounded-2xl hover:border-[#C6A66B]/50 transition-colors">
               <div className="flex items-center gap-2 mb-3">
@@ -598,7 +598,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
             {[
               { title: "히어로 섹션 최적화", desc: "시선을 3초 만에 사로잡는 헤드카피와 대표 비주얼 배치" },
               { title: "공감 및 문제 제기 영역", desc: "고객 고민을 짚어주는 텍스트와 설명형 소스 배치" },
@@ -615,7 +615,7 @@ export default function SalesPageDesignPage() {
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
+          <div className="bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
             <p className="text-sm sm:text-base font-bold text-[#EDE6DC]">
               &ldquo;빈 화면에서 시작하지 않습니다. 기획과 소스를 담을 수 있는 탄탄한 구조를 먼저 제공합니다.&rdquo;
             </p>
@@ -640,7 +640,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {[
               { num: "01", title: "상품 콘셉트 이미지 제작", desc: "브랜드의 프리미엄 무드를 극대화하는 감성 배경과 조명 연출" },
               { num: "02", title: "일관성 있는 제품컷 생성", desc: "각도와 배경이 바뀌어도 제품의 정체성이 유지되는 프롬프트 설계" },
@@ -680,7 +680,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* SKILL 01. 일반 상품 상세페이지 자동 제작 */}
             <div className="bg-[#14100E] border border-[#2A211B] p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-[#C6A66B]/50 transition-colors">
               <div>
@@ -780,7 +780,7 @@ export default function SalesPageDesignPage() {
           </div>
 
           {/* 10단계 파이프라인 */}
-          <div className="max-w-4xl mx-auto space-y-2 mb-8 text-xs sm:text-sm">
+          <div className="space-y-2 mb-8 text-xs sm:text-sm">
             {[
               { num: "01", title: "상품 정보 정리", desc: "제품의 기본 스펙과 특징 정리" },
               { num: "02", title: "타깃 및 심리 분석", desc: "고객 결핍과 구매 망설임 요인 도출" },
@@ -834,7 +834,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-3 mb-8">
+          <div className="space-y-3 mb-8">
             {[
               { num: "01", name: "타깃 고객 및 구매 심리 분석 기획서", desc: "고객 결핍과 구매 이유가 정리된 전략 시트" },
               { num: "02", name: "설득 구조가 반영된 상세페이지 원고", desc: "8단계 설계 공식에 맞춘 완성형 카피라이팅" },
@@ -884,7 +884,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -959,7 +959,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {[
               {
                 title: "소비자 심리 기반 기획 프레임워크",
@@ -1022,7 +1022,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "자신의 상품이나 서비스를 직접 판매하고 싶은 1인 사업자",
               "상세페이지 기획과 설득 구조 잡기가 막막한 분",
@@ -1064,7 +1064,7 @@ export default function SalesPageDesignPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 q: "디자인 경험이 없어도 수강할 수 있나요?",
@@ -1116,7 +1116,8 @@ export default function SalesPageDesignPage() {
         {/* 은은한 배경 광원 효과 */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#C6A66B]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="site-container relative z-10 max-w-2xl mx-auto px-4">
+        <div className="site-container relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase">
             RESERVATION
           </span>
@@ -1153,7 +1154,8 @@ export default function SalesPageDesignPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ───────────────────────────────────────────────
           환불 및 취소 규정 공통 섹션

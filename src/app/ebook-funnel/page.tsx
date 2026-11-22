@@ -281,7 +281,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 문제 카드 5종 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {[
               { num: "01", title: "판매 경로의 부재", desc: "전자책은 만들었지만 어디서 어떻게 팔아야 할지 모른다." },
               { num: "02", title: "소재 고갈과 피로", desc: "SNS에 무엇을 올려야 할지 매번 처음부터 고민한다." },
@@ -322,7 +322,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
                 before: "전자책 PDF를 만든 후 어디에 판매할지 고민한다.",
@@ -391,7 +391,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 7단계 타임라인 다이어그램 */}
-          <div className="max-w-4xl mx-auto space-y-3 mb-10">
+          <div className="space-y-3 mb-10">
             {[
               {
                 step: "STEP 01",
@@ -457,7 +457,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 하단 강조 문구 & 안내 */}
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 sm:p-6 rounded-2xl text-center">
+          <div className="bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 sm:p-6 rounded-2xl text-center">
             <p className="text-sm sm:text-base md:text-lg font-bold text-[#EDE6DC] break-keep mb-2">
               ✨ &ldquo;콘텐츠는 발견을 만들고, 랜딩페이지는 연결을 만들며, 지속적인 소통은 신뢰를 쌓습니다.&rdquo;
             </p>
@@ -485,7 +485,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-[#14100E] border border-[#2A211B] p-6 sm:p-8 rounded-2xl mb-8">
+          <div className="bg-[#14100E] border border-[#2A211B] p-6 sm:p-8 rounded-2xl mb-8">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] mb-4">
               다룰 수 있는 지식 상품 유형 5종
             </h3>
@@ -537,7 +537,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* 랜딩페이지 6대 구성 요소 */}
             <div className="bg-[#14100E] border border-[#2A211B] p-6 rounded-2xl">
               <span className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] block mb-3">
@@ -606,7 +606,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
+          <div className="bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               {/* 원본 */}
               <div className="md:col-span-4 bg-[#1C1512] border border-[#3A2D25] p-5 rounded-xl text-center">
@@ -670,7 +670,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
+          <div className="bg-[#14100E] border border-[#2A211B] rounded-2xl p-6 sm:p-8 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* 입력 예시 */}
               <div className="bg-[#1C1512] p-5 rounded-xl border border-[#3A2D25]">
@@ -746,7 +746,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 7단계 발행 파이프라인 */}
-          <div className="max-w-4xl mx-auto mb-10">
+          <div className="mb-10">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] mb-4 text-center sm:text-left">
               PUBLISHING PIPELINE · 기본 발행 자동화 흐름
             </h3>
@@ -769,7 +769,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 실습 내용 및 현실적 가이드 */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-[#14100E] border border-[#2A211B] p-5 rounded-xl">
               <h4 className="text-sm font-bold text-[#EDE6DC] mb-2">실습 핵심 내용</h4>
               <ul className="space-y-1.5 text-xs text-[#A8988B]">
@@ -810,7 +810,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-[#14100E] border border-[#2A211B] p-6 rounded-2xl">
               <span className="text-xs font-bold text-[#C6A66B] uppercase block mb-3">
                 무료 콘텐츠(리드마그넷) 예시 5종
@@ -864,7 +864,7 @@ export default function EbookFunnelPage() {
             </div>
           </div>
 
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B]">
+          <div className="bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B]">
             * 자명스쿨은 무단 크롤링이나 스크래핑을 일체 배제하며, 오직 <strong>고객의 자발적인 신청과 동의에 기반한 정당한 관계 형성</strong>만을 교육합니다.
           </div>
         </div>
@@ -894,7 +894,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 핵심 실습 5단계 카드 */}
-          <div className="max-w-4xl mx-auto space-y-3 mb-8">
+          <div className="space-y-3 mb-8">
             {[
               {
                 step: "STEP 01",
@@ -938,13 +938,13 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 강조 문구 및 현실적 안내 */}
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 rounded-2xl text-center mb-6">
+          <div className="bg-gradient-to-r from-[#241A14] via-[#35261C] to-[#241A14] border border-[#C6A66B]/40 p-5 rounded-2xl text-center mb-6">
             <p className="text-sm sm:text-base md:text-lg font-bold text-[#EDE6DC] break-keep">
               ✨ &ldquo;상품만 만들지 마세요. 고객이 구매하고 전달받는 과정까지 연결하세요.&rdquo;
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B] leading-relaxed">
+          <div className="bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B] leading-relaxed">
             * 활용 도구와 세부 설정 방법은 실제 수업에서 상세히 안내해 드립니다. <br />
             * 플랫폼에 따라 회원가입, 본인 인증, 사업자 여부, 판매 심사, 결제 수수료 및 유료 기능 조건이 다를 수 있으며, 사업자등록 없이 모든 결제 기능을 무제한 사용할 수 있다고 과장하지 않습니다.
           </div>
@@ -969,7 +969,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 이메일 5단계 시퀀스 */}
-          <div className="max-w-4xl mx-auto space-y-3 mb-8">
+          <div className="space-y-3 mb-8">
             {[
               {
                 mail: "EMAIL 01",
@@ -1035,7 +1035,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {[
               {
                 badge: "SPECIAL SKILL 01",
@@ -1104,7 +1104,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-3 mb-8">
+          <div className="space-y-3 mb-8">
             {[
               { num: "01", name: "전자책 또는 디지털 상품 판매 퍼널 기획안", detail: "내 상품의 유입과 구매 동선을 한 장으로 정리한 마스터 플랜" },
               { num: "02", name: "랜딩페이지 및 무료 자료 신청 흐름", detail: "방문자를 잠재 고객 DB로 전환하는 신청 페이지 구조" },
@@ -1155,7 +1155,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -1230,7 +1230,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {[
               "전자책을 만들었지만 어떻게 팔아야 할지 모르는 분",
               "자신의 지식과 경험을 디지털 상품으로 만들고 싶은 분",
@@ -1254,7 +1254,7 @@ export default function EbookFunnelPage() {
             ))}
           </div>
 
-          <div className="max-w-2xl mx-auto bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B]">
+          <div className="bg-[#181310] border border-[#3A2D25] p-4 rounded-xl text-center text-xs text-[#A8988B]">
             <strong>권장 선수 지식:</strong> AI 기본 사용 경험(ChatGPT 등)과 SNS 기본 계정 운영 경험이 있으면 실습에 훨씬 수월합니다. 도구 연동에 익숙하지 않은 수강생을 위해 사전 안내 자료를 제공합니다.
           </div>
         </div>
@@ -1278,7 +1278,7 @@ export default function EbookFunnelPage() {
           </div>
 
           {/* 5단계 성장 로드맵 */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
             {[
               { step: "1단계", title: "지식 상품 준비", desc: "전자책·디지털 자료 완성" },
               { step: "2단계", title: "간편 판매 시작", desc: "도구 활용해 빠르게 판매 개시" },
@@ -1296,7 +1296,7 @@ export default function EbookFunnelPage() {
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
+          <div className="bg-[#181310] border border-[#3A2D25] p-5 rounded-2xl text-center">
             <p className="text-sm sm:text-base font-bold text-[#EDE6DC] break-keep">
               &ldquo;처음부터 큰돈 들여 홈페이지를 만들지 마세요. 먼저 팔아보고, 성장에 필요한 만큼 나만의 사업 시스템을 확장하세요.&rdquo;
             </p>
@@ -1324,7 +1324,7 @@ export default function EbookFunnelPage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 q: "전자책을 아직 만들지 않았는데 수강할 수 있나요?",
@@ -1392,7 +1392,8 @@ export default function EbookFunnelPage() {
         {/* 은은한 배경 광원 효과 */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#C6A66B]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="site-container relative z-10 max-w-2xl mx-auto px-4">
+        <div className="site-container relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase">
             RESERVATION
           </span>
@@ -1430,7 +1431,8 @@ export default function EbookFunnelPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ───────────────────────────────────────────────
           환불 및 취소 규정 공통 섹션
