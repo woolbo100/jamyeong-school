@@ -53,8 +53,8 @@ export default function AboutPage() {
       </section>
 
       {/* Brand Story Section */}
-      <section className="py-20 lg:py-28 px-6 max-w-4xl mx-auto">
-        <div className="space-y-12">
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-12">
           {/* Main Title & Subtitle */}
           <Reveal>
             <div className="text-center space-y-4">
@@ -158,15 +158,16 @@ export default function AboutPage() {
       </section>
 
       {/* Why Jamyeong School & Brand Identity Section */}
-      <section className="py-20 lg:py-28 px-6 max-w-4xl mx-auto border-t border-white/5">
-        <div className="space-y-14">
-          {/* 1. Why Jamyeong School (Question Section) */}
-          <Reveal>
-            <div className="text-center space-y-8">
-              {/* Label & Title */}
-              <div className="space-y-3">
-                <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
-                  WHY JAMYEONG SCHOOL?
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-14">
+            {/* 1. Why Jamyeong School (Question Section) */}
+            <Reveal>
+              <div className="text-center space-y-8">
+                {/* Label & Title */}
+                <div className="space-y-3">
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
+                    WHY JAMYEONG SCHOOL?
                 </span>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
                   AI 시대에{" "}
@@ -250,13 +251,15 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
+        </div>
       </section>
 
       {/* Brand Core Section */}
-      <section className="py-16 lg:py-24 px-6 max-w-4xl mx-auto">
-        <Reveal>
-          {/* Main Outer Rounded Container */}
-          <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-white/10 bg-[#121118]/80 backdrop-blur-md shadow-2xl relative">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
+          <Reveal>
+            {/* Main Outer Rounded Container */}
+            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-white/10 bg-[#121118]/80 backdrop-blur-md shadow-2xl relative">
             {/* Top Label & Title */}
             <div className="text-center space-y-2 mb-10">
               <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
@@ -325,10 +328,11 @@ export default function AboutPage() {
             </div>
           </div>
         </Reveal>
+        </div>
       </section>
 
       {/* Self-Discovery Cycle Section */}
-      <section className="py-20 lg:py-28 px-6 max-w-5xl mx-auto">
+      <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="space-y-16">
           {/* Section Header */}
           <Reveal>
@@ -820,8 +824,8 @@ export default function AboutPage() {
       </section>
 
       {/* 3.6. 5-Stage Growth Journey Section */}
-      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div className="space-y-16">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
           <Reveal>
             <div className="text-center space-y-4">

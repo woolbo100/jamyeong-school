@@ -1346,15 +1346,10 @@ export default function HealingPlaylistPage() {
             </div>
 
             <a
-              href="https://forms.gle/placeholder"
+              href="https://pf.kakao.com/_IxguMn"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-4 rounded-xl bg-[#C6A66B] hover:bg-[#D6C6A8] text-[#1A1410] font-bold text-sm sm:text-base transition-colors shadow-lg block text-center"
-              onClick={(e) => {
-                // 신청 링크가 미확정인 경우 친절한 alert 안내
-                e.preventDefault();
-                alert("현재 개강 알림 신청 페이지 준비 중입니다. 원데이 목록에서 새로운 소식을 기다려 주세요!");
-              }}
             >
               {CLASS_CONFIG.ctaText}
             </a>
