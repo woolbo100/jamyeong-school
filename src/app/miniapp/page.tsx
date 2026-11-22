@@ -4,22 +4,22 @@ import type { Metadata } from "next";
 import CourseRefundPolicySection from "@/components/CourseRefundPolicySection";
 
 export const metadata: Metadata = {
-  title: "AI로 나만의 미니앱 만들고 실제 출시하기 | 자명스쿨 원데이 클래스",
+  title: "마음을 담은 AI 미니앱 만들기 | 자명스쿨 원데이 클래스",
   description:
-    "코딩을 몰라도 내 아이디어가 실제 앱이 됩니다. ChatGPT와 Codex를 활용해 아이디어 기획부터 미니앱 제작, 테스트, 앱인토스 등록과 출시 과정까지 하루 만에 경험하세요.",
+    "나의 생각과 감성을 작은 디지털 서비스로 표현해 봅니다. 명상·긍정확언·감성일기·힐링 배경화면 등 일상에 따뜻함을 더하는 미니앱을 직접 기획하고 만들어 보는 시간입니다.",
 };
 
 // ─────────────────────────────────────────────────────────────
 // [원데이 클래스 기본 설정 데이터]
 // ─────────────────────────────────────────────────────────────
 const CLASS_CONFIG = {
-  category: "AI MINI APP · ONE DAY CLASS",
-  badge: "자명스쿨 원데이 실전 마스터",
-  titleMain: "코딩을 몰라도",
-  titleSub: "내 아이디어가 실제 앱이 됩니다",
+  category: "MINI APP · MINDFUL CREATION",
+  badge: "앱인토스 활용 원데이 클래스",
+  titleMain: "마음을 담은",
+  titleSub: "AI 미니앱 만들기",
   description:
-    "ChatGPT와 Codex로 작은 아이디어를 실제로 작동하는 미니앱으로 만듭니다. 기획부터 제작, 모바일 테스트, 앱인토스 등록 준비까지 전용 템플릿으로 함께 따라갑니다.",
-  highlight: "구경하는 수업에서, 직접 만들고 실행하는 경험으로.",
+    "나의 생각과 감성을 작은 디지털 서비스로 표현해 봅니다. 명상·긍정확언·감성일기·힐링 배경화면 등 일상에 따뜻함을 더하는 미니앱을 직접 기획하고 만들어 보는 시간입니다.",
+  highlight: "나의 작은 아이디어를 누군가의 하루에 따뜻함을 더하는 디지털 서비스로",
   meta: {
     format: "Zoom 실시간 온라인 실습",
     duration: "하루 완성 원데이",
@@ -27,7 +27,7 @@ const CLASS_CONFIG = {
     schedule: "개강 일정 준비 중",
     price: "29,000원",
   },
-  tags: ["ChatGPT", "Codex", "앱인토스", "미니앱제작", "루모라타로"],
+  tags: ["앱인토스", "마음돌봄", "감성앱", "AI창작"],
   ctaText: "개강 알림 신청",
 };
 
@@ -267,6 +267,131 @@ export default function MiniappPage() {
           본문 상세 영역 (Dark & Deep Brown Theme)
          ═══════════════════════════════════════════════ */}
       <div className="w-full bg-[#0D0B0A]">
+
+        {/* ───────────────────────────────────────────
+            01. INTRO STORY (감성 도입 스토리)
+           ─────────────────────────────────────────── */}
+        <section className="w-full pt-16 md:pt-24 pb-12 md:pb-16 border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase block">
+                MINDFUL CREATION STORY
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF7F2] leading-snug break-keep">
+                내 마음속 작은 아이디어가 <br className="hidden sm:inline" />
+                <span className="text-[#D6C6A8]">누군가의 하루를 밝히는 앱</span>이 된다면?
+              </h2>
+
+              <div className="p-6 sm:p-8 rounded-2xl bg-[#14100E] border border-[#2A211B] text-sm sm:text-base text-[#D6C6A8] font-medium leading-relaxed space-y-1.5">
+                <p>하루를 시작하는 따뜻한 확언 한 문장,</p>
+                <p>나의 감정을 돌아보는 작은 일기장,</p>
+                <p>마음이 편안해지는 배경화면.</p>
+              </div>
+
+              <div className="space-y-4 text-sm sm:text-base text-[#9E8B7C] leading-relaxed break-keep">
+                <p>
+                  거창한 기술이나 복잡한 아이디어가 아니어도 괜찮습니다.
+                </p>
+                <p>
+                  내가 좋아하고, 필요하다고 느꼈던 것에서 시작해 <br className="hidden sm:inline" />
+                  누군가에게도 도움이 되는 작은 디지털 공간을 만들어 봅니다.
+                </p>
+                <p className="text-[#C8BCB0] pt-2">
+                  자명스쿨에서는 AI와 앱인토스를 활용해 자신의 생각과 감성을 실제 서비스로 표현하는 경험을 제공합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────────────────────────────────────
+            01.2. INSPIRATION (이런 마음을 담은 앱을 만들 수 있어요)
+           ─────────────────────────────────────────── */}
+        <section className="w-full py-16 md:py-24 bg-[#120E0C] border-b border-[#26201B]">
+          <div className="site-container">
+            <div className="text-center mb-12">
+              <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#C6A66B] uppercase mb-3 block">
+                APP INSPIRATIONS
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF7F2] mb-4 break-keep">
+                이런 마음을 담은 앱을 만들 수 있어요
+              </h2>
+              <p className="text-sm sm:text-base text-[#9E8B7C] max-w-xl mx-auto break-keep">
+                일상의 작은 감성과 필요에서 출발해 누군가에게 온기를 전하는 미니앱 아이디어들입니다.
+              </p>
+            </div>
+
+            {/* 3개 감성 앱 예시 카드 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              {/* ① 명상·확언 앱 */}
+              <div className="p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] hover:border-[#C6A66B]/40 transition-colors flex flex-col justify-between space-y-4 shadow-md">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#C6A66B]/10 border border-[#C6A66B]/25 flex items-center justify-center text-lg">
+                    ✨
+                  </div>
+                  <h3 className="text-lg font-bold text-[#FAF7F2] leading-snug">
+                    ① 하루를 밝히는 명상·확언 앱
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    하루의 시작과 끝에 따뜻한 문장을 건네는 작은 마음돌봄 공간
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-[#261E18]">
+                  <span className="text-[11px] font-semibold text-[#C6A66B] block mb-1">예시 기능</span>
+                  <p className="text-xs text-[#C8BCB0]">오늘의 긍정확언 · 감정별 명상 문구 · 하루 한 문장</p>
+                </div>
+              </div>
+
+              {/* ② 감성일기 앱 */}
+              <div className="p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] hover:border-[#C6A66B]/40 transition-colors flex flex-col justify-between space-y-4 shadow-md">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#C6A66B]/10 border border-[#C6A66B]/25 flex items-center justify-center text-lg">
+                    📖
+                  </div>
+                  <h3 className="text-lg font-bold text-[#FAF7F2] leading-snug">
+                    ② 나를 알아가는 감성일기 앱
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    오늘의 마음을 기록하고 돌아보며 자신을 조금 더 이해하는 공간
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-[#261E18]">
+                  <span className="text-[11px] font-semibold text-[#C6A66B] block mb-1">예시 기능</span>
+                  <p className="text-xs text-[#C8BCB0]">감정 선택 · 짧은 일기 · 마음기록 돌아보기</p>
+                </div>
+              </div>
+
+              {/* ③ 힐링 배경화면 앱 */}
+              <div className="p-7 rounded-2xl bg-[#17120F] border border-[#2B221B] hover:border-[#C6A66B]/40 transition-colors flex flex-col justify-between space-y-4 shadow-md">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#C6A66B]/10 border border-[#C6A66B]/25 flex items-center justify-center text-lg">
+                    🌿
+                  </div>
+                  <h3 className="text-lg font-bold text-[#FAF7F2] leading-snug">
+                    ③ 마음에 쉼을 주는 힐링 배경화면 앱
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#9E8B7C] leading-relaxed break-keep">
+                    나에게 위로와 영감을 주는 이미지와 문장을 담은 작은 갤러리
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-[#261E18]">
+                  <span className="text-[11px] font-semibold text-[#C6A66B] block mb-1">예시 기능</span>
+                  <p className="text-xs text-[#C8BCB0]">감성 배경화면 · 응원 문구 · 이미지 저장</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 신규 섹션 하단 안내 문구 */}
+            <div className="max-w-2xl mx-auto text-center space-y-2 p-6 rounded-2xl bg-[#17120F] border border-[#261E18]">
+              <p className="text-sm sm:text-base font-bold text-[#D6C6A8] break-keep">
+                나를 이해하는 작은 아이디어가 누군가의 일상을 밝히는 서비스가 됩니다.
+              </p>
+              <p className="text-xs text-[#7A6A5E] leading-relaxed break-keep">
+                * 위 앱들은 제작 아이디어의 예시이며, 실제 수업에서는 선정된 실습 예제를 중심으로 진행합니다. 세 가지 앱을 모두 완성하는 과정으로 진행되지 않습니다.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ───────────────────────────────────────────
             01.5. 앱인토스 미니앱 개념 안내 (INFO BOX)

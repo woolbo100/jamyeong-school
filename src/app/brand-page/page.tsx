@@ -352,6 +352,30 @@ export default function BrandPageClassPage() {
         </div>
       </section>
 
+      {/* ───────────────────────────────────────────────
+          [2.5. 바이브코딩 입문 안내 배너]
+         ─────────────────────────────────────────────── */}
+      <section className="w-full py-12 md:py-16 bg-[#F5EFE6] text-[#2E2723] border-b border-[#E8DFD3]">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto p-6 sm:p-8 rounded-2xl bg-white border border-[#E8DFD3] shadow-sm text-center space-y-3">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-[#C6A66B]/15 text-[#8E6D38] text-xs font-bold tracking-wider uppercase">
+              VIBE CODING STARTER
+            </span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2E2723] break-keep">
+              바이브코딩이 처음이라면, 이 수업부터 시작해 보세요.
+            </h2>
+            <div className="space-y-2 text-xs sm:text-sm md:text-base text-[#5C4C40] leading-relaxed break-keep font-normal pt-1">
+              <p>
+                AI와 대화하며 나만의 브랜드 소개 페이지를 만드는 과정에서 바이브코딩의 기본 흐름을 익힙니다.
+              </p>
+              <p>
+                프로젝트를 만들고, 실행하고, 수정하고, 완성하는 경험을 통해 이후 다양한 디지털 창작 과정으로 나아갈 수 있는 기초를 다집니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════════════════════════════════════
           [3. ABOUT BRAND PAGE — 기존 서비스 소개 대응]
          ═══════════════════════════════════════════════ */}
@@ -1038,6 +1062,162 @@ export default function BrandPageClassPage() {
           {/* 하단 문구 */}
           <div className="mt-8 text-center text-xs sm:text-sm text-[#A8988B]">
             완성한 브랜드 페이지를 SNS와 커뮤니티의 대표 링크로 등록하고, 나만의 비즈니스 성장의 발판으로 삼아보세요.
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          [15.5. 학습 경로 — START YOUR VIBE CODING JOURNEY]
+         ═══════════════════════════════════════════════ */}
+      <section className="w-full py-20 md:py-28 border-b border-[#221C18] bg-[#0E0B09]">
+        <div className="site-container">
+          <div className="text-center mb-16 space-y-3">
+            <span className="text-xs font-bold tracking-widest text-[#C6A66B] uppercase block">
+              START YOUR VIBE CODING JOURNEY
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FAF7F2] leading-tight break-keep">
+              바이브코딩, 이 수업부터 시작해 보세요.
+            </h2>
+            <p className="text-sm sm:text-base text-[#A8988B] max-w-2xl mx-auto leading-relaxed break-keep">
+              나만의 페이지 한 장을 완성하는 경험이 새로운 창작의 출발점이 됩니다.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            {/* STEP 01 */}
+            <div className="p-7 sm:p-9 rounded-3xl bg-[#161210] border-2 border-[#C6A66B]/40 shadow-xl relative overflow-hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-[#2A211B]">
+                <div className="flex items-center gap-3">
+                  <span className="px-3.5 py-1 rounded-full bg-[#C6A66B]/20 text-[#D6C6A8] text-xs font-bold tracking-wider uppercase border border-[#C6A66B]/30">
+                    STEP 01
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#C6A66B]">
+                    바이브코딩 첫걸음 · 기초 입문
+                  </span>
+                </div>
+                <span className="text-xs text-[#8E7D6F] font-medium">현재 클래스</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#FAF7F2] mb-4">
+                AI로 브랜드 소개 페이지 제작
+              </h3>
+
+              <div className="space-y-3 text-xs sm:text-sm text-[#B8A89A]">
+                <strong className="text-white block font-semibold mb-2">📌 학습 내용:</strong>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <li className="flex items-center gap-2 p-2.5 rounded-xl bg-[#120E0C] border border-[#261E18]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                    <span>Codex 및 VS Code 기본 사용</span>
+                  </li>
+                  <li className="flex items-center gap-2 p-2.5 rounded-xl bg-[#120E0C] border border-[#261E18]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                    <span>작업 폴더와 프로젝트 이해</span>
+                  </li>
+                  <li className="flex items-center gap-2 p-2.5 rounded-xl bg-[#120E0C] border border-[#261E18]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                    <span>AI 프롬프트를 통한 제작과 수정</span>
+                  </li>
+                  <li className="flex items-center gap-2 p-2.5 rounded-xl bg-[#120E0C] border border-[#261E18]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                    <span>프로젝트 실행과 결과 확인</span>
+                  </li>
+                  <li className="sm:col-span-2 flex items-center gap-2 p-2.5 rounded-xl bg-[#1A1410] border border-[#3E3024] text-[#D6C6A8] font-bold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C6A66B]" />
+                    <span>나만의 브랜드 소개 페이지 완성</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 연결 화살표 */}
+            <div className="flex justify-center text-[#C6A66B]/60">
+              <span className="text-2xl">↓</span>
+            </div>
+
+            {/* STEP 02 */}
+            <div className="space-y-5">
+              <div className="text-center space-y-1.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1915] border border-[#362B24] text-[#C6A66B] text-xs font-bold tracking-wider uppercase">
+                  <span>STEP 02</span>
+                  <span>·</span>
+                  <span>관심 분야로 확장</span>
+                </div>
+                <p className="text-xs sm:text-sm text-[#9E8B7C] max-w-xl mx-auto pt-1 break-keep">
+                  기초 과정을 경험한 후, 자신의 관심과 목표에 따라 다음 원데이 과정으로 확장할 수 있습니다.
+                </p>
+              </div>
+
+              {/* 3개 확장 과정 카드 */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {/* 1. 미니앱 */}
+                <Link
+                  href="/miniapp"
+                  className="p-6 rounded-2xl bg-[#161210] border border-[#2E241E] hover:border-[#C6A66B]/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group shadow-md"
+                >
+                  <div className="space-y-2.5">
+                    <span className="text-[11px] font-bold text-[#C6A66B] block">SERVICE CREATION</span>
+                    <h4 className="text-base sm:text-lg font-extrabold text-[#FAF7F2] group-hover:text-[#D6C6A8] transition-colors break-keep">
+                      마음을 담은 AI 미니앱 만들기
+                    </h4>
+                    <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep font-light">
+                      명상·확언·감성일기 등 마음돌봄 아이디어를 서비스로 구현
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold text-[#C6A66B] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>상세보기</span>
+                    <span>→</span>
+                  </span>
+                </Link>
+
+                {/* 2. 사주 서비스 */}
+                <Link
+                  href="/saju"
+                  className="p-6 rounded-2xl bg-[#161210] border border-[#2E241E] hover:border-[#C6A66B]/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group shadow-md"
+                >
+                  <div className="space-y-2.5">
+                    <span className="text-[11px] font-bold text-[#C6A66B] block">AI SAJU PLATFORM</span>
+                    <h4 className="text-base sm:text-lg font-extrabold text-[#FAF7F2] group-hover:text-[#D6C6A8] transition-colors break-keep">
+                      AI 사주 서비스 제작
+                    </h4>
+                    <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep font-light">
+                      나만의 디지털 해석 서비스와 웹서비스 제작
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold text-[#C6A66B] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>상세보기</span>
+                    <span>→</span>
+                  </span>
+                </Link>
+
+                {/* 3. 모션그래픽 */}
+                <Link
+                  href="/motion-graphics"
+                  className="p-6 rounded-2xl bg-[#161210] border border-[#2E241E] hover:border-[#C6A66B]/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between space-y-4 group shadow-md"
+                >
+                  <div className="space-y-2.5">
+                    <span className="text-[11px] font-bold text-[#C6A66B] block">EMOTIONAL MOTION</span>
+                    <h4 className="text-base sm:text-lg font-extrabold text-[#FAF7F2] group-hover:text-[#D6C6A8] transition-colors break-keep">
+                      마음을 움직이는 모션그래픽
+                    </h4>
+                    <p className="text-xs text-[#9E8B7C] leading-relaxed break-keep font-light">
+                      감성·위로·성장 메시지를 움직이는 숏폼 영상으로 표현
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold text-[#C6A66B] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span>상세보기</span>
+                    <span>→</span>
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 하단 강조 문구 */}
+            <div className="p-7 sm:p-8 rounded-2xl bg-gradient-to-r from-[#1C1612] via-[#231B15] to-[#1C1612] border border-[#3E3024] text-center space-y-2">
+              <p className="text-base sm:text-lg font-extrabold text-[#FAF7F2] break-keep">
+                “기술은 처음부터 완벽하게 알 필요가 없습니다. <br className="hidden sm:inline" />
+                나만의 작은 결과물을 완성하는 경험에서 배움이 시작됩니다.”
+              </p>
+            </div>
           </div>
         </div>
       </section>

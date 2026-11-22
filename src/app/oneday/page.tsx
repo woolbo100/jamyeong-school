@@ -113,9 +113,11 @@ export default function OnedayPage() {
                       className="group/title block mb-3"
                     >
                       {item.subtitle && (
-                        <p className="text-xs font-semibold text-[#8E6D38] mb-1 tracking-tight">
-                          # {item.subtitle}
-                        </p>
+                        <div className="mb-2">
+                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3]">
+                            {item.subtitle}
+                          </span>
+                        </div>
                       )}
                       <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover/title:text-[#8E6D38] transition-colors break-keep flex items-center justify-between">
                         <span>{item.title}</span>
@@ -127,9 +129,11 @@ export default function OnedayPage() {
                   ) : (
                     <div className="mb-3">
                       {item.subtitle && (
-                        <p className="text-xs font-semibold text-[#8E6D38] mb-1 tracking-tight">
-                          # {item.subtitle}
-                        </p>
+                        <div className="mb-2">
+                          <span className="inline-block text-[11px] font-bold text-[#8E6D38] px-2.5 py-0.5 rounded-full bg-[#FAF2E6] border border-[#E8DFD3]">
+                            {item.subtitle}
+                          </span>
+                        </div>
                       )}
                       <h2 className="text-xl font-bold text-[#2E2723] leading-snug group-hover:text-[#8E6D38] transition-colors break-keep">
                         {item.title}

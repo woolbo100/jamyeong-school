@@ -157,6 +157,101 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why Jamyeong School & Brand Identity Section */}
+      <section className="py-20 lg:py-28 px-6 max-w-4xl mx-auto border-t border-white/5">
+        <div className="space-y-14">
+          {/* 1. Why Jamyeong School (Question Section) */}
+          <Reveal>
+            <div className="text-center space-y-8">
+              {/* Label & Title */}
+              <div className="space-y-3">
+                <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
+                  WHY JAMYEONG SCHOOL?
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                  AI 시대에{" "}
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    자명스쿨이 필요한 이유
+                  </span>
+                </h2>
+              </div>
+
+              {/* Intro Text */}
+              <p className="text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                AI가 발전할수록 우리가 만들 수 있는 것은 많아집니다.
+                <br className="hidden sm:inline" /> 하지만 그만큼 중요한 질문도 생깁니다.
+              </p>
+
+              {/* 3 Questions (Centered Subtle Box) */}
+              <div className="max-w-2xl mx-auto p-8 sm:p-10 rounded-2xl bg-white/[0.02] border border-antiqueGold/25 shadow-lg space-y-5">
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
+                  나는 무엇을 만들고 싶은가?
+                </p>
+                <div className="w-12 h-px bg-antiqueGold/30 mx-auto" />
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
+                  나는 어떤 사람이며, 무엇을 원하는가?
+                </p>
+                <div className="w-12 h-px bg-antiqueGold/30 mx-auto" />
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
+                  내가 가진 경험과 지식을 어떻게 세상에 의미 있게 전달할 것인가?
+                </p>
+              </div>
+
+              {/* Closing Sentence */}
+              <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed max-w-2xl mx-auto break-keep pt-2">
+                AI는 수많은 답과 가능성을 제시할 수 있지만,{" "}
+                <strong className="text-antiqueGold font-semibold">
+                  그중 무엇이 나에게 의미 있는지 선택하는 일은 결국 나 자신에게 달려 있습니다.
+                </strong>
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Connecting Arrow */}
+          <div className="flex justify-center text-antiqueGold/60">
+            <ArrowDown className="w-6 h-6 animate-pulse" />
+          </div>
+
+          {/* 2. Brand Identity Card */}
+          <Reveal delayMs={200}>
+            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-antiqueGold/40 bg-gradient-to-b from-white/[0.04] to-transparent text-center space-y-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+              {/* Ambient Glow */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
+
+              {/* Label */}
+              <div className="relative z-10">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-antiqueGold/15 border border-antiqueGold/30 text-antiqueGold tracking-[0.25em] text-xs font-bold uppercase">
+                  JAMYEONG SCHOOL · BRAND IDENTITY
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <div className="relative z-10 max-w-2xl mx-auto">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    AI 시대, 가장 먼저 알아야 할 것은 나 자신입니다.
+                  </span>
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="relative z-10 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed sm:leading-loose break-keep">
+                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 성장형 교육 플랫폼입니다.
+                </p>
+              </div>
+
+              {/* Bottom Tagline */}
+              <div className="relative z-10 pt-4">
+                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/[0.03] border border-white/10 text-antiqueGold font-medium text-sm sm:text-base tracking-wide shadow-sm break-keep">
+                  나를 이해하고 · 나를 표현하고 · 세상과 나누다
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Brand Core Section */}
       <section className="py-16 lg:py-24 px-6 max-w-4xl mx-auto">
         <Reveal>
