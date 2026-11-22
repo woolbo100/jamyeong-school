@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
-import { Brain, Palette, Rocket, ArrowRight, ShieldCheck } from "lucide-react";
+import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -47,6 +47,414 @@ export default function AboutPage() {
                 <span className="relative z-10">강의 보러가기</span>
                 <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
               </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Brand Story Section */}
+      <section className="py-20 lg:py-28 px-6 max-w-4xl mx-auto">
+        <div className="space-y-12">
+          {/* Main Title & Subtitle */}
+          <Reveal>
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                AI 시대, 가장 먼저 알아야 할 것은{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  나 자신입니다.
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-antiqueGold/90 font-serif italic tracking-wide">
+                자명(自明), 스스로 밝아지는 배움.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Intro Story */}
+          <Reveal delayMs={100}>
+            <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light break-keep text-center md:text-left">
+              <p>
+                우리는 누구나 글을 쓰고, 그림을 그리고, 영상을 만들 수 있는 시대에 살고 있습니다.
+                AI는 우리의 상상을 현실로 만드는 놀라운 가능성을 열어 주고 있습니다.
+              </p>
+              <p className="text-white/90 font-normal">
+                하지만 기술이 발전할수록 더욱 중요해지는 질문이 있습니다.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 4 Self-Inquiry Questions (Quote Style) */}
+          <Reveal delayMs={200}>
+            <blockquote className="my-8 md:my-10 p-6 md:p-8 rounded-2xl bg-white/[0.02] border-l-4 border-antiqueGold border border-white/5 space-y-3 md:space-y-4">
+              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
+                나는 어떤 사람인가.
+              </p>
+              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
+                무엇을 좋아하고, 무엇을 두려워하는가.
+              </p>
+              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
+                어떤 경험이 지금의 나를 만들었는가.
+              </p>
+              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
+                나는 진정으로 어떤 삶을 원하는가.
+              </p>
+            </blockquote>
+          </Reveal>
+
+          {/* Mid Story */}
+          <Reveal delayMs={250}>
+            <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light break-keep">
+              <p>
+                우리는 세상을 이해하기 위해 많은 것을 배우지만, 정작 자기 자신을 깊이 들여다보는 시간은 충분히 갖지 못합니다.
+              </p>
+              <p>
+                마음속에 남아 있는 상처, 익숙하게 반복되는 생각과 행동, 자신도 모르게 믿어 온 오래된 신념들.
+              </p>
+              <p>
+                그것들을 알아차리고 이해하는 순간, 우리는 자신을 새로운 시선으로 바라보기 시작합니다.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Key Pivot & Creation Story */}
+          <Reveal delayMs={300}>
+            <div className="space-y-6 break-keep">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-antiqueGold pt-2">
+                자명스쿨은 바로 그 지점에서 배움을 시작합니다.
+              </h3>
+              <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light">
+                <p>
+                  나의 경험을 한 권의 책으로 쓰고, 말로 표현하기 어려웠던 감정을 그림으로 그리며, 원하는 미래를 영상으로 시각화합니다.
+                </p>
+                <p>
+                  AI는 이 과정에서 단순한 기술을 넘어, 내면의 이야기를 발견하고 표현하도록 돕는 창작의 도구가 됩니다.
+                </p>
+                <p>
+                  우리는 창작하면서 자신을 이해하고, 기술을 배우면서 새로운 가능성을 발견합니다.
+                </p>
+                <p>
+                  그리고 그렇게 쌓인 경험과 통찰은 다른 사람과 나누는 지식이 되고, 누군가를 이끄는 교육이 되며, 새로운 일과 경제적 가치로 확장될 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Conclusion Highlight */}
+          <Reveal delayMs={350}>
+            <div className="pt-6 break-keep">
+              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-transparent border border-antiqueGold/30">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3">
+                  <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    나를 아는 것이 모든 성장의 출발점입니다.
+                  </span>
+                </h3>
+                <p className="text-white/85 text-base md:text-lg leading-relaxed font-light">
+                  자명스쿨은 자신을 이해하는 일에서 시작해, 마음을 밝히고, 창작하고, 세상과 가치를 나누는 배움을 추구합니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Brand Core Section */}
+      <section className="py-16 lg:py-24 px-6 max-w-4xl mx-auto">
+        <Reveal>
+          {/* Main Outer Rounded Container */}
+          <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-white/10 bg-[#121118]/80 backdrop-blur-md shadow-2xl relative">
+            {/* Top Label & Title */}
+            <div className="text-center space-y-2 mb-10">
+              <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
+                BRAND CORE
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight break-keep">
+                자명스쿨의{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  브랜드 구조
+                </span>
+              </h2>
+            </div>
+
+            {/* Structure Flow */}
+            <div className="flex flex-col items-center space-y-4">
+              {/* 1. Philosophy Area */}
+              <div className="text-center space-y-2 max-w-xl">
+                <span className="inline-block px-3.5 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium tracking-wide">
+                  변하지 않는 철학
+                </span>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep pt-1">
+                  나를 아는 것이 모든 성장의 출발점
+                </h3>
+              </div>
+
+              {/* Arrow 1 */}
+              <div className="text-antiqueGold/70 py-1">
+                <ArrowDown className="w-5 h-5" />
+              </div>
+
+              {/* 2. Customer Promise Area (Wide Rounded Card) */}
+              <div className="w-full max-w-2xl p-6 sm:p-7 rounded-2xl border border-antiqueGold/30 bg-white/[0.02] text-center space-y-2.5 shadow-sm">
+                <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/10 text-antiqueGold text-xs font-medium tracking-wide">
+                  고객에게 전하는 약속
+                </span>
+                <p className="text-base sm:text-lg md:text-xl font-medium text-white/95 leading-relaxed break-keep">
+                  나의 이야기를 발견하고, AI로 표현하며, 새로운 가능성을 만들다
+                </p>
+              </div>
+
+              {/* Arrow 2 */}
+              <div className="text-antiqueGold/70 py-1">
+                <ArrowDown className="w-5 h-5" />
+              </div>
+
+              {/* 3. 3 Pillars Area (3 Equal Columns) */}
+              <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                {/* Pillar 1 */}
+                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
+                  <h4 className="text-lg font-bold text-white font-display">자기이해</h4>
+                  <p className="text-sm text-antiqueGold/90 font-medium">마음공부·코칭</p>
+                </div>
+
+                {/* Pillar 2 */}
+                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
+                  <h4 className="text-lg font-bold text-white font-display">창작과 표현</h4>
+                  <p className="text-sm text-antiqueGold/90 font-medium">책·아트·영상</p>
+                </div>
+
+                {/* Pillar 3 */}
+                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
+                  <h4 className="text-lg font-bold text-white font-display">가치확장</h4>
+                  <p className="text-sm text-antiqueGold/90 font-medium">브랜딩·지식창업</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Self-Discovery Cycle Section */}
+      <section className="py-20 lg:py-28 px-6 max-w-5xl mx-auto">
+        <div className="space-y-16">
+          {/* Section Header */}
+          <Reveal>
+            <div className="text-center space-y-4">
+              <span className="text-antiqueGold tracking-[0.25em] text-xs font-bold uppercase block">
+                Self-Discovery Cycle
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                자명스쿨의{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  자기발견 순환 구조
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 font-light tracking-wide break-keep">
+                성찰에서 창작으로, 창작에서 더 깊은 자기이해로
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Diagram Container */}
+          <Reveal delayMs={150}>
+            <div>
+              {/* Desktop / Tablet: Circular Diagram */}
+              <div className="hidden md:block relative w-[600px] h-[600px] mx-auto">
+                {/* Background Orbit Ring & Curved Arrows */}
+                <svg viewBox="0 0 600 600" className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                  <defs>
+                    <marker
+                      id="gold-arrow"
+                      viewBox="0 0 10 10"
+                      refX="6"
+                      refY="5"
+                      markerWidth="6"
+                      markerHeight="6"
+                      orient="auto-start-reverse"
+                    >
+                      <path d="M 0 1.5 L 7 5 L 0 8.5 z" fill="#B89B6A" />
+                    </marker>
+                  </defs>
+
+                  {/* Faint Orbit Circle */}
+                  <circle
+                    cx="300"
+                    cy="300"
+                    r="210"
+                    fill="none"
+                    stroke="rgba(184,155,106,0.18)"
+                    strokeDasharray="5 5"
+                  />
+
+                  {/* 1 -> 2 Arrow (Top to Right) */}
+                  <path
+                    d="M 375 118 A 210 210 0 0 1 482 225"
+                    fill="none"
+                    stroke="#B89B6A"
+                    strokeWidth="2"
+                    markerEnd="url(#gold-arrow)"
+                    className="opacity-80"
+                  />
+                  {/* 2 -> 3 Arrow (Right to Bottom) */}
+                  <path
+                    d="M 482 375 A 210 210 0 0 1 375 482"
+                    fill="none"
+                    stroke="#B89B6A"
+                    strokeWidth="2"
+                    markerEnd="url(#gold-arrow)"
+                    className="opacity-80"
+                  />
+                  {/* 3 -> 4 Arrow (Bottom to Left) */}
+                  <path
+                    d="M 225 482 A 210 210 0 0 1 118 375"
+                    fill="none"
+                    stroke="#B89B6A"
+                    strokeWidth="2"
+                    markerEnd="url(#gold-arrow)"
+                    className="opacity-80"
+                  />
+                  {/* 4 -> 1 Arrow (Left to Top) */}
+                  <path
+                    d="M 118 225 A 210 210 0 0 1 225 118"
+                    fill="none"
+                    stroke="#B89B6A"
+                    strokeWidth="2"
+                    markerEnd="url(#gold-arrow)"
+                    className="opacity-80"
+                  />
+                </svg>
+
+                {/* Central Core: 자기이해의 심화 */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full border-2 border-antiqueGold/50 bg-[#0E0E14] shadow-[0_0_35px_rgba(184,155,106,0.25)] flex flex-col items-center justify-center p-4 text-center z-10 transition-transform duration-300 hover:scale-105">
+                  <span className="text-[11px] font-bold tracking-widest uppercase text-antiqueGold/80 mb-1">
+                    Core
+                  </span>
+                  <p className="text-base font-display font-bold text-white leading-tight">
+                    자기이해의
+                    <br />
+                    <span className="bg-gradient-to-r from-[#E2D4BE] to-[#B89B6A] bg-clip-text text-transparent">
+                      심화
+                    </span>
+                  </p>
+                </div>
+
+                {/* Step 1: 탐구 (Top) */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                  <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
+                    ① 탐구
+                  </span>
+                  <h4 className="text-white font-medium text-base">나에게 질문하기</h4>
+                </div>
+
+                {/* Step 2: 표현 (Right) */}
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                  <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
+                    ② 표현
+                  </span>
+                  <h4 className="text-white font-medium text-base">글·그림·영상으로 만들기</h4>
+                </div>
+
+                {/* Step 3: 발견 (Bottom) */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                  <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
+                    ③ 발견
+                  </span>
+                  <h4 className="text-white font-medium text-base">감정·취향·신념 알아차리기</h4>
+                </div>
+
+                {/* Step 4: 재해석 (Left) */}
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                  <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
+                    ④ 재해석
+                  </span>
+                  <h4 className="text-white font-medium text-base">나를 새롭게 이해하기</h4>
+                </div>
+              </div>
+
+              {/* Mobile: Vertical Responsive Flow */}
+              <div className="block md:hidden max-w-sm mx-auto space-y-3">
+                {/* Step 1 */}
+                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
+                    ① 탐구
+                  </span>
+                  <h4 className="text-white font-medium text-base">나에게 질문하기</h4>
+                </div>
+
+                <div className="flex justify-center text-antiqueGold/80">
+                  <ArrowDown className="w-5 h-5" />
+                </div>
+
+                {/* Step 2 */}
+                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
+                    ② 표현
+                  </span>
+                  <h4 className="text-white font-medium text-base">글·그림·영상으로 만들기</h4>
+                </div>
+
+                <div className="flex justify-center text-antiqueGold/80">
+                  <ArrowDown className="w-5 h-5" />
+                </div>
+
+                {/* Core Badge on Mobile */}
+                <div className="py-2.5 px-5 rounded-full border-2 border-antiqueGold/50 bg-[#0E0E14] text-center mx-auto w-fit shadow-[0_0_20px_rgba(184,155,106,0.2)]">
+                  <span className="text-xs font-bold text-antiqueGold uppercase tracking-wider mr-2">Core</span>
+                  <span className="text-sm font-display font-bold text-white">자기이해의 심화</span>
+                </div>
+
+                <div className="flex justify-center text-antiqueGold/80">
+                  <ArrowDown className="w-5 h-5" />
+                </div>
+
+                {/* Step 3 */}
+                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
+                    ③ 발견
+                  </span>
+                  <h4 className="text-white font-medium text-base">감정·취향·신념 알아차리기</h4>
+                </div>
+
+                <div className="flex justify-center text-antiqueGold/80">
+                  <ArrowDown className="w-5 h-5" />
+                </div>
+
+                {/* Step 4 */}
+                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
+                    ④ 재해석
+                  </span>
+                  <h4 className="text-white font-medium text-base">나를 새롭게 이해하기</h4>
+                </div>
+
+                {/* Loop Back Indicator */}
+                <div className="pt-2 flex justify-center">
+                  <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-antiqueGold/10 border border-antiqueGold/30 text-xs text-antiqueGold">
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    <span>다시 탐구로 순환하는 성장</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Description Below Diagram */}
+          <Reveal delayMs={250}>
+            <div className="max-w-3xl mx-auto space-y-6 text-center md:text-left break-keep">
+              <h3 className="text-xl md:text-2xl font-display font-bold text-white text-center">
+                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  나를 알아가기 위해 창작하고, 창작하면서 다시 나를 발견합니다.
+                </span>
+              </h3>
+              <div className="space-y-4 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light">
+                <p>
+                  자명스쿨에서는 자기탐구와 AI 창작이 분리되지 않습니다.
+                </p>
+                <p>
+                  자신의 이야기를 글로 쓰고, 감정을 그림으로 표현하고, 원하는 미래를 영상으로 만들어 보는 과정에서 새로운 자신을 발견합니다.
+                </p>
+                <p>
+                  이러한 경험이 반복되면서 자신의 생각과 가치관은 더욱 선명해지고, 자신만의 표현과 삶의 방향을 찾아갈 수 있습니다.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -316,6 +724,167 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 3.6. 5-Stage Growth Journey Section */}
+      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div className="space-y-16">
+          {/* Header */}
+          <Reveal>
+            <div className="text-center space-y-4">
+              <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
+                JAMYEONG GROWTH JOURNEY
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                나를 아는 것에서 시작되는{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  성장
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 font-light tracking-wide break-keep max-w-2xl mx-auto">
+                내면의 발견이 창작과 나눔, 풍요로운 삶으로 이어집니다.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 5 Stages Flow */}
+          <div className="relative">
+            {/* Desktop: Horizontal 5-Step Flow */}
+            <div className="hidden lg:grid grid-cols-5 gap-4 relative">
+              {[
+                {
+                  num: "01",
+                  title: "자기탐구",
+                  desc: "나의 감정·경험·무의식적 신념 이해",
+                  icon: <Compass className="w-6 h-6 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "02",
+                  title: "내면성장",
+                  desc: "자기수용·재해석·새로운 관점 형성",
+                  icon: <Sparkles className="w-6 h-6 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "03",
+                  title: "창작표현",
+                  desc: "AI 글쓰기·그림책·감성아트·영상",
+                  icon: <PenTool className="w-6 h-6 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "04",
+                  title: "가치나눔",
+                  desc: "지식공유·교육·코칭·콘텐츠",
+                  icon: <Share2 className="w-6 h-6 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "05",
+                  title: "풍요확장",
+                  desc: "브랜딩·리더십·지식창업·수익화",
+                  icon: <TrendingUp className="w-6 h-6 text-antiqueGold" strokeWidth={1.75} />,
+                },
+              ].map((step, idx) => (
+                <Reveal key={idx} delayMs={idx * 100}>
+                  <div className="relative h-full">
+                    <div className="p-6 rounded-2xl border border-white/10 bg-[#121118]/90 hover:border-antiqueGold/50 transition-all duration-300 flex flex-col items-center text-center h-full group shadow-lg">
+                      <span className="text-xs font-mono font-bold text-antiqueGold/90 tracking-widest px-2.5 py-0.5 rounded-full bg-antiqueGold/10 mb-4 border border-antiqueGold/20">
+                        {step.num}
+                      </span>
+                      <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-antiqueGold/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-antiqueGold/50 transition-all duration-300">
+                        {step.icon}
+                      </div>
+                      <h4 className="text-lg font-bold text-white mb-2 font-display">{step.title}</h4>
+                      <p className="text-xs sm:text-sm text-white/60 leading-relaxed break-keep font-light">{step.desc}</p>
+                    </div>
+
+                    {/* Connecting Arrow for Desktop */}
+                    {idx < 4 && (
+                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-[#0b0b10] border border-antiqueGold/40 flex items-center justify-center shadow-md pointer-events-none">
+                        <ArrowRight className="w-3.5 h-3.5 text-antiqueGold" />
+                      </div>
+                    )}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* Mobile / Tablet: Vertical Connected Flow */}
+            <div className="lg:hidden max-w-md mx-auto space-y-3">
+              {[
+                {
+                  num: "01",
+                  title: "자기탐구",
+                  desc: "나의 감정·경험·무의식적 신념 이해",
+                  icon: <Compass className="w-5 h-5 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "02",
+                  title: "내면성장",
+                  desc: "자기수용·재해석·새로운 관점 형성",
+                  icon: <Sparkles className="w-5 h-5 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "03",
+                  title: "창작표현",
+                  desc: "AI 글쓰기·그림책·감성아트·영상",
+                  icon: <PenTool className="w-5 h-5 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "04",
+                  title: "가치나눔",
+                  desc: "지식공유·교육·코칭·콘텐츠",
+                  icon: <Share2 className="w-5 h-5 text-antiqueGold" strokeWidth={1.75} />,
+                },
+                {
+                  num: "05",
+                  title: "풍요확장",
+                  desc: "브랜딩·리더십·지식창업·수익화",
+                  icon: <TrendingUp className="w-5 h-5 text-antiqueGold" strokeWidth={1.75} />,
+                },
+              ].map((step, idx) => (
+                <div key={idx} className="space-y-3">
+                  <Reveal delayMs={idx * 100}>
+                    <div className="p-5 rounded-2xl border border-white/10 bg-[#121118]/90 flex items-center gap-4 shadow-md">
+                      <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-antiqueGold/25 flex items-center justify-center shrink-0">
+                        {step.icon}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-mono font-bold text-antiqueGold/80 tracking-wider">
+                            {step.num}
+                          </span>
+                          <h4 className="text-base font-bold text-white font-display">{step.title}</h4>
+                        </div>
+                        <p className="text-xs sm:text-sm text-white/60 leading-relaxed break-keep font-light">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                  {idx < 4 && (
+                    <div className="flex justify-center text-antiqueGold/60 py-0.5">
+                      <ArrowDown className="w-4 h-4" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Highlight & Educational Philosophy */}
+          <Reveal delayMs={300}>
+            <div className="max-w-3xl mx-auto text-center space-y-4 pt-6 break-keep">
+              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-antiqueGold/10 border border-antiqueGold/30 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+                <p className="text-lg md:text-xl font-display font-bold text-white leading-relaxed">
+                  <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    자기탐구와 창작은 반복하며 깊어지고, 그 경험은 새로운 가치로 확장됩니다.
+                  </span>
+                </p>
+                <p className="mt-4 text-xs sm:text-sm text-white/50 leading-relaxed font-light">
+                  5단계는 고정된 일방통행의 경로가 아니라 서로 순환하며 깊어지는 성장 과정입니다. 풍요확장은 수익의 보장이 아닌, 자신의 고유한 경험과 지식이 세상과 만나 사회적·경제적 가치로 확장되는 열린 가능성을 의미합니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* 4. Instructor Section */}
       <section className="py-32 px-6 max-w-7xl mx-auto">
