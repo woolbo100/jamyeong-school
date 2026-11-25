@@ -99,7 +99,7 @@ export default function AboutPage() {
 
             {/* 4. 통찰 및 핵심 강조 메시지 박스 */}
             <Reveal delayMs={450}>
-              <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-white/[0.02] border border-antiqueGold/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)] max-w-3xl mx-auto space-y-5">
+              <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-[#141211]/80 backdrop-blur-sm border border-antiqueGold/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)] max-w-3xl mx-auto space-y-5">
                 <p className="text-base sm:text-lg md:text-xl text-white/75 font-light leading-relaxed break-keep">
                   AI 시대의 진정한 경쟁력은
                   <br className="hidden sm:inline" />
@@ -160,7 +160,7 @@ export default function AboutPage() {
 
           {/* 4 Self-Inquiry Questions (Quote Style) */}
           <Reveal delayMs={200}>
-            <blockquote className="my-8 md:my-10 p-6 md:p-8 rounded-2xl bg-white/[0.02] border-l-4 border-antiqueGold border border-white/5 space-y-3 md:space-y-4">
+            <blockquote className="my-8 md:my-10 p-6 md:p-8 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border-l-4 border-antiqueGold border border-antiqueGold/20 space-y-3 md:space-y-4">
               <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
                 나는 어떤 사람인가.
               </p>
@@ -217,7 +217,7 @@ export default function AboutPage() {
           {/* Conclusion Highlight */}
           <Reveal delayMs={350}>
             <div className="pt-6 break-keep">
-              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-transparent border border-antiqueGold/30">
+              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-transparent border border-antiqueGold/30">
                 <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                     나를 아는 것이 모든 성장의 출발점입니다.
@@ -260,7 +260,7 @@ export default function AboutPage() {
               </p>
 
               {/* 3 Questions (Centered Subtle Box) */}
-              <div className="max-w-2xl mx-auto p-8 sm:p-10 rounded-2xl bg-white/[0.02] border border-antiqueGold/25 shadow-lg space-y-5">
+              <div className="max-w-2xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-antiqueGold/25 shadow-lg space-y-5">
                 <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
                   나는 무엇을 만들고 싶은가?
                 </p>
@@ -320,7 +320,7 @@ export default function AboutPage() {
 
               {/* Bottom Tagline */}
               <div className="relative z-10 pt-4">
-                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/[0.03] border border-white/10 text-antiqueGold font-medium text-sm sm:text-base tracking-wide shadow-sm break-keep">
+                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-antiqueGold/10 border border-antiqueGold/25 text-antiqueGold font-medium text-sm sm:text-base tracking-wide shadow-sm break-keep">
                   나를 이해하고 · 나를 표현하고 · 세상과 나누다
                 </div>
               </div>
@@ -335,7 +335,7 @@ export default function AboutPage() {
         <div className="site-container">
           <Reveal>
             {/* Main Outer Rounded Container */}
-            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-white/10 bg-[#121118]/80 backdrop-blur-md shadow-2xl relative">
+            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-antiqueGold/20 bg-[#141211]/85 backdrop-blur-md shadow-2xl relative">
             {/* Top Label & Title */}
             <div className="text-center space-y-2 mb-10">
               <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
@@ -353,10 +353,10 @@ export default function AboutPage() {
             <div className="flex flex-col items-center space-y-4">
               {/* 1. Philosophy Area */}
               <div className="text-center space-y-2 max-w-xl">
-                <span className="inline-block px-3.5 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium tracking-wide">
+                <span className="inline-block px-3.5 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/25 text-antiqueGold text-xs font-medium tracking-wide">
                   변하지 않는 철학
                 </span>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep pt-1">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-[#B89B6A] tracking-tight break-keep pt-1">
                   나를 아는 것이 모든 성장의 출발점
                 </h3>
               </div>
@@ -367,7 +367,7 @@ export default function AboutPage() {
               </div>
 
               {/* 2. Customer Promise Area (Wide Rounded Card) */}
-              <div className="w-full max-w-2xl p-6 sm:p-7 rounded-2xl border border-antiqueGold/30 bg-white/[0.02] text-center space-y-2.5 shadow-sm">
+              <div className="w-full max-w-2xl p-6 sm:p-7 rounded-2xl border border-antiqueGold/25 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2.5 shadow-sm">
                 <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/10 text-antiqueGold text-xs font-medium tracking-wide">
                   고객에게 전하는 약속
                 </span>
@@ -384,20 +384,20 @@ export default function AboutPage() {
               {/* 3. 3 Pillars Area (3 Equal Columns) */}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
                 {/* Pillar 1 */}
-                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
-                  <h4 className="text-lg font-bold text-white font-display">자기이해</h4>
+                <div className="p-6 rounded-2xl border border-antiqueGold/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-antiqueGold/45 hover:bg-[#181513]/90 transition-all duration-300">
+                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">자기이해</h4>
                   <p className="text-sm text-antiqueGold/90 font-medium">마음공부·코칭</p>
                 </div>
 
                 {/* Pillar 2 */}
-                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
-                  <h4 className="text-lg font-bold text-white font-display">창작과 표현</h4>
+                <div className="p-6 rounded-2xl border border-antiqueGold/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-antiqueGold/45 hover:bg-[#181513]/90 transition-all duration-300">
+                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">창작과 표현</h4>
                   <p className="text-sm text-antiqueGold/90 font-medium">책·아트·영상</p>
                 </div>
 
                 {/* Pillar 3 */}
-                <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] text-center space-y-2 hover:border-antiqueGold/40 transition-colors">
-                  <h4 className="text-lg font-bold text-white font-display">가치확장</h4>
+                <div className="p-6 rounded-2xl border border-antiqueGold/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-antiqueGold/45 hover:bg-[#181513]/90 transition-all duration-300">
+                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">가치확장</h4>
                   <p className="text-sm text-antiqueGold/90 font-medium">브랜딩·지식창업</p>
                 </div>
               </div>
@@ -512,46 +512,46 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 1: 탐구 (Top) */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-antiqueGold/25 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/45 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ① 탐구
                   </span>
-                  <h4 className="text-white font-medium text-base">나에게 질문하기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">나에게 질문하기</h4>
                 </div>
 
                 {/* Step 2: 표현 (Right) */}
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-antiqueGold/25 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/45 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ② 표현
                   </span>
-                  <h4 className="text-white font-medium text-base">글·그림·영상으로 만들기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">글·그림·영상으로 만들기</h4>
                 </div>
 
                 {/* Step 3: 발견 (Bottom) */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-antiqueGold/25 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/45 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ③ 발견
                   </span>
-                  <h4 className="text-white font-medium text-base">감정·취향·신념 알아차리기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">감정·취향·신념 알아차리기</h4>
                 </div>
 
                 {/* Step 4: 재해석 (Left) */}
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-white/10 bg-[#121118]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/50 transition-all duration-300">
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-antiqueGold/25 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-antiqueGold/45 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ④ 재해석
                   </span>
-                  <h4 className="text-white font-medium text-base">나를 새롭게 이해하기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">나를 새롭게 이해하기</h4>
                 </div>
               </div>
 
               {/* Mobile: Vertical Responsive Flow */}
               <div className="block md:hidden max-w-sm mx-auto space-y-3">
                 {/* Step 1 */}
-                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                <div className="p-4 rounded-xl border border-antiqueGold/20 bg-[#141211]/90 text-center">
                   <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
                     ① 탐구
                   </span>
-                  <h4 className="text-white font-medium text-base">나에게 질문하기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">나에게 질문하기</h4>
                 </div>
 
                 <div className="flex justify-center text-antiqueGold/80">
@@ -559,11 +559,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 2 */}
-                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                <div className="p-4 rounded-xl border border-antiqueGold/20 bg-[#141211]/90 text-center">
                   <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
                     ② 표현
                   </span>
-                  <h4 className="text-white font-medium text-base">글·그림·영상으로 만들기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">글·그림·영상으로 만들기</h4>
                 </div>
 
                 <div className="flex justify-center text-antiqueGold/80">
@@ -581,11 +581,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 3 */}
-                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                <div className="p-4 rounded-xl border border-antiqueGold/20 bg-[#141211]/90 text-center">
                   <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
                     ③ 발견
                   </span>
-                  <h4 className="text-white font-medium text-base">감정·취향·신념 알아차리기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">감정·취향·신념 알아차리기</h4>
                 </div>
 
                 <div className="flex justify-center text-antiqueGold/80">
@@ -593,11 +593,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="p-4 rounded-xl border border-white/10 bg-white/[0.03] text-center">
+                <div className="p-4 rounded-xl border border-antiqueGold/20 bg-[#141211]/90 text-center">
                   <span className="inline-block px-2.5 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs mb-1.5">
                     ④ 재해석
                   </span>
-                  <h4 className="text-white font-medium text-base">나를 새롭게 이해하기</h4>
+                  <h4 className="text-[#B89B6A] font-medium text-base">나를 새롭게 이해하기</h4>
                 </div>
 
                 {/* Loop Back Indicator */}
@@ -933,7 +933,7 @@ export default function AboutPage() {
               </div>
 
               {/* Main Emphasized Quote */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-antiqueGold/30">
+              <div className="p-6 sm:p-8 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-antiqueGold/30 shadow-lg">
                 <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-relaxed">
                   마음을 이해하고, AI로 표현하며, 삶을 창작하는 배움의 방식입니다.
                 </p>
@@ -1032,15 +1032,15 @@ export default function AboutPage() {
               },
             ].map((card, idx) => (
               <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
-                <div className="h-full rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-antiqueGold/40 hover:bg-white/[0.05] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div className="h-full rounded-[2rem] bg-[#141211]/75 backdrop-blur-sm border border-antiqueGold/20 hover:border-antiqueGold/45 hover:bg-[#181513]/90 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between overflow-hidden group shadow-lg hover:shadow-[0_20px_40px_rgba(184,155,106,0.12)]">
                   {/* 16:9 Aspect Ratio Image / Visual Slot */}
-                  <div className="relative aspect-video w-full bg-gradient-to-br from-[#1c1a24] to-[#0E0E14] border-b border-white/5 overflow-hidden flex items-center justify-center group-hover:brightness-110 transition-all">
+                  <div className="relative aspect-video w-full bg-gradient-to-br from-[#1c1714] via-[#141211] to-[#0d0c0b] border-b border-antiqueGold/15 overflow-hidden flex items-center justify-center group-hover:brightness-110 transition-all">
                     {/* Ambient Glow */}
                     <div className="absolute inset-0 bg-radial from-antiqueGold/15 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
                     
                     {/* Card Visual Placeholder */}
                     <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                      <div className="w-11 h-11 rounded-xl bg-antiqueGold/10 border border-antiqueGold/20 flex items-center justify-center text-antiqueGold group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                      <div className="w-11 h-11 rounded-xl bg-antiqueGold/10 border border-antiqueGold/25 flex items-center justify-center text-antiqueGold group-hover:scale-110 transition-transform duration-300 shadow-sm">
                         {card.icon}
                       </div>
                       <span className="text-[11px] font-display font-medium text-antiqueGold/70 tracking-widest uppercase">
@@ -1058,7 +1058,7 @@ export default function AboutPage() {
                       <span className="text-xs font-display font-bold tracking-widest text-antiqueGold uppercase block mb-2">
                         {card.cardNum}
                       </span>
-                      <h3 className="text-xl font-bold text-white group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                      <h3 className="text-xl font-bold text-[#B89B6A] group-hover:text-champagneGold transition-colors break-keep leading-snug">
                         {card.title}
                       </h3>
                     </div>
@@ -1066,7 +1066,7 @@ export default function AboutPage() {
                     {/* 3 Step Breakdown */}
                     <div className="space-y-4 pt-1">
                       {/* 1. 자기성찰 질문 */}
-                      <div className="p-3.5 rounded-xl bg-antiqueGold/[0.04] border border-antiqueGold/20 space-y-1">
+                      <div className="p-3.5 rounded-xl bg-antiqueGold/[0.06] border border-antiqueGold/25 space-y-1">
                         <span className="text-[11px] font-bold tracking-wider text-antiqueGold uppercase block">
                           ✦ 자기성찰 질문
                         </span>
@@ -1103,7 +1103,7 @@ export default function AboutPage() {
 
           {/* Bottom Message */}
           <Reveal delayMs={350}>
-            <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-white/[0.02] border border-antiqueGold/25 shadow-lg max-w-3xl mx-auto text-center space-y-4">
+            <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-[#141211]/80 backdrop-blur-sm border border-antiqueGold/25 shadow-lg max-w-3xl mx-auto text-center space-y-4">
               <p className="text-base sm:text-lg text-white/75 font-light leading-relaxed break-keep">
                 창작은 단순히 결과물을 만드는 일이 아닙니다.
               </p>
@@ -1387,20 +1387,20 @@ export default function AboutPage() {
               ].map((step, idx) => (
                 <Reveal key={idx} delayMs={idx * 100}>
                   <div className="relative h-full">
-                    <div className="p-6 rounded-2xl border border-white/10 bg-[#121118]/90 hover:border-antiqueGold/50 transition-all duration-300 flex flex-col items-center text-center h-full group shadow-lg">
-                      <span className="text-xs font-mono font-bold text-antiqueGold/90 tracking-widest px-2.5 py-0.5 rounded-full bg-antiqueGold/10 mb-4 border border-antiqueGold/20">
+                    <div className="p-6 rounded-2xl border border-antiqueGold/20 bg-[#141211]/90 backdrop-blur-sm hover:border-antiqueGold/45 hover:bg-[#181513]/90 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(184,155,106,0.12)] transition-all duration-500 flex flex-col items-center text-center h-full group">
+                      <span className="text-xs font-mono font-bold text-antiqueGold tracking-widest px-2.5 py-0.5 rounded-full bg-antiqueGold/10 mb-4 border border-antiqueGold/25">
                         {step.num}
                       </span>
-                      <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-antiqueGold/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-antiqueGold/50 transition-all duration-300">
+                      <div className="w-14 h-14 rounded-2xl bg-antiqueGold/[0.06] border border-antiqueGold/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-antiqueGold/50 group-hover:bg-antiqueGold/10 transition-all duration-300">
                         {step.icon}
                       </div>
-                      <h4 className="text-lg font-bold text-white mb-2 font-display">{step.title}</h4>
-                      <p className="text-xs sm:text-sm text-white/60 leading-relaxed break-keep font-light">{step.desc}</p>
+                      <h4 className="text-lg font-bold text-[#B89B6A] mb-2 font-display group-hover:text-champagneGold transition-colors duration-300">{step.title}</h4>
+                      <p className="text-xs sm:text-sm text-white/70 leading-relaxed break-keep font-light">{step.desc}</p>
                     </div>
 
                     {/* Connecting Arrow for Desktop */}
                     {idx < 4 && (
-                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-[#0b0b10] border border-antiqueGold/40 flex items-center justify-center shadow-md pointer-events-none">
+                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-[#141211] border border-antiqueGold/45 flex items-center justify-center shadow-md pointer-events-none">
                         <ArrowRight className="w-3.5 h-3.5 text-antiqueGold" />
                       </div>
                     )}
@@ -1445,25 +1445,25 @@ export default function AboutPage() {
               ].map((step, idx) => (
                 <div key={idx} className="space-y-3">
                   <Reveal delayMs={idx * 100}>
-                    <div className="p-5 rounded-2xl border border-white/10 bg-[#121118]/90 flex items-center gap-4 shadow-md">
-                      <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-antiqueGold/25 flex items-center justify-center shrink-0">
+                    <div className="p-5 rounded-2xl border border-antiqueGold/20 bg-[#141211]/90 flex items-center gap-4 shadow-md hover:border-antiqueGold/40 transition-colors">
+                      <div className="w-12 h-12 rounded-xl bg-antiqueGold/[0.06] border border-antiqueGold/30 flex items-center justify-center shrink-0">
                         {step.icon}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-mono font-bold text-antiqueGold/80 tracking-wider">
+                          <span className="text-xs font-mono font-bold text-antiqueGold tracking-wider">
                             {step.num}
                           </span>
-                          <h4 className="text-base font-bold text-white font-display">{step.title}</h4>
+                          <h4 className="text-base font-bold text-[#B89B6A] font-display">{step.title}</h4>
                         </div>
-                        <p className="text-xs sm:text-sm text-white/60 leading-relaxed break-keep font-light">
+                        <p className="text-xs sm:text-sm text-white/70 leading-relaxed break-keep font-light">
                           {step.desc}
                         </p>
                       </div>
                     </div>
                   </Reveal>
                   {idx < 4 && (
-                    <div className="flex justify-center text-antiqueGold/60 py-0.5">
+                    <div className="flex justify-center text-antiqueGold/70 py-0.5">
                       <ArrowDown className="w-4 h-4" />
                     </div>
                   )}
@@ -1478,34 +1478,34 @@ export default function AboutPage() {
               {/* Dual Growth Pathways: 자기실현 vs 가치 창출 */}
               <div className="grid sm:grid-cols-2 gap-6 text-left">
                 {/* Pathway A */}
-                <div className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3 hover:border-antiqueGold/30 transition-colors">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium">
+                <div className="p-7 rounded-2xl bg-[#141211]/75 backdrop-blur-sm border border-antiqueGold/20 space-y-3 hover:border-antiqueGold/40 hover:bg-[#181513]/90 hover:shadow-[0_10px_25px_rgba(184,155,106,0.08)] transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/25 text-antiqueGold text-xs font-medium">
                     <span>성장 방향 A</span>
                     <span>·</span>
                     <span>자기실현</span>
                   </div>
-                  <h4 className="text-lg font-bold text-white font-display">내면의 성장과 창작의 기쁨</h4>
-                  <p className="text-sm text-white/70 font-light leading-relaxed break-keep">
+                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">내면의 성장과 창작의 기쁨</h4>
+                  <p className="text-sm text-white/75 font-light leading-relaxed break-keep">
                     내면의 성장, 자유로운 자기표현, 창작의 순수한 즐거움을 통해 나다운 삶의 방향을 주체적으로 설계합니다.
                   </p>
                 </div>
 
                 {/* Pathway B */}
-                <div className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3 hover:border-antiqueGold/30 transition-colors">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium">
+                <div className="p-7 rounded-2xl bg-[#141211]/75 backdrop-blur-sm border border-antiqueGold/20 space-y-3 hover:border-antiqueGold/40 hover:bg-[#181513]/90 hover:shadow-[0_10px_25px_rgba(184,155,106,0.08)] transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/25 text-antiqueGold text-xs font-medium">
                     <span>성장 방향 B</span>
                     <span>·</span>
                     <span>가치 창출</span>
                   </div>
-                  <h4 className="text-lg font-bold text-white font-display">전문성과 지식 자산화</h4>
-                  <p className="text-sm text-white/70 font-light leading-relaxed break-keep">
+                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">전문성과 지식 자산화</h4>
+                  <p className="text-sm text-white/75 font-light leading-relaxed break-keep">
                     축적된 경험과 재능을 책·콘텐츠·퍼스널 브랜드로 발전시키고, 교육 및 코칭 전문가로서 새로운 기회와 가치를 만듭니다.
                   </p>
                 </div>
               </div>
 
               {/* Concluding Philosophy Box */}
-              <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-antiqueGold/10 border border-antiqueGold/30 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center space-y-3">
+              <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-antiqueGold/10 backdrop-blur-sm border border-antiqueGold/30 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center space-y-3">
                 <p className="text-lg md:text-xl font-display font-bold text-white leading-relaxed">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                     자기이해에서 시작하여, 창작을 통해 가능성을 발견하고, 자신만의 삶과 가치로 확장합니다.
@@ -1854,26 +1854,26 @@ export default function AboutPage() {
               },
             ].map((card, idx) => (
               <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
-                <div className="h-full p-8 sm:p-9 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-antiqueGold/40 hover:bg-white/[0.05] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div className="h-full p-8 sm:p-9 rounded-[2rem] bg-[#141211]/75 backdrop-blur-sm border border-antiqueGold/20 hover:border-antiqueGold/45 hover:bg-[#181513]/90 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(184,155,106,0.12)] transition-all duration-500 flex flex-col justify-between group">
                   <div>
                     {/* Top: Icon & Number Badge */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-2xl bg-antiqueGold/10 border border-antiqueGold/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                      <div className="w-12 h-12 rounded-2xl bg-antiqueGold/[0.06] border border-antiqueGold/25 flex items-center justify-center group-hover:scale-110 group-hover:border-antiqueGold/45 transition-transform duration-300 shadow-sm text-antiqueGold">
                         {card.icon}
                       </div>
-                      <span className="font-display text-xs font-bold tracking-widest text-antiqueGold/60 border border-antiqueGold/20 px-3 py-1 rounded-full bg-antiqueGold/5">
+                      <span className="font-display text-xs font-bold tracking-widest text-antiqueGold border border-antiqueGold/25 px-3 py-1 rounded-full bg-antiqueGold/10">
                         {card.num}
                       </span>
                     </div>
 
                     {/* Card Title */}
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-4 group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#B89B6A] mb-4 group-hover:text-champagneGold transition-colors break-keep leading-snug">
                       {card.title}
                     </h3>
                   </div>
 
                   {/* Card Description (16px 이상) */}
-                  <p className="text-base text-white/70 font-light leading-relaxed sm:leading-loose break-keep pt-2">
+                  <p className="text-base text-white/75 font-light leading-relaxed sm:leading-loose break-keep pt-2">
                     {card.desc}
                   </p>
                 </div>
@@ -1883,7 +1883,7 @@ export default function AboutPage() {
 
           {/* Bottom Core Message Box */}
           <Reveal delayMs={300} slideFrom="bottom">
-            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-14 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent border border-antiqueGold/30 text-center max-w-4xl mx-auto space-y-6 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
+            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-14 rounded-3xl bg-gradient-to-b from-[#141211]/90 via-[#141211]/60 to-transparent backdrop-blur-sm border border-antiqueGold/30 text-center max-w-4xl mx-auto space-y-6 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
               {/* Subtle Ambient Glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
 
