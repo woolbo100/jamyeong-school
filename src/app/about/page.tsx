@@ -52,6 +52,76 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* New Section 01: AI 시대의 자기이해 (The Question of Our Time) */}
+      <section className="relative py-24 sm:py-32 lg:py-36 px-4 sm:px-6 lg:px-8 border-b border-white/5 overflow-hidden">
+        {/* Warm Ambient Subtle Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-antiqueGold/5 blur-3xl pointer-events-none rounded-full" />
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-12 sm:space-y-14">
+          {/* 1. 영문 소제목 */}
+          <Reveal>
+            <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
+              THE QUESTION OF OUR TIME
+            </span>
+          </Reveal>
+
+          {/* 2. 핵심 질문 1 & 2 */}
+          <Reveal delayMs={150}>
+            <div className="space-y-6 sm:space-y-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                AI 시대, 당신은 자신을 얼마나 알고 있나요?
+              </h2>
+
+              <div className="w-12 h-px bg-antiqueGold/35 mx-auto" />
+
+              <div className="space-y-3">
+                <p className="text-base sm:text-lg md:text-xl text-white/70 font-light tracking-wide break-keep">
+                  AI가 무엇이든 만들어 줄 수 있는 시대,
+                </p>
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] break-keep">
+                  당신은 무엇을 만들고 싶은 사람인가요?
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* 3. 보충 질문 */}
+          <Reveal delayMs={300}>
+            <p className="text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed sm:leading-loose max-w-2xl mx-auto break-keep">
+              무엇을 좋아하고, 무엇을 잘하며,
+              <br className="hidden sm:inline" />
+              어떤 삶을 살아가고 싶은지 알고 있나요?
+            </p>
+          </Reveal>
+
+          {/* 4. 통찰 및 핵심 강조 메시지 박스 */}
+          <Reveal delayMs={450}>
+            <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-white/[0.02] border border-antiqueGold/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)] max-w-3xl mx-auto space-y-5">
+              <p className="text-base sm:text-lg md:text-xl text-white/75 font-light leading-relaxed break-keep">
+                AI 시대의 진정한 경쟁력은
+                <br className="hidden sm:inline" />
+                기술을 익히는 속도에만 있지 않습니다.
+              </p>
+
+              <div className="w-10 h-px bg-antiqueGold/20 mx-auto" />
+
+              <p className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight break-keep pt-1">
+                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  자신을 이해하고, 자신만의 방향을 선택하는 힘입니다.
+                </span>
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 5. 마무리 핵심 메시지 */}
+          <Reveal delayMs={600}>
+            <p className="text-lg sm:text-xl md:text-2xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep">
+              마음에서 시작하는 AI, 나로부터 시작하는 미래.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Brand Story Section */}
       <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto space-y-12">
@@ -613,6 +683,254 @@ export default function AboutPage() {
             이 3가지를 통해 누구나 자신의 이야기를 브랜드로 만들 수 있도록 돕습니다.
           </p>
         </Reveal>
+      </section>
+
+      {/* New Section 02: 자명스쿨만의 독자적인 교육 영역 (Our Unique Approach) */}
+      <section className="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div className="max-w-5xl mx-auto space-y-16 sm:space-y-20">
+          {/* Section Header */}
+          <Reveal>
+            <div className="text-center space-y-4">
+              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
+                OUR UNIQUE APPROACH
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                자명스쿨만의{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  독자적인 교육 영역
+                </span>
+              </h2>
+              <p className="text-lg sm:text-xl text-white/70 font-light tracking-wide break-keep">
+                마음공부와 감성 창작, AI 기술이 만나는 곳
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 3-Circle Venn Diagram */}
+          <Reveal delayMs={200}>
+            <div className="relative w-full max-w-[620px] mx-auto px-2">
+              <svg
+                viewBox="0 0 680 620"
+                className="w-full h-auto select-none overflow-visible"
+                style={{ filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5))" }}
+              >
+                <defs>
+                  {/* 세이지 그린 그라디언트 (마음공부) */}
+                  <radialGradient id="sageGrad" cx="35%" cy="35%" r="65%">
+                    <stop offset="0%" stopColor="#8BA892" stopOpacity="0.30" />
+                    <stop offset="70%" stopColor="#6B8F71" stopOpacity="0.16" />
+                    <stop offset="100%" stopColor="#4D6B52" stopOpacity="0.06" />
+                  </radialGradient>
+
+                  {/* 샴페인 골드 그라디언트 (감성 창작) */}
+                  <radialGradient id="goldGrad" cx="65%" cy="35%" r="65%">
+                    <stop offset="0%" stopColor="#E2D4BE" stopOpacity="0.32" />
+                    <stop offset="70%" stopColor="#B89B6A" stopOpacity="0.18" />
+                    <stop offset="100%" stopColor="#8C6E3D" stopOpacity="0.06" />
+                  </radialGradient>
+
+                  {/* 차분한 라벤더 그라디언트 (AI 기술) */}
+                  <radialGradient id="lavenderGrad" cx="50%" cy="65%" r="65%">
+                    <stop offset="0%" stopColor="#B8A7D9" stopOpacity="0.30" />
+                    <stop offset="70%" stopColor="#9685B8" stopOpacity="0.16" />
+                    <stop offset="100%" stopColor="#6E5E8E" stopOpacity="0.06" />
+                  </radialGradient>
+
+                  {/* 중앙 코어 엠블럼 백드롭 */}
+                  <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#B89B6A" stopOpacity="0.35" />
+                    <stop offset="65%" stopColor="#0E0E14" stopOpacity="0.85" />
+                    <stop offset="100%" stopColor="#0B0B10" stopOpacity="0.96" />
+                  </radialGradient>
+                </defs>
+
+                {/* 1. 세 개의 동일한 크기 원 (반지름 180) */}
+                {/* 왼쪽 상단 원: 마음공부 (세이지 그린) */}
+                <circle
+                  cx="255"
+                  cy="245"
+                  r="180"
+                  fill="url(#sageGrad)"
+                  stroke="#7FA888"
+                  strokeWidth="1.75"
+                  strokeOpacity="0.8"
+                  style={{ mixBlendMode: "screen" }}
+                />
+
+                {/* 오른쪽 상단 원: 감성 창작 (샴페인 골드) */}
+                <circle
+                  cx="425"
+                  cy="245"
+                  r="180"
+                  fill="url(#goldGrad)"
+                  stroke="#C9B37E"
+                  strokeWidth="1.75"
+                  strokeOpacity="0.8"
+                  style={{ mixBlendMode: "screen" }}
+                />
+
+                {/* 하단 원: AI 기술 (차분한 라벤더) */}
+                <circle
+                  cx="340"
+                  cy="395"
+                  r="180"
+                  fill="url(#lavenderGrad)"
+                  stroke="#A293C2"
+                  strokeWidth="1.75"
+                  strokeOpacity="0.8"
+                  style={{ mixBlendMode: "screen" }}
+                />
+
+                {/* 은은한 내부 점선 보조 링 */}
+                <circle cx="255" cy="245" r="172" fill="none" stroke="#7FA888" strokeWidth="1" strokeDasharray="3 4" strokeOpacity="0.25" />
+                <circle cx="425" cy="245" r="172" fill="none" stroke="#C9B37E" strokeWidth="1" strokeDasharray="3 4" strokeOpacity="0.25" />
+                <circle cx="340" cy="395" r="172" fill="none" stroke="#A293C2" strokeWidth="1" strokeDasharray="3 4" strokeOpacity="0.25" />
+
+                {/* 2. 세 원의 텍스트 (경계선과 겹치지 않는 안락한 안전지대에 배치) */}
+                {/* 원 1 텍스트: 마음공부 (세이지 그린 영역) */}
+                <g transform="translate(185, 162)">
+                  <text
+                    x="0"
+                    y="0"
+                    textAnchor="middle"
+                    fill="#D8E8DB"
+                    fontSize="21"
+                    fontWeight="700"
+                    letterSpacing="0.02em"
+                    className="font-display"
+                    style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.8))" }}
+                  >
+                    마음공부
+                  </text>
+                  <text
+                    x="0"
+                    y="26"
+                    textAnchor="middle"
+                    fill="#98B8A0"
+                    fontSize="13.5"
+                    fontWeight="500"
+                    letterSpacing="0.05em"
+                    style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.6))" }}
+                  >
+                    자기이해 · 성찰
+                  </text>
+                </g>
+
+                {/* 원 2 텍스트: 감성 창작 (샴페인 골드 영역) */}
+                <g transform="translate(495, 162)">
+                  <text
+                    x="0"
+                    y="0"
+                    textAnchor="middle"
+                    fill="#F7EEDC"
+                    fontSize="21"
+                    fontWeight="700"
+                    letterSpacing="0.02em"
+                    className="font-display"
+                    style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.8))" }}
+                  >
+                    감성 창작
+                  </text>
+                  <text
+                    x="0"
+                    y="26"
+                    textAnchor="middle"
+                    fill="#D6C6A8"
+                    fontSize="13.5"
+                    fontWeight="500"
+                    letterSpacing="0.05em"
+                    style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.6))" }}
+                  >
+                    글 · 그림 · 음악 · 영상
+                  </text>
+                </g>
+
+                {/* 원 3 텍스트: AI 기술 (차분한 라벤더 영역) */}
+                <g transform="translate(340, 472)">
+                  <text
+                    x="0"
+                    y="0"
+                    textAnchor="middle"
+                    fill="#EFE9F7"
+                    fontSize="21"
+                    fontWeight="700"
+                    letterSpacing="0.02em"
+                    className="font-display"
+                    style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.8))" }}
+                  >
+                    AI 기술
+                  </text>
+                  <text
+                    x="0"
+                    y="26"
+                    textAnchor="middle"
+                    fill="#BDB0D4"
+                    fontSize="13.5"
+                    fontWeight="500"
+                    letterSpacing="0.05em"
+                    style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.6))" }}
+                  >
+                    표현 · 구현 · 실천
+                  </text>
+                </g>
+
+                {/* 3. 중앙 공통 교집합 엠블럼 (가장 중요한 시각 요소) */}
+                <g transform="translate(340, 292)">
+                  {/* 중앙 원형 하이라이트 뱃지 */}
+                  <circle cx="0" cy="0" r="56" fill="url(#coreGlow)" stroke="#B89B6A" strokeWidth="1.5" strokeOpacity="0.75" />
+                  <circle cx="0" cy="0" r="50" fill="none" stroke="#D6C6A8" strokeWidth="1" strokeDasharray="3 3" strokeOpacity="0.4" />
+
+                  {/* 중앙 텍스트 */}
+                  <text
+                    x="0"
+                    y="-4"
+                    textAnchor="middle"
+                    fill="#FFFFFF"
+                    fontSize="19"
+                    fontWeight="700"
+                    letterSpacing="0.06em"
+                    className="font-display"
+                    style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.95))" }}
+                  >
+                    자명스쿨
+                  </text>
+                  <text
+                    x="0"
+                    y="19"
+                    textAnchor="middle"
+                    fill="#E2D4BE"
+                    fontSize="11.5"
+                    fontWeight="600"
+                    letterSpacing="0.12em"
+                    style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.9))" }}
+                  >
+                    디지털마인드코칭
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </Reveal>
+
+          {/* Diagram Bottom Core Copy */}
+          <Reveal delayMs={350}>
+            <div className="max-w-3xl mx-auto space-y-6 text-center break-keep">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight">
+                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  마음을 이해하고, AI로 표현하며, 삶을 창작하다.
+                </span>
+              </h3>
+
+              <div className="space-y-4 text-white/80 text-base sm:text-lg leading-relaxed sm:leading-loose font-light">
+                <p className="font-normal text-white/90">
+                  자명스쿨은 마음공부와 기술 교육을 분리하지 않습니다.
+                </p>
+                <p>
+                  자신을 이해하는 과정에서 출발하여 감성 창작으로 내면을 표현하고, AI 기술로 자신의 가능성을 구체화하는 디지털마인드코칭 교육을 지향합니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* 3. 5 Elements System Section */}
