@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
-import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp } from "lucide-react";
+import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -1573,31 +1573,126 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Target Audience Section */}
-      <section className="py-24 bg-white/[0.02]">
+      {/* 5. Who We Are For (핵심 수강생 페르소나) Section */}
+      <section className="py-24 lg:py-32 bg-white/[0.02] border-t border-white/5">
         <div className="site-container">
-          <div className="py-16 px-6 sm:px-8 md:px-12 rounded-[3rem] border border-white/5 bg-white/[0.01] text-center">
-            <Reveal>
-              <h2 className="text-3xl md:text-4xl font-display mb-12">이런 분들에게 추천합니다</h2>
-              <div className="grid sm:grid-cols-2 gap-4 text-left">
-                {[
-                  "나만의 콘텐츠를 만들고 싶은 분",
-                  "AI로 수익을 만들고 싶은 분",
-                  "감성과 이야기를 표현하고 싶은 분",
-                  "강의 / 전자책 / 브랜드를 만들고 싶은 분",
-                  "새로운 삶의 방향을 찾고 있는 분",
-                  "디지털 도구를 가치 있게 쓰고 싶은 분",
-                  "나를 표현하고 가치를 전달하고 싶으신 분",
-                  "AI시대 마음과 기술을 융합하고 싶으신 분",
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] hover:border-white/15 hover:translate-x-1.5 transition-all duration-300 group cursor-default">
-                    <span className="text-antiqueGold text-lg leading-none group-hover:scale-150 transition-transform">●</span>
-                    <span className="text-white/80 font-light group-hover:text-white transition-colors">{item}</span>
+          {/* Top Label & Headline */}
+          <Reveal>
+            <div className="text-center space-y-4 mb-16 sm:mb-20">
+              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
+                WHO WE ARE FOR
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight break-keep">
+                혹시,{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  당신도 이런 마음인가요?
+                </span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                기술을 배우는 것보다 먼저,
+                <br className="hidden sm:inline" />
+                나만의 방향을 발견하고 싶은 당신에게.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 6 Persona Cards (PC: 3열 2행 / Tablet: 2열 / Mobile: 1열) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                num: "01",
+                icon: <Compass className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "AI 시대, 어디서부터 시작해야 할지 막막한 분",
+                desc: "AI 기술이 차갑고 낯설게 느껴지거나, 빠르게 변하는 기술 앞에서 조급함을 느끼지만 자신만의 속도로 배우고 싶은 분.",
+              },
+              {
+                num: "02",
+                icon: <Sparkles className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "AI는 배웠지만 나만의 이야기를 찾지 못한 분",
+                desc: "다양한 AI 도구와 사용법을 익혔지만 정작 무엇을 만들고, 어떤 방향으로 나아가야 할지 고민하는 분.",
+              },
+              {
+                num: "03",
+                icon: <Palette className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "마음속 이야기를 아름다운 작품으로 표현하고 싶은 분",
+                desc: "글, 그림, 음악, 영상을 통해 자신의 감정과 생각, 내면세계를 표현하고 싶은 분.",
+              },
+              {
+                num: "04",
+                icon: <Heart className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "나를 이해하고 새로운 삶을 설계하고 싶은 분",
+                desc: "오래된 신념과 반복되는 삶의 패턴을 돌아보고, 자신이 진정으로 원하는 삶과 새로운 가능성을 발견하고 싶은 분.",
+              },
+              {
+                num: "05",
+                icon: <BookOpen className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "나의 경험과 지식을 가치 있는 자산으로 만들고 싶은 분",
+                desc: "살아온 경험과 전문성, 재능과 관심사를 책, 콘텐츠, 퍼스널 브랜드, 디지털 서비스로 발전시키고 싶은 분.",
+              },
+              {
+                num: "06",
+                icon: <Users className="w-6 h-6 text-antiqueGold" strokeWidth={1.8} />,
+                title: "다른 사람의 성장과 창작을 돕는 전문가가 되고 싶은 분",
+                desc: "상담사, 코치, 강사, 작가 또는 새로운 진로를 준비하는 사람으로서 마음공부와 AI를 접목한 자신만의 교육 및 코칭 영역을 만들어 가고 싶은 분.",
+              },
+            ].map((card, idx) => (
+              <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+                <div className="h-full p-8 sm:p-9 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-antiqueGold/40 hover:bg-white/[0.05] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                  <div>
+                    {/* Top: Icon & Number Badge */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="w-12 h-12 rounded-2xl bg-antiqueGold/10 border border-antiqueGold/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        {card.icon}
+                      </div>
+                      <span className="font-display text-xs font-bold tracking-widest text-antiqueGold/60 border border-antiqueGold/20 px-3 py-1 rounded-full bg-antiqueGold/5">
+                        {card.num}
+                      </span>
+                    </div>
+
+                    {/* Card Title */}
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-4 group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                      {card.title}
+                    </h3>
                   </div>
-                ))}
-              </div>
-            </Reveal>
+
+                  {/* Card Description (16px 이상) */}
+                  <p className="text-base text-white/70 font-light leading-relaxed sm:leading-loose break-keep pt-2">
+                    {card.desc}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
           </div>
+
+          {/* Bottom Core Message Box */}
+          <Reveal delayMs={300} slideFrom="bottom">
+            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-14 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent border border-antiqueGold/30 text-center max-w-4xl mx-auto space-y-6 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
+              {/* Subtle Ambient Glow */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
+
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight break-keep leading-snug relative z-10">
+                당신에게 필요한 것은 더 많은 기술이 아니라,
+                <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent ml-1 sm:ml-2">
+                  자신만의 방향일지도 모릅니다.
+                </span>
+              </h3>
+
+              <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed sm:leading-loose break-keep max-w-2xl mx-auto relative z-10">
+                자명스쿨은 자신을 이해하고,
+                <br className="hidden sm:inline" />
+                마음속 가능성을 발견하며,
+                <br className="hidden sm:inline" />
+                그 가능성을 디지털 창작으로 현실화하는 여정에 함께합니다.
+              </p>
+
+              <div className="pt-2 relative z-10">
+                <p className="text-lg sm:text-xl md:text-2xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep">
+                  마음에서 시작하는 AI, 나로부터 시작하는 미래.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
