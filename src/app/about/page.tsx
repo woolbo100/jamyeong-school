@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
-import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart } from "lucide-react";
+import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart, Music, Eye } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -314,7 +314,7 @@ export default function AboutPage() {
               {/* Description */}
               <div className="relative z-10 max-w-2xl mx-auto">
                 <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed sm:leading-loose break-keep">
-                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 성장형 교육 플랫폼입니다.
+                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 마음에서 시작하는 AI 교육 플랫폼입니다.
                 </p>
               </div>
 
@@ -919,23 +919,202 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          {/* Diagram Bottom Core Copy */}
+          {/* Diagram Bottom Core Copy & Digital Mind Coaching Definition */}
           <Reveal delayMs={350}>
-            <div className="max-w-3xl mx-auto space-y-6 text-center break-keep">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight">
-                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                  마음을 이해하고, AI로 표현하며, 삶을 창작하다.
+            <div className="max-w-3xl mx-auto space-y-8 text-center break-keep">
+              {/* Sub-label & Title */}
+              <div className="space-y-3">
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
+                  DIGITAL MIND COACHING
                 </span>
-              </h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
+                  디지털마인드코칭이란?
+                </h3>
+              </div>
 
-              <div className="space-y-4 text-white/80 text-base sm:text-lg leading-relaxed sm:leading-loose font-light">
-                <p className="font-normal text-white/90">
-                  자명스쿨은 마음공부와 기술 교육을 분리하지 않습니다.
-                </p>
-                <p>
-                  자신을 이해하는 과정에서 출발하여 감성 창작으로 내면을 표현하고, AI 기술로 자신의 가능성을 구체화하는 디지털마인드코칭 교육을 지향합니다.
+              {/* Main Emphasized Quote */}
+              <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-antiqueGold/30">
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-relaxed">
+                  마음을 이해하고, AI로 표현하며, 삶을 창작하는 배움의 방식입니다.
                 </p>
               </div>
+
+              {/* Core Definition Body Paragraphs */}
+              <div className="space-y-5 text-white/80 text-base sm:text-lg leading-relaxed sm:leading-loose font-light text-left sm:text-center">
+                <p>
+                  디지털마인드코칭은 자기이해와 마음공부를 바탕으로 AI 및 디지털 창작 도구를 활용하여 자신의 감정, 생각, 재능, 가능성을 구체적인 결과물로 표현하고, 이를 자기성장과 삶의 실천으로 연결하는 교육 및 코칭 방법입니다.
+                </p>
+                <p>
+                  단순히 기술을 익히는 것을 넘어, 나를 발견하고 나만의 이야기를 만들며, 자신이 원하는 삶의 방향을 설계하도록 돕습니다.
+                </p>
+                <p className="font-normal text-white/90 pt-1">
+                  자명스쿨은 마음공부와 AI 기술을 별개의 영역으로 바라보지 않습니다. 창작을 통해 내면을 표현하고, 표현된 결과물을 통해 다시 자신을 이해하는 선순환을 추구합니다.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* New Section 03: 마음공부가 창작이 되는 순간 (FROM MIND TO CREATION) */}
+      <section className="py-24 lg:py-32 bg-white/[0.01] border-t border-white/5">
+        <div className="site-container space-y-16 sm:space-y-20">
+          {/* Section Header */}
+          <Reveal>
+            <div className="text-center space-y-4">
+              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
+                FROM MIND TO CREATION
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+                마음공부가{" "}
+                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  창작이 되는 순간
+                </span>
+              </h2>
+              <p className="text-lg sm:text-xl text-white/80 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+                내면의 발견이 눈에 보이는 창작물이 되고,
+                <br className="hidden sm:inline" />
+                그 창작물이 새로운 삶의 가능성으로 이어집니다.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* 6 Creative Showcase Cards (PC: 3열 2행 / Tablet: 2열 / Mobile: 1열) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                cardNum: "CARD 01",
+                icon: <BookOpen className="w-5 h-5 text-antiqueGold" />,
+                title: "나의 이야기를 발견하다",
+                question: "내가 살아온 시간 속에서 가장 의미 있었던 순간은 무엇인가요?",
+                mind: "삶의 경험과 감정, 가치관을 돌아보며 자신만의 이야기를 발견합니다.",
+                creation: "감성 에세이, 자전적 그림책, 나만의 종이책과 전자책",
+              },
+              {
+                cardNum: "CARD 02",
+                icon: <Palette className="w-5 h-5 text-antiqueGold" />,
+                title: "마음을 그림으로 표현하다",
+                question: "지금 나의 마음을 색과 이미지로 표현한다면 어떤 모습일까요?",
+                mind: "자신의 감정과 내면세계를 관찰하고 표현하는 시간을 갖습니다.",
+                creation: "AI 감성 아트, 감정 아트, 오라클 카드, 디지털 전시",
+              },
+              {
+                cardNum: "CARD 03",
+                icon: <Eye className="w-5 h-5 text-antiqueGold" />,
+                title: "원하는 미래를 시각화하다",
+                question: "나는 어떤 모습으로, 어떤 삶을 살아가고 싶은가요?",
+                mind: "자신의 가치관과 목표, 원하는 삶의 모습을 탐색합니다.",
+                creation: "AI 비전보드, 마인드무비, 미래 자아 시각화 영상",
+              },
+              {
+                cardNum: "CARD 04",
+                icon: <Music className="w-5 h-5 text-antiqueGold" />,
+                title: "나에게 쉼을 선물하다",
+                question: "지금 내 마음에 가장 필요한 것은 무엇인가요?",
+                mind: "명상과 자기관찰을 통해 자신의 마음을 살피고 휴식의 시간을 마련합니다.",
+                creation: "명상 음악, 힐링 플레이리스트, 수면 음악, 감성 영상",
+              },
+              {
+                cardNum: "CARD 05",
+                icon: <Sparkles className="w-5 h-5 text-antiqueGold" />,
+                title: "나만의 브랜드를 발견하다",
+                question: "나의 경험과 재능은 다른 사람에게 어떤 가치를 줄 수 있을까요?",
+                mind: "자신의 강점과 관심사, 삶의 경험과 전문성을 탐색합니다.",
+                creation: "퍼스널 브랜딩, 브랜드 스토리, SNS 콘텐츠, 브랜드 디자인",
+              },
+              {
+                cardNum: "CARD 06",
+                icon: <Compass className="w-5 h-5 text-antiqueGold" />,
+                title: "나의 지식을 가치로 만들다",
+                question: "내가 알고 있는 것과 경험한 것을 어떻게 세상과 나눌 수 있을까요?",
+                mind: "자신이 가진 지식과 경험의 가치를 발견하고 앞으로의 방향을 설계합니다.",
+                creation: "전자책, 디지털 상품, 교육 콘텐츠, 1인 디지털 서비스",
+              },
+            ].map((card, idx) => (
+              <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
+                <div className="h-full rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-antiqueGold/40 hover:bg-white/[0.05] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                  {/* 16:9 Aspect Ratio Image / Visual Slot */}
+                  <div className="relative aspect-video w-full bg-gradient-to-br from-[#1c1a24] to-[#0E0E14] border-b border-white/5 overflow-hidden flex items-center justify-center group-hover:brightness-110 transition-all">
+                    {/* Ambient Glow */}
+                    <div className="absolute inset-0 bg-radial from-antiqueGold/15 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+                    
+                    {/* Card Visual Placeholder */}
+                    <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center space-y-2">
+                      <div className="w-11 h-11 rounded-xl bg-antiqueGold/10 border border-antiqueGold/20 flex items-center justify-center text-antiqueGold group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        {card.icon}
+                      </div>
+                      <span className="text-[11px] font-display font-medium text-antiqueGold/70 tracking-widest uppercase">
+                        CREATIVE SHOWCASE
+                      </span>
+                    </div>
+
+                    {/* Subtle Grid Lines */}
+                    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:16px_16px]" />
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="p-7 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                    <div>
+                      <span className="text-xs font-display font-bold tracking-widest text-antiqueGold uppercase block mb-2">
+                        {card.cardNum}
+                      </span>
+                      <h3 className="text-xl font-bold text-white group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                        {card.title}
+                      </h3>
+                    </div>
+
+                    {/* 3 Step Breakdown */}
+                    <div className="space-y-4 pt-1">
+                      {/* 1. 자기성찰 질문 */}
+                      <div className="p-3.5 rounded-xl bg-antiqueGold/[0.04] border border-antiqueGold/20 space-y-1">
+                        <span className="text-[11px] font-bold tracking-wider text-antiqueGold uppercase block">
+                          ✦ 자기성찰 질문
+                        </span>
+                        <p className="text-sm font-medium text-white/95 leading-relaxed break-keep">
+                          "{card.question}"
+                        </p>
+                      </div>
+
+                      {/* 2. 마음공부 */}
+                      <div className="space-y-1 pl-1">
+                        <span className="text-xs font-bold text-white/50 block">
+                          마음공부
+                        </span>
+                        <p className="text-sm text-white/80 font-light leading-relaxed break-keep">
+                          {card.mind}
+                        </p>
+                      </div>
+
+                      {/* 3. 디지털 창작 */}
+                      <div className="space-y-1 pl-1 border-t border-white/5 pt-3">
+                        <span className="text-xs font-bold text-antiqueGold/90 block">
+                          디지털 창작
+                        </span>
+                        <p className="text-sm text-white/90 font-medium leading-relaxed break-keep">
+                          {card.creation}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Bottom Message */}
+          <Reveal delayMs={350}>
+            <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-white/[0.02] border border-antiqueGold/25 shadow-lg max-w-3xl mx-auto text-center space-y-4">
+              <p className="text-base sm:text-lg text-white/75 font-light leading-relaxed break-keep">
+                창작은 단순히 결과물을 만드는 일이 아닙니다.
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
+                <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                  나를 이해하고, 내 안의 가능성을 발견하며, 내가 원하는 삶을 구체적으로 만들어 가는 과정입니다.
+                </span>
+              </p>
+              <p className="text-xs text-white/40 font-light pt-2">
+                ※ 위 내용은 자명스쿨이 지향하는 교육 및 창작 활동의 예시입니다.
+              </p>
             </div>
           </Reveal>
         </div>
@@ -1295,15 +1474,46 @@ export default function AboutPage() {
 
           {/* Bottom Highlight & Educational Philosophy */}
           <Reveal delayMs={300}>
-            <div className="max-w-3xl mx-auto text-center space-y-4 pt-6 break-keep">
-              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-antiqueGold/10 border border-antiqueGold/30 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+            <div className="space-y-10 max-w-4xl mx-auto pt-4">
+              {/* Dual Growth Pathways: 자기실현 vs 가치 창출 */}
+              <div className="grid sm:grid-cols-2 gap-6 text-left">
+                {/* Pathway A */}
+                <div className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3 hover:border-antiqueGold/30 transition-colors">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium">
+                    <span>성장 방향 A</span>
+                    <span>·</span>
+                    <span>자기실현</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white font-display">내면의 성장과 창작의 기쁨</h4>
+                  <p className="text-sm text-white/70 font-light leading-relaxed break-keep">
+                    내면의 성장, 자유로운 자기표현, 창작의 순수한 즐거움을 통해 나다운 삶의 방향을 주체적으로 설계합니다.
+                  </p>
+                </div>
+
+                {/* Pathway B */}
+                <div className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3 hover:border-antiqueGold/30 transition-colors">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-antiqueGold/20 text-antiqueGold text-xs font-medium">
+                    <span>성장 방향 B</span>
+                    <span>·</span>
+                    <span>가치 창출</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white font-display">전문성과 지식 자산화</h4>
+                  <p className="text-sm text-white/70 font-light leading-relaxed break-keep">
+                    축적된 경험과 재능을 책·콘텐츠·퍼스널 브랜드로 발전시키고, 교육 및 코칭 전문가로서 새로운 기회와 가치를 만듭니다.
+                  </p>
+                </div>
+              </div>
+
+              {/* Concluding Philosophy Box */}
+              <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-antiqueGold/10 via-white/[0.02] to-antiqueGold/10 border border-antiqueGold/30 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center space-y-3">
                 <p className="text-lg md:text-xl font-display font-bold text-white leading-relaxed">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                    자기탐구와 창작은 반복하며 깊어지고, 그 경험은 새로운 가치로 확장됩니다.
+                    자기이해에서 시작하여, 창작을 통해 가능성을 발견하고, 자신만의 삶과 가치로 확장합니다.
                   </span>
                 </p>
-                <p className="mt-4 text-xs sm:text-sm text-white/50 leading-relaxed font-light">
-                  5단계는 고정된 일방통행의 경로가 아니라 서로 순환하며 깊어지는 성장 과정입니다. 풍요확장은 수익의 보장이 아닌, 자신의 고유한 경험과 지식이 세상과 만나 사회적·경제적 가치로 확장되는 열린 가능성을 의미합니다.
+                <p className="text-sm text-white/75 leading-relaxed font-light break-keep max-w-2xl mx-auto">
+                  자명스쿨은 모든 사람에게 획일적인 창업이나 수익을 요구하지 않습니다.
+                  자신의 목적에 따라 창작과 자기성장에 집중하거나, 이를 사회적·경제적 가치로 확장해 나가는 모든 여정을 존중하고 함께합니다.
                 </p>
               </div>
             </div>
@@ -1420,16 +1630,23 @@ export default function AboutPage() {
                 <span className="font-display tracking-[0.3em] text-xs uppercase">Professional Certifications</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight break-keep">
-                자명스쿨은 마음과 디지털 역량을 연결하는 <br className="hidden md:block" />
+                마음속 가능성을 <br className="hidden md:block" />
                 <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent font-bold inline-block px-1">
-                  5개의 전문 자격과정
+                  전문성으로 발전시키는 배움
                 </span>
-                을 운영합니다.
               </h2>
-              <p className="text-white/60 text-base md:text-lg font-light max-w-3xl mx-auto leading-relaxed break-keep">
-                한국디지털마인드코칭협회 공식 인증 커리큘럼을 통해 내면의 본질을 세우고,
-                디지털과 AI 기술로 세상에 가치를 전하는 전문 강사·지도사로 성장하세요.
-              </p>
+              <div className="max-w-3xl mx-auto space-y-4 text-white/70 text-base md:text-lg font-light leading-relaxed break-keep">
+                <p>
+                  자명스쿨의 AI 및 디지털 창작 교육은 단순한 도구 활용에 머무르지 않습니다.
+                  자신의 생각과 감정을 표현하고, 경험과 지식을 콘텐츠로 만들며, 나만의 브랜드와 전문성을 구축하기 위한 실질적인 창작 역량을 기르는 과정입니다.
+                </p>
+                <p className="text-white/85 font-normal">
+                  자기이해와 창작에서 출발하여 자신의 관심과 목적에 따라 전문 강사, 창작자, 지식창업가, 디지털마인드코치로 성장할 수 있는 교육 방향을 추구합니다.
+                </p>
+                <p className="text-antiqueGold text-sm pt-2 font-medium">
+                  한국디지털마인드코칭협회 공식 인증 커리큘럼 기반 5개 전문 자격과정
+                </p>
+              </div>
             </Reveal>
           </div>
 
@@ -1439,7 +1656,7 @@ export default function AboutPage() {
                 title: "디지털마인드코칭전문가",
                 badge: "제5원소 에테르",
                 category: "마인드 & 리더십",
-                desc: "무의식과 잠재력을 깨우고 디지털 시대 풍요로운 삶의 좌표를 이끄는 최고위 코칭 과정",
+                desc: "무의식과 잠재력을 깨우고 디지털 시대 풍요로운 삶의 좌표를 이끄는 전문 코칭 심화 과정",
                 image: "/images/icon/ether.png",
                 link: "/courses/abundance",
                 color: "text-[#A855F7]",
@@ -1450,8 +1667,8 @@ export default function AboutPage() {
               {
                 title: "AI브랜딩마스터강사",
                 badge: "제4원소 물",
-                category: "비즈니스 & 수익화",
-                desc: "고유한 가치와 AI 자동화 시스템을 결합하여 지속 가능한 디지털 수익 자산을 구축하는 과정",
+                category: "비즈니스 & 가치확장",
+                desc: "고유한 가치와 AI 디지털 시스템을 결합하여 지속 가능한 지식 자산을 구축하는 과정",
                 image: "/images/icon/water.png",
                 link: "/courses/water",
                 color: "text-water",
@@ -1463,7 +1680,7 @@ export default function AboutPage() {
                 title: "캔바콘텐츠마스터강사",
                 badge: "제3원소 공기",
                 category: "콘텐츠 & 강의",
-                desc: "캔바와 AI를 활용하여 시선을 사로잡는 고품격 비주얼 콘텐츠와 명품 강의 교안을 제작하는 과정",
+                desc: "캔바와 AI를 활용하여 시선을 사로잡는 고품격 비주얼 콘텐츠와 체계적으로 설계된 교육 자료를 제작하는 과정",
                 image: "/images/icon/air.png",
                 link: "/courses/air",
                 color: "text-air",
@@ -1487,7 +1704,7 @@ export default function AboutPage() {
                 title: "AI감성아트지도사",
                 badge: "제2원소 불",
                 category: "감정표현 & 아트",
-                desc: "감정과 내면 세계관을 최첨단 생성형 AI 아트로 시각화하고 실제 작품과 굿즈로 확장하는 과정",
+                desc: "감정과 내면 세계관을 가능성을 표현하는 AI 창작 기술로 시각화하고 실제 작품과 굿즈로 확장하는 과정",
                 image: "/images/icon/fire.png",
                 link: "/courses/fire",
                 color: "text-fire",
