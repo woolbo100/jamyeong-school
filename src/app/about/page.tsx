@@ -455,7 +455,7 @@ export default function AboutPage() {
               <div className="mt-8 sm:mt-10 w-full max-w-[1280px] mx-auto">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/about/mind-to-creation.webp"
+                    src="/images/about/mind-to-creation.webp?v=2"
                     alt="마음에서 시작된 창작, 삶의 가치로 이어지다 - 자명스쿨"
                     width={1920}
                     height={1080}
@@ -822,62 +822,132 @@ export default function AboutPage() {
         </div>
       </Reveal>
 
-      {/* 2. Philosophy Section */}
-      <section className="py-20 lg:py-24">
+      {/* 2. Philosophy & Digital Mind Coaching Integrated Section */}
+      <section className="py-20 lg:py-24 border-t border-white/5">
         <div className="site-container">
-          <Reveal>
-            <div className="text-center mb-16 px-4">
-              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
-                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
-                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
-                  OUR PHILOSOPHY
-                </span>
-                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep mb-6">
-                자명스쿨 철학
-              </h2>
-              <div className="w-20 h-1 bg-antiqueGold mx-auto rounded-full mb-8"></div>
-              <p className="text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-3xl mx-auto break-keep">
-                자명스쿨은 단순한 AI 기술 교육이 아닙니다. <br />
-                우리는 <span className="text-antiqueGold font-medium">‘마음’</span>을 이해하고 그것을 콘텐츠로 표현하며 <br />
-                삶과 수익으로 연결하는 교육을 합니다.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "마음을 구조화하는 힘",
-                desc: "추상적인 감정과 무의식을 구체적인 이야기의 틀로 정제합니다.",
-                icon: <Brain className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
-              },
-              {
-                title: "감정을 콘텐츠로 바꾸는 힘",
-                desc: "내면의 에너지를 AI라는 도구를 통해 세상에 없는 작품으로 창조합니다.",
-                icon: <Palette className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
-              },
-              {
-                title: "AI로 표현하고 확장하는 힘",
-                desc: "기술을 넘어 나만의 브랜드를 구축하고 영향력을 확장해 나갑니다.",
-                icon: <Rocket className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
-              },
-            ].map((item, idx) => (
-              <Reveal key={idx} delayMs={idx * 200}>
-                <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
-                  <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">{item.icon}</div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-[#B89B6A] transition-colors duration-300">{item.title}</h3>
-                  <p className="text-sm md:text-base text-white/60 leading-[1.7]">{item.desc}</p>
+          <div className="max-w-[1280px] mx-auto space-y-10 sm:space-y-12">
+            {/* 섹션 헤더 및 상단 설명 */}
+            <Reveal>
+              <div className="text-center px-4">
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    OUR PHILOSOPHY
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
                 </div>
-              </Reveal>
-            ))}
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep mb-6">
+                  자명스쿨의 교육 철학
+                </h2>
+                <div className="w-20 h-1 bg-antiqueGold mx-auto rounded-full mb-8" />
+                <div className="text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-3xl mx-auto break-keep space-y-1.5">
+                  <p>자명스쿨은 단순한 AI 기술 교육을 넘어,</p>
+                  <p>마음을 이해하고 그것을 콘텐츠로 표현하며</p>
+                  <p>삶의 성장과 경제적 가치로 연결하는 교육을 합니다.</p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 세 가지 교육 철학 카드 (최대 1280px, 균등 배열) */}
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {[
+                {
+                  title: "마음을 구조화하는 힘",
+                  desc: "추상적인 감정과 무의식을 구체적인 이야기의 틀로 정제합니다.",
+                  icon: <Brain className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+                },
+                {
+                  title: "감정을 콘텐츠로 바꾸는 힘",
+                  desc: "내면의 에너지를 AI라는 도구를 통해 세상에 없는 작품으로 창조합니다.",
+                  icon: <Palette className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+                },
+                {
+                  title: "AI로 표현하고 확장하는 힘",
+                  desc: "기술을 넘어 나만의 브랜드를 구축하고 영향력을 확장해 나갑니다.",
+                  icon: <Rocket className="w-12 h-12 text-[#B89B6A] drop-shadow-[0_0_12px_rgba(184,155,106,0.4)] mx-auto" strokeWidth={1.5} />,
+                },
+              ].map((item, idx) => (
+                <Reveal key={idx} delayMs={idx * 150}>
+                  <div className="h-full p-8 sm:p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group flex flex-col justify-between break-keep">
+                    <div>
+                      <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">
+                        {item.icon}
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-[#B89B6A] transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-white/70 leading-[1.7]">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 세 카드와 가로형 카드 사이 연결 하향 화살표 */}
+            <div className="flex justify-center text-antiqueGold/60 py-1">
+              <ArrowDown className="w-6 h-6 animate-pulse" />
+            </div>
+
+            {/* 디지털마인드코칭 가로형 강조 카드 */}
+            <Reveal delayMs={300}>
+              <div className="w-full max-w-[1280px] mx-auto py-10 sm:py-12 px-6 sm:px-12 rounded-[2rem] bg-[#141211]/90 backdrop-blur-sm border border-[#B89B6A]/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)] text-center break-keep">
+                {/* 영문 라벨 */}
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <span className="w-5 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    DIGITAL MIND COACHING
+                  </span>
+                  <span className="w-5 h-px bg-antiqueGold/40" />
+                </div>
+
+                {/* 카드 메인 제목: 32px */}
+                <h3 className="text-2xl sm:text-3xl md:text-[32px] font-display font-bold leading-[1.3] text-white tracking-tight mb-4">
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    디지털마인드코칭
+                  </span>
+                </h3>
+
+                {/* 핵심 강조 문구: 24px */}
+                <p className="text-xl sm:text-2xl font-display font-bold text-white/95 leading-[1.4] mb-6">
+                  마음을 이해하고, AI로 표현하며,
+                  <br className="hidden sm:inline" />{" "}
+                  삶을 창작하는 배움의 방식
+                </p>
+
+                {/* 은은한 골드 구분선 */}
+                <div className="w-16 h-px bg-antiqueGold/30 mx-auto mb-6 sm:mb-8" />
+
+                {/* 설명 문구: 18px, 줄간격 1.75, 최대 너비 1100px */}
+                <p className="max-w-[1100px] mx-auto text-base md:text-lg text-white/80 font-light leading-[1.75]">
+                  디지털마인드코칭은 자기이해와 마음공부를 바탕으로 AI 및 디지털 창작 도구를 활용하여 자신의 감정, 생각, 재능과 가능성을 구체적인 결과물로 표현하고, 이를 자기성장과 삶의 실천으로 연결하는 교육 및 코칭 방법입니다.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* 가로형 카드 외부 하단 마무리 */}
+            <Reveal delayMs={400}>
+              <div className="pt-4 sm:pt-6 text-center break-keep space-y-6 sm:space-y-8 max-w-[1100px] mx-auto">
+                {/* 일반 본문 설명: 18px */}
+                <div className="space-y-2 text-base md:text-lg text-white/80 font-light leading-[1.75]">
+                  <p>자명스쿨은 마음공부와 AI 기술을 별개의 영역으로 바라보지 않습니다.</p>
+                  <p>창작을 통해 내면을 표현하고, 표현된 결과물을 통해 다시 자신을 이해하는 선순환을 추구합니다.</p>
+                </div>
+
+                {/* 최종 강조 문구: 24px, 붓글씨 서체, 골드 그라데이션 */}
+                <div className="pt-2">
+                  <h4 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight">
+                    <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                      자신의 이야기를 작품으로,
+                      <br />
+                      자신의 가능성을 삶의 가치로.
+                    </span>
+                  </h4>
+                </div>
+              </div>
+            </Reveal>
           </div>
-          <Reveal delayMs={600}>
-            <p className="mt-16 text-center text-base md:text-lg text-antiqueGold/80 italic leading-[1.75]">
-              이 3가지를 통해 누구나 자신의 이야기를 브랜드로 만들 수 있도록 돕습니다.
-            </p>
-          </Reveal>
         </div>
       </section>
 
@@ -1111,38 +1181,14 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          {/* Diagram Bottom Core Copy & Digital Mind Coaching Definition */}
+          {/* Diagram Bottom Core Copy */}
           <Reveal delayMs={350}>
-            <div className="max-w-3xl mx-auto space-y-8 text-center break-keep">
-              {/* Sub-label & Title */}
-              <div className="space-y-3">
-                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
-                  DIGITAL MIND COACHING
-                </span>
-                <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight leading-[1.4]">
-                  디지털마인드코칭이란?
-                </h3>
-              </div>
-
-              {/* Main Emphasized Quote */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-lg">
-                <p className="text-xl sm:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-[1.4]">
-                  마음을 이해하고, AI로 표현하며, 삶을 창작하는 배움의 방식입니다.
-                </p>
-              </div>
-
-              {/* Core Definition Body Paragraphs */}
-              <div className="space-y-4 text-white/80 text-base md:text-lg leading-[1.75] font-light text-left sm:text-center">
-                <p>
-                  디지털마인드코칭은 자기이해와 마음공부를 바탕으로 AI 및 디지털 창작 도구를 활용하여 자신의 감정, 생각, 재능, 가능성을 구체적인 결과물로 표현하고, 이를 자기성장과 삶의 실천으로 연결하는 교육 및 코칭 방법입니다.
-                </p>
-                <p>
-                  단순히 기술을 익히는 것을 넘어, 나를 발견하고 나만의 이야기를 만들며, 자신이 원하는 삶의 방향을 설계하도록 돕습니다.
-                </p>
-                <p className="font-normal text-white/90 pt-1">
-                  자명스쿨은 마음공부와 AI 기술을 별개의 영역으로 바라보지 않습니다. 창작을 통해 내면을 표현하고, 표현된 결과물을 통해 다시 자신을 이해하는 선순환을 추구합니다.
-                </p>
-              </div>
+            <div className="max-w-3xl mx-auto text-center break-keep">
+              <p className="text-base md:text-lg text-white/80 font-light leading-[1.75]">
+                자명스쿨은 마음공부와 감성 창작, AI 기술이 유기적으로 만나는 교집합 속에서
+                <br className="hidden sm:inline" />{" "}
+                누구나 스스로를 밝히고 새로운 가치를 창출하도록 돕습니다.
+              </p>
             </div>
           </Reveal>
         </div>
