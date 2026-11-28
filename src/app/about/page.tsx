@@ -2223,35 +2223,104 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 7. Final CTA Section */}
+      {/* 7. Final CTA Section: STEP 12 마지막 CTA 영역 */}
       <section className="py-20 lg:py-24 bg-white/[0.02] border-t border-white/5">
         <div className="site-container">
-          <div className="max-w-4xl mx-auto text-center">
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-10 leading-[1.4] tracking-tight italic uppercase break-keep">
-              지금 당신의 <span className="text-antiqueGold">새로운 가능성</span>을 <br />
-              자명스쿨에서 시작하세요
-            </h2>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-              <Link
-                href="/courses"
-                className="group relative overflow-visible h-16 w-full sm:w-64 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
-              >
-                <span className="relative z-10">강의 보러가기</span>
-                <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-              </Link>
+          <div className="max-w-[1280px] mx-auto text-center space-y-10 sm:space-y-12">
+            {/* 1. 이미지 상단 헤더 및 설명 문구 */}
+            <Reveal>
+              <div className="space-y-6 sm:space-y-8">
+                {/* 영문 라벨 */}
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    START FROM WITHIN
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                </div>
 
-              <a
-                href="https://pf.kakao.com/_IxguMn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-16 w-full sm:w-64 px-8 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full border border-white/20 text-white hover:bg-white/5 transition-all duration-300"
-              >
-                무료특강 참여하기
-              </a>
-            </div>
-          </Reveal>
-        </div>
+                {/* 메인 제목 */}
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  나를 알고, 방향을 세우고,
+                  <br />
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    디지털로 현실화하는 시작
+                  </span>
+                </h2>
+
+                {/* 설명 문구 (18px, 줄간격 1.75, 메인 제목과 간격 24~32px) */}
+                <div className="max-w-3xl mx-auto space-y-2 text-base md:text-lg text-white/80 font-light leading-[1.75] break-keep">
+                  <p>AI 시대에 필요한 것은 더 빠른 기술만이 아닙니다.</p>
+                  <p>
+                    나를 이해하고, 방향을 잃지 않으며, 내면의 생각과 가능성을 표현하고
+                    <br className="hidden sm:inline" />{" "}
+                    그것을 삶의 변화와 새로운 가치로 연결하는 힘이 필요합니다.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 2. 가로형 신규 이미지 (상단 설명 문구와 간격 32~40px) */}
+            <Reveal delayMs={200}>
+              <div className="w-full max-w-[1280px] mx-auto">
+                <div className="relative w-full aspect-[21/9] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/about/cta-new-possibility.webp"
+                    alt="나를 알고, 방향을 세우고, 디지털로 현실화하는 시작 - 자명스쿨"
+                    width={1920}
+                    height={823}
+                    className="w-full h-full object-cover rounded-2xl"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                  />
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 3. 이미지 하단 CTA 메시지 (이미지와 간격 40~48px) */}
+            <Reveal delayMs={350}>
+              <div className="pt-2 sm:pt-4 space-y-5 sm:space-y-6">
+                {/* CTA 제목 */}
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  나로부터 시작하는 미래,
+                  <br />
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    자명스쿨에서 열어보세요.
+                  </span>
+                </h3>
+
+                {/* 설명 문구 (CTA 제목과 간격 24px) */}
+                <div className="max-w-3xl mx-auto space-y-1.5 text-base md:text-lg text-white/80 font-light leading-[1.75] break-keep">
+                  <p>자기이해에서 시작해 표현과 창작, 그리고 현실화로 이어지는 배움.</p>
+                  <p>
+                    당신만의 가능성을 발견하고, 원하는 삶을 만들어가는 여정을 자명스쿨과 함께 시작해 보세요.
+                  </p>
+                </div>
+
+                {/* 4. CTA 버튼 2개 (설명 문구와 간격 32px) */}
+                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-xs sm:max-w-none mx-auto">
+                  {/* 첫 번째 버튼: 자격과정 둘러보기 (골드 채움 스타일) */}
+                  <Link
+                    href="/apply"
+                    className="group relative overflow-visible h-14 w-full sm:w-64 flex items-center justify-center gap-2 text-sm font-bold tracking-wider rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
+                  >
+                    <span className="relative z-10">자격과정 둘러보기</span>
+                    <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full pointer-events-none" />
+                  </Link>
+
+                  {/* 두 번째 버튼: 원데이 클래스 둘러보기 (골드 아웃라인 스타일) */}
+                  <Link
+                    href="/oneday"
+                    className="group relative overflow-visible h-14 w-full sm:w-64 flex items-center justify-center gap-2 text-sm font-bold tracking-wider rounded-full border border-[#B89B6A] bg-transparent text-[#E2D4BE] hover:text-white hover:bg-[#B89B6A]/15 hover:border-[#D6C6A8] shadow-lg transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
+                  >
+                    <span className="relative z-10">원데이 클래스 둘러보기</span>
+                    <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="absolute -inset-1 bg-[#B89B6A] opacity-0 blur-md group-hover:opacity-25 transition-opacity duration-300 rounded-full pointer-events-none" />
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
     </div>
