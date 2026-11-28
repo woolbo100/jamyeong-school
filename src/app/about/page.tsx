@@ -2208,7 +2208,7 @@ export default function AboutPage() {
 
           {/* Bottom Core Message Box */}
           <Reveal delayMs={300} slideFrom="bottom">
-            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-14 rounded-3xl bg-gradient-to-b from-[#141211]/90 via-[#141211]/60 to-transparent backdrop-blur-sm border border-[#B89B6A]/25 text-center max-w-4xl mx-auto space-y-6 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
+            <div className="w-full max-w-[1280px] mx-auto mt-8 p-8 sm:p-12 md:p-14 rounded-3xl bg-gradient-to-b from-[#141211]/90 via-[#141211]/60 to-transparent backdrop-blur-sm border border-[#B89B6A]/25 text-center space-y-6 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
               {/* Subtle Ambient Glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
 
