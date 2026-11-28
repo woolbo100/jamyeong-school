@@ -1226,7 +1226,8 @@ export default function AboutPage() {
             {[
               {
                 cardNum: "CARD 01",
-                icon: <BookOpen className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-publishing.webp",
+                alt: "감성적인 삽화가 담긴 그림책과 출판 작품 예시",
                 title: "나의 이야기를 발견하다",
                 question: "내가 살아온 시간 속에서 가장 의미 있었던 순간은 무엇인가요?",
                 mind: "삶의 경험과 감정, 가치관을 돌아보며 자신만의 이야기를 발견합니다.",
@@ -1234,7 +1235,8 @@ export default function AboutPage() {
               },
               {
                 cardNum: "CARD 02",
-                icon: <Palette className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-emotional-art.webp",
+                alt: "내면의 감정을 표현한 AI 감성아트 작품 예시",
                 title: "마음을 그림으로 표현하다",
                 question: "지금 나의 마음을 색과 이미지로 표현한다면 어떤 모습일까요?",
                 mind: "자신의 감정과 내면세계를 관찰하고 표현하는 시간을 갖습니다.",
@@ -1242,7 +1244,8 @@ export default function AboutPage() {
               },
               {
                 cardNum: "CARD 03",
-                icon: <Eye className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-vision-board.webp",
+                alt: "원하는 미래와 삶의 모습을 시각화한 비전보드 예시",
                 title: "원하는 미래를 시각화하다",
                 question: "나는 어떤 모습으로, 어떤 삶을 살아가고 싶은가요?",
                 mind: "자신의 가치관과 목표, 원하는 삶의 모습을 탐색합니다.",
@@ -1250,7 +1253,8 @@ export default function AboutPage() {
               },
               {
                 cardNum: "CARD 04",
-                icon: <Music className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-healing-music.webp",
+                alt: "마음의 평온을 표현한 힐링음악 영상 예시",
                 title: "나에게 쉼을 선물하다",
                 question: "지금 내 마음에 가장 필요한 것은 무엇인가요?",
                 mind: "명상과 자기관찰을 통해 자신의 마음을 살피고 휴식의 시간을 마련합니다.",
@@ -1258,7 +1262,8 @@ export default function AboutPage() {
               },
               {
                 cardNum: "CARD 05",
-                icon: <Sparkles className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-branding.webp",
+                alt: "브랜드 아이덴티티와 패키지 디자인 창작 예시",
                 title: "나만의 브랜드를 발견하다",
                 question: "나의 경험과 재능은 다른 사람에게 어떤 가치를 줄 수 있을까요?",
                 mind: "자신의 강점과 관심사, 삶의 경험과 전문성을 탐색합니다.",
@@ -1266,7 +1271,8 @@ export default function AboutPage() {
               },
               {
                 cardNum: "CARD 06",
-                icon: <Compass className="w-5 h-5 text-antiqueGold" />,
+                image: "/images/about/creative-ebook.webp",
+                alt: "전자책 및 디지털 출판 상품 제작 예시",
                 title: "나의 지식을 가치로 만들다",
                 question: "내가 알고 있는 것과 경험한 것을 어떻게 세상과 나눌 수 있을까요?",
                 mind: "자신이 가진 지식과 경험의 가치를 발견하고 앞으로의 방향을 설계합니다.",
@@ -1275,23 +1281,16 @@ export default function AboutPage() {
             ].map((card, idx) => (
               <Reveal key={idx} delayMs={idx * 100} slideFrom="bottom">
                 <div className="h-full rounded-[2rem] bg-[#141211]/75 backdrop-blur-sm border border-[#B89B6A]/20 hover:border-[#B89B6A]/40 hover:bg-[#181513]/90 hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between overflow-hidden group shadow-lg hover:shadow-[0_20px_40px_rgba(184,155,106,0.12)]">
-                  {/* 16:9 Aspect Ratio Image / Visual Slot */}
-                  <div className="relative aspect-video w-full bg-gradient-to-br from-[#1c1714] via-[#141211] to-[#0d0c0b] border-b border-[#B89B6A]/15 overflow-hidden flex items-center justify-center group-hover:brightness-110 transition-all">
-                    {/* Ambient Glow */}
-                    <div className="absolute inset-0 bg-radial from-antiqueGold/15 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
-                    
-                    {/* Card Visual Placeholder */}
-                    <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                      <div className="w-11 h-11 rounded-xl bg-antiqueGold/10 border border-[#B89B6A]/25 flex items-center justify-center text-antiqueGold group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                        {card.icon}
-                      </div>
-                      <span className="text-[11px] font-display font-medium text-antiqueGold/70 tracking-widest uppercase">
-                        CREATIVE SHOWCASE
-                      </span>
-                    </div>
-
-                    {/* Subtle Grid Lines */}
-                    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:16px_16px]" />
+                  {/* 16:9 Aspect Ratio Image */}
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      width={1280}
+                      height={720}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
 
                   {/* Card Body */}
