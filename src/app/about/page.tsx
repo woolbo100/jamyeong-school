@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
-import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart, Music, Eye } from "lucide-react";
+import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart, Music, Eye, Sunrise, Flower2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "자명스쿨 소개 | AI로 마음을 그리다",
@@ -1072,6 +1072,70 @@ export default function AboutPage() {
                 </div>
               </div>
             </Reveal>
+
+            {/* 1. 우리가 믿는 네 가지 가치 (핵심 가치 카드 4열) */}
+            <div className="pt-6 sm:pt-8">
+              <Reveal delayMs={100}>
+                <div className="text-center mb-8 sm:mb-10">
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-antiqueGold">
+                    우리가 믿는 네 가지 가치
+                  </h3>
+                </div>
+              </Reveal>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "스스로 밝아지는 배움",
+                    desc: "배움은 정해진 답을 받아들이는 것이 아니라, 내 안의 가능성을 발견하고 스스로 삶의 방향을 선택하는 과정입니다.",
+                    icon: <Sunrise className="w-10 h-10 text-antiqueGold stroke-[1.5] mx-auto mb-5" />,
+                  },
+                  {
+                    title: "창작은 마음의 언어입니다",
+                    desc: "우리는 자신을 이해하기 위해 창작하고, 창작하는 과정에서 다시 자신을 발견합니다.",
+                    icon: <Palette className="w-10 h-10 text-antiqueGold stroke-[1.5] mx-auto mb-5" />,
+                  },
+                  {
+                    title: "각자의 속도와 방향을 존중합니다",
+                    desc: "모두에게 같은 성공과 성장을 요구하지 않습니다. 자신만의 속도로 자신에게 의미 있는 삶을 만들어갑니다.",
+                    icon: <Flower2 className="w-10 h-10 text-antiqueGold stroke-[1.5] mx-auto mb-5" />,
+                  },
+                  {
+                    title: "나의 빛이 세상의 가치로",
+                    desc: "내 안에서 발견한 지식과 경험, 창조성을 세상과 나누며 자신과 타인의 삶에 새로운 가치를 더합니다.",
+                    icon: <Sparkles className="w-10 h-10 text-antiqueGold stroke-[1.5] mx-auto mb-5" />,
+                  },
+                ].map((item, idx) => (
+                  <Reveal key={idx} delayMs={idx * 100}>
+                    <div className="h-full p-6 sm:p-8 rounded-[2rem] border border-[#B89B6A]/20 bg-[#141211]/60 backdrop-blur-sm hover:border-antiqueGold/50 hover:bg-[#141211]/80 hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300 text-center flex flex-col justify-start break-keep group">
+                      <div>
+                        <div className="transition-transform duration-300 group-hover:scale-105">
+                          {item.icon}
+                        </div>
+                        <h4 className="text-lg sm:text-[20px] font-bold mb-3 text-white">
+                          {item.title}
+                        </h4>
+                        <p className="text-sm sm:text-[16px] text-white/70 font-light leading-[1.75]">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+
+            {/* 핵심 가치 카드와 세 가지 힘 사이 연결 하향 화살표 및 중간 제목 */}
+            <div className="pt-8 sm:pt-10 text-center space-y-6">
+              <div className="flex justify-center text-antiqueGold/50">
+                <ArrowDown className="w-5 h-5 opacity-70" />
+              </div>
+              <Reveal delayMs={150}>
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-antiqueGold">
+                  이러한 가치를 실현하는 세 가지 힘
+                </h3>
+              </Reveal>
+            </div>
 
             {/* 세 가지 교육 철학 카드 (최대 1280px, 균등 배열) */}
             <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
