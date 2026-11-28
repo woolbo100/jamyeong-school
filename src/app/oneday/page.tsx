@@ -53,7 +53,7 @@ export default function OnedayPage() {
           2. ONEDAY CLASS CARDS GRID
          ──────────────────────── */}
       <section className="py-14 md:py-20 px-6">
-        <div className="site-container">
+        <div className="site-container max-w-[1280px] mx-auto">
           {/* 과정 개수 및 안내 라벨 */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#E8DFD3]">
             <div className="flex items-center gap-2">
@@ -67,8 +67,8 @@ export default function OnedayPage() {
             </span>
           </div>
 
-          {/* 8개 원데이 클래스 카드 그리드 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {/* 원데이 클래스 카드 그리드 (PC 3열 / 태블릿 2열 / 모바일 1열, 간격 24~32px) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8">
           {ONEDAY_CLASSES.map((item: OnedayClassItem) => {
             const isOpen = item.status === "open";
             const isScheduled = item.status === "scheduled";
@@ -89,9 +89,9 @@ export default function OnedayPage() {
             return (
               <div
                 key={item.id}
-                className="group relative rounded-[28px] p-7 md:p-8 flex flex-col justify-between transition-all duration-300 ease-out bg-white border border-[#E8DFD3] shadow-[0_4px_20px_rgba(46,39,35,0.04)] hover:shadow-[0_12px_32px_rgba(46,39,35,0.08)] hover:border-[#D6C6A8] hover:-translate-y-1"
+                className="group relative rounded-[28px] p-7 md:p-8 h-full flex flex-col justify-between transition-all duration-300 ease-out bg-white border border-[#E8DFD3] shadow-[0_4px_20px_rgba(46,39,35,0.04)] hover:shadow-[0_12px_32px_rgba(46,39,35,0.08)] hover:border-[#D6C6A8] hover:-translate-y-1"
               >
-                <div>
+                <div className="flex-1 flex flex-col">
                   {/* 상단: 카테고리 + 모집 상태 배지 */}
                   <div className="flex items-center justify-between gap-2 mb-5">
                     <span className="text-[11px] md:text-xs font-bold tracking-wider text-[#7C6656] uppercase">
@@ -171,7 +171,7 @@ export default function OnedayPage() {
                   )}
 
                   {/* 핵심 키워드 태그 */}
-                  <div className="flex flex-wrap gap-1.5 mb-8">
+                  <div className="flex flex-wrap gap-1.5 mt-auto mb-6">
                     {item.tags.map((tag, idx) => (
                       <span
                         key={idx}
@@ -184,7 +184,7 @@ export default function OnedayPage() {
                 </div>
 
                 {/* 하단: 신청 버튼 영역 */}
-                <div className="pt-4 border-t border-[#F2EAE0]">
+                <div className="pt-4 border-t border-[#F2EAE0] mt-auto">
                   {isOpen && item.applicationUrl ? (
                     <a
                       href={item.applicationUrl}
