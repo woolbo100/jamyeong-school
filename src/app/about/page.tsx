@@ -666,7 +666,7 @@ export default function AboutPage() {
             <div>
               {/* Desktop / Tablet: Circular Diagram (중앙 원과 좌우 카드 간격 40px 확보 및 궤도 확장) */}
               <div className="hidden md:block relative w-full max-w-[800px] h-[680px] mx-auto">
-                {/* Background Orbit Ring & Curved Arrows */}
+                {/* Background Orbit Ring & Curved Arrows (완전한 정원 형태 R=245 기준 대칭 순환) */}
                 <svg viewBox="0 0 800 680" className="absolute inset-0 w-full h-full pointer-events-none z-0">
                   <defs>
                     <marker
@@ -682,47 +682,46 @@ export default function AboutPage() {
                     </marker>
                   </defs>
 
-                  {/* Faint Orbit Ellipse */}
-                  <ellipse
+                  {/* Faint Orbit Circle (완전한 정원 점선) */}
+                  <circle
                     cx="400"
                     cy="340"
-                    rx="240"
-                    ry="220"
+                    r="245"
                     fill="none"
                     stroke="rgba(184,155,106,0.18)"
                     strokeDasharray="5 5"
                   />
 
-                  {/* 1 -> 2 Arrow (Top to Right) */}
+                  {/* 1 -> 2 Arrow (Top to Right, 정원 호 A 245 245) */}
                   <path
-                    d="M 485 140 A 240 220 0 0 1 565 290"
+                    d="M 537 137 A 245 245 0 0 1 627 248"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
                     markerEnd="url(#gold-arrow)"
                     className="opacity-80"
                   />
-                  {/* 2 -> 3 Arrow (Right to Bottom) */}
+                  {/* 2 -> 3 Arrow (Right to Bottom, 정원 호 A 245 245) */}
                   <path
-                    d="M 565 390 A 240 220 0 0 1 485 540"
+                    d="M 627 432 A 245 245 0 0 1 537 543"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
                     markerEnd="url(#gold-arrow)"
                     className="opacity-80"
                   />
-                  {/* 3 -> 4 Arrow (Bottom to Left) */}
+                  {/* 3 -> 4 Arrow (Bottom to Left, 정원 호 A 245 245) */}
                   <path
-                    d="M 315 540 A 240 220 0 0 1 235 390"
+                    d="M 263 543 A 245 245 0 0 1 173 432"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
                     markerEnd="url(#gold-arrow)"
                     className="opacity-80"
                   />
-                  {/* 4 -> 1 Arrow (Left to Top) */}
+                  {/* 4 -> 1 Arrow (Left to Top, 정원 호 A 245 245) */}
                   <path
-                    d="M 235 290 A 240 220 0 0 1 315 140"
+                    d="M 173 248 A 245 245 0 0 1 263 137"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
