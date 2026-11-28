@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <div className="bg-trueBlack min-h-screen font-sans selection:bg-antiqueGold/30 text-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 overflow-hidden">
         <HeroParticles />
         <div className="site-container relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
@@ -39,76 +39,109 @@ export default function AboutPage() {
                 </p>
               </div>
             </Reveal>
-            <Reveal delayMs={600}>
-              <div className="mt-12 flex justify-center">
-                <Link
-                  href="/courses"
-                  className="group relative overflow-visible h-14 px-10 flex items-center justify-center text-sm font-bold uppercase tracking-widest rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
-                >
-                  <span className="relative z-10">강의 보러가기</span>
-                  <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full" />
-                </Link>
-              </div>
-            </Reveal>
           </div>
+
+          {/* 신규 Hero 먹물 아트 이미지 */}
+          <Reveal delayMs={500}>
+            <div className="mt-8 md:mt-10 max-w-[1280px] mx-auto">
+              <div className="relative w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/about/jamyeong-digital-ink-art.webp"
+                  alt="자명스쿨 디지털 먹물 아트"
+                  width={1672}
+                  height={941}
+                  priority
+                  className="w-full h-auto object-contain rounded-2xl"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          {/* CTA 버튼 영역 */}
+          <Reveal delayMs={600}>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xs sm:max-w-none mx-auto">
+              {/* 버튼 1: 자격과정 둘러보기 (골드 배경) */}
+              <Link
+                href="/apply"
+                className="group relative overflow-visible h-14 w-full sm:w-64 flex items-center justify-center gap-2 text-sm font-bold tracking-wider rounded-full bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] shadow-2xl transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
+              >
+                <span className="relative z-10">자격과정 둘러보기</span>
+                <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="absolute -inset-2 bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] opacity-0 blur-xl group-hover:opacity-45 transition-opacity duration-300 rounded-full pointer-events-none" />
+              </Link>
+
+              {/* 버튼 2: 원데이 클래스 둘러보기 (투명 배경 + 골드 테두리 + 골드 텍스트) */}
+              <Link
+                href="/oneday"
+                className="group relative overflow-visible h-14 w-full sm:w-64 flex items-center justify-center gap-2 text-sm font-bold tracking-wider rounded-full border border-[#B89B6A] bg-transparent text-[#E2D4BE] hover:text-white hover:bg-[#B89B6A]/15 hover:border-[#D6C6A8] shadow-lg transition-all duration-300 ease-out transform-gpu hover:-translate-y-[2px]"
+              >
+                <span className="relative z-10">원데이 클래스 둘러보기</span>
+                <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="absolute -inset-1 bg-[#B89B6A] opacity-0 blur-md group-hover:opacity-25 transition-opacity duration-300 rounded-full pointer-events-none" />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* New Section 01: AI 시대의 자기이해 (The Question of Our Time) */}
-      <section className="relative py-24 sm:py-32 lg:py-36 border-b border-white/5 overflow-hidden">
+      <section className="relative py-20 lg:py-24 border-b border-white/5 overflow-hidden">
         {/* Warm Ambient Subtle Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-antiqueGold/5 blur-3xl pointer-events-none rounded-full" />
 
         <div className="site-container relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-12 sm:space-y-14">
+          <div className="max-w-[1280px] mx-auto text-center">
             {/* 1. 영문 소제목 */}
             <Reveal>
-              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
-                THE QUESTION OF OUR TIME
-              </span>
-            </Reveal>
-
-            {/* 2. 핵심 질문 1 & 2 */}
-            <Reveal delayMs={150}>
-              <div className="space-y-6 sm:space-y-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
-                  AI 시대, 당신은 자신을 얼마나 알고 있나요?
-                </h2>
-
-                <div className="w-12 h-px bg-antiqueGold/35 mx-auto" />
-
-                <div className="space-y-3">
-                  <p className="text-base sm:text-lg md:text-xl text-white/70 font-light tracking-wide break-keep">
-                    AI가 무엇이든 만들어 줄 수 있는 시대,
-                  </p>
-                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] break-keep">
-                    당신은 무엇을 만들고 싶은 사람인가요?
-                  </p>
-                </div>
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  THE QUESTION OF OUR TIME
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
               </div>
             </Reveal>
 
-            {/* 3. 보충 질문 */}
-            <Reveal delayMs={300}>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed sm:leading-loose max-w-2xl mx-auto break-keep">
-                무엇을 좋아하고, 무엇을 잘하며,
-                <br className="hidden sm:inline" />
-                어떤 삶을 살아가고 싶은지 알고 있나요?
-              </p>
+            {/* 2. 메인 제목 */}
+            <Reveal delayMs={150}>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                AI 시대, 당신은 자신을 얼마나 알고 있나요?
+              </h2>
             </Reveal>
 
-            {/* 4. 통찰 및 핵심 강조 메시지 박스 */}
-            <Reveal delayMs={450}>
-              <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)] max-w-3xl mx-auto space-y-5">
-                <p className="text-base sm:text-lg md:text-xl text-white/75 font-light leading-relaxed break-keep">
-                  AI 시대의 진정한 경쟁력은
+            {/* 3. 설명 및 강조 질문 (메인 제목과 설명 문구 사이 24~32px) */}
+            <Reveal delayMs={250}>
+              <div className="mt-6 sm:mt-8 space-y-4 max-w-3xl mx-auto">
+                <p className="text-base md:text-lg text-white/70 font-light leading-[1.75] tracking-wide break-keep">
+                  AI가 무엇이든 만들어 줄 수 있는 시대,
+                </p>
+                <p className="text-xl sm:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-[1.4] break-keep">
+                  당신은 무엇을 만들고 싶은 사람인가요?
+                </p>
+                <p className="text-base md:text-lg text-white/80 font-light leading-[1.75] break-keep pt-1">
+                  무엇을 좋아하고, 무엇을 잘하며,
                   <br className="hidden sm:inline" />
-                  기술을 익히는 속도에만 있지 않습니다.
+                  어떤 삶을 살아가고 싶은지 알고 있나요?
+                </p>
+              </div>
+            </Reveal>
+
+            {/* 4. 통찰 및 핵심 강조 메시지 박스 (설명 문구와 강조 카드 사이 32~40px) */}
+            <Reveal delayMs={400}>
+              <div className="mt-8 sm:mt-10 w-full max-w-[1280px] mx-auto py-10 sm:py-12 px-6 sm:px-10 rounded-3xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+                {/* 카드 내부 일반 설명 문구 18px */}
+                <p className="text-base md:text-lg text-white/75 font-light leading-[1.75] break-keep">
+                  AI 시대의 진정한 경쟁력은 기술을 익히는 속도에만 있지 않습니다.
                 </p>
 
-                <div className="w-10 h-px bg-antiqueGold/20 mx-auto" />
+                {/* 신규 추가 문구: 18px, 골드, 상하 간격 12~16px */}
+                <p className="text-lg text-antiqueGold font-medium break-keep mt-3 sm:mt-4">
+                  남의 답이 아니라, 내가 가야 할 방향을 찾는 것.
+                </p>
 
-                <p className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight break-keep pt-1">
+                {/* 마지막 강조 문구: 서체/크기 유지, PC 한 줄(nowrap), 간격 24px */}
+                <p className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep mt-6 leading-[1.4] whitespace-normal md:whitespace-nowrap">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                     자신을 이해하고, 자신만의 방향을 선택하는 힘입니다.
                   </span>
@@ -116,9 +149,9 @@ export default function AboutPage() {
               </div>
             </Reveal>
 
-            {/* 5. 마무리 핵심 메시지 */}
-            <Reveal delayMs={600}>
-              <p className="text-lg sm:text-xl md:text-2xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep">
+            {/* 5. 카드 외부 하단 마무리 문구 (강조 카드와 하단 마무리 문구 사이 32px) */}
+            <Reveal delayMs={550}>
+              <p className="mt-8 text-base sm:text-lg md:text-xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep leading-[1.75]">
                 마음에서 시작하는 AI, 나로부터 시작하는 미래.
               </p>
             </Reveal>
@@ -126,78 +159,316 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Brand Story Section */}
-      <section className="py-20 lg:py-28">
+      {/* Brand Story Section: STEP 03 자기발견과 성찰 */}
+      <section className="py-20 lg:py-24 border-b border-white/5">
         <div className="site-container">
-          <div className="max-w-4xl mx-auto space-y-12">
-          {/* Main Title & Subtitle */}
-          <Reveal>
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
-                AI 시대, 가장 먼저 알아야 할 것은{" "}
-                <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                  나 자신입니다.
-                </span>
-              </h2>
-              <p className="text-lg md:text-xl text-antiqueGold/90 font-serif italic tracking-wide">
-                자명(自明), 스스로 밝아지는 배움.
-              </p>
-            </div>
-          </Reveal>
+          <div className="max-w-[1280px] mx-auto space-y-12 sm:space-y-16">
+            {/* 1. 섹션 헤더 */}
+            <Reveal>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    THE JOURNEY WITHIN
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  모든 가능성의 시작은
+                  <br />
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    나를 이해하는 것에서부터
+                  </span>
+                </h2>
+              </div>
+            </Reveal>
 
-          {/* Intro Story */}
-          <Reveal delayMs={100}>
-            <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light break-keep text-center md:text-left">
-              <p>
-                우리는 누구나 글을 쓰고, 그림을 그리고, 영상을 만들 수 있는 시대에 살고 있습니다.
-                AI는 우리의 상상을 현실로 만드는 놀라운 가능성을 열어 주고 있습니다.
-              </p>
-              <p className="text-white/90 font-normal">
-                하지만 기술이 발전할수록 더욱 중요해지는 질문이 있습니다.
-              </p>
-            </div>
-          </Reveal>
+            {/* 2. 좌우 2단 레이아웃 (좌: 45%, 우: 55%, 간격: 40~48px, 수직 중앙 정렬) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              {/* 왼쪽: 이미지 영역 (45% -> lg:col-span-5) - 모바일 위쪽 */}
+              <div className="lg:col-span-5 w-full order-1">
+                <Reveal delayMs={150}>
+                  <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/about/self-reflection.webp"
+                      alt="자기발견과 성찰 - 자명스쿨"
+                      fill
+                      className="object-cover rounded-2xl"
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                    />
+                  </div>
+                </Reveal>
+              </div>
 
-          {/* 4 Self-Inquiry Questions (Quote Style) */}
+              {/* 오른쪽: 본문 영역 (55% -> lg:col-span-7) - 모바일 아래쪽 */}
+              <div className="lg:col-span-7 w-full text-left order-2">
+                <Reveal delayMs={250}>
+                  <div className="space-y-6">
+                    {/* 상단 설명: 18px, 줄간격 1.75 */}
+                    <p className="text-base md:text-lg text-white/80 font-light leading-[1.75] break-keep">
+                      우리는 세상을 이해하기 위해 많은 것을 배우지만, 정작 자기 자신을 깊이 들여다보는 시간은 충분히 갖지 못합니다.
+                    </p>
+
+                    {/* 자기성찰 질문 카드: 질문 20px, 볼드, 간격 12~16px, 내부패딩 28~32px */}
+                    <div className="p-7 sm:p-8 rounded-2xl bg-[#141211]/90 backdrop-blur-sm border-l-4 border-[#B89B6A] border border-[#B89B6A]/25 space-y-3 sm:space-y-4">
+                      <p className="text-lg sm:text-xl font-bold text-white/95 tracking-wide leading-snug">
+                        나는 어떤 사람인가.
+                      </p>
+                      <p className="text-lg sm:text-xl font-bold text-white/95 tracking-wide leading-snug">
+                        무엇을 좋아하고, 무엇을 두려워하는가.
+                      </p>
+                      <p className="text-lg sm:text-xl font-bold text-white/95 tracking-wide leading-snug">
+                        어떤 경험이 지금의 나를 만들었는가.
+                      </p>
+                      <p className="text-lg sm:text-xl font-bold text-white/95 tracking-wide leading-snug">
+                        나는 진정으로 어떤 삶을 원하는가.
+                      </p>
+                    </div>
+
+                    {/* 하단 설명: 문단 사이 12~16px, 18px, 줄간격 1.75 */}
+                    <div className="space-y-3 sm:space-y-4 text-white/80 text-base md:text-lg leading-[1.75] font-light break-keep">
+                      <p>
+                        마음속에 남아 있는 상처, 익숙하게 반복되는 생각과 행동, 자신도 모르게 믿어 온 오래된 신념들.
+                      </p>
+                      <p>
+                        그것들을 알아차리고 이해하는 순간, 우리는 자신을 새로운 시선으로 바라보기 시작합니다.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STEP 04: 자명의 의미와 브랜드 철학 (THE ORIGIN OF JAMYEONG) */}
+      <section className="py-20 lg:py-24 border-b border-white/5">
+        <div className="site-container">
+          <div className="max-w-[1280px] mx-auto space-y-12 sm:space-y-16">
+            {/* 1. 섹션 헤더 */}
+            <Reveal>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    THE ORIGIN OF JAMYEONG
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  자명(自明),{" "}
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    스스로 밝아지는 배움
+                  </span>
+                </h2>
+              </div>
+            </Reveal>
+
+            {/* 2. 좌우 2단 레이아웃 (좌 본문: 55%, 우 이미지: 45%, 간격: 40~48px, 수직 중앙 정렬) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              {/* 오른쪽 이미지: 모바일에서는 위쪽(order-1), PC에서는 오른쪽(lg:order-2, lg:col-span-5) */}
+              <div className="lg:col-span-5 w-full order-1 lg:order-2">
+                <Reveal delayMs={150}>
+                  <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/about/jamyeong-origin.webp"
+                      alt="자명의 의미와 브랜드 철학 - 자명스쿨"
+                      fill
+                      className="object-cover rounded-2xl"
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                    />
+                  </div>
+                </Reveal>
+              </div>
+
+              {/* 왼쪽 본문: 모바일에서는 아래쪽(order-2), PC에서는 왼쪽(lg:order-1, lg:col-span-7) */}
+              <div className="lg:col-span-7 w-full text-left order-2 lg:order-1">
+                <Reveal delayMs={250}>
+                  <div className="space-y-6">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-antiqueGold leading-[1.4] break-keep">
+                      스스로를 밝히는 배움, 자명(自明)의 철학
+                    </h3>
+
+                    {/* 하단 슬로건 하이라이트 박스 */}
+                    <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-transparent border border-[#B89B6A]/25 break-keep">
+                      <h4 className="text-xl sm:text-2xl font-display font-bold text-white mb-3 leading-[1.4]">
+                        <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                          나를 아는 것이 모든 성장의 출발점입니다.
+                        </span>
+                      </h4>
+                      <p className="text-white/80 text-base md:text-lg leading-[1.75]">
+                        세상이 요구하는 기준에 맞추는 배움이 아니라, 내가 누구인지 알고 나다운 방식으로 세상과 소통하는 배움.
+                      </p>
+                      <p className="text-white/80 text-base md:text-lg leading-[1.75] mt-2">
+                        그것이 자명스쿨이 지향하는 교육의 본질입니다.
+                      </p>
+                      <p className="text-white/85 text-base md:text-lg leading-[1.75] font-light mt-4 pt-3 border-t border-[#B89B6A]/15">
+                        자명스쿨은 자신을 이해하는 일에서 시작해, 마음을 밝히고, 창작하고, 세상과 가치를 나누는 배움을 추구합니다.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Jamyeong School & Brand Identity Section */}
+      <section className="py-20 lg:py-24 border-t border-white/5">
+        <div className="site-container">
+          <div className="max-w-[1280px] mx-auto space-y-12 sm:space-y-14">
+            {/* 1. Why Jamyeong School (Question Section) */}
+            <Reveal>
+              <div className="text-center">
+                {/* Label */}
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    WHY JAMYEONG SCHOOL?
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                </div>
+
+                {/* 메인 제목 (첫 줄: 화이트, 둘째 줄: 골드 그라데이션, 줄간격 1.4) */}
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  당신 안의 가능성을
+                  <br />
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    어떻게 세상에 펼칠 것인가?
+                  </span>
+                </h2>
+
+                {/* 제목 하단 설명 문구 (18px, 중앙 정렬, 메인 제목과 간격 20~24px) */}
+                <div className="mt-5 sm:mt-6 space-y-1.5 text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-2xl mx-auto break-keep">
+                  <p>AI가 발전할수록 우리가 만들 수 있는 것은 많아집니다.</p>
+                  <p>이제 중요한 것은 그 가능성을 어디에 사용할 것인가입니다.</p>
+                </div>
+
+                {/* 3 Questions (최대 너비 1280px 전폭 카드, 설명 문구와 간격 32~40px) */}
+                <div className="mt-8 sm:mt-10 w-full max-w-[1280px] mx-auto py-10 sm:py-12 px-6 sm:px-10 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-lg space-y-5 sm:space-y-6">
+                  <p className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep leading-[1.4]">
+                    나는 무엇을 만들고 싶은가?
+                  </p>
+                  <div className="w-16 h-px bg-antiqueGold/25 mx-auto" />
+                  <p className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep leading-[1.4]">
+                    나는 어떤 사람이며, 무엇을 원하는가?
+                  </p>
+                  <div className="w-16 h-px bg-antiqueGold/25 mx-auto" />
+                  <p className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep leading-[1.4] whitespace-normal md:whitespace-nowrap">
+                    내가 가진 경험과 지식을 어떻게 세상에 의미 있게 전달할 것인가?
+                  </p>
+                </div>
+
+                {/* 카드 하단 마무리 문구 (질문 카드와 간격 32~40px) */}
+                <div className="mt-8 sm:mt-10 space-y-3 sm:space-y-4 max-w-3xl mx-auto break-keep">
+                  {/* 일반 설명 문구: 18px */}
+                  <p className="text-base md:text-lg text-white/80 font-light leading-[1.75]">
+                    AI는 수많은 답과 가능성을 제시할 수 있지만,
+                  </p>
+
+                  {/* 핵심 강조 문구: 24px, 제목 서체, 골드 그라데이션, 일반 설명과 간격 12~16px */}
+                  <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight">
+                    <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                      그중 무엇이 나에게 의미 있는지 선택하는 일은
+                      <br className="hidden sm:inline" />{" "}
+                      결국 나 자신에게 달려 있습니다.
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </Reveal>
+
+          {/* Connecting Arrow */}
+          <div className="flex justify-center text-antiqueGold/60 pt-4">
+            <ArrowDown className="w-6 h-6 animate-pulse" />
+          </div>
+
+          {/* 2. Brand Identity Card */}
           <Reveal delayMs={200}>
-            <blockquote className="my-8 md:my-10 p-6 md:p-8 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border-l-4 border-[#B89B6A] border border-[#B89B6A]/20 space-y-3 md:space-y-4">
-              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
-                나는 어떤 사람인가.
-              </p>
-              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
-                무엇을 좋아하고, 무엇을 두려워하는가.
-              </p>
-              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
-                어떤 경험이 지금의 나를 만들었는가.
-              </p>
-              <p className="text-lg md:text-xl font-medium text-white/95 tracking-wide">
-                나는 진정으로 어떤 삶을 원하는가.
-              </p>
-            </blockquote>
-          </Reveal>
+            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-[#B89B6A]/25 bg-gradient-to-b from-white/[0.04] to-transparent text-center space-y-6 sm:space-y-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+              {/* Ambient Glow */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
 
-          {/* Mid Story */}
-          <Reveal delayMs={250}>
-            <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light break-keep">
-              <p>
-                우리는 세상을 이해하기 위해 많은 것을 배우지만, 정작 자기 자신을 깊이 들여다보는 시간은 충분히 갖지 못합니다.
-              </p>
-              <p>
-                마음속에 남아 있는 상처, 익숙하게 반복되는 생각과 행동, 자신도 모르게 믿어 온 오래된 신념들.
-              </p>
-              <p>
-                그것들을 알아차리고 이해하는 순간, 우리는 자신을 새로운 시선으로 바라보기 시작합니다.
-              </p>
+              {/* Label */}
+              <div className="relative z-10">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-antiqueGold/15 border border-[#B89B6A]/25 text-antiqueGold tracking-[0.25em] text-xs font-bold uppercase">
+                  JAMYEONG SCHOOL · BRAND IDENTITY
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <div className="relative z-10 max-w-2xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    AI 시대, 가장 먼저 알아야 할 것은 나 자신입니다.
+                  </span>
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="relative z-10 max-w-2xl mx-auto">
+                <p className="text-sm md:text-base text-white/80 font-light leading-[1.7] break-keep">
+                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 마음에서 시작하는 AI 교육 플랫폼입니다.
+                </p>
+              </div>
+
+              {/* Bottom Tagline */}
+              <div className="relative z-10 pt-2">
+                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold font-medium text-xs sm:text-sm tracking-wide shadow-sm break-keep">
+                  나를 이해하고 · 나를 표현하고 · 세상과 나누다
+                </div>
+              </div>
             </div>
           </Reveal>
+        </div>
+        </div>
+      </section>
 
-          {/* Key Pivot & Creation Story */}
-          <Reveal delayMs={300}>
-            <div className="space-y-6 break-keep">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-antiqueGold pt-2">
-                자명스쿨은 바로 그 지점에서 배움을 시작합니다.
-              </h3>
-              <div className="space-y-6 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light">
+      {/* STEP 06: 마음공부와 AI 감성 창작의 융합 (FROM MIND TO CREATION) */}
+      <section className="py-20 lg:py-24 border-t border-white/5">
+        <div className="site-container">
+          <div className="max-w-[1280px] mx-auto space-y-10 sm:space-y-12">
+            {/* 1. 섹션 헤더 */}
+            <Reveal>
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    FROM MIND TO CREATION
+                  </span>
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                  마음에서 시작된 창작,
+                  <br />
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    삶의 가치로 이어지다
+                  </span>
+                </h2>
+              </div>
+            </Reveal>
+
+            {/* 2. 가로형 16:9 이미지 영역 (메인 제목과 간격 32~40px) */}
+            <Reveal delayMs={150}>
+              <div className="mt-8 sm:mt-10 w-full max-w-[1280px] mx-auto">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/about/mind-to-creation.webp"
+                    alt="마음에서 시작된 창작, 삶의 가치로 이어지다 - 자명스쿨"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover rounded-2xl"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                  />
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 3. 이미지 하단 본문 (이미지와 간격 32~40px, 내부 폭 1080~1120px, 문단 간격 16~20px) */}
+            <Reveal delayMs={250}>
+              <div className="max-w-[1100px] mx-auto mt-8 sm:mt-10 space-y-4 sm:space-y-5 text-center text-white/80 text-base md:text-lg leading-[1.75] font-light break-keep">
                 <p>
                   나의 경험을 한 권의 책으로 쓰고, 말로 표현하기 어려웠던 감정을 그림으로 그리며, 원하는 미래를 영상으로 시각화합니다.
                 </p>
@@ -211,137 +482,41 @@ export default function AboutPage() {
                   그리고 그렇게 쌓인 경험과 통찰은 다른 사람과 나누는 지식이 되고, 누군가를 이끄는 교육이 되며, 새로운 일과 경제적 가치로 확장될 수 있습니다.
                 </p>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          {/* Conclusion Highlight */}
-          <Reveal delayMs={350}>
-            <div className="pt-6 break-keep">
-              <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-transparent border border-[#B89B6A]/25">
-                <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3">
-                  <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                    나를 아는 것이 모든 성장의 출발점입니다.
+            {/* 4. 하단 핵심 강조 문구 (본문과 간격 32~40px) */}
+            <Reveal delayMs={350}>
+              <div className="pt-8 sm:pt-10 max-w-[1100px] mx-auto text-center">
+                <div className="w-16 h-px bg-antiqueGold/30 mx-auto mb-6 sm:mb-8" />
+                <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight break-keep">
+                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    자기발견에서 창조로,
+                    <br />
+                    창조에서 성장과 풍요로.
                   </span>
                 </h3>
-                <p className="text-white/85 text-base md:text-lg leading-relaxed font-light">
-                  자명스쿨은 자신을 이해하는 일에서 시작해, 마음을 밝히고, 창작하고, 세상과 가치를 나누는 배움을 추구합니다.
-                </p>
               </div>
-            </div>
-          </Reveal>
-        </div>
-        </div>
-      </section>
-
-      {/* Why Jamyeong School & Brand Identity Section */}
-      <section className="py-20 lg:py-28 border-t border-white/5">
-        <div className="site-container">
-          <div className="max-w-4xl mx-auto space-y-14">
-            {/* 1. Why Jamyeong School (Question Section) */}
-            <Reveal>
-              <div className="text-center space-y-8">
-                {/* Label & Title */}
-                <div className="space-y-3">
-                  <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
-                    WHY JAMYEONG SCHOOL?
-                </span>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
-                  AI 시대에{" "}
-                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                    자명스쿨이 필요한 이유
-                  </span>
-                </h2>
-              </div>
-
-              {/* Intro Text */}
-              <p className="text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                AI가 발전할수록 우리가 만들 수 있는 것은 많아집니다.
-                <br className="hidden sm:inline" /> 하지만 그만큼 중요한 질문도 생깁니다.
-              </p>
-
-              {/* 3 Questions (Centered Subtle Box) */}
-              <div className="max-w-2xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-lg space-y-5">
-                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
-                  나는 무엇을 만들고 싶은가?
-                </p>
-                <div className="w-12 h-px bg-antiqueGold/30 mx-auto" />
-                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
-                  나는 어떤 사람이며, 무엇을 원하는가?
-                </p>
-                <div className="w-12 h-px bg-antiqueGold/30 mx-auto" />
-                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
-                  내가 가진 경험과 지식을 어떻게 세상에 의미 있게 전달할 것인가?
-                </p>
-              </div>
-
-              {/* Closing Sentence */}
-              <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed max-w-2xl mx-auto break-keep pt-2">
-                AI는 수많은 답과 가능성을 제시할 수 있지만,{" "}
-                <strong className="text-antiqueGold font-semibold">
-                  그중 무엇이 나에게 의미 있는지 선택하는 일은 결국 나 자신에게 달려 있습니다.
-                </strong>
-              </p>
-            </div>
-          </Reveal>
-
-          {/* Connecting Arrow */}
-          <div className="flex justify-center text-antiqueGold/60">
-            <ArrowDown className="w-6 h-6 animate-pulse" />
+            </Reveal>
           </div>
-
-          {/* 2. Brand Identity Card */}
-          <Reveal delayMs={200}>
-            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-[#B89B6A]/25 bg-gradient-to-b from-white/[0.04] to-transparent text-center space-y-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden group">
-              {/* Ambient Glow */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
-
-              {/* Label */}
-              <div className="relative z-10">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-antiqueGold/15 border border-[#B89B6A]/25 text-antiqueGold tracking-[0.25em] text-xs font-bold uppercase">
-                  JAMYEONG SCHOOL · BRAND IDENTITY
-                </span>
-              </div>
-
-              {/* Main Headline */}
-              <div className="relative z-10 max-w-2xl mx-auto">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold leading-tight tracking-tight text-white break-keep">
-                  <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                    AI 시대, 가장 먼저 알아야 할 것은 나 자신입니다.
-                  </span>
-                </h3>
-              </div>
-
-              {/* Description */}
-              <div className="relative z-10 max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed sm:leading-loose break-keep">
-                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 마음에서 시작하는 AI 교육 플랫폼입니다.
-                </p>
-              </div>
-
-              {/* Bottom Tagline */}
-              <div className="relative z-10 pt-4">
-                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold font-medium text-sm sm:text-base tracking-wide shadow-sm break-keep">
-                  나를 이해하고 · 나를 표현하고 · 세상과 나누다
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
         </div>
       </section>
 
       {/* Brand Core Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-20 lg:py-24">
         <div className="site-container">
           <Reveal>
             {/* Main Outer Rounded Container */}
             <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-[#B89B6A]/20 bg-[#141211]/85 backdrop-blur-md shadow-2xl relative">
             {/* Top Label & Title */}
-            <div className="text-center space-y-2 mb-10">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
-                BRAND CORE
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight break-keep">
+            <div className="text-center mb-8 sm:mb-10">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  BRAND CORE
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight break-keep leading-[1.4]">
                 자명스쿨의{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   브랜드 구조
@@ -356,7 +531,7 @@ export default function AboutPage() {
                 <span className="inline-block px-3.5 py-1 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold text-xs font-medium tracking-wide">
                   변하지 않는 철학
                 </span>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-[#B89B6A] tracking-tight break-keep pt-1">
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-[#B89B6A] tracking-tight break-keep pt-1 leading-[1.4]">
                   나를 아는 것이 모든 성장의 출발점
                 </h3>
               </div>
@@ -371,7 +546,7 @@ export default function AboutPage() {
                 <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/10 text-antiqueGold text-xs font-medium tracking-wide">
                   고객에게 전하는 약속
                 </span>
-                <p className="text-base sm:text-lg md:text-xl font-medium text-white/95 leading-relaxed break-keep">
+                <p className="text-base sm:text-lg text-white/95 font-medium leading-[1.75] break-keep">
                   나의 이야기를 발견하고, AI로 표현하며, 새로운 가능성을 만들다
                 </p>
               </div>
@@ -385,20 +560,20 @@ export default function AboutPage() {
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
                 {/* Pillar 1 */}
                 <div className="p-6 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-[#B89B6A]/40 hover:bg-[#181513]/90 transition-all duration-300">
-                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">자기이해</h4>
-                  <p className="text-sm text-antiqueGold/90 font-medium">마음공부·코칭</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">자기이해</h4>
+                  <p className="text-sm md:text-base text-antiqueGold/90 font-medium leading-[1.7]">마음공부·코칭</p>
                 </div>
 
                 {/* Pillar 2 */}
                 <div className="p-6 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-[#B89B6A]/40 hover:bg-[#181513]/90 transition-all duration-300">
-                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">창작과 표현</h4>
-                  <p className="text-sm text-antiqueGold/90 font-medium">책·아트·영상</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">창작과 표현</h4>
+                  <p className="text-sm md:text-base text-antiqueGold/90 font-medium leading-[1.7]">책·아트·영상</p>
                 </div>
 
                 {/* Pillar 3 */}
                 <div className="p-6 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/75 backdrop-blur-sm text-center space-y-2 hover:border-[#B89B6A]/40 hover:bg-[#181513]/90 transition-all duration-300">
-                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">가치확장</h4>
-                  <p className="text-sm text-antiqueGold/90 font-medium">브랜딩·지식창업</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">가치확장</h4>
+                  <p className="text-sm md:text-base text-antiqueGold/90 font-medium leading-[1.7]">브랜딩·지식창업</p>
                 </div>
               </div>
             </div>
@@ -408,21 +583,25 @@ export default function AboutPage() {
       </section>
 
       {/* Self-Discovery Cycle Section */}
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-24">
         <div className="site-container space-y-16">
           {/* Section Header */}
           <Reveal>
-            <div className="text-center space-y-4">
-              <span className="text-antiqueGold tracking-[0.25em] text-xs font-bold uppercase block">
-                Self-Discovery Cycle
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  SELF-DISCOVERY CYCLE
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                 자명스쿨의{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   자기발견 순환 구조
                 </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 font-light tracking-wide break-keep">
+              <p className="text-base md:text-lg text-white/70 font-light leading-[1.75] tracking-wide break-keep mt-5 sm:mt-6">
                 성찰에서 창작으로, 창작에서 더 깊은 자기이해로
               </p>
             </div>
@@ -614,12 +793,12 @@ export default function AboutPage() {
           {/* Description Below Diagram */}
           <Reveal delayMs={250}>
             <div className="max-w-3xl mx-auto space-y-6 text-center md:text-left break-keep">
-              <h3 className="text-xl md:text-2xl font-display font-bold text-white text-center">
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-white text-center leading-[1.4]">
                 <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   나를 알아가기 위해 창작하고, 창작하면서 다시 나를 발견합니다.
                 </span>
               </h3>
-              <div className="space-y-4 text-white/80 text-base md:text-lg leading-relaxed sm:leading-loose font-light">
+              <div className="space-y-4 text-white/80 text-base md:text-lg leading-[1.75] font-light">
                 <p>
                   자명스쿨에서는 자기탐구와 AI 창작이 분리되지 않습니다.
                 </p>
@@ -644,13 +823,22 @@ export default function AboutPage() {
       </Reveal>
 
       {/* 2. Philosophy Section */}
-      <section className="py-24">
+      <section className="py-20 lg:py-24">
         <div className="site-container">
           <Reveal>
             <div className="text-center mb-16 px-4">
-              <h2 className="text-3xl md:text-5xl font-display mb-6">자명스쿨 철학</h2>
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  OUR PHILOSOPHY
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep mb-6">
+                자명스쿨 철학
+              </h2>
               <div className="w-20 h-1 bg-antiqueGold mx-auto rounded-full mb-8"></div>
-              <p className="text-xl md:text-2xl text-white/80 font-light leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-3xl mx-auto break-keep">
                 자명스쿨은 단순한 AI 기술 교육이 아닙니다. <br />
                 우리는 <span className="text-antiqueGold font-medium">‘마음’</span>을 이해하고 그것을 콘텐츠로 표현하며 <br />
                 삶과 수익으로 연결하는 교육을 합니다.
@@ -679,14 +867,14 @@ export default function AboutPage() {
               <Reveal key={idx} delayMs={idx * 200}>
                 <div className="p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:border-antiqueGold/40 hover:-translate-y-1 hover:scale-[1.01] hover:bg-white/[0.05] hover:shadow-[0_20px_40px_rgba(184,155,106,0.1)] transition-all duration-500 text-center group">
                   <div className="mb-6 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(184,155,106,0.6)] transition-all duration-500">{item.icon}</div>
-                  <h3 className="text-xl font-bold mb-4 text-[#B89B6A] transition-colors duration-300">{item.title}</h3>
-                  <p className="text-white/60 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-[#B89B6A] transition-colors duration-300">{item.title}</h3>
+                  <p className="text-sm md:text-base text-white/60 leading-[1.7]">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
           <Reveal delayMs={600}>
-            <p className="mt-16 text-center text-lg text-antiqueGold/80 italic">
+            <p className="mt-16 text-center text-base md:text-lg text-antiqueGold/80 italic leading-[1.75]">
               이 3가지를 통해 누구나 자신의 이야기를 브랜드로 만들 수 있도록 돕습니다.
             </p>
           </Reveal>
@@ -694,21 +882,25 @@ export default function AboutPage() {
       </section>
 
       {/* New Section 02: 자명스쿨만의 독자적인 교육 영역 (Our Unique Approach) */}
-      <section className="py-24 lg:py-32 border-t border-white/5">
+      <section className="py-20 lg:py-24 border-t border-white/5">
         <div className="site-container space-y-16 sm:space-y-20">
           {/* Section Header */}
           <Reveal>
-            <div className="text-center space-y-4">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
-                OUR UNIQUE APPROACH
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  OUR UNIQUE APPROACH
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                 자명스쿨만의{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   독자적인 교육 영역
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-white/70 font-light tracking-wide break-keep">
+              <p className="text-base md:text-lg text-white/70 font-light leading-[1.75] tracking-wide break-keep mt-5 sm:mt-6">
                 마음공부와 감성 창작, AI 기술이 만나는 곳
               </p>
             </div>
@@ -927,20 +1119,20 @@ export default function AboutPage() {
                 <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
                   DIGITAL MIND COACHING
                 </span>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight leading-[1.4]">
                   디지털마인드코칭이란?
                 </h3>
               </div>
 
               {/* Main Emphasized Quote */}
               <div className="p-6 sm:p-8 rounded-2xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-lg">
-                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-relaxed">
+                <p className="text-xl sm:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] leading-[1.4]">
                   마음을 이해하고, AI로 표현하며, 삶을 창작하는 배움의 방식입니다.
                 </p>
               </div>
 
               {/* Core Definition Body Paragraphs */}
-              <div className="space-y-5 text-white/80 text-base sm:text-lg leading-relaxed sm:leading-loose font-light text-left sm:text-center">
+              <div className="space-y-4 text-white/80 text-base md:text-lg leading-[1.75] font-light text-left sm:text-center">
                 <p>
                   디지털마인드코칭은 자기이해와 마음공부를 바탕으로 AI 및 디지털 창작 도구를 활용하여 자신의 감정, 생각, 재능, 가능성을 구체적인 결과물로 표현하고, 이를 자기성장과 삶의 실천으로 연결하는 교육 및 코칭 방법입니다.
                 </p>
@@ -957,21 +1149,25 @@ export default function AboutPage() {
       </section>
 
       {/* New Section 03: 마음공부가 창작이 되는 순간 (FROM MIND TO CREATION) */}
-      <section className="py-24 lg:py-32 bg-white/[0.01] border-t border-white/5">
+      <section className="py-20 lg:py-24 bg-white/[0.01] border-t border-white/5">
         <div className="site-container space-y-16 sm:space-y-20">
           {/* Section Header */}
           <Reveal>
-            <div className="text-center space-y-4">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
-                FROM MIND TO CREATION
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  FROM MIND TO CREATION
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                 마음공부가{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   창작이 되는 순간
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-white/80 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+              <p className="text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-3xl mx-auto break-keep mt-5 sm:mt-6">
                 내면의 발견이 눈에 보이는 창작물이 되고,
                 <br className="hidden sm:inline" />
                 그 창작물이 새로운 삶의 가능성으로 이어집니다.
@@ -1058,7 +1254,7 @@ export default function AboutPage() {
                       <span className="text-xs font-display font-bold tracking-widest text-antiqueGold uppercase block mb-2">
                         {card.cardNum}
                       </span>
-                      <h3 className="text-xl font-bold text-[#B89B6A] group-hover:text-champagneGold transition-colors break-keep leading-snug">
+                      <h3 className="text-lg sm:text-xl font-bold text-[#B89B6A] group-hover:text-champagneGold transition-colors break-keep leading-snug">
                         {card.title}
                       </h3>
                     </div>
@@ -1070,7 +1266,7 @@ export default function AboutPage() {
                         <span className="text-[11px] font-bold tracking-wider text-antiqueGold uppercase block">
                           ✦ 자기성찰 질문
                         </span>
-                        <p className="text-sm font-medium text-white/95 leading-relaxed break-keep">
+                        <p className="text-sm md:text-base font-medium text-white/95 leading-[1.7] break-keep">
                           "{card.question}"
                         </p>
                       </div>
@@ -1080,7 +1276,7 @@ export default function AboutPage() {
                         <span className="text-xs font-bold text-white/50 block">
                           마음공부
                         </span>
-                        <p className="text-sm text-white/80 font-light leading-relaxed break-keep">
+                        <p className="text-sm md:text-base text-white/80 font-light leading-[1.7] break-keep">
                           {card.mind}
                         </p>
                       </div>
@@ -1090,7 +1286,7 @@ export default function AboutPage() {
                         <span className="text-xs font-bold text-antiqueGold/90 block">
                           디지털 창작
                         </span>
-                        <p className="text-sm text-white/90 font-medium leading-relaxed break-keep">
+                        <p className="text-sm md:text-base text-white/90 font-medium leading-[1.7] break-keep">
                           {card.creation}
                         </p>
                       </div>
@@ -1104,15 +1300,15 @@ export default function AboutPage() {
           {/* Bottom Message */}
           <Reveal delayMs={350}>
             <div className="p-8 sm:p-10 md:p-12 rounded-3xl bg-[#141211]/80 backdrop-blur-sm border border-[#B89B6A]/25 shadow-lg max-w-3xl mx-auto text-center space-y-4">
-              <p className="text-base sm:text-lg text-white/75 font-light leading-relaxed break-keep">
+              <p className="text-base sm:text-lg text-white/75 font-light leading-[1.75] break-keep">
                 창작은 단순히 결과물을 만드는 일이 아닙니다.
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-white tracking-tight break-keep">
+              <p className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep leading-[1.4]">
                 <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   나를 이해하고, 내 안의 가능성을 발견하며, 내가 원하는 삶을 구체적으로 만들어 가는 과정입니다.
                 </span>
               </p>
-              <p className="text-xs text-white/40 font-light pt-2">
+              <p className="text-xs sm:text-sm text-white/40 font-light pt-2">
                 ※ 위 내용은 자명스쿨이 지향하는 교육 및 창작 활동의 예시입니다.
               </p>
             </div>
@@ -1121,13 +1317,21 @@ export default function AboutPage() {
       </section>
 
       {/* 3. 5 Elements System Section */}
-      <section className="py-24 bg-white/[0.02]">
+      <section className="py-20 lg:py-24 bg-white/[0.02]">
         <div className="site-container">
           <Reveal>
-            <div className="text-center mb-20">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase mb-4 block">Core Curriculum</span>
-              <h2 className="text-4xl md:text-6xl font-display mb-8">자명스쿨 5원소 시스템</h2>
-              <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto leading-relaxed">
+            <div className="text-center mb-16 sm:mb-20">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  CORE CURRICULUM
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep mb-6">
+                자명스쿨 5원소 시스템
+              </h2>
+              <p className="text-base md:text-lg text-white/70 font-light max-w-3xl mx-auto leading-[1.75] break-keep">
                 자기 이해부터 수익화까지, 단계별로 성장하는 자명스쿨만의 통합 변화 시스템입니다. <br />
                 우리는 배움이 아닌 ‘변화’를 만듭니다.
               </p>
@@ -1194,14 +1398,14 @@ export default function AboutPage() {
             ].map((element, idx) => (
               <Reveal key={idx} delayMs={idx * 150}>
                 <div className={`p-8 rounded-[2rem] border ${element.borderClass} bg-white/[0.02] hover:bg-white/[0.06] hover:-translate-y-1.5 hover:scale-[1.01] ${element.hoverBorderClass} hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-[400ms] group text-center h-full flex flex-col items-center relative overflow-hidden`}>
-                  <div className={`text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.label}</div>
+                  <div className={`text-xl sm:text-2xl font-display mb-4 ${element.color} opacity-70 group-hover:opacity-100 transition-opacity`}>{element.label}</div>
                   
                   <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-500 drop-shadow-md">
                     <Image src={element.image} alt={element.label} fill className="object-contain" />
                   </div>
                   
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
-                  <p className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">{element.desc}</p>
+                  <h4 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-white transition-colors">{element.name}</h4>
+                  <p className="text-sm md:text-base text-white/60 leading-[1.7] group-hover:text-white/80 transition-colors">{element.desc}</p>
                   {/* Subtle Glow Background */}
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent ${element.glowClass} to-transparent`} />
                 </div>
@@ -1214,10 +1418,10 @@ export default function AboutPage() {
       {/* Section Divider/Transition Text */}
       <div className="py-12 text-center bg-white/[0.02]">
         <Reveal delayMs={200}>
-          <p className="text-3xl md:text-4xl font-display text-white/90 tracking-widest italic mb-6">
+          <p className="text-xl sm:text-2xl font-display font-bold text-white/90 tracking-wide italic mb-4 leading-[1.4]">
             "자명스쿨 5원소 시스템으로 이렇게 변화, 성장합니다."
           </p>
-          <p className="text-base md:text-lg text-white/40 font-light tracking-wide">
+          <p className="text-base md:text-lg text-white/50 font-light tracking-wide leading-[1.75]">
             이 흐름을 따라가면 실제 강의, 콘텐츠, 수익 구조까지 연결됩니다.
           </p>
           <div className="mt-8 w-12 h-[1px] bg-white/20 mx-auto" />
@@ -1315,10 +1519,10 @@ export default function AboutPage() {
                     </div>
 
                     {/* Text Content */}
-                    <div className="space-y-3">
-                      <h4 className={`text-lg font-bold uppercase tracking-wider ${item.color}`}>{item.name}</h4>
-                      <h3 className="text-xl font-bold text-white break-keep">{item.title}</h3>
-                      <p className="text-sm text-white/40 leading-relaxed whitespace-pre-line break-keep">{item.desc}</p>
+                    <div className="space-y-2">
+                      <h4 className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${item.color}`}>{item.name}</h4>
+                      <h3 className="text-lg sm:text-xl font-bold text-white break-keep">{item.title}</h3>
+                      <p className="text-sm md:text-base text-white/60 leading-[1.7] whitespace-pre-line break-keep">{item.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -1329,21 +1533,25 @@ export default function AboutPage() {
       </section>
 
       {/* 3.6. 5-Stage Growth Journey Section */}
-      <section className="py-24 border-t border-white/5">
+      <section className="py-20 lg:py-24 border-t border-white/5">
         <div className="site-container space-y-16">
           {/* Header */}
           <Reveal>
-            <div className="text-center space-y-4">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs font-bold uppercase block">
-                JAMYEONG GROWTH JOURNEY
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-white break-keep">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  JAMYEONG GROWTH JOURNEY
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                 나를 아는 것에서 시작되는{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   성장
                 </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 font-light tracking-wide break-keep max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-white/70 font-light leading-[1.75] tracking-wide break-keep max-w-2xl mx-auto mt-5 sm:mt-6">
                 내면의 발견이 창작과 나눔, 풍요로운 삶으로 이어집니다.
               </p>
             </div>
@@ -1394,8 +1602,8 @@ export default function AboutPage() {
                       <div className="w-14 h-14 rounded-2xl bg-antiqueGold/[0.06] border border-[#B89B6A]/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-[#B89B6A]/40 group-hover:bg-antiqueGold/10 transition-all duration-300">
                         {step.icon}
                       </div>
-                      <h4 className="text-lg font-bold text-[#B89B6A] mb-2 font-display group-hover:text-champagneGold transition-colors duration-300">{step.title}</h4>
-                      <p className="text-xs sm:text-sm text-white/70 leading-relaxed break-keep font-light">{step.desc}</p>
+                      <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] mb-2 font-display group-hover:text-champagneGold transition-colors duration-300">{step.title}</h4>
+                      <p className="text-sm md:text-base text-white/70 leading-[1.7] break-keep font-light">{step.desc}</p>
                     </div>
 
                     {/* Connecting Arrow for Desktop */}
@@ -1454,9 +1662,9 @@ export default function AboutPage() {
                           <span className="text-xs font-mono font-bold text-antiqueGold tracking-wider">
                             {step.num}
                           </span>
-                          <h4 className="text-base font-bold text-[#B89B6A] font-display">{step.title}</h4>
+                          <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">{step.title}</h4>
                         </div>
-                        <p className="text-xs sm:text-sm text-white/70 leading-relaxed break-keep font-light">
+                        <p className="text-sm md:text-base text-white/70 leading-[1.7] break-keep font-light">
                           {step.desc}
                         </p>
                       </div>
@@ -1484,8 +1692,8 @@ export default function AboutPage() {
                     <span>·</span>
                     <span>자기실현</span>
                   </div>
-                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">내면의 성장과 창작의 기쁨</h4>
-                  <p className="text-sm text-white/75 font-light leading-relaxed break-keep">
+                  <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">내면의 성장과 창작의 기쁨</h4>
+                  <p className="text-sm md:text-base text-white/75 font-light leading-[1.7] break-keep">
                     내면의 성장, 자유로운 자기표현, 창작의 순수한 즐거움을 통해 나다운 삶의 방향을 주체적으로 설계합니다.
                   </p>
                 </div>
@@ -1497,8 +1705,8 @@ export default function AboutPage() {
                     <span>·</span>
                     <span>가치 창출</span>
                   </div>
-                  <h4 className="text-lg font-bold text-[#B89B6A] font-display">전문성과 지식 자산화</h4>
-                  <p className="text-sm text-white/75 font-light leading-relaxed break-keep">
+                  <h4 className="text-lg sm:text-xl font-bold text-[#B89B6A] font-display">전문성과 지식 자산화</h4>
+                  <p className="text-sm md:text-base text-white/75 font-light leading-[1.7] break-keep">
                     축적된 경험과 재능을 책·콘텐츠·퍼스널 브랜드로 발전시키고, 교육 및 코칭 전문가로서 새로운 기회와 가치를 만듭니다.
                   </p>
                 </div>
@@ -1506,12 +1714,12 @@ export default function AboutPage() {
 
               {/* Concluding Philosophy Box */}
               <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-antiqueGold/10 backdrop-blur-sm border border-[#B89B6A]/25 shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-center space-y-3">
-                <p className="text-lg md:text-xl font-display font-bold text-white leading-relaxed">
+                <p className="text-xl sm:text-2xl font-display font-bold text-white leading-[1.4]">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                     자기이해에서 시작하여, 창작을 통해 가능성을 발견하고, 자신만의 삶과 가치로 확장합니다.
                   </span>
                 </p>
-                <p className="text-sm text-white/75 leading-relaxed font-light break-keep max-w-2xl mx-auto">
+                <p className="text-sm md:text-base text-white/75 leading-[1.7] font-light break-keep max-w-2xl mx-auto">
                   자명스쿨은 모든 사람에게 획일적인 창업이나 수익을 요구하지 않습니다.
                   자신의 목적에 따라 창작과 자기성장에 집중하거나, 이를 사회적·경제적 가치로 확장해 나가는 모든 여정을 존중하고 함께합니다.
                 </p>
@@ -1522,7 +1730,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Instructor Section */}
-      <section className="py-32">
+      <section className="py-20 lg:py-24">
         <div className="site-container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <Reveal>
@@ -1548,22 +1756,25 @@ export default function AboutPage() {
 
             <div>
               <Reveal slideFrom="right">
-                <div className="flex items-center space-x-3 text-antiqueGold mb-6">
-                  <span className="font-display tracking-[0.3em] text-xs uppercase">Founder & Instructor</span>
+                <div className="flex items-center space-x-3 text-antiqueGold mb-4 sm:mb-5">
+                  <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  <span className="font-display tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                    FOUNDER & INSTRUCTOR
+                  </span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display mb-2 text-white italic lowercase tracking-tight">
-                  자명쌤 <span className="bg-gradient-to-r from-antiqueGold to-champagneGold bg-clip-text text-transparent font-sans not-italic text-3xl font-bold ml-2">백진선</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-2 text-white italic lowercase tracking-tight leading-[1.4]">
+                  자명쌤 <span className="bg-gradient-to-r from-antiqueGold to-champagneGold bg-clip-text text-transparent font-sans not-italic text-2xl sm:text-3xl font-bold ml-2">백진선</span>
                 </h2>
-                <p className="text-white/40 font-light mb-8 italic">AI × 심리 × 인문학을 결합한 교육 전문가</p>
+                <p className="text-base md:text-lg text-white/50 font-light mb-8 italic leading-[1.75]">AI × 심리 × 인문학을 결합한 교육 전문가</p>
                 
-                <div className="space-y-8 mb-12">
-                  <p className="text-white/80 font-light leading-relaxed break-keep">
+                <div className="space-y-6 sm:space-y-8 mb-12">
+                  <p className="text-white/80 font-light leading-[1.75] text-base md:text-lg break-keep">
                     심리학 전공을 기반으로 NLP, 최면, 명상, 브레인 트레이닝 등 사람의 무의식과 변화 구조를 연구해왔으며, AI 관련 자격증 30개 이상과 강의·콘텐츠 제작·수익화 경험을 통해 검증된 실전 교육을 제공합니다.
                   </p>
 
                   {/* 3. 핵심 정체성 문장 (독립적 강조 영역) */}
                   <div className="py-4.5 px-5 sm:px-6 rounded-xl border border-antiqueGold/25 border-l-[3px] border-l-antiqueGold bg-antiqueGold/[0.03] backdrop-blur-xs">
-                    <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed break-keep tracking-tight">
+                    <p className="text-base sm:text-lg text-white/95 font-medium leading-[1.75] break-keep tracking-tight">
                       “저는 <span className="text-antiqueGold font-semibold">사람의 내면 변화</span>와{" "}
                       <br className="sm:hidden" />
                       <span className="text-antiqueGold font-semibold">디지털 기술</span>을 연결하는{" "}
@@ -1572,11 +1783,11 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <p className="text-white/80 font-light leading-relaxed break-keep">
+                  <p className="text-white/80 font-light leading-[1.75] text-base md:text-lg break-keep">
                     자명심리문화연구소 대표, 한국디지털마인드코칭협회 협회장, 그리고 이끌림출판사 대표로서 단순한 정보 전달을 넘어 사람들의 내면에 잠든 창의성을 깨우는 일을 하고 있습니다.
                   </p>
 
-                  <ul className="space-y-3 text-white/60 text-sm font-light pt-2">
+                  <ul className="space-y-3 text-white/70 text-sm md:text-base font-light pt-2 leading-[1.7]">
                     <li className="flex items-start gap-3 text-antiqueGold/90 font-medium">
                       <span className="text-antiqueGold">✔</span> 
                       <span>자명심리문화연구소 / 한국디지털마인드코칭협회 / 이끌림출판사 대표</span>
@@ -1610,7 +1821,7 @@ export default function AboutPage() {
                         <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14H15.017C13.3601 14 12.017 12.6569 12.017 11V7C12.017 5.34315 13.3601 4 15.017 4H19.017C20.6739 4 22.017 5.34315 22.017 7V16C22.017 18.7614 19.7784 21 17.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.91241 16 4.01697 16H7.01697V14H3.01697C1.36012 14 0.0169678 12.6569 0.0169678 11V7C0.0169678 5.34315 1.36012 4 3.01697 4H7.01697C8.67383 4 10.017 5.34315 10.017 7V16C10.017 18.7614 7.77839 21 5.01697 21H2.01697Z" />
                     </svg>
                   </div>
-                  <p className="text-xl md:text-2xl text-antiqueGold font-display leading-tight italic">
+                  <p className="text-xl sm:text-2xl text-antiqueGold font-display leading-[1.4] italic">
                     “AI는 단순한 도구가 아니라 <br />
                     마음을 표현하는 가장 현대적인 언어입니다.”
                   </p>
@@ -1622,20 +1833,24 @@ export default function AboutPage() {
       </section>
 
       {/* 4.5 Professional Certification Courses Section */}
-      <section className="py-24 md:py-32 relative">
+      <section className="py-20 lg:py-24 relative">
         <div className="site-container">
           <div className="text-center mb-16 px-4">
             <Reveal>
-              <div className="flex items-center justify-center space-x-3 text-antiqueGold mb-4">
-                <span className="font-display tracking-[0.3em] text-xs uppercase">Professional Certifications</span>
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  PROFESSIONAL CERTIFICATIONS
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight break-keep">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-[1.4] tracking-tight break-keep">
                 마음속 가능성을 <br className="hidden md:block" />
                 <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent font-bold inline-block px-1">
                   전문성으로 발전시키는 배움
                 </span>
               </h2>
-              <div className="max-w-3xl mx-auto space-y-4 text-white/70 text-base md:text-lg font-light leading-relaxed break-keep">
+              <div className="max-w-3xl mx-auto space-y-4 text-white/70 text-base md:text-lg font-light leading-[1.75] break-keep">
                 <p>
                   자명스쿨의 AI 및 디지털 창작 교육은 단순한 도구 활용에 머무르지 않습니다.
                   자신의 생각과 감정을 표현하고, 경험과 지식을 콘텐츠로 만들며, 나만의 브랜드와 전문성을 구축하기 위한 실질적인 창작 역량을 기르는 과정입니다.
@@ -1643,7 +1858,7 @@ export default function AboutPage() {
                 <p className="text-white/85 font-normal">
                   자기이해와 창작에서 출발하여 자신의 관심과 목적에 따라 전문 강사, 창작자, 지식창업가, 디지털마인드코치로 성장할 수 있는 교육 방향을 추구합니다.
                 </p>
-                <p className="text-antiqueGold text-sm pt-2 font-medium">
+                <p className="text-antiqueGold text-sm md:text-base pt-2 font-medium">
                   한국디지털마인드코칭협회 공식 인증 커리큘럼 기반 5개 전문 자격과정
                 </p>
               </div>
@@ -1735,10 +1950,10 @@ export default function AboutPage() {
                     </div>
 
                     <p className="text-xs text-white/40 tracking-wider mb-2 font-light">{course.category}</p>
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-antiqueGold transition-colors break-keep leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-antiqueGold transition-colors break-keep leading-snug">
                       {course.title}
                     </h3>
-                    <p className="text-sm text-white/60 font-light leading-relaxed mb-6 break-keep">
+                    <p className="text-sm md:text-base text-white/60 font-light leading-[1.7] mb-6 break-keep">
                       {course.desc}
                     </p>
                   </div>
@@ -1767,10 +1982,10 @@ export default function AboutPage() {
                     <ShieldCheck className="w-3.5 h-3.5" />
                     <span>공식 자격증 발급·인증 기관</span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-[1.4]">
                     한국디지털마인드코칭협회 <span className="text-antiqueGold text-base font-normal">(KDMCA)</span>
                   </h3>
-                  <p className="text-white/60 text-sm font-light leading-relaxed break-keep">
+                  <p className="text-white/60 text-sm md:text-base font-light leading-[1.7] break-keep">
                     자명스쿨의 5대 민간자격과정 공식 인증 기준 및 협회 설립 목적과 비전을 확인하실 수 있습니다.
                   </p>
                 </div>
@@ -1791,21 +2006,25 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Who We Are For (핵심 수강생 페르소나) Section */}
-      <section className="py-24 lg:py-32 bg-white/[0.02] border-t border-white/5">
+      <section className="py-20 lg:py-24 bg-white/[0.02] border-t border-white/5">
         <div className="site-container">
           {/* Top Label & Headline */}
           <Reveal>
-            <div className="text-center space-y-4 mb-16 sm:mb-20">
-              <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase block">
-                WHO WE ARE FOR
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight break-keep">
+            <div className="text-center mb-16 sm:mb-20">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  WHO WE ARE FOR
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight break-keep leading-[1.4]">
                 혹시,{" "}
                 <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                   당신도 이런 마음인가요?
                 </span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              <p className="text-base md:text-lg text-white/70 font-light leading-[1.75] max-w-2xl mx-auto break-keep mt-5 sm:mt-6">
                 기술을 배우는 것보다 먼저,
                 <br className="hidden sm:inline" />
                 나만의 방향을 발견하고 싶은 당신에게.
@@ -1867,13 +2086,13 @@ export default function AboutPage() {
                     </div>
 
                     {/* Card Title */}
-                    <h3 className="text-lg sm:text-xl font-bold text-[#B89B6A] mb-4 group-hover:text-champagneGold transition-colors break-keep leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#B89B6A] mb-3 group-hover:text-champagneGold transition-colors break-keep leading-snug">
                       {card.title}
                     </h3>
                   </div>
 
-                  {/* Card Description (16px 이상) */}
-                  <p className="text-base text-white/75 font-light leading-relaxed sm:leading-loose break-keep pt-2">
+                  {/* Card Description (16px) */}
+                  <p className="text-sm md:text-base text-white/75 font-light leading-[1.7] break-keep pt-2">
                     {card.desc}
                   </p>
                 </div>
@@ -1887,7 +2106,7 @@ export default function AboutPage() {
               {/* Subtle Ambient Glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
 
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white tracking-tight break-keep leading-snug relative z-10">
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight break-keep leading-[1.4] relative z-10">
                 당신에게 필요한 것은 더 많은 기술이 아니라,
                 <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent ml-1 sm:ml-2">
@@ -1895,7 +2114,7 @@ export default function AboutPage() {
                 </span>
               </h3>
 
-              <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed sm:leading-loose break-keep max-w-2xl mx-auto relative z-10">
+              <p className="text-base sm:text-lg text-white/80 font-light leading-[1.75] break-keep max-w-2xl mx-auto relative z-10">
                 자명스쿨은 자신을 이해하고,
                 <br className="hidden sm:inline" />
                 마음속 가능성을 발견하며,
@@ -1904,7 +2123,7 @@ export default function AboutPage() {
               </p>
 
               <div className="pt-2 relative z-10">
-                <p className="text-lg sm:text-xl md:text-2xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep">
+                <p className="text-base sm:text-lg md:text-xl text-antiqueGold font-medium font-serif italic tracking-wide break-keep leading-[1.75]">
                   마음에서 시작하는 AI, 나로부터 시작하는 미래.
                 </p>
               </div>
@@ -1914,12 +2133,20 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Results/Transformation Section */}
-      <section className="py-32">
+      <section className="py-20 lg:py-24">
         <div className="site-container">
           <Reveal>
             <div className="text-center mb-16 px-4">
-               <h2 className="text-2xl md:text-3xl font-display text-antiqueGold tracking-[0.2em] mb-4 uppercase">Transformation</h2>
-              <h3 className="text-4xl md:text-6xl font-display mb-8">자명스쿨에서 얻을 수 있는 변화</h3>
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-5">
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                <span className="text-antiqueGold tracking-[0.3em] text-xs sm:text-sm font-bold uppercase">
+                  TRANSFORMATION
+                </span>
+                <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep mb-8">
+                자명스쿨에서 얻을 수 있는 변화
+              </h2>
             </div>
           </Reveal>
 
@@ -1934,15 +2161,15 @@ export default function AboutPage() {
               <Reveal key={idx} delayMs={idx * 150} slideFrom="bottom">
                 <div className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:-translate-y-1.5 hover:scale-[1.01] hover:bg-white/[0.06] hover:border-antiqueGold/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-500 h-full flex flex-col justify-center text-center group">
                   <div className="text-3xl mb-4 font-display text-[#B89B6A]/50 group-hover:text-[#B89B6A]/80 transition-colors">{idx + 1}</div>
-                  <h4 className="text-lg font-bold mb-3 text-[#B89B6A] group-hover:text-white transition-colors">{item.title}</h4>
-                  <p className="text-white/50 text-xs leading-relaxed group-hover:text-white/70 transition-colors">{item.desc}</p>
+                  <h4 className="text-lg sm:text-xl font-bold mb-2 text-[#B89B6A] group-hover:text-white transition-colors">{item.title}</h4>
+                  <p className="text-sm md:text-base text-white/60 leading-[1.7] group-hover:text-white/70 transition-colors">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
           
           <Reveal delayMs={800}>
-            <p className="mt-20 text-center text-xl md:text-2xl font-display text-white italic tracking-wide">
+            <p className="mt-16 text-center text-xl sm:text-2xl font-display text-white italic tracking-wide leading-[1.4]">
                단순한 배움을 넘어, <br className="md:hidden" />
                삶의 <span className="text-antiqueGold">전환</span>을 경험하게 됩니다.
             </p>
@@ -1951,14 +2178,14 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Final CTA Section */}
-      <section className="py-32 bg-white/[0.02] border-t border-white/5">
+      <section className="py-20 lg:py-24 bg-white/[0.02] border-t border-white/5">
         <div className="site-container">
           <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <h3 className="text-4xl md:text-6xl font-display mb-12 leading-tight tracking-tight italic uppercase">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-10 leading-[1.4] tracking-tight italic uppercase break-keep">
               지금 당신의 <span className="text-antiqueGold">새로운 가능성</span>을 <br />
               자명스쿨에서 시작하세요
-            </h3>
+            </h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
               <Link
                 href="/courses"
