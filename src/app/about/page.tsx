@@ -455,7 +455,7 @@ export default function AboutPage() {
               <div className="mt-8 sm:mt-10 w-full max-w-[1280px] mx-auto">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/about/mind-to-creation.webp?v=2"
+                    src="/images/about/mind-to-creation.webp"
                     alt="마음에서 시작된 창작, 삶의 가치로 이어지다 - 자명스쿨"
                     width={1920}
                     height={1080}
