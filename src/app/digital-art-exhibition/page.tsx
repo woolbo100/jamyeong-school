@@ -453,7 +453,7 @@ export default function DigitalArtExhibitionPage() {
           </div>
 
           {/* 작품 콘셉트 예시 3종 */}
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] mb-6 text-center">
               작품 콘셉트 예시 3종
             </h3>
@@ -510,7 +510,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* TYPE 01 */}
             <div className="bg-[#181310] border border-[#2E221B] rounded-2xl p-6 flex flex-col justify-between">
               <div>
@@ -626,7 +626,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-[#2E221B] bg-[#14100E] shadow-xl">
+          <div className="w-full overflow-hidden rounded-2xl border border-[#2E221B] bg-[#14100E] shadow-xl">
             <div className="grid grid-cols-2 bg-[#1C1512] border-b border-[#2E221B] p-4 text-center text-xs font-bold uppercase tracking-wider">
               <span className="text-[#8C7A6B]">BEFORE</span>
               <span className="text-[#C6A66B]">AFTER</span>
@@ -684,7 +684,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { num: "01", title: "AI 이미지 생성 도구 기본 활용" },
               { num: "02", title: "감정과 작품 메시지 설정" },
@@ -732,7 +732,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="w-full space-y-6">
             {/* STEP 01 */}
             <div className="p-6 rounded-2xl bg-[#14100E] border border-[#2A211B]">
               <span className="text-xs font-bold text-[#8E6D38] uppercase tracking-wider block mb-2">
@@ -807,7 +807,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* 좌측: 기획 가이드 7개 */}
             <div className="lg:col-span-6 space-y-2.5">
               {[
@@ -875,7 +875,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="w-full space-y-8">
             {/* 16:9 디지털 전시관 결과물 프리뷰 슬롯 */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-[#1E1815] via-[#2A1F1A] to-[#120E0C] border-2 border-[#8E6D38]/40 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
               <span className="text-4xl mb-2">🏛️</span>
@@ -945,7 +945,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "개인 감성아트 포트폴리오", desc: "나만의 예술적 아이덴티티를 보여주는 포트폴리오 구축" },
               { title: "SNS 감성 콘텐츠 및 작품 소개", desc: "인스타그램, 블로그 등 소셜 미디어 작품 연재와 팬덤 형성" },
@@ -993,7 +993,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -1060,7 +1060,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { num: "01", title: "AI 감성아트 구조화 프롬프트 스킬" },
               { num: "02", title: "감정 탐색 및 작품 콘셉트 기획 워크시트" },
@@ -1104,7 +1104,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
             {[
               "01. 나만의 감성아트 콘셉트 기획안",
               "02. AI 감성아트 작품 시리즈",
@@ -1139,7 +1139,7 @@ export default function DigitalArtExhibitionPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "마음공부와 자기이해에 관심이 있는 분",
               "자신의 감정과 이야기를 예술로 표현하고 싶은 분",
@@ -1174,7 +1174,7 @@ export default function DigitalArtExhibitionPage() {
             </p>
           </div>
 
-          <div className="space-y-4 max-w-3xl mx-auto">
+          <div className="space-y-4">
             {[
               {
                 q: "그림을 전혀 그리지 못해도 수강할 수 있나요?",

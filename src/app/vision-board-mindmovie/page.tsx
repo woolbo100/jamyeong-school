@@ -467,7 +467,7 @@ export default function VisionBoardMindMoviePage() {
             </div>
           </div>
 
-          <div className="mt-12 text-center p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] max-w-2xl mx-auto">
+          <div className="mt-12 text-center p-6 rounded-2xl bg-[#14100E] border border-[#2A211B] w-full">
             <p className="text-sm sm:text-base font-serif italic text-[#C6A66B]">
               “AI는 미래의 모습을 이미지로 만들어 주지만, 어떤 삶을 살아갈지는 내가 선택합니다.”
             </p>
@@ -579,7 +579,7 @@ export default function VisionBoardMindMoviePage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-[#14100E] border border-[#2A211B] rounded-2xl overflow-hidden shadow-xl">
+          <div className="w-full bg-[#14100E] border border-[#2A211B] rounded-2xl overflow-hidden shadow-xl">
             <div className="grid grid-cols-2 bg-[#1C1612] border-b border-[#2A211B] p-4 text-center font-bold text-xs sm:text-sm">
               <span className="text-[#8C7A6B]">BEFORE (이전의 나)</span>
               <span className="text-[#C6A66B]">AFTER (수업 후 완성된 나)</span>
@@ -880,7 +880,7 @@ export default function VisionBoardMindMoviePage() {
             ))}
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-[#14100E] border border-[#2A211B] text-center max-w-xl mx-auto">
+          <div className="mt-8 p-4 rounded-xl bg-[#14100E] border border-[#2A211B] text-center w-full">
             <p className="text-xs text-[#8C7A6B]">
               ※ 긍정확언은 특정한 결과나 경제적 성과를 보장하는 것이 아닌 자기성찰과 실천을 위한 메시지로 구성합니다.
             </p>
@@ -1128,7 +1128,7 @@ export default function VisionBoardMindMoviePage() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -1191,7 +1191,7 @@ export default function VisionBoardMindMoviePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { num: "01", title: "자기탐구 워크시트", desc: "자기탐구 및 미래 자아 설계 워크시트" },
               { num: "02", title: "비전보드 기획 템플릿", desc: "삶의 6가지 영역별 비전보드 기획 템플릿" },
@@ -1234,7 +1234,7 @@ export default function VisionBoardMindMoviePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { num: "01", title: "미래 자아 기획안", desc: "나만의 미래 자아 및 삶의 비전 기획안" },
               { num: "02", title: "AI 미래 시각화 이미지", desc: "삶의 영역별 고화질 AI 미래 시각화 이미지" },
@@ -1273,7 +1273,7 @@ export default function VisionBoardMindMoviePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               "자신이 원하는 삶의 방향을 구체적으로 정리하고 싶은 분",
               "마음공부와 자기이해에 관심이 있는 분",
@@ -1307,7 +1307,7 @@ export default function VisionBoardMindMoviePage() {
             </h2>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 q: "Q. 영상 제작 경험이 없어도 수강할 수 있나요?",

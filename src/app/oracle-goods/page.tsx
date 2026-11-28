@@ -462,7 +462,7 @@ export default function OracleGoodsPage() {
           </div>
 
           {/* 카드 콘셉트 예시 3종 */}
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#C6A66B] mb-6 text-center">
               카드 콘셉트 예시 3종
             </h3>
@@ -519,7 +519,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* TYPE 01 */}
             <div className="bg-[#181310] border border-[#2E221B] rounded-2xl p-6 flex flex-col justify-between">
               <div>
@@ -634,7 +634,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-[#2E221B] bg-[#14100E] shadow-xl">
+          <div className="w-full overflow-hidden rounded-2xl border border-[#2E221B] bg-[#14100E] shadow-xl">
             <div className="grid grid-cols-2 bg-[#1C1512] border-b border-[#2E221B] p-4 text-center text-xs font-bold uppercase tracking-wider">
               <span className="text-[#8C7A6B]">BEFORE</span>
               <span className="text-[#C6A66B]">AFTER</span>
@@ -692,7 +692,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { num: "01", title: "카드의 주제와 핵심 메시지 설정" },
               { num: "02", title: "AI 활용 긍정확언 및 성찰 문구 제작" },
@@ -740,7 +740,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="w-full space-y-6">
             {/* STEP 01 */}
             <div className="p-6 rounded-2xl bg-[#14100E] border border-[#2A211B]">
               <span className="text-xs font-bold text-[#8E6D38] uppercase tracking-wider block mb-2">
@@ -818,7 +818,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* 좌측: 실습 내용 7개 */}
             <div className="lg:col-span-6 space-y-2.5">
               {[
@@ -886,7 +886,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 num: "01",
@@ -963,7 +963,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="w-full space-y-8">
             {/* 제작 과정 8단계 */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {[
@@ -1020,7 +1020,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "개인 마음공부 및 자기성찰 카드", desc: "나만을 위한 아침 확언과 저녁 성찰 루틴의 도구" },
               { title: "SNS 긍정확언 콘텐츠", desc: "인스타그램, 블로그 등에서 감성 메시지 연재 및 소통" },
@@ -1068,7 +1068,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="space-y-4">
             {[
               {
                 part: "PART 01",
@@ -1135,7 +1135,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { num: "01", title: "AI 오라클 카드 구조화 프롬프트 스킬" },
               { num: "02", title: "마음 메시지 및 카드 콘셉트 기획 워크시트" },
@@ -1179,7 +1179,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "01. 나만의 오라클 카드 콘셉트 기획안",
               "02. 긍정확언 및 자기성찰 메시지 초안",
@@ -1215,7 +1215,7 @@ export default function OracleGoodsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               "마음공부와 자기이해에 관심이 있는 분",
               "긍정확언과 자기성찰 카드를 직접 만들고 싶은 분",
@@ -1251,7 +1251,7 @@ export default function OracleGoodsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 max-w-3xl mx-auto">
+          <div className="space-y-4">
             {[
               {
                 q: "디자인 경험이 없어도 수강할 수 있나요?",
