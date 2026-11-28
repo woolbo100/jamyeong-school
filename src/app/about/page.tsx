@@ -664,10 +664,10 @@ export default function AboutPage() {
           {/* Diagram Container */}
           <Reveal delayMs={150}>
             <div>
-              {/* Desktop / Tablet: Circular Diagram */}
-              <div className="hidden md:block relative w-[600px] h-[600px] mx-auto">
+              {/* Desktop / Tablet: Circular Diagram (중앙 원과 좌우 카드 간격 40px 확보 및 궤도 확장) */}
+              <div className="hidden md:block relative w-full max-w-[800px] h-[680px] mx-auto">
                 {/* Background Orbit Ring & Curved Arrows */}
-                <svg viewBox="0 0 600 600" className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                <svg viewBox="0 0 800 680" className="absolute inset-0 w-full h-full pointer-events-none z-0">
                   <defs>
                     <marker
                       id="gold-arrow"
@@ -682,11 +682,12 @@ export default function AboutPage() {
                     </marker>
                   </defs>
 
-                  {/* Faint Orbit Circle */}
-                  <circle
-                    cx="300"
-                    cy="300"
-                    r="210"
+                  {/* Faint Orbit Ellipse */}
+                  <ellipse
+                    cx="400"
+                    cy="340"
+                    rx="240"
+                    ry="220"
                     fill="none"
                     stroke="rgba(184,155,106,0.18)"
                     strokeDasharray="5 5"
@@ -694,7 +695,7 @@ export default function AboutPage() {
 
                   {/* 1 -> 2 Arrow (Top to Right) */}
                   <path
-                    d="M 375 118 A 210 210 0 0 1 482 225"
+                    d="M 485 140 A 240 220 0 0 1 565 290"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
@@ -703,7 +704,7 @@ export default function AboutPage() {
                   />
                   {/* 2 -> 3 Arrow (Right to Bottom) */}
                   <path
-                    d="M 482 375 A 210 210 0 0 1 375 482"
+                    d="M 565 390 A 240 220 0 0 1 485 540"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
@@ -712,7 +713,7 @@ export default function AboutPage() {
                   />
                   {/* 3 -> 4 Arrow (Bottom to Left) */}
                   <path
-                    d="M 225 482 A 210 210 0 0 1 118 375"
+                    d="M 315 540 A 240 220 0 0 1 235 390"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
@@ -721,7 +722,7 @@ export default function AboutPage() {
                   />
                   {/* 4 -> 1 Arrow (Left to Top) */}
                   <path
-                    d="M 118 225 A 210 210 0 0 1 225 118"
+                    d="M 235 290 A 240 220 0 0 1 315 140"
                     fill="none"
                     stroke="#B89B6A"
                     strokeWidth="2"
@@ -730,8 +731,8 @@ export default function AboutPage() {
                   />
                 </svg>
 
-                {/* Central Core: 자기이해의 심화 */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full border-2 border-[#B89B6A]/40 bg-[#0E0E14] shadow-[0_0_35px_rgba(184,155,106,0.25)] flex flex-col items-center justify-center p-4 text-center z-10 transition-transform duration-300 hover:scale-105">
+                {/* Central Core: 자기이해의 심화 (온전하게 드러나는 중앙 원) */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full border-2 border-[#B89B6A]/40 bg-[#0E0E14] shadow-[0_0_35px_rgba(184,155,106,0.25)] flex flex-col items-center justify-center p-4 text-center z-20 transition-transform duration-300 hover:scale-105">
                   <span className="text-[11px] font-bold tracking-widest uppercase text-antiqueGold/80 mb-1">
                     Core
                   </span>
@@ -745,15 +746,15 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 1: 탐구 (Top) */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
+                <div className="absolute top-8 sm:top-10 md:top-12 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ① 탐구
                   </span>
                   <h4 className="text-[#B89B6A] font-medium text-base">나에게 질문하기</h4>
                 </div>
 
-                {/* Step 2: 표현 (Right) */}
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
+                {/* Step 2: 표현 (Right - 중앙 원과 40px 여백 확보하여 대칭 배치) */}
+                <div className="absolute top-1/2 right-6 lg:right-8 -translate-y-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ② 표현
                   </span>
@@ -761,15 +762,15 @@ export default function AboutPage() {
                 </div>
 
                 {/* Step 3: 발견 (Bottom) */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
+                <div className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ③ 발견
                   </span>
                   <h4 className="text-[#B89B6A] font-medium text-base">감정·취향·신념 알아차리기</h4>
                 </div>
 
-                {/* Step 4: 재해석 (Left) */}
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
+                {/* Step 4: 재해석 (Left - 중앙 원과 40px 여백 확보하여 대칭 배치) */}
+                <div className="absolute top-1/2 left-6 lg:left-8 -translate-y-1/2 w-64 p-5 rounded-2xl border border-[#B89B6A]/20 bg-[#141211]/95 backdrop-blur-md shadow-xl text-center z-10 hover:border-[#B89B6A]/40 transition-all duration-300">
                   <span className="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/15 text-antiqueGold font-bold text-xs tracking-wider mb-2">
                     ④ 재해석
                   </span>
