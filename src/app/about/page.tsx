@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroParticles from "@/components/HeroParticles";
 import { Brain, Palette, Rocket, ArrowRight, ShieldCheck, ArrowDown, RefreshCw, Compass, Sparkles, PenTool, Share2, TrendingUp, BookOpen, Users, Heart, Music, Eye } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "자명스쿨 소개 | AI로 마음을 그리다",
+  description: "AI로 마음을 이해하고 콘텐츠로 표현하며 삶의 성장과 새로운 가치로 연결하는 교육을 합니다.",
+};
 
 export default function AboutPage() {
   return (
@@ -886,7 +892,7 @@ export default function AboutPage() {
                 <div className="text-base md:text-lg text-white/80 font-light leading-[1.75] max-w-3xl mx-auto break-keep space-y-1.5">
                   <p>자명스쿨은 단순한 AI 기술 교육을 넘어,</p>
                   <p>마음을 이해하고 그것을 콘텐츠로 표현하며</p>
-                  <p>삶의 성장과 경제적 가치로 연결하는 교육을 합니다.</p>
+                  <p>삶의 성장과 새로운 가치로 연결하는 교육을 합니다.</p>
                 </div>
               </div>
             </Reveal>
@@ -1401,7 +1407,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-base md:text-lg text-white/70 font-light max-w-3xl mx-auto leading-[1.75] break-keep">
                 자기 이해부터 수익화까지, 단계별로 성장하는 자명스쿨만의 통합 변화 시스템입니다. <br />
-                우리는 배움이 아닌 ‘변화’를 만듭니다.
+                우리는 배움이 삶의 변화로 이어지도록 돕습니다.
               </p>
             </div>
           </Reveal>
@@ -1534,7 +1540,7 @@ export default function AboutPage() {
               {
                 num: "04",
                 name: "Water",
-                title: "돈을 흐르게 한다",
+                title: "가치가 흐르게 한다",
                 desc: "가치를 돈으로 바꾸는\n구조를 만듭니다.",
                 color: "text-[#3B82F6]",
                 bgColor: "bg-[#3B82F6]/10",
@@ -2265,15 +2271,15 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { title: "콘텐츠 제작 능력", desc: "나만의 고유한 메시지를 창작물로 변형" },
-              { title: "AI 실전 스킬", desc: "이미지, 텍스트, 자동화 도구 숙달" },
-              { title: "브랜드 구축", desc: "고유한 페르소나와 정체성 확립" },
-              { title: "수익화 구조", desc: "지식 창업과 콘텐츠 기반 수익 시스템" },
               { title: "삶의 자신감", desc: "도구에 매몰되지 않는 주체적 변화" },
+              { title: "AI 스킬", desc: "이미지, 텍스트, 자동화 도구 숙달" },
+              { title: "콘텐츠 제작", desc: "나만의 고유한 메시지를 창작물로 변형" },
+              { title: "브랜드", desc: "고유한 페르소나와 정체성 확립" },
+              { title: "수익화", desc: "지식 창업과 콘텐츠 기반 수익 시스템" },
             ].map((item, idx) => (
               <Reveal key={idx} delayMs={idx * 150} slideFrom="bottom">
                 <div className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/10 hover:-translate-y-1.5 hover:scale-[1.01] hover:bg-white/[0.06] hover:border-antiqueGold/20 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-all duration-500 h-full flex flex-col justify-center text-center group">
-                  <div className="text-3xl mb-4 font-display text-[#B89B6A]/50 group-hover:text-[#B89B6A]/80 transition-colors">{idx + 1}</div>
+                  <div className="text-3xl mb-4 font-display text-[#B89B6A]/50 group-hover:text-[#B89B6A]/80 transition-colors">{String(idx + 1).padStart(2, '0')}</div>
                   <h4 className="text-lg sm:text-xl font-bold mb-2 text-[#B89B6A] group-hover:text-white transition-colors">{item.title}</h4>
                   <p className="text-sm md:text-base text-white/60 leading-[1.7] group-hover:text-white/70 transition-colors">{item.desc}</p>
                 </div>

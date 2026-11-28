@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "자명스쿨 | AI로 마음을 그리다",
-  description: "AI로 마음을 이해하고 콘텐츠로 표현하며 삶과 수익으로 연결하는 혁신 교육 플랫폼",
+  description: "AI로 마음을 이해하고 콘텐츠로 표현하며 삶의 성장과 새로운 가치로 연결하는 혁신 교육 플랫폼",
 };
 
 export default function RootLayout({
