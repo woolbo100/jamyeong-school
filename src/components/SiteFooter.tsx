@@ -93,8 +93,8 @@ export default function SiteFooter() {
               <li><Link href="/courses" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 소개</Link></li>
               <li><Link href="/apply" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자격과정</Link></li>
               <li><Link href="/oneday" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">원데이클래스</Link></li>
+              <li><Link href="/ebooks" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">전자책</Link></li>
               <li><Link href="/resources" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명자료실</Link></li>
-              <li><Link href="/reviews" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">강의 후기</Link></li>
               <li><Link href="/blog" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">자명노트</Link></li>
               <li><Link href="/contact" className="text-xs sm:text-sm text-zinc-400 hover:text-[#B89B6A] transition-colors">고객센터</Link></li>
             </ul>

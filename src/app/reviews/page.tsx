@@ -163,85 +163,59 @@ export default function ReviewsPage() {
         </div>
       </Reveal>
 
-      {/* 3. Review List Section */}
-      <section className="py-16 px-6 max-w-7xl mx-auto relative z-10">
-        {/* Category Filter Pills */}
+      {/* 3. Review Announcement & Preparation Section */}
+      <section className="py-16 px-6 max-w-5xl mx-auto relative z-10">
         <Reveal>
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {FILTER_CATEGORIES.map((category) => {
-              const active = selectedFilter === category.slug;
-              return (
-                <button
-                  key={category.slug}
-                  onClick={() => setSelectedFilter(category.slug)}
-                  className={`rounded-full px-5 py-2.5 text-sm transition-all duration-300 border cursor-pointer ${
-                    active
-                      ? "border-antique-gold bg-antique-gold/15 text-white shadow-[0_0_15px_rgba(184,155,106,0.2)]"
-                      : "border-white/10 bg-white/5 text-white/60 hover:bg-white/10 hover:text-white"
-                  }`}
-                >
-                  {category.label}
-                </button>
-              );
-            })}
+          <div className="p-8 sm:p-12 md:p-16 rounded-[2.5rem] border border-[#B89B6A]/30 bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-md text-center shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative overflow-hidden">
+            {/* Subtle Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
+
+            <div className="w-16 h-16 rounded-2xl bg-antiqueGold/10 border border-antiqueGold/30 flex items-center justify-center mx-auto mb-6 text-antiqueGold">
+              <Sparkles className="w-8 h-8" />
+            </div>
+
+            <span className="inline-block px-4 py-1.5 rounded-full bg-antiqueGold/10 border border-antiqueGold/30 text-antiqueGold text-xs font-bold tracking-widest uppercase mb-4">
+              STUDENT STORIES & REVIEWS
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight break-keep">
+              실제 수강생분들의{" "}
+              <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                생생한 변화와 창작 이야기
+              </span>
+            </h2>
+
+            <div className="max-w-2xl mx-auto space-y-3 text-white/75 text-base sm:text-lg font-light leading-relaxed break-keep mb-10">
+              <p>
+                자명스쿨의 교육을 통해 출판 작가로 데뷔하고, AI 창작물을 완성하며, 새로운 전문성을 구축해 가고 계신 실제 수강생분들의 솔직한 기록을 체계적으로 정리하여 순차 공개하고 있습니다.
+              </p>
+              <p className="text-antiqueGold/90 font-normal">
+                실제 수강생 후기와 작품 갤러리는 메인 페이지, 자명스쿨 소개, 그리고 각 교육과정 상세 페이지에서 직접 확인하실 수 있습니다.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/about"
+                className="px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-antiqueGold/40 text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
+              >
+                자명스쿨 소개 보기 →
+              </Link>
+              <Link
+                href="/courses"
+                className="px-6 py-3.5 rounded-xl bg-gradient-to-br from-[#B89B6A] to-[#9E7C47] text-[#0B0B10] text-sm font-bold shadow hover:brightness-110 transition-all duration-300 hover:-translate-y-0.5"
+              >
+                교육과정 둘러보기 →
+              </Link>
+              <Link
+                href="/oneday"
+                className="px-6 py-3.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-antiqueGold/40 text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
+              >
+                원데이클래스 보기 →
+              </Link>
+            </div>
           </div>
         </Reveal>
-
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredReviews.map((review, idx) => (
-            <Reveal key={review.id} delayMs={idx * 100}>
-              <div className="h-full flex flex-col justify-between p-8 rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-antique-gold/40 hover:-translate-y-1.5 transition-all duration-500 group relative overflow-hidden">
-                {/* Quote Icon Background */}
-                <div className="absolute right-6 top-6 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity pointer-events-none">
-                  <Quote className="w-24 h-24 text-white" />
-                </div>
-
-                <div>
-                  {/* Rating Stars */}
-                  <div className="flex gap-1 mb-5">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-antique-gold fill-antique-gold" />
-                    ))}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold mb-4 text-[#B89B6A] group-hover:text-white transition-colors duration-300 leading-snug break-keep">
-                    "{review.title}"
-                  </h3>
-
-                  {/* Content */}
-                  <p className="text-white/70 text-sm leading-relaxed mb-6 font-light break-keep whitespace-pre-line line-clamp-6 group-hover:line-clamp-none transition-all duration-500">
-                    {review.content}
-                  </p>
-                </div>
-
-                {/* Writer Info */}
-                <div className="pt-6 border-t border-white/5 flex flex-col gap-2 mt-auto">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-white/50">{review.course}</span>
-                    <span className="text-white/40">{review.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-semibold text-white">{review.name}</span>
-                    <span className="text-xs text-white/40">|</span>
-                    <span className="text-xs text-white/50">{review.role}</span>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* If no reviews found */}
-        {filteredReviews.length === 0 && (
-          <Reveal>
-            <div className="text-center py-20 border border-white/10 rounded-[2rem] bg-white/[0.02]">
-              <MessageSquare className="w-12 h-12 text-white/20 mx-auto mb-4" />
-              <p className="text-white/50 text-lg">선택한 카테고리에 등록된 후기가 아직 없습니다.</p>
-            </div>
-          </Reveal>
-        )}
       </section>
 
       {/* 4. Final CTA Section */}

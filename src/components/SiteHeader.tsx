@@ -131,11 +131,11 @@ export default function SiteHeader() {
               } group-hover:scale-125 transition-transform animate-pulse`}
           />
         </Link>
+        <Link className={getMenuClass('/ebooks')} href="/ebooks">
+          전자책
+        </Link>
         <Link className={getMenuClass('/resources')} href="/resources">
           자명자료실
-        </Link>
-        <Link className={getMenuClass('/reviews')} href="/reviews">
-          강의후기
         </Link>
         <Link className={getMenuClass('/blog')} href="/blog">
           자명노트
@@ -259,18 +259,18 @@ export default function SiteHeader() {
               ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
               : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
               }`}
-            href="/resources"
+            href="/ebooks"
           >
-            자명자료실
+            전자책
           </Link>
           <Link
             className={`py-2 border-b ${isLightSticky
               ? 'text-[#3F342B] hover:text-[#B58B4A] border-[#E8DFD3]/80'
               : 'text-white/90 hover:text-[#D6C6A8] border-white/5'
               }`}
-            href="/reviews"
+            href="/resources"
           >
-            강의후기
+            자명자료실
           </Link>
           <Link
             className={`py-2 border-b ${isLightSticky
