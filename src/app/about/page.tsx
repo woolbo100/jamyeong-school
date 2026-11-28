@@ -426,9 +426,9 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              {/* Main Headline: 24px, 붓글씨 계열 서체, 골드 그라데이션 */}
+              {/* Main Headline: 32px (자기발견에서 창조로 슬로건과 동일 크기), 붓글씨 계열 서체, 골드 그라데이션 */}
               <div className="relative z-10 max-w-4xl mx-auto">
-                <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
+                <h3 className="text-2xl sm:text-3xl md:text-[32px] font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                   <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                     나만의 세계관에 AI를 입히다
                   </span>
