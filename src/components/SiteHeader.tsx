@@ -9,10 +9,11 @@ export default function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // 라이트/베이지 배경 페이지 판별 (/apply, /oneday, /resources, /brand-page 등)
+  // 라이트/베이지 배경 페이지 판별 (/apply, /oneday, /ebooks, /resources, /brand-page 등)
   const isLightPage =
     pathname.startsWith('/apply') ||
     pathname.startsWith('/oneday') ||
+    pathname.startsWith('/ebooks') ||
     pathname.startsWith('/resources') ||
     pathname.startsWith('/brand-page');
 
