@@ -234,6 +234,19 @@ export default function AboutPage() {
                         그것들을 알아차리고 이해하는 순간, 우리는 자신을 새로운 시선으로 바라보기 시작합니다.
                       </p>
                     </div>
+
+                    {/* 은은한 골드 계열 구분선 */}
+                    <div className="w-16 h-px bg-antiqueGold/30 pt-1" />
+
+                    {/* 신규 추가 강조 문구 2개 (20px, font-weight: 500~600, 줄간격 1.7, 간격 16px) */}
+                    <div className="space-y-4 break-keep">
+                      <p className="text-lg sm:text-xl font-medium text-antiqueGold leading-[1.7]">
+                        기술이 모든 것을 대신해 주는 시대일수록, 결국 삶의 방향을 결정하는 힘은 '나를 아는 깊이'에서 나옵니다.
+                      </p>
+                      <p className="text-lg sm:text-xl font-medium text-white/95 leading-[1.7]">
+                        자명스쿨은 당신의 내면과 새로운 도구가 만나, 온전한 나만의 언어로 피어나는 시간입니다.
+                      </p>
+                    </div>
                   </div>
                 </Reveal>
               </div>
@@ -286,12 +299,27 @@ export default function AboutPage() {
               <div className="lg:col-span-7 w-full text-left order-2 lg:order-1">
                 <Reveal delayMs={250}>
                   <div className="space-y-6">
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-antiqueGold leading-[1.4] break-keep">
+                    {/* 중간 제목: 24px, 화이트 컬러, 왼쪽 정렬 */}
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-white leading-[1.4] break-keep">
                       스스로를 밝히는 배움, 자명(自明)의 철학
                     </h3>
 
-                    {/* 하단 슬로건 하이라이트 박스 */}
-                    <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-transparent border border-[#B89B6A]/25 break-keep">
+                    {/* 브랜드 탄생 이야기 (중간 제목과 첫 문단 사이 24px, 문단 사이 16~20px) */}
+                    <div className="space-y-4 sm:space-y-5 text-white/80 text-base md:text-lg leading-[1.75] font-light break-keep">
+                      <p>
+                        한때는 세상이 정해놓은 성공의 기준과 타인의 시선에 맞추어 숨 가쁘게 달려왔습니다. 하지만 남의 기준을 쫓던 길의 끝에서 깊은 시련과 마주했고, 모든 소음이 멈춘 고독한 시간 속에서야 비로소 멈춰 서서 내 안을 깊이 들여다보게 되었습니다.
+                      </p>
+                      <p>
+                        화려한 외부의 빛이 아니라, 내 안의 고요 속에서 스스로 빛나는 나만의 가치를 발견했을 때 비로소 흔들리지 않는 삶의 중심이 세워졌습니다. 그 치열한 성찰의 끝에서{" "}
+                        <strong className="text-antiqueGold font-bold">
+                          '스스로 밝아진다'는 뜻의 자명(自明)스쿨
+                        </strong>
+                        이 탄생했습니다.
+                      </p>
+                    </div>
+
+                    {/* 하단 슬로건 하이라이트 박스 (두 번째 문단과 간격 24~32px) */}
+                    <div className="mt-6 sm:mt-8 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-antiqueGold/10 via-[#141211]/80 to-transparent border border-[#B89B6A]/25 break-keep">
                       <h4 className="text-xl sm:text-2xl font-display font-bold text-white mb-3 leading-[1.4]">
                         <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
                           나를 아는 것이 모든 성장의 출발점입니다.
@@ -387,7 +415,7 @@ export default function AboutPage() {
 
           {/* 2. Brand Identity Card */}
           <Reveal delayMs={200}>
-            <div className="p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-[#B89B6A]/25 bg-gradient-to-b from-white/[0.04] to-transparent text-center space-y-6 sm:space-y-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+            <div className="w-full max-w-[1280px] mx-auto p-8 sm:p-10 md:p-14 rounded-[2.5rem] border border-[#B89B6A]/25 bg-gradient-to-b from-white/[0.04] to-transparent text-center space-y-6 sm:space-y-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)] relative overflow-hidden group">
               {/* Ambient Glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-antiqueGold/10 blur-3xl pointer-events-none rounded-full" />
 
@@ -398,26 +426,44 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              {/* Main Headline */}
-              <div className="relative z-10 max-w-2xl mx-auto">
+              {/* Main Headline: 24px, 붓글씨 계열 서체, 골드 그라데이션 */}
+              <div className="relative z-10 max-w-4xl mx-auto">
                 <h3 className="text-xl sm:text-2xl font-display font-bold leading-[1.4] tracking-tight text-white break-keep">
                   <span className="bg-gradient-to-br from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
-                    AI 시대, 가장 먼저 알아야 할 것은 나 자신입니다.
+                    나만의 세계관에 AI를 입히다
                   </span>
                 </h3>
               </div>
 
-              {/* Description */}
-              <div className="relative z-10 max-w-2xl mx-auto">
-                <p className="text-sm md:text-base text-white/80 font-light leading-[1.7] break-keep">
-                  자명스쿨은 자기탐구와 AI 창작을 연결하여 자신의 가능성을 발견하고, 그것을 삶과 세상 속에서 실현하도록 돕는 마음에서 시작하는 AI 교육 플랫폼입니다.
+              {/* Description Body: 18px, 줄간격 1.75, 문단 간격 16~20px, max-w-4xl 확장 */}
+              <div className="relative z-10 max-w-4xl mx-auto space-y-4 sm:space-y-5 text-base md:text-lg text-white/80 font-light leading-[1.75] break-keep">
+                <p>
+                  자신을 이해하면 나만의 가치관과 삶의 방향이 선명해지고,
+                  <br className="hidden sm:inline" />{" "}
+                  그 안에서 누구도 대신할 수 없는 나만의 세계관이 만들어집니다.
+                </p>
+                <p>
+                  AI는 그 세계관을 글과 그림, 음악과 영상으로 표현하고,
+                  <br className="hidden sm:inline" />{" "}
+                  내면의 가능성을 세상 속의 새로운 가치로 실현하도록 돕는 도구입니다.
                 </p>
               </div>
 
-              {/* Bottom Tagline */}
+              {/* 하단 강조 문단: 20px, 골드 그라데이션 및 볼드 */}
+              <div className="relative z-10 max-w-4xl mx-auto pt-1 break-keep">
+                <p className="text-lg sm:text-xl font-display font-bold leading-[1.6]">
+                  <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
+                    자명스쿨은 당신만의 세계관이 창작이 되고,
+                    <br className="hidden sm:inline" />{" "}
+                    그 창작이 삶의 성장과 풍요로 이어지는 배움을 추구합니다.
+                  </span>
+                </p>
+              </div>
+
+              {/* Bottom Tagline: 16px 캡슐형 슬로건 */}
               <div className="relative z-10 pt-2">
-                <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold font-medium text-xs sm:text-sm tracking-wide shadow-sm break-keep">
-                  나를 이해하고 · 나를 표현하고 · 세상과 나누다
+                <div className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold font-medium text-sm sm:text-base tracking-wide shadow-sm break-keep">
+                  자기발견 · 세계관 형성 · AI 창작 · 가치 실현
                 </div>
               </div>
             </div>
