@@ -345,6 +345,182 @@ export default function AboutPage() {
                 </Reveal>
               </div>
             </div>
+
+            {/* 3. 빛의 철학 (THE PHILOSOPHY OF LIGHT) 애니메이션 다이어그램 & 메시지 */}
+            <div className="pt-16 sm:pt-20 border-t border-white/5">
+              <style>{`
+                @keyframes calmLightPulse1 {
+                  0%, 100% {
+                    transform: scale(0.95);
+                    opacity: 0.65;
+                    filter: drop-shadow(0 0 6px rgba(184, 155, 106, 0.3));
+                  }
+                  50% {
+                    transform: scale(1.05);
+                    opacity: 0.95;
+                    filter: drop-shadow(0 0 14px rgba(214, 198, 168, 0.55));
+                  }
+                }
+                @keyframes calmLightPulse2 {
+                  0%, 100% {
+                    transform: scale(0.94);
+                    opacity: 0.7;
+                    filter: drop-shadow(0 0 12px rgba(184, 155, 106, 0.4));
+                  }
+                  50% {
+                    transform: scale(1.06);
+                    opacity: 1;
+                    filter: drop-shadow(0 0 28px rgba(226, 212, 190, 0.7));
+                  }
+                }
+                @keyframes calmLightPulse3 {
+                  0%, 100% {
+                    transform: scale(0.93);
+                    opacity: 0.75;
+                    filter: drop-shadow(0 0 20px rgba(214, 198, 168, 0.5));
+                  }
+                  50% {
+                    transform: scale(1.07);
+                    opacity: 1;
+                    filter: drop-shadow(0 0 44px rgba(245, 230, 204, 0.85));
+                  }
+                }
+                @keyframes rippleRing {
+                  0%, 100% {
+                    transform: scale(0.98);
+                    opacity: 0.25;
+                  }
+                  50% {
+                    transform: scale(1.05);
+                    opacity: 0.6;
+                  }
+                }
+                .light-symbol-1 {
+                  animation: calmLightPulse1 5.5s ease-in-out infinite 0s;
+                }
+                .light-symbol-2 {
+                  animation: calmLightPulse2 5.5s ease-in-out infinite 0.5s;
+                }
+                .light-symbol-3 {
+                  animation: calmLightPulse3 5.5s ease-in-out infinite 1.0s;
+                }
+                .ripple-glow {
+                  animation: rippleRing 5.5s ease-in-out infinite 1.0s;
+                }
+                @media (prefers-reduced-motion: reduce) {
+                  .light-symbol-1, .light-symbol-2, .light-symbol-3, .ripple-glow {
+                    animation: none !important;
+                  }
+                }
+              `}</style>
+
+              <Reveal>
+                <div className="text-center mb-10 sm:mb-14">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                    <span className="text-antiqueGold tracking-[0.3em] text-[12px] font-bold uppercase">
+                      THE PHILOSOPHY OF LIGHT
+                    </span>
+                    <span className="w-6 sm:w-8 h-px bg-antiqueGold/40" />
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* 빛의 성장 다이어그램 (가로 3단계 배치) */}
+              <Reveal delayMs={200}>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 lg:gap-8 max-w-4xl mx-auto">
+                  {/* STEP 01. 빛의 발견 */}
+                  <div className="flex flex-col items-center text-center flex-1 w-full max-w-[260px]">
+                    <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-gradient-to-b from-[#181614] to-[#0D0C0B] border border-[#B89B6A]/20 flex items-center justify-center shadow-[inset_0_0_20px_rgba(0,0,0,0.8)]">
+                      {/* 중심부 은은한 작은 광원 (잠재된 가능성) */}
+                      <div className="light-symbol-1 relative w-6 h-6 rounded-full bg-gradient-to-br from-[#FFFDF9] via-[#E2D4BE] to-[#B89B6A] shadow-[0_0_12px_rgba(184,155,106,0.45)] flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-white/80" />
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-1">
+                      <span className="text-[11px] tracking-[0.25em] text-antiqueGold/70 uppercase font-medium">STEP 01</span>
+                      <h4 className="text-lg sm:text-xl font-bold font-display text-white">빛의 발견</h4>
+                      <p className="text-xs sm:text-sm text-[#D6C6A8] tracking-wider font-light">자기이해</p>
+                    </div>
+                  </div>
+
+                  {/* 구분 화살표 1 */}
+                  <div className="flex items-center justify-center text-antiqueGold/40 py-1 md:py-0 px-2">
+                    <ArrowRight className="hidden md:block w-5 h-5 text-antiqueGold/45 stroke-[1.5]" />
+                    <ArrowDown className="block md:hidden w-5 h-5 text-antiqueGold/45 stroke-[1.5]" />
+                  </div>
+
+                  {/* STEP 02. 빛의 표현 */}
+                  <div className="flex flex-col items-center text-center flex-1 w-full max-w-[260px]">
+                    <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-b from-[#1C1814] to-[#0E0C0A] border border-[#B89B6A]/30 flex items-center justify-center shadow-[inset_0_0_25px_rgba(0,0,0,0.8)]">
+                      {/* 주변으로 부드럽게 확산되는 골드빛 */}
+                      <div className="absolute w-20 h-20 rounded-full bg-gradient-to-r from-[#B89B6A]/25 to-transparent blur-md pointer-events-none" />
+                      {/* 중심부 광원 확대 */}
+                      <div className="light-symbol-2 relative w-10 h-10 rounded-full bg-gradient-to-br from-[#FFFFFF] via-[#F4E8D3] to-[#D6C6A8] shadow-[0_0_24px_rgba(214,198,168,0.6)] flex items-center justify-center">
+                        <div className="w-3.5 h-3.5 rounded-full bg-white" />
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-1">
+                      <span className="text-[11px] tracking-[0.25em] text-antiqueGold/70 uppercase font-medium">STEP 02</span>
+                      <h4 className="text-lg sm:text-xl font-bold font-display text-white">빛의 표현</h4>
+                      <p className="text-xs sm:text-sm text-[#D6C6A8] tracking-wider font-light">창작과 표현</p>
+                    </div>
+                  </div>
+
+                  {/* 구분 화살표 2 */}
+                  <div className="flex items-center justify-center text-antiqueGold/40 py-1 md:py-0 px-2">
+                    <ArrowRight className="hidden md:block w-5 h-5 text-antiqueGold/45 stroke-[1.5]" />
+                    <ArrowDown className="block md:hidden w-5 h-5 text-antiqueGold/45 stroke-[1.5]" />
+                  </div>
+
+                  {/* STEP 03. 빛의 확장 */}
+                  <div className="flex flex-col items-center text-center flex-1 w-full max-w-[260px]">
+                    <div className="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full bg-gradient-to-b from-[#221B14] to-[#100E0C] border border-[#B89B6A]/40 flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.85)]">
+                      {/* 외곽 얇은 동심원 효과 */}
+                      <div className="ripple-glow absolute -inset-2.5 sm:-inset-3 rounded-full border border-[#B89B6A]/25 pointer-events-none" />
+                      <div className="ripple-glow absolute -inset-5 sm:-inset-6 rounded-full border border-[#B89B6A]/10 border-dashed pointer-events-none" />
+                      {/* 원형 바깥으로 넓게 퍼지는 부드러운 빛 */}
+                      <div className="absolute w-28 h-28 rounded-full bg-gradient-to-r from-[#E2D4BE]/30 via-[#B89B6A]/20 to-transparent blur-lg pointer-events-none" />
+                      {/* 중심부 가장 크고 밝은 광원 (아이보리 + 샴페인 골드) */}
+                      <div className="light-symbol-3 relative w-14 h-14 rounded-full bg-gradient-to-br from-[#FFFFFF] via-[#FFF5E6] to-[#E2D4BE] shadow-[0_0_36px_rgba(226,212,190,0.8)] flex items-center justify-center">
+                        <div className="w-5 h-5 rounded-full bg-white shadow-[0_0_10px_#FFFFFF]" />
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-1">
+                      <span className="text-[11px] tracking-[0.25em] text-antiqueGold/70 uppercase font-medium">STEP 03</span>
+                      <h4 className="text-lg sm:text-xl font-bold font-display text-white">빛의 확장</h4>
+                      <p className="text-xs sm:text-sm text-[#D6C6A8] tracking-wider font-light">가치와 나눔</p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* 하단 철학 메시지 */}
+              <Reveal delayMs={350}>
+                <div className="text-center mt-12 sm:mt-16">
+                  {/* 은은한 샴페인 골드 가로 구분선 */}
+                  <div className="w-24 sm:w-36 h-px bg-gradient-to-r from-transparent via-[#B89B6A]/45 to-transparent mx-auto mb-10 sm:mb-12" />
+
+                  {/* 메인 문구: 32px, 줄간격 1.5, 샴페인 골드 */}
+                  <p className="text-2xl sm:text-3xl md:text-[32px] font-display font-medium text-[#E2D4BE] leading-[1.5] break-keep mb-6">
+                    내 안의 빛을 발견하고,<br />
+                    창작으로 그 빛을 드러내며,<br />
+                    나만의 빛으로 세상을 비추다.
+                  </p>
+
+                  {/* 보조 설명: 18px, 줄간격 1.8, 기존 본문 색상 */}
+                  <p className="text-base sm:text-lg md:text-[18px] text-white/80 leading-[1.8] break-keep font-light max-w-2xl mx-auto mb-6">
+                    배움은 내 안에 없던 빛을 가져오는 것이 아니라,<br className="hidden sm:inline" />{" "}
+                    이미 내 안에 존재하는 빛을 발견하는 과정입니다.
+                  </p>
+
+                  {/* 하단 강조 문구: 20px, 샴페인 골드 색상 */}
+                  <p className="text-lg sm:text-xl md:text-[20px] font-display font-semibold text-antiqueGold tracking-wide">
+                    그것이 자명(自明)이 추구하는 배움입니다.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
