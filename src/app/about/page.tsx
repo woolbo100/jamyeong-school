@@ -1812,8 +1812,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* 3-1. 통합 메시지 위 가로선 (길이 260px, A/B 아래 여백 44px, 선 아래 여백 32px) */}
-              <div className="w-64 sm:w-72 mx-auto h-px bg-gradient-to-r from-transparent via-[#B89B6A]/35 to-transparent mt-11 sm:mt-12 mb-8 sm:mb-9" />
+              {/* 3-1. 통합 메시지 위 가로선 (상단 제목 아래 선과 동일한 74% 길이, A/B 아래 여백 44px, 선 아래 여백 32px) */}
+              <div className="w-[74%] max-w-[840px] mx-auto h-px bg-gradient-to-r from-transparent via-[#B89B6A]/35 to-transparent mt-11 sm:mt-12 mb-8 sm:mb-9" />
 
               {/* 3. 하단: 통합 메시지 + 보조 설명 문장 */}
               <div className="text-center space-y-4 max-w-4xl mx-auto break-keep">
