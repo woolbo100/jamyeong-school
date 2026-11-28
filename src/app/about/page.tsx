@@ -1753,10 +1753,10 @@ export default function AboutPage() {
             <ArrowDown className="w-6 h-6 animate-pulse" />
           </div>
 
-          {/* 통합 카드: 성장 방향 A·B 및 브랜드 철학 (최대 1280px 전폭 카드) */}
+          {/* 통합 카드: 성장 방향 A·B 및 브랜드 철학 (최대 1280px 전폭 카드, 3단 선 작업 구조화) */}
           <Reveal delayMs={300}>
-            <div className="w-full max-w-[1280px] mx-auto py-8 sm:py-10 px-6 sm:px-10 rounded-3xl bg-[#141211]/90 backdrop-blur-sm border border-[#B89B6A]/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)] space-y-8 sm:space-y-10">
-              {/* 1. 통합 카드 상단 헤더 */}
+            <div className="w-full max-w-[1280px] mx-auto pt-10 sm:pt-14 pb-12 sm:pb-16 px-6 sm:px-12 md:px-16 rounded-3xl bg-[#141211]/90 backdrop-blur-sm border border-[#B89B6A]/30 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+              {/* 1. 상단: 라벨 + 메인 제목 */}
               <div className="text-center space-y-3">
                 <div className="flex items-center justify-center gap-3 mb-2">
                   <span className="w-5 h-px bg-antiqueGold/40" />
@@ -1770,10 +1770,13 @@ export default function AboutPage() {
                 </h3>
               </div>
 
-              {/* 2. 성장 방향 A·B 좌우 50:50 2단 구조 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative text-left">
+              {/* 1-1. 메인 제목 아래 가로선 (중앙 기준 약 74% 너비, 여백: 상 28~32px / 하 36~40px) */}
+              <div className="w-[74%] max-w-[840px] mx-auto h-px bg-gradient-to-r from-transparent via-[#B89B6A]/35 to-transparent mt-7 sm:mt-8 mb-9 sm:mb-10" />
+
+              {/* 2. 중단: 성장 방향 A / 성장 방향 B (좌우 컬럼 간격 56~72px) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-16 relative text-left items-center">
                 {/* 성장 방향 A (왼쪽) */}
-                <div className="space-y-3.5 pr-0 md:pr-4">
+                <div className="space-y-3.5 pr-0 md:pr-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold text-xs font-medium">
                     <span>성장 방향 A</span>
                     <span>·</span>
@@ -1787,12 +1790,14 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                {/* PC 환경 세로 구분선 / 모바일 가로 구분선 */}
-                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-antiqueGold/20 -translate-x-1/2" />
-                <div className="block md:hidden w-full h-px bg-antiqueGold/20" />
+                {/* PC 환경 세로 구분선 (높이 160px, 은은한 샴페인 골드) */}
+                <div className="hidden md:block absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-px h-[160px] bg-gradient-to-b from-transparent via-[#B89B6A]/35 to-transparent pointer-events-none" />
+
+                {/* 모바일 환경 가로 구분선 (세로로 쌓일 때 A와 B 사이) */}
+                <div className="block md:hidden w-full h-px bg-gradient-to-r from-transparent via-[#B89B6A]/30 to-transparent my-2" />
 
                 {/* 성장 방향 B (오른쪽) */}
-                <div className="space-y-3.5 pl-0 md:pl-4">
+                <div className="space-y-3.5 pl-0 md:pl-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antiqueGold/10 border border-[#B89B6A]/25 text-antiqueGold text-xs font-medium">
                     <span>성장 방향 B</span>
                     <span>·</span>
@@ -1807,10 +1812,10 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* 가로 구분선 */}
-              <div className="w-full h-px bg-antiqueGold/20" />
+              {/* 3-1. 통합 메시지 위 가로선 (길이 260px, A/B 아래 여백 44px, 선 아래 여백 32px) */}
+              <div className="w-64 sm:w-72 mx-auto h-px bg-gradient-to-r from-transparent via-[#B89B6A]/35 to-transparent mt-11 sm:mt-12 mb-8 sm:mb-9" />
 
-              {/* 3. 하단 통합 철학 내용 */}
+              {/* 3. 하단: 통합 메시지 + 보조 설명 문장 */}
               <div className="text-center space-y-4 max-w-4xl mx-auto break-keep">
                 <p className="text-xl sm:text-2xl font-display font-bold leading-[1.4]">
                   <span className="bg-gradient-to-r from-[#E2D4BE] via-[#D6C6A8] to-[#B89B6A] bg-clip-text text-transparent">
